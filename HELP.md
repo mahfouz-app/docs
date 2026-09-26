@@ -519,6 +519,28 @@ footers).
 
 ---
 
+## Notifications
+
+Everything Mahfouz has to tell you — exports, plugin installs and updates, errors saving or syncing — collects in the notification center. Open it with the bell button at the right end of the titlebar, next to the AI chat button.
+
+- A dot on the bell means there are notifications you haven't dealt with; hover over the bell to see how many. A ring around it means something is running, and hovering shows what.
+- The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read, or archive it with ×.
+- A finished PDF export waits in the center with **Open**, **Save…** and **Discard**.
+- Errors, and things waiting on you, also pop up briefly in the corner. Closing a pop-up leaves the notification in the center.
+- History is kept on this computer for 30 days. It isn't part of your vault.
+
+### Sounds, system notifications and quiet time
+
+Settings → Notifications controls how notifications interrupt you:
+
+- **System notifications** appear only while Mahfouz is in the background, for errors and things waiting on you. They show a title only, never note names or paths.
+- **Sounds** play a short tone for errors and things waiting on you. They're off by default.
+- **Mute** a category to keep its notifications in the history without pop-ups, sounds or a badge. These settings are saved in `.config/settings.md`, so they follow the vault.
+
+**Do not disturb**, the moon button in the notification center's header, silences everything for an hour, until tomorrow morning, or until you turn it off. It applies to this computer only.
+
+---
+
 ## Settings
 
 **Settings…** (`Cmd/Ctrl+,`, or menu **Mahfouz → Settings…**) — applies
