@@ -613,3 +613,24 @@ Notes open in a browser-style tab strip: click a tab to switch, click its
 without switching away from your current one. History revisions and
 Present-as-tab both open as their own read-only/embedded tabs alongside
 your regular notes.
+
+---
+
+## Sending feedback
+
+Click the speech-bubble button near the bottom of the left rail, or choose
+**Help → Send Feedback…**, to report a bug, suggest an idea, or ask a
+question. Pick a kind, give it a title and some details, and press
+**Submit**.
+
+Feedback becomes a **public** issue on
+[mahfouz-app/docs](https://github.com/mahfouz-app/docs/issues). If you're
+signed in to GitHub (Vault settings → Collaborators), it's filed under your
+account, so you'll get replies there. Otherwise, the Mahfouz feedback bot
+files it for you; add a way to reach you in the details if you'd like a
+reply. Once it's filed, the dialog links to the new issue.
+
+**Include diagnostics** (on by default) appends the app version, operating
+system and CPU architecture, and nothing else. Nothing from your vault or
+notes is ever sent. Expand **What's included** to see the exact lines, or
+untick the box to leave them out.
