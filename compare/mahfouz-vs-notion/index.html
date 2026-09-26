@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Mahfouz vs Notion: plain Markdown files you own on your own computer, versus proprietary blocks kept in Notion's cloud database."
+    />
+    <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://mahfouz.app/compare/mahfouz-vs-notion/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Mahfouz vs Notion — Mahfouz</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Mahfouz home">
+          <img src="/images/logo.png" alt="Mahfouz" width="2172" height="724" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/#features">Features</a>
+          <a href="/#git-history">Git history</a>
+          <a href="/#downloads">Downloads</a>
+          <a href="/compare/" aria-current="page">Compare</a>
+          <a href="/guide/">User guide</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="shell compare-hero" aria-labelledby="compare-title">
+        <p class="eyebrow">Mahfouz vs Notion</p>
+        <h1 id="compare-title">Mahfouz <span class="compare-vs">vs</span> Notion</h1>
+        <p class="hero-description">
+          Notion organizes your work as blocks inside its own cloud database.
+          Mahfouz keeps every note as a plain Markdown file on your computer —
+          readable by any editor, script, or AI agent, with nothing to export
+          because nothing was ever locked away.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/#downloads">Download Mahfouz</a>
+          <a class="button button-secondary" href="/guide/">Read the user guide</a>
+        </div>
+      </section>
+
+      <section class="shell compare-table-section" aria-labelledby="compare-table-title">
+        <h2 id="compare-table-title" class="sr-only">Feature comparison</h2>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col">Compare</th>
+                <th scope="col">Notion</th>
+                <th scope="col" class="compare-table-mahfouz">Mahfouz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">File format &amp; ownership</th>
+                <td>Proprietary blocks stored in Notion's own database — pages only exist inside Notion.</td>
+                <td class="compare-table-mahfouz">Plain <code>.md</code> files in a folder you choose — open, edit, or grep them with any tool.</td>
+              </tr>
+              <tr>
+                <th scope="row">Where it runs</th>
+                <td>Notion's cloud. Requires an account and a connection for full functionality.</td>
+                <td class="compare-table-mahfouz">Nowhere but your computer. No account, no server, no Mahfouz cloud — ever.</td>
+              </tr>
+              <tr>
+                <th scope="row">Version history</th>
+                <td>7 days on Free, 30 on Plus, 90 on Business — unlimited only on Enterprise.</td>
+                <td class="compare-table-mahfouz">Full history in a real Git repo, kept as long as you keep it — not a vendor's retention window.</td>
+              </tr>
+              <tr>
+                <th scope="row">Offline use</th>
+                <td>Limited: you choose individual pages to download; everything else needs a connection.</td>
+                <td class="compare-table-mahfouz">Fully local-first. Works offline by default — there's no "download for offline" step.</td>
+              </tr>
+              <tr>
+                <th scope="row">Real-time collaboration</th>
+                <td>Built in, inside Notion's hosted workspace.</td>
+                <td class="compare-table-mahfouz">Git-based: share a vault the way you'd share any repo, and everyone works from their own full copy.</td>
+              </tr>
+              <tr>
+                <th scope="row">Price</th>
+                <td>Free tier is limited; paid plans run from about &euro;9.50/member/month (Plus) up to &euro;19.50 (Business), billed per seat.</td>
+                <td class="compare-table-mahfouz">Free and MIT-licensed, forever. One download, no seats.</td>
+              </tr>
+              <tr>
+                <th scope="row">Data export / lock-in</th>
+                <td>Full workspace export (HTML/Markdown/CSV) exists but isn't on the Free plan, and it's a one-time snapshot, not how the data normally lives.</td>
+                <td class="compare-table-mahfouz">Nothing to export — your notes were never anything but files.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-table-note">
+          Notion pricing and plan limits shown as published on notion.com; check their pricing page for current figures.
+        </p>
+      </section>
+
+      <section class="compare-faq" aria-labelledby="compare-faq-title">
+        <div class="shell">
+          <p class="eyebrow">Questions</p>
+          <h2 id="compare-faq-title">Notion, answered.</h2>
+          <div class="compare-faq-list">
+            <div class="compare-faq-item">
+              <h3>Can I open my notes without Mahfouz?</h3>
+              <p>
+                Yes — every note is a plain <code>.md</code> file. Open it in any
+                text editor, script against it, or hand it to an AI agent;
+                nothing is trapped in a proprietary format the way Notion's
+                blocks are.
+              </p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Does Mahfouz have real-time multiplayer editing like Notion?</h3>
+              <p>
+                No — Mahfouz is a local-first, single-writer editor.
+                Collaboration happens through Git: push, pull, and merge like
+                any other repo, rather than everyone typing into the same live
+                document.
+              </p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>What does Mahfouz cost compared to Notion?</h3>
+              <p>
+                Mahfouz is free and MIT-licensed, with no seats to pay for.
+                Notion's paid plans are billed per member per month, and
+                features like full workspace export or unlimited page history
+                sit behind higher tiers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="shell guide-layout">
+          <div>
+            <h2>See the rest of what Mahfouz can do.</h2>
+            <p>Vaults, Markdown editing, Git sync, history, and more.</p>
+          </div>
+          <a class="button button-secondary" href="/guide/">Read the user guide</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-brand">
+        <a class="emblem-link" href="/" aria-label="Mahfouz home">
+          <img src="/images/emblem.png" alt="" width="1254" height="1254" />
+        </a>
+        <p>Open Markdown notes, kept in your hands — no lock-in, ever.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="https://github.com/influpert/mahfouz">GitHub repository</a>
+        <a href="https://github.com/influpert/mahfouz/releases">All releases</a>
+        <a href="/guide/">User guide</a>
+      </nav>
+    </footer>
+  </body>
+</html>

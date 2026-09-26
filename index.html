@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone — and any agent — can read and edit directly, versioned and shared with Git."
+    />
+    <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://mahfouz.app/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Mahfouz — Notes that stay yours</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Mahfouz home">
+          <img src="/images/logo.png" alt="Mahfouz" width="2172" height="724" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#git-history">Git history</a>
+          <a href="#downloads">Downloads</a>
+          <a href="/compare/">Compare</a>
+          <a href="/guide/">User guide</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Open. No lock-in. Ever.</p>
+          <h1 id="hero-title">Notes that stay yours.</h1>
+          <p class="hero-description">
+            Mahfouz keeps your notes as plain Markdown files in a folder on your
+            computer — nothing proprietary, nothing to export. Open and edit them
+            with any editor, script, or AI agent, and let Git look after their
+            history.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#downloads">Download Mahfouz</a>
+            <a class="button button-secondary" href="/guide/">
+              Read the user guide
+            </a>
+          </div>
+          <p class="platform-note">
+            Available for macOS, Windows, and Linux — and your files work the same
+            without it.
+          </p>
+        </div>
+
+        <figure class="note-example">
+          <figcaption>
+            <span>A note in your vault</span>
+            <span class="file-type">Markdown</span>
+          </figcaption>
+          <pre><code><span class="markup">#</span> Things worth keeping
+
+Small notes can stay small.
+Links make room for the bigger picture.
+
+See also: [[Ideas]]
+#garden</code></pre>
+          <div class="note-example-footer">
+            <span>Plain text on your computer</span>
+            <span>History in Git</span>
+          </div>
+        </figure>
+      </section>
+
+      <section class="features-section" id="features" aria-labelledby="features-title">
+        <div class="shell">
+          <div class="feature-intro">
+            <div>
+              <p class="eyebrow">A little more room to think</p>
+              <h2 id="features-title">Your notes, without the lock-in.</h2>
+            </div>
+            <p class="feature-intro-copy">
+              Write in Markdown, follow ideas across your vault, and keep every
+              note in a format that will still make sense years from now — one
+              that any editor, tool, or agent can open without asking Mahfouz
+              first.
+            </p>
+          </div>
+
+          <div class="feature-rows">
+            <article class="feature-row">
+              <div class="feature-copy">
+                <h3>A home for every thought.</h3>
+                <p>
+                  Keep notes as ordinary Markdown files in folders you choose.
+                  Open several vaults, shape notes into a tree, and pin the ones
+                  you return to.
+                </p>
+                <ul>
+                  <li>Nested notes and folders</li>
+                  <li>Multiple vaults and tabs</li>
+                  <li>Bookmarks and tags</li>
+                  <li>Every file readable and editable outside Mahfouz — no export step</li>
+                </ul>
+              </div>
+              <figure class="feature-shot">
+                <figcaption class="sr-only">
+                  Illustrative workspace preview showing a note tree, Markdown
+                  editor, backlinks, and tags.
+                </figcaption>
+                <div class="shot-bar" aria-hidden="true">
+                  <span class="window-dots"><i></i><i></i><i></i></span>
+                  <span>Workspace preview · Field Notes</span>
+                </div>
+                <div class="workspace-shot" aria-hidden="true">
+                  <aside class="shot-sidebar">
+                    <div class="shot-brand">
+                      <img src="/images/emblem.png" alt="" />
+                      <span>Mahfouz</span>
+                    </div>
+                    <p class="shot-vault">⌄ FIELD NOTES</p>
+                    <div class="tree-item active">Cairo Journal</div>
+                    <div class="tree-item child">Morning walk</div>
+                    <div class="tree-item grandchild">Old streets</div>
+                    <div class="tree-item child">Places to return to</div>
+                    <div class="tree-item">Reading list</div>
+                    <div class="tree-item">Ideas</div>
+                  </aside>
+                  <div class="shot-workspace">
+                    <div class="shot-tabs"><span>Cairo Journal</span><span>Ideas</span></div>
+                    <div class="shot-toolbar"><b>B</b><i>I</i><span>H</span><span>☷</span><span>☑</span><span>▦</span><span>↗</span></div>
+                    <div class="shot-editor">
+                      <h4>Cairo Journal</h4>
+                      <p>A place to collect small details from the city.</p>
+                      <h5>Morning light</h5>
+                      <p>The old stone holds the warmth of the day. I followed a quiet lane past the market and turned toward the river.</p>
+                      <p><strong>See also</strong> <code>[[Old streets]]</code></p>
+                      <p><code>#field-notes</code> <code>#cairo</code></p>
+                    </div>
+                  </div>
+                  <aside class="shot-panel">
+                    <p class="shot-panel-heading">Linked from 2 notes</p>
+                    <div class="shot-backlink">Morning walk<small>…turned toward the river.</small></div>
+                    <div class="shot-backlink">Places to return to</div>
+                    <p class="shot-panel-heading shot-tags-heading">Tags</p>
+                    <span class="shot-tag">#cairo</span>
+                    <span class="shot-tag">#field-notes</span>
+                  </aside>
+                </div>
+              </figure>
+            </article>
+
+            <article class="feature-row feature-row-reverse">
+              <div class="feature-copy">
+                <h3>Move through ideas, not folders.</h3>
+                <p>
+                  Link notes by title, see what points back, and search every
+                  open vault. A live outline and page preview help you find your
+                  place in longer notes.
+                </p>
+                <ul>
+                  <li>Wikilinks and backlinks</li>
+                  <li>Fast vault-wide search</li>
+                  <li>Outline and page preview</li>
+                </ul>
+              </div>
+              <figure class="feature-shot">
+                <figcaption class="sr-only">
+                  Illustrative search preview with matching notes and highlighted
+                  text from across the vault.
+                </figcaption>
+                <div class="shot-bar" aria-hidden="true">
+                  <span class="window-dots"><i></i><i></i><i></i></span>
+                  <span>Search preview · all open vaults</span>
+                </div>
+                <div class="search-shot" aria-hidden="true">
+                  <p class="search-label">SEARCH NOTES</p>
+                  <div class="search-field">⌕ <span>old streets</span><kbd>esc</kbd></div>
+                  <div class="search-results">
+                    <div class="search-result selected">
+                      <strong><mark>Old streets</mark></strong>
+                      <p>Notes on the lanes and buildings around the river…</p>
+                      <small>Field Notes · Places</small>
+                    </div>
+                    <div class="search-result">
+                      <strong>Cairo Journal</strong>
+                      <p>…followed a quiet lane past the market…</p>
+                      <small>Field Notes</small>
+                    </div>
+                    <div class="search-result">
+                      <strong>Places to return to</strong>
+                      <p>Remember the <mark>old streets</mark> near the river.</p>
+                      <small>Field Notes</small>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </article>
+
+            <article class="feature-row">
+              <div class="feature-copy">
+                <h3>Every change has a way back.</h3>
+                <p>
+                  Git records edits as you work. Browse a note’s history, restore
+                  an earlier version, recover deleted notes from Trash, or sync
+                  your vault with a remote.
+                </p>
+                <ul>
+                  <li>Automatic commits</li>
+                  <li>Per-note history</li>
+                  <li>Remote sync and restore</li>
+                </ul>
+              </div>
+              <figure class="feature-shot">
+                <figcaption class="sr-only">
+                  Illustrative note history preview showing automatic Git saves
+                  and earlier versions.
+                </figcaption>
+                <div class="shot-bar" aria-hidden="true">
+                  <span class="window-dots"><i></i><i></i><i></i></span>
+                  <span>History preview · Cairo Journal</span>
+                </div>
+                <div class="history-shot" aria-hidden="true">
+                  <div class="history-note">
+                    <div class="shot-tabs"><span>Cairo Journal</span><span>Ideas</span></div>
+                    <h4>Cairo Journal</h4>
+                    <p>A place to collect small details from the city.</p>
+                    <p>The note stays a Markdown file in your vault while its Git history tracks each saved version.</p>
+                    <p class="history-note-tags">#field-notes&nbsp;&nbsp; #cairo</p>
+                  </div>
+                  <aside class="history-panel">
+                    <h5>History</h5>
+                    <div class="history-commit">
+                      <strong>Auto-save</strong><span>just now <code>a19d20c</code></span>
+                    </div>
+                    <div class="history-commit">
+                      <strong>Auto-save</strong><span>31m ago <code>7d4a812</code></span>
+                    </div>
+                    <div class="history-commit">
+                      <strong>Initial note</strong><span>yesterday <code>02eb9a1</code></span>
+                    </div>
+                  </aside>
+                </div>
+              </figure>
+            </article>
+          </div>
+
+          <div class="feature-more">
+            <div>
+              <p class="eyebrow">When a note wants to become more</p>
+              <h3>Write it once. Present it when you’re ready.</h3>
+            </div>
+            <p>
+              Use the formatting toolbar, tables, checklists, and media as you
+              write. Turn a note into a slide deck with the presentations plugin,
+              then export a PDF when you need a copy to share.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="history-section" id="git-history" aria-labelledby="history-title">
+        <div class="shell history-layout">
+          <div>
+            <p class="eyebrow">A familiar tool, built in</p>
+            <h2 id="history-title">Real history. Real collaboration.</h2>
+            <p>
+              Mahfouz uses Git to record edits, show past versions, and restore
+              a note without erasing what came before. Because Git is
+              distributed, your vault isn’t tied to one server — push it to
+              GitHub, self-host it, or hand a copy to a collaborator, and
+              everyone keeps working from their own full copy of the history.
+            </p>
+          </div>
+          <dl class="history-facts">
+            <div>
+              <dt>Everyday edits</dt>
+              <dd>Saved as Git commits automatically.</dd>
+            </div>
+            <div>
+              <dt>Past versions</dt>
+              <dd>Browse a note’s history and restore a version.</dd>
+            </div>
+            <div>
+              <dt>Remote sync</dt>
+              <dd>Use your existing Git setup and credentials.</dd>
+            </div>
+            <div>
+              <dt>Collaboration</dt>
+              <dd>Share a vault the way you’d share any Git repo — no server Mahfouz controls.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="downloads-section shell" id="downloads" aria-labelledby="downloads-title">
+        <div class="section-intro">
+          <p class="eyebrow">Your computer, your vault</p>
+          <h2 id="downloads-title">Get Mahfouz for your desktop.</h2>
+          <p>Choose your platform to see the latest release and installation options.</p>
+        </div>
+
+        <div class="platform-list">
+          <article class="platform">
+            <div>
+              <h3>macOS</h3>
+              <p>Apple silicon</p>
+            </div>
+            <a href="https://github.com/influpert/mahfouz/releases/latest">View Mac downloads</a>
+          </article>
+          <article class="platform">
+            <div>
+              <h3>Windows</h3>
+              <p>MSI installer</p>
+            </div>
+            <a href="https://github.com/influpert/mahfouz/releases/latest">View Windows downloads</a>
+          </article>
+          <article class="platform">
+            <div>
+              <h3>Linux</h3>
+              <p>Debian package or AppImage</p>
+            </div>
+            <a href="https://github.com/influpert/mahfouz/releases/latest">View Linux downloads</a>
+          </article>
+        </div>
+
+        <p class="install-note">
+          Prefer a package manager? See the
+          <a href="https://github.com/influpert/mahfouz#install">installation instructions</a>.
+        </p>
+      </section>
+
+      <section class="guide-section">
+        <div class="shell guide-layout">
+          <div>
+            <h2>Start with the user guide.</h2>
+            <p>Learn about vaults, editing, Git sync, shortcuts, and more.</p>
+          </div>
+          <a class="button button-secondary" href="/guide/">
+            Read the user guide
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-brand">
+        <a class="emblem-link" href="/" aria-label="Mahfouz home">
+          <img src="/images/emblem.png" alt="" width="1254" height="1254" />
+        </a>
+        <p>Open Markdown notes, kept in your hands — no lock-in, ever.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="https://github.com/influpert/mahfouz">GitHub repository</a>
+        <a href="https://github.com/influpert/mahfouz/releases">All releases</a>
+        <a href="/guide/">User guide</a>
+      </nav>
+    </footer>
+  </body>
+</html>
