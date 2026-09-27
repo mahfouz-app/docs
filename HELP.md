@@ -525,6 +525,7 @@ Everything Mahfouz has to tell you — exports, plugin installs and updates, err
 
 - A dot on the bell means there are notifications you haven't dealt with; hover over the bell to see how many. A ring around it means something is running, and hovering shows what.
 - The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read, or archive it with ×.
+- The pin button in the header keeps the center open as a column on the right, beside your notes; drag its edge to resize it. Pinned, the bell shows and hides the column, and clicking elsewhere or pressing Escape leaves it open. Click the pin again to have it open from the bell instead. The column stays pinned the next time you open Mahfouz.
 - A finished PDF export waits in the center with **Open**, **Save…** and **Discard**.
 - Errors, and things waiting on you, also pop up briefly in the corner. Closing a pop-up leaves the notification in the center.
 - History is kept on this computer for 30 days. It isn't part of your vault.
