@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Mahfouz license: proprietary software, © Influpert LLC." />
+    <meta name="description" content="{{ page.description | escape }}" />
     <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
-    <link rel="canonical" href="https://mahfouz.app/license/" />
+    <link rel="canonical" href="https://mahfouz.app{{ page.url }}" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>License — Mahfouz</title>
+    <title>{{ page.title | escape }} — Mahfouz</title>
   </head>
   <body class="guide-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -33,15 +33,10 @@
     </header>
 
     <main class="shell guide-main" id="main">
-      <p class="guide-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">License</span></p>
+      <p class="guide-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title | escape }}</span></p>
       <article class="guide-content">
-        <h1>License</h1>
-        <p>Copyright &copy; 2026 Influpert LLC. All rights reserved.</p>
-        <p>
-          Mahfouz, its source code and its documentation are proprietary and
-          confidential. No part of it may be copied, modified, distributed, or
-          used in any form without the prior written permission of Influpert LLC.
-        </p>
+        <h1>{{ page.title | escape }}</h1>
+        {{ content }}
       </article>
     </main>
 
@@ -54,7 +49,8 @@
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/">Mahfouz home</a>
-        <a href="/guide/">User guide</a>
+        <a href="/changelog/">Changelog</a>
+        <a href="/license/">License</a>
       </nav>
     </footer>
   </body>
