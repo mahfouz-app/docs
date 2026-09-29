@@ -897,6 +897,10 @@ h1 {
   font-weight: 600;
 }
 
+.platform-soon {
+  color: var(--body-secondary);
+}
+
 .install-note {
   margin: 22px 0 0;
   color: var(--body-secondary);
