@@ -469,11 +469,11 @@ and installs nothing. On a Mac, the stub at `/usr/bin/git` only counts once
 the Command Line Tools are installed.
 
 - **No usable git?** Mahfouz shows a screen offering to install its own
-  copy. **Install** downloads it (about 50–65 MB, checksum-verified);
+  copy. **Install** downloads it (about 25–70 MB depending on your platform, checksum-verified);
   **Check again** re-detects a git you installed yourself; **Retry** repeats
   a failed download.
-- **Where it lives** — in the app's local data folder, in a `git/<version>`
-  subfolder. It's never inside your vault.
+- **Where it lives** — in the app's local data folder, in a subfolder named
+  after the bundled release, such as `git/2.53.0-4/`. It's never inside your vault.
   - macOS: `~/Library/Application Support/app.mahfouz/git/`
   - Windows: `%LOCALAPPDATA%\app.mahfouz\git\`
   - Linux: `~/.local/share/app.mahfouz/git/`
