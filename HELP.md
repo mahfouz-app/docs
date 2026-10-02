@@ -61,10 +61,17 @@ one-folder-per-note shape, which still works.
   toolbar's ⋯ menu → Bookmark, to pin a note. `Cmd/Ctrl+2` jumps to the
   Bookmarks view (a flat list across all vaults).
 - **Unimported files**: if you drop a plain `.md` file into the vault
-  folder outside Mahfouz (no `id:` in its frontmatter), it still shows up in
-  the Sidebar as a clickable "pending" row. Opening and editing it imports
-  it automatically — Mahfouz adds the id it needs and leaves everything else
-  alone.
+  folder outside Mahfouz (no `id:` in its frontmatter), it shows up right
+  away in the Sidebar as a clickable "pending" row, in the folder (or under
+  the note) it was added to. Mahfouz doesn't touch the file until you edit
+  it there: the first edit imports it — Mahfouz adds the id it needs and
+  leaves everything else alone.
+- **Edits from other apps**: Mahfouz watches the vault folder. When another
+  app changes the note you have open, the editor updates in place within a
+  second, keeping your cursor where it was (`Cmd/Ctrl+Z` undoes the
+  reload). If you were typing at the same moment, a banner offers to
+  reload or resolve the conflict instead, so your unsaved typing is never
+  overwritten.
 - **Status dots**: each Sidebar row shows a small dot indicating whether
   the note has uncommitted changes, is synced to a remote, or is local-only.
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
@@ -347,7 +354,7 @@ Mahfouz has no separate undo-history database — **history is git history.**
 - Every note edit auto-commits ~30 seconds after your last keystroke in
   that note (message `Auto-save <timestamp>`), and any edits made outside
   Mahfouz (a text editor, another git client) are auto-committed as
-  `External edits at startup` the next time Mahfouz starts or syncs, so
+  `External edits` as soon as Mahfouz notices them, so
   nothing you do to the vault folder is ever silently lost.
 
 ---
