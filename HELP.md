@@ -462,6 +462,35 @@ accent colors, a font, a logo, a footer — for both Present and PDF export.
 
 ---
 
+## Git
+
+Mahfouz needs git 2.20 or newer. If your machine has one, Mahfouz uses it
+and installs nothing. On a Mac, the stub at `/usr/bin/git` only counts once
+the Command Line Tools are installed.
+
+- **No usable git?** Mahfouz shows a screen offering to install its own
+  copy. **Install** downloads it (about 50–65 MB, checksum-verified);
+  **Check again** re-detects a git you installed yourself; **Retry** repeats
+  a failed download.
+- **Where it lives** — in the app's local data folder, in a `git/<version>`
+  subfolder. It's never inside your vault.
+  - macOS: `~/Library/Application Support/app.mahfouz/git/`
+  - Windows: `%LOCALAPPDATA%\app.mahfouz\git\`
+  - Linux: `~/.local/share/app.mahfouz/git/`
+- **Updates** come with app updates. When a release bumps the bundled git,
+  Mahfouz installs it in the background and starts using it on the next
+  launch, then removes the old copy. A managed git that is too old to be
+  safe is never used.
+- **Sign-in** — on macOS and Windows the bundled git uses Git Credential
+  Manager. Background syncs never pop up a sign-in window; **Sync now** may,
+  so a sync you start can ask you to sign in. On Linux there's no bundled
+  helper: configure your own (`git config --global credential.helper …`, or
+  ssh-agent).
+- **Which git is in use?** Open **About Mahfouz** — it shows the git version
+  and whether it's the system's or Mahfouz's own.
+
+---
+
 ## Git sync & remotes
 
 Vault Settings → **Vault** section:
