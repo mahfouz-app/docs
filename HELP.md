@@ -345,6 +345,46 @@ Mahfouz has no separate undo-history database — **history is git history.**
   `External edits at startup` the next time Mahfouz starts or syncs, so
   nothing you do to the vault folder is ever silently lost.
 
+### Auto-commit and disk-only notes
+
+By default every note auto-commits, as above. If you'd rather keep a
+note's work-in-progress out of history, turn its **auto-commit** off.
+The note is then **disk only**: it still saves to disk as you type, but
+Mahfouz never commits it on its own, so it isn't pushed or shared until
+you say so.
+
+- **Turn it off or on** with the **Auto-commit** switch in the right-sidebar
+  [Attributes panel](#attributes-panel), or right-click the note and pick
+  **Turn off auto-commit** / **Turn on auto-commit**. The action **Toggle
+  auto-commit for note** can be bound to a key in Settings → Shortcuts; it
+  has no default key.
+- **How to tell** — a disk-only note shows a drive glyph in the sidebar
+  (filled while it has uncommitted changes), and the toolbar's save chip
+  reads **Saved · not in history**.
+- **Commit now / Discard changes** — when a disk-only note has uncommitted
+  changes, the Attributes panel shows both buttons. Commit now records the
+  note as a normal commit. Discard changes asks first, then returns the note
+  to its last committed version (or deletes it if it was never committed).
+  This can't be undone.
+- **New child notes** created under a disk-only note start disk-only too.
+- **Blocked pulls** — if someone else changes a disk-only note you've also
+  edited, the pull would overwrite your uncommitted work, so it's blocked. A
+  notification names the note(s) and offers **Commit now**, **Discard** and
+  **Open note**. Syncing for the whole vault waits until you resolve it.
+- **Use the remote's contents** (see [Git sync](#git-sync--remotes)) warns
+  first and names any disk-only notes whose uncommitted edits it would
+  destroy. Those edits aren't in history, so they can't be recovered.
+
+Limits worth knowing:
+
+- Deleting a disk-only note still commits the deletion, and restoring it
+  from Trash brings back its **last committed version**, not the
+  uncommitted edits.
+- The setting is stored **per note, per machine**, not in the vault.
+  Collaborators and your other machines are unaffected and keep
+  auto-committing that note. Clearing the app's data on this machine puts
+  every note back on auto-commit.
+
 ---
 
 ## Presenting notes as slides
@@ -584,6 +624,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | `Mod+3` | Go to tags |
 | `Mod+4` | Go to trash |
 | `Mod+5` | Go to search |
+| — | Toggle auto-commit for note (no default key) |
 | `Mod+Shift+P` | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
 Fixed editor shortcuts (not remappable):
