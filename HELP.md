@@ -6,12 +6,9 @@ repository — the repo is the source of truth; Mahfouz's local database is
 just a rebuildable index on top of it. This guide covers every feature
 currently in the app.
 
-**Mahfouz needs Git installed.** The Linux `.deb` and `.rpm` packages
-install it for you. Otherwise, if Mahfouz can't find Git when it starts, it
-shows a **Mahfouz needs Git** screen with the install command for your
-system instead of opening your vaults: on macOS, `xcode-select --install`;
-on Linux, your distribution's `git` package; on Windows, Git for Windows
-from git-scm.com. Install it, then click **Check again**.
+**Mahfouz needs git.** If it can't find a usable git when it starts, it
+offers to install its own copy, or shows how to install git yourself. See
+[Git](#git).
 
 Menu → **Help → Keyboard Shortcuts** (`Cmd/Ctrl+/`) opens a quick-reference
 shortcut cheat sheet inside the app. This document is the long-form manual.
@@ -458,6 +455,51 @@ accent colors, a font, a logo, a footer — for both Present and PDF export.
   template, so they sync with the vault and can be edited by hand.
   Presenting picks up template changes the next time you present or switch
   notes.
+
+---
+
+## Git
+
+Mahfouz needs git 2.20 or newer. If your machine has one, Mahfouz uses it
+and installs nothing. On a Mac, the stub at `/usr/bin/git` only counts once
+the Command Line Tools are installed. The Linux `.deb` and `.rpm` packages
+install git as a dependency, so on Linux the screen below mostly matters
+for the AppImage.
+
+When Mahfouz finds no usable git at startup, it shows a **Git is required**
+screen instead of opening your vaults:
+
+- **Install** downloads Mahfouz's own copy (about 25–70 MB depending on
+  your platform, checksum-verified). **Retry** repeats a failed download.
+- Or install git yourself, using the command the screen shows for your
+  system:
+  - macOS: `xcode-select --install` (Apple's Command Line Tools)
+  - Linux: `sudo apt install git` or `sudo dnf install git`
+  - Windows: Git for Windows from git-scm.com
+
+  On a platform where Mahfouz can't install its own copy, this is the only
+  option.
+- **Check again** finds a git you installed yourself, without restarting.
+
+Mahfouz's own copy:
+
+- **Where it lives** — in the app's local data folder, in a subfolder named
+  after the bundled release, such as `git/2.53.0-4/`. It's never inside your vault.
+  - macOS: `~/Library/Application Support/app.mahfouz/git/`
+  - Windows: `%LOCALAPPDATA%\app.mahfouz\git\`
+  - Linux: `~/.local/share/app.mahfouz/git/`
+- **Updates** come with app updates. When a release bumps the bundled git,
+  Mahfouz installs it in the background and starts using it on the next
+  launch, then removes the old copy. A managed git that is too old to be
+  safe is never used.
+- **Sign-in** — on macOS and Windows the bundled git uses Git Credential
+  Manager. Background syncs never pop up a sign-in window; **Sync now** may,
+  so a sync you start can ask you to sign in. On Linux there's no bundled
+  helper: configure your own (`git config --global credential.helper …`, or
+  ssh-agent).
+
+To see which git is in use, open **About Mahfouz**: it shows the git
+version and whether it's the system's or Mahfouz's own.
 
 ---
 
