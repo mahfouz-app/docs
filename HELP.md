@@ -97,8 +97,13 @@ visible, switched with the toolbar's **Show source** button
 
 Other editor behavior:
 
-- **Tab** re-indents only when your cursor is in leading whitespace at the
-  start of a line; anywhere else it's left free for OS-level autocomplete.
+- **Tab** on a list item (bullet, numbered, or checklist) nests it under the
+  item above, wherever your cursor is on the line, and its sub-items move
+  with it. **Shift+Tab** moves it back out a level. On the first item of a
+  list Tab does nothing, since there's nothing above to nest under.
+- On any other line, **Tab** re-indents only when your cursor is in leading
+  whitespace at the start of the line; anywhere else it's left free for
+  OS-level autocomplete.
 - Native macOS spellcheck/autocorrect (including Text Replacements) work
   normally.
 - `Cmd/Ctrl+Click` on a link, `[[wikilink]]`, or a rendered link-card opens
