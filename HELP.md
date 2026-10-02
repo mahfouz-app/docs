@@ -6,6 +6,13 @@ repository — the repo is the source of truth; Mahfouz's local database is
 just a rebuildable index on top of it. This guide covers every feature
 currently in the app.
 
+**Mahfouz needs Git installed.** The Linux `.deb` and `.rpm` packages
+install it for you. Otherwise, if Mahfouz can't find Git when it starts, it
+shows a **Mahfouz needs Git** screen with the install command for your
+system instead of opening your vaults: on macOS, `xcode-select --install`;
+on Linux, your distribution's `git` package; on Windows, Git for Windows
+from git-scm.com. Install it, then click **Check again**.
+
 Menu → **Help → Keyboard Shortcuts** (`Cmd/Ctrl+/`) opens a quick-reference
 shortcut cheat sheet inside the app. This document is the long-form manual.
 
