@@ -375,16 +375,28 @@ you say so.
 - **Use remote (overwrites local)** (see [Git sync](#git-sync--remotes)) warns
   first and names any disk-only notes whose uncommitted edits it would
   destroy. Those edits aren't in history, so they can't be recovered.
+- **Restoring a revision** of a disk-only note that has uncommitted changes
+  asks first, since the restore replaces them. The restored version is
+  committed.
 
 Limits worth knowing:
 
 - Deleting a disk-only note still commits the deletion, and restoring it
   from Trash brings back its **last committed version**, not the
   uncommitted edits.
-- The setting is stored **per note, per machine**, not in the vault.
-  Collaborators and your other machines are unaffected and keep
-  auto-committing that note. Clearing the app's data on this machine puts
-  every note back on auto-commit.
+- **Commit now** also commits any other changes waiting for the next
+  auto-commit, in one commit named after the note. Other disk-only notes stay
+  out.
+- Attachments (in `files/`) that a disk-only note links to are still
+  auto-committed, even while the note itself isn't.
+- Moving the child notes of a disk-only parent can leave history
+  inconsistent (the children committed in their new place, the parent not)
+  until you commit the parent.
+- The setting is stored **per note, on this computer only**: in the vault's
+  local git folder, never committed or pushed. Collaborators and your other
+  machines are unaffected and keep auto-committing that note. It survives
+  removing and re-adding the vault and rebuilding its index; a fresh clone
+  of the vault starts with every note auto-committing.
 
 ---
 
