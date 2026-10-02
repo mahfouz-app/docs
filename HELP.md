@@ -369,12 +369,11 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   PDF export the **PDF export** plugin (Preferences → Plugins), both from
   the built-in `mahfouz` registry. Each can be on without the other; the
   Export dialog only offers PDF while the PDF export plugin is on.
-  Installing either downloads Slidev and a headless browser — a one-time
-  download of a few hundred MB, with a progress bar in the status bar (PDF
-  export installs Slidev as its dependency). Requires **Node.js 22.12+**
-  installed somewhere Mahfouz can find it (it checks common locations and
-  your login shell's `PATH`). Editing the note updates the presentation
-  live.
+  Installing either downloads Slidev, a headless browser and its own
+  Node.js runtime (about 50 MB of that) — a one-time download of a few
+  hundred MB, with a progress bar in the status bar (PDF export installs
+  Slidev as its dependency). You don't need Node.js installed yourself.
+  Editing the note updates the presentation live.
 
 ### Slides templates
 
