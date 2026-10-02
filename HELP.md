@@ -66,7 +66,8 @@ one-folder-per-note shape, which still works.
   it automatically — Mahfouz adds the id it needs and leaves everything else
   alone.
 - **Status dots**: each Sidebar row shows a small dot indicating whether
-  the note has uncommitted changes, is synced to a remote, or is local-only.
+  the note has uncommitted changes, is synced to a remote, or is local-only. A note with auto-commit off also shows a drive glyph
+  (see [Auto-commit and disk-only notes](#auto-commit-and-disk-only-notes)).
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
   via Settings.
@@ -370,8 +371,8 @@ you say so.
 - **Blocked pulls** — if someone else changes a disk-only note you've also
   edited, the pull would overwrite your uncommitted work, so it's blocked. A
   notification names the note(s) and offers **Commit now**, **Discard** and
-  **Open note**. Syncing for the whole vault waits until you resolve it.
-- **Use the remote's contents** (see [Git sync](#git-sync--remotes)) warns
+  **Open note**. Pulling for the whole vault stays blocked until you resolve it.
+- **Use remote (overwrites local)** (see [Git sync](#git-sync--remotes)) warns
   first and names any disk-only notes whose uncommitted edits it would
   destroy. Those edits aren't in history, so they can't be recovered.
 
