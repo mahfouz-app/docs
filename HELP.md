@@ -472,7 +472,7 @@ screen instead of opening your vaults:
 
 - **Install** downloads Mahfouz's own copy (about 25–70 MB depending on
   your platform, checksum-verified). **Retry** repeats a failed download.
-- **Install it yourself** with the command the screen shows for your
+- Or install git yourself, using the command the screen shows for your
   system:
   - macOS: `xcode-select --install` (Apple's Command Line Tools)
   - Linux: `sudo apt install git` or `sudo dnf install git`
