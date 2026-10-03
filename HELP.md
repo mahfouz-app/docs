@@ -61,6 +61,19 @@ one-folder-per-note shape, which still works.
   present). Rename a note by editing its first line.
 - **Reordering / nesting**: drag a note in the Sidebar to reorder it or
   drop it onto another note to make it a child.
+- **Folders**: a folder doesn't have to belong to a note. Right-click a
+  plain folder in the Sidebar for **New note**, **New folder**, **Rename
+  folder** (edit the name in place: `Enter` saves, `Esc` cancels),
+  **Reveal in Finder**, and **Delete folder**.
+- **Breadcrumb**: the bar above the editor shows where the open note
+  lives: the vault, then every folder it's nested in. Click a folder that
+  belongs to a note to open that note; click a plain folder to show it in
+  the Sidebar.
+- **Sidebar menu**: right-click empty space in the Sidebar for **New
+  note** and **New folder** (in the active vault), **New vault…**, **Open
+  vault…**, and the grouping, sort and filename-display options.
+- **Reveal in Finder** is called **Reveal in File Explorer** on Windows
+  and **Open Containing Folder** on Linux.
 - **Bookmarks**: click the ribbon icon on a Sidebar row, or use the
   toolbar's ⋯ menu → Bookmark, to pin a note. `Cmd/Ctrl+2` jumps to the
   Bookmarks view (a flat list across all vaults).
@@ -210,7 +223,8 @@ Right-aligned at the end of the toolbar:
   right-clicking the note in the Sidebar (minus "Open in new tab"):
   **Present**, **Export…**, **New child note**, **New folder**,
   **Bookmark** / **Remove bookmark**, **Move…**, **Rename**, **Duplicate**,
-  **Copy name**, **Copy as wikilink**, **Copy ID**, **Reveal in Finder**,
+  **Copy name**, **Copy as wikilink**, **Copy ID**, **Reveal in Finder**
+  (**Reveal in File Explorer** on Windows, **Open Containing Folder** on Linux),
   **Revisions** (opens the note's history in the Details section), and **Delete** (danger). Each
   item shows its keyboard shortcut.
 
@@ -343,7 +357,7 @@ The sidebar's sections, in order:
 - **Details** — Created, Created by, Updated, Last edited by and Path,
   then the note's [history](#history--trash). These rows come from git
   and the file on disk, so they're read-only; Path reveals the file in
-  Finder. Click a row's label to choose whether it also shows in the
+  your file manager. Click a row's label to choose whether it also shows in the
   attributes block in the document.
 - **Backlinks** — see [Links](#links-wikilinks--backlinks).
 - **Tags** — the note's tags; click one to filter by it.
@@ -741,6 +755,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | `Mod+4` | Go to trash |
 | `Mod+5` | Go to search |
 | — | Toggle auto-commit for note (no default key) |
+| `Mod+Shift+R` | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`; an older `reveal_in_finder` row still works and is renamed on the next write) |
 | `Mod+Shift+P` | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
 Fixed editor shortcuts (not remappable):
