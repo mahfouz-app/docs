@@ -29,15 +29,15 @@ The sidebar's sections, in order:
   and the file on disk, so they're read-only; Path reveals the file in
   your file manager. Click a row's label to choose whether it also shows in the
   attributes block in the document.
-- **Backlinks** — see [Links](/guide/notes/#links-wikilinks--backlinks).
+- **Backlinks** — see [Links](/guide/links/#links-wikilinks--backlinks).
 - **Tags** — the note's tags; click one to filter by it.
 - **Attributes** — see [Attributes panel](#attributes-panel).
 
 ## Attributes panel
 
 Attributes Mahfouz understands get a matching control; everything else
-is a free-form row. Both round-trip straight to the note's YAML
-frontmatter, so they're visible and hand-editable outside the app too.
+is a free-form row. Both are saved in the note's frontmatter, so
+they're visible and hand-editable outside the app too.
 
 The panel shows in two places: as a block in the document under the
 note's first heading, and as a right-sidebar section (open it with the
@@ -48,7 +48,7 @@ The read-only Created, Updated and Path rows live in the sidebar's
 chosen to there.
 
 - **Render external images** — a switch; see
-  [Media](/guide/markdown/#media-images--attachments).
+  [Media](/guide/media/).
 - **Orientation** — Landscape / Portrait segmented control for PDF export
   (same as the toolbar button). Landscape is the default and writes no key.
 - **Text, highlight, background color** — a color swatch each, with a

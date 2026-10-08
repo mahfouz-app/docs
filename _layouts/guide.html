@@ -30,7 +30,7 @@
     </header>
 
     <main class="shell guide-main" id="main">
-      {%- assign pages = site.data.guide -%}
+      {%- assign pages = "" | split: "" -%}{%- for g in site.data.guide -%}{%- assign pages = pages | concat: g.pages -%}{%- endfor -%}
       {%- assign here = page.url | remove_first: "/guide/" | remove: "/" -%}
       <p class="guide-breadcrumb">
         <a href="/">Home</a><span aria-hidden="true">/</span>

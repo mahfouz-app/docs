@@ -6,8 +6,7 @@ permalink: /guide/plugins/
 ---
 
 Preferences → **Plugins** lists every plugin, grouped by the **registry**
-it comes from. A registry is a git repository of plugins, much like a
-Homebrew tap. `mahfouz` (github.com/mahfouz-app/plugins) is built in, and
+it comes from. A registry is a git repository of plugins. `mahfouz` (github.com/mahfouz-app/plugins) is built in, and
 you can add others under **Registries → Add a registry** with a git URL or
 a GitHub `owner/repo`.
 
@@ -19,7 +18,7 @@ a GitHub `owner/repo`.
 - **Turning a plugin on is per vault**: it's recorded in
   `.config/settings.md` under `## Plugins`, e.g. `mahfouz/mermaid`.
   **Installing is per computer.** If you open a vault that uses a plugin
-  this computer doesn't have, the [status bar](/guide/workspace/#status-bar) asks before
+  this computer doesn't have, the [status bar](/guide/tabs/#status-bar) asks before
   installing it. **Not now** stops it asking for that vault. If the plugin
   comes from a registry you haven't added, the status bar tells you, but
   the registry is never added for you.

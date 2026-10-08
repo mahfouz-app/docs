@@ -7,8 +7,8 @@ permalink: /guide/
 
 Mahfouz is a cross-platform Markdown PKM (personal knowledge management) app.
 Your notes are plain Markdown files in a folder that is also a git
-repository — the repo is the source of truth; Mahfouz's local database is
-just a rebuildable index on top of it.
+repository — those files are the source of truth, and everything Mahfouz
+shows you comes from them.
 
 **Mahfouz needs git.** If it can't find a usable git when it starts, it
 offers to install its own copy, or shows how to install git yourself. See
@@ -22,8 +22,11 @@ shortcut cheat sheet inside the app.
 
 Using Mahfouz in a browser? See [Mahfouz on the web](/guide/web/).
 
+{%- for g in site.data.guide %}
+<h2>{{ g.group | escape }}</h2>
 <ul class="guide-index">
-{%- for p in site.data.guide %}
+{%- for p in g.pages %}
   <li><a href="/guide/{{ p.slug }}/">{{ p.title | escape }}</a><p>{{ p.description | escape }}</p></li>
 {%- endfor %}
 </ul>
+{%- endfor %}

@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Presenting notes as slides
+title: "Presenting notes as slides"
 description: "Present a note as a slide deck and style it with slides templates."
 permalink: /guide/slides/
 ---
@@ -16,8 +16,8 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
 - A note's menu (sidebar, tab, or toolbar ⋯) offers **Present** as a
   regular tab instead, with **Reload**, **Presenter** (opens Slidev's
   presenter view — speaker notes, timer — in your system browser),
-  **Browser** (opens the deck itself there), and **Restart** (restarts the
-  shared Slidev server) in its toolbar.
+  **Browser** (opens the deck itself there), and **Restart** (restarts
+  Slidev) in its toolbar.
 - **PDF**: a note's menu → **Export…** (or `Cmd/Ctrl+Shift+E`) → Format
   **PDF** renders the deck to a PDF; once it's ready, **Save…** asks where
   to put it. Page shape follows the note's **Orientation**.
@@ -25,10 +25,9 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   PDF export the **PDF export** plugin (Preferences → Plugins), both from
   the built-in `mahfouz` registry. Each can be on without the other; the
   Export dialog only offers PDF while the PDF export plugin is on.
-  Installing either downloads Slidev, a headless browser and its own
-  Node.js runtime (about 50 MB of that) — a one-time download of a few
-  hundred MB, with a progress bar in the status bar (PDF export installs
-  Slidev as its dependency). You don't need Node.js installed yourself.
+  Installing either is a one-time download of a few hundred MB, with a
+  progress bar in the status bar (installing PDF export also installs
+  Slidev). There's nothing else for you to install.
   Editing the note updates the presentation live.
 
 ## Slides templates
@@ -45,7 +44,7 @@ accent colors, a font, a logo, a footer — for both Present and PDF export.
 - **Cover slide**: the optional cover fields (background, image, text
   color, logo) replace the main ones on the first slide only.
 - **Header and footer**: one line of inline Markdown drawn at the top and
-  bottom of every slide. Both can use [fields](/guide/editor/#fields-name) — `!title`,
+  bottom of every slide. Both can use [fields](/guide/fields/) — `!title`,
   `!page`, `!total` — expanded when the deck is presented or exported.
 - A note overrides a template's header/footer with its own `header` /
   `footer` attribute (`none` turns that side off), and a `title_slide`

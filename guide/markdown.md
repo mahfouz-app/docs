@@ -1,13 +1,11 @@
 ---
 layout: guide
-title: "Markdown & media"
-description: "The Markdown syntax Mahfouz understands, and how images and attachments are stored."
+title: "Markdown"
+description: "The Markdown syntax Mahfouz understands, from headings and links to tables."
 permalink: /guide/markdown/
 ---
 
-## Markdown syntax reference
-
-Everything below is plain Markdown (GFM-flavored) that Mahfouz recognizes and
+Everything below is plain Markdown (GitHub-style) that Mahfouz recognizes and
 renders specially:
 
 | Syntax | Result |
@@ -30,12 +28,12 @@ renders specially:
 | `[text](url)` | Link |
 | `<https://example.com>` | Bare autolink |
 | `[[Note Title]]` | Wikilink to another note by title |
-| `#tag` | Tag (indexed, filterable in the Sidebar) |
+| `#tag` | Tag (filterable in the Sidebar) |
 | `![alt](path)` alone on a line | Embedded image/video/audio, auto-detected from the file extension |
-| GFM pipe table (`\| a \| b \|` rows with a `---` separator row) | Interactive table in Preview mode |
+| GitHub-style pipe table (`\| a \| b \|` rows with a `---` separator row) | Interactive table in Preview mode |
 | YAML frontmatter (`---` fenced block at the very top) | Note metadata — `id`, `bookmarked`, `external_images`, and any custom attributes you add |
 
-### Callouts
+## Callouts
 
 A callout is a blockquote whose first line is only a marker. It uses the
 same syntax as GitHub's alerts, so a vault pushed to GitHub renders its
@@ -57,7 +55,7 @@ changes it, and picking its own type turns it back into a plain quote.
 A callout at the top of a note isn't the note's title: the title comes
 from the line after it.
 
-### Tables
+## Tables
 
 Insert one via the toolbar's **Table** button (a hover grid, minimum 8×8,
 that grows as you approach its edge — pick rows × columns, it shows the
@@ -70,39 +68,3 @@ grid instead of raw pipe syntax:
 - Each column header shows a drag handle (reorder columns) and a trash
   icon (delete column — hidden when only one remains); rows with more than
   one row get the same drag handle to reorder.
-
-## Media, images & attachments
-
-- **Embedding**: `![alt text](path)` on its own line renders inline as an
-  image, video, or audio player, chosen automatically from the file
-  extension (video: mp4/webm/ogv/mov/m4v; audio: mp3/wav/ogg/oga/m4a/flac/
-  aac; anything else: image). A small chevron in the editor gutter next to
-  that line collapses/expands the embed (remembered per note on your
-  device).
-- **Adding files**: drag a file from the OS onto the editor, paste a file
-  from your clipboard (e.g. a screenshot), or use the toolbar's **Insert
-  media or file** button. The file is copied into the vault-level `files/`
-  folder with a sanitized, uniquified name, and a `![Name](/files/file.ext)`
-  (media) or `[Name](/files/file.ext)` (other files) line is inserted at
-  your cursor. The link is the same wherever the note later moves.
-- **Paths**: a path starting with `/` resolves from the vault root; any
-  other relative path resolves against the note's own folder (you can't
-  reach outside the vault with `../../`). `file:` URLs are rejected.
-  `data:` URIs render directly.
-- **Remote images**: `http(s)://` image URLs only render if you've turned
-  on **"Render external images in this note"** in the
-  [Attributes panel](/guide/attributes/#attributes-panel) — off by default, per note.
-- **Cleanup**: if you delete an embed line (or the note itself), Mahfouz
-  removes the underlying file from disk automatically, but only if no
-  other note in the vault still references it. Only files under `files/`
-  (or, for older vaults, beside the note) are ever removed this way.
-- **Markdown export** copies the note (and, optionally, its children) plus
-  the attachments they reference, keeping `/files/…` links valid with the
-  export folder as the root.
-- **Pasting a URL** inserts a Markdown link with the URL as its text
-  (`[https://example.com](https://example.com)`). Paste it over selected
-  text to link that text instead (`[text](https://example.com)`). Inside
-  code or an existing link, the URL is pasted as plain text.
-- **Link titles**: after pasting a URL, press **Tab** while the
-  "Tab → title" hint is showing to replace the link text with the page's
-  title (`[Title](url)`).
