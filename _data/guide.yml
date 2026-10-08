@@ -9,6 +9,9 @@
     - slug: links
       title: "Links, tags & search"
       description: "Link notes with wikilinks, see backlinks, tag notes and search the vault."
+    - slug: mind-map
+      title: "The vault mind map"
+      description: "See a vault's notes as a radial map, browse by folder or by tag, and add notes from it."
     - slug: history
       title: "History & trash"
       description: "Every change is a commit: browse history, restore notes, and choose what gets committed."

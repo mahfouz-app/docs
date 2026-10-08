@@ -27,6 +27,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | `Mod+4` | Go to trash |
 | `Mod+5` | Go to search |
 | — | Toggle auto-commit for note (no default key) |
+| — | Open the vault mind map (no default key; action "Open mind map") |
 | `Mod+Shift+R` | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | `Mod+Shift+P` | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
