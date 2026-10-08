@@ -7,6 +7,9 @@
 - slug: notes
   title: "Notes, links & search"
   description: "Organize notes in a tree, link them, tag them and find them again."
+- slug: mind-map
+  title: "The vault mind map"
+  description: "See a vault's notes as a radial map, browse by folder or by tag, and add notes from it."
 - slug: editor
   title: "The editor"
   description: "Write in the editor, use the formatting toolbar, the table of contents and fields."
