@@ -27,16 +27,18 @@ shows **This browser can't run Mahfouz** with a link to the desktop app (or,
 over plain http, **Mahfouz needs a secure connection**).
 
 Opening a folder on your computer needs the File System Access API, which
-only Chromium browsers have. In Safari and Firefox the first-run card says so
+only Chromium browsers have. In Safari and Firefox the bar above the
+[welcome page](/guide/vaults/#the-welcome-page) says so
 and links here.
 
 GitHub vaults live in the browser's own storage, which Safari can write to
 from version 26. In an older Safari, **Open a GitHub repository…** is
-disabled and the card says why.
+disabled and the bar says why.
 
 ## Opening a folder
 
-On first run, click **Open or create a vault…** and choose a folder. The
+On first run, click **Open or create a vault…** in the bar above the
+welcome page and choose a folder. The
 browser asks whether Mahfouz may edit the folder: choose **Edit files**.
 Press `Ctrl+Alt+O` (`⌘⌥O` on a Mac) to open another folder later.
 
@@ -89,7 +91,8 @@ selection later.
 
 ## Opening a GitHub repository
 
-On first run, or from Open Vault, click **Open a GitHub repository…**:
+On first run (in the bar above the welcome page), or from Open Vault, click
+**Open a GitHub repository…**:
 
 1. Sign in with GitHub and install the Mahfouz app on your repositories, as
    above. If the repository belongs to an organization and an owner has to
