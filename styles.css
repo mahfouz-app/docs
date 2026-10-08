@@ -1584,6 +1584,7 @@ h1 {
 
 .guide-nav-heading {
   margin: 0 0 10px;
+  padding-left: 12px;
   color: var(--body-secondary);
   font-size: 0.8rem;
   font-weight: 600;
@@ -1599,8 +1600,7 @@ h1 {
 
 .guide-nav-list a {
   display: block;
-  padding: 6px 10px;
-  margin-left: -10px;
+  padding: 6px 12px;
   border-radius: 6px;
   color: var(--body-secondary);
   font-size: 0.94rem;
@@ -1645,6 +1645,6 @@ h1 {
   }
 
   .guide-nav-compact nav {
-    padding: 0 16px 12px 26px;
+    padding: 0 16px 12px 16px;
   }
 }
