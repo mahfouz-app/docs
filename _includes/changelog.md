@@ -1,4 +1,12 @@
 
+## 0.10.0 (2026-10-08) {#v0.10.0}
+
+* Serve the web app at mahfouz.app; the site moves to docs.mahfouz.app
+* docs(changelog): list 0.9.0 by PR title
+* ci(release): read BWS from the production environment
+* fix(release): one changelog line per PR, titled from the PR
+
+
 ## 0.9.0 (2026-10-08) {#v0.9.0}
 
 * ci(web): a release deploys the web app with the desktop builds
