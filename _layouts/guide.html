@@ -40,6 +40,18 @@
         <a href="/guide/">User guide</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title | escape }}</span>
         {%- endif %}
       </p>
+      <div class="guide-body">
+      <nav class="guide-sidebar" aria-label="User guide">
+        <p class="guide-nav-heading">User guide</p>
+        {% include guide-nav.html here=here %}
+      </nav>
+      <div class="guide-column">
+      <details class="guide-nav-compact">
+        <summary>User guide pages</summary>
+        <nav aria-label="User guide">
+          {% include guide-nav.html here=here %}
+        </nav>
+      </details>
       <article class="guide-content">
         <h1>{{ page.title | escape }}</h1>
         {{ content }}
@@ -59,6 +71,8 @@
         {%- endif %}
       </nav>
       {%- endif %}
+      </div>
+      </div>
     </main>
 
     <footer class="site-footer shell">
