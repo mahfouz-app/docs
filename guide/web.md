@@ -142,6 +142,9 @@ deletes it from this browser, unlike a folder vault, whose folder is left
 alone. The question tells you how many commits GitHub doesn't have yet and
 whether some changes aren't committed yet: those are lost. What's on GitHub
 stays, and you can open it again from there. Sync first to keep your work.
+Notes you moved out of a browser-stored vault are restored from that
+vault's Trash, so once it's removed, the vault they came from can't bring
+them back.
 
 ## Commits on the web
 
