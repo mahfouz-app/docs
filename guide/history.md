@@ -5,7 +5,7 @@ description: "Every change is a commit: browse history, restore notes, and choos
 permalink: /guide/history/
 ---
 
-Mahfouz has no separate undo-history database — **history is git history.**
+Mahfouz keeps no separate history of its own — **history is git history.**
 
 - **History** (the bottom of the sidebar's Details section — toolbar ⋯ →
   Revisions, `Cmd/Ctrl+Alt+R`, or click the save status) lists
@@ -71,5 +71,5 @@ Limits worth knowing:
 - The setting is stored **per note, on this computer only**: in the vault's
   local git folder, never committed or pushed. Collaborators and your other
   machines are unaffected and keep auto-committing that note. It survives
-  removing and re-adding the vault and rebuilding its index; a fresh clone
+  removing and re-adding the vault and **Rebuild from vault**; a fresh clone
   of the vault starts with every note auto-committing.

@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Signing in to GitHub
+title: "Signing in to GitHub"
 description: "Connect your GitHub account to create repositories and invite collaborators."
 permalink: /guide/github/
 ---
@@ -30,8 +30,8 @@ public repository on github.com and connect it with **Use an existing one**.
 The sign-in never pushes or pulls: git sync keeps using your own SSH keys or
 credential helper.
 
-The sign-in is stored in your system keychain, never in the vault or its
-database.
+The sign-in is stored securely in your system keychain on this computer,
+never in your vault.
 
 ## The account button
 
