@@ -1,102 +1,61 @@
 
 ## 0.9.0 (2026-10-08) {#v0.9.0}
 
-* Merge pull request #104 from mahfouz-app/claude/web-deploy-on-release
-* Merge pull request #105 from mahfouz-app/claude/receive-pack-timeout
-* Merge pull request #98 from mahfouz-app/claude/web-no-previews
-* Merge pull request #97 from mahfouz-app/claude/web-launch
-* Merge pull request #96 from mahfouz-app/claude/web-github-ui
-* Merge pull request #95 from mahfouz-app/claude/web-opfs
-* Merge pull request #94 from mahfouz-app/claude/web-gitproxy
-* Merge pull request #93 from mahfouz-app/claude/web-session
-* Merge pull request #90 from mahfouz-app/claude/web-preview
-* Merge pull request #86 from mahfouz-app/claude/web-shell
-* Merge pull request #85 from mahfouz-app/claude/web-io
-* Merge pull request #84 from mahfouz-app/claude/web-sqlite
-* Merge pull request #83 from mahfouz-app/claude/web-git
-* Merge pull request #82 from mahfouz-app/claude/web-handlefs
-* Merge pull request #75 from mahfouz-app/claude/web-deploy
-* Merge pull request #102 from mahfouz-app/claude/www-github-io
-* Merge pull request #99 from mahfouz-app/claude/terraform-ci
-* Merge pull request #92 from mahfouz-app/claude/dark-scrollbar-contrast
-* Merge pull request #91 from mahfouz-app/claude/mahfouz-dark-scrollbars-0a6c42
-* Merge pull request #89 from mahfouz-app/claude/settings-follow-active-vault
-* Merge pull request #87 from mahfouz-app/claude/sync-rename-dotdir
-* Merge pull request #81 from mahfouz-app/claude/notification-actions-09eafc
-* Merge pull request #80 from mahfouz-app/claude/default-folder-rename-5fbd97
-* Merge pull request #79 from mahfouz-app/claude/no-webview-context-menu
-* Merge pull request #78 from mahfouz-app/claude/link-label-underline
-* Merge pull request #77 from mahfouz-app/claude/list-item-drag
-* Merge pull request #76 from mahfouz-app/claude/folders-breadcrumb-reveal
-* Merge pull request #74 from mahfouz-app/claude/bin-dev-install
-* Merge pull request #73 from mahfouz-app/claude/account-avatar
-* Merge pull request #71 from mahfouz-app/claude/mahfouz-git-install-e023ab
-* Merge pull request #69 from mahfouz-app/claude/slidev-install-no-nodejs-3a1978
-* Merge pull request #72 from mahfouz-app/claude/note-auto-save-feature-a4deac
-* Merge pull request #68 from mahfouz-app/claude/desktop-github-app
-* Merge pull request #70 from mahfouz-app/claude/remove-docs-submodule
-* Merge pull request #67 from mahfouz-app/feat/git-missing-screen
-* Merge pull request #66 from mahfouz-app/claude/notes-header-pills-ui-f56d25
-* Merge pull request #65 from mahfouz-app/claude/keyboard-shortcuts-ui-98d051
-* Merge pull request #64 from mahfouz-app/claude/mahfouz-note-sync-dd6f97
-* Merge pull request #63 from mahfouz-app/claude/notes-header-pills-ui-f56d25
-* Merge pull request #61 from mahfouz-app/claude/tab-key-bullet-nesting-53dd3e
+* ci(web): a release deploys the web app with the desktop builds
+* test(worker): give the receive-pack linear-time test 30 s
+* chore(web): drop PR previews; staging is enough
+* feat(web): launch the web app in production (M3)
+* feat(web): GitHub sign-in, the vault picker and the avatar on the web (M2d)
+* feat(web): browser-storage GitHub vaults: clone, pull, reset and chunked push (M2c)
+* M2b: git proxy and GitHub API allowlist
+* M2a: web sessions and GitHub sign-in in the Worker
+* M1g: PR previews, asset-worker kill switch, cross-browser checklist
+* M1f: the web shell — Mahfouz boots on the web for local folders
+* M1e: web platform I/O (dialogs, drops, watcher, vault assets)
+* M1d: web index database (sqlite-wasm in a Worker)
+* M1c: web git engine (isomorphic-git over folder handles)
+* M1b: browser filesystem (HandleFs, web VaultFs, folder handles)
+* M1a: web app Worker, deploy CI and custom domains
+* fix(ops): point www at mahfouz-app.github.io so GitHub serves its certificate
+* feat(ops): Terraform applies in CI behind an approval; look the zone up
+* fix(ui): lower dark-mode scrollbar contrast
+* fix(ui): darken scrollbars in dark mode
+* fix(settings): reload settings when the active vault changes
+* fix(sync): treat a diff rename as delete-old plus add-new
+* feat(notifications): click a notification to run its action
+* feat(sidebar): name a new folder inline as part of creating it
+* fix(desktop): hide the webview's Reload/Inspect Element context menu
+* fix(editor): underline markdown link labels like wikilinks
+* feat: drag individual list items in Preview
+* Folder paths in breadcrumb, folder rename/reveal, sidebar menu, per-OS reveal label
+* fix(bin/dev): install workspace dependencies before starting
+* Account avatar and app-wide GitHub auth state (web version, step 4c)
+* Install a managed git when the machine has none
+* fix(plugins): let a plugin ship its own Node.js runtime
+* feat: per-note disk-only mode (auto-save without auto-commit)
+* Sign in to GitHub with the Mahfouz GitHub App (web version, step 4b)
+* Open the user guide on mahfouz.app; remove the docs/site submodule
+* feat: show a "Mahfouz needs Git" screen when git is missing
+* chore(docs): bump docs/site for note pills and Details
+* feat(settings): click a shortcut to rebind it; icon reset button
+* fix(sync): reflect external edits and new external files live
+* feat(ui): note pills for details, backlinks, tags and attributes
+* feat(editor): Tab nests a list item under the one above
 * chore(linux): declare git as a .deb/.rpm dependency
 * feat: notify when a new Mahfouz version is available
 * fix(git): read log paths NUL-delimited so non-ASCII names aren't quoted
-* feat(ops): put the HCP workspace in the mahfouz project
-* feat(ops): keep Terraform state in HCP Terraform, as influpert/web does
-* docs(spec): no Email Routing; the zone declares no-mail records
-* fix(ops): DNSSEC can't be switched off by accident; token set for 4a; cutover and CI fixes
-* feat(ops): Terraform CI and the infrastructure runbook
-* feat(ops): add bin/dns-parity for the nameserver cutover
-* feat(ops): never let a plan destroy the zone
-* feat(ops): declare the mahfouz.app zone and its records in Terraform
-* feat(ops): add the R2 state bootstrap stack
-* feat(ops): pin Terraform tooling and introduce ops/terraform
-* docs(plan): infrastructure in Terraform (web version, step 3)
+* Put the mahfouz.app zone in Terraform (web version, step 3)
 * fix(editor): start a bullet list on "- ", "* " or "+ " under a text line
 * ci: cache Tauri's apt packages, keyed on the runner image
-* test(fixtures): keep fixture commit times monotonic
-* test(fixtures): cover merges, offsets and untracked dirs; drop machine identity
-* test(fixtures): load the golden git record in Vitest and pin its wire shape
-* test(fixtures): keep the golden record independent of the git version
-* docs(plan): the golden record normalizes UTC timestamps to Z
-* test(fixtures): record desktop git output on the golden fixture
-* test(fixtures): keep the fixture tarball machine-independent
-* test(fixtures): add the golden git fixture vault and its rebuild check
-* docs(plan): keep the fixture script bash-3.2 compatible
-* docs(plan): golden git fixtures (web version, step 2)
-* refactor(platform): web-friendly asset/binary signatures; cover sync, remote-sync and drag-drop
-* test(platform): keep Tauri imports behind the platform boundary
-* refactor(platform): events, dialogs, opener, assets, drag-and-drop and paths go through platform()
-* refactor(platform): GitHub calls and the help document go through platform()
-* refactor(platform): git operations go through platform()
-* refactor(platform): vault files, database and watcher go through platform()
-* feat(platform): desktop Tauri adapter, installed at boot
-* fix(platform): createRepo description may be null
-* feat(platform): add the Platform interface, setPlatform/can, and a test fake
-* test(platform): inventory Tauri calls and record the IPC baseline
-* docs: implementation plan for the platform interface (web version step 1)
-* fix(release): fail loudly on an unreachable remote; show failing shell tests
-* chore: adopt develop/main branch model
-* chore(release): merge each release back into develop
-* fix(release): only treat develop→main merges as promotions
-* chore(release): build changelog from develop's line once promotions exist
-* chore: point scripts, CI and docs at the new layout
-* chore: set up bun workspaces for core and desktop
-* chore: move src/app into src/core and src/desktop (pure renames)
-* docs: specs and plan for the web version and workspace split
-* fix(plugins): stop a sidecar with killpg, not the kill command
-* Merge branch 'claude/remove-page-preview-count'
+* Add golden git fixtures (web version, step 2)
+* Put Tauri behind a platform interface (web version, step 1)
+* Adopt the develop/main branch model in bin/release, CI and docs
+* Split src/app into core and desktop workspaces
 * Bump docs for the license page
 * Publish release notes on mahfouz.app/changelog
 * Make the license proprietary to Influpert LLC
 * Add an About dialog with release date and links
-* Merge branch 'claude/view-mode-toggle-icons'
-* Merge branch 'claude/notification-pin-icon-24045c'
 * Keep list bullets rendered on the cursor line
-
 
 ## 0.8.0 (2026-09-26) {#v0.8.0}
 
