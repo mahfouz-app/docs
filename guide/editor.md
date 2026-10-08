@@ -53,7 +53,8 @@ The toolbar above the editor, left to right:
 - **Undo / Redo**
 - **Bold, Italic, Underline, Strikethrough, Inline code, Highlight**
 - **Sub/Superscript** dropdown
-- **Link** — inserts `[text](url)`
+- **Link** — opens a field under the selection for the URL; **Enter**
+  links the selected text (`[text](url)`), **Esc** cancels
 - **Tag** — inserts a `#tag`
 - **Heading** dropdown — Normal text / H1 / H2 / H3
 - **List** dropdown — Bullet / Numbered / Checklist
