@@ -10,7 +10,7 @@ When a sync goes wrong, Mahfouz shows a notice in the [notification center](/gui
 ## Buttons
 
 - **Retry** syncs again. Use it after you've fixed the cause.
-- **Open remote settings** opens the vault's settings where its remote is set.
+- **Open remote settings** opens the vault's settings on the **Source** tab, where its remote is set.
 - **Push this branch** creates the branch on the remote. It only runs when you click that button, never from a click on the notice itself.
 - **Install git** (desktop only) installs Mahfouz's own copy of git, then syncs again.
 - **Sign in** and **Sign in again** start the GitHub sign-in.
