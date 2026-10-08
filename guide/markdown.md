@@ -28,7 +28,7 @@ renders specially:
 | `---` on its own line | Horizontal rule **and** a page/slide break (see [Presenting](/guide/slides/)) |
 | <code>&#96;&#96;&#96;</code> fenced block | Code block, styled distinctly from prose |
 | `[text](url)` | Link |
-| `<https://example.com>` | Bare autolink (what pasting a URL produces) |
+| `<https://example.com>` | Bare autolink |
 | `[[Note Title]]` | Wikilink to another note by title |
 | `#tag` | Tag (indexed, filterable in the Sidebar) |
 | `![alt](path)` alone on a line | Embedded image/video/audio, auto-detected from the file extension |
@@ -99,6 +99,10 @@ grid instead of raw pipe syntax:
 - **Markdown export** copies the note (and, optionally, its children) plus
   the attachments they reference, keeping `/files/…` links valid with the
   export folder as the root.
-- **Link titles**: after pasting a bare URL, press **Tab** while the
-  "Tab → title" hint is showing to fetch the page's title and turn it into
-  a normal Markdown link (`[Title](url)`).
+- **Pasting a URL** inserts a Markdown link with the URL as its text
+  (`[https://example.com](https://example.com)`). Paste it over selected
+  text to link that text instead (`[text](https://example.com)`). Inside
+  code or an existing link, the URL is pasted as plain text.
+- **Link titles**: after pasting a URL, press **Tab** while the
+  "Tab → title" hint is showing to replace the link text with the page's
+  title (`[Title](url)`).
