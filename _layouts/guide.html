@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="The Mahfouz user guide: vaults, Markdown editing, Git sync, history, shortcuts, and more." />
+    <meta name="description" content="{{ page.description | escape }}" />
     <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
-    <link rel="canonical" href="https://docs.mahfouz.app/guide/" />
+    <link rel="canonical" href="https://docs.mahfouz.app{{ page.url }}" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -23,20 +23,42 @@
           <img src="/images/logo.png" alt="Mahfouz" width="2172" height="724" />
         </a>
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="/#features">Features</a>
-          <a href="/#git-history">Git history</a>
-          <a href="/#downloads">Downloads</a>
           <a href="/compare/">Compare</a>
-          <a href="/guide/" aria-current="page">User guide</a>
+          <a href="/guide/"{% if page.url == "/guide/" %} aria-current="page"{% endif %}>User guide</a>
         </nav>
       </div>
     </header>
 
     <main class="shell guide-main" id="main">
-      <p class="guide-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">User guide</span></p>
+      {%- assign pages = site.data.guide -%}
+      {%- assign here = page.url | remove_first: "/guide/" | remove: "/" -%}
+      <p class="guide-breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span>
+        {%- if here == "" %}
+        <span aria-current="page">User guide</span>
+        {%- else %}
+        <a href="/guide/">User guide</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title | escape }}</span>
+        {%- endif %}
+      </p>
       <article class="guide-content">
+        <h1>{{ page.title | escape }}</h1>
         {{ content }}
       </article>
+      {%- if here != "" %}
+      {%- for p in pages %}{% if p.slug == here %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+      {%- assign prev_i = i | minus: 1 -%}
+      {%- assign next_i = i | plus: 1 %}
+      <nav class="guide-pager" aria-label="Guide pages">
+        {%- if prev_i >= 0 %}{% assign p = pages[prev_i] %}
+        <a class="guide-pager-prev" href="/guide/{{ p.slug }}/"><span>Previous</span>{{ p.title | escape }}</a>
+        {%- else %}
+        <a class="guide-pager-prev" href="/guide/"><span>Previous</span>User guide</a>
+        {%- endif %}
+        {%- if next_i < pages.size %}{% assign p = pages[next_i] %}
+        <a class="guide-pager-next" href="/guide/{{ p.slug }}/"><span>Next</span>{{ p.title | escape }}</a>
+        {%- endif %}
+      </nav>
+      {%- endif %}
     </main>
 
     <footer class="site-footer shell">

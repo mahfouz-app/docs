@@ -1507,3 +1507,58 @@ h1 {
     font-size: 0.9rem;
   }
 }
+
+.guide-content .guide-index {
+  display: grid;
+  gap: 2px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--cm-border);
+}
+
+.guide-content .guide-index li {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--cm-border);
+}
+
+.guide-content .guide-index a {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.guide-content .guide-index p {
+  margin: 4px 0 0;
+  color: var(--body-secondary);
+}
+
+.guide-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 780px;
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--cm-border);
+}
+
+.guide-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--cm-text);
+  font-weight: 600;
+}
+
+.guide-pager span {
+  color: var(--body-secondary);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.guide-pager-next {
+  margin-left: auto;
+  text-align: right;
+}

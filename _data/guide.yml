@@ -1,0 +1,39 @@
+- slug: vaults
+  title: "Vaults"
+  description: "Create, open and switch between vaults: the folders your notes live in."
+- slug: web
+  title: "Mahfouz on the web"
+  description: "Use Mahfouz in a browser with a local folder or a GitHub repository."
+- slug: notes
+  title: "Notes, links & search"
+  description: "Organize notes in a tree, link them, tag them and find them again."
+- slug: editor
+  title: "The editor"
+  description: "Write in the editor, use the formatting toolbar, the table of contents and fields."
+- slug: markdown
+  title: "Markdown & media"
+  description: "The Markdown syntax Mahfouz understands, and how images and attachments are stored."
+- slug: attributes
+  title: "Attributes & the right sidebar"
+  description: "Note pills, the right sidebar and per-note attributes."
+- slug: history
+  title: "History & trash"
+  description: "Every change is a commit: browse history, restore notes, and choose what gets committed."
+- slug: slides
+  title: "Presenting notes as slides"
+  description: "Present a note as a slide deck and style it with slides templates."
+- slug: git
+  title: "Git & sync"
+  description: "How Mahfouz uses git, syncing with a remote, and Git LFS for large media."
+- slug: github
+  title: "Signing in to GitHub"
+  description: "Connect your GitHub account to create repositories and invite collaborators."
+- slug: plugins
+  title: "Plugins & registries"
+  description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugin registries."
+- slug: workspace
+  title: "Tabs, settings & notifications"
+  description: "Tabs, the status bar, settings, notifications and sending feedback."
+- slug: shortcuts
+  title: "Keyboard shortcuts"
+  description: "Every keyboard shortcut, and how to change them."
