@@ -34,6 +34,19 @@ a GitHub `owner/repo`.
 The built-in `mahfouz` registry has:
 
 - **Mermaid diagrams**: ```` ```mermaid ```` blocks render as diagrams.
+  A diagram's edit button, or inserting one from the **Embed** menu, opens
+  it in a Mermaid tab: the source on the left, a live preview on the right.
+  - Changes save back into the note as you type.
+  - While the source has an error, the last good diagram stays visible,
+    the error shows under it, and the line is marked.
+  - The tab's toolbar has **Samples** to start from a template (flowchart,
+    sequence, class, state, ER, Gantt, pie, mind map, timeline), zoom and
+    **Fit**, **Export SVG**, **Export PNG** and **Copy SVG**.
+  - Mermaid's own `---config:---` header at the top of the source sets the
+    diagram's theme and options, and is saved with it.
+  - If the diagram changes in the note while its tab is open, the tab
+    stops saving and offers **Copy my version** or **Reload from note**,
+    so neither edit is overwritten.
 - **Draw.io diagrams**: ```` ```drawio ```` blocks render as diagrams. Click
   one, or insert one from the toolbar's **Embed** menu, to edit it in a
   draw.io tab. Changes save back into the note as you go.
