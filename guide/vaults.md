@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Vaults
+title: "Vaults"
 description: "Create, open and switch between vaults: the folders your notes live in."
 permalink: /guide/vaults/
 ---
@@ -16,13 +16,13 @@ the connected repo's `owner/repo` name (with a cloud icon) or the local
 folder name (with a computer icon) if it isn't connected to a remote yet.
 Click a vault section's gear/⋯ button to open **Vault Settings** for that
 vault specifically (see [Git sync & remotes](/guide/git/#git-sync--remotes) and
-[Git LFS](/guide/git/#git-lfs-for-large-media) below), including:
+[Git LFS](/guide/git/#git-lfs-for-large-media)), including:
 
 - **Vault path** — shown with buttons to reveal it in Finder/Explorer, or
   **Move or rename…** it (type a new path, or pick a new parent folder;
   same-disk moves only).
-- **Rebuild from vault** — wipes and rebuilds the local index from the
-  files on disk. Use this if the sidebar or search ever looks out of sync
+- **Rebuild from vault** — re-reads every note from the files in the vault
+  folder. Use this if the sidebar or search ever looks out of sync
   with what's actually in the folder.
 - **Remove vault from Mahfouz** — removes it from the app only; nothing on
   disk is touched.

@@ -17,7 +17,7 @@ When Mahfouz finds no usable git at startup, it shows a **Git is required**
 screen instead of opening your vaults:
 
 - **Install** downloads Mahfouz's own copy (about 25–70 MB depending on
-  your platform, checksum-verified). **Retry** repeats a failed download.
+  your platform). **Retry** repeats a failed download.
 - Or install git yourself, using the command the screen shows for your
   system:
   - macOS: `xcode-select --install` (Apple's Command Line Tools)
@@ -30,15 +30,11 @@ screen instead of opening your vaults:
 
 Mahfouz's own copy:
 
-- **Where it lives** — in the app's local data folder, in a subfolder named
-  after the bundled release, such as `git/2.53.0-4/`. It's never inside your vault.
-  - macOS: `~/Library/Application Support/app.mahfouz/git/`
-  - Windows: `%LOCALAPPDATA%\app.mahfouz\git\`
-  - Linux: `~/.local/share/app.mahfouz/git/`
+- **Where it lives** — with the app on this computer, never inside your vault.
 - **Updates** come with app updates. When a release bumps the bundled git,
   Mahfouz installs it in the background and starts using it on the next
-  launch, then removes the old copy. A managed git that is too old to be
-  safe is never used.
+  launch, then removes the old copy. Mahfouz never uses a copy of its own
+  git that is too old to be safe.
 - **Sign-in** — on macOS and Windows the bundled git uses Git Credential
   Manager. Background syncs never pop up a sign-in window; **Sync now** may,
   so a sync you start can ask you to sign in. On Linux there's no bundled
@@ -56,7 +52,7 @@ Vault Settings → **Vault** section:
   - If the remote is empty, your local content is pushed as the initial
     commit automatically.
   - If the remote already has content, you're asked to choose: **use
-    remote** (hard-resets your local vault to match it, then re-indexes)
+    remote** (hard-resets your local vault to match it)
     or **push local** (force-pushes your local content over it). Pick
     carefully — both directions are destructive to whichever side loses.
 - **Sync now** — pulls, then pushes, immediately.
@@ -66,10 +62,10 @@ Vault Settings → **Vault** section:
 - **Authentication** is entirely your local git setup's problem — ssh-agent,
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
-- The [status bar](/guide/workspace/#status-bar)'s right-hand pill always shows the active
+- The [status bar](/guide/tabs/#status-bar)'s right-hand pill always shows the active
   vault's current sync state.
 
-On the web, GitHub vaults sync differently: see [Syncing](/guide/web/#syncing) under
+On the web, GitHub vaults sync differently: see [Syncing](/guide/web-github/#syncing) under
 [Mahfouz on the web](/guide/web/).
 
 ## Git LFS for large media
@@ -77,7 +73,7 @@ On the web, GitHub vaults sync differently: see [Syncing](/guide/web/#syncing) u
 If a vault will hold large media files, turn on Git LFS for it in Vault
 Settings → **Vault**: it shows whether `git-lfs` is installed and
 configured for this vault, and an **Enable Git LFS for media** button that
-runs `git lfs install --local` and writes a tracking block to
+sets up Git LFS for this vault and adds the tracking rules to
 `.gitattributes` for you. This is opt-in per vault, and only affects files
 added *after* you enable it — existing committed media isn't migrated
 retroactively.

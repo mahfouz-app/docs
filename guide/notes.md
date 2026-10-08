@@ -1,20 +1,25 @@
 ---
 layout: guide
-title: "Notes, links & search"
-description: "Organize notes in a tree, link them, tag them and find them again."
+title: "Notes & organization"
+description: "Create notes, nest them in a tree, and organize them with folders and bookmarks."
 permalink: /guide/notes/
 ---
 
-## Notes & organization
+Every note is a single Markdown file at the vault root, named after its
+title: a note titled *Meeting notes* is `meeting_notes.md`. A note with no
+title yet is `untitled.md`, and when two notes in the same place would get
+the same name, one of them gets a short random suffix. The moment a note
+gets its first child it becomes a folder of the same name holding its own
+file (`meeting_notes/meeting_notes.md`) and its children, nesting the same
+way. Once a note has a folder it keeps it.
 
-Every note is a single Markdown file, `<note-id>.md`, at the vault root.
-The moment a note gets its first child it becomes a folder of the same
-name holding its own file (`<note-id>/<note-id>.md`) and its children
-(`<note-id>/<child-id>.md`, nesting the same way). Once a note has a
-folder it keeps it. You never see these paths day to day — the Sidebar
-presents them as a normal expandable tree. Vaults created before this
-layout are offered a one-time migration on open; declining keeps the older
-one-folder-per-note shape, which still works.
+The file name follows the title as you edit it, until you rename the note
+in the Sidebar: from then on it keeps the name you gave it. You never need
+these paths day to day — the Sidebar presents them as a normal expandable
+tree. Notes from older versions may have names that include their id; they
+pick up a title-based name the next time their title changes. Vaults
+created before this layout are offered a one-time migration on open;
+declining keeps the older one-folder-per-note shape, which still works.
 
 - **New note**: `Cmd/Ctrl+N` creates a sibling of whatever's selected;
   `Cmd/Ctrl+Shift+N` creates a child of it; `Cmd/Ctrl+Alt+N` creates a note
@@ -59,37 +64,3 @@ one-folder-per-note shape, which still works.
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
   via Settings.
-
-## Links, wikilinks & backlinks
-
-- `[[Note Title]]` links to another note by its exact title (case
-  insensitive). Type `[[` to trigger autocomplete of existing titles. A
-  wikilink to a title that doesn't exist yet still renders, just styled as
-  "broken" until a matching note is created.
-- Pasting a bare URL over an empty cursor wraps it as `<url>`; pasting over
-  a text selection turns the selection into `[selected text](url)`.
-- **Backlinks**: the right sidebar's "Linked from N notes" section lists
-  every note that links to the one you're viewing (via `[[wikilink]]` or a
-  regular link to its title). The backlinks pill above the note shows the
-  count and opens it (see [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
-
-## Tags
-
-Any `#` immediately followed by a letter (and not inside code) is a tag —
-`#project`, `#ideas`, etc. Tags are indexed automatically:
-
-- The Sidebar's **Tags** view (`Cmd/Ctrl+3`) lists every tag with its note
-  count; click one or more to AND-filter notes, "Clear" to reset.
-- The lighter-weight **Tag filter** chip row offers the same picker in
-  contexts that don't want the full Sidebar view.
-
-## Search
-
-`Cmd/Ctrl+K` opens the search overlay — searches across **all open
-vaults** as you type (debounced), matching title and body text with
-multi-term AND matching, ranked roughly: exact title match, then
-title-starts-with, then title contains all terms, then title contains the
-whole phrase, then body-only matches. Matched terms are highlighted in the
-title and a generated snippet. With an empty query it shows your 8 most
-recently edited notes instead. Navigate results with `↑`/`↓` (or
-`Ctrl+P`/`Ctrl+N`), `Home`/`End`, and open with `Enter`.

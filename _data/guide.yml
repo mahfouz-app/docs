@@ -1,39 +1,76 @@
-- slug: vaults
-  title: "Vaults"
-  description: "Create, open and switch between vaults: the folders your notes live in."
-- slug: web
-  title: "Mahfouz on the web"
-  description: "Use Mahfouz in a browser with a local folder or a GitHub repository."
-- slug: notes
-  title: "Notes, links & search"
-  description: "Organize notes in a tree, link them, tag them and find them again."
-- slug: editor
-  title: "The editor"
-  description: "Write in the editor, use the formatting toolbar, the table of contents and fields."
-- slug: markdown
-  title: "Markdown & media"
-  description: "The Markdown syntax Mahfouz understands, and how images and attachments are stored."
-- slug: attributes
-  title: "Attributes & the right sidebar"
-  description: "Note pills, the right sidebar and per-note attributes."
-- slug: history
-  title: "History & trash"
-  description: "Every change is a commit: browse history, restore notes, and choose what gets committed."
-- slug: slides
-  title: "Presenting notes as slides"
-  description: "Present a note as a slide deck and style it with slides templates."
-- slug: git
-  title: "Git & sync"
-  description: "How Mahfouz uses git, syncing with a remote, and Git LFS for large media."
-- slug: github
-  title: "Signing in to GitHub"
-  description: "Connect your GitHub account to create repositories and invite collaborators."
-- slug: plugins
-  title: "Plugins & registries"
-  description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugin registries."
-- slug: workspace
-  title: "Tabs, settings & notifications"
-  description: "Tabs, the status bar, settings, notifications and sending feedback."
-- slug: shortcuts
-  title: "Keyboard shortcuts"
-  description: "Every keyboard shortcut, and how to change them."
+- group: "Basics"
+  pages:
+    - slug: vaults
+      title: "Vaults"
+      description: "Create, open and switch between vaults: the folders your notes live in."
+    - slug: notes
+      title: "Notes & organization"
+      description: "Create notes, nest them in a tree, and organize them with folders and bookmarks."
+    - slug: links
+      title: "Links, tags & search"
+      description: "Link notes with wikilinks, see backlinks, tag notes and search the vault."
+    - slug: history
+      title: "History & trash"
+      description: "Every change is a commit: browse history, restore notes, and choose what gets committed."
+- group: "Editing"
+  pages:
+    - slug: editor
+      title: "The editor"
+      description: "Editing and preview modes, the table of contents and page preview."
+    - slug: toolbar
+      title: "The formatting toolbar"
+      description: "Every button on the formatting toolbar and its More menu."
+    - slug: markdown
+      title: "Markdown"
+      description: "The Markdown syntax Mahfouz understands, from headings and links to tables."
+    - slug: media
+      title: "Images & attachments"
+      description: "Add images, video, audio and other files to notes, and how Mahfouz stores them."
+    - slug: fields
+      title: "Fields"
+      description: "Type !name to expand a field such as !today, and define your own."
+    - slug: attributes
+      title: "Attributes & the right sidebar"
+      description: "Note pills, the right sidebar and per-note attributes."
+    - slug: slides
+      title: "Presenting notes as slides"
+      description: "Present a note as a slide deck and style it with slides templates."
+- group: "Git & GitHub"
+  pages:
+    - slug: git
+      title: "Git & sync"
+      description: "How Mahfouz uses git, syncing with a remote, and Git LFS for large media."
+    - slug: github
+      title: "Signing in to GitHub"
+      description: "Connect your GitHub account to create repositories and invite collaborators."
+- group: "On the web"
+  pages:
+    - slug: web
+      title: "Mahfouz on the web"
+      description: "Use Mahfouz in a browser: supported browsers, opening a folder, and what's desktop-only."
+    - slug: web-github
+      title: "GitHub vaults on the web"
+      description: "Sign in with GitHub in the browser and open a repository as a vault."
+    - slug: web-commits
+      title: "Commits on the web"
+      description: "How the web app commits your changes, and read-only vaults."
+- group: "App"
+  pages:
+    - slug: plugins
+      title: "Plugins & registries"
+      description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugin registries."
+    - slug: settings
+      title: "Settings"
+      description: "Preferences and per-vault settings."
+    - slug: notifications
+      title: "Notifications"
+      description: "The notification center, sounds, quiet time and update notices."
+    - slug: tabs
+      title: "Tabs & status bar"
+      description: "Working with tabs, and what the status bar shows."
+    - slug: feedback
+      title: "Sending feedback"
+      description: "Report a bug or suggest a feature from inside the app."
+    - slug: shortcuts
+      title: "Keyboard shortcuts"
+      description: "Every keyboard shortcut, on desktop and on the web, and how to change them."
