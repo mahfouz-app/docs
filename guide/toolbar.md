@@ -37,6 +37,9 @@ Right-aligned at the end of the toolbar:
 - **Zoom** dropdown
 - **Show source** — switches between Source and Preview (see
   [The editor](/guide/editor/))
+- **Editing ▾ / Suggesting ▾** — switches between making changes and
+  suggesting them, and reviews suggestions. It shows how many suggestions
+  the note has (see [Track changes](/guide/track-changes/))
 - **Attributes** — shows or hides the document attributes sidebar
 - **⋯ (More)** — the note's action menu, the same one you get by
   right-clicking the note in the Sidebar (minus "Open in new tab"):
