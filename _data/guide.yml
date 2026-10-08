@@ -35,6 +35,9 @@
     - slug: attributes
       title: "Attributes & the right sidebar"
       description: "Note pills, the right sidebar and per-note attributes."
+    - slug: track-changes
+      title: "Track changes"
+      description: "Suggest edits instead of making them, then accept or reject each one."
     - slug: slides
       title: "Presenting notes as slides"
       description: "Present a note as a slide deck and style it with slides templates."
