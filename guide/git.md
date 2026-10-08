@@ -1,0 +1,89 @@
+---
+layout: guide
+title: "Git & sync"
+description: "How Mahfouz uses git, syncing with a remote, and Git LFS for large media."
+permalink: /guide/git/
+---
+
+## Git
+
+Mahfouz needs git 2.20 or newer. If your machine has one, Mahfouz uses it
+and installs nothing. On a Mac, the stub at `/usr/bin/git` only counts once
+the Command Line Tools are installed. The Linux `.deb` and `.rpm` packages
+install git as a dependency, so on Linux the screen below mostly matters
+for the AppImage.
+
+When Mahfouz finds no usable git at startup, it shows a **Git is required**
+screen instead of opening your vaults:
+
+- **Install** downloads Mahfouz's own copy (about 25–70 MB depending on
+  your platform, checksum-verified). **Retry** repeats a failed download.
+- Or install git yourself, using the command the screen shows for your
+  system:
+  - macOS: `xcode-select --install` (Apple's Command Line Tools)
+  - Linux: `sudo apt install git` or `sudo dnf install git`
+  - Windows: Git for Windows from git-scm.com
+
+  On a platform where Mahfouz can't install its own copy, this is the only
+  option.
+- **Check again** finds a git you installed yourself, without restarting.
+
+Mahfouz's own copy:
+
+- **Where it lives** — in the app's local data folder, in a subfolder named
+  after the bundled release, such as `git/2.53.0-4/`. It's never inside your vault.
+  - macOS: `~/Library/Application Support/app.mahfouz/git/`
+  - Windows: `%LOCALAPPDATA%\app.mahfouz\git\`
+  - Linux: `~/.local/share/app.mahfouz/git/`
+- **Updates** come with app updates. When a release bumps the bundled git,
+  Mahfouz installs it in the background and starts using it on the next
+  launch, then removes the old copy. A managed git that is too old to be
+  safe is never used.
+- **Sign-in** — on macOS and Windows the bundled git uses Git Credential
+  Manager. Background syncs never pop up a sign-in window; **Sync now** may,
+  so a sync you start can ask you to sign in. On Linux there's no bundled
+  helper: configure your own (`git config --global credential.helper …`, or
+  ssh-agent).
+
+To see which git is in use, open **About Mahfouz**: it shows the git
+version and whether it's the system's or Mahfouz's own.
+
+## Git sync & remotes
+
+Vault Settings → **Vault** section:
+
+- **Connect a remote** — paste a `git@…`, `https://…`, or `ssh://…` URL.
+  - If the remote is empty, your local content is pushed as the initial
+    commit automatically.
+  - If the remote already has content, you're asked to choose: **use
+    remote** (hard-resets your local vault to match it, then re-indexes)
+    or **push local** (force-pushes your local content over it). Pick
+    carefully — both directions are destructive to whichever side loses.
+- **Sync now** — pulls, then pushes, immediately.
+- Once connected, Mahfouz keeps syncing on its own: it auto-pushes ~60
+  seconds after an auto-commit, and auto-pulls (fast-forward only) every 5
+  minutes and whenever the app regains focus.
+- **Authentication** is entirely your local git setup's problem — ssh-agent,
+  the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
+  terminal in that folder already uses. Mahfouz never stores or sees a token.
+- The [status bar](/guide/workspace/#status-bar)'s right-hand pill always shows the active
+  vault's current sync state.
+
+On the web, GitHub vaults sync differently: see [Syncing](/guide/web/#syncing) under
+[Mahfouz on the web](/guide/web/).
+
+## Git LFS for large media
+
+If a vault will hold large media files, turn on Git LFS for it in Vault
+Settings → **Vault**: it shows whether `git-lfs` is installed and
+configured for this vault, and an **Enable Git LFS for media** button that
+runs `git lfs install --local` and writes a tracking block to
+`.gitattributes` for you. This is opt-in per vault, and only affects files
+added *after* you enable it — existing committed media isn't migrated
+retroactively.
+
+`git-lfs` itself doesn't need to be installed separately: turn on the
+**Git LFS** plugin in Preferences → Plugins and Mahfouz downloads and
+manages it for you (no Homebrew required — currently Macs only, Apple
+Silicon or Intel). If you already have `git-lfs` on your system PATH (e.g. via
+Homebrew), Mahfouz detects and uses that instead.
