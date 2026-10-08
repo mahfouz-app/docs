@@ -1,0 +1,6 @@
+<ul class="guide-nav-list">
+  <li><a href="/guide/"{% if include.here == "" %} aria-current="page"{% endif %}>Overview</a></li>
+  {%- for p in site.data.guide %}
+  <li><a href="/guide/{{ p.slug }}/"{% if p.slug == include.here %} aria-current="page"{% endif %}>{{ p.title | escape }}</a></li>
+  {%- endfor %}
+</ul>
