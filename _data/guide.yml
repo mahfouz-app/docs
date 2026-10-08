@@ -19,6 +19,9 @@
 - slug: history
   title: "History & trash"
   description: "Every change is a commit: browse history, restore notes, and choose what gets committed."
+- slug: track-changes
+  title: "Track changes"
+  description: "Suggest edits instead of making them, then accept or reject each one."
 - slug: slides
   title: "Presenting notes as slides"
   description: "Present a note as a slide deck and style it with slides templates."
