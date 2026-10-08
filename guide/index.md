@@ -17,7 +17,7 @@ offers to install its own copy, or shows how to install git yourself. See
 This guide is the long-form manual. To open it from the app, click the **?**
 button near the bottom of the left rail (on desktop, also **Help → User
 Guide**).
-Menu → **Help → Keyboard Shortcuts** (`Cmd/Ctrl+/`) opens a quick-reference
+Menu → **Help → Keyboard Shortcuts** (`Cmd/Ctrl+?`) opens a quick-reference
 shortcut cheat sheet inside the app.
 
 Using Mahfouz in a browser? See [Mahfouz on the web](/guide/web/).

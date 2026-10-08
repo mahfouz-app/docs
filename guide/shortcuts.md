@@ -16,7 +16,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | `Mod+N` | New note (sibling of selection) |
 | `Mod+Alt+Shift+N` | New note (child of selection) |
 | `Mod+Alt+N` | New note (parent level) |
-| `Mod+/` | Open keyboard shortcuts help |
+| `Mod+?` | Open keyboard shortcuts help |
 | `Mod+W` | Close active tab |
 | `Mod+S` | Manual save + commit |
 | `Mod+\` | Toggle left sidebar |
@@ -54,8 +54,35 @@ Other useful bindings: `Tab`/`Enter` inside a checklist or list continue
 it; `Cmd/Ctrl+Click` opens a link or wikilink; `[[` triggers wikilink
 autocomplete; `!` triggers field autocomplete.
 
-Native menu-only shortcuts (macOS): `Cmd+Shift+N` New Vault, `Cmd+Shift+O`
-Open Vault, `Cmd+F` Find and Replace, `Cmd+Shift+L` toggle line numbers.
+## The menu bar (desktop)
+
+Every app action above is also in the desktop menu bar, next to its
+shortcut:
+
+- **File**: new notes (sibling, child, parent level), **New Folder**, New
+  Vault, Open Vault, Save, Export, Close Tab.
+- **Edit**: the usual editing commands, Find and Replace, Search Vault.
+- **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
+  Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
+  File Explorer), Revision History, plugin commands such as Present, and
+  Delete. These items are greyed out when no note tab is open.
+- **View**: the sidebars, Line Numbers, Zoom In and Out, Stop Presenting.
+- **Go**: All Notes, Bookmarks, Tags, Trash, Mind Map, Back, Forward.
+- **Help**: Keyboard Shortcuts, User Guide, Send Feedback.
+
+The keys shown in the menu follow your `## Shortcuts` table: change a
+shortcut there and the menu shows the new key. A few keys never appear in
+the menu, though they still work:
+
+- Shortcuts without ⌘ or Ctrl, such as `F2` for Rename.
+- `Mod+D`, `Mod+[` and `Mod+]`, which the editor also uses to select the
+  next match and to indent or outdent. Leaving them off the menu keeps them
+  working in the editor.
+
+These menu keys are fixed and aren't in the `## Shortcuts` table:
+`Mod+,` Settings, `Mod+Shift+N` New Vault, `Mod+Shift+O` Open Vault, `Mod+F`
+Find and Replace, `Mod+.` Stop Presenting. Line Numbers has no key, so
+`Mod+Shift+L` copies the note as a wikilink.
 
 ## Keyboard shortcuts on the web
 
