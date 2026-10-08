@@ -31,7 +31,8 @@ selection later.
 
 ## Opening a GitHub repository
 
-On first run, or from Open Vault, click **Open a GitHub repository…**:
+On first run (in the bar above the welcome page), or from Open Vault, click
+**Open a GitHub repository…**:
 
 1. Sign in with GitHub and install the Mahfouz app on your repositories, as
    above. If the repository belongs to an organization and an owner has to
@@ -84,3 +85,6 @@ deletes it from this browser, unlike a folder vault, whose folder is left
 alone. The question tells you how many commits GitHub doesn't have yet and
 whether some changes aren't committed yet: those are lost. What's on GitHub
 stays, and you can open it again from there. Sync first to keep your work.
+Notes you moved out of a browser-stored vault are restored from that
+vault's Trash, so once it's removed, the vault they came from can't bring
+them back.

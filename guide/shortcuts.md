@@ -41,7 +41,7 @@ Fixed editor shortcuts (not remappable):
 | `Mod+,` (comma) | Subscript |
 | `Mod+.` (period) | Superscript |
 | `Mod+Shift+H` | Highlight |
-| `Mod+Shift+K` | Insert link |
+| `Mod+Shift+K` | Link the selection (asks for the URL) |
 | `Mod+Alt+1` / `2` / `3` | Heading 1 / 2 / 3 |
 | `Mod+Shift+8` | Bullet list |
 | `Mod+Shift+7` | Ordered list |

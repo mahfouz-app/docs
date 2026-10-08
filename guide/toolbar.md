@@ -10,11 +10,13 @@ The toolbar above the editor, left to right:
 - **Undo / Redo**
 - **Bold, Italic, Underline, Strikethrough, Inline code, Highlight**
 - **Sub/Superscript** dropdown
-- **Link** — inserts `[text](url)`
+- **Link** — opens a field under the selection for the URL; **Enter**
+  links the selected text (`[text](url)`), **Esc** cancels
 - **Tag** — inserts a `#tag`
 - **Heading** dropdown — Normal text / H1 / H2 / H3
 - **List** dropdown — Bullet / Numbered / Checklist
-- **Quote** (blockquote)
+- **Quote** (blockquote), with a menu beside it for inserting or changing
+  a [callout](/guide/markdown/#callouts)
 - **Table** — opens the hover-grid size picker
 - **Embed** dropdown — inserts a block for each enabled embed plugin (such
   as Mermaid). If none are enabled, it links to Preferences instead.

@@ -32,6 +32,10 @@ permalink: /guide/media/
 - **Markdown export** copies the note (and, optionally, its children) plus
   the attachments they reference, keeping `/files/…` links valid with the
   export folder as the root.
-- **Link titles**: after pasting a bare URL, press **Tab** while the
-  "Tab → title" hint is showing to fetch the page's title and turn it into
-  a normal Markdown link (`[Title](url)`).
+- **Pasting a URL** inserts a Markdown link with the URL as its text
+  (`[https://example.com](https://example.com)`). Paste it over selected
+  text to link that text instead (`[text](https://example.com)`). Inside
+  code or an existing link, the URL is pasted as plain text.
+- **Link titles**: after pasting a URL, press **Tab** while the
+  "Tab → title" hint is showing to replace the link text with the page's
+  title (`[Title](url)`).

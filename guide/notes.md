@@ -30,6 +30,25 @@ declining keeps the older one-folder-per-note shape, which still works.
   present). Rename a note by editing its first line.
 - **Reordering / nesting**: drag a note in the Sidebar to reorder it or
   drop it onto another note to make it a child.
+- **Moving to another vault**: drag a note onto a note, a folder or the
+  name of another vault in the Sidebar. The note moves, along with every
+  note under it. Hold `Option` (`Alt` on Windows and Linux) when you
+  release to copy it instead. The original stays where it is, and the copy
+  gets new ids.
+  - Images and other attachments the note links to are copied into the
+    other vault's `files/` folder, and the links are updated. Linked files
+    that no longer exist are skipped; the message after the move says how
+    many.
+  - The move is committed in both vaults: `Moved from <vault>: <title>`
+    in the new one, and `Deleted: <title>` in the old one. You can bring
+    the note back from **Trash** in its old vault.
+  - Links to the note from notes in its old vault stop working. If any
+    exist, or the note has notes under it, Mahfouz asks before it moves
+    anything.
+  - Files in the note's folder that it doesn't link to stay in the old
+    vault.
+  - A note whose auto-commit is off (disk only) can't be moved or copied
+    to another vault. Turn auto-commit back on first.
 - **Folders**: a folder doesn't have to belong to a note. Right-click a
   plain folder in the Sidebar for **New note**, **New folder**, **Rename
   folder** (edit the name in place: `Enter` saves, `Esc` cancels),
