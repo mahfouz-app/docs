@@ -10,7 +10,22 @@ permalink: /guide/links/
 - `[[Note Title]]` links to another note by its exact title (case
   insensitive). Type `[[` to trigger autocomplete of existing titles. A
   wikilink to a title that doesn't exist yet still renders, just styled as
-  "broken" until a matching note is created.
+  "broken" until a matching note is created; opening it creates the note.
+- **Pointing at a folder**: when two notes share a title, put the folder
+  in front, `[[people/John]]`. The folder can be the last part of a longer
+  path (`people` also finds `work/people/John`); start with `/` to count
+  from the vault root (`[[/people/John]]`). Folder and note names match
+  the way they read in the sidebar, ignoring case. Opening a link like
+  this to a note that doesn't exist yet creates it in that folder.
+  Without a folder, `[[John]]` picks the John nearest the vault root.
+- **Different link text**: `[[people/John|Johnny]]` links to John but
+  reads "Johnny".
+- **Editing a link in Preview**: click it to open a small editor. For a
+  wikilink, pick the note (or type a name that doesn't exist yet to link
+  to a new note) and set the text it shows; for a regular link, change its
+  text and URL. **Open** follows the link, **Remove link** keeps the text
+  and drops the link, **Save** (or `Enter`) applies, `Esc` cancels.
+  `Cmd/Ctrl+Click` still opens a link directly.
 - Pasting a bare URL over an empty cursor wraps it as `<url>`; pasting over
   a text selection turns the selection into `[selected text](url)`.
 - **Backlinks**: the right sidebar's "Linked from N notes" section lists

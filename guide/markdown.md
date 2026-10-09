@@ -28,6 +28,7 @@ renders specially:
 | `[text](url)` | Link |
 | `<https://example.com>` | Bare autolink |
 | `[[Note Title]]` | Wikilink to another note by title |
+| `[[folder/Note Title\|text]]` | Wikilink to a note in a folder, shown as "text" |
 | `#tag` | Tag (filterable in the Sidebar) |
 | `![alt](path)` alone on a line | Embedded image/video/audio, auto-detected from the file extension |
 | GitHub-style pipe table (`\| a \| b \|` rows with a `---` separator row) | Interactive table in Preview mode |
