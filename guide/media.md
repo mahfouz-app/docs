@@ -8,9 +8,9 @@ permalink: /guide/media/
 - **Embedding**: `![alt text](path)` on its own line renders inline as an
   image, video, or audio player, chosen automatically from the file
   extension (video: mp4/webm/ogv/mov/m4v; audio: mp3/wav/ogg/oga/m4a/flac/
-  aac; anything else: image). A small chevron in the editor gutter next to
-  that line collapses/expands the embed (remembered per note on your
-  device).
+  aac; anything else: image). In Preview mode the embed takes the place of
+  its line; in Source mode the line stays visible above the embed. To
+  change the path or alt text, switch to Source.
 - **Adding files**: drag a file from the OS onto the editor, paste a file
   from your clipboard (e.g. a screenshot), or use the toolbar's **Insert
   media or file** button. The file is copied into the vault-level `files/`
