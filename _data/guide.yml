@@ -49,6 +49,9 @@
     - slug: github
       title: "Signing in to GitHub"
       description: "Connect your GitHub account to create repositories and invite collaborators."
+    - slug: when-sync-fails
+      title: "When sync fails"
+      description: "What each sync notice means, what its buttons do, and how to fix the problem."
 - group: "On the web"
   pages:
     - slug: web
