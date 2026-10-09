@@ -38,6 +38,8 @@ Other editor behavior:
 - `Cmd/Ctrl+Click` on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
   note).
+- In Preview, a plain click on a link opens a small editor for it (see
+  [Links](/guide/links/#links-wikilinks--backlinks)).
 - **Find and replace**: `Cmd/Ctrl+F` (or toolbar) opens the search
   and replace panel.
 - **Undo/redo**: standard `Cmd/Ctrl+Z` / `Cmd/Ctrl+Shift+Z`, also available
