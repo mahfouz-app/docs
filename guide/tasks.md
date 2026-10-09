@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Tasks"
-description: "Turn a checklist item into a task with a due date and an assignee, and see every task in one list."
+description: "Turn a checklist item into a task with a due date and an assignee, see every task in one list, and get reminded when one is due."
 permalink: /guide/tasks/
 ---
 
@@ -70,3 +70,24 @@ grouped into **Overdue**, **Today**, **Upcoming** and **Completed**.
   vault from the menu at the top, and each task shows which vault it's in.
 - Click a task to open its note at that line. Tick its checkbox to mark it
   done without opening the note.
+
+## Reminders
+
+When one of your tasks comes due, a notification tells you, with buttons
+to **Open note** at the task or **Mark done** without opening it.
+
+- Reminders go to the task's assignee only: the tasks assigned to your
+  GitHub login, in every vault. You need to be signed in with GitHub, and
+  tasks with no assignee never remind anyone.
+- A task reminds you at its time; an all-day task at 09:00.
+- Reminders come only while Mahfouz is open. If several came due while it
+  was closed or your computer was asleep, they're summarized in one notice,
+  such as **3 tasks are overdue**; **Show tasks** opens the Tasks view.
+- Each task reminds you once. Changing its date reminds you again at the new
+  time; editing its title doesn't.
+- The first time Mahfouz runs with reminders, tasks that are already overdue
+  don't remind you.
+- To stop reminders for a vault, open it and turn on **Mute Tasks** in
+  Settings → Notifications. Like the other mutes, it's saved in the vault's
+  `.config/settings.md`; unlike them, a muted vault's reminders aren't
+  recorded at all.
