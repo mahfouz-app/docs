@@ -23,6 +23,9 @@ visible, switched with the toolbar's **Show source** button
   currently on, which always reveals its raw syntax so you can edit it.
   Tables render as fully interactive editable tables in Preview mode
   regardless of cursor position (see [Tables](/guide/markdown/#tables)).
+  An image, video or audio embed likewise replaces its `![alt](path)` line
+  in Preview mode, wherever the cursor is (see
+  [Images & attachments](/guide/media/)).
 
 Other editor behavior:
 
