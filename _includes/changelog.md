@@ -1,4 +1,38 @@
 
+## 0.11.0 (2026-10-09) {#v0.11.0}
+
+* fix(ops): adopt the existing staging R2 bucket
+* Copy from Preview as formatted text
+* feat(tasks): due reminders (4/4)
+* Structured git errors, phase 1c: branch-safe pushes and notice actions
+* Structured git errors, phase 1b: plain-language notices and Show details
+* feat: comment threads (track changes phase 3)
+* feat(links): folder-qualified wikilinks and working aliases
+* feat(editor): edit links in preview with a popover
+* fix: two publish tests broken by the track-changes merge
+* fix(editor): media cards replace their markdown line in Preview; drop collapse
+* fix(editor): type after line-prefix markup in Preview
+* feat: agent edits become suggestions in Suggesting mode (track changes phase 2)
+* fix(editor): stop auto-pairing apostrophes
+* fix(tabs): shrink tabs to fit, scroll overflow with arrow buttons
+* feat(publish): publish a note to p.mahfouz.app with Edit and Copy
+* feat(menu): put every app action in the native menu, with keys synced from settings
+* fix(db): pass vault ids explicitly instead of a global withVault override
+* feat: track changes (suggesting mode), phase 1
+* fix(tabs): keep restored and filtered-out tabs open
+* Structured git errors, phase 1a: typed errors end to end
+* Plugin host APIs for a mermaid.live-style Mermaid editor
+* feat: vault mind map as the vault home view
+* feat(editor): paste URLs as Markdown links, prompt for the link URL
+* fix(desktop): commit as the user, not the Mahfouz placeholder
+* fix(web): author commits as the signed-in GitHub account
+* feat: rail help icon opens the user guide on the web
+* Editable welcome page when no vault is open
+* feat: drag a note to another vault (move, ⌥ to copy)
+* Callouts (GitHub alerts) in notes
+* docs: point CLAUDE.md and AGENTS.md at the guide/ pages
+
+
 ## 0.10.0 (2026-10-08) {#v0.10.0}
 
 * Serve the web app at mahfouz.app; the site moves to docs.mahfouz.app
