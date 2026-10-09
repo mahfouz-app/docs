@@ -28,6 +28,36 @@ checkbox, the title, optionally who it's for, then ` // ` and the date.
 Tasks are plain text in the note, so they travel with the vault and show
 up in any Markdown editor. Tick the checkbox to mark a task done.
 
+## In the editor
+
+On a task line, the assignee and the due date show as two small chips after
+the title. Your own login reads **you**. The date chip says when the task is
+due: **Today 14:00**, **Wed, Oct 14**, or **Overdue · Oct 6**. A done task's
+chips are dimmed. In Live mode, put the cursor on the line to see and edit
+the raw text; Preview always shows the chips.
+
+### Set a date
+
+Click the date chip, or type ` //` after the title of a checklist item, to
+open the date picker.
+
+- Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
+- Add a time if you want one; leave it empty for an all-day task.
+- **Remove date** turns the task back into an ordinary checklist item.
+- The keyboard works too: the arrow keys move between days, Page Up and Page
+  Down change the month, Enter picks the day, and Esc closes the picker.
+
+When you give a date to an item that has no assignee and you're signed in
+with GitHub, your own `@login` is added. Changes made with the picker apply
+directly, even while the note is in Suggesting mode.
+
+### Assign someone
+
+Type `@` on a checklist item to choose who the task is for. The list shows
+the collaborators on the vault's GitHub repository, with their access level.
+Without a GitHub remote, or when the list can't be loaded, it offers only
+your own login.
+
 ## The Tasks view
 
 Click **Tasks** in the left rail (`Mod+6`) to see every task in one list,
