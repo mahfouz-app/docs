@@ -26,6 +26,13 @@ visible, switched with the toolbar's **Show source** button
   An image, video or audio embed likewise replaces its `![alt](path)` line
   in Preview mode, wherever the cursor is (see
   [Images & attachments](/guide/media/)).
+  Copying from Preview copies formatted text: pasted into Mail, Google
+  Docs, Slack or Word, headings, emphasis, lists, links and tables keep
+  their formatting. Apps that only take plain text, and Mahfouz itself,
+  get the Markdown. Pending suggestions paste as the original text and
+  comments are left out (the text they mark stays); wikilinks and
+  attached images paste as their text. Copying in Source copies
+  Markdown only.
 
 Other editor behavior:
 
