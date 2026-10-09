@@ -41,7 +41,31 @@ note.
   once, after asking. One undo (`Cmd/Ctrl+Z`) reverts either.
 
 Accepting keeps the suggested text. Rejecting restores the original. Either
-way the change is saved and committed like any other edit.
+way the change is saved and committed like any other edit. If a suggestion
+was the whole line, for example a deleted paragraph or an added list item,
+the line goes too.
+
+## Suggestions from the agent
+
+When a note is in **Suggesting**, the agent suggests its edits like anyone
+else. When you ask it to change the note, its edits appear right away as
+suggestions marked **Agent**, with a light background tint. This happens in
+every agent mode, including **Manual**. Nothing changes until you accept
+the suggestions.
+
+The agent's message in the chat says how many changes it suggested and
+offers:
+
+- **Show in note** — opens the note at the agent's first suggestion.
+- **Reject all agent suggestions** — removes every suggestion the agent
+  has made in that note, including earlier ones, after asking. Your own
+  suggestions and other people's stay.
+
+Some edits can't be shown as suggestions: changes inside code, a link's
+URL or HTML, edits inside someone else's pending suggestion, and some
+changes to line breaks. For those the agent falls back to its usual
+proposal card in the chat, with the reason, and you accept or reject it
+there. In notes in **Editing**, the agent always works that way.
 
 ## What gets tracked
 
