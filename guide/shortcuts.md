@@ -26,6 +26,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | `Mod+3` | Go to tags |
 | `Mod+4` | Go to trash |
 | `Mod+5` | Go to search |
+| `Mod+6` | Go to tasks |
 | — | Toggle auto-commit for note (no default key) |
 | — | Open the vault mind map (no default key; action "Open mind map") |
 | `Mod+Shift+R` | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
@@ -100,6 +101,7 @@ elsewhere; `Alt` is ⌥ on a Mac.
 | Go to bookmarks | `Mod+2` | `Mod+Alt+K` |
 | Go to tags | `Mod+3` | `Mod+Alt+T` |
 | Go to trash | `Mod+4` | `Mod+Alt+X` |
+| Go to tasks | `Mod+6` | `Mod+Alt+Shift+T` |
 | Bookmark the active note | `Mod+D` | `Mod+Alt+S` |
 | Duplicate the active note | `Mod+Shift+D` | `Mod+Alt+Shift+D` |
 | Copy the note's name | `Mod+Shift+C` | `Mod+Alt+Shift+C` |
