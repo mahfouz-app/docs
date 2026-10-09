@@ -21,8 +21,9 @@ permalink: /guide/links/
 - **Different link text**: `[[people/John|Johnny]]` links to John but
   reads "Johnny".
 - **Editing a link in Preview**: click it to open a small editor. For a
-  wikilink, pick the note (or type a name that doesn't exist yet to link
-  to a new note) and set the text it shows; for a regular link, change its
+  wikilink, pick the note (notes that share a title show their folder,
+  and picking one fills in `folder/Title`; or type a name that doesn't
+  exist yet to link to a new note) and set the text it shows; for a regular link, change its
   text and URL. **Open** follows the link, **Remove link** keeps the text
   and drops the link, **Save** (or `Enter`) applies, `Esc` cancels.
   `Cmd/Ctrl+Click` still opens a link directly.
