@@ -67,6 +67,39 @@ changes to line breaks. For those the agent falls back to its usual
 proposal card in the chat, with the reason, and you accept or reject it
 there. In notes in **Editing**, the agent always works that way.
 
+## Comments
+
+Select some text and click **Comment** in the toolbar, type your comment,
+and press Enter. The commented text gets a soft amber highlight. Nothing is
+saved until you send the first comment.
+
+When the cursor is inside commented text, its thread opens beside it:
+
+- **Reply** — type in the box and press Enter.
+- **Resolve** — marks the thread done. The highlight goes away, but the
+  thread stays in the note, and **Reopen** brings it back. Replying to a
+  resolved thread reopens it too.
+- **Delete thread** — removes the comments and keeps the text. One undo
+  (`Cmd/Ctrl+Z`) brings them back.
+
+The **Comments** section in the right sidebar lists the note's open
+threads, with resolved ones collapsed at the bottom. Click one to jump to
+it. **Add comment** has no keyboard shortcut by default; you can give it
+one under Settings → Shortcuts.
+
+Comments work in both **Editing** and **Suggesting**, and they never become
+suggestions. A comment stays on one line of text: it can't cover a heading
+or list marker, code, a link or another suggestion. If the commented text
+is later deleted, the thread stays as a small marker so the discussion
+isn't lost.
+
+**The agent can comment too.** Ask it to review a note and it leaves
+comments marked **Agent**, or replies to a thread. In **Manual** mode you
+see its comments in the chat first, and nothing is added until you accept.
+In the other modes they're added right away. **Undo** on the chat card
+removes them. The agent never resolves a thread, and it won't remove
+someone else's reply.
+
 ## What gets tracked
 
 Suggesting tracks the **text within lines**: typing, deleting, pasting and
@@ -123,6 +156,10 @@ A pending suggestion doesn't count as part of the note yet:
 
 ## Limits
 
+- Comments are stored in the note's Markdown as `{==text==}` followed by
+  `{>>@who · date · comment<<}`, so other editors show that markup.
+- Two people replying to comments in the same paragraph at the same time
+  will hit a merge conflict on sync.
 - Two people suggesting changes to the *same line* at the same time will
   hit a merge conflict on sync, as with any other edit to the same line.
 - On the web, syncing only fast-forwards. If someone else pushed changes to

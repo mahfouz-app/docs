@@ -37,6 +37,8 @@ Right-aligned at the end of the toolbar:
 - **Zoom** dropdown
 - **Show source** — switches between Source and Preview (see
   [The editor](/guide/editor/))
+- **Comment** — comments on the selected text, or opens the comment
+  under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Editing ▾ / Suggesting ▾** — switches between making changes and
   suggesting them, and reviews suggestions. It shows how many suggestions
   the note has (see [Track changes](/guide/track-changes/))
