@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "The slash menu"
-description: "Type / to insert headings, lists, tables, callouts, links, tasks, comments, diagrams and fields."
+description: "Type / to insert headings, lists, tables, callouts, links, tasks, comments, emoji, diagrams and fields."
 permalink: /guide/slash-menu/
 ---
 
@@ -21,7 +21,7 @@ name, <kbd>Enter</kbd> starts a new line instead, so `/usr` followed by
 | Group | Commands |
 |---|---|
 | Text | Heading 1–3, bulleted list, numbered list, checklist, quote |
-| Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, image or file, task with due date, tag |
+| Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, image or file, task with due date, tag, [emoji](#emoji) |
 | Review | Comment on the current line |
 | Plugins | A block for each enabled diagram plugin, such as [Mermaid or draw.io](/guide/plugins/) |
 | Fields | Each of your [fields](/guide/fields/), such as `!today` |
@@ -36,6 +36,27 @@ Some commands depend on where you are:
 
 Inline formatting such as bold or italic isn't in the menu. Use its
 [keyboard shortcut](/guide/shortcuts/) or the [toolbar](/guide/toolbar/).
+
+## Emoji
+
+**Emoji** (Insert group, or `/emoji`) opens an emoji picker at the cursor.
+Type in its search box to filter, or browse the **Recent** row and the
+category tabs. Use the arrow keys and <kbd>Enter</kbd>, or click, to insert
+an emoji.
+
+You can also type `:` and two or more letters, such as `:rocket`, to get
+emoji suggestions. The `:` has to start the line or follow a space or `(`,
+so `10:30` and `http://` are typed as usual, and there are no suggestions
+inside code. <kbd>Enter</kbd> picks the highlighted emoji when what you typed
+starts its shortcode, or after you've moved through the list with the arrow
+keys; otherwise it starts a new line. To turn these suggestions off, turn off
+**Emoji suggestions when typing :** in Settings → General. Like the slash
+menu setting, it's stored on this computer only.
+
+An emoji is saved in the note as the character itself, not as a `:rocket:`
+shortcode, so it looks the same in any editor and on GitHub. Your system's
+emoji picker works too: <kbd>Ctrl</kbd><kbd>Cmd</kbd><kbd>Space</kbd> on
+macOS, <kbd>Win</kbd><kbd>.</kbd> on Windows.
 
 ## Turning it off
 

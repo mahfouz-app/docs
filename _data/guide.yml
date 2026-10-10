@@ -28,7 +28,7 @@
       description: "Every button on the formatting toolbar and its More menu."
     - slug: slash-menu
       title: "The slash menu"
-      description: "Type / to insert headings, lists, tables, callouts, links, tasks, comments, diagrams and fields."
+      description: "Type / to insert headings, lists, tables, callouts, links, tasks, comments, emoji, diagrams and fields."
     - slug: markdown
       title: "Markdown"
       description: "The Markdown syntax Mahfouz understands, from headings and links to tables."

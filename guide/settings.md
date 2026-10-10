@@ -18,7 +18,9 @@ you can hand-edit):
 
 **Slash command menu** (Settings → General, on by default) turns the
 [slash menu](/guide/slash-menu/) on or off. Unlike the settings above, it's
-stored on this computer only, not in the vault.
+stored on this computer only, not in the vault. So is **Emoji suggestions
+when typing :**, which turns the [`:` emoji suggestions](/guide/slash-menu/#emoji)
+on or off.
 
 Sidebar sort order (alphabetical vs. chronological) is also saved there,
 toggled from the Sidebar header.
