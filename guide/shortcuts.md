@@ -62,9 +62,8 @@ autocomplete; `!` triggers field autocomplete.
 Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
-- **File**: new notes (sibling, child, parent level), **New Folder**, **New
-  Database**, New
-  Vault, Open Vault, Save, Export, Close Tab.
+- **File**: new notes (sibling, child, parent level), **New Folder**,
+  **New Database**, New Vault, Open Vault, Save, Export, Close Tab.
 - **Edit**: the usual editing commands, Find and Replace, Search Vault.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
   Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
