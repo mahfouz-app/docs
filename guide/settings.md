@@ -16,6 +16,10 @@ you can hand-edit):
 | Font | Serif / Monospace | Serif |
 | Line numbers | Shown / Hidden | Hidden |
 
+**Slash command menu** (Settings → General, on by default) turns the
+[slash menu](/guide/slash-menu/) on or off. Unlike the settings above, it's
+stored on this computer only, not in the vault.
+
 Sidebar sort order (alphabetical vs. chronological) is also saved there,
 toggled from the Sidebar header.
 
