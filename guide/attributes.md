@@ -52,7 +52,9 @@ chosen to there.
 - **Orientation** — Landscape / Portrait segmented control for PDF export
   (same as the toolbar button). Landscape is the default and writes no key.
 - **Text, highlight, background color** — a color swatch each, with a
-  clear button once set (same as the toolbar color menu).
+  clear button once set (same as the toolbar color menu). These and
+  **Font** also style the note's
+  [published page](/guide/publishing/#how-a-published-page-looks).
 - A free-form key/value table for anything else. A recognized key with a
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
@@ -65,9 +67,9 @@ use them the same way:
 - `id`, `title`, `created`, `updated`, `bookmarked`, `renamed`, `parent`
   and `external_images` are always Mahfouz's. Name your attribute
   something else.
-- `database`, `auto_publish` and `published` are Mahfouz's only for
-  certain values: `true` for the first two, and a published page's id for
-  `published`. When an attribute with one of these names is hidden from
+- `database`, `auto_publish`, `publish_children`, `no_publish` and
+  `published` are Mahfouz's only for certain values: `true` for the first
+  four, and a published page's id for `published`. When an attribute with one of these names is hidden from
   the document, it's written to the file the same way Mahfouz writes its
   own setting, so it can't hold those values. Show it in the document, or
   give it another name. Other values are fine either way, so a Jekyll or
