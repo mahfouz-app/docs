@@ -47,6 +47,9 @@
     - slug: slides
       title: "Presenting notes as slides"
       description: "Present a note as a slide deck and style it with slides templates."
+    - slug: publishing
+      title: "Publishing notes to the web"
+      description: "Publish a note as a public page anyone with the link can read, keep it up to date, and unpublish it."
 - group: "Git & GitHub"
   pages:
     - slug: git

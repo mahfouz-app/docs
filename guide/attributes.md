@@ -52,7 +52,9 @@ chosen to there.
 - **Orientation** — Landscape / Portrait segmented control for PDF export
   (same as the toolbar button). Landscape is the default and writes no key.
 - **Text, highlight, background color** — a color swatch each, with a
-  clear button once set (same as the toolbar color menu).
+  clear button once set (same as the toolbar color menu). These and
+  **Font** also style the note's
+  [published page](/guide/publishing/#how-a-published-page-looks).
 - A free-form key/value table for anything else. A recognized key with a
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
