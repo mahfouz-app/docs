@@ -77,6 +77,9 @@
     - slug: plugins
       title: "Plugins & registries"
       description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugin registries."
+    - slug: external-agents
+      title: "External agents (MCP)"
+      description: "Let Claude Code, Claude Desktop, Codex or claude.ai read and edit your vaults, and choose which edits wait for you."
     - slug: settings
       title: "Settings"
       description: "Preferences and per-vault settings."
