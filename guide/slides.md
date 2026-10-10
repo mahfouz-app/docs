@@ -8,9 +8,9 @@ permalink: /guide/slides/
 Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
 `---` line is a slide break (a note with none is a one-slide deck).
 
-- **`Cmd/Ctrl+Shift+P`** shows the current note fullscreen, layered over
+- **<kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>** shows the current note fullscreen, layered over
   the whole app rather than opening a tab. Arrow keys move between slides;
-  `Esc` (or menu **View → Stop Presenting**, `Cmd+.`) returns you exactly
+  <kbd>Esc</kbd> (or menu **View → Stop Presenting**, <kbd>Cmd</kbd><kbd>.</kbd>) returns you exactly
   where you were. Rebind it in `.config/settings.md` under `## Shortcuts`,
   row `mahfouz/slidev:present-fullscreen`.
 - A note's menu (sidebar, tab, or toolbar ⋯) offers **Present** as a
@@ -18,7 +18,7 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   presenter view — speaker notes, timer — in your system browser),
   **Browser** (opens the deck itself there), and **Restart** (restarts
   Slidev) in its toolbar.
-- **PDF**: a note's menu → **Export…** (or `Cmd/Ctrl+Shift+E`) → Format
+- **PDF**: a note's menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>) → Format
   **PDF** renders the deck to a PDF; once it's ready, **Save…** asks where
   to put it. Page shape follows the note's **Orientation**.
 - **Enable it first**: Present is the **Slidev presentations** plugin and

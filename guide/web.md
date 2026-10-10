@@ -39,7 +39,7 @@ disabled and the bar says why.
 On first run, click **Open or create a vault…** in the bar above the
 welcome page and choose a folder. The
 browser asks whether Mahfouz may edit the folder: choose **Edit files**.
-Press `Ctrl+Alt+O` (`⌘⌥O` on a Mac) to open another folder later.
+Press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>O</kbd> on a Mac) to open another folder later.
 
 If the folder isn't a git repository yet, Mahfouz asks before creating one
 (`git init`). A browser can't see the folders above the one you picked, so it

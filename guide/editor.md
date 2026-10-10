@@ -45,14 +45,14 @@ Other editor behavior:
   OS-level autocomplete.
 - Native macOS spellcheck/autocorrect (including Text Replacements) work
   normally.
-- `Cmd/Ctrl+Click` on a link, `[[wikilink]]`, or a rendered link-card opens
+- <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
   note).
 - In Preview, a plain click on a link opens a small editor for it (see
   [Links](/guide/links/#links-wikilinks--backlinks)).
-- **Find and replace**: `Cmd/Ctrl+F` (or toolbar) opens the search
+- **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the search
   and replace panel.
-- **Undo/redo**: standard `Cmd/Ctrl+Z` / `Cmd/Ctrl+Shift+Z`, also available
+- **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
 
 ## Table of contents & page preview

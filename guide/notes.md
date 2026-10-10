@@ -21,8 +21,8 @@ pick up a title-based name the next time their title changes. Vaults
 created before this layout are offered a one-time migration on open;
 declining keeps the older one-folder-per-note shape, which still works.
 
-- **New note**: `Cmd/Ctrl+N` creates a sibling of whatever's selected;
-  `Cmd/Ctrl+Shift+N` creates a child of it; `Cmd/Ctrl+Alt+N` creates a note
+- **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
+  <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the
   Sidebar for "new note here."
 - **Title**: there's no separate title field — a note's title is always
@@ -32,7 +32,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   drop it onto another note to make it a child.
 - **Moving to another vault**: drag a note onto a note, a folder or the
   name of another vault in the Sidebar. The note moves, along with every
-  note under it. Hold `Option` (`Alt` on Windows and Linux) when you
+  note under it. Hold <kbd>Option</kbd> (<kbd>Alt</kbd> on Windows and Linux) when you
   release to copy it instead. The original stays where it is, and the copy
   gets new ids.
   - Images and other attachments the note links to are copied into the
@@ -51,7 +51,7 @@ declining keeps the older one-folder-per-note shape, which still works.
     to another vault. Turn auto-commit back on first.
 - **Folders**: a folder doesn't have to belong to a note. Right-click a
   plain folder in the Sidebar for **New note**, **New folder**, **Rename
-  folder** (edit the name in place: `Enter` saves, `Esc` cancels),
+  folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
   **Reveal in Finder**, and **Delete folder**.
 - **Breadcrumb**: the bar above the editor shows where the open note
   lives: the vault, then every folder it's nested in. Click a folder that
@@ -63,7 +63,7 @@ declining keeps the older one-folder-per-note shape, which still works.
 - **Reveal in Finder** is called **Reveal in File Explorer** on Windows
   and **Open Containing Folder** on Linux.
 - **Bookmarks**: click the ribbon icon on a Sidebar row, or use the
-  toolbar's ⋯ menu → Bookmark, to pin a note. `Cmd/Ctrl+2` jumps to the
+  toolbar's ⋯ menu → Bookmark, to pin a note. <kbd>Cmd/Ctrl</kbd><kbd>2</kbd> jumps to the
   Bookmarks view (a flat list across all vaults).
 - **Unimported files**: if you drop a plain `.md` file into the vault
   folder outside Mahfouz (no `id:` in its frontmatter), it shows up right
@@ -73,7 +73,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   leaves everything else alone.
 - **Edits from other apps**: Mahfouz watches the vault folder. When another
   app changes the note you have open, the editor updates in place within a
-  second, keeping your cursor where it was (`Cmd/Ctrl+Z` undoes the
+  second, keeping your cursor where it was (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> undoes the
   reload). If you were typing at the same moment, a banner offers to
   reload or resolve the conflict instead, so your unsaved typing is never
   overwritten.

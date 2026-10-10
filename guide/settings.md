@@ -5,7 +5,7 @@ description: "Preferences and per-vault settings."
 permalink: /guide/settings/
 ---
 
-**Settings…** (`Cmd/Ctrl+,`, or menu **Mahfouz → Settings…**) — applies
+**Settings…** (<kbd>Cmd/Ctrl</kbd><kbd>,</kbd>, or menu **Mahfouz → Settings…**) — applies
 instantly and is stored in `.config/settings.md` (a plain Markdown file
 you can hand-edit):
 

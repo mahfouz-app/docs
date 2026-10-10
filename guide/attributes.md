@@ -20,7 +20,7 @@ Clicking a pill opens the right sidebar on that section. While the
 sidebar is open, the pills move into the top of it and turn sections on
 and off there; a highlighted pill means its section is showing. Turning
 off the last section closes the sidebar, and opening it again from the
-toolbar (or `Mod+Shift+\`) shows every section.
+toolbar (or <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd>) shows every section.
 
 The sidebar's sections, in order:
 
