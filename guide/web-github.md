@@ -57,12 +57,15 @@ Anything not yet pushed is gone with it, so let it sync before you clear data.
 
 ### Syncing
 
-A GitHub vault syncs on its own: it pushes shortly after a commit and pulls
-regularly and when you return to the tab. Syncing only fast-forwards: if
-GitHub and the vault each have commits the other lacks, Mahfouz doesn't merge
-them on the web, and the notification says so. Sync that vault from the
-desktop app instead. A single commit larger than 100 MB has to be pushed
-from the desktop app.
+A GitHub vault syncs on its own: it pushes shortly after a commit, and pulls
+and then pushes anything still waiting regularly, when you return to the tab
+and when you come back online. If GitHub and the vault each have commits the
+other lacks, Mahfouz combines them when they changed different notes, as the
+desktop app does. If a note changed on both sides, sync stops and offers
+**Keep both** (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
+The browser can't wait while a tab closes, so commits not yet pushed go out
+the next time you open the vault. A single commit larger than 100 MB has to
+be pushed from the desktop app.
 
 - **Unfinished updates** — if the tab closes in the middle of a pull or
   reset, Mahfouz finishes it on the next load. If you've edited a file it

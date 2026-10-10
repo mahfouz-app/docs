@@ -10,6 +10,7 @@ When a sync goes wrong, Mahfouz shows a notice in the [notification center](/gui
 ## Buttons
 
 - **Retry** syncs again. Use it after you've fixed the cause.
+- **Keep both** keeps your version of a note that changed on both sides, saves the remote's version beside it, then syncs.
 - **Open remote settings** opens the vault's settings on the **Source** tab, where its remote is set.
 - **Push this branch** creates the branch on the remote. It only runs when you click that button, never from a click on the notice itself.
 - **Install git** (desktop only) installs Mahfouz's own copy of git, then syncs again.
@@ -59,9 +60,19 @@ Your account can reach it but isn't allowed to do this. Ask the owner for write 
 
 Add one with **Open remote settings**, then **Retry**.
 
+### This note changed here and on GitHub
+
+The same note (or notes) changed on this device and on the remote since they last synced. Mahfouz combines changes to different notes on its own, but never two versions of the same note, so sync stops and names them. The notice's buttons:
+
+- **Keep both** keeps your version and saves the remote's version as a separate note, "&lt;title&gt; (remote copy)", next to yours. Then it syncs. Compare the two and delete the one you don't need. A changed file that isn't a note, such as a settings file, gets its copy as "&lt;name&gt; (remote copy)" next to it.
+- **Open note** opens the first of the notes.
+- **Retry** syncs again, for when you've settled it another way (on desktop, with git).
+
+The notice says "GitHub" whichever remote the vault uses.
+
 ### Your notes and the remote both have new changes
 
-Both sides have new changes, and Mahfouz can't combine them yet. Retry after the other device's changes are in. On desktop you can also resolve it with git yourself. Mahfouz doesn't pick a side for you.
+The remote rejected a push because it has commits this device doesn't. The next sync brings them in, combining changes to different notes, then sends yours: nothing to do. The same notice for a pull that names no notes means the two histories share no commits at all. On desktop, resolve that with git.
 
 ### The remote has no branch yet
 
