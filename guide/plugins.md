@@ -51,6 +51,8 @@ The built-in `mahfouz` registry has:
   one, or insert one from the toolbar's **Embed** menu, to edit it in a
   draw.io tab. Changes save back into the note as you go.
 - **Git LFS**: see [Git LFS for large media](/guide/git/#git-lfs-for-large-media).
+- **Notion import**: adds Notion to the Import dialog. See
+  [Importing from Notion](/guide/import-notion/).
 
 Plugins aren't available on the web: see [What's only in the desktop
 app](/guide/web/#whats-only-in-the-desktop-app).
