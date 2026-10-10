@@ -34,35 +34,35 @@ views:
 ```
 ~~~
 
-The rows are the note's **direct** child notes. A row can have children of its
-own. They are that row's sub-pages, not rows of the database.
+The rows are the note's **direct** child notes. A row's own children are its
+sub-pages, not rows of the database.
 
 ## Create a database
 
-There are three ways:
+You can create a database in three ways:
 
 - **New database.** Right-click the sidebar background or a vault and choose
-  **New database**. Or right-click a note to create a database inside it. The
-  new database opens in the editor with an empty heading; type its name. A
-  **New Database** action is also in the **File** menu. It has no default
-  key; see [Keyboard shortcuts](/guide/shortcuts/).
+  **New database**. To create a database inside a note, right-click the note
+  instead. The new database opens in the editor with an empty heading; type
+  its name. The **File** menu also has a **New Database** action, with no
+  default key; see [Keyboard shortcuts](/guide/shortcuts/).
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
   attributes they already use become the columns. **Turn back into a note**
   removes the block. The child notes stay.
-- **Convert a Markdown table.** Hover a table in a note and click the
+- **Convert a Markdown table.** Hover over a table in a note and click the
   **Convert to database** icon next to the wrap toggle. Each table row
   becomes a note: the first column becomes the note's title, and every other
-  column becomes an attribute. The table is replaced by a link to the new
-  database. The whole conversion is one commit. A table can have at most 500
-  rows.
+  column becomes an attribute. A link to the new database replaces the
+  table, and the whole conversion is one commit. You can convert a table of
+  up to 500 rows.
 
 None of these are available while a note is in Suggesting mode, because they
 change the note directly.
 
 ## The table
 
-Opening a database note shows its table in its own tab. To see or edit the
+A database note opens as a table in its own tab. To see or edit the
 note itself, click **View source**. In Preview, the block shows as an
 **Open database** card.
 
@@ -73,7 +73,7 @@ Expand it to see the rows as ordinary notes.
 
 - Click a column header to sort by it. Click again to reverse the order, and
   once more to stop sorting by it.
-- **Sort** lets you sort by several columns.
+- To sort by several columns, use **Sort**.
 - **Filter** shows the rows that match every filter in the list. Each filter
   is a column, a comparison, and a value. A Select column offers its options.
 
@@ -81,27 +81,29 @@ Sorts and filters you change apply on this device until you choose
 **Save view**. **Reset** returns to the saved view. If someone else changes
 the saved view, your unsaved changes are dropped.
 
-Filters written in the block that the Filter list can't show, such as `or` and
-`not` groups, still apply. They are listed as "can't be shown here".
+Some filters written in the block, such as `or` and `not` groups, can't be
+shown in the **Filter** list. They still apply, and the list marks them
+"can't be shown here".
 
 ## Edit cells and rows
 
-- Click a cell, or press Enter on it, to edit it with its attribute's own
-  editor. Enter or clicking elsewhere saves the value. Escape cancels it. Tab
-  saves the value and moves to the next cell.
-- Choosing a Select option or ticking a checkbox saves it straight away.
+- To edit a cell with its attribute's own editor, click it or press
+  <kbd>Enter</kbd> on it. Press <kbd>Enter</kbd> or click elsewhere to save
+  the value, or press <kbd>Escape</kbd> to cancel. <kbd>Tab</kbd> saves the
+  value and moves to the next cell.
+- A Select option or a checkbox saves as soon as you choose or tick it.
 - Click a row's title to rename it. The open icon next to the title opens the
-  note. Cmd-click (Ctrl-click) opens it in a new tab.
-- **New row** adds a row: type its title and press Enter. Another empty row
-  opens, ready for the next one. A row with no title is never created.
+  note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click) opens it in a new tab.
+- **New row** adds a row: type its title and press <kbd>Enter</kbd>. Another
+  empty row opens for the next one. A row without a title isn't created.
 - **⋯** on a row offers **Open**, **Open in new tab**, and **Delete row**.
-  A deleted row can be restored from Trash.
+  You can restore a deleted row from Trash.
 
-Each edit is an ordinary change to that note, and is committed like any other.
-There is no undo inside the table: use History or Trash.
+Each edit is an ordinary change to that note and is committed like any other.
+The table has no undo; use [History](/guide/history/) or Trash instead.
 
-If the database note is in Suggesting mode, edits made in the table change
-the vault directly. They aren't suggestions.
+If the database note is in Suggesting mode, edits in the table change the
+vault directly instead of becoming suggestions.
 
 ## Columns
 
@@ -110,7 +112,8 @@ the vault directly. They aren't suggestions.
 - A column header's menu offers **Rename…**, **Set type…**, sorting, and
   **Hide column**.
 - **Rename** changes the attribute's name in every row in a single commit.
-  It refuses if a row already has an attribute with the new name.
+  If a row already has an attribute with the new name, the rename isn't
+  made.
 - **Set type** sets the attribute's type for the whole vault. Types are
   stored in `.config/attributes.md`, so another database that uses the same
   attribute shows the same type.
@@ -122,8 +125,7 @@ database block. Comments and formatting elsewhere in the block are kept.
 
 ## Publishing
 
-When you publish a database note, the block is left out of the published
-page.
+Publishing a database note leaves the block out of the published page.
 
 ## The agent
 
