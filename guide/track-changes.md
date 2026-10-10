@@ -67,6 +67,9 @@ changes to line breaks. For those the agent falls back to its usual
 proposal card in the chat, with the reason, and you accept or reject it
 there. In notes in **Editing**, the agent always works that way.
 
+[External agents](/guide/external-agents/) such as Claude Code suggest
+their edits the same way in a note that is in **Suggesting**.
+
 ## Comments
 
 Select some text and click **Comment** in the toolbar, type your comment,
