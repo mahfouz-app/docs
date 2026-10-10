@@ -141,7 +141,28 @@ vault directly instead of becoming suggestions.
 ## Save view
 
 **Save view** writes your current sort, filters, grouping, and columns into the
-database block. Comments and formatting elsewhere in the block are kept.
+view you're looking at, in the database block. Other views and the comments
+and formatting elsewhere in the block are kept.
+
+## Views
+
+A database can have several views of the same rows, each with its own sort,
+filters, grouping, and columns. The views appear as buttons in the toolbar;
+click one to show it. The view you picked is remembered on this device.
+
+- **+ View** adds a view.
+- The **▾** next to the current view offers **Rename**, **Duplicate**, and
+  **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
+  save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
+  and their notes aren't affected.
+- View names must be unique, ignoring case, and can't start with `#`.
+
+Adding, renaming, duplicating, or deleting a view changes the database block
+straight away. Each view keeps its own unsaved changes on this device until
+you choose **Save view** while showing it.
+
+A view type this app doesn't support yet, for example one written in another
+app, is shown as a table, with a note saying so.
 
 ## Publishing
 
@@ -150,6 +171,7 @@ Publishing a database note leaves the block out of the published page.
 ## The agent
 
 The agent can read a database with its `query_database` tool. The tool
-returns the columns and up to 200 rows, which the agent treats as data. To
+returns the database's views, the columns of the view it asked for, and up to
+200 rows, which the agent treats as data. To
 add a row, the agent creates a child note and then sets its attributes. You
 approve both steps.
