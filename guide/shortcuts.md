@@ -30,6 +30,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | — | Toggle auto-commit for note (no default key) |
 | — | Open the vault mind map (no default key; action "Open mind map") |
 | — | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
+| — | Set the active note's page icon (no default key; action "Set note icon") |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
