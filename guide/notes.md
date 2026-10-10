@@ -83,3 +83,24 @@ declining keeps the older one-folder-per-note shape, which still works.
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
   via Settings.
+
+## Page icons
+
+Any note can have an emoji icon. It shows before the note's title in the
+Sidebar and on its tab, and above the note in the editor.
+
+- **Set it**: hover the top of the note and click **Add icon**, or choose
+  **Set icon…** from the note's ⋯ menu or its right-click menu in the
+  Sidebar. There's also a **Set note icon** shortcut action with no
+  default key; bind one in **Settings → Shortcuts**.
+- **Change or remove it**: click the icon above the note to pick another
+  one. **Remove** in the picker clears it.
+- **Where it's stored**: the note's frontmatter, as `icon: 🚀`. It shows
+  up in the [Attributes](/guide/attributes/) panel, where you can edit it
+  like any other attribute. If `icon:` already holds something that isn't
+  a single emoji (a value another tool such as Jekyll uses), Mahfouz
+  leaves it alone and shows no icon.
+- **Folders**: a note with children can have an icon. A plain folder
+  can't, because it has no note file to store it in.
+- **Published pages**: a [published page](/guide/publishing/) doesn't
+  show the icon, so changing it doesn't mark the page out of date.
