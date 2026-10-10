@@ -32,7 +32,8 @@ says so and links here.
 
 GitHub vaults are kept in the browser's own storage, which Safari supports
 from version 26. In an older Safari, **Open a GitHub repository…** is
-disabled and the bar says why.
+disabled and the bar says why. [Plugins](/guide/plugins/#plugins-on-the-web)
+need the same storage, so an older Safari can't install them either.
 
 ## Opening a folder
 
@@ -66,9 +67,12 @@ them again.
 
 ## What's only in the desktop app
 
-Plugins (Mermaid, draw.io, presentations, PDF export), the AI agent, Export,
-Git LFS, syncing a local folder with a remote (a GitHub vault syncs on the
+The Slidev presentations and PDF export plugins, the AI agent, Export,
+Git LFS (and its plugin), syncing a local folder with a remote (a GitHub vault syncs on the
 web), merging diverged histories, Reveal in Finder, moving a vault, system
 notifications and update checks. Settings say **Available in the desktop
 app** where one would be. **Send feedback** opens a new issue on GitHub
 instead of sending it from the app.
+
+Other plugins, such as Mermaid and Draw.io, work on the web: see [Plugins
+on the web](/guide/plugins/#plugins-on-the-web).
