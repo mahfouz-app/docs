@@ -1,36 +1,43 @@
 
 ## 0.11.0 (2026-10-09) {#v0.11.0}
 
-* fix(ops): adopt the existing staging R2 bucket
-* Copy from Preview as formatted text
-* feat(tasks): due reminders (4/4)
-* Structured git errors, phase 1c: branch-safe pushes and notice actions
-* Structured git errors, phase 1b: plain-language notices and Show details
-* feat: comment threads (track changes phase 3)
-* feat(links): folder-qualified wikilinks and working aliases
-* feat(editor): edit links in preview with a popover
-* fix: two publish tests broken by the track-changes merge
-* fix(editor): media cards replace their markdown line in Preview; drop collapse
-* fix(editor): type after line-prefix markup in Preview
-* feat: agent edits become suggestions in Suggesting mode (track changes phase 2)
-* fix(editor): stop auto-pairing apostrophes
-* fix(tabs): shrink tabs to fit, scroll overflow with arrow buttons
-* feat(publish): publish a note to p.mahfouz.app with Edit and Copy
-* feat(menu): put every app action in the native menu, with keys synced from settings
-* fix(db): pass vault ids explicitly instead of a global withVault override
-* feat: track changes (suggesting mode), phase 1
-* fix(tabs): keep restored and filtered-out tabs open
-* Structured git errors, phase 1a: typed errors end to end
-* Plugin host APIs for a mermaid.live-style Mermaid editor
-* feat: vault mind map as the vault home view
-* feat(editor): paste URLs as Markdown links, prompt for the link URL
-* fix(desktop): commit as the user, not the Mahfouz placeholder
-* fix(web): author commits as the signed-in GitHub account
-* feat: rail help icon opens the user guide on the web
-* Editable welcome page when no vault is open
-* feat: drag a note to another vault (move, ⌥ to copy)
-* Callouts (GitHub alerts) in notes
-* docs: point CLAUDE.md and AGENTS.md at the guide/ pages
+### Highlights
+
+* **Track changes and comments.** Turn on Suggesting mode and edits become suggestions that someone accepts or rejects, as in Word or Google Docs. Comment threads anchor to text and can be resolved. Both live in the note itself, so they travel with push and pull.
+* **Tasks.** Task lines across your vaults are collected in a Tasks view, where you can tick them off. In the editor, tasks get chips, a date picker and `@` completion for assignees, and you're reminded when a task assigned to you comes due.
+* **Publish to the web.** Publish a note to a permanent link on p.mahfouz.app. Anyone with access to the vault can edit the original from the page; everyone else can copy it into their own vault. Only the note and its images are sent.
+* **Mind map.** Each vault has a radial mind map of its notes, by folder or by tag. It's the vault's home view when no tab is open.
+
+### New
+
+* The AI agent's edits to a note in Suggesting mode arrive as suggestions you review in the note.
+* Wikilinks can name a folder, such as `[[people/john]]`, and `[[Target|Alias]]` links now resolve, show in backlinks and complete.
+* Callouts, using GitHub's alert syntax (`> [!TIP]`), render the same as on GitHub and in Obsidian.
+* Copying from Preview keeps the formatting when you paste into Mail, Google Docs, Slack or Word.
+* Clicking a link in Preview opens a popover to edit its text and address.
+* Pasting a URL makes a Markdown link, and over selected text it links the selection.
+* Drag a note, and the notes under it, onto another vault to move it. Hold ⌥ to copy instead.
+* On desktop, every app action is in the menu bar, under new Note and Go menus, showing your own shortcuts.
+* Git sync problems are explained in plain language, with **Show details** for the raw output and actions such as **Push this branch**. A push no longer creates a branch the remote doesn't have.
+* With no vault open, you get an editable welcome page that explains Mahfouz and lets you try the editor.
+* The **?** button in the rail opens the user guide. The shortcuts sheet is still on Mod+/.
+* Plugins can edit fenced blocks in their own tabs, which the new Mermaid editor uses.
+
+### Fixes
+
+* Commits are authored as you, so a note's **Created by** and **Last edited by** show your name instead of "Mahfouz", on desktop and on the web.
+* With many tabs open, tabs shrink to fit and arrow buttons scroll the rest. Scrolling the tab strip no longer drags the window.
+* Restored tabs, and tabs hidden by a filter, stay open.
+* Typing an apostrophe no longer inserts a second one.
+* In Preview, typing at the start of a heading, quote, list item or task goes into the text instead of before its marker.
+* In Preview, an image, video or audio card replaces its Markdown line instead of sitting under it. Collapsing media is removed.
+* Switching between vaults no longer lets one vault's background work read from another.
+
+### Internal
+
+* Fixed two publish tests broken by the track-changes merge
+* Terraform adopts the existing staging bucket for published pages
+* Contributor docs point at the user guide pages
 
 
 ## 0.10.0 (2026-10-08) {#v0.10.0}
