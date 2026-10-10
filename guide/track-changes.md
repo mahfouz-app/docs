@@ -70,17 +70,22 @@ there. In notes in **Editing**, the agent always works that way.
 ## Comments
 
 Select some text and click **Comment** in the toolbar, type your comment,
-and press Enter. The commented text gets a soft amber highlight. Nothing is
-saved until you send the first comment.
+and press Enter or click the send button (the paper plane). The commented
+text gets a soft amber highlight. Nothing is saved until you send the first
+comment; the × button next to the box drops it.
 
-When the cursor is inside commented text, its thread opens beside it:
+When the cursor is inside commented text, its thread opens beside it. The
+buttons are icons; point at one to see its name:
 
-- **Reply** — type in the box and press Enter.
-- **Resolve** — marks the thread done. The highlight goes away, but the
-  thread stays in the note, and **Reopen** brings it back. Replying to a
-  resolved thread reopens it too.
-- **Delete thread** — removes the comments and keeps the text. One undo
-  (`Cmd/Ctrl+Z`) brings them back.
+- **Reply** (paper plane) — type in the box and press Enter or click it.
+- **Resolve** (check mark) — marks the thread done. The highlight goes
+  away, but the thread stays in the note, and **Reopen** (the curved arrow
+  that takes its place) brings it back. Replying to a resolved thread
+  reopens it too.
+- **Delete thread** (trash can) — removes the comments and keeps the text.
+  One undo (`Cmd/Ctrl+Z`) brings them back.
+
+Tab moves between the box and the buttons; Esc goes back to the note.
 
 The **Comments** section in the right sidebar lists the note's open
 threads, with resolved ones collapsed at the bottom. Click one to jump to
