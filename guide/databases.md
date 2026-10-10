@@ -87,6 +87,24 @@ Some filters written in the block, such as `or` and `not` groups, can't be
 shown in the **Filter** list. They still apply, and the list marks them
 "can't be shown here".
 
+## Group rows
+
+**Group** splits the table into sections by a Select attribute, such as a
+status. The sections follow the order of the attribute's options. A value
+that isn't one of the options gets its own section after them, and rows with
+no value come last, under "No ⟨attribute⟩". Your sort applies inside each
+section.
+
+- Choose **Group**, then an attribute, or **None** to stop grouping. Only
+  Select attributes are offered; if there are none, set a column's type to
+  Select first.
+- Click a section's name to collapse or expand it.
+- **New in ⟨section⟩** adds a row that already has that section's value.
+- When you change a row's value, the row moves to its new section.
+
+Like sorting and filtering, grouping applies on this device until you choose
+**Save view**, which writes it into the block as `groupBy`.
+
 ## Edit cells and rows
 
 - To edit a cell with its attribute's own editor, click it or press
@@ -122,7 +140,7 @@ vault directly instead of becoming suggestions.
 
 ## Save view
 
-**Save view** writes your current sort, filters, and columns into the
+**Save view** writes your current sort, filters, grouping, and columns into the
 database block. Comments and formatting elsewhere in the block are kept.
 
 ## Publishing
