@@ -38,7 +38,7 @@ note.
 - When a note has suggestions, the menu shows how many. **Previous
   suggestion** and **Next suggestion** step through them.
 - **Accept all** and **Reject all** resolve every suggestion in the note at
-  once, after asking. One undo (`Cmd/Ctrl+Z`) reverts either.
+  once, after asking. One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) reverts either.
 
 Accepting keeps the suggested text. Rejecting restores the original. Either
 way the change is saved and committed like any other edit. If a suggestion
@@ -83,7 +83,7 @@ buttons are icons; point at one to see its name:
   that takes its place) brings it back. Replying to a resolved thread
   reopens it too.
 - **Delete thread** (trash can) — removes the comments and keeps the text.
-  One undo (`Cmd/Ctrl+Z`) brings them back.
+  One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
 
 Tab moves between the box and the buttons; Esc goes back to the note.
 

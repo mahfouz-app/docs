@@ -7,7 +7,7 @@ permalink: /guide/vaults/
 
 A **vault** is a folder on disk containing your notes, and (usually) a git
 repository. Mahfouz doesn't create a vault for you on first launch — use
-**File → Open Vault…** (`Cmd/Ctrl+O`) to point it at an existing folder or
+**File → Open Vault…** (<kbd>Cmd/Ctrl</kbd><kbd>O</kbd>) to point it at an existing folder or
 an empty one you want to turn into a vault. An empty folder stays empty:
 Mahfouz writes no starter note into it.
 
