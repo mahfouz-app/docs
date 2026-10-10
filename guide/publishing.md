@@ -86,6 +86,39 @@ changes the note, so the page follows your edits without you asking.
 Once a note is published, its menu also has **Copy public link** and
 **Open published page**.
 
+## Publish child notes
+
+A note's children can be published with it. Tick **Also publish child
+notes** in the publish dialog, or, for a note that's already published,
+choose **Publish child notes…** from its menu. The dialog says how many
+notes that publishes now.
+
+- Every note under the parent gets its own page and link: its children,
+  their children, and so on. The parent's page doesn't link to them, and
+  links between notes still appear as plain text.
+- Notes that arrive later are published too: a new child, a note you move
+  under the parent, one you restore from the trash, or a file added outside
+  Mahfouz. Each is published on the first commit after it has a title, and a
+  notification gives its link.
+- With **Auto-publish changes** on for the parent, the child pages follow
+  your edits as well.
+- A [disk-only note](/guide/history/#auto-commit-and-disk-only-notes) isn't
+  published, and neither is a note you pull from a collaborator until you
+  change it yourself.
+
+Choose **Stop publishing child notes** from the parent's menu to turn it
+off. No new children are published; the pages already online stay up.
+
+Unpublishing a child keeps it off the web: it isn't published again with
+its parent. Publishing it yourself undoes that. Unpublishing the parent asks
+whether to unpublish its child pages too; **Cancel** keeps them online. A
+child you move out from under the parent keeps its page.
+
+The setting travels with the vault, but it publishes nothing on a device
+until it's turned on there. On your other computer, or for a collaborator,
+the parent's menu shows **Publish child notes on this device…**. So a child
+is only ever published under the account of someone who chose to.
+
 ## How a published page looks
 
 A published page looks like the note does in the editor's
@@ -154,7 +187,9 @@ next update tells you, and the note stops being marked as published.
 
 A published note remembers its page in its own attributes:
 `published: <id>` (the page's id) and, with auto-publish on,
-`auto_publish: true`. They travel with the note through git, so another
+`auto_publish: true`. A parent that publishes its children has
+`publish_children: true`, and a child kept off the web has
+`no_publish: true`. They travel with the note through git, so another
 device or a collaborator sees the note as published. See
 [Names Mahfouz keeps for itself](/guide/attributes/#names-mahfouz-keeps-for-itself).
 

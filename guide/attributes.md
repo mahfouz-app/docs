@@ -67,9 +67,9 @@ use them the same way:
 - `id`, `title`, `created`, `updated`, `bookmarked`, `renamed`, `parent`
   and `external_images` are always Mahfouz's. Name your attribute
   something else.
-- `database`, `auto_publish` and `published` are Mahfouz's only for
-  certain values: `true` for the first two, and a published page's id for
-  `published`. When an attribute with one of these names is hidden from
+- `database`, `auto_publish`, `publish_children`, `no_publish` and
+  `published` are Mahfouz's only for certain values: `true` for the first
+  four, and a published page's id for `published`. When an attribute with one of these names is hidden from
   the document, it's written to the file the same way Mahfouz writes its
   own setting, so it can't hold those values. Show it in the document, or
   give it another name. Other values are fine either way, so a Jekyll or
