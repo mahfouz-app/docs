@@ -56,3 +56,25 @@ chosen to there.
 - A free-form key/value table for anything else. A recognized key with a
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
+
+### Names Mahfouz keeps for itself
+
+Some frontmatter keys hold Mahfouz's own settings, so an attribute can't
+use them the same way:
+
+- `id`, `title`, `created`, `updated`, `bookmarked`, `renamed`, `parent`
+  and `external_images` are always Mahfouz's. Name your attribute
+  something else.
+- `database`, `auto_publish` and `published` are Mahfouz's only for
+  certain values: `true` for the first two, and a published page's id for
+  `published`. When an attribute with one of these names is hidden from
+  the document, it's written to the file the same way Mahfouz writes its
+  own setting, so it can't hold those values. Show it in the document, or
+  give it another name. Other values are fine either way, so a Jekyll or
+  Hugo `published: false` stays your attribute.
+
+Attribute values have to fit on one line.
+
+When a change would break one of these rules, Mahfouz doesn't save it
+and says why. In the free-form table, the other rows still save, and the
+row it refused stays as you typed it so you can fix it.
