@@ -69,7 +69,7 @@ next batch.
 |---|---|
 | Right-mouse drag | Pan |
 | Two-finger scroll | Pan |
-| Pinch, or `Ctrl`+scroll | Zoom toward the pointer |
+| Pinch, or <kbd>Ctrl</kbd>+scroll | Zoom toward the pointer |
 | Toolbar zoom out / zoom in | Zoom |
 | Toolbar **Fit** | Fit the whole map in view |
 
@@ -81,13 +81,13 @@ zoom.
 
 ## Keyboard
 
-Press `Tab` to move focus into the map, then:
+Press <kbd>Tab</kbd> to move focus into the map, then:
 
 | Key | Action |
 |---|---|
 | Arrow keys | Move between a node's parent, its children and its siblings |
-| `Enter` | Open a note, or collapse or expand a branch |
-| `+` or `Shift`+`Enter` | Add a note, as the **+** button would |
+| <kbd>Enter</kbd> | Open a note, or collapse or expand a branch |
+| <kbd>+</kbd> or <kbd>Shift</kbd><kbd>Enter</kbd> | Add a note, as the **+** button would |
 
 ## What is remembered
 

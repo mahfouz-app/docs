@@ -8,12 +8,12 @@ permalink: /guide/history/
 Mahfouz keeps no separate history of its own — **history is git history.**
 
 - **History** (the bottom of the sidebar's Details section — toolbar ⋯ →
-  Revisions, `Cmd/Ctrl+Alt+R`, or click the save status) lists
+  Revisions, <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>R</kbd>, or click the save status) lists
   every commit that touched the current note (subject, relative time,
   short SHA). Click one to open that revision read-only in a new tab,
   with a banner offering **Restore** (writes a *new* commit restoring
   that content — history is always append-only, never rewritten).
-- **Trash** (Sidebar, `Cmd/Ctrl+4`) is a flat, cross-vault list of every
+- **Trash** (Sidebar, <kbd>Cmd/Ctrl</kbd><kbd>4</kbd>) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
 - Every note edit auto-commits ~30 seconds after your last keystroke in

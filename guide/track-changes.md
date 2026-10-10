@@ -38,7 +38,7 @@ note.
 - When a note has suggestions, the menu shows how many. **Previous
   suggestion** and **Next suggestion** step through them.
 - **Accept all** and **Reject all** resolve every suggestion in the note at
-  once, after asking. One undo (`Cmd/Ctrl+Z`) reverts either.
+  once, after asking. One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) reverts either.
 
 Accepting keeps the suggested text. Rejecting restores the original. Either
 way the change is saved and committed like any other edit. If a suggestion
@@ -80,7 +80,7 @@ When the cursor is inside commented text, its thread opens beside it:
   thread stays in the note, and **Reopen** brings it back. Replying to a
   resolved thread reopens it too.
 - **Delete thread** — removes the comments and keeps the text. One undo
-  (`Cmd/Ctrl+Z`) brings them back.
+  (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
 
 The **Comments** section in the right sidebar lists the note's open
 threads, with resolved ones collapsed at the bottom. Click one to jump to

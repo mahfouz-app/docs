@@ -60,7 +60,7 @@ your own login.
 
 ## The Tasks view
 
-Click **Tasks** in the left rail (`Mod+6`) to see every task in one list,
+Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>6</kbd>) to see every task in one list,
 grouped into **Overdue**, **Today**, **Upcoming** and **Completed**.
 
 - **Mine** shows the tasks assigned to your GitHub login; you need to be

@@ -1328,6 +1328,26 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.guide-content kbd {
+  display: inline-block;
+  min-width: 1.7em;
+  padding: 0 5px;
+  border: 1px solid var(--cm-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--cm-bg-content);
+  color: var(--cm-code);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.guide-content kbd + kbd {
+  margin-left: 3px;
+}
+
 .guide-content img {
   height: auto;
 }
