@@ -43,13 +43,15 @@ You can create a database in three ways:
 
 - **New database.** Right-click the sidebar background or a vault and choose
   **New database**. To create a database inside a note, right-click the note
-  instead. The new database opens in the editor with an empty heading; type
+  and choose **New child database**. The new database opens in the editor with an empty heading; type
   its name. The **File** menu also has a **New Database** action, with no
   default key; see [Keyboard shortcuts](/guide/shortcuts/).
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
-  attributes they already use become the columns. **Turn back into a note**
-  removes the block. The child notes stay.
+  attributes they already use become the columns. The block goes below the
+  note's heading; if the note doesn't start with one, a heading with the
+  note's title is added above the text, which is otherwise left as it was.
+  **Turn back into a note** removes the block. The child notes stay.
 - **Convert a Markdown table.** Hover over a table in a note and click the
   **Convert to database** icon next to the wrap toggle. Each table row
   becomes a note: the first column becomes the note's title, and every other
