@@ -29,6 +29,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>6</kbd> | Go to tasks |
 | — | Toggle auto-commit for note (no default key) |
 | — | Open the vault mind map (no default key; action "Open mind map") |
+| — | Create a database (no default key; action "New database") |
 | — | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
@@ -61,7 +62,8 @@ autocomplete; `!` triggers field autocomplete.
 Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
-- **File**: new notes (sibling, child, parent level), **New Folder**, New
+- **File**: new notes (sibling, child, parent level), **New Folder**, **New
+  Database**, New
   Vault, Open Vault, Save, Export, Close Tab.
 - **Edit**: the usual editing commands, Find and Replace, Search Vault.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
