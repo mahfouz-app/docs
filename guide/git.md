@@ -56,9 +56,19 @@ Vault Settings → **Vault** section:
     or **push local** (force-pushes your local content over it). Pick
     carefully — both directions are destructive to whichever side loses.
 - **Sync now** — pulls, then pushes, immediately.
-- Once connected, Mahfouz keeps syncing on its own: it auto-pushes ~60
-  seconds after an auto-commit, and auto-pulls (fast-forward only) every 5
-  minutes and whenever the app regains focus.
+- Once connected, Mahfouz keeps syncing on its own:
+  - It pushes about 60 seconds after each commit.
+  - Every 5 minutes, when the app regains focus and when you come back
+    online, it pulls, then pushes anything still waiting. A push that failed
+    (offline, a sign-in problem) is retried this way, and at the next launch.
+  - When you close the window or quit, it saves, commits and pushes first,
+    waiting a few seconds at most. A quit the system starts (logging out,
+    shutting down) doesn't wait; those commits go out at the next launch.
+- **When both sides have new commits** — if this device and the remote
+  changed *different* notes, Mahfouz combines them in a "Merge remote
+  changes" commit. It never combines two versions of the same note: if a
+  note changed on both sides, sync stops and names it, with **Keep both**
+  (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
 - **Authentication** is entirely your local git setup's problem — ssh-agent,
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
