@@ -61,8 +61,8 @@ chosen to there.
 
 ### Lists
 
-An attribute can hold a list, such as Obsidian's `tags` or `aliases`.
-Mahfouz reads a list written either way YAML allows:
+An attribute can hold a list of values, such as Obsidian's `tags` or
+`aliases`. Mahfouz reads a list written either of these two ways:
 
 ```yaml
 tags:
@@ -71,7 +71,11 @@ tags:
 aliases: ["J. Smith", "Smith, John"]
 ```
 
-In the panel, a list shows as chips:
+Other shapes, such as a list of mappings or a nested list, show as empty
+in the app but are kept in the file as you wrote them.
+
+In the panel, a list on an attribute with no type, or a Text attribute,
+shows as chips:
 
 - Click **×** on a chip to remove that item.
 - Type in **Add…** and press <kbd>Enter</kbd> to add an item. Press
