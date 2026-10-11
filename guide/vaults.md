@@ -15,6 +15,8 @@ You can have multiple vaults open at once. Each appears as its own
 collapsible section at the top of the Sidebar's Notes view, showing either
 the connected repo's `owner/repo` name (with a cloud icon) or the local
 folder name (with a computer icon) if it isn't connected to a remote yet.
+The cloud shows the vault's sync state; click it to sync now (see
+[The vault icon](/guide/git/#the-vault-icon)).
 Click a vault section's gear/⋯ button to open **Vault Settings** for that
 vault specifically (see [Git sync & remotes](/guide/git/#git-sync--remotes) and
 [Git LFS](/guide/git/#git-lfs-for-large-media)), including:

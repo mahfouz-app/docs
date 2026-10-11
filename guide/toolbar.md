@@ -32,8 +32,11 @@ The toolbar above the editor, left to right:
 
 Right-aligned at the end of the toolbar:
 
-- **Save status** — shows whether the note has been saved; click it to
-  open the [Details](/guide/attributes/#note-pills--the-right-sidebar) section
+- **Save status** — shows whether the note has been saved, and where its
+  changes are: **Saved · Not committed**, **Not pushed**, **Pushing…**,
+  **Pushed**, **Push failed** or **Conflict** (see
+  [The save chip](/guide/git/#the-save-chip)). Click it to open the
+  [Details](/guide/attributes/#note-pills--the-right-sidebar) section
 - **Zoom** dropdown
 - **Show source** — switches between Source and Preview (see
   [The editor](/guide/editor/))
