@@ -59,6 +59,37 @@ chosen to there.
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
 
+### Lists
+
+An attribute can hold a list, such as Obsidian's `tags` or `aliases`.
+Mahfouz reads a list written either way YAML allows:
+
+```yaml
+tags:
+  - reading
+  - fiction
+aliases: ["J. Smith", "Smith, John"]
+```
+
+In the panel, a list shows as chips:
+
+- Click **×** on a chip to remove that item.
+- Type in **Add…** and press <kbd>Enter</kbd> to add an item. Press
+  <kbd>Backspace</kbd> in an empty **Add…** to remove the last item.
+
+A Multiselect attribute keeps its own option chips. In a database, a list
+shows as read-only pills, and editing the cell opens the same chips.
+
+Mahfouz leaves a list as you wrote it until you change it. Once you edit
+a list in the app, it's written on one line, as `["reading", "fiction"]`.
+Text you type into an ordinary attribute stays text, even when it looks
+like a list.
+
+Mahfouz doesn't keep these when it saves a note's frontmatter: comments,
+blank lines between keys, the order of keys, and multi-line values
+written with `|` or `>`. Edit those notes in another editor if you need
+them kept.
+
 ### Names Mahfouz keeps for itself
 
 Some frontmatter keys hold Mahfouz's own settings, so an attribute can't
@@ -75,7 +106,7 @@ use them the same way:
   give it another name. Other values are fine either way, so a Jekyll or
   Hugo `published: false` stays your attribute.
 
-Attribute values have to fit on one line.
+An attribute's value, or each item of a list, has to fit on one line.
 
 When a change would break one of these rules, Mahfouz doesn't save it
 and says why. In the free-form table, the other rows still save, and the
