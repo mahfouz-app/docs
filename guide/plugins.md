@@ -52,6 +52,8 @@ The built-in `mahfouz` registry has:
   one, or insert one from the toolbar's **Embed** menu, to edit it in a
   draw.io tab. Changes save back into the note as you go.
 - **Git LFS**: see [Git LFS for large media](/guide/git/#git-lfs-for-large-media).
+- **Notion import**: adds Notion to the Import dialog. See
+  [Importing from Notion](/guide/import-notion/).
 
 ## Plugins on the web
 
@@ -69,8 +71,9 @@ A few things differ:
   them; they install again when a vault turns them on.
 - **Only some plugins run in a browser.** Mermaid diagrams and Draw.io
   work on the web. Slidev presentations, PDF export and Git LFS run
-  programs on your computer, so they're desktop only and show **Desktop
-  only** in the list. A vault that turns them on in the desktop app isn't
+  programs on your computer, and Notion import reaches Notion through the
+  desktop app, so they're desktop only and show **Desktop only** in the
+  list. A vault that turns them on in the desktop app isn't
   affected.
 - **Draw.io is a large download**, around 150 MB of files, so installing it
   in the browser may take a while.
