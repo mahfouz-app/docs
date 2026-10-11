@@ -25,6 +25,8 @@ renders specially:
 | `> [!NOTE]` as a quote's first line (also `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`) | Callout (see [Callouts](#callouts)) |
 | `---` on its own line | Horizontal rule **and** a page/slide break (see [Presenting](/guide/slides/)) |
 | <code>&#96;&#96;&#96;</code> fenced block | Code block, styled distinctly from prose |
+| `$x^2$`, `$$…$$` | Math, inline or on its own lines (see [Math](#math)) |
+| `[TOC]` on its own line | Numbered table of contents (see [Table of contents](#table-of-contents)) |
 | `[text](url)` | Link |
 | `<https://example.com>` | Bare autolink |
 | `[[Note Title]]` | Wikilink to another note by title |
@@ -55,6 +57,37 @@ pick a type. With the cursor inside a callout, picking another type
 changes it, and picking its own type turns it back into a plain quote.
 A callout at the top of a note isn't the note's title: the title comes
 from the line after it.
+
+## Math
+
+Write math in LaTeX between dollar signs: `$…$` for math inside a
+sentence, `$$…$$` for a formula on its own lines.
+
+```markdown
+The area of a circle is $\pi r^2$.
+
+$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$
+```
+
+So that prices don't turn into math, the rules are Pandoc's:
+
+- A `$` followed by a space doesn't start math.
+- The closing `$` must come right after a non-space character, and
+  mustn't be followed by a digit.
+- `\$` is a literal dollar sign.
+
+Math is rendered in Preview mode, where its source shows while the cursor
+is inside it, and on [published pages](/guide/publishing/).
+
+## Table of contents
+
+A line holding only `[TOC]` (or `[[_TOC_]]`) shows a numbered **Contents**
+list (1, 1.1, 2…) of the note's level 2–6 headings, each linking to its
+section. It shows in Preview mode, where clicking an entry jumps to the
+heading, and on [published pages](/guide/publishing/). With no headings,
+Preview shows **No headings yet** and a published page shows nothing.
 
 ## Tables
 
