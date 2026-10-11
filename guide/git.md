@@ -79,6 +79,64 @@ Vault Settings → **Vault** section:
 On the web, GitHub vaults sync differently: see [Syncing](/guide/web-github/#syncing) under
 [Mahfouz on the web](/guide/web/).
 
+## Sync status
+
+Mahfouz shows how far your changes have travelled: saved on this device,
+committed, or pushed to the remote.
+
+### The vault icon
+
+Each vault's header in the Sidebar starts with an icon. A vault connected to
+a remote shows a cloud:
+
+- **Cloud with a check** — synced. Everything is pushed.
+- **Gray cloud with an up arrow** — changes are waiting to push.
+- **Blue cloud with a spinning ring** — syncing (pushing or pulling).
+- **Red cloud with "!"** — the last sync failed. Hover the icon for details,
+  and use **Retry** on the sync notice (see
+  [When sync fails](/guide/when-sync-fails/)).
+
+A local-only vault, with no remote, shows a computer icon instead.
+
+Click the cloud to sync now. Hover it to see when the vault last pushed and
+last pulled.
+
+### The note mark
+
+Each note shows a mark before its title, in the Sidebar and on its tab.
+A note without a [page icon](/guide/notes/#page-icons) shows a cloud in the
+same style:
+
+- **Cloud with a check** — pushed.
+- **Cloud with an up arrow** — committed, but not pushed yet.
+- **Dashed cloud with a dot** — changes not committed yet.
+- **Red cloud with "!"** — the push failed.
+- **Red cloud with ×** — the note conflicts with the remote (see
+  [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
+
+A note with a page icon keeps its emoji and gets a small dot at the emoji's
+top right instead:
+
+- **Gray dot** — not committed.
+- **Blue dot** — not pushed.
+- **Amber dot** — the push failed.
+- **Red dot** — conflict.
+- **No dot** — pushed.
+
+While a note's changes are being pushed, its mark briefly turns into the
+blue syncing cloud. A failed push or a conflict pulses three times when it
+first appears.
+
+In a local-only vault there's nothing to push, so notes show only
+uncommitted changes. A [disk-only note](/guide/history/#auto-commit-and-disk-only-notes)
+keeps its own drive glyph.
+
+### The save chip
+
+The toolbar's save chip adds the note's sync state after **Saved**:
+**Saved · Not committed**, **Saved · Not pushed**, **Saved · Pushing…**,
+**Saved · Pushed**, **Saved · Push failed** or **Saved · Conflict**.
+
 ## Git LFS for large media
 
 If a vault will hold large media files, turn on Git LFS for it in Vault

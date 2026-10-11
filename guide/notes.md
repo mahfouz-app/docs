@@ -77,8 +77,11 @@ declining keeps the older one-folder-per-note shape, which still works.
   reload). If you were typing at the same moment, a banner offers to
   reload or resolve the conflict instead, so your unsaved typing is never
   overwritten.
-- **Status dots**: each Sidebar row shows a small dot indicating whether
-  the note has uncommitted changes, is synced to a remote, or is local-only. A note with auto-commit off also shows a drive glyph
+- **Sync marks**: each Sidebar row and tab shows a mark before the note's
+  title: whether its changes are uncommitted, committed but not pushed, or
+  pushed, and whether a push failed or conflicts with the remote. See
+  [The note mark](/guide/git/#the-note-mark). A note with auto-commit off
+  shows a drive glyph instead
   (see [Auto-commit and disk-only notes](/guide/history/#auto-commit-and-disk-only-notes)).
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
