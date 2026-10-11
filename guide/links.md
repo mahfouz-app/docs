@@ -33,6 +33,9 @@ permalink: /guide/links/
   every note that links to the one you're viewing (via `[[wikilink]]` or a
   regular link to its title). The backlinks pill above the note shows the
   count and opens it (see [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
+  A wikilink in an attribute counts too, such as `author: "[[Ursula K. Le Guin]]"`
+  or an item in a list. That note is listed with the attribute it links
+  through, for example "The Dispossessed via author".
 
 ## Tags
 
