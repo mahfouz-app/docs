@@ -13,7 +13,7 @@ you can hand-edit):
 |---|---|---|
 | Tab size | 2 or 4 spaces | 4 |
 | Color mode | System / Light / Dark | System |
-| Font | Serif / Monospace | Serif |
+| Font | Serif / Sans-serif / Monospace | Serif |
 | Line numbers | Shown / Hidden | Hidden |
 
 **Slash command menu** (Settings → General, on by default) turns the
