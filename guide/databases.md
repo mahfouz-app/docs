@@ -150,7 +150,8 @@ A database can have several views of the same rows, each with its own sort,
 filters, grouping, and columns. The views appear as buttons in the toolbar;
 click one to show it. The view you picked is remembered on this device.
 
-- **+ View** adds a view.
+- **+ View** adds a view: **Table**, or **Board** grouped by one of the
+  database's Select attributes.
 - The **▾** next to the current view offers **Rename**, **Duplicate**, and
   **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
   save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
@@ -163,6 +164,30 @@ you choose **Save view** while showing it.
 
 A view type this app doesn't support yet, for example one written in another
 app, is shown as a table, with a note saying so.
+
+## Board
+
+A Board shows the rows as cards in columns, one column per option of a
+Select attribute, such as a status. Values that aren't options get their own
+columns after them, and rows with no value go in the last column, "No
+⟨attribute⟩". In the block, a Board is a view with `type: kanban` and a
+`groupBy`.
+
+- **Move a card** by dragging it to another column. That sets the card's
+  attribute to the column's value; dropping it on "No ⟨attribute⟩" clears it.
+  Press <kbd>Escape</kbd> while dragging to cancel.
+- Or use **⋯** on a card, then **Move to**, which works from the keyboard
+  too. The card's menu also offers **Open**, **Open in new tab**, and
+  **Delete row**.
+- **Click a card** to open its note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click)
+  opens it in a new tab. Cards show the view's fields, read-only; edit them
+  in a Table view or in the note.
+- **New in ⟨column⟩** adds a card that already has that column's value.
+- **Group** chooses which Select attribute the Board uses, and **Fields**
+  chooses which attributes the cards show. Like sorting and filtering, these
+  apply on this device until you choose **Save view**.
+
+Cards in a column follow the view's sort. There's no manual card order.
 
 ## Publishing
 
