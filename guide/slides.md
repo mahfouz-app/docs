@@ -61,3 +61,24 @@ accent colors, a font, a logo, a footer — for both Present and PDF export.
   template, so they sync with the vault and can be edited by hand.
   Presenting picks up template changes the next time you present or switch
   notes.
+
+### Built-in templates
+
+**+ New template** in Settings → **Slides** offers **Blank template** or
+**From a built-in…**, which opens a gallery of five looks:
+
+- **Minimal**: white, Inter, blue accent.
+- **Editorial**: cream, Fraunces, terracotta.
+- **Bold**: black, Space Grotesk, yellow.
+- **Midnight**: navy, IBM Plex Sans, teal.
+- **Gradient**: white slides with a violet-to-coral cover.
+
+Choose one (arrow keys work) and click **Add**, or press <kbd>Enter</kbd>.
+
+- Adding writes an ordinary copy into `.config/slides.md`, named
+  **Editorial 2** (and so on) if the name is taken, with a **Built-in**
+  row recording which look it came from.
+- It becomes the vault default only if it's the vault's first template.
+- Edit its colors, font, logo and CSS like any other template. Later app
+  updates never change your copy.
+- Its font comes from Google Fonts when you present, like any template's.
