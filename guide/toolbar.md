@@ -59,7 +59,7 @@ while the plugin is enabled. A toolbar button with a keyboard shortcut
 can be rebound or turned off in `.config/settings.md` under
 `## Shortcuts`, the same way as a plugin command (see [Presenting notes
 as slides](/guide/slides/) for an example). Plugin tabs and
-the Preferences → Plugins list both show each plugin's icon.
+the Settings → Plugins list both show each plugin's icon.
 
 All toggle-style formatting (bold, italic, lists, headings, blockquote,
 etc.) is a *smart toggle*: applying it again removes it, and applying a

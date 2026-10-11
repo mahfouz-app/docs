@@ -92,7 +92,7 @@ added *after* you enable it — existing committed media isn't migrated
 retroactively.
 
 `git-lfs` itself doesn't need to be installed separately: turn on the
-**Git LFS** plugin in Preferences → Plugins and Mahfouz downloads and
+**Git LFS** plugin in Settings → Plugins and Mahfouz downloads and
 manages it for you (no Homebrew required — currently Macs only, Apple
 Silicon or Intel). If you already have `git-lfs` on your system PATH (e.g. via
 Homebrew), Mahfouz detects and uses that instead.

@@ -5,7 +5,7 @@ description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugi
 permalink: /guide/plugins/
 ---
 
-Preferences → **Plugins** lists every plugin, grouped by the **registry**
+Settings → **Plugins** lists every plugin, grouped by the **registry**
 it comes from. A registry is a git repository of plugins. `mahfouz` (github.com/mahfouz-app/plugins) is built in, and
 you can add others under **Registries → Add a registry** with a git URL or
 a GitHub `owner/repo`.
@@ -57,7 +57,7 @@ The built-in `mahfouz` registry has:
 
 ## Plugins on the web
 
-Preferences → **Plugins** works the same way on [the web](/guide/web/):
+Settings → **Plugins** works the same way on [the web](/guide/web/):
 turn plugins on per vault, add registries, and install and update plugins.
 A few things differ:
 
