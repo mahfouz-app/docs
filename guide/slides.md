@@ -27,7 +27,8 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   Export dialog only offers PDF while the PDF export plugin is on.
   Installing either is a one-time download of a few hundred MB, with a
   progress bar in the status bar (installing PDF export also installs
-  Slidev). There's nothing else for you to install.
+  Slidev). There's nothing else for you to install. Both are desktop
+  only: on the web they show **Desktop only** in Preferences → Plugins.
   Editing the note updates the presentation live.
 
 ## Slides templates

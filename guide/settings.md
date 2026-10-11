@@ -29,5 +29,8 @@ Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard short
 edit the file directly to remap or disable one; blank a binding to
 disable it.
 
+Settings → AI → External agents connects AI apps such as Claude Code and
+claude.ai to your vaults: see [External agents (MCP)](/guide/external-agents/).
+
 Some settings aren't available on the web: see [What's only in the desktop
 app](/guide/web/#whats-only-in-the-desktop-app).

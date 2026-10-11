@@ -5,7 +5,7 @@ description: "The notification center, sounds, quiet time and update notices."
 permalink: /guide/notifications/
 ---
 
-Everything Mahfouz has to tell you — exports, plugin installs and updates, errors saving or syncing, [task reminders](/guide/tasks/#reminders) — collects in the notification center. Open it with the bell button at the right end of the titlebar, next to the AI chat button.
+Everything Mahfouz has to tell you — exports, plugin installs and updates, errors saving or syncing, [task reminders](/guide/tasks/#reminders) — collects in the notification center. Open it with the bell button at the right end of the titlebar, next to the AI chat button. Proposals from [external agents](/guide/external-agents/) have their own plug button beside it.
 
 - A dot on the bell means there are notifications you haven't dealt with; hover over the bell to see how many. A ring around it means something is running, and hovering shows what.
 - The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read, or archive it with ×.
