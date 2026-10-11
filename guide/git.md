@@ -73,8 +73,8 @@ Vault Settings → **Vault** section:
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
 - If a sync fails, see [When sync fails](/guide/when-sync-fails/).
-- The [status bar](/guide/tabs/#status-bar)'s right-hand pill always shows the active
-  vault's current sync state.
+- The icon in each vault's Sidebar header shows its current sync state
+  (see [The vault icon](#the-vault-icon)).
 
 On the web, GitHub vaults sync differently: see [Syncing](/guide/web-github/#syncing) under
 [Mahfouz on the web](/guide/web/).

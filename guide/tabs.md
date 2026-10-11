@@ -22,6 +22,6 @@ The footer, left to right:
 - **Commit state** — Repo clean / a live "Committing in Ns" countdown /
   Committing… / "Committed Xm ago" / "Commit failed: …"
 - An optional transient message (e.g. "Attaching file.png…")
-- Right-aligned: the active vault's **sync pill** — "Local only" if no
-  remote is connected, or "Synced Xm ago" / "Pushing…" / "Pulling…" /
-  "Sync error: …" if it is (hover to see the remote URL).
+
+A vault's sync state is shown by the icon in its Sidebar header, not here
+(see [The vault icon](/guide/git/#the-vault-icon)).
