@@ -1182,6 +1182,10 @@ h1 {
   html {
     scroll-behavior: auto;
   }
+
+  .guide-nav-group::after {
+    transition: none;
+  }
 }
 
 .guide-main {
@@ -1658,7 +1662,7 @@ h1 {
     border-radius: 8px;
   }
 
-  .guide-nav-compact summary {
+  .guide-nav-compact > summary {
     padding: 12px 16px;
     cursor: pointer;
     font-weight: 600;
@@ -1669,12 +1673,50 @@ h1 {
   }
 }
 
+.guide-nav-section {
+  margin-top: 14px;
+}
+
 .guide-nav-group {
-  margin: 20px 0 6px;
-  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
   color: var(--body-secondary);
+  cursor: pointer;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
+  list-style: none;
   text-transform: uppercase;
+}
+
+.guide-nav-group::-webkit-details-marker {
+  display: none;
+}
+
+.guide-nav-group::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-right: 2px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.guide-nav-section[open] > .guide-nav-group::after {
+  transform: rotate(45deg);
+}
+
+.guide-nav-group:hover {
+  color: var(--cm-text);
+}
+
+.guide-nav-group:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
 }
