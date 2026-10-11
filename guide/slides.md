@@ -22,13 +22,13 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   **PDF** renders the deck to a PDF; once it's ready, **Save…** asks where
   to put it. Page shape follows the note's **Orientation**.
 - **Enable it first**: Present is the **Slidev presentations** plugin and
-  PDF export the **PDF export** plugin (Preferences → Plugins), both from
+  PDF export the **PDF export** plugin (Settings → Plugins), both from
   the built-in `mahfouz` registry. Each can be on without the other; the
   Export dialog only offers PDF while the PDF export plugin is on.
-  Installing either is a one-time download of a few hundred MB, with a
-  progress bar in the status bar (installing PDF export also installs
+  Installing either is a one-time download of a few hundred MB; its
+  progress shows on the notification bell (installing PDF export also installs
   Slidev). There's nothing else for you to install. Both are desktop
-  only: on the web they show **Desktop only** in Preferences → Plugins.
+  only: on the web they show **Desktop only** in Settings → Plugins.
   Editing the note updates the presentation live.
 
 ## Slides templates

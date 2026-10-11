@@ -14,7 +14,7 @@ You need:
 
 - **The desktop app**, version 0.12.0 or later. Importing isn't available
   on the web.
-- **The Notion import plugin.** Turn it on in Preferences →
+- **The Notion import plugin.** Turn it on in Settings →
   [Plugins](/guide/plugins/).
 - **A Notion integration token**, with the pages you want shared with that
   integration (next section).
