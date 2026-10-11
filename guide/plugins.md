@@ -19,13 +19,13 @@ a GitHub `owner/repo`.
 - **Turning a plugin on is per vault**: it's recorded in
   `.config/settings.md` under `## Plugins`, e.g. `mahfouz/mermaid`.
   **Installing is per computer.** If you open a vault that uses a plugin
-  this computer doesn't have, the [status bar](/guide/tabs/#status-bar) asks before
-  installing it. **Not now** stops it asking for that vault. If the plugin
-  comes from a registry you haven't added, the status bar tells you, but
-  the registry is never added for you.
+  this computer doesn't have, a [notification](/guide/notifications/) asks
+  before installing it. **Not now** stops it asking for that vault. If the
+  plugin comes from a registry you haven't added, a notification tells you,
+  but the registry is never added for you.
 - **Updates wait for you.** Registries are checked at launch (or with
   **Check for updates**). A newer version shows **Update** next to the
-  plugin and a pill in the status bar, and nothing changes until you
+  plugin and a notification, and nothing changes until you
   approve it. The confirmation says so when an update wants to do
   something new, like run a background process or download from a new
   host.

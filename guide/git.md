@@ -73,8 +73,10 @@ Vault Settings → **Vault** section:
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
 - If a sync fails, see [When sync fails](/guide/when-sync-fails/).
-- The [status bar](/guide/tabs/#status-bar)'s right-hand pill always shows the active
-  vault's current sync state.
+- The sidebar header shows a cloud icon and the repo's `owner/repo` name
+  while a vault is connected. Vault Settings → **Remote**
+  shows whether it's pushing, pulling or stopped on an error, and a sync
+  error also raises a [notification](/guide/notifications/) with **Retry**.
 
 On the web, GitHub vaults sync differently: see [Syncing](/guide/web-github/#syncing) under
 [Mahfouz on the web](/guide/web/).
