@@ -9,7 +9,7 @@ External agents are AI apps outside Mahfouz, such as Claude Code, Claude
 Desktop, Codex or claude.ai, connected to it over MCP. Once connected, an
 agent can read the vaults you allow and work in them: create notes and nest
 them under other notes, create databases and add rows, add tasks and tick
-them off, and comment. You decide which vaults each agent can reach, and
+them off, comment, and ask to publish a note. You decide which vaults each agent can reach, and
 which of its edits wait for your approval.
 
 ## Connect an agent in the desktop app
@@ -93,6 +93,15 @@ shows up in [history](/guide/history/) like any other. In a note that is in
 **Suggesting**, an agent's edits to the text go into the note as
 [suggestions](/guide/track-changes/#suggestions-from-the-agent) marked
 **Agent** instead, whatever its mode, and wait for you to accept them there.
+
+### Publishing and unpublishing
+
+An agent can ask to [publish](/guide/publishing/#publishing-with-the-agent)
+or unpublish a note. These always wait for you, even under **Don't ask**.
+Accepting a publish opens the usual publish dialog, where you choose the
+options and click **Publish**; accepting an unpublish takes the page down
+at once. Neither can be undone from **Recently applied**: publish the note
+again from its menu to bring a page back.
 
 ## Disconnect an agent
 

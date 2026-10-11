@@ -70,6 +70,10 @@ there. In notes in **Editing**, the agent always works that way.
 [External agents](/guide/external-agents/) such as Claude Code suggest
 their edits the same way in a note that is in **Suggesting**.
 
+Asking the agent to publish or unpublish a note always waits for you,
+whatever its mode: see
+[Publishing with the agent](/guide/publishing/#publishing-with-the-agent).
+
 ## Comments
 
 Select some text and click **Comment** in the toolbar, type your comment,
