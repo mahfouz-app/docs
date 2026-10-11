@@ -64,6 +64,25 @@ If Mahfouz's data in the browser is ever damaged, it offers **Rebuild and
 reload**. Your notes are safe: they live in your vaults, and Mahfouz reads
 them again.
 
+## On a phone
+
+When the window is narrower than 700 pixels, as on a phone, Mahfouz
+switches to a layout made for it:
+
+- The note takes the whole width. A bar at the bottom of the screen holds
+  **Home**, **Tasks** and **Search**.
+- Tapping one of them opens the sidebar on that view, over the whole
+  screen. Opening a note closes it, and so does the close button in its
+  top corner.
+- The **⋯** button at the top right holds **Settings**, **Account**,
+  **Trash**, **User guide** and **Send feedback**.
+- The AI chat opens over the whole screen. The right sidebar isn't
+  available at this width.
+
+The sidebar always starts closed at this width, whatever you chose on a
+wider screen. The desktop app uses the same layout when you make its
+window that narrow.
+
 ## What's only in the desktop app
 
 Plugins (Mermaid, draw.io, presentations, PDF export), the AI agent, Export,
