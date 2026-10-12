@@ -137,7 +137,7 @@ keeps its own drive glyph.
 
 ### The save chip
 
-The toolbar's save chip adds the note's sync state after **Saved**:
+The bottom bar's save chip adds the note's sync state after **Saved**:
 **Saved · Not committed**, **Saved · Not pushed**, **Saved · Pushing…**,
 **Saved · Pushed**, **Saved · Push failed** or **Saved · Conflict**.
 

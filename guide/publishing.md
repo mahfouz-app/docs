@@ -15,8 +15,8 @@ commit.
 
 ## Publish a note
 
-Open the note's menu (right-click it in the sidebar, or **⋯ (More)** on the
-[toolbar](/guide/toolbar/)) and choose **Publish to web…**. The dialog says
+Click **Publish** in the open note's [bottom bar](/guide/toolbar/#the-bottom-bar),
+or right-click the note in the sidebar and choose **Publish to web…**. The dialog says
 what goes public:
 
 - **The note**: its text, as it reads now.
@@ -118,8 +118,10 @@ changes the note, so the page follows your edits without you asking.
 - If you're signed out, or the page belongs to another account, auto-publish
   stops for that note and a notification says why.
 
-Once a note is published, its menu also has **Copy public link**, **Open
-published page** and **QR code**.
+Once a note is published, its bottom bar reads **Published ▴**, with a dot
+while the page is behind the note. That menu, and the note's right-click
+menu in the sidebar, hold the page's actions, among them **Copy public
+link**, **Open published page** and **QR code**.
 
 ## QR code
 
