@@ -62,8 +62,8 @@ and then pushes anything still waiting regularly, when you return to the tab
 and when you come back online. If GitHub and the vault each have commits the
 other lacks, Mahfouz combines them as the desktop app does, including a note
 changed on both sides when the changes don't overlap. If the same part of a
-note changed on both sides, sync stops and offers
-**Keep both** (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
+note changed on both sides, sync stops, and you choose what to keep in the
+Merge tab (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
 The browser can't wait while a tab closes, so commits not yet pushed go out
 the next time you open the vault. A single commit larger than 100 MB has to
 be pushed from the desktop app.
