@@ -76,7 +76,7 @@ switches to a layout made for it:
   screen. Opening a note closes it, and so does the close button in its
   top corner.
 - The **⋯** button at the top right holds **Settings**, **Account**,
-  **Trash**, **User guide** and **Send feedback**.
+  **People**, **Trash**, **User guide** and **Send feedback**.
 - The AI chat opens over the whole screen. The right sidebar isn't
   available at this width.
 
