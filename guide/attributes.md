@@ -30,7 +30,7 @@ The sidebar's sections, in order:
   your file manager. Click a row's label to choose whether it also shows in the
   attributes block in the document.
 - **Backlinks**: see [Links](/guide/links/#links-wikilinks--backlinks).
-- **Tags**: the note's tags; click one to filter by it.
+- **Tags**: the note's tags; click one to add it to the [Tags view](/guide/links/#tags).
 - **Attributes**: see [Attributes panel](#attributes-panel).
 
 ## Attributes panel

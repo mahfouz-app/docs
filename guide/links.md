@@ -36,13 +36,37 @@ permalink: /guide/links/
 
 ## Tags
 
-Any `#` immediately followed by a letter (and not inside code) is a tag:
-`#project`, `#ideas`, etc. Mahfouz picks tags up automatically:
+Any `#` immediately followed by a letter (and not inside code, a link or a
+URL) is a tag: `#project`, `#ideas`, etc. A note's frontmatter `tags:` list
+counts too (`tags: [project, ideas]`, or one `- item` per line; a leading `#`
+is optional). Mahfouz picks tags up automatically.
 
-- The Sidebar's **Tags** view (<kbd>Cmd/Ctrl</kbd><kbd>3</kbd>) lists every tag with its note
-  count; click one or more to AND-filter notes, "Clear" to reset.
-- The lighter-weight **Tag filter** chip row offers the same picker in
-  contexts that don't want the full Sidebar view.
+Every tag can be clicked. Clicking one opens the **Tags** view in the left
+rail and adds that tag to the selection:
+
+- In Preview, click the tag. In Source, <kbd>Cmd/Ctrl</kbd>+click it (a
+  plain click places the cursor so you can edit it).
+- A `#tag` on a task title in the [Tasks](/guide/tasks/) view, a chip in a
+  note's `tags` attribute, and a tag in the right sidebar's **Tags** section
+  work the same way.
+
+Clicking a tag that's already selected keeps it selected. To remove a tag,
+use the × on its chip, or **Clear** to start over.
+
+The **Tags** view (**Tags** in the left rail, <kbd>Mod</kbd><kbd>3</kbd>) works like
+search:
+
+- The field at the top holds the selected tags as chips. Type in it to
+  find a tag and press <kbd>Enter</kbd> to add it; <kbd>Backspace</kbd> in
+  the empty field removes the last one.
+- With nothing selected, it lists every tag with its note count, and typing
+  in the field filters that list. **Untagged** lists notes with no tags.
+- With tags selected, it shows only notes that have **all** of them, across
+  every vault. **Narrow by** lists the other tags those notes carry, with
+  counts; pick one to narrow further.
+
+The selection only filters the Tags view. Home always shows every note, and
+the selection is still there when you come back to Tags.
 
 ## Search
 
