@@ -27,6 +27,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
 | <kbd>Mod</kbd><kbd>5</kbd> | Go to search |
 | <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
 | <kbd>Mod</kbd><kbd>6</kbd> | Go to tasks |
 | None | Toggle auto-commit for note (no default key) |
 | None | Open the vault mind map (no default key; action "Open mind map") |
@@ -65,8 +66,8 @@ shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**, New
   Vault, Open Vault, Save, Export, Close Tab.
-- **Edit**: the usual editing commands, Find and Replace, Search Vault,
-  Command Palette.
+- **Edit**: the usual editing commands, Find and Replace, Find Selection,
+  Search Vault, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
   Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
   File Explorer), Revision History, plugin commands such as Present, and
