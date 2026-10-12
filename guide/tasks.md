@@ -42,7 +42,9 @@ Click the date chip, or type ` //` after the title of a checklist item, to
 open the date picker.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
-- Add a time if you want one; leave it empty for an all-day task.
+- Add a time if you want one; leave it empty for an all-day task. The time
+  is saved once it's complete, and again when you leave the field or close
+  the picker.
 - **Remove date** turns the task back into an ordinary checklist item.
 - The keyboard works too: the arrow keys move between days, Page Up and Page
   Down change the month, Enter picks the day, and Esc closes the picker.
@@ -57,6 +59,17 @@ Type `@` on a checklist item to choose who the task is for. The list shows
 the collaborators on the vault's GitHub repository, with their access level.
 Without a GitHub remote, or when the list can't be loaded, it offers only
 your own login.
+
+To change a task's assignee, click its assignee chip. The picker checks the
+current assignee:
+
+- Type to filter the list, then click a person or use the arrow keys and
+  Enter.
+- To assign someone who isn't listed, type their login and pick
+  **Assign @login**.
+- **Unassign** removes the assignee and keeps the date.
+
+Like the date picker, these changes apply directly, even in Suggesting mode.
 
 ## The Tasks view
 
