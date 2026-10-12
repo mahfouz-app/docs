@@ -24,7 +24,7 @@ renders specially:
 | `> ` at line start | Blockquote |
 | `> [!NOTE]` as a quote's first line (also `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`) | Callout (see [Callouts](#callouts)) |
 | `---` on its own line | Horizontal rule **and** a page/slide break (see [Presenting](/guide/slides/)) |
-| <code>&#96;&#96;&#96;</code> fenced block | Code block, styled distinctly from prose |
+| <code>&#96;&#96;&#96;</code> fenced block | Code block, syntax highlighted (see [Code blocks](#code-blocks)) |
 | `$x^2$`, `$$…$$` | Math, inline or on its own lines (see [Math](#math)) |
 | `[TOC]` on its own line | Numbered table of contents (see [Table of contents](#table-of-contents)) |
 | `[text](url)` | Link |
@@ -57,6 +57,30 @@ pick a type. With the cursor inside a callout, picking another type
 changes it, and picking its own type turns it back into a plain quote.
 A callout at the top of a note isn't the note's title: the title comes
 from the line after it.
+
+## Code blocks
+
+Put code between two lines of three backticks, with its language after the
+opening ones:
+
+````markdown
+```ts
+const total = items.reduce((sum, item) => sum + item.price, 0);
+```
+````
+
+A code block shows as a card, highlighted for its language. In Preview mode
+the backticks are hidden while the cursor is outside the block: the card
+shows the language at the top, and pointing at the block shows two buttons:
+
+- **Copy** copies the code, without the backticks.
+- The line-numbers button numbers the block's lines, or stops numbering them.
+
+Line numbers are kept in the note itself, as `showLineNumbers` after the
+language (<code>&#96;&#96;&#96;ts showLineNumbers</code>), so they show for
+everyone you share the note with. You can also type it yourself. A block
+with no language gets `text` as its language when you number it. Click into
+the block to see and edit its backticks.
 
 ## Math
 
