@@ -308,7 +308,7 @@ they follow every change to those rows.
    |---|---|
    | **Show original** | the values themselves |
    | **Count all** | how many related rows there are |
-   | **Count values** | how many related rows have a value |
+   | **Count values** | how many values the related rows hold; each item of a list counts |
    | **Count unique values** | how many different values there are |
    | **Sum**, **Average**, **Min**, **Max** | for a Number property |
    | **Earliest date**, **Latest date** | for a Date or Date & time property, or Created and Updated |
@@ -325,7 +325,9 @@ rollup** deletes the column and takes it out of every view's columns, sort and
 grouping. If a saved filter uses the rollup, remove that filter first.
 
 If a rollup can't be computed, for example because its relation was removed,
-its header shows the reason. If rows hold their own value under the rollup's
+its header shows the reason. Renaming the relation column updates its rollups,
+but renaming a column in the related database doesn't: choose **Edit
+rollup…** and pick the property again. If rows hold their own value under the rollup's
 name, the rollup hides it, and the header says how many rows do.
 
 The definition lives in the database block, next to the relation:
