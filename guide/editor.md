@@ -52,6 +52,10 @@ Other editor behavior:
   [Links](/guide/links/#links-wikilinks--backlinks)).
 - **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the search
   and replace panel.
+- **Find selection**: <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd> jumps to the next
+  occurrence of the selected text, or of the word under the cursor when
+  nothing is selected, without opening the panel. Press
+  <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back.
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
 
