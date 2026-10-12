@@ -64,10 +64,14 @@ Vault Settings → **Vault** section:
   - When you close the window or quit, it saves, commits and pushes first,
     waiting a few seconds at most. A quit the system starts (logging out,
     shutting down) doesn't wait; those commits go out at the next launch.
-- **When both sides have new commits**: if this device and the remote
-  changed *different* notes, Mahfouz combines them in a "Merge remote
-  changes" commit. It never combines two versions of the same note: if a
-  note changed on both sides, sync stops and names it, with **Keep both**
+- **When both sides have new commits**: Mahfouz combines them in a "Merge
+  remote changes" commit. That includes a note changed on both sides, when
+  the two sides changed different attributes or different lines: for
+  example, two people editing different cells of one database row, or
+  adding values to the same multi-select cell. A quiet "Merged … from
+  GitHub" entry in the [notification center](/guide/notifications/) lists
+  those notes. If the same attribute or the same (or a neighbouring) line
+  changed on both sides, sync stops and names the note, with **Keep both**
   (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
 - **Authentication** is entirely your local git setup's problem: ssh-agent,
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
