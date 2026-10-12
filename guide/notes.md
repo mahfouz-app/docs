@@ -24,7 +24,9 @@ declining keeps the older one-folder-per-note shape, which still works.
 - **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the
-  Sidebar for "new note here."
+  Sidebar for "new note here." Hover a note or a folder in the Sidebar for
+  its own `+` (a new note inside it) and `⋮` (the same menu as a
+  right-click).
 - **Title**: there's no separate title field; a note's title is always
   the first non-empty line of its body (with a leading `#` stripped if
   present). Rename a note by editing its first line.
