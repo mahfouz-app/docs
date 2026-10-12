@@ -60,8 +60,9 @@ Anything not yet pushed is gone with it, so let it sync before you clear data.
 A GitHub vault syncs on its own: it pushes shortly after a commit, and pulls
 and then pushes anything still waiting regularly, when you return to the tab
 and when you come back online. If GitHub and the vault each have commits the
-other lacks, Mahfouz combines them when they changed different notes, as the
-desktop app does. If a note changed on both sides, sync stops and offers
+other lacks, Mahfouz combines them as the desktop app does, including a note
+changed on both sides when the changes don't overlap. If the same part of a
+note changed on both sides, sync stops and offers
 **Keep both** (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
 The browser can't wait while a tab closes, so commits not yet pushed go out
 the next time you open the vault. A single commit larger than 100 MB has to

@@ -62,7 +62,7 @@ Add one with **Open remote settings**, then **Retry**.
 
 ### This note changed here and on GitHub
 
-The same note (or notes) changed on this device and on the remote since they last synced. Mahfouz combines changes to different notes on its own, but never two versions of the same note, so sync stops and names them. The notice's buttons:
+The same note (or notes) changed on this device and on the remote since they last synced, and the changes overlap, so Mahfouz can't combine them on its own. It combines changes to different notes, and changes to different attributes or lines of one note, without asking. It stops when both sides changed the same attribute, the same or neighbouring lines, a database's views, or a note's publish settings, and for a settings file or a note deleted on one side. The notice's buttons:
 
 - **Keep both** keeps your version and saves the remote's version as a separate note, "&lt;title&gt; (remote copy)", next to yours. Then it syncs. Compare the two and delete the one you don't need. A changed file that isn't a note, such as a settings file, gets its copy as "&lt;name&gt; (remote copy)" next to it.
 - **Open note** opens the first of the notes.
