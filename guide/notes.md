@@ -54,9 +54,11 @@ declining keeps the older one-folder-per-note shape, which still works.
   folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
   **Reveal in Finder**, and **Delete folder**.
 - **Breadcrumb**: the bar above the editor shows where the open note
-  lives: the vault, then every folder it's nested in. Click a folder that
+  lives: a home icon for the vault (hover it for the vault's name), then
+  every folder it's nested in, each note with its icon. Click a folder that
   belongs to a note to open that note; click a plain folder to show it in
-  the Sidebar.
+  the Sidebar. Hover any of them, or click the arrow after it, to list
+  what's inside it and jump to one.
 - **Sidebar menu**: right-click empty space in the Sidebar for **New
   note** and **New folder** (in the active vault), **New vault…**, **Open
   vault…**, and the grouping, sort and filename-display options.
