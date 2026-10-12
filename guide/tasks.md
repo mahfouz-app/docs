@@ -90,6 +90,12 @@ grouped into **Overdue**, **Today**, **Upcoming** and **Completed**.
 - Click a task to open its note at that line. Tick its checkbox to mark it
   done without opening the note.
 
+A dot on the **Tasks** icon in the left rail tells you when something
+needs attention: red when a task is overdue, blue when one is due later
+today. It counts the same tasks the view shows, so it follows the
+**Mine**/**Everyone** choice, the vault menu and the picked tags. Hover
+over the icon to see the counts, such as **2 overdue · 1 due today**.
+
 ## Reminders
 
 When one of your tasks comes due, a notification tells you, with buttons
