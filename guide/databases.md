@@ -242,8 +242,9 @@ database can't be found, or it has no matching column.
 ### Links on one side only
 
 A two-way link can end up on one side only, for example after a file is
-edited in another app. Such a link has a dashed border and a ↶ mark, and the
-column header shows how many there are, such as **2 not linked back**.
+edited in another app. In the table, such a link has a dashed border and a ↶
+mark, and the column header shows how many there are, such as **2 not linked
+back**.
 
 To fix them, click **Repair…** in the column header:
 
@@ -305,4 +306,7 @@ The agent can also link and unlink rows. Its change lists every note it
 affects, including the rows of the other database that get their links
 updated. When the agent may apply safe edits on its own, a relation change
 that removes links or changes other notes still waits for you to approve it.
-Undoing the agent's change restores both sides.
+If the row changed while the change was waiting, approving it is refused and
+the agent proposes it again. Undoing the agent's change restores both sides.
+If a change was only partly written, its links may be left on one side:
+**Repair…** in the column header fixes them.
