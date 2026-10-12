@@ -77,8 +77,9 @@ The tab lists what couldn't be combined, grouped as **Notes**, **Settings** and 
 - **A note that can't be combined part by part**: **Use my whole note** or **Use GitHub's whole note** keeps that note as one side has it, after you confirm.
 - **A note or file deleted on one side**: **Keep it** or **Delete it…** when GitHub deleted it (deleting asks first, and names any child notes GitHub also deleted); **Restore GitHub's version** or **Keep it deleted** when you deleted it.
 - **A settings file**: **Keep mine** or **Use GitHub's**.
-- **Take all mine…** and **Take all GitHub's…** choose for every row still open that can be settled part by part, after you confirm a list of what's discarded. They never decide deletes or whole-note rows.
-- **Finish merge** checks every file again, then syncs with your choices and pushes. If something changed since you chose, it says which and writes nothing, so you can look again. **Postpone** closes the tab; your choices stay until you quit Mahfouz.
+- **Another file changed on both sides**: **Mine** or **GitHub's** keeps that file as one side has it; **Keep both** saves GitHub's version beside it when the file is text.
+- **Take all mine…** and **Take all GitHub's…** choose for every row still open that isn't a delete or a whole-note choice, after you confirm a list of what's discarded. They never decide deletes or whole-note rows.
+- **Finish merge** checks every file again, then syncs with your choices and pushes. If something changed since you chose, it says which and writes nothing, so you can look again. **Postpone** closes the tab; your choices stay until the merge is finished or you quit Mahfouz (or reload the page, on the web).
 
 While a note is waiting on a choice, the editor shows "This note has a merge waiting in the Merge tab." with **Open merge**. You can keep editing; if you do, you choose that note again.
 
