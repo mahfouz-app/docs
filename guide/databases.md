@@ -189,6 +189,82 @@ columns after them, and rows with no value go in the last column, "No
 
 Cards in a column follow the view's sort. There's no manual card order.
 
+## Relations
+
+A Relation column links each row to rows of another database: each book to
+its authors, for example. A relation is usually two-way. When you link a
+book to an author, the author's row gets the book in its own column, in the
+same commit.
+
+### Create a relation
+
+1. In the column header's menu, choose **Set type…**, then **Relation**.
+2. Under **Related database**, choose the other database. If there's no
+   other database yet, create one first.
+3. Choose **Two-way** and type the **Reverse name**: the column the other
+   database gets, such as `books`. Or choose **One-way** to link in this
+   direction only.
+
+The reverse name can't be a name Mahfouz keeps for itself, a column the
+other database already has, or an attribute its rows already hold.
+
+If the column already holds links, the other database's rows get their
+links back when you save. Once a relation's rows hold links, it can't be
+pointed at a different database.
+
+### Link rows
+
+- Click a Relation cell's edit button, or press <kbd>Enter</kbd> on it, to
+  open the picker. Type to search the other database's rows; the rows
+  already linked are listed first.
+- Click a row, or press <kbd>Enter</kbd> on it, to link or unlink it. Choose
+  **Done**, press <kbd>Tab</kbd> or click outside the picker to apply your
+  changes as one commit. <kbd>Escape</kbd> discards them.
+- **New in ⟨database⟩** creates a row in the other database, with what you
+  typed as its title, and selects it. It's linked when you apply.
+- **Open linked note** opens the highlighted row. A row's **⋯** menu offers
+  it too.
+
+A cell shows up to three links, then **+K** to show the rest. A Board card
+shows them as pills. The Attributes panel edits a row's relations the same
+way.
+
+A link to a note that no longer exists is struck through. Click **×** to
+remove it. If the note is restored from Trash, the link works again. A link
+to a note outside the other database is shown, but nothing is written back
+to it.
+
+When a column header shows **One-way relation**, the other database doesn't
+have the matching column, so links are written on this side only.
+
+### In your files
+
+A relation is stored in both places Mahfouz keeps a database's data:
+
+- Each row holds its links as a list of wikilinks, which other apps such as
+  Obsidian can read:
+
+  ```yaml
+  authors: ["[[authors/ursula_k_le_guin|Ursula K. Le Guin]]"]
+  ```
+
+- The database block names the other database and the reverse column:
+
+  ```yaml
+  properties:
+    authors:
+      relation: { target: "[[Authors]]", reverse: books }
+  ```
+
+If you rename a row or a database, its links still find it by title. The
+next change to a relation writes the links again with the new names.
+
+To keep both sides in step, you can change a relation only from its table,
+its Board or the Attributes panel. The agent and plugins can read relations
+but can't change them yet, and a view can't be grouped by a relation.
+Use the same Mahfouz version on every device that edits a vault with
+relations: a version from before relations edits only one side of a link.
+
 ## Publishing
 
 Publishing a database note leaves the block out of the published page.
