@@ -89,7 +89,7 @@ A file or the whole push is over the remote's size limit. On desktop, large file
 
 A pull would overwrite notes you've changed but not yet committed. The notice names them. Its buttons:
 
-- **Commit now** commits those changes.
+- **Commit…** opens [Commit notes](/guide/history/#commit-notes) with those notes checked.
 - **Discard** throws those changes away.
 - **Open note** opens the first of them.
 
