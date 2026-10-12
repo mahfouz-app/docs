@@ -14,8 +14,8 @@ until you or a collaborator accepts or rejects them.
 The toolbar's **Editing ▾** / **Suggesting ▾** menu sets the mode for the
 open note:
 
-- **Editing** — your changes apply directly, as usual.
-- **Suggesting** — your changes become suggestions:
+- **Editing**: your changes apply directly, as usual.
+- **Suggesting**: your changes become suggestions:
   - new text shows **underlined in green**
   - deleted text stays, **struck through in red**
   - replaced text shows the old text struck through and the new text underlined
@@ -56,8 +56,8 @@ the suggestions.
 The agent's message in the chat says how many changes it suggested and
 offers:
 
-- **Show in note** — opens the note at the agent's first suggestion.
-- **Reject all agent suggestions** — removes every suggestion the agent
+- **Show in note**: opens the note at the agent's first suggestion.
+- **Reject all agent suggestions**: removes every suggestion the agent
   has made in that note, including earlier ones, after asking. Your own
   suggestions and other people's stay.
 
@@ -84,12 +84,12 @@ comment; the × button next to the box drops it.
 When the cursor is inside commented text, its thread opens beside it. The
 buttons are icons; point at one to see its name:
 
-- **Reply** (paper plane) — type in the box and press Enter or click it.
-- **Resolve** (check mark) — marks the thread done. The highlight goes
+- **Reply** (paper plane): type in the box and press Enter or click it.
+- **Resolve** (check mark): marks the thread done. The highlight goes
   away, but the thread stays in the note, and **Reopen** (the curved arrow
   that takes its place) brings it back. Replying to a resolved thread
   reopens it too.
-- **Delete thread** (trash can) — removes the comments and keeps the text.
+- **Delete thread** (trash can): removes the comments and keeps the text.
   One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
 
 Tab moves between the box and the buttons; Esc goes back to the note.

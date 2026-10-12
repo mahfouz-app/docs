@@ -36,7 +36,7 @@ permalink: /guide/links/
 
 ## Tags
 
-Any `#` immediately followed by a letter (and not inside code) is a tag —
+Any `#` immediately followed by a letter (and not inside code) is a tag:
 `#project`, `#ideas`, etc. Mahfouz picks tags up automatically:
 
 - The Sidebar's **Tags** view (<kbd>Cmd/Ctrl</kbd><kbd>3</kbd>) lists every tag with its note
@@ -46,11 +46,10 @@ Any `#` immediately followed by a letter (and not inside code) is a tag —
 
 ## Search
 
-<kbd>Cmd/Ctrl</kbd><kbd>K</kbd> opens the search overlay — searches across **all open
-vaults** as you type, matching title and body text with
-multi-term AND matching, ranked roughly: exact title match, then
-title-starts-with, then title contains all terms, then title contains the
-whole phrase, then body-only matches. Matched terms are highlighted in the
-title and a generated snippet. With an empty query it shows your 8 most
-recently edited notes instead. Navigate results with <kbd>↑</kbd>/<kbd>↓</kbd> (or
-<kbd>Ctrl</kbd><kbd>P</kbd>/<kbd>Ctrl</kbd><kbd>N</kbd>), <kbd>Home</kbd>/<kbd>End</kbd>, and open with <kbd>Enter</kbd>.
+**Search** in the left rail (<kbd>Mod</kbd><kbd>5</kbd>, or <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> on the web) opens the
+search view in the left sidebar. It searches **all open vaults** as you
+type, matching title and body text, and lists the results under each
+vault. The buttons beside the search box change how results are sorted.
+
+To jump to a note by its title, run a command or open a setting, use the
+[command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.

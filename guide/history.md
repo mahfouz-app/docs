@@ -5,14 +5,14 @@ description: "Every change is a commit: browse history, restore notes, and choos
 permalink: /guide/history/
 ---
 
-Mahfouz keeps no separate history of its own — **history is git history.**
+Mahfouz keeps no separate history of its own: **history is git history.**
 
-- **History** (the bottom of the sidebar's Details section — toolbar ⋯ →
+- **History** (the bottom of the sidebar's Details section; toolbar ⋯ →
   Revisions, <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>R</kbd>, or click the save status) lists
   every commit that touched the current note (subject, relative time,
   short SHA). Click one to open that revision read-only in a new tab,
   with a banner offering **Restore** (writes a *new* commit restoring
-  that content — history is always append-only, never rewritten).
+  that content; history is always append-only, never rewritten).
 - **Trash** (Sidebar, <kbd>Cmd/Ctrl</kbd><kbd>4</kbd>) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
@@ -35,16 +35,16 @@ you say so.
   **Turn off auto-commit** / **Turn on auto-commit**. The action **Toggle
   auto-commit for note** can be bound to a key in Settings → Shortcuts; it
   has no default key.
-- **How to tell** — a disk-only note shows a drive glyph in the sidebar
+- **How to tell**: a disk-only note shows a drive glyph in the sidebar
   (filled while it has uncommitted changes), and the toolbar's save chip
   reads **Saved · not in history**.
-- **Commit now / Discard changes** — when a disk-only note has uncommitted
+- **Commit now / Discard changes**: when a disk-only note has uncommitted
   changes, the Attributes panel shows both buttons. Commit now records the
   note as a normal commit. Discard changes asks first, then returns the note
   to its last committed version (or deletes it if it was never committed).
   This can't be undone.
 - **New child notes** created under a disk-only note start disk-only too.
-- **Blocked pulls** — if someone else changes a disk-only note you've also
+- **Blocked pulls**: if someone else changes a disk-only note you've also
   edited, the pull would overwrite your uncommitted work, so it's blocked. A
   notification names the note(s) and offers **Commit now**, **Discard** and
   **Open note**. Pulling for the whole vault stays blocked until you resolve it.
