@@ -18,8 +18,8 @@ checkbox, the title, optionally who it's for, then ` // ` and the date.
 
 - **The date** is `YYYY-MM-DD`. The time, `HH:MM` in 24-hour form, is
   optional; a task without one is due all day.
-- **The assignee** is a GitHub login after `@`, just before the ` // `.
-  It's optional.
+- **The assignee** is a [person's](/guide/people/) handle after `@`,
+  just before the ` // `, such as a GitHub login. It's optional.
 - **The ` // `** needs a space on each side. That is what makes the line
   a task: a checklist item that only mentions a date, such as
   `- [ ] Read 2026-03-02`, stays an ordinary checklist item.
@@ -68,9 +68,11 @@ directly, even while the note is in Suggesting mode.
 
 ### Assign someone
 
-Type `@` on a checklist item to choose who the task is for. The list shows
-the collaborators on the vault's GitHub repository, with their access level.
-Without a GitHub remote, or when the list can't be loaded, it offers only
+Type `@` on a checklist item to choose who the task is for, from the same
+[people menu](/guide/people/#mentions) as a mention. It shows
+the vault's [people](/guide/people/): its person notes and the collaborators
+on its GitHub repository, with their access level. Without a GitHub remote,
+or when the collaborators can't be loaded, it offers only your people and
 your own login.
 
 To change a task's assignee, click its assignee chip. The picker checks the
@@ -100,8 +102,9 @@ remembers your choice on this computer.
 
 In both layouts:
 
-- **Mine** shows the tasks assigned to your GitHub login; you need to be
-  signed in with GitHub. **Everyone** shows every task, including the ones
+- **Mine** shows the tasks assigned to your GitHub login, or to the handle
+  of a person whose `github` is your login; you need to be signed in with
+  GitHub. **Everyone** shows every task, including the ones
   with no assignee.
 - With more than one vault, the list covers all of them. Pick a single
   vault from the menu at the top, and each task shows which vault it's in.
@@ -120,7 +123,8 @@ When one of your tasks comes due, a notification tells you, with buttons
 to **Open note** at the task or **Mark done** without opening it.
 
 - Reminders go to the task's assignee only: the tasks assigned to your
-  GitHub login, in every vault. You need to be signed in with GitHub, and
+  GitHub login, or to a person whose `github` is your login, in every
+  vault. You need to be signed in with GitHub, and
   tasks with no assignee never remind anyone.
 - A task reminds you at its time; an all-day task at 09:00. An in-progress
   task still reminds you; only a done one doesn't.
