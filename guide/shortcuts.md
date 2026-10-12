@@ -19,6 +19,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>?</kbd> | Open keyboard shortcuts help |
 | <kbd>Mod</kbd><kbd>W</kbd> | Close active tab |
 | <kbd>Mod</kbd><kbd>S</kbd> | Manual save + commit |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>G</kbd> | [Commit notes…](/guide/history/#commit-notes): pick which uncommitted notes to commit |
 | <kbd>Mod</kbd><kbd>&#92;</kbd> | Toggle left sidebar |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd> | Toggle right sidebar |
 | <kbd>Mod</kbd><kbd>1</kbd> | Go to all notes |
