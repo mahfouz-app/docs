@@ -71,8 +71,8 @@ Vault Settings → **Vault** section:
   adding values to the same multi-select cell. A quiet "Merged … from
   GitHub" entry in the [notification center](/guide/notifications/) lists
   those notes. If the same attribute or the same (or a neighbouring) line
-  changed on both sides, sync stops and names the note, with **Keep both**
-  (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
+  changed on both sides, sync stops, and you choose what to keep in the
+  Merge tab (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
 - **Authentication** is entirely your local git setup's problem: ssh-agent,
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
