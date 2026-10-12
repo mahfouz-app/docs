@@ -1,7 +1,7 @@
 (function () {
   var KEY = "mahfouz-theme";
   var root = document.documentElement;
-  var colors = { light: "#fafaf7", dark: "#121212" };
+  var colors = { light: "#ffffff", dark: "#000000" };
 
   function stored() {
     try {
