@@ -239,6 +239,29 @@ A column header shows **One-way relation** with the reason when links are
 written on this side only: the relation was set up as one-way, the other
 database can't be found, or it has no matching column.
 
+### Links on one side only
+
+A two-way link can end up on one side only, for example after a file is
+edited in another app. Such a link has a dashed border and a ↶ mark, and the
+column header shows how many there are, such as **2 not linked back**.
+
+To fix them, click **Repair…** in the column header:
+
+1. For each pair, choose **Link both**, the default, or **Unlink both**. The
+   dialog says which side holds the link and which side changed most
+   recently.
+2. To also remove links to notes that no longer exist, select **Remove links
+   to deleted notes**. It's off by default, because restoring a deleted note
+   from Trash makes its links work again.
+3. Click **Apply**. All the changes are made in one commit. **Cancel** or
+   <kbd>Escape</kbd> changes nothing.
+
+### Filter and sort by a relation
+
+A Relation column's filter offers **contains**, **doesn't contain**, **is
+empty** and **is not empty**. For **contains**, choose a row of the other
+database. Sorting a Relation column sorts by its linked titles.
+
 ### In your files
 
 A relation is stored in both places Mahfouz keeps a database's data:
@@ -261,10 +284,9 @@ A relation is stored in both places Mahfouz keeps a database's data:
 When you retitle a row or a database, Mahfouz updates the links to it and the
 other database's block in one commit, so the relation keeps working.
 
-To keep both sides in step, you can change a relation only from its table or
-the Attributes panel. The agent and plugins can read relations
-but can't change them yet, and a view can't be grouped by a relation.
-Use the same Mahfouz version on every device that edits a vault with
+Every change to a relation, from the table, the Attributes panel, the agent
+or a plugin, updates both sides. A view can't be grouped by a relation. Use
+the same Mahfouz version on every device that edits a vault with
 relations: a version from before relations edits only one side of a link.
 
 ## Publishing
@@ -278,3 +300,9 @@ returns the database's views, the columns of the view it asked for, and up to
 200 rows, which the agent treats as data. To
 add a row, the agent creates a child note and then sets its attributes. You
 approve both steps.
+
+The agent can also link and unlink rows. Its change lists every note it
+affects, including the rows of the other database that get their links
+updated. When the agent may apply safe edits on its own, a relation change
+that removes links or changes other notes still waits for you to approve it.
+Undoing the agent's change restores both sides.
