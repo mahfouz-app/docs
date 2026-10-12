@@ -81,6 +81,12 @@ grouped into **Overdue**, **Today**, **Upcoming** and **Completed**.
   with no assignee.
 - With more than one vault, the list covers all of them. Pick a single
   vault from the menu at the top, and each task shows which vault it's in.
+- To narrow the list by topic, put `#tags` on the task line itself, such
+  as `- [ ] Fix login #bug @sam // 2026-10-14`. Each tag on the listed
+  tasks shows as a chip with its count above the list. Click chips to
+  show only the tasks carrying any of them; **Clear** shows every task
+  again. Only tags on the task's own line count, not the note's other
+  tags.
 - Click a task to open its note at that line. Tick its checkbox to mark it
   done without opening the note.
 
