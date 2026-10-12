@@ -218,24 +218,26 @@ pointed at a different database.
   open the picker. Type to search the other database's rows; the rows
   already linked are listed first.
 - Click a row, or press <kbd>Enter</kbd> on it, to link or unlink it. Choose
-  **Done**, press <kbd>Tab</kbd> or click outside the picker to apply your
-  changes as one commit. <kbd>Escape</kbd> discards them.
+  **Done**, or click or move focus outside the picker, to apply your changes
+  as one commit. <kbd>Tab</kbd> moves to the picker's buttons.
+  <kbd>Escape</kbd> discards your changes.
 - **New in ⟨database⟩** creates a row in the other database, with what you
   typed as its title, and selects it. It's linked when you apply.
 - **Open linked note** opens the highlighted row. A row's **⋯** menu offers
   it too.
 
-A cell shows up to three links, then **+K** to show the rest. A Board card
-shows them as pills. The Attributes panel edits a row's relations the same
-way.
+A cell shows up to three links, then a **+K** button that shows the rest. A
+Board card shows them as pills. The Attributes panel edits a row's relations
+with the same picker, and each link there has an **×** to remove it.
 
-A link to a note that no longer exists is struck through. Click **×** to
-remove it. If the note is restored from Trash, the link works again. A link
-to a note outside the other database is shown, but nothing is written back
-to it.
+A link to a note that no longer exists is struck through. To remove it,
+unselect it in the picker, or click its **×** in the Attributes panel. If the
+note is restored from Trash, the link works again. A link to a note outside
+the other database is shown, but nothing is written back to it.
 
-When a column header shows **One-way relation**, the other database doesn't
-have the matching column, so links are written on this side only.
+A column header shows **One-way relation** with the reason when links are
+written on this side only: the relation was set up as one-way, the other
+database can't be found, or it has no matching column.
 
 ### In your files
 
@@ -256,11 +258,11 @@ A relation is stored in both places Mahfouz keeps a database's data:
       relation: { target: "[[Authors]]", reverse: books }
   ```
 
-If you rename a row or a database, its links still find it by title. The
-next change to a relation writes the links again with the new names.
+When you retitle a row or a database, Mahfouz updates the links to it and the
+other database's block in one commit, so the relation keeps working.
 
-To keep both sides in step, you can change a relation only from its table,
-its Board or the Attributes panel. The agent and plugins can read relations
+To keep both sides in step, you can change a relation only from its table or
+the Attributes panel. The agent and plugins can read relations
 but can't change them yet, and a view can't be grouped by a relation.
 Use the same Mahfouz version on every device that edits a vault with
 relations: a version from before relations edits only one side of a link.
