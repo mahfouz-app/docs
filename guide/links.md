@@ -36,7 +36,7 @@ permalink: /guide/links/
 
 ## Tags
 
-Any `#` immediately followed by a letter (and not inside code) is a tag —
+Any `#` immediately followed by a letter (and not inside code) is a tag:
 `#project`, `#ideas`, etc. Mahfouz picks tags up automatically:
 
 - The Sidebar's **Tags** view (<kbd>Cmd/Ctrl</kbd><kbd>3</kbd>) lists every tag with its note
@@ -46,8 +46,8 @@ Any `#` immediately followed by a letter (and not inside code) is a tag —
 
 ## Search
 
-<kbd>Cmd/Ctrl</kbd><kbd>K</kbd> opens the search overlay — searches across **all open
-vaults** as you type, matching title and body text with
+<kbd>Cmd/Ctrl</kbd><kbd>K</kbd> opens the search overlay, which searches across
+**all open vaults** as you type, matching title and body text with
 multi-term AND matching, ranked roughly: exact title match, then
 title-starts-with, then title contains all terms, then title contains the
 whole phrase, then body-only matches. Matched terms are highlighted in the

@@ -65,11 +65,11 @@ open.
 Each client has its own mode in each vault it can use, chosen next to the
 vault in Settings → AI → External agents:
 
-- **Ask before every edit** — every change waits for you.
-- **Ask before destructive edits** — the default. Changes apply right
+- **Ask before every edit**: every change waits for you.
+- **Ask before destructive edits**: the default. Changes apply right
   away, except deletes, moves, attribute removals, turning a note into a
   database, and rewrites that drop most of a note.
-- **Don't ask** — every change applies right away, deletes included.
+- **Don't ask**: every change applies right away, deletes included.
 
 An agent can ask to change its own mode. It can make it stricter on its
 own, but a looser mode needs your yes: Mahfouz asks **Let "…" edit "…"

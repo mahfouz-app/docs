@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone — and any agent — can read and edit directly, versioned and shared with Git."
+      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone, and any agent, can read and edit directly, versioned and shared with Git."
     />
     <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>Mahfouz — Notes that stay yours</title>
+    <title>Mahfouz: Notes that stay yours</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -39,7 +39,7 @@
           <h1 id="hero-title">Notes that stay yours.</h1>
           <p class="hero-description">
             Mahfouz keeps your notes as plain Markdown files in a folder on your
-            computer — nothing proprietary, nothing to export. Open and edit them
+            computer: nothing proprietary, nothing to export. Open and edit them
             with any editor, script, or AI agent, and let Git look after their
             history.
           </p>
@@ -51,7 +51,7 @@
             </a>
           </div>
           <p class="platform-note">
-            Available for macOS, with Windows and Linux coming soon — and your
+            Available for macOS, with Windows and Linux coming soon, and your
             files work the same without it.
           </p>
         </div>
@@ -84,7 +84,7 @@ See also: [[Ideas]]
             </div>
             <p class="feature-intro-copy">
               Write in Markdown, follow ideas across your vault, and keep every
-              note in a format that will still make sense years from now — one
+              note in a format that will still make sense years from now, one
               that any editor, tool, or agent can open without asking Mahfouz
               first.
             </p>
@@ -103,7 +103,7 @@ See also: [[Ideas]]
                   <li>Nested notes and folders</li>
                   <li>Multiple vaults and tabs</li>
                   <li>Bookmarks and tags</li>
-                  <li>Every file readable and editable outside Mahfouz — no export step</li>
+                  <li>Every file readable and editable outside Mahfouz, no export step</li>
                 </ul>
               </div>
               <figure class="feature-shot">
@@ -270,7 +270,7 @@ See also: [[Ideas]]
             <p>
               Mahfouz uses Git to record edits, show past versions, and restore
               a note without erasing what came before. Because Git is
-              distributed, your vault isn’t tied to one server — push it to
+              distributed, your vault isn’t tied to one server. Push it to
               GitHub, self-host it, or hand a copy to a collaborator, and
               everyone keeps working from their own full copy of the history.
             </p>
@@ -290,10 +290,128 @@ See also: [[Ideas]]
             </div>
             <div>
               <dt>Collaboration</dt>
-              <dd>Share a vault the way you’d share any Git repo — no server Mahfouz controls.</dd>
+              <dd>Share a vault the way you’d share any Git repo, with no server Mahfouz controls.</dd>
             </div>
           </dl>
         </div>
+      </section>
+
+      <section class="plugins-section" id="plugins" aria-labelledby="plugins-title">
+        <div class="shell">
+          <div class="section-intro">
+            <p class="eyebrow">Make it yours</p>
+            <h2 id="plugins-title">Plugins, when you want more.</h2>
+            <p>
+              Mahfouz stays small until you need it not to. Turn on the
+              official plugins one vault at a time in Settings → Plugins.
+              Nothing installs or updates until you say so.
+            </p>
+          </div>
+
+          <div class="plugin-grid">
+          <article class="plugin-item">
+            <h3>Mermaid diagrams</h3>
+            <p>Write flowcharts, sequence diagrams, and timelines in a <code>mermaid</code> block and edit them beside a live preview.</p>
+            <span class="plugin-platform">Desktop and web</span>
+          </article>
+          <article class="plugin-item">
+            <h3>Draw.io diagrams</h3>
+            <p>Edit diagrams on a draw.io canvas in their own tab. They save back into the note as you go.</p>
+            <span class="plugin-platform">Desktop and web</span>
+          </article>
+          <article class="plugin-item">
+            <h3>Slidev presentations</h3>
+            <p>Present any note as a slide deck, in a tab or full screen, and export it to PowerPoint.</p>
+            <span class="plugin-platform">Desktop</span>
+          </article>
+          <article class="plugin-item">
+            <h3>PDF export</h3>
+            <p>Add PDF to the Export dialog, rendered from the same slides.</p>
+            <span class="plugin-platform">Desktop</span>
+          </article>
+          <article class="plugin-item">
+            <h3>Git LFS</h3>
+            <p>Keep large images and video in Git LFS, so your vault stays light.</p>
+            <span class="plugin-platform">Desktop</span>
+          </article>
+          <article class="plugin-item">
+            <h3>Notion import</h3>
+            <p>Bring pages, databases, tasks, comments, and files over from a Notion workspace.</p>
+            <span class="plugin-platform">Desktop</span>
+          </article>
+          </div>
+
+          <div class="plugin-build">
+            <div>
+              <h3>Write your own.</h3>
+              <p>
+                A plugin is a folder with a <code>plugin.json</code> manifest
+                and a JavaScript module. It can add embeds, editor tabs,
+                toolbar buttons, commands, export formats, and importers.
+                Share it from any Git repository: anyone can add that
+                repository as a registry and install your plugins from it.
+              </p>
+              <p class="plugin-build-links">
+                <a href="https://github.com/mahfouz-app/plugins">Read the plugin docs</a>
+                <a href="/guide/plugins/">Plugins in the user guide</a>
+              </p>
+            </div>
+            <figure class="note-example">
+              <figcaption>
+                <span>A plugin in a few lines</span>
+                <span class="file-type">index.js</span>
+              </figcaption>
+              <pre><code>export function activate(host) {
+  host.registerEmbed("shout", {
+    label: "Shout block",
+    render(el, text) {
+      el.textContent = text.toUpperCase();
+    },
+  });
+}</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare-section shell" id="compare" aria-labelledby="compare-title">
+        <div class="section-intro">
+          <p class="eyebrow">How Mahfouz stacks up</p>
+          <h2 id="compare-title">Mahfouz vs the rest.</h2>
+          <p>
+            Every one of these tools can hold your notes. The difference is
+            what happens to them afterward: whether they stay plain files you
+            own, or become records in someone else's database on someone
+            else's server.
+          </p>
+        </div>
+
+        <div class="compare-cards">
+          <article class="compare-card">
+            <h3>Mahfouz vs Notion</h3>
+            <p>Plain Markdown files you keep vs. proprietary blocks kept in Notion's cloud database.</p>
+            <a class="button button-secondary" href="/compare/mahfouz-vs-notion/">Compare with Notion</a>
+          </article>
+          <article class="compare-card">
+            <h3>Mahfouz vs Obsidian</h3>
+            <p>Both keep plain Markdown files, but only Mahfouz builds in Git history, sync, and a web app.</p>
+            <a class="button button-secondary" href="/compare/mahfouz-vs-obsidian/">Compare with Obsidian</a>
+          </article>
+          <article class="compare-card">
+            <h3>Mahfouz vs Confluence</h3>
+            <p>No hosting to run, ever, vs. a cloud subscription, with Confluence's self-hosted option closing to new customers.</p>
+            <a class="button button-secondary" href="/compare/mahfouz-vs-confluence/">Compare with Confluence</a>
+          </article>
+          <article class="compare-card">
+            <h3>Mahfouz vs AppFlowy</h3>
+            <p>Open source, but still a server to run vs. plain files that need no server at all.</p>
+            <a class="button button-secondary" href="/compare/mahfouz-vs-appflowy/">Compare with AppFlowy</a>
+          </article>
+        </div>
+
+        <p class="install-note">
+          Or see them all <a href="/compare/">side by side</a>.
+        </p>
       </section>
 
       <section class="downloads-section shell" id="downloads" aria-labelledby="downloads-title">
@@ -351,7 +469,7 @@ See also: [[Ideas]]
         <a class="emblem-link" href="/" aria-label="Mahfouz home">
           <img src="/images/emblem.png" alt="" width="1254" height="1254" />
         </a>
-        <p>Open Markdown notes, kept in your hands — no lock-in, ever.</p>
+        <p>Open Markdown notes, kept in your hands. No lock-in, ever.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/guide/">User guide</a>

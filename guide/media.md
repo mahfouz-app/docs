@@ -24,7 +24,7 @@ permalink: /guide/media/
   `data:` URIs render directly.
 - **Remote images**: `http(s)://` image URLs only render if you've turned
   on **"Render external images in this note"** in the
-  [Attributes panel](/guide/attributes/#attributes-panel) — off by default, per note.
+  [Attributes panel](/guide/attributes/#attributes-panel), off by default, per note.
 - **Cleanup**: if you delete an embed line (or the note itself), Mahfouz
   removes the underlying file from disk automatically, but only if no
   other note in the vault still references it. Only files under `files/`

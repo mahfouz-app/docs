@@ -21,8 +21,8 @@ choose **Only select repositories** and pick the ones you keep vaults in.
 The account popover then offers **Manage repository access** to change the
 selection later.
 
-- **Sign out** — ends this browser's session only.
-- **Sign out everywhere (including desktop)** — ends every browser session
+- **Sign out**: ends this browser's session only.
+- **Sign out everywhere (including desktop)**: ends every browser session
   and revokes Mahfouz's GitHub authorization, which signs the desktop app out
   too. If Mahfouz can't confirm that every session ended and that GitHub
   revoked it, it says **Signed out of this browser only**: the desktop app
@@ -67,17 +67,17 @@ The browser can't wait while a tab closes, so commits not yet pushed go out
 the next time you open the vault. A single commit larger than 100 MB has to
 be pushed from the desktop app.
 
-- **Unfinished updates** — if the tab closes in the middle of a pull or
+- **Unfinished updates**: if the tab closes in the middle of a pull or
   reset, Mahfouz finishes it on the next load. If you've edited a file it
   would overwrite, it stops and names the files, with two ways out:
   **Discard my changes and finish**, or **Reset to GitHub**, which makes the
   vault match GitHub. Both ask first and lose the changes they name. Commits
   wait until it's settled.
-- **Lost access** — if the Mahfouz app no longer reaches the repository (you
+- **Lost access**: if the Mahfouz app no longer reaches the repository (you
   removed it from the selection, or the repository is gone or renamed),
   Mahfouz says **Mahfouz lost access to &lt;repository&gt;**. **Manage
   repository access** opens GitHub's page for the app.
-- **Signed out** — when your sign-in ends, every vault's sync pauses with one
+- **Signed out**: when your sign-in ends, every vault's sync pauses with one
   notice, **Sync paused: signed out of GitHub** (or **expired**). **Sign in
   again** resumes them; your changes stay in the vault meanwhile.
 

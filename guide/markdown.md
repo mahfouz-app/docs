@@ -32,7 +32,7 @@ renders specially:
 | `#tag` | Tag (filterable in the Sidebar) |
 | `![alt](path)` alone on a line | Embedded image/video/audio, auto-detected from the file extension |
 | GitHub-style pipe table (`\| a \| b \|` rows with a `---` separator row) | Interactive table in Preview mode |
-| YAML frontmatter (`---` fenced block at the very top) | Note metadata — `id`, `bookmarked`, `external_images`, and any custom attributes you add |
+| YAML frontmatter (`---` fenced block at the very top) | Note metadata: `id`, `bookmarked`, `external_images`, and any custom attributes you add |
 
 ## Callouts
 
@@ -59,7 +59,7 @@ from the line after it.
 ## Tables
 
 Insert one via the toolbar's **Table** button (a hover grid, minimum 8×8,
-that grows as you approach its edge — pick rows × columns, it shows the
+that grows as you approach its edge; pick rows × columns, it shows the
 size as you hover). In Preview mode a table is always a live, editable
 grid instead of raw pipe syntax:
 
@@ -67,5 +67,5 @@ grid instead of raw pipe syntax:
   cells (Tab at the last cell adds a new row); **Enter** commits the cell.
 - Hover the bottom or right edge for a **+** button to add a row or column.
 - Each column header shows a drag handle (reorder columns) and a trash
-  icon (delete column — hidden when only one remains); rows with more than
+  icon (delete column, hidden when only one remains); rows with more than
   one row get the same drag handle to reorder.

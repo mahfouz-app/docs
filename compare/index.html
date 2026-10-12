@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="See how Mahfouz compares to Notion, Confluence, and AppFlowy on file ownership, hosting, history, and price."
+      content="Mahfouz compared with Notion, Obsidian, Confluence, and AppFlowy on file ownership, hosting, history, offline use, collaboration, and price."
     />
     <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>Compare Mahfouz — Notion, Confluence, AppFlowy — Mahfouz</title>
+    <title>Compare Mahfouz with Notion, Obsidian, Confluence, and AppFlowy | Mahfouz</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -38,28 +38,95 @@
         <h1 id="compare-hub-title">Mahfouz vs the rest.</h1>
         <p class="hero-description">
           Every one of these tools can hold your notes. The difference is what
-          happens to them afterward — whether they stay plain files you own,
-          or become records living inside someone else's database and
-          someone else's server. Pick a comparison below.
+          happens to them afterward: whether they stay plain files you own,
+          or become records in someone else's database on someone else's
+          server. Here's how they compare side by side.
         </p>
       </section>
 
-      <section class="shell compare-cards" aria-label="Comparisons">
-        <article class="compare-card">
-          <h2>Mahfouz vs Notion</h2>
-          <p>Plain Markdown files you keep vs. proprietary blocks kept in Notion's cloud database.</p>
-          <a class="button button-secondary" href="/compare/mahfouz-vs-notion/">Compare with Notion</a>
-        </article>
-        <article class="compare-card">
-          <h2>Mahfouz vs Confluence</h2>
-          <p>No hosting to run, ever, vs. a cloud subscription — with Confluence's self-hosted option closing to new customers.</p>
-          <a class="button button-secondary" href="/compare/mahfouz-vs-confluence/">Compare with Confluence</a>
-        </article>
-        <article class="compare-card">
-          <h2>Mahfouz vs AppFlowy</h2>
-          <p>Open source vs. open source — but only one of them needs no server, self-hosted or otherwise.</p>
-          <a class="button button-secondary" href="/compare/mahfouz-vs-appflowy/">Compare with AppFlowy</a>
-        </article>
+      <section class="shell compare-table-section" aria-labelledby="compare-table-title">
+        <h2 id="compare-table-title" class="sr-only">Feature comparison</h2>
+        <div class="compare-table-wrap">
+          <table class="compare-table compare-table-all">
+            <thead>
+              <tr>
+                <th scope="col">Compare</th>
+                <th scope="col" class="compare-table-mahfouz">Mahfouz</th>
+                <th scope="col"><a href="/compare/mahfouz-vs-notion/">Notion</a></th>
+                <th scope="col"><a href="/compare/mahfouz-vs-obsidian/">Obsidian</a></th>
+                <th scope="col"><a href="/compare/mahfouz-vs-confluence/">Confluence</a></th>
+                <th scope="col"><a href="/compare/mahfouz-vs-appflowy/">AppFlowy</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">File format &amp; ownership</th>
+                <td class="compare-table-mahfouz">Plain <code>.md</code> files in a folder you choose.</td>
+                <td>Proprietary blocks in Notion's database.</td>
+                <td>Plain <code>.md</code> files in a local vault.</td>
+                <td>Proprietary storage in Atlassian's cloud.</td>
+                <td>An app-managed local database.</td>
+              </tr>
+              <tr>
+                <th scope="row">Where it runs</th>
+                <td class="compare-table-mahfouz">Your computer or your browser. No server to run, ever.</td>
+                <td>Notion's cloud.</td>
+                <td>Your computer and phone.</td>
+                <td>Confluence Cloud. Data Center closed to new customers in March 2026.</td>
+                <td>AppFlowy Cloud, or a server you host yourself.</td>
+              </tr>
+              <tr>
+                <th scope="row">Version history</th>
+                <td class="compare-table-mahfouz">Full Git history, kept as long as you keep it.</td>
+                <td>7 to 90 days by plan; unlimited only on Enterprise.</td>
+                <td>Short local snapshots; longer with paid Sync or a community Git plugin.</td>
+                <td>Page versions, kept in Atlassian's cloud.</td>
+                <td>Tied to AppFlowy's sync server.</td>
+              </tr>
+              <tr>
+                <th scope="row">Offline use</th>
+                <td class="compare-table-mahfouz">Always. Local-first by default.</td>
+                <td>Only pages you choose to download.</td>
+                <td>Always. Local-first by default.</td>
+                <td>None. Needs a connection.</td>
+                <td>Local editing; sync needs the server.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sync &amp; collaboration</th>
+                <td class="compare-table-mahfouz">Built in, through any Git remote you choose.</td>
+                <td>Real-time, in Notion's workspace.</td>
+                <td>Paid Obsidian Sync, or a setup you assemble.</td>
+                <td>Real-time, in Atlassian's workspace.</td>
+                <td>Real-time, through AppFlowy Cloud or your server.</td>
+              </tr>
+              <tr>
+                <th scope="row">Price</th>
+                <td class="compare-table-mahfouz">Free. No seats.</td>
+                <td>From about &euro;9.50/member/month.</td>
+                <td>App free; Sync from $4/user/month.</td>
+                <td>From $5.42/user/month.</td>
+                <td>Free tier; Pro about $10&ndash;12.50/user/month.</td>
+              </tr>
+              <tr>
+                <th scope="row">Lock-in</th>
+                <td class="compare-table-mahfouz">Nothing to export. Your notes are files.</td>
+                <td>Workspace export is a one-time snapshot, not on Free.</td>
+                <td>Low. Your notes are files.</td>
+                <td>Space exports only.</td>
+                <td>Export from an app-managed database.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-table-note">
+          Pricing and plan details as published on each vendor's site; check their pricing pages for current figures.
+        </p>
+        <div class="compare-links">
+          <a class="button button-secondary" href="/compare/mahfouz-vs-notion/">Mahfouz vs Notion</a>
+          <a class="button button-secondary" href="/compare/mahfouz-vs-obsidian/">Mahfouz vs Obsidian</a>
+          <a class="button button-secondary" href="/compare/mahfouz-vs-confluence/">Mahfouz vs Confluence</a>
+          <a class="button button-secondary" href="/compare/mahfouz-vs-appflowy/">Mahfouz vs AppFlowy</a>
+        </div>
       </section>
     </main>
 
@@ -68,7 +135,7 @@
         <a class="emblem-link" href="/" aria-label="Mahfouz home">
           <img src="/images/emblem.png" alt="" width="1254" height="1254" />
         </a>
-        <p>Open Markdown notes, kept in your hands — no lock-in, ever.</p>
+        <p>Open Markdown notes, kept in your hands. No lock-in, ever.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/guide/">User guide</a>

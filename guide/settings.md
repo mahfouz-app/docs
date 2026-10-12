@@ -5,7 +5,7 @@ description: "Preferences and per-vault settings."
 permalink: /guide/settings/
 ---
 
-**Settings…** (<kbd>Cmd/Ctrl</kbd><kbd>,</kbd>, or menu **Mahfouz → Settings…**) — applies
+**Settings…** (<kbd>Cmd/Ctrl</kbd><kbd>,</kbd>, or menu **Mahfouz → Settings…**): applies
 instantly and is stored in `.config/settings.md` (a plain Markdown file
 you can hand-edit):
 
@@ -25,8 +25,8 @@ on or off.
 Sidebar sort order (alphabetical vs. chronological) is also saved there,
 toggled from the Sidebar header.
 
-Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard shortcuts](/guide/shortcuts/)) —
-edit the file directly to remap or disable one; blank a binding to
+Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard shortcuts](/guide/shortcuts/)).
+Edit the file directly to remap or disable one; blank a binding to
 disable it.
 
 Settings → AI → External agents connects AI apps such as Claude Code and

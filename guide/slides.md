@@ -5,7 +5,7 @@ description: "Present a note as a slide deck and style it with slides templates.
 permalink: /guide/slides/
 ---
 
-Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
+Any note can be shown as a [Slidev](https://sli.dev) deck: every bare
 `---` line is a slide break (a note with none is a one-slide deck).
 
 - **<kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>** shows the current note fullscreen, layered over
@@ -15,7 +15,7 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
   row `mahfouz/slidev:present-fullscreen`.
 - A note's menu (sidebar, tab, or toolbar ⋯) offers **Present** as a
   regular tab instead, with **Reload**, **Presenter** (opens Slidev's
-  presenter view — speaker notes, timer — in your system browser),
+  presenter view, with speaker notes and a timer, in your system browser),
   **Browser** (opens the deck itself there), and **Restart** (restarts
   Slidev) in its toolbar.
 - **PDF**: a note's menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>) → Format
@@ -33,8 +33,8 @@ Any note can be shown as a [Slidev](https://sli.dev) deck — every bare
 
 ## Slides templates
 
-A template gives your decks a look — background color or image, text and
-accent colors, a font, a logo, a footer — for both Present and PDF export.
+A template gives your decks a look (background color or image, text and
+accent colors, a font, a logo, a footer) for both Present and PDF export.
 
 - **Create them** in Vault Settings → **Slides**. **Use as default**
   applies a template to every note that doesn't pick one.
@@ -45,8 +45,8 @@ accent colors, a font, a logo, a footer — for both Present and PDF export.
 - **Cover slide**: the optional cover fields (background, image, text
   color, logo) replace the main ones on the first slide only.
 - **Header and footer**: one line of inline Markdown drawn at the top and
-  bottom of every slide. Both can use [fields](/guide/fields/) — `!title`,
-  `!page`, `!total` — expanded when the deck is presented or exported.
+  bottom of every slide. Both can use [fields](/guide/fields/) (`!title`,
+  `!page`, `!total`), expanded when the deck is presented or exported.
 - A note overrides a template's header/footer with its own `header` /
   `footer` attribute (`none` turns that side off), and a `title_slide`
   attribute leaves slide 1 bare of either. A note whose `slides_template` is
