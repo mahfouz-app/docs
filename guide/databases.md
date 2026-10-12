@@ -290,6 +290,54 @@ or a plugin, updates both sides. A view can't be grouped by a relation. Use
 the same Mahfouz version on every device that edits a vault with
 relations: a version from before relations edits only one side of a link.
 
+## Rollups
+
+A Rollup column summarizes a property of each row's related rows: the
+average rating of an author's books, for example, or the date of their latest
+book. Its values are computed from the related rows each time you look, so
+they follow every change to those rows.
+
+### Add a rollup
+
+1. Open **Columns** and choose **Add rollup…**. It needs a Relation column;
+   without one, it says to add a Relation column first.
+2. Give the column a **Name**, then choose the **Relation** to follow, the
+   **Property** of the related rows to read, and what to **Calculate**:
+
+   | Calculate | Gives |
+   |---|---|
+   | **Show original** | the values themselves |
+   | **Count all** | how many related rows there are |
+   | **Count values** | how many related rows have a value |
+   | **Count unique values** | how many different values there are |
+   | **Sum**, **Average**, **Min**, **Max** | for a Number property |
+   | **Earliest date**, **Latest date** | for a Date or Date & time property, or Created and Updated |
+
+   **Calculate** offers only what fits the property you chose.
+
+A rollup column is read-only; its header says which relation it's computed
+from. You can sort and filter it like any column of its result: a number, a
+date, or a list for **Show original**. Text that isn't a number is left out
+of a sum or an average.
+
+To change a rollup, open its column menu and choose **Edit rollup…**. **Remove
+rollup** deletes the column and takes it out of every view's columns, sort and
+grouping. If a saved filter uses the rollup, remove that filter first.
+
+If a rollup can't be computed, for example because its relation was removed,
+its header shows the reason. If rows hold their own value under the rollup's
+name, the rollup hides it, and the header says how many rows do.
+
+The definition lives in the database block, next to the relation:
+
+```yaml
+properties:
+  avg_rating:
+    rollup: { relation: books, property: rating, function: average }
+```
+
+The values are never written to your notes.
+
 ## Publishing
 
 Publishing a database note leaves the block out of the published page.
