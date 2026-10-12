@@ -86,7 +86,8 @@ grouped into **Overdue**, **Today**, **Upcoming** and **Completed**.
   tasks shows as a chip with its count above the list. Click chips to
   show only the tasks carrying any of them; **Clear** shows every task
   again. Only tags on the task's own line count, not the note's other
-  tags.
+  tags. Clicking a `#tag` in a task's title opens the
+  [Tags view](/guide/links/#tags) with that tag added instead.
 - Click a task to open its note at that line. Tick its checkbox to mark it
   done without opening the note.
 
