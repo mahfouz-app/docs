@@ -15,7 +15,7 @@ way. Once a note has a folder it keeps it.
 
 The file name follows the title as you edit it, until you rename the note
 in the Sidebar: from then on it keeps the name you gave it. You never need
-these paths day to day — the Sidebar presents them as a normal expandable
+these paths day to day: the Sidebar presents them as a normal expandable
 tree. Notes from older versions may have names that include their id; they
 pick up a title-based name the next time their title changes. Vaults
 created before this layout are offered a one-time migration on open;
@@ -25,7 +25,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the
   Sidebar for "new note here."
-- **Title**: there's no separate title field — a note's title is always
+- **Title**: there's no separate title field; a note's title is always
   the first non-empty line of its body (with a leading `#` stripped if
   present). Rename a note by editing its first line.
 - **Reordering / nesting**: drag a note in the Sidebar to reorder it or
@@ -69,7 +69,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   folder outside Mahfouz (no `id:` in its frontmatter), it shows up right
   away in the Sidebar as a clickable "pending" row, in the folder (or under
   the note) it was added to. Mahfouz doesn't touch the file until you edit
-  it there: the first edit imports it — Mahfouz adds the id it needs and
+  it there: the first edit imports it; Mahfouz adds the id it needs and
   leaves everything else alone.
 - **Edits from other apps**: Mahfouz watches the vault folder. When another
   app changes the note you have open, the editor updates in place within a

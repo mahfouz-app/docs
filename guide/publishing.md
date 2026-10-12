@@ -19,10 +19,10 @@ Open the note's menu (right-click it in the sidebar, or **⋯ (More)** on the
 [toolbar](/guide/toolbar/)) and choose **Publish to web…**. The dialog says
 what goes public:
 
-- **The note** — its text, as it reads now.
-- **Images to upload** — every image the note shows, listed by name.
+- **The note**: its text, as it reads now.
+- **Images to upload**: every image the note shows, listed by name.
   PNG, JPEG, GIF, WebP and AVIF images are published.
-- **Attachments that aren't published** — any other file the note links,
+- **Attachments that aren't published**: any other file the note links,
   such as a PDF or an SVG, is named here and left out.
 - **Diagrams shown as code** — any Mermaid or draw.io block that will be
   published as its source text (see [Diagrams](#diagrams)).
@@ -259,10 +259,10 @@ an **Edit** link and **Report this page**.
 
 **Edit** opens Mahfouz on the web with the page:
 
-- **Edit original** — if you're signed in and can edit the repository the
+- **Edit original**: if you're signed in and can edit the repository the
   note came from, this opens the note. If that repository isn't open in
   Mahfouz yet, it's cloned into your browser first, after asking.
-- **Copy into my vault** — makes the page a new note in a vault you choose,
+- **Copy into my vault**: makes the page a new note in a vault you choose,
   with its images copied into the vault's `files/` folder. The copy isn't
   published.
 - **Sign in to edit** and **Open on GitHub** appear when they apply.

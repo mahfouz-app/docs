@@ -19,7 +19,7 @@ visible, switched with the toolbar's **Show source** button
   real widgets.
 - **Preview**: heading marks, emphasis marks, link brackets, `==`
   highlight marks, and `~`/`^` sub/superscript marks are all hidden in
-  favor of the styled result — except on whatever line your cursor is
+  favor of the styled result, except on whatever line your cursor is
   currently on, which always reveals its raw syntax so you can edit it.
   Tables render as fully interactive editable tables in Preview mode
   regardless of cursor position (see [Tables](/guide/markdown/#tables)).
@@ -64,7 +64,7 @@ position ("whichever section is at the top of the viewport is active"):
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.
 - **Page preview** (collapsible column to the left of the editor) shows
-  thumbnail cards for each "page" — the note split wherever a bare `---`
+  thumbnail cards for each "page": the note split wherever a bare `---`
   line appears (the same rule [presenting](/guide/slides/)
   uses for slide breaks). Click a thumbnail to jump there. Drag cards to
   reorder pages, or right-click one for **Move up / Move down / Delete

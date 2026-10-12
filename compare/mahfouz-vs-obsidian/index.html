@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Mahfouz vs Obsidian: both keep notes as plain Markdown files, but Mahfouz builds in Git history, sync through any Git remote, a web app, and AI agent access."
+    />
+    <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://docs.mahfouz.app/compare/mahfouz-vs-obsidian/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Mahfouz vs Obsidian | Mahfouz</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Mahfouz home">
+          <img src="/images/logo.png" alt="Mahfouz" width="2172" height="724" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/compare/" aria-current="page">Compare</a>
+          <a href="/guide/">User guide</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="shell compare-hero" aria-labelledby="compare-title">
+        <p class="eyebrow">Mahfouz vs Obsidian</p>
+        <h1 id="compare-title">Mahfouz <span class="compare-vs">vs</span> Obsidian</h1>
+        <p class="hero-description">
+          Obsidian and Mahfouz agree on the most important thing: your notes
+          should be plain Markdown files in a folder you own. The difference
+          is what surrounds those files. Obsidian leaves history, sync, and
+          collaboration to a paid add-on or a community plugin. Mahfouz builds
+          them on Git from the start, so every edit is a commit and every
+          vault can sync with a remote you already have.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/#downloads">Download Mahfouz</a>
+          <a class="button button-secondary" href="/guide/">Read the user guide</a>
+        </div>
+      </section>
+
+      <section class="shell compare-table-section" aria-labelledby="compare-table-title">
+        <h2 id="compare-table-title" class="sr-only">Feature comparison</h2>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col">Compare</th>
+                <th scope="col">Obsidian</th>
+                <th scope="col" class="compare-table-mahfouz">Mahfouz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">File format &amp; ownership</th>
+                <td>Plain <code>.md</code> files in a local vault folder. App settings live in a hidden <code>.obsidian</code> folder.</td>
+                <td class="compare-table-mahfouz">Plain <code>.md</code> files in a folder you choose. Even vault settings are a Markdown note.</td>
+              </tr>
+              <tr>
+                <th scope="row">Version history</th>
+                <td>The File recovery plugin keeps local snapshots for a limited time. Longer history comes with paid Obsidian Sync, or Git through a community plugin.</td>
+                <td class="compare-table-mahfouz">Built in. Every edit is committed to Git automatically, and you can browse any note's history, restore a version, or recover deleted notes from Trash.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sync between devices</th>
+                <td>Obsidian Sync, a paid add-on, or a setup you assemble yourself with iCloud, Dropbox, or a community Git plugin.</td>
+                <td class="compare-table-mahfouz">Built in. Push and pull with any Git remote: GitHub, a self-hosted server, or one you already use.</td>
+              </tr>
+              <tr>
+                <th scope="row">Collaboration</th>
+                <td>Shared vaults through Obsidian Sync.</td>
+                <td class="compare-table-mahfouz">Share a vault the way you'd share any Git repo. Everyone works from their own full copy of the notes and their history.</td>
+              </tr>
+              <tr>
+                <th scope="row">In the browser</th>
+                <td>No web app. Obsidian runs as a desktop and mobile app.</td>
+                <td class="compare-table-mahfouz">The web app at mahfouz.app opens a folder on your computer or a GitHub repository, with no copy kept on Mahfouz's servers.</td>
+              </tr>
+              <tr>
+                <th scope="row">AI agents</th>
+                <td>Agents can read the files directly. Deeper integration depends on community plugins.</td>
+                <td class="compare-table-mahfouz">Agents can read the files directly, and Claude Code, Codex, and other MCP clients can connect to Mahfouz, with per-vault access and edits that wait for your approval.</td>
+              </tr>
+              <tr>
+                <th scope="row">Platforms</th>
+                <td>macOS, Windows, Linux, iOS, and Android.</td>
+                <td class="compare-table-mahfouz">macOS and the web today. Windows and Linux are coming soon.</td>
+              </tr>
+              <tr>
+                <th scope="row">Price</th>
+                <td>The app is free. Sync is $4/user/month billed annually ($5 monthly), Publish is $8/site/month billed annually ($10 monthly), and a $50/user/year commercial license is optional.</td>
+                <td class="compare-table-mahfouz">Free. History and sync use Git, so the only cost is whatever Git hosting you choose, if any.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-table-note">
+          Obsidian pricing as published on obsidian.md in October 2026; check their pricing page for current figures.
+        </p>
+      </section>
+
+      <section class="compare-faq" aria-labelledby="compare-faq-title">
+        <div class="shell">
+          <p class="eyebrow">Questions</p>
+          <h2 id="compare-faq-title">Obsidian, answered.</h2>
+          <div class="compare-faq-list">
+            <div class="compare-faq-item">
+              <h3>Can I open my Obsidian vault in Mahfouz?</h3>
+              <p>
+                Yes. Both apps keep a vault as a folder of Markdown files, so
+                you can point Mahfouz at the same folder with File → Open
+                Vault… and your notes open as they are. Mahfouz understands the
+                same <code>[[wikilink]]</code> and <code>#tag</code> syntax.
+              </p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Obsidian has a Git plugin. Isn't that the same thing?</h3>
+              <p>
+                It brings Git to Obsidian, but as a community plugin you
+                install and configure yourself. In Mahfouz, Git is how the app
+                works: edits are committed as you write, history and Trash read
+                straight from the repository, and sync status is shown on every
+                vault and note.
+              </p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Does Mahfouz have Obsidian's plugin ecosystem?</h3>
+              <p>
+                No. Obsidian's community plugin library is far larger. Mahfouz
+                has its own plugins, such as Mermaid, draw.io, and slide decks,
+                installed from registries that are plain Git repositories, and
+                you can add registries of your own.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <div class="shell guide-layout">
+          <div>
+            <h2>See the rest of what Mahfouz can do.</h2>
+            <p>Vaults, Markdown editing, Git sync, history, and more.</p>
+          </div>
+          <a class="button button-secondary" href="/guide/">Read the user guide</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-brand">
+        <a class="emblem-link" href="/" aria-label="Mahfouz home">
+          <img src="/images/emblem.png" alt="" width="1254" height="1254" />
+        </a>
+        <p>Open Markdown notes, kept in your hands. No lock-in, ever.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/guide/">User guide</a>
+        <a href="/changelog/">Changelog</a>
+        <a href="/license/">License</a>
+      </nav>
+    </footer>
+  </body>
+</html>

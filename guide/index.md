@@ -7,7 +7,7 @@ permalink: /guide/
 
 Mahfouz is a cross-platform Markdown PKM (personal knowledge management) app.
 Your notes are plain Markdown files in a folder that is also a git
-repository — those files are the source of truth, and everything Mahfouz
+repository; those files are the source of truth, and everything Mahfouz
 shows you comes from them.
 
 **Mahfouz needs git.** If it can't find a usable git when it starts, it
