@@ -151,8 +151,8 @@ filters, grouping, and columns. The views appear as buttons in the toolbar;
 click one to show it. The view you picked is remembered on this device.
 
 - **+ View** adds a view: **Table**, **Board** grouped by one of the
-  database's Select attributes, or **Gallery** with the cover image you
-  choose.
+  database's Select attributes, **Gallery** with the cover image you
+  choose, or **Calendar** by one of the rows' dates.
 - The **▾** next to the current view offers **Rename**, **Duplicate**, and
   **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
   save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
@@ -230,6 +230,50 @@ The first-image fallback is Mahfouz's own. A Gallery written in another app
 with `type: cards` keeps its `image` and other settings, such as
 `imageFit` and `cardSize`, exactly as written, though Mahfouz doesn't use
 them yet.
+
+## Calendar
+
+A Calendar shows a month, with each row on the day of one of its dates, such
+as a due date. In the block, a Calendar is a view with `type: calendar` and
+`date: <attribute>`. This view is Mahfouz's own; other apps that read the
+block show it as an unknown view.
+
+**+ View** ▸ **Calendar** offers the dates the rows can be placed by:
+
+- a Date or Date & time attribute, or an attribute with no type whose values
+  are dates. You can move these rows.
+- **Created** or **Updated**, and rollups that calculate **Earliest date** or
+  **Latest date**. These are read-only: the Calendar shows the rows but can't
+  move them, and says so.
+
+If the view's `date` is missing or names an attribute that isn't a date, the
+Calendar asks you to choose one, and your choice is written into the view.
+
+Working with the month:
+
+- **‹** and **›** change the month, and **Today** goes back to this month.
+  The month shown isn't saved.
+- A day shows up to three rows, then **+N more**, which lists the rest.
+- **Drag a row** to another day to change its date. A date keeps its form: a
+  date stays a date, and a date and time keeps its time.
+- **+** on a day adds a row with that date.
+- **⋯** on a row offers **Open**, **Open in new tab**, **Move to date…**,
+  **Remove date**, and **Delete row**.
+- **No date (N)** shows the rows without a date. Drag one onto a day to give
+  it that date, or drag a row onto the list to remove its date.
+
+A value Mahfouz can't read exactly as a date, such as `10/13/2026` or
+`2026-02-30`, is listed under **No date** with its text, and can't be moved
+until you fix it in the note.
+
+From the keyboard, the month is one stop: the arrow keys move between days,
+<kbd>Enter</kbd> enters a day so its rows and buttons can be reached with
+the arrow keys, and <kbd>Escape</kbd> leaves it. On a narrow screen, days
+show a count; tap or press <kbd>Enter</kbd> on a day to list its rows below
+the month, with a button to add one.
+
+Sort and filters apply as in a table. A Calendar isn't grouped: a grouping
+saved in the view is kept in the block but not shown.
 
 ## Relations
 
