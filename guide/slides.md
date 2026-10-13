@@ -29,7 +29,9 @@ layout: quote
 ```
 
 Slide 1's settings are the note's own attributes, such as `layout`, not a
-block at the top of its text.
+block at the top of its text. A block there shows as an empty slide 1 in Present.
+The editor underlines it, and when it holds only `layout` and `class`, it
+offers **Move to attributes**.
 
 In a deck, the editor underlines lines Present won't show and offers
 **Add blank line**, and their page in the preview is marked **Not shown in
