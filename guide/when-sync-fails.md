@@ -74,6 +74,11 @@ The same note (or notes) changed on this device and on the remote since they las
 The tab lists what couldn't be combined, grouped as **Notes**, **Settings** and **Files**. Each row says why, and expands to show the difference: an attribute's value before and on each side, the overlapping sections side by side, or a file's changed lines. The first row still to choose starts expanded.
 
 - **A note**: **Mine** or **GitHub's** settles only the parts that overlap; everything else from both sides is still combined. **Keep both** saves GitHub's version as a separate note, as on the notice.
+  - Inside the expanded row, each overlapping part can be chosen on its own: an attribute, the publishing settings (as one group), or a section, with **Mine** or **GitHub's**. A section can also take **Both**: your lines, then GitHub's, with the lines they share kept once; a **Result** pane shows the outcome. To combine them differently, finish, then edit the note.
+  - **Both** isn't offered for a section that holds a database block, a comment thread or a suggestion.
+  - A row whose parts are chosen differently shows **Mixed**, and "N of M parts chosen" until every part is chosen. Choosing **Mine** or **GitHub's** for the row resets every part.
+  - A note with a database block changed differently on both sides is chosen as a whole: **Mine** or **GitHub's** settles all its parts together.
+  - If your choices for a note can't be combined into a readable note, **Finish merge** writes nothing, keeps your choices, and asks you to choose differently.
 - **A note that can't be combined part by part**: **Use my whole note** or **Use GitHub's whole note** keeps that note as one side has it, after you confirm.
 - **A note or file deleted on one side**: **Keep it** or **Delete it…** when GitHub deleted it (deleting asks first, and names any child notes GitHub also deleted); **Restore GitHub's version** or **Keep it deleted** when you deleted it.
 - **A settings file**: **Keep mine** or **Use GitHub's**.
