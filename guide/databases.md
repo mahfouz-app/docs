@@ -268,9 +268,10 @@ until you fix it in the note.
 
 From the keyboard, the month is one stop: the arrow keys move between days,
 <kbd>Enter</kbd> enters a day so its rows and buttons can be reached with
-the arrow keys, and <kbd>Escape</kbd> leaves it. On a narrow screen, days
-show a count; tap or press <kbd>Enter</kbd> on a day to list its rows below
-the month, with a button to add one.
+the arrow keys, and <kbd>Escape</kbd> leaves it. When the Calendar is 600
+pixels wide or less, as on a phone or in a split, days show a count; tap or
+press <kbd>Enter</kbd> on a day to list its rows below the month, with a
+button to add one.
 
 Sort and filters apply as in a table. A Calendar isn't grouped: a grouping
 saved in the view is kept in the block but not shown.
