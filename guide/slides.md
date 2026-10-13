@@ -103,6 +103,25 @@ reserved and can't be used as variants. Each section shows how many fields
 it overrides; open it to edit them, see the inherited values in grey, add
 its own Custom CSS, or **Remove section**. Emptying a section keeps it.
 
+### Usage counts
+
+Settings → **Slides** shows how much of a template your decks use, so you
+can tell whether a section does anything before you change or remove it:
+
+- **Beside the template's name**: "· 4 notes use it", or "· not used yet".
+  It counts the decks that end up with this template, whether they pick it
+  themselves or fall back to it as the vault default.
+- **On each layout section**: "7 slides", "1 slide", or "not used yet". A
+  layout section counts every slide with that layout, its variants
+  included; a variant counts slides with that layout and class; **First
+  slide** counts the decks.
+
+The counts come from your saved notes and update as the notes change.
+
+The rename and delete dialogs give a different number: how many notes
+pick the template by name. That counts only the notes whose own
+`slides_template` names it, not the ones that use it as the default.
+
 ### Decorations
 
 A decoration is one SVG shape, such as a wave, a corner or a mark, that a
