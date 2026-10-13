@@ -69,6 +69,8 @@ Settings → **Slides** shows only the fields a template sets, each with a
   A font is a [Google Fonts](https://fonts.google.com) family name such as
   `Inter`, or a `.woff2` file chosen with **Choose file**.
 - **Logo**: an image and where it sits.
+- **Decoration**: an SVG shape drawn on the slides
+  ([Decorations](#decorations) below).
 
 A value the app can't use is marked **Not applied** and left as you
 wrote it. Images and fonts are copied into the vault's `files/` directory,
@@ -100,6 +102,74 @@ description) and optionally type a variant. `dark` and `light` are
 reserved and can't be used as variants. Each section shows how many fields
 it overrides; open it to edit them, see the inherited values in grey, add
 its own Custom CSS, or **Remove section**. Emptying a section keeps it.
+
+### Decorations
+
+A decoration is one SVG shape, such as a wave, a corner or a mark, that a
+template places on its slides without any CSS. The template itself can
+have one, shown on every slide, and so can each layout section and First
+slide. Add it from **+ Add property** → **Decoration**:
+
+- **Decoration**: an `.svg` file chosen with **Choose SVG…** (copied into
+  `files/`), or `none` to switch off one the section would inherit.
+- **Position**: one of nine spots on the 3×3 grid (Top left through Bottom
+  right), or **Fill** from the menu beside it to cover the whole slide.
+- **Size**: a percentage of the slide width, such as `30%`. Fill ignores it.
+- **Opacity**: from 0 to 1.
+- **Layer**: **Behind text** or **In front**. In front still stays under the
+  header, footer and logo.
+- **Tint**: **Own colours** shows the SVG as drawn; a palette colour
+  (**Accent**, **Accent 2**, **Text**, **Heading** or **Muted**) paints the
+  whole shape that colour. A tint the template doesn't set falls back to the
+  text colour.
+
+Each field is inherited like the others: the template's own value, then
+the layout's, then the variant's, then First slide's. A section that
+inherits a decoration shows it in grey with **Hide here**, which turns it
+off for that section's slides.
+
+The decoration is drawn on each slide's `.slidev-page::after` layer, which
+it owns: a template's Custom CSS can't style that layer on slides that
+show a decoration. Use another element, such as `.slidev-layout::after`,
+for your own effects.
+
+### Previewing a template
+
+Settings → **Slides** shows a preview beside the form (below it in a
+narrow window), marked **Approximate**. It draws a sample deck with the
+template's colours, fonts, images, decorations and CSS, and updates as you
+edit. Its tabs switch between sample slides: **First slide**, **Content**,
+one for each layout section, and **Code and table**.
+
+- It's close to Present, not exact: CSS aimed at Slidev's own markup may
+  not show, and fonts, spacing and code highlighting can differ.
+- **Hide preview** folds it away, and this device remembers the choice.
+  **Show preview** brings it back.
+- Images and fonts over the preview's size limits are left out, and the
+  preview says "Some files are too large to preview." They still apply
+  when you present.
+- The preview can't run scripts or load anything but your vault's files
+  and Google Fonts. A template with a Google font loads it from Google, on
+  the web too ([Privacy](/privacy/#google-fonts-in-slides-templates)).
+
+#### Render with Slidev
+
+On the desktop, **Render with Slidev** draws the same sample deck with
+Slidev itself and shows the slides as thumbnails, labelled "Rendered by
+Slidev" with the time. It needs the **Slidev presentations** plugin, version
+1.8.0 or later, turned on for the vault.
+
+- **Render again** renders the deck again; **Back to live preview** returns
+  to the approximate preview.
+- Any edit to the template returns to the live preview, and the preview
+  says "Slidev render out of date: edited since". Click **Render again** for
+  fresh thumbnails.
+- It renders only the vault that's open. For another vault's templates it
+  says "Open this vault to render it with Slidev."
+- If the plugin is missing, off or too old, it says so and links to
+  **Settings → Plugins**.
+- On the web there's no button: the preview says "Exact rendering needs
+  the desktop app."
 
 ### Layouts in the editor
 
