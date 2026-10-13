@@ -13,6 +13,11 @@ Mahfouz keeps no separate history of its own: **history is git history.**
   short SHA). Click one to open that revision read-only in a new tab,
   with a banner offering **Restore** (writes a *new* commit restoring
   that content; history is always append-only, never rewritten).
+  Auto-saves fold into one **Edited · N saves** row per stretch of
+  editing: consecutive auto-saves by the same person, no more than 30
+  minutes apart. Click the row to list its saves, then click a save to
+  open it. A lone auto-save shows as **Edited**. Named commits (yours,
+  the agent's, renames) always keep their own row.
 - **Trash** (Sidebar, <kbd>Cmd/Ctrl</kbd><kbd>4</kbd>) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
