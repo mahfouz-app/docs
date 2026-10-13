@@ -31,6 +31,10 @@ layout: quote
 Slide 1's settings are the note's own attributes, such as `layout`, not a
 block at the top of its text.
 
+In a deck, the editor underlines lines Present won't show and offers
+**Add blank line**, and their page in the preview is marked **Not shown in
+Present**.
+
 - **<kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>** shows the current note fullscreen, layered over
   the whole app rather than opening a tab. Arrow keys move between slides;
   <kbd>Esc</kbd> (or menu **View → Stop Presenting**, <kbd>Cmd</kbd><kbd>.</kbd>) returns you exactly
