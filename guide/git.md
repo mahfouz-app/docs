@@ -77,6 +77,8 @@ Vault Settings → **Vault** section:
   the `gh` CLI, your OS keychain, whatever `git push`/`pull` from a
   terminal in that folder already uses. Mahfouz never stores or sees a token.
 - If a sync fails, see [When sync fails](/guide/when-sync-fails/).
+- To keep a vault's contents encrypted on GitHub, see
+  [Encrypted vaults](/guide/encryption/).
 - The icon in each vault's Sidebar header shows its current sync state
   (see [The vault icon](#the-vault-icon)).
 
