@@ -39,6 +39,8 @@ On first run (in the bar above the welcome page), or from Open Vault, click
    approve the installation first, Mahfouz says so; click **Check again**
    once they have.
 2. Pick the repository. Don't see it? **Manage repository access** adds it.
+   A repository encrypted with git-crypt is marked **Encrypted · desktop
+   only**: the web can't decrypt it (see [Encrypted vaults](/guide/encryption/)).
 3. Mahfouz shows the repository's size (GitHub's estimate). Above 250 MB it
    warns that the clone may take a long time and fill that much of the
    browser's storage. Click **Clone** and keep the tab open until it ends: a

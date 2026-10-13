@@ -70,6 +70,9 @@
     - slug: when-sync-fails
       title: "When sync fails"
       description: "What each sync notice means, what its buttons do, and how to fix the problem."
+    - slug: encryption
+      title: "Encrypted vaults"
+      description: "Use a vault encrypted with git-crypt: what's encrypted on GitHub, unlocking it on a new device, and what stays visible."
 - group: "On the web"
   pages:
     - slug: web
