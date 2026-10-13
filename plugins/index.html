@@ -124,29 +124,27 @@
               data-author="{{ plugin.author | slugify }}"
               data-search="{{ plugin.name | append: ' ' | append: plugin.description | append: ' ' | append: plugin.id | append: ' ' | append: plugin.author | downcase | escape }}"
             >
-              <div>
-                <h3>{{ plugin.name }}</h3>
-                <code>{{ plugin.id }}</code>
-              </div>
-              <p>{{ plugin.description }}</p>
-              <p class="registry-by">
-                by {% if plugin.author_url %}<a href="{{ plugin.author_url }}">{{ plugin.author }}</a>{% else %}{{ plugin.author }}{% endif %}
-                · needs Mahfouz {{ plugin.requires }} or later
+              <p class="registry-kicker">
+                {{ plugin.category }}
+                {%- if registry.official %} <span class="registry-official">Official</span>{% endif %}
               </p>
-              <ul class="registry-tags" aria-label="Details">
-                <li class="registry-tag-category">{{ plugin.category }}</li>
-                {%- if registry.official %}
-                <li class="registry-tag-official">Official</li>
-                {%- endif %}
+              <h3><a class="registry-title" href="{{ plugin.guide | default: plugin.source }}">{{ plugin.name }}</a></h3>
+              <p class="registry-description">{{ plugin.description }}</p>
+              <ul class="registry-chips" aria-label="Supported platforms">
                 {%- for platform in plugin.platforms %}
                 <li>{{ data.platforms[platform] }}</li>
                 {%- endfor %}
               </ul>
+              <p class="registry-meta">
+                <span class="registry-requires">Requires Mahfouz {{ plugin.requires }} or later</span>
+                by {% if plugin.author_url %}<a href="{{ plugin.author_url }}">{{ plugin.author }}</a>{% else %}{{ plugin.author }}{% endif %}
+                · <code>{{ plugin.id }}</code>
+              </p>
               <p class="registry-links">
-                <a href="{{ plugin.source }}">Source<span class="sr-only"> of {{ plugin.name }}</span></a>
                 {%- if plugin.guide %}
-                <a href="{{ plugin.guide }}">Guide<span class="sr-only"> to {{ plugin.name }}</span></a>
+                <a class="more" href="{{ plugin.guide }}">Learn more<span class="sr-only"> about {{ plugin.name }}</span></a>
                 {%- endif %}
+                <a class="more" href="{{ plugin.source }}">Source<span class="sr-only"> of {{ plugin.name }}</span></a>
               </p>
             </li>
             {%- endfor %}
