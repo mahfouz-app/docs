@@ -471,10 +471,14 @@ table is built each time the note is published, so rows added later appear
 when you next publish or update the page; a change to a row doesn't by itself
 mark the page out of date.
 
-If a row on a published page is later marked not to publish, made disk-only,
-or deleted, a page that publishes automatically is updated to remove it. For
-any other page, Mahfouz tells you which page still shows it, and it's removed
-when you update the page. Some rows and columns are always left out:
+If something a published table shows is later marked not to publish, made
+disk-only, or deleted, a page that publishes automatically is updated to
+remove it. That covers a row, a linked note in a relation column, or the
+database itself. For any other page, Mahfouz tells you which page still shows
+it, and it's removed when you update the page. Mahfouz remembers what each
+page showed on the computer that published it, so a page published from
+another computer, or before you cleared the app's site data, isn't checked
+until you update it from this one. Some rows and columns are always left out:
 
 - rows marked not to publish, disk-only rows, and people;
 - links to those notes in relation columns, and their values in rollups;
