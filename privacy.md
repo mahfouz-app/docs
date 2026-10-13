@@ -57,6 +57,19 @@ newer version is out. The request sends nothing about you or your notes.
 Installing or updating a [plugin](/guide/plugins/) downloads it from the
 repository it's shared from, and only after you approve it.
 
+## Google Fonts in slides templates
+
+A [slides template](/guide/slides/#editing-a-template) font can be a
+Google Fonts family, such as Inter. The font then loads from Google
+whenever it's drawn: when you present a deck or export it as PDF, and in
+the template preview in Settings → Slides, on the desktop and on the web.
+Each load sends your IP address and the font's name to Google, under
+[Google's privacy policy](https://policies.google.com/privacy). It sends
+no note content.
+
+To avoid it, pick a `.woff2` font file instead of a Google family: it's
+copied into the vault's `files/` folder and never fetched from Google.
+
 ## On the web
 
 At [mahfouz.app](https://mahfouz.app), a folder you open is read and
