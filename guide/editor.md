@@ -10,7 +10,7 @@ certain syntax renders visually as you type (checkboxes, bullets,
 highlights, tags, wikilinks, media) rather than showing raw symbols.
 
 There are two independent view modes for how much raw syntax stays
-visible, switched with the toolbar's **Show source** button
+visible, switched with the bottom bar's **Show source** button
 (remembered on this device, not per note):
 
 - **Source** (default): most Markdown punctuation stays visible
@@ -19,7 +19,7 @@ visible, switched with the toolbar's **Show source** button
   real widgets.
 - **Preview**: heading marks, emphasis marks, link brackets, `==`
   highlight marks, and `~`/`^` sub/superscript marks are all hidden in
-  favor of the styled result — except on whatever line your cursor is
+  favor of the styled result, except on whatever line your cursor is
   currently on, which always reveals its raw syntax so you can edit it.
   Tables render as fully interactive editable tables in Preview mode
   regardless of cursor position (see [Tables](/guide/markdown/#tables)).
@@ -43,8 +43,9 @@ Other editor behavior:
 - On any other line, **Tab** re-indents only when your cursor is in leading
   whitespace at the start of the line; anywhere else it's left free for
   OS-level autocomplete.
-- Native macOS spellcheck/autocorrect (including Text Replacements) work
-  normally.
+- Misspelled words are underlined by your system's spell checker (see
+  [Spelling check](/guide/spelling/)). Native macOS autocorrect (including
+  Text Replacements) works normally.
 - <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
   note).
@@ -52,6 +53,10 @@ Other editor behavior:
   [Links](/guide/links/#links-wikilinks--backlinks)).
 - **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the search
   and replace panel.
+- **Find selection**: <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd> jumps to the next
+  occurrence of the selected text, or of the word under the cursor when
+  nothing is selected, without opening the panel. Press
+  <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back.
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
 
@@ -64,7 +69,7 @@ position ("whichever section is at the top of the viewport is active"):
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.
 - **Page preview** (collapsible column to the left of the editor) shows
-  thumbnail cards for each "page" — the note split wherever a bare `---`
+  thumbnail cards for each "page": the note split wherever a bare `---`
   line appears (the same rule [presenting](/guide/slides/)
   uses for slide breaks). Click a thumbnail to jump there. Drag cards to
   reorder pages, or right-click one for **Move up / Move down / Delete

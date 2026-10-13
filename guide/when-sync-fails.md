@@ -10,6 +10,8 @@ When a sync goes wrong, Mahfouz shows a notice in the [notification center](/gui
 ## Buttons
 
 - **Retry** syncs again. Use it after you've fixed the cause.
+- **Open merge** opens the vault's Merge tab, where you choose what to keep for each change that couldn't be combined. A click on that notice opens it too.
+- **Keep both** keeps your version of each file that changed on both sides, saves the remote's version beside it, then syncs.
 - **Open remote settings** opens the vault's settings on the **Source** tab, where its remote is set.
 - **Push this branch** creates the branch on the remote. It only runs when you click that button, never from a click on the notice itself.
 - **Install git** (desktop only) installs Mahfouz's own copy of git, then syncs again.
@@ -59,9 +61,39 @@ Your account can reach it but isn't allowed to do this. Ask the owner for write 
 
 Add one with **Open remote settings**, then **Retry**.
 
+### N changes need your choice {#this-note-changed-here-and-on-github}
+
+The same note (or notes) changed on this device and on the remote since they last synced, and the changes overlap, so Mahfouz can't combine them on its own. It combines changes to different notes, and changes to different attributes or lines of one note, without asking. It stops when both sides changed the same attribute, the same or neighbouring lines, or a database's views; when one side changed a note's publish settings and the other changed the note at all; and for a settings file, a file that isn't text, a file deleted on one side, or a file on one side where the other side has a folder of the same name. Pushes are paused until you choose. The notice's buttons:
+
+- **Open merge** opens the vault's **Merge tab**.
+- **Keep both** keeps your version of each file and saves the remote's version as a separate note, "&lt;title&gt; (remote copy)", next to yours, then syncs. A changed file that isn't a note gets its copy as "&lt;name&gt; (remote copy)". It isn't offered when a settings file is among the changes.
+- **Retry** syncs again, for when you've settled it another way (on desktop, with git).
+
+#### The Merge tab
+
+The tab lists what couldn't be combined, grouped as **Notes**, **Settings** and **Files**. Each row says why, and expands to show the difference: an attribute's value before and on each side, the overlapping sections side by side, or a file's changed lines. The first row still to choose starts expanded.
+
+- **A note**: **Mine** or **GitHub's** settles only the parts that overlap; everything else from both sides is still combined. **Keep both** saves GitHub's version as a separate note, as on the notice.
+  - Inside the expanded row, each overlapping part can be chosen on its own: an attribute, the publishing settings (as one group), or a section, with **Mine** or **GitHub's**. A section can also take **Both**: your lines, then GitHub's, with the lines they share kept once; a **Result** pane shows the outcome. To combine them differently, finish, then edit the note.
+  - **Both** isn't offered for a section that holds a database block, a comment thread or a suggestion.
+  - A row whose parts are chosen differently shows **Mixed**, and "N of M parts chosen" until every part is chosen. Choosing **Mine** or **GitHub's** for the row resets every part.
+  - A note with a database block changed differently on both sides is chosen as a whole: **Mine** or **GitHub's** settles all its parts together.
+  - If your choices for a note can't be combined into a readable note, **Finish merge** writes nothing, keeps your choices, and asks you to choose differently.
+- **A note that can't be combined part by part**: **Use my whole note** or **Use GitHub's whole note** keeps that note as one side has it, after you confirm.
+- **A note or file deleted on one side**: **Keep it** or **Delete it…** when GitHub deleted it (deleting asks first, and names any child notes GitHub also deleted); **Restore GitHub's version** or **Keep it deleted** when you deleted it.
+- **A settings file**: **Keep mine** or **Use GitHub's**.
+- **A file here and a folder on GitHub (or the reverse) with the same name**: this tab can't settle it. Rename yours, or rename it on GitHub, then **Retry**. When that's the only thing left, the notice reads "A file and a folder are both named …" and doesn't offer **Keep both**. A note GitHub moved into a folder of the same name can show the ordinary notice first; choosing to keep yours then brings up this one.
+- **Another file changed on both sides**: **Mine** or **GitHub's** keeps that file as one side has it; **Keep both** saves GitHub's version beside it when the file is text.
+- **Take all mine…** and **Take all GitHub's…** choose for every row still open that isn't a delete or a whole-note choice, after you confirm a list of what's discarded. They never decide deletes or whole-note rows.
+- **Finish merge** checks every file again, then syncs with your choices and pushes. If something changed since you chose, it says which and writes nothing, so you can look again. **Postpone** closes the tab; your choices stay until the merge is finished or you quit Mahfouz (or reload the page, on the web).
+
+While a note is waiting on a choice, the editor shows "This note has a merge waiting in the Merge tab." with **Open merge**. You can keep editing; if you do, you choose that note again.
+
+The notice and the tab say "GitHub" whichever remote the vault uses. Whatever you discard stays in the vault's history.
+
 ### Your notes and the remote both have new changes
 
-Both sides have new changes, and Mahfouz can't combine them yet. Retry after the other device's changes are in. On desktop you can also resolve it with git yourself. Mahfouz doesn't pick a side for you.
+The remote rejected a push because it has commits this device doesn't. The next sync brings them in, combining changes to different notes, then sends yours: nothing to do. The same notice for a pull that names no notes means the two histories share no commits at all. On desktop, resolve that with git.
 
 ### The remote has no branch yet
 
@@ -78,7 +110,7 @@ A file or the whole push is over the remote's size limit. On desktop, large file
 
 A pull would overwrite notes you've changed but not yet committed. The notice names them. Its buttons:
 
-- **Commit now** commits those changes.
+- **Commit…** opens [Commit notes](/guide/history/#commit-notes) with those notes checked.
 - **Discard** throws those changes away.
 - **Open note** opens the first of them.
 
