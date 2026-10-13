@@ -430,8 +430,9 @@ The values are never written to your notes.
 ## Show a database in another note
 
 Any note can show one of a database's views, such as a weekly review showing
-the books you're reading. Type `/` and choose **Database view**, then pick the
-database from the list that appears. Or, in the database's tab, open a view's
+the books you're reading. Type `/` and choose **Database view**, then start
+typing the database's name and pick it from the suggestions, which list only
+databases. Or, in the database's tab, open a view's
 **▾** menu and choose **Copy embed**, then paste it into the note.
 
 The note holds a small block:
@@ -463,19 +464,26 @@ history shows today's rows, not the rows as they were.
 
 Publishing a database note leaves the block out of the published page.
 
-Publishing or exporting a note with an embedded view replaces the block with a
-table of the view's rows, up to 100: titles and the view's columns, as plain
-text. The table is built each time the note is published, so rows added later
-appear when you next publish or update the page; a change to a row doesn't by
-itself mark the page out of date. Some rows and columns are always left out:
+Publishing a note with an embedded view, or exporting it to PDF, replaces the
+block with a table of the view's rows, up to 100: titles and the view's
+columns, as plain text. Exporting to Markdown keeps the block as written. The
+table is built each time the note is published, so rows added later appear
+when you next publish or update the page; a change to a row doesn't by itself
+mark the page out of date.
+
+If a row on a published page is later marked not to publish, made disk-only,
+or deleted, a page that publishes automatically is updated to remove it. For
+any other page, Mahfouz tells you which page still shows it, and it's removed
+when you update the page. Some rows and columns are always left out:
 
 - rows marked not to publish, disk-only rows, and people;
 - links to those notes in relation columns, and their values in rollups;
 - the **Created by** and **Last edited by** columns.
 
-An embed of a database that is itself marked not to publish, or of your people,
-is published as *Database view (not published)*. The same rules apply when you
-export to PDF.
+An embed is published as *Database view (not published)* when its database is
+itself marked not to publish, is disk-only, or holds your people, and when
+Mahfouz can't find the database or read its block. The same rules apply when
+you export to PDF.
 
 ## The agent
 
