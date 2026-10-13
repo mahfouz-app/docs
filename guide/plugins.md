@@ -36,6 +36,45 @@ The [plugin registry](/plugins/) lists every plugin submitted for
 Mahfouz, from the built-in registry and others, and you can filter it by
 category, platform, registry and author.
 
+## Installing from the plugin registry
+
+Each plugin in the [plugin registry](/plugins/) has an **Install** button.
+It opens [the web app](/guide/web/), which offers:
+
+- **Open in Mahfouz**: opens the desktop app, which asks before
+  installing. If you don't have the desktop app, nothing happens.
+- **Install in this browser**: for plugins that run on the web. It needs a
+  [GitHub sign-in](/guide/web-github/#signing-in-with-github).
+- **Download Mahfouz**: for the desktop app.
+
+An install link never installs anything or adds a registry on its own:
+
+- **The desktop app asks first.** It shows the plugin, its registry and
+  the warning that a plugin can run any code on your computer, and
+  installs only when you click **Install**. If the plugin is already
+  installed, it says so and offers **Update** when a newer version is
+  waiting.
+- **A registry you haven't added gets the usual warning.** It's added
+  only if you click **Add**, and then you're asked about the plugin
+  itself.
+- **A link can't replace a registry you have.** If you already added a
+  different registry with the same name, the link is refused.
+- **Turning the plugin on is still a separate step.** After it installs,
+  turn it on for each vault in Settings → **Plugins**.
+
+Plugin authors can link to their own plugins the same way. The
+`registry` part can be left out for the built-in `mahfouz` registry:
+
+```text
+https://mahfouz.app/plugins/install?plugin=<registry>/<plugin>&registry=<git URL or owner/repo>
+```
+
+The desktop app also opens the same link with `mahfouz://` in place of
+`https://mahfouz.app/`. A link's registry must be a GitHub `owner/repo` or
+an `https://` git URL.
+
+## The built-in registry
+
 The built-in `mahfouz` registry has:
 
 - **Mermaid diagrams**: ```` ```mermaid ```` blocks render as diagrams.
