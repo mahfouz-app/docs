@@ -116,8 +116,8 @@ template can style each one through a **layout section**:
 - **A layout**, such as `quote`, styles every slide with that layout.
 - **A variant**, such as `quote` with variant `wide`, styles slides that
   also have `class: wide`. It builds on the layout's section.
-- **First slide** styles slide 1, whatever its layout. It replaces the
-  older cover fields.
+- **First slide** styles the first slide shown, whatever its layout. It
+  replaces the older cover fields.
 
 Each field is inherited: the template's own value, then the layout's, then
 the variant's, then First slide's. A field a section leaves empty keeps the
@@ -142,6 +142,10 @@ can tell whether a section does anything before you change or remove it:
   layout section counts every slide with that layout, its variants
   included; a variant counts slides with that layout and class; **First
   slide** counts the decks.
+
+Slides a deck hides (a `hide: true` or `disabled: true` in their
+frontmatter) aren't counted, since they don't show when you present. When
+slide 1 is hidden, **First slide** styles the first slide that shows.
 
 The counts come from your saved notes and update as the notes change.
 
@@ -260,7 +264,8 @@ Choose one (arrow keys work) and click **Add**, or press <kbd>Enter</kbd>.
 Everything above lives in `.config/slides.md`, one `## <name>` section per
 template, so templates sync with the vault and read as plain Markdown. A
 template's own fields come first, then a `### <layout>` section for each
-layout, `### <layout>.<variant>` for a variant and `### first` for slide 1:
+layout, `### <layout>.<variant>` for a variant and `### first` for the first slide
+shown:
 
 ````markdown
 Format: 2
