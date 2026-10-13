@@ -3,3 +3,14 @@ exclude:
   - AGENTS.md
   - DESIGN.md
   - CLAUDE.md
+
+collections:
+  plugins:
+    output: true
+    permalink: /plugins/:path/
+
+defaults:
+  - scope:
+      type: plugins
+    values:
+      layout: plugin

@@ -1,7 +1,7 @@
 ---
 ---
-{%- assign data = site.data.plugins -%}
-{%- assign plugins = data.plugins -%}
+{%- assign data = site.data.plugin_options -%}
+{%- assign plugins = site.plugins | sort_natural: "name" -%}
 {%- assign authors = plugins | map: "author" | uniq | sort_natural -%}
 <!doctype html>
 <html lang="en">
@@ -69,6 +69,7 @@
           that registry first, and
           <a href="/guide/plugins/">only add registries you trust</a>.
         </p>
+        <p class="registry-hero-link"><a class="more" href="/guide/plugins/">How plugins work</a></p>
       </section>
 
       <div class="shell registry-layout">
@@ -114,7 +115,8 @@
 
           <ul class="registry-grid">
             {%- for plugin in plugins %}
-            {%- assign registry_name = plugin.id | split: "/" | first %}
+            {%- assign plugin_id = plugin.relative_path | remove_first: "_plugins/" | remove: ".md" %}
+            {%- assign registry_name = plugin_id | split: "/" | first %}
             {%- assign registry = site.data.plugin_registries | where: "name", registry_name | first %}
             <li
               class="registry-card"
@@ -122,10 +124,10 @@
               data-platforms="{{ plugin.platforms | join: ' ' }}"
               data-registry="{{ registry_name }}"
               data-author="{{ plugin.author | slugify }}"
-              data-search="{{ plugin.name | append: ' ' | append: plugin.description | append: ' ' | append: plugin.id | append: ' ' | append: plugin.author | downcase | escape }}"
+              data-search="{{ plugin.name | append: ' ' | append: plugin.description | append: ' ' | append: plugin_id | append: ' ' | append: plugin.author | downcase | escape }}"
             >
               <div class="registry-head">
-                <h3><a class="registry-title" href="{{ plugin.guide | default: plugin.source }}">{{ plugin.name }}</a></h3>
+                <h3><a class="registry-title" href="{{ plugin.url }}">{{ plugin.name }}</a></h3>
                 {%- if registry.official %}
                 <span class="registry-official">Official</span>
                 {%- endif %}
@@ -140,16 +142,14 @@
                 <span class="registry-requires">Requires Mahfouz {{ plugin.requires }} or later</span>
                 {{ plugin.category }}
                 · by {% if plugin.author_url %}<a href="{{ plugin.author_url }}">{{ plugin.author }}</a>{% else %}{{ plugin.author }}{% endif %}
-                · <code>{{ plugin.id }}</code>
+                · <code>{{ plugin_id }}</code>
               </p>
               <div class="registry-foot">
                 <p class="registry-links">
-                  {%- if plugin.guide %}
-                  <a class="more" href="{{ plugin.guide }}">Learn more<span class="sr-only"> about {{ plugin.name }}</span></a>
-                  {%- endif %}
+                  <a class="more" href="{{ plugin.url }}">Learn more<span class="sr-only"> about {{ plugin.name }}</span></a>
                   <a class="more" href="{{ plugin.source }}">Source<span class="sr-only"> of {{ plugin.name }}</span></a>
                 </p>
-                <a class="registry-install" href="https://mahfouz.app/plugins/install?plugin={{ plugin.id | url_encode }}&amp;registry={{ registry.url | url_encode }}">Install<span class="sr-only"> {{ plugin.name }}</span></a>
+                <a class="registry-install" href="https://mahfouz.app/plugins/install?plugin={{ plugin_id | url_encode }}&amp;registry={{ registry.url | url_encode }}">Install<span class="sr-only"> {{ plugin.name }}</span></a>
               </div>
             </li>
             {%- endfor %}
@@ -163,17 +163,23 @@
               <a href="https://github.com/mahfouz-app/plugins#layout">registry layout</a>.
               Then open a pull request on
               <a href="https://github.com/mahfouz-app/docs">mahfouz-app/docs</a>
-              that adds it to <code>_data/plugins.yml</code>:
+              that adds a file for it at
+              <code>_plugins/&lt;registry&gt;/&lt;plugin id&gt;.md</code>, such as
+              <code>_plugins/acme/kanban-export.md</code>. It becomes the
+              plugin's page here:
             </p>
-<pre><code>- id: acme/kanban-export       # &lt;registry&gt;/&lt;plugin id&gt;
-  name: Kanban export
-  description: Export a task board as CSV.
-  category: Export             # one of the categories above
-  author: Acme Labs
-  author_url: https://github.com/acme
-  platforms: [macos, linux, windows, web]
-  requires: 0.12.0             # the first Mahfouz version it works with
-  source: https://github.com/acme/mahfouz-plugins/tree/main/plugins/kanban-export</code></pre>
+<pre><code>---
+name: Kanban export
+description: Export a task board as CSV.
+category: Export             # one of the categories above
+author: Acme Labs
+author_url: https://github.com/acme
+platforms: [macos, linux, windows, web]
+requires: 0.12.0             # the first Mahfouz version it works with
+source: https://github.com/acme/mahfouz-plugins/tree/main/plugins/kanban-export
+---
+
+What the plugin does and how to use it, in Markdown.</code></pre>
             <p>
               If your registry isn't listed yet, add it to
               <code>_data/plugin_registries.yml</code> in the same pull

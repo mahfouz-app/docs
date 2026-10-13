@@ -1,0 +1,16 @@
+# The categories and platforms a plugin in _plugins/ can use. A plugin's
+# `category` must be one of `categories`, and each of its `platforms` a key
+# of `platforms`. The registry's filters list them in this order.
+
+categories:
+  - Diagrams
+  - Presenting
+  - Export
+  - Import
+  - Sync & storage
+
+platforms:
+  macos: macOS
+  linux: Linux
+  windows: Windows
+  web: Web

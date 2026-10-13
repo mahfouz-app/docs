@@ -117,6 +117,10 @@ Reuse these from `styles.css`:
   page, and set `aria-current="page"` on the page's nav link. A new
   top-level page goes in the main nav of every page that has one (`index.html`,
   `_layouts/`, `compare/`, `plugins/`).
+- A plugin's page uses the `plugin` layout, built from its file in
+  `_plugins/`: the title (with its badge to the right), the description,
+  the actions (**Source ›** and **Install**), a row of facts, then the
+  write-up in guide styles.
 - Guide pages use the `guide` layout and are styled by `.guide-content`; just
   write Markdown.
 - Each page loads `/theme.js` in `<head>` (before the stylesheet, so there's
