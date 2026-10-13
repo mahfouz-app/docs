@@ -215,9 +215,11 @@ Cards work like a Board's:
   apply as in a table. A Gallery isn't grouped: a grouping saved in the view
   is kept in the block but not shown.
 
-Covers come only from images in the vault. Only an image Mahfouz shows in
-the note counts as its first image: one that's only in a comment, a pending
-suggestion, or a code block is skipped. A few forms give no cover:
+Covers come only from images in the vault. The first image is taken from
+the note's text as it stands without its pending suggestions: an image
+that's only in a comment, in a code block, or added by a pending suggestion
+is skipped, while one a pending deletion would remove counts until the
+deletion is accepted. A few forms give no cover:
 
 - an attribute written as a wikilink, such as `[[cover.png]]`;
 - a link that isn't an image, such as a PDF;
