@@ -427,9 +427,55 @@ properties:
 
 The values are never written to your notes.
 
+## Show a database in another note
+
+Any note can show one of a database's views, such as a weekly review showing
+the books you're reading. Type `/` and choose **Database view**, then pick the
+database from the list that appears. Or, in the database's tab, open a view's
+**▾** menu and choose **Copy embed**, then paste it into the note.
+
+The note holds a small block:
+
+````markdown
+```database-view
+source: "[[Reading list]]"
+view: Reading now
+```
+````
+
+- `source` is the database, as a link. If you rename the database, Mahfouz
+  updates the link.
+- `view` names one of its views. Without it, the first view is shown. If you
+  rename or delete that view, the embed shows the first view and says so.
+
+In Preview, the block shows the view's rows as they are now, up to 10, with
+**Open database** to see the rest. The embed is read-only: clicking a row's
+title opens its note in a new tab, and you edit rows in the database itself.
+The block's text shows when you move the cursor onto it or choose **Edit
+source**. Other apps show it as a code block. A Board, Gallery, or Calendar
+view shows as a table, with its type named above it.
+
+A view's sort and filters apply, as saved in the database. Changes you
+haven't saved with **Save view** don't show in embeds. An embed in a note's
+history shows today's rows, not the rows as they were.
+
 ## Publishing
 
 Publishing a database note leaves the block out of the published page.
+
+Publishing or exporting a note with an embedded view replaces the block with a
+table of the view's rows, up to 100: titles and the view's columns, as plain
+text. The table is built each time the note is published, so rows added later
+appear when you next publish or update the page; a change to a row doesn't by
+itself mark the page out of date. Some rows and columns are always left out:
+
+- rows marked not to publish, disk-only rows, and people;
+- links to those notes in relation columns, and their values in rollups;
+- the **Created by** and **Last edited by** columns.
+
+An embed of a database that is itself marked not to publish, or of your people,
+is published as *Database view (not published)*. The same rules apply when you
+export to PDF.
 
 ## The agent
 
