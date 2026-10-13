@@ -56,7 +56,8 @@ new token needs all three.
   54ch wide.
 - **Eyebrow** (`.eyebrow`): a short label above a headline, 1rem, weight 600,
   `--cm-accent`.
-- **Kicker** inside a tile or card: 0.82rem, weight 600, `--cm-muted`.
+- **Kicker** inside a tile: 0.82rem, weight 600, `--cm-muted`. Not on
+  cards: a card starts with its title.
 - **Metadata:** 0.78–0.82rem, `--cm-muted`.
 - **Headlines end with a full stop** ("Plugins for Mahfouz."), in sentence
   case. No uppercase labels.
@@ -92,10 +93,16 @@ Reuse these from `styles.css`:
   `::after` overlay and the card's other links sit above it with
   `position: relative; z-index: 1` (`.registry-card`). On hover it scales to
   1.015 over 0.25s; turn that off under `prefers-reduced-motion`.
+  **Nothing goes above a card's title**: no kicker, label or badge. Put a
+  badge to the title's right and a category in the metadata line.
 - **Chips** (`.registry-chips`): short facts that come as a set, such as
   supported platforms. Filled with `--cm-bg` on a tile, pill shaped, 0.75rem,
   `--body-secondary`, no border. One fact per chip; keep a single fact like a
-  minimum version as a line of text instead.
+  minimum version as a line of text instead. A badge such as **Official** is
+  the same chip in `--cm-text`, never in the accent colour.
+- **Small buttons** on a card (`.registry-install`): the primary button's
+  fill and pill shape at 32px tall, at the card's bottom right. At most one
+  per card.
 - **Form fields** (`.registry-search`): `--tile` fill, no border, 12px
   radius; on focus an accent border and a 3px `--highlight` glow.
   Checkboxes use `accent-color: var(--cm-accent)`.

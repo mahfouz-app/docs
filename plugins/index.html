@@ -124,11 +124,12 @@
               data-author="{{ plugin.author | slugify }}"
               data-search="{{ plugin.name | append: ' ' | append: plugin.description | append: ' ' | append: plugin.id | append: ' ' | append: plugin.author | downcase | escape }}"
             >
-              <p class="registry-kicker">
-                {{ plugin.category }}
-                {%- if registry.official %} <span class="registry-official">Official</span>{% endif %}
-              </p>
-              <h3><a class="registry-title" href="{{ plugin.guide | default: plugin.source }}">{{ plugin.name }}</a></h3>
+              <div class="registry-head">
+                <h3><a class="registry-title" href="{{ plugin.guide | default: plugin.source }}">{{ plugin.name }}</a></h3>
+                {%- if registry.official %}
+                <span class="registry-official">Official</span>
+                {%- endif %}
+              </div>
               <p class="registry-description">{{ plugin.description }}</p>
               <ul class="registry-chips" aria-label="Supported platforms">
                 {%- for platform in plugin.platforms %}
@@ -137,15 +138,19 @@
               </ul>
               <p class="registry-meta">
                 <span class="registry-requires">Requires Mahfouz {{ plugin.requires }} or later</span>
-                by {% if plugin.author_url %}<a href="{{ plugin.author_url }}">{{ plugin.author }}</a>{% else %}{{ plugin.author }}{% endif %}
+                {{ plugin.category }}
+                · by {% if plugin.author_url %}<a href="{{ plugin.author_url }}">{{ plugin.author }}</a>{% else %}{{ plugin.author }}{% endif %}
                 · <code>{{ plugin.id }}</code>
               </p>
-              <p class="registry-links">
-                {%- if plugin.guide %}
-                <a class="more" href="{{ plugin.guide }}">Learn more<span class="sr-only"> about {{ plugin.name }}</span></a>
-                {%- endif %}
-                <a class="more" href="{{ plugin.source }}">Source<span class="sr-only"> of {{ plugin.name }}</span></a>
-              </p>
+              <div class="registry-foot">
+                <p class="registry-links">
+                  {%- if plugin.guide %}
+                  <a class="more" href="{{ plugin.guide }}">Learn more<span class="sr-only"> about {{ plugin.name }}</span></a>
+                  {%- endif %}
+                  <a class="more" href="{{ plugin.source }}">Source<span class="sr-only"> of {{ plugin.name }}</span></a>
+                </p>
+                <a class="registry-install" href="https://mahfouz.app/plugins/install?plugin={{ plugin.id | url_encode }}&amp;registry={{ registry.url | url_encode }}">Install<span class="sr-only"> {{ plugin.name }}</span></a>
+              </div>
             </li>
             {%- endfor %}
           </ul>
