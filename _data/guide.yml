@@ -41,6 +41,9 @@
     - slug: media
       title: "Images & attachments"
       description: "Add images, video, audio and other files to notes, and how Mahfouz stores them."
+    - slug: spelling
+      title: "Spelling check"
+      description: "See misspelled words as you type, turn checking on or off, and keep a vault dictionary of words to accept."
     - slug: fields
       title: "Fields"
       description: "Type !name to expand a field such as !today, and define your own."
