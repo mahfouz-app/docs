@@ -28,6 +28,22 @@ layout: quote
 # Third slide
 ```
 
+Slidev also reads a `yaml` code block as a slide's settings when it's the
+first thing after a `---` and a blank line, and the slide has no settings
+block of its own. Mahfouz reads it the same way: the page preview leaves it
+out of the slide, and layout completion, hints and the template usage counts
+in Settings → **Slides** take its `layout`, `class` and `hide`:
+
+````markdown
+---
+
+```yaml
+layout: quote
+```
+
+> A quote slide.
+````
+
 Slide 1's settings are the note's own attributes, such as `layout`, not a
 block at the top of its text.
 
