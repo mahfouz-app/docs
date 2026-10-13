@@ -32,6 +32,10 @@ a GitHub `owner/repo`.
 - A plugin's own page (click its name) shows its version, disk use, the log
   of its background process if it has one, and **Uninstall**.
 
+The [plugin registry](/plugins/) lists every plugin submitted for
+Mahfouz, from the built-in registry and others, and you can filter it by
+category, platform, registry and author.
+
 The built-in `mahfouz` registry has:
 
 - **Mermaid diagrams**: ```` ```mermaid ```` blocks render as diagrams.

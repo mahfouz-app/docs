@@ -1793,3 +1793,233 @@ h1 {
     transform: none;
   }
 }
+
+/* Plugin registry (/plugins/) */
+
+.registry-hero {
+  padding-block: clamp(72px, 9vw, 112px) 40px;
+}
+
+.registry-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px;
+  padding-bottom: 96px;
+}
+
+.registry-filters {
+  position: sticky;
+  top: 72px;
+  align-self: start;
+  display: grid;
+  gap: 22px;
+}
+
+.registry-filters[hidden],
+.registry-card[hidden],
+.registry-bar button[hidden] {
+  display: none;
+}
+
+.registry-filters fieldset {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.registry-filters legend {
+  margin-bottom: 6px;
+  padding: 0;
+  color: var(--body-secondary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.registry-filters label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.94rem;
+  cursor: pointer;
+}
+
+.registry-count {
+  margin-left: auto;
+  color: var(--cm-muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.registry-search,
+.registry-filters select {
+  width: 100%;
+  padding: 8px 10px;
+  color: var(--cm-text);
+  background: var(--cm-bg);
+  border: 1px solid var(--cm-border-strong);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.94rem;
+}
+
+.registry-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--body-secondary);
+  font-size: 0.94rem;
+}
+
+.registry-bar p {
+  margin: 0;
+}
+
+.registry-bar button {
+  padding: 0;
+  color: var(--link);
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.registry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.registry-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: var(--tile);
+  border-radius: 18px;
+}
+
+.registry-card h3 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.registry-card code {
+  color: var(--cm-code);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.registry-card p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.registry-card .registry-by {
+  color: var(--body-secondary);
+  font-size: 0.82rem;
+}
+
+.registry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.registry-tags li {
+  padding: 3px 9px;
+  color: var(--body-secondary);
+  border: 1px solid var(--cm-border-strong);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.registry-tags .registry-tag-category {
+  color: var(--cm-text);
+  background: var(--highlight);
+  border-color: transparent;
+}
+
+.registry-tags .registry-tag-official {
+  color: var(--cm-accent);
+  border-color: var(--cm-accent);
+}
+
+.registry-card .registry-links {
+  display: flex;
+  gap: 14px;
+  font-size: 0.88rem;
+}
+
+.registry-empty {
+  padding: 48px;
+  color: var(--body-secondary);
+  background: var(--tile);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.registry-submit {
+  margin-top: 40px;
+  padding: 28px;
+  background: var(--tile);
+  border-radius: 18px;
+}
+
+.registry-submit h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.registry-submit pre {
+  overflow-x: auto;
+  padding: 14px;
+  background: var(--cm-bg);
+  border: 1px solid var(--cm-border);
+  border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.registry-submit :not(pre) > code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+@media (max-width: 760px) {
+  .registry-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .registry-filters {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .registry-filter-wide {
+    grid-column: 1 / -1;
+  }
+
+  .registry-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .registry-submit {
+    padding: 20px;
+  }
+}
