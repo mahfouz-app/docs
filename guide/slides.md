@@ -8,6 +8,29 @@ permalink: /guide/slides/
 Any note can be shown as a [Slidev](https://sli.dev) deck: every bare
 `---` line is a slide break (a note with none is a one-slide deck).
 
+Leave a blank line after a `---` that separates two slides. Slidev reads a
+`---` followed directly by text as the start of that slide's settings,
+running to the next `---`, so a heading written right under it can vanish
+from the deck. Settings go right under the `---`, with no blank line, and a
+second `---` closes them:
+
+```markdown
+# First slide
+
+---
+layout: quote
+---
+
+> A quote slide.
+
+---
+
+# Third slide
+```
+
+Slide 1's settings are the note's own attributes, such as `layout`, not a
+block at the top of its text.
+
 - **<kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>** shows the current note fullscreen, layered over
   the whole app rather than opening a tab. Arrow keys move between slides;
   <kbd>Esc</kbd> (or menu **View → Stop Presenting**, <kbd>Cmd</kbd><kbd>.</kbd>) returns you exactly
