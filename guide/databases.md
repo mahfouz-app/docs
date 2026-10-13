@@ -150,8 +150,9 @@ A database can have several views of the same rows, each with its own sort,
 filters, grouping, and columns. The views appear as buttons in the toolbar;
 click one to show it. The view you picked is remembered on this device.
 
-- **+ View** adds a view: **Table**, or **Board** grouped by one of the
-  database's Select attributes.
+- **+ View** adds a view: **Table**, **Board** grouped by one of the
+  database's Select attributes, or **Gallery** with the cover image you
+  choose.
 - The **▾** next to the current view offers **Rename**, **Duplicate**, and
   **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
   save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
@@ -188,6 +189,45 @@ columns after them, and rows with no value go in the last column, "No
   apply on this device until you choose **Save view**.
 
 Cards in a column follow the view's sort. There's no manual card order.
+
+## Gallery
+
+A Gallery shows the rows as cards in a grid, each with a cover image above
+its title and fields. It suits rows that have a picture, such as books,
+places, or recipes. In the block, a Gallery is a view with `type: cards`.
+
+When you add one with **+ View** ▸ **Gallery**, choose where its covers come
+from:
+
+- **Image from ⟨attribute⟩** uses an Image attribute of the rows. The view
+  gets `image: <attribute>`. A row with no value in it has no cover.
+- **First image in note** uses the first image in each row's note. This is
+  the default when the view has no `image` key.
+- **No image** shows cards without covers, written as `image: false`.
+
+Cards work like a Board's:
+
+- **Click a card** to open its note; <kbd>Cmd</kbd>-click
+  (<kbd>Ctrl</kbd>-click) opens it in a new tab.
+- **⋯** on a card offers **Open**, **Open in new tab**, and **Delete row**.
+- **+ New row**, in the toolbar or after the last card, adds a row.
+- **Fields** chooses which attributes the cards show, and sort and filters
+  apply as in a table. A Gallery isn't grouped: a grouping saved in the view
+  is kept in the block but not shown.
+
+Covers come only from images in the vault. Only an image Mahfouz shows in
+the note counts as its first image: one that's only in a comment, a pending
+suggestion, or a code block is skipped. A few forms give no cover:
+
+- an attribute written as a wikilink, such as `[[cover.png]]`;
+- a link that isn't an image, such as a PDF;
+- an image link with a space in its path, such as `![](my cover.png)`.
+  Write the space as `%20`, or use the picker, which never adds spaces.
+
+The first-image fallback is Mahfouz's own. A Gallery written in another app
+with `type: cards` keeps its `image` and other settings, such as
+`imageFit` and `cardSize`, exactly as written, though Mahfouz doesn't use
+them yet.
 
 ## Relations
 
