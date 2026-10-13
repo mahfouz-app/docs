@@ -20,6 +20,10 @@ Guide**). On a phone, it's **User guide** in the **⋯** menu at the top right.
 Menu → **Help → Keyboard Shortcuts** (<kbd>Cmd/Ctrl</kbd><kbd>?</kbd>) opens a quick-reference
 shortcut cheat sheet inside the app.
 
+Your notes never leave your computer unless you send them somewhere: to a
+Git remote, an AI agent or a published page. See [Privacy: where your notes
+go](/privacy/).
+
 Using Mahfouz in a browser? See [Mahfouz on the web](/guide/web/).
 
 {%- for g in site.data.guide %}

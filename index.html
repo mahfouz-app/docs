@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone, and any agent, can read and edit directly, versioned and shared with Git."
+      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone, and any agent, can read and edit directly, versioned and shared with Git. Nothing goes to a cloud or an AI unless you choose."
     />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
@@ -29,6 +29,7 @@
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <a href="/#features" aria-current="page">Features</a>
+          <a href="/#privacy" aria-current="page">Privacy</a>
           <a href="/#agents" aria-current="page">Agents</a>
           <a href="/compare/">Compare</a>
           <a href="/guide/">User guide</a>
@@ -58,7 +59,7 @@
           <h1 id="hero-title">Notes that<br />stay yours.</h1>
           <p class="home-lede">
             Plain Markdown files in a folder on your computer. Git keeps the
-            history. Any editor, script, or AI agent can open them.
+            history. Nothing goes to a cloud or an AI until you choose where.
           </p>
           <div class="home-ctas">
             <a class="button button-primary" href="#downloads">Download for Mac</a>
@@ -152,15 +153,55 @@
         </div>
       </section>
 
-      <section id="agents" aria-labelledby="agents-title">
+      <section id="privacy" aria-labelledby="privacy-title">
+        <div class="shell">
+          <div class="home-head">
+            <p class="eyebrow">Private by default</p>
+            <h2 id="privacy-title">Your notes go nowhere you didn't send them.</h2>
+            <p>
+              Mahfouz has no cloud of its own, keeps no copy of your notes,
+              and doesn't hand them to an AI. Your notes leave your computer
+              only when you choose where: a Git remote you pick, or an AI
+              agent you set up.
+            </p>
+          </div>
+          <div class="home-bento">
+            <div class="home-tile span-3">
+              <p class="k">Cloud</p>
+              <h3>No Mahfouz cloud.</h3>
+              <p>A vault is a folder and a Git repository on your disk. To sync, push it to a private GitHub repository or any remote you already trust. Until then, nothing is uploaded.</p>
+            </div>
+            <div class="home-tile span-3">
+              <p class="k">AI</p>
+              <h3>No AI until you add one.</h3>
+              <p>The AI agent does nothing until you add your own Anthropic, OpenAI, or OpenRouter key, and then talks to that provider directly. External agents stay off until you turn them on, and see only the vaults you tick.</p>
+            </div>
+            <div class="home-tile span-6">
+              <p class="k">Your choice</p>
+              <h3>Every way out is one you turn on.</h3>
+              <ul class="home-plugins">
+                <li><b>Sync</b><span>Commits, to the Git remote you add</span></li>
+                <li><b>AI agent</b><span>To the provider whose key you add</span></li>
+                <li><b>External agents</b><span>Only the vaults you allow</span></li>
+                <li><b>Publishing</b><span>One note and its images, when you click Publish</span></li>
+                <li><b>Feedback</b><span>App version and OS. Never your notes</span></li>
+                <li><b>Analytics</b><span>None. No account needed</span></li>
+              </ul>
+              <p><a class="more" href="/privacy/">Where your notes go</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="agents" aria-labelledby="agents-title">
         <div class="shell">
           <div class="home-head">
             <p class="eyebrow">AI agents</p>
             <h2 id="agents-title">Speaks agent, natively.</h2>
             <p>
               Your notes are already in the format language models read best.
-              Through MCP, Claude, Codex, and other agents can work in your
-              vaults while you stay in charge.
+              When you turn it on, Claude, Codex, and other agents can work
+              in the vaults you pick, through MCP, while you stay in charge.
             </p>
           </div>
           <div class="home-bento">
@@ -268,6 +309,7 @@ https://mahfouz.app/mcp</pre>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/guide/">User guide</a>
         <a href="/changelog/">Changelog</a>
+        <a href="/privacy/">Privacy</a>
         <a href="/license/">License</a>
       </nav>
     </footer>

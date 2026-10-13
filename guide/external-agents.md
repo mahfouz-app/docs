@@ -121,6 +121,10 @@ this app until you turn it back on.
 
 ## Privacy and safety
 
+External agents are off until you turn them on, and nothing in your vaults
+reaches an agent before then. For everywhere your notes can go, see
+[Privacy](/privacy/).
+
 - **An agent reaches only the vaults you allow.** It's refused anywhere
   else.
 - **Notes are data, not instructions.** An agent reads notes you haven't
