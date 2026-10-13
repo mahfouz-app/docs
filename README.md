@@ -6,6 +6,7 @@ The public website and user documentation for [Mahfouz](https://mahfouz.app), se
 - `_includes/changelog.md` is written by the app's release workflow, not by hand. After every published release it copies the app's changelog here with links into the private app repo removed (`bin/public-changelog` in the app repo). `changelog.md` publishes it at [docs.mahfouz.app/changelog](https://docs.mahfouz.app/changelog/), with an anchor per version (`#v0.8.0`) that the app's About dialog links to.
 - `license.md` is the license page, [docs.mahfouz.app/license](https://docs.mahfouz.app/license/).
 - `index.html`, `compare/` and `styles.css` are the website.
+- `plugins/` is the plugin registry, [docs.mahfouz.app/plugins](https://docs.mahfouz.app/plugins/). It lists the plugins in [`_data/plugins.yml`](_data/plugins.yml) and the registries they come from in [`_data/plugin_registries.yml`](_data/plugin_registries.yml); `plugins.js` filters it. Plugin authors submit a plugin with a PR that adds an entry to `_data/plugins.yml`, described in the comment at the top of that file. When a plugin in the `mahfouz` registry is added, removed or changes its platforms or `mahfouz` range, update its entry too.
 
 ## How the app uses this repo
 

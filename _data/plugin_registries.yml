@@ -1,0 +1,9 @@
+# Plugin registries listed on /plugins/. A plugin in _data/plugins.yml names
+# its registry by the first part of its id (`mahfouz/mermaid` → `mahfouz`).
+#
+# - name: the registry's `name` from its registry.json
+# - url: where to add it from (Settings → Plugins → Registries → Add a registry)
+# - official: true only for the built-in mahfouz registry
+- name: mahfouz
+  url: https://github.com/mahfouz-app/plugins
+  official: true

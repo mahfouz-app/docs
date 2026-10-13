@@ -1,2 +1,4 @@
 exclude:
   - README.md
+  - AGENTS.md
+  - CLAUDE.md

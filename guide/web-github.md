@@ -21,8 +21,8 @@ choose **Only select repositories** and pick the ones you keep vaults in.
 The account popover then offers **Manage repository access** to change the
 selection later.
 
-- **Sign out** — ends this browser's session only.
-- **Sign out everywhere (including desktop)** — ends every browser session
+- **Sign out**: ends this browser's session only.
+- **Sign out everywhere (including desktop)**: ends every browser session
   and revokes Mahfouz's GitHub authorization, which signs the desktop app out
   too. If Mahfouz can't confirm that every session ended and that GitHub
   revoked it, it says **Signed out of this browser only**: the desktop app
@@ -39,6 +39,8 @@ On first run (in the bar above the welcome page), or from Open Vault, click
    approve the installation first, Mahfouz says so; click **Check again**
    once they have.
 2. Pick the repository. Don't see it? **Manage repository access** adds it.
+   A repository encrypted with git-crypt is marked **Encrypted · desktop
+   only**: the web can't decrypt it (see [Encrypted vaults](/guide/encryption/)).
 3. Mahfouz shows the repository's size (GitHub's estimate). Above 250 MB it
    warns that the clone may take a long time and fill that much of the
    browser's storage. Click **Clone** and keep the tab open until it ends: a
@@ -57,24 +59,28 @@ Anything not yet pushed is gone with it, so let it sync before you clear data.
 
 ### Syncing
 
-A GitHub vault syncs on its own: it pushes shortly after a commit and pulls
-regularly and when you return to the tab. Syncing only fast-forwards: if
-GitHub and the vault each have commits the other lacks, Mahfouz doesn't merge
-them on the web, and the notification says so. Sync that vault from the
-desktop app instead. A single commit larger than 100 MB has to be pushed
-from the desktop app.
+A GitHub vault syncs on its own: it pushes shortly after a commit, and pulls
+and then pushes anything still waiting regularly, when you return to the tab
+and when you come back online. If GitHub and the vault each have commits the
+other lacks, Mahfouz combines them as the desktop app does, including a note
+changed on both sides when the changes don't overlap. If the same part of a
+note changed on both sides, sync stops, and you choose what to keep in the
+Merge tab (see [When sync fails](/guide/when-sync-fails/#this-note-changed-here-and-on-github)).
+The browser can't wait while a tab closes, so commits not yet pushed go out
+the next time you open the vault. A single commit larger than 100 MB has to
+be pushed from the desktop app.
 
-- **Unfinished updates** — if the tab closes in the middle of a pull or
+- **Unfinished updates**: if the tab closes in the middle of a pull or
   reset, Mahfouz finishes it on the next load. If you've edited a file it
   would overwrite, it stops and names the files, with two ways out:
   **Discard my changes and finish**, or **Reset to GitHub**, which makes the
   vault match GitHub. Both ask first and lose the changes they name. Commits
   wait until it's settled.
-- **Lost access** — if the Mahfouz app no longer reaches the repository (you
+- **Lost access**: if the Mahfouz app no longer reaches the repository (you
   removed it from the selection, or the repository is gone or renamed),
   Mahfouz says **Mahfouz lost access to &lt;repository&gt;**. **Manage
   repository access** opens GitHub's page for the app.
-- **Signed out** — when your sign-in ends, every vault's sync pauses with one
+- **Signed out**: when your sign-in ends, every vault's sync pauses with one
   notice, **Sync paused: signed out of GitHub** (or **expired**). **Sign in
   again** resumes them; your changes stay in the vault meanwhile.
 
