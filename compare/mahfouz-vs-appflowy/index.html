@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="Mahfouz vs AppFlowy: AppFlowy is open source but needs a server to sync; Mahfouz needs zero hosting: no AppFlowy Cloud, no self-hosted server, just files and Git."
+      content="Mahfouz vs AppFlowy: AppFlowy keeps notes in its own database and syncs through a server. Mahfouz keeps plain Markdown files and syncs through Git."
     />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
@@ -56,11 +56,11 @@
         <p class="eyebrow">Mahfouz vs AppFlowy</p>
         <h1 id="compare-title">Mahfouz <span class="compare-vs">vs</span> AppFlowy</h1>
         <p class="hero-description">
-          AppFlowy is open source, but it's still a workspace
-          you have to run: AppFlowy Cloud, or a self-hosted server you
-          deploy and maintain yourself. Mahfouz needs no hosting at all: your
-          vault is just files on disk, optionally backed by any Git remote
-          you already have, or none.
+          AppFlowy is open source and runs on your desktop, but your notes
+          live in its own database, and syncing or sharing them means
+          AppFlowy Cloud or a server you deploy and license yourself.
+          Mahfouz keeps plain Markdown files and syncs them through any Git
+          remote you already have, or none.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="/#downloads">Download Mahfouz</a>
@@ -82,44 +82,84 @@
             <tbody>
               <tr>
                 <th scope="row">File format &amp; ownership</th>
-                <td>Open source, but notes live in an app-managed local database, not flat Markdown files you can browse or edit elsewhere.</td>
+                <td>Open source, but notes live in a local database the app manages, not Markdown files you can browse or edit elsewhere.</td>
                 <td class="compare-table-mahfouz">Plain <code>.md</code> files in a folder you choose. Open, edit, or grep them with any tool.</td>
               </tr>
               <tr>
                 <th scope="row">Where it runs</th>
-                <td>AppFlowy Cloud, or a self-hosted server you deploy and run yourself (Docker, Postgres). Either way, something has to be hosted.</td>
-                <td class="compare-table-mahfouz">Nowhere. Not a Mahfouz cloud, not a self-hosted server. Nothing to deploy, ever. "Hosting" is only whatever Git remote you already use, if any.</td>
+                <td>On your desktop with no account. Sync and collaboration need AppFlowy Cloud or a self-hosted server (Docker).</td>
+                <td class="compare-table-mahfouz">On your computer, or in your browser at mahfouz.app. No account needed, and Mahfouz has no cloud of its own and keeps no copy of your notes.</td>
               </tr>
               <tr>
                 <th scope="row">Version history</th>
-                <td>Handled by AppFlowy's own sync layer; history is tied to whichever server (cloud or self-hosted) is running it.</td>
-                <td class="compare-table-mahfouz">Full history in a real Git repo, kept as long as you keep it, independent of any server.</td>
+                <td>Page history: 7 days on the free cloud plan, 90 on Pro.</td>
+                <td class="compare-table-mahfouz">Full history in a real Git repo, kept as long as you keep it, not a vendor's retention window.</td>
               </tr>
               <tr>
                 <th scope="row">Offline use</th>
-                <td>The desktop app works locally, but real-time sync and collaboration need AppFlowy Cloud or a self-hosted server to be running.</td>
-                <td class="compare-table-mahfouz">Fully local-first, always. There's no server to reach even when you want to collaborate.</td>
+                <td>The desktop app works offline; sync and collaboration need the server.</td>
+                <td class="compare-table-mahfouz">Fully local-first. Works offline by default; there's no "download for offline" step.</td>
               </tr>
               <tr>
-                <th scope="row">Real-time collaboration</th>
-                <td>Available, but requires AppFlowy Cloud or your own self-hosted deployment to be online.</td>
-                <td class="compare-table-mahfouz">Git-based: share a vault the way you'd share any repo, and everyone works from their own full copy.</td>
+                <th scope="row">Sync &amp; collaboration</th>
+                <td>Real-time, through AppFlowy Cloud or your own server. No file-based sync.</td>
+                <td class="compare-table-mahfouz">Built in, through any Git remote you choose. Everyone works from their own full copy, and track changes lets people suggest edits. There's no live multiplayer editing.</td>
+              </tr>
+              <tr>
+                <th scope="row">In the browser</th>
+                <td>Yes, with an AppFlowy Cloud or self-hosted account.</td>
+                <td class="compare-table-mahfouz">The web app at mahfouz.app opens a folder on your computer or a GitHub repository, with no copy kept on Mahfouz's servers.</td>
+              </tr>
+              <tr>
+                <th scope="row">AI agents</th>
+                <td>AppFlowy AI is built in, and local AI through Ollama is free. No official MCP server yet; community ones exist.</td>
+                <td class="compare-table-mahfouz">Agents can read the files directly, and Claude Code, Codex, and other MCP clients can connect to Mahfouz, with per-vault access and edits that wait for your approval.</td>
+              </tr>
+              <tr>
+                <th scope="row">Databases</th>
+                <td>Grid, board, and calendar views.</td>
+                <td class="compare-table-mahfouz">Built in. Each row is a note, with table, board, gallery, and calendar views.</td>
+              </tr>
+              <tr>
+                <th scope="row">Tasks</th>
+                <td>To-do lists, plus task boards with due dates and reminders.</td>
+                <td class="compare-table-mahfouz">Turn a checklist item into a task with a due date, an assignee, and a reminder, and see every task in a list or on a board.</td>
+              </tr>
+              <tr>
+                <th scope="row">Presentations</th>
+                <td>No built-in presentation mode.</td>
+                <td class="compare-table-mahfouz">Present any note as slides styled by a vault-wide template, and export the deck to PDF or PowerPoint (desktop, Slidev plugin).</td>
+              </tr>
+              <tr>
+                <th scope="row">Publishing</th>
+                <td>Publish pages to the web through AppFlowy Cloud; self-hosted servers need extra setup.</td>
+                <td class="compare-table-mahfouz">Publish a note as a public page at a link you share, and keep it in step with the note.</td>
+              </tr>
+              <tr>
+                <th scope="row">Track changes</th>
+                <td>No suggestion mode; collaborators edit the page directly.</td>
+                <td class="compare-table-mahfouz">Built in. Suggest edits instead of making them, then accept or reject each one, with comments alongside.</td>
+              </tr>
+              <tr>
+                <th scope="row">Platforms</th>
+                <td>macOS, Windows, Linux, iOS, Android, and the web.</td>
+                <td class="compare-table-mahfouz">macOS and the web today. Windows and Linux are coming soon.</td>
               </tr>
               <tr>
                 <th scope="row">Price</th>
-                <td>Free tier limited to 2 members and 5 GB; cloud Pro runs about $10&ndash;12.50/user/month. Self-hosting is free of license fees, but you cover your own server.</td>
-                <td class="compare-table-mahfouz">Free. One download, no seats, no server bill.</td>
+                <td>Cloud is free for one person with 100 MB of storage; Pro is $16/member/month billed annually ($20 monthly). Self-hosting is free for one user and 3 guests; teams pay $10/seat/month.</td>
+                <td class="compare-table-mahfouz">Free. No seats. The only cost is whatever Git hosting you choose, if any.</td>
               </tr>
               <tr>
                 <th scope="row">Data export / lock-in</th>
-                <td>Open source lowers the risk, but you're still exporting from an app-managed database rather than working with files directly.</td>
-                <td class="compare-table-mahfouz">Nothing to export. Your notes were never anything but files.</td>
+                <td>Pages export one at a time to Markdown or PDF, and databases to CSV, from an app-managed database.</td>
+                <td class="compare-table-mahfouz">Nothing to unlock: notes are files. Export a note and its children to Markdown with their attachments, or to PDF.</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="compare-table-note">
-          AppFlowy pricing and plan details shown as published on appflowy.com; check their pricing page for current figures.
+          AppFlowy pricing as published on appflowy.com in October 2026; check their pricing page for current figures.
         </p>
       </section>
 
@@ -131,31 +171,31 @@
             <div class="compare-faq-item">
               <h3>AppFlowy is open source. Doesn't that protect me from lock-in?</h3>
               <p>
-                Open source code doesn't make your notes portable, and it
-                doesn't remove the need to run something. AppFlowy keeps notes
-                in an app-managed database and needs AppFlowy Cloud or a
-                self-hosted server (Docker, Postgres) to sync and collaborate.
+                Open source code doesn't make your notes portable. AppFlowy keeps
+                notes in an app-managed database, exported a page at a time, and
+                its self-hosted sync server now ships under a commercial licence.
                 Mahfouz keeps your notes open where it matters: they're plain
-                Markdown files in a Git repository, readable and editable
-                without Mahfouz, and there's no server to run at all.
+                Markdown files in a Git repository, readable and editable without
+                Mahfouz, and there's no server to run at all.
               </p>
             </div>
             <div class="compare-faq-item">
               <h3>If I self-host AppFlowy, is that the same as Mahfouz's local-first model?</h3>
               <p>
-                No. Self-hosting AppFlowy still means standing up, updating,
-                and paying for a server you're responsible for. Mahfouz has
-                nothing to host, on your infrastructure or anyone else's; your
-                vault is just a folder that happens to be a Git repo.
+                No. Self-hosting AppFlowy still means standing up, updating, and
+                paying for a server you're responsible for, and a team needs a
+                paid licence. Mahfouz has nothing to host, on your infrastructure
+                or anyone else's; your vault is just a folder that happens to be a
+                Git repo.
               </p>
             </div>
             <div class="compare-faq-item">
               <h3>Does Mahfouz support real-time collaboration like AppFlowy?</h3>
               <p>
-                Not in the live, multiplayer sense. Collaboration works the
-                way Git collaboration always has: everyone has a full copy,
-                and changes merge through commits. No server has to stay
-                online for it to work.
+                Not in the live, multiplayer sense. Collaboration works the way
+                Git collaboration always has: everyone has a full copy, and
+                changes merge through commits. No server has to stay online for it
+                to work.
               </p>
             </div>
           </div>

@@ -86,8 +86,8 @@
               </tr>
               <tr>
                 <th scope="row">Where it runs</th>
-                <td>Notion's cloud. Requires an account and a connection for full functionality.</td>
-                <td class="compare-table-mahfouz">Nowhere but your computer. No account, no server, no Mahfouz cloud, ever.</td>
+                <td>Notion's cloud. Requires an account.</td>
+                <td class="compare-table-mahfouz">On your computer, or in your browser at mahfouz.app. No account needed, and Mahfouz has no cloud of its own and keeps no copy of your notes.</td>
               </tr>
               <tr>
                 <th scope="row">Version history</th>
@@ -96,29 +96,69 @@
               </tr>
               <tr>
                 <th scope="row">Offline use</th>
-                <td>Limited: you choose individual pages to download; everything else needs a connection.</td>
+                <td>Partial, and only in the desktop and mobile apps. Free downloads the pages you choose; paid plans also download recent and favorite pages. Everything else needs a connection.</td>
                 <td class="compare-table-mahfouz">Fully local-first. Works offline by default; there's no "download for offline" step.</td>
               </tr>
               <tr>
-                <th scope="row">Real-time collaboration</th>
-                <td>Built in, inside Notion's hosted workspace.</td>
-                <td class="compare-table-mahfouz">Git-based: share a vault the way you'd share any repo, and everyone works from their own full copy.</td>
+                <th scope="row">Sync &amp; collaboration</th>
+                <td>Real-time, in Notion's hosted workspace.</td>
+                <td class="compare-table-mahfouz">Built in, through any Git remote you choose. Everyone works from their own full copy, and track changes lets people suggest edits. There's no live multiplayer editing.</td>
+              </tr>
+              <tr>
+                <th scope="row">In the browser</th>
+                <td>Yes. The web app is Notion's main client.</td>
+                <td class="compare-table-mahfouz">The web app at mahfouz.app opens a folder on your computer or a GitHub repository, with no copy kept on Mahfouz's servers.</td>
+              </tr>
+              <tr>
+                <th scope="row">AI agents</th>
+                <td>Notion's own AI agents are fully included only on Business and Enterprise. External agents such as Claude Code connect through Notion's official MCP server.</td>
+                <td class="compare-table-mahfouz">Agents can read the files directly, and Claude Code, Codex, and other MCP clients can connect to Mahfouz, with per-vault access and edits that wait for your approval.</td>
+              </tr>
+              <tr>
+                <th scope="row">Databases</th>
+                <td>Built in, with many view types.</td>
+                <td class="compare-table-mahfouz">Built in. Each row is a note, with table, board, gallery, and calendar views.</td>
+              </tr>
+              <tr>
+                <th scope="row">Tasks</th>
+                <td>To-dos, plus task databases with assignees, due dates, and reminders.</td>
+                <td class="compare-table-mahfouz">Turn a checklist item into a task with a due date, an assignee, and a reminder, and see every task in a list or on a board.</td>
+              </tr>
+              <tr>
+                <th scope="row">Presentations</th>
+                <td>Presentation mode (beta), on Plus and above.</td>
+                <td class="compare-table-mahfouz">Present any note as slides styled by a vault-wide template, and export the deck to PDF or PowerPoint (desktop, Slidev plugin).</td>
+              </tr>
+              <tr>
+                <th scope="row">Publishing</th>
+                <td>Notion Sites, from your workspace.</td>
+                <td class="compare-table-mahfouz">Publish a note as a public page at a link you share, and keep it in step with the note.</td>
+              </tr>
+              <tr>
+                <th scope="row">Track changes</th>
+                <td>Suggested edits you accept or reject, with comments.</td>
+                <td class="compare-table-mahfouz">Built in. Suggest edits instead of making them, then accept or reject each one, with comments alongside.</td>
+              </tr>
+              <tr>
+                <th scope="row">Platforms</th>
+                <td>Web, macOS, Windows, iOS, and Android. No Linux app.</td>
+                <td class="compare-table-mahfouz">macOS and the web today. Windows and Linux are coming soon.</td>
               </tr>
               <tr>
                 <th scope="row">Price</th>
-                <td>Free tier is limited; paid plans run from about &euro;9.50/member/month (Plus) up to &euro;19.50 (Business), billed per seat.</td>
-                <td class="compare-table-mahfouz">Free. One download, no seats.</td>
+                <td>Free tier is limited; paid plans run from &euro;9.50/member/month (Plus) to &euro;19.50 (Business), billed per seat.</td>
+                <td class="compare-table-mahfouz">Free. No seats. The only cost is whatever Git hosting you choose, if any.</td>
               </tr>
               <tr>
                 <th scope="row">Data export / lock-in</th>
-                <td>Full workspace export (HTML/Markdown/CSV) exists but isn't on the Free plan, and it's a one-time snapshot, not how the data normally lives.</td>
-                <td class="compare-table-mahfouz">Nothing to export. Your notes were never anything but files.</td>
+                <td>Workspace export to HTML, Markdown, or CSV on every plan, but it's a one-time snapshot, not how the data normally lives.</td>
+                <td class="compare-table-mahfouz">Nothing to unlock: notes are files. Export a note and its children to Markdown with their attachments, or to PDF.</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="compare-table-note">
-          Notion pricing and plan limits shown as published on notion.com; check their pricing page for current figures.
+          Notion pricing and plan limits as published on notion.com in October 2026; check their pricing page for current figures.
         </p>
       </section>
 
@@ -131,27 +171,33 @@
               <h3>Can I open my notes without Mahfouz?</h3>
               <p>
                 Yes. Every note is a plain <code>.md</code> file. Open it in any
-                text editor, script against it, or hand it to an AI agent;
-                nothing is trapped in a proprietary format the way Notion's
-                blocks are.
+                text editor, script against it, or hand it to an AI agent; nothing
+                is trapped in a proprietary format the way Notion's blocks are.
               </p>
             </div>
             <div class="compare-faq-item">
               <h3>Does Mahfouz have real-time multiplayer editing like Notion?</h3>
               <p>
-                No. Mahfouz is a local-first, single-writer editor.
-                Collaboration happens through Git: push, pull, and merge like
-                any other repo, rather than everyone typing into the same live
-                document.
+                No. Mahfouz is a local-first, single-writer editor. Collaboration
+                happens through Git: push, pull, and merge like any other repo,
+                rather than everyone typing into the same live document.
               </p>
             </div>
             <div class="compare-faq-item">
               <h3>What does Mahfouz cost compared to Notion?</h3>
               <p>
-                Mahfouz is free, with no seats to pay for.
-                Notion's paid plans are billed per member per month, and
-                features like full workspace export or unlimited page history
-                sit behind higher tiers.
+                Mahfouz is free, with no seats to pay for. Notion's paid plans are
+                billed per member per month, and page history beyond 90 days needs
+                Enterprise.
+              </p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Can I bring my Notion workspace into Mahfouz?</h3>
+              <p>
+                Yes. The <a href="/guide/import-notion/">Notion import</a> plugin
+                copies pages, databases, to-dos, comments, and files into a vault
+                through Notion's API, so you don't export anything first. It runs
+                in the desktop app.
               </p>
             </div>
           </div>
