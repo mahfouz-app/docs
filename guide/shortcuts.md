@@ -19,6 +19,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>?</kbd> | Open keyboard shortcuts help |
 | <kbd>Mod</kbd><kbd>W</kbd> | Close active tab |
 | <kbd>Mod</kbd><kbd>S</kbd> | Manual save + commit |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>G</kbd> | [Commit notes…](/guide/history/#commit-notes): pick which uncommitted notes to commit |
 | <kbd>Mod</kbd><kbd>&#92;</kbd> | Toggle left sidebar |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd> | Toggle right sidebar |
 | <kbd>Mod</kbd><kbd>1</kbd> | Go to all notes |
@@ -26,11 +27,16 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>3</kbd> | Go to tags |
 | <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
 | <kbd>Mod</kbd><kbd>5</kbd> | Go to search |
+| <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd> | Add the word under the cursor to the [vault dictionary](/guide/spelling/#the-vault-dictionary) |
+| None | Remove the word under the cursor from the vault dictionary (no default key) |
 | <kbd>Mod</kbd><kbd>6</kbd> | Go to tasks |
-| — | Toggle auto-commit for note (no default key) |
-| — | Open the vault mind map (no default key; action "Open mind map") |
-| — | Create a database (no default key; action "New database") |
-| — | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
+| None | Toggle auto-commit for note (no default key) |
+| None | Open the vault mind map (no default key; action "Open mind map") |
+| None | Create a database (no default key; action "New database") |
+| None | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
+| None | Set the active note's page icon (no default key; action "Set note icon") |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
@@ -64,7 +70,8 @@ shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
   **New Database**, New Vault, Open Vault, Save, Export, Close Tab.
-- **Edit**: the usual editing commands, Find and Replace, Search Vault.
+- **Edit**: the usual editing commands, Find and Replace, Find Selection,
+  Search Vault, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
   Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
   File Explorer), Revision History, plugin commands such as Present, and

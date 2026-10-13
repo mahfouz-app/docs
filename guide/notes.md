@@ -15,7 +15,7 @@ way. Once a note has a folder it keeps it.
 
 The file name follows the title as you edit it, until you rename the note
 in the Sidebar: from then on it keeps the name you gave it. You never need
-these paths day to day — the Sidebar presents them as a normal expandable
+these paths day to day: the Sidebar presents them as a normal expandable
 tree. Notes from older versions may have names that include their id; they
 pick up a title-based name the next time their title changes. Vaults
 created before this layout are offered a one-time migration on open;
@@ -24,8 +24,10 @@ declining keeps the older one-folder-per-note shape, which still works.
 - **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the
-  Sidebar for "new note here."
-- **Title**: there's no separate title field — a note's title is always
+  Sidebar for "new note here." Hover a note or a folder in the Sidebar for
+  its own `+` (a new note inside it) and `⋮` (the same menu as a
+  right-click).
+- **Title**: there's no separate title field; a note's title is always
   the first non-empty line of its body (with a leading `#` stripped if
   present). Rename a note by editing its first line.
 - **Reordering / nesting**: drag a note in the Sidebar to reorder it or
@@ -54,9 +56,11 @@ declining keeps the older one-folder-per-note shape, which still works.
   folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
   **Reveal in Finder**, and **Delete folder**.
 - **Breadcrumb**: the bar above the editor shows where the open note
-  lives: the vault, then every folder it's nested in. Click a folder that
+  lives: a home icon for the vault (hover it for the vault's name), then
+  every folder it's nested in, each note with its icon. Click a folder that
   belongs to a note to open that note; click a plain folder to show it in
-  the Sidebar.
+  the Sidebar. Hover any of them, or click the arrow after it, to list
+  what's inside it and jump to one.
 - **Sidebar menu**: right-click empty space in the Sidebar for **New
   note** and **New folder** (in the active vault), **New vault…**, **Open
   vault…**, and the grouping, sort and filename-display options.
@@ -69,7 +73,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   folder outside Mahfouz (no `id:` in its frontmatter), it shows up right
   away in the Sidebar as a clickable "pending" row, in the folder (or under
   the note) it was added to. Mahfouz doesn't touch the file until you edit
-  it there: the first edit imports it — Mahfouz adds the id it needs and
+  it there: the first edit imports it; Mahfouz adds the id it needs and
   leaves everything else alone.
 - **Edits from other apps**: Mahfouz watches the vault folder. When another
   app changes the note you have open, the editor updates in place within a
@@ -77,9 +81,33 @@ declining keeps the older one-folder-per-note shape, which still works.
   reload). If you were typing at the same moment, a banner offers to
   reload or resolve the conflict instead, so your unsaved typing is never
   overwritten.
-- **Status dots**: each Sidebar row shows a small dot indicating whether
-  the note has uncommitted changes, is synced to a remote, or is local-only. A note with auto-commit off also shows a drive glyph
+- **Sync marks**: each Sidebar row and tab shows a mark before the note's
+  title: whether its changes are uncommitted, committed but not pushed, or
+  pushed, and whether a push failed or conflicts with the remote. See
+  [The note mark](/guide/git/#the-note-mark). A note with auto-commit off
+  shows a drive glyph instead
   (see [Auto-commit and disk-only notes](/guide/history/#auto-commit-and-disk-only-notes)).
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
   via Settings.
+
+## Page icons
+
+Any note can have an emoji icon. It shows before the note's title in the
+Sidebar and on its tab, and above the note in the editor.
+
+- **Set it**: hover the top of the note and click **Add icon**, or choose
+  **Set icon…** from the note's ⋯ menu or its right-click menu in the
+  Sidebar. There's also a **Set note icon** shortcut action with no
+  default key; bind one in **Settings → Shortcuts**.
+- **Change or remove it**: click the icon above the note to pick another
+  one. **Remove** in the picker clears it.
+- **Where it's stored**: the note's frontmatter, as `icon: 🚀`. It shows
+  up in the [Attributes](/guide/attributes/) panel, where you can edit it
+  like any other attribute. If `icon:` already holds something that isn't
+  a single emoji (a value another tool such as Jekyll uses), Mahfouz
+  leaves it alone and shows no icon.
+- **Folders**: a note with children can have an icon. A plain folder
+  can't, because it has no note file to store it in.
+- **Published pages**: a [published page](/guide/publishing/) doesn't
+  show the icon, so changing it doesn't mark the page out of date.
