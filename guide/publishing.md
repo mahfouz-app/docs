@@ -98,15 +98,18 @@ A page doesn't change when you edit the note. To bring it up to date:
 
 - Choose **Update published page** from the note's menu.
 - Or, in the right sidebar's **Attributes** section, click **Update** next to
-  **Page out of date**. That row appears when you've changed the note since
-  you last published it, including its `description` and `lang`
-  attributes.
+  **Page out of date**. That row appears when you've changed something the
+  page shows since you last published it: the title, the text and its
+  images, the page's style, or the `description` and `lang` attributes.
+  Other attributes aren't on the page, so changing them doesn't mark it out
+  of date.
 
 The same section shows the page's link (click it to open the page, or
 **Copy**) and the **Auto-publish** switch.
 
 **Auto-publish** updates the page a few seconds after each commit that
-changes the note, so the page follows your edits without you asking.
+changes what the page shows, so the page follows your edits without you
+asking.
 
 - It works through commits, so a note with auto-commit turned off (a
   [disk-only note](/guide/history/#auto-commit-and-disk-only-notes)) can't
