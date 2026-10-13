@@ -16,11 +16,16 @@ Mahfouz keeps no separate history of its own: **history is git history.**
 - **Trash** (Sidebar, <kbd>Cmd/Ctrl</kbd><kbd>4</kbd>) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
-- Every note edit auto-commits ~30 seconds after your last keystroke in
-  that note (message `Auto-save <timestamp>`), and any edits made outside
+- Every note edit auto-commits within about 30 seconds of your last
+  keystroke, as `Auto-save: “Meeting notes”`. Any edits made outside
   Mahfouz (a text editor, another git client) are auto-committed as
-  `External edits` as soon as Mahfouz notices them, so
-  nothing you do to the vault folder is ever silently lost.
+  `External edits: “Reading list”` as soon as Mahfouz notices them, so
+  nothing you do to the vault folder is ever silently lost. Saving with
+  <kbd>Cmd/Ctrl</kbd><kbd>S</kbd> commits at once, as
+  `Manual save: “Meeting notes”`. Each message names up to three of the
+  changed notes, then "and N more". When a commit touches several files,
+  its description lists them all. Note titles show up in the vault's git
+  history, which everyone with access to the repository can read.
 
 ## Commit notes
 
