@@ -43,8 +43,9 @@ Other editor behavior:
 - On any other line, **Tab** re-indents only when your cursor is in leading
   whitespace at the start of the line; anywhere else it's left free for
   OS-level autocomplete.
-- Native macOS spellcheck/autocorrect (including Text Replacements) work
-  normally.
+- Misspelled words are underlined by your system's spell checker (see
+  [Spelling check](/guide/spelling/)). Native macOS autocorrect (including
+  Text Replacements) works normally.
 - <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
   note).
