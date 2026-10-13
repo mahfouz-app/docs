@@ -7,7 +7,7 @@ permalink: /guide/
 
 Mahfouz is a cross-platform Markdown PKM (personal knowledge management) app.
 Your notes are plain Markdown files in a folder that is also a git
-repository — those files are the source of truth, and everything Mahfouz
+repository; those files are the source of truth, and everything Mahfouz
 shows you comes from them.
 
 **Mahfouz needs git.** If it can't find a usable git when it starts, it
@@ -16,9 +16,13 @@ offers to install its own copy, or shows how to install git yourself. See
 
 This guide is the long-form manual. To open it from the app, click the **?**
 button near the bottom of the left rail (on desktop, also **Help → User
-Guide**).
+Guide**). On a phone, it's **User guide** in the **⋯** menu at the top right.
 Menu → **Help → Keyboard Shortcuts** (<kbd>Cmd/Ctrl</kbd><kbd>?</kbd>) opens a quick-reference
 shortcut cheat sheet inside the app.
+
+Your notes never leave your computer unless you send them somewhere: to a
+Git remote, an AI agent or a published page. See [Privacy: where your notes
+go](/privacy/).
 
 Using Mahfouz in a browser? See [Mahfouz on the web](/guide/web/).
 
