@@ -1797,22 +1797,22 @@ h1 {
 /* Plugin registry (/plugins/) */
 
 .registry-hero {
-  padding-block: clamp(72px, 9vw, 112px) 40px;
+  padding-block: clamp(72px, 9vw, 112px) 48px;
 }
 
 .registry-layout {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 40px;
-  padding-bottom: 96px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  padding-bottom: 112px;
 }
 
 .registry-filters {
   position: sticky;
-  top: 72px;
+  top: 80px;
   align-self: start;
   display: grid;
-  gap: 22px;
+  gap: 28px;
 }
 
 .registry-filters[hidden],
@@ -1823,56 +1823,74 @@ h1 {
 
 .registry-filters fieldset {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
 .registry-filters legend {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   padding: 0;
-  color: var(--body-secondary);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 .registry-filters label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.94rem;
+  gap: 10px;
+  color: var(--body-secondary);
+  font-size: 0.9rem;
   cursor: pointer;
+}
+
+.registry-filters label:hover,
+.registry-filters label:has(:checked) {
+  color: var(--cm-text);
+}
+
+.registry-filters input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--cm-accent);
 }
 
 .registry-count {
   margin-left: auto;
   color: var(--cm-muted);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
 }
 
 .registry-search,
 .registry-filters select {
   width: 100%;
-  padding: 8px 10px;
+  padding: 9px 14px;
   color: var(--cm-text);
-  background: var(--cm-bg);
-  border: 1px solid var(--cm-border-strong);
-  border-radius: 8px;
+  background: var(--tile);
+  border: 1px solid transparent;
+  border-radius: 12px;
   font: inherit;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
+}
+
+.registry-search:focus,
+.registry-filters select:focus {
+  border-color: var(--cm-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--highlight);
 }
 
 .registry-bar {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  color: var(--body-secondary);
-  font-size: 0.94rem;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+  color: var(--cm-muted);
+  font-size: 0.9rem;
 }
 
 .registry-bar p {
@@ -1885,114 +1903,219 @@ h1 {
   background: none;
   border: 0;
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   cursor: pointer;
+}
+
+.registry-bar button:hover {
+  text-decoration: underline;
 }
 
 .registry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* The whole card is the title's link, like .home-card; the other links in
+   it sit above that. */
 .registry-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px;
+  gap: 8px;
+  padding: 28px;
   background: var(--tile);
-  border-radius: 18px;
+  border-radius: 22px;
+  transition: transform 0.25s ease;
 }
 
-.registry-card h3 {
-  margin: 0;
-  font-size: 1.18rem;
-}
-
-.registry-card code {
-  color: var(--cm-code);
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.8rem;
+.registry-card:hover {
+  transform: scale(1.015);
 }
 
 .registry-card p {
   margin: 0;
-  font-size: 0.94rem;
-  line-height: 1.45;
 }
 
-.registry-card .registry-by {
-  color: var(--body-secondary);
-  font-size: 0.82rem;
-}
-
-.registry-tags {
+.registry-head {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: auto 0 0;
-  padding: 0;
-  list-style: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.registry-tags li {
-  padding: 3px 9px;
-  color: var(--body-secondary);
-  border: 1px solid var(--cm-border-strong);
-  border-radius: 999px;
+.registry-official {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  margin-top: 2px;
+  padding: 3px 10px;
+  color: var(--cm-text);
+  background: var(--cm-bg);
+  border-radius: 980px;
   font-size: 0.75rem;
   white-space: nowrap;
 }
 
-.registry-tags .registry-tag-category {
+.registry-card h3 {
+  margin: 0;
+  font-size: 1.24rem;
+  letter-spacing: -0.025em;
+}
+
+.registry-title {
   color: var(--cm-text);
-  background: var(--highlight);
-  border-color: transparent;
+  text-decoration: none;
 }
 
-.registry-tags .registry-tag-official {
-  color: var(--cm-accent);
-  border-color: var(--cm-accent);
+.registry-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
 }
 
-.registry-card .registry-links {
+.registry-title:focus-visible {
+  outline: none;
+}
+
+.registry-title:focus-visible::after {
+  outline: 3px solid var(--cm-accent);
+  outline-offset: 4px;
+}
+
+.registry-card .registry-description {
+  flex: 1;
+  color: var(--body-secondary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.registry-chips {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.registry-chips li {
+  padding: 3px 10px;
+  color: var(--body-secondary);
+  background: var(--cm-bg);
+  border-radius: 980px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.registry-meta {
+  color: var(--cm-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.registry-requires {
+  display: block;
+  color: var(--body-secondary);
+}
+
+.registry-meta a {
+  color: inherit;
+}
+
+.registry-meta code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+.registry-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  margin-top: 6px;
+}
+
+.registry-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.registry-install {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 16px;
+  color: #fff;
+  background: var(--cm-accent);
+  border-radius: 980px;
   font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.registry-install:hover {
+  background: var(--accent-hover);
+}
+
+.registry-meta a,
+.registry-links a {
+  position: relative;
+  z-index: 1;
+}
+
+.registry-links .more {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.registry-links .more:hover,
+.registry-card:hover .registry-links .more:first-child {
+  text-decoration: underline;
 }
 
 .registry-empty {
-  padding: 48px;
+  padding: 56px 28px;
   color: var(--body-secondary);
   background: var(--tile);
-  border-radius: 18px;
+  border-radius: 22px;
   text-align: center;
 }
 
 .registry-submit {
-  margin-top: 40px;
-  padding: 28px;
+  margin-top: 48px;
+  padding: 36px;
   background: var(--tile);
-  border-radius: 18px;
+  border-radius: 28px;
 }
 
 .registry-submit h2 {
-  margin: 0 0 8px;
-  font-size: 1.5rem;
+  margin: 0 0 12px;
+  font-size: 1.65rem;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+}
+
+.registry-submit p {
+  color: var(--body-secondary);
 }
 
 .registry-submit pre {
   overflow-x: auto;
-  padding: 14px;
+  padding: 18px 20px;
   background: var(--cm-bg);
-  border: 1px solid var(--cm-border);
-  border-radius: 10px;
+  border-radius: 14px;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .registry-submit :not(pre) > code {
@@ -2003,12 +2126,13 @@ h1 {
 @media (max-width: 760px) {
   .registry-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    gap: 32px;
   }
 
   .registry-filters {
     position: static;
     grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
   }
 
   .registry-filter-wide {
@@ -2020,6 +2144,17 @@ h1 {
   }
 
   .registry-submit {
-    padding: 20px;
+    padding: 28px;
+    border-radius: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .registry-card {
+    transition: none;
+  }
+
+  .registry-card:hover {
+    transform: none;
   }
 }

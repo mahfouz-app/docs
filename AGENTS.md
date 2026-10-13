@@ -3,6 +3,12 @@
 The user guide and website for docs.mahfouz.app (Jekyll). The app lives in
 [mahfouz-app/app](https://github.com/mahfouz-app/app).
 
+## Design
+
+Before changing how a page looks, or adding a page, read
+[DESIGN.md](DESIGN.md): the site's style, colour tokens, type, layout and
+components. Match it, and update it in the same PR when the design changes.
+
 ## Kitchen sink
 
 `_includes/kitchen-sink/` is a sample vault that uses every content feature
