@@ -9,9 +9,16 @@ Misspelled words are underlined as you type. The checking is done by your
 system's spell checker: macOS in the desktop app, your browser on the web.
 Right-click an underlined word for suggestions.
 
-On the Mac, the language is detected word by word, so English and Arabic
-(and any other language you have installed) can be checked in the same
-note. Words already in a note are underlined once you edit near them. In
+The system also picks the language; Mahfouz has no language setting. On
+the Mac, each paragraph is checked in the language it's mostly written in,
+from your Mac's spelling languages, so an English paragraph and an Arabic
+paragraph can sit in the same note. In a paragraph that mixes them,
+misspellings in the less-used language can be missed. English is checked as
+American English, so British spellings such as "colour" are underlined: add
+the ones you use to the vault dictionary. In a browser, the languages are
+the ones turned on in its spelling settings.
+
+Words already in a note are underlined once you edit near them. In
 browsers, pasted text isn't checked.
 
 ## Turning it on or off
