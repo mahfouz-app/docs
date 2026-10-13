@@ -2158,3 +2158,132 @@ h1 {
     transform: none;
   }
 }
+
+.registry-hero-link {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.registry-hero-link .more,
+.plugin-page .more {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.registry-hero-link .more:hover,
+.plugin-page .more:hover {
+  text-decoration: underline;
+}
+
+/* A plugin's page (/plugins/<registry>/<id>/) */
+
+.plugin-page {
+  padding-block: 32px 112px;
+}
+
+.plugin-page .guide-breadcrumb {
+  margin-bottom: 56px;
+}
+
+.plugin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px 48px;
+  padding-bottom: 48px;
+}
+
+.plugin-titlerow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+.plugin-hero h1 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 3.75rem);
+}
+
+.plugin-hero .registry-official {
+  margin-top: 0;
+  padding: 4px 12px;
+  background: var(--tile);
+  font-size: 0.82rem;
+}
+
+.plugin-hero .hero-description {
+  margin: 16px 0 0;
+}
+
+.plugin-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.plugin-actions .button {
+  width: auto;
+}
+
+.plugin-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 64px;
+  padding: 28px 0;
+  border-block: 1px solid var(--cm-border-strong);
+}
+
+.plugin-facts div {
+  padding-right: 20px;
+}
+
+.plugin-facts dt {
+  margin-bottom: 8px;
+  color: var(--cm-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.plugin-facts dd {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.plugin-facts .registry-chips {
+  margin: 0;
+}
+
+.plugin-facts .registry-chips li {
+  background: var(--tile);
+}
+
+.plugin-facts code {
+  display: block;
+  color: var(--cm-code);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+}
+
+.plugin-body {
+  max-width: 720px;
+  margin-inline: 0;
+}
+
+.plugin-body h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+@media (max-width: 760px) {
+  .plugin-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plugin-facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 0;
+  }
+}
