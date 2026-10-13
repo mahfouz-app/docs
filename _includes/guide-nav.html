@@ -2,10 +2,13 @@
   <li><a href="/guide/"{% if include.here == "" %} aria-current="page"{% endif %}>Overview</a></li>
 </ul>
 {%- for g in site.data.guide %}
-<p class="guide-nav-group">{{ g.group | escape }}</p>
-<ul class="guide-nav-list">
-  {%- for p in g.pages %}
-  <li><a href="/guide/{{ p.slug }}/"{% if p.slug == include.here %} aria-current="page"{% endif %}>{{ p.title | escape }}</a></li>
-  {%- endfor %}
-</ul>
+{%- assign slugs = g.pages | map: "slug" %}
+<details class="guide-nav-section"{% if slugs contains include.here %} open{% endif %}>
+  <summary class="guide-nav-group">{{ g.group | escape }}</summary>
+  <ul class="guide-nav-list">
+    {%- for p in g.pages %}
+    <li><a href="/guide/{{ p.slug }}/"{% if p.slug == include.here %} aria-current="page"{% endif %}>{{ p.title | escape }}</a></li>
+    {%- endfor %}
+  </ul>
+</details>
 {%- endfor %}

@@ -1,0 +1,95 @@
+# The plugin registry at /plugins/. To submit a plugin, add an entry here in
+# a pull request. If it comes from a registry that isn't listed yet, add that
+# registry to _data/plugin_registries.yml in the same PR.
+#
+# - id: <registry>/<plugin id>, the qualified id from its plugin.json
+# - name, description: as the plugin's `label` and `description`, written
+#   for people browsing (a sentence, ending with a period)
+# - category: one of `categories` below
+# - author, author_url: who maintains it
+# - platforms: any of macos, linux, windows, web
+# - requires: the lowest Mahfouz version its `mahfouz` range allows
+# - source: the plugin's folder in its registry
+# - guide: optional, a guide page about it on this site
+#
+# Plugins are listed in the order they appear here.
+
+categories:
+  - Diagrams
+  - Presenting
+  - Export
+  - Import
+  - Sync & storage
+
+platforms:
+  macos: macOS
+  linux: Linux
+  windows: Windows
+  web: Web
+
+plugins:
+  - id: mahfouz/mermaid
+    name: Mermaid diagrams
+    description: Render mermaid code blocks as diagrams, and edit one in a split editor tab.
+    category: Diagrams
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos, linux, windows, web]
+    requires: 0.8.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/mermaid
+    guide: /guide/plugins/
+
+  - id: mahfouz/drawio
+    name: Draw.io diagrams
+    description: Embed and edit draw.io diagrams. A large download, around 150 MB.
+    category: Diagrams
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos, linux, windows, web]
+    requires: 0.8.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/drawio
+    guide: /guide/plugins/
+
+  - id: mahfouz/slidev
+    name: Slidev presentations
+    description: Present notes as slides, and export them to PowerPoint.
+    category: Presenting
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos, linux, windows]
+    requires: 0.9.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/slidev
+    guide: /guide/slides/
+
+  - id: mahfouz/pdf
+    name: PDF export
+    description: Export notes to PDF. Installs Slidev presentations too.
+    category: Export
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos, linux, windows]
+    requires: 0.8.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/pdf
+    guide: /guide/slides/
+
+  - id: mahfouz/notion
+    name: Notion import
+    description: Import pages, databases, tasks, comments and files from a Notion workspace.
+    category: Import
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos, linux, windows]
+    requires: 0.12.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/notion
+    guide: /guide/import-notion/
+
+  - id: mahfouz/lfs
+    name: Git LFS
+    description: Store dropped media as Git LFS pointers instead of full binaries.
+    category: Sync & storage
+    author: Mahfouz
+    author_url: https://github.com/mahfouz-app
+    platforms: [macos]
+    requires: 0.8.0
+    source: https://github.com/mahfouz-app/plugins/tree/main/plugins/lfs
+    guide: /guide/git/#git-lfs-for-large-media
