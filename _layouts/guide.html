@@ -74,8 +74,9 @@
         <h1>{{ page.title | escape }}</h1>
         {{ content }}
       </article>
-      {%- if here != "" %}
       {%- for p in pages %}{% if p.slug == here %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+      {%- comment %} A page left out of _data/guide.yml (an unlisted page) has no place in the pager. {% endcomment %}
+      {%- if here != "" and i != nil %}
       {%- assign prev_i = i | minus: 1 -%}
       {%- assign next_i = i | plus: 1 %}
       <nav class="guide-pager" aria-label="Guide pages">
