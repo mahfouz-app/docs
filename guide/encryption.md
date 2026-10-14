@@ -27,6 +27,31 @@ Anyone who can see the repository can still see:
 
 If a title is private, give the note a title that isn't.
 
+## What git-crypt can't do
+
+- **It can't change the key.** Removing someone from the repository
+  doesn't take back the key they already have, so they can still decrypt
+  everything committed with it, including new commits. To shut someone
+  out, move the vault to a new repository with a new key.
+- **Earlier commits stay as they were.** Encrypting a vault encrypts it
+  from that commit on. What you committed before stays unencrypted in
+  history unless you rewrite history or move the vault to a new
+  repository.
+- **It can't encrypt Git LFS files.** A vault that stores files with Git
+  LFS can't be encrypted.
+- **Every plugin you install can ask your GPG keys to decrypt.** Plugins
+  run together in the app, so any of them can ask for what the Encryption
+  plugin asks for. Set up gpg-agent to ask for your passphrase, or a
+  YubiKey touch, every time something is decrypted.
+
+The [Encryption plugin](/plugins/) (Mahfouz 0.12.0 or later) shows these
+limits, with what stays visible, as its
+[terms](/guide/plugins/#plugin-terms) when you install or turn it on, and
+again before it encrypts a vault. **Encrypt vault** stays off until you
+tick **I accept these terms**.
+Its own copy of git-crypt only runs git's filters: to use `git-crypt`
+commands in a terminal, install git-crypt itself.
+
 ## Setting up encryption
 
 Mahfouz doesn't set up git-crypt for you yet. Use git-crypt's own commands
