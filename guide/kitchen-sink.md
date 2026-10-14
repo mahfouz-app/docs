@@ -54,6 +54,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/sample_deck.md %}
 ````
 
+## A deck with a block at the top: Deck with a top block
+
+`kitchen_sink/deck_with_a_top_block.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/deck_with_a_top_block.md %}
+````
+
 ## The People database
 
 `people/people.md`
