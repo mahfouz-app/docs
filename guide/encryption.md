@@ -44,9 +44,11 @@ If a title is private, give the note a title that isn't.
   plugin asks for. Set up gpg-agent to ask for your passphrase, or a
   YubiKey touch, every time something is decrypted.
 
-The [Encryption plugin](/plugins/) shows these limits, with what stays
-visible, when you install or turn it on and again before it encrypts a
-vault. **Encrypt vault** stays off until you tick **I accept these terms**.
+The [Encryption plugin](/plugins/) (Mahfouz 0.12.0 or later) shows these
+limits, with what stays visible, as its
+[terms](/guide/plugins/#plugin-terms) when you install or turn it on, and
+again before it encrypts a vault. **Encrypt vault** stays off until you
+tick **I accept these terms**.
 Its own copy of git-crypt only runs git's filters: to use `git-crypt`
 commands in a terminal, install git-crypt itself.
 
