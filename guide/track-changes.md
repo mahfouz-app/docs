@@ -56,7 +56,8 @@ the suggestions.
 The agent's message in the chat says how many changes it suggested and
 offers:
 
-- **Show in note**: opens the note at the agent's first suggestion.
+- **Show in note**: opens the note at the agent's first suggestion and
+  shades its line until you click, type or move the cursor in the note.
 - **Reject all agent suggestions**: removes every suggestion the agent
   has made in that note, including earlier ones, after asking. Your own
   suggestions and other people's stay.
@@ -96,7 +97,8 @@ Tab moves between the box and the buttons; Esc goes back to the note.
 
 The **Comments** section in the right sidebar lists the note's open
 threads, with resolved ones collapsed at the bottom. Click one to jump to
-it. **Add comment** has no keyboard shortcut by default; you can give it
+it; its line is shaded until you click, type or move the cursor in the
+note. **Add comment** has no keyboard shortcut by default; you can give it
 one under Settings → Shortcuts.
 
 Comments work in both **Editing** and **Suggesting**, and they never become

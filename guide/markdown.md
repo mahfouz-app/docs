@@ -110,8 +110,10 @@ is inside it, and on [published pages](/guide/publishing/).
 A line holding only `[TOC]` (or `[[_TOC_]]`) shows a numbered **Contents**
 list (1, 1.1, 2…) of the note's level 2–6 headings, each linking to its
 section. It shows in Preview mode, where clicking an entry jumps to the
-heading, and on [published pages](/guide/publishing/). With no headings,
-Preview shows **No headings yet** and a published page shows nothing.
+heading, and on [published pages](/guide/publishing/). In Preview, the
+heading's line stays shaded until you click, type or move the cursor. With
+no headings, Preview shows **No headings yet** and a published page shows
+nothing.
 
 ## Tables
 

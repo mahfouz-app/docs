@@ -115,8 +115,10 @@ In both layouts:
   again. Only tags on the task's own line count, not the note's other
   tags. Clicking a `#tag` in a task's title opens the
   [Tags view](/guide/links/#tags) with that tag added instead.
-- Click a task to open its note at that line. In the list, tick its
-  checkbox to mark it done without opening the note.
+- Click a task to open its note at that line, shaded until you click, type
+  or move the cursor in the note. A reminder's **Open note** does the
+  same. In the list, tick its checkbox to mark it done without opening the
+  note.
 
 A dot on the **Tasks** icon in the left rail tells you when something
 needs attention: red when a task is overdue, blue when one is due later
