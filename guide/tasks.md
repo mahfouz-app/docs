@@ -127,7 +127,23 @@ over the icon to see the counts, such as **2 overdue · 1 due today**.
 ## Reminders
 
 When one of your tasks comes due, a notification tells you, with buttons
-to **Open note** at the task or **Mark done** without opening it.
+to **Open note** at the task or **Mark done** without opening it, and two
+menus:
+
+- **Snooze** hides the reminder for **10 minutes**, **1 hour** or
+  **3 hours**, or until 09:00 (**Today 09:00** before then, **Tomorrow
+  09:00** after). It comes back unread when the time is up. Snoozing
+  doesn't change the note: the task stays overdue, for you and for anyone
+  else in the vault, and the snooze is kept on this computer only.
+- **Reschedule** moves the task to **Tomorrow**, **Next week** (the coming
+  Monday) or a later day you pick, keeping its time. This changes the date
+  on the task's line in the note, so it's committed like any other edit and
+  everyone sees the new date. If the task's line has changed since the
+  reminder, the note opens at the task instead, so you can set the date
+  there.
+
+Snooze and Reschedule are in the notification center and the pop-up, not in
+system notifications.
 
 - Reminders go to the task's assignee only: the tasks assigned to your
   GitHub login, or to a person whose `github` is your login, in every
@@ -137,7 +153,8 @@ to **Open note** at the task or **Mark done** without opening it.
   task still reminds you; only a done one doesn't.
 - Reminders come only while Mahfouz is open. If several came due while it
   was closed or your computer was asleep, they're summarized in one notice,
-  such as **3 tasks are overdue**; **Show tasks** opens the Tasks view.
+  such as **3 tasks are overdue**; **Show tasks** opens the Tasks view, and
+  **Snooze all** snoozes every task in the notice.
 - Each task reminds you once. Changing its date reminds you again at the new
   time; editing its title doesn't.
 - The first time Mahfouz runs with reminders, tasks that are already overdue
