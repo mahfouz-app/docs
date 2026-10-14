@@ -143,11 +143,10 @@ notifications), it also has two menus:
   date…**, any later day, keeping its time. It changes the date on the
   task's line like any other edit, so everyone sees the new date once it's
   committed. If the task's line has changed since the reminder, the note
-  opens at the task instead, so you can set the date there.
-
-If the note has [edits waiting](/guide/when-sync-fails/#edits-to-title-are-waiting) for your choice,
-**Mark done** and **Reschedule** change nothing, and a notice says so: choose
-which version to keep first.
+  opens at the task instead, so you can set the date there. If the note has
+  [edits waiting](/guide/when-sync-fails/#edits-to-title-are-waiting) for
+  your choice, Reschedule, like **Mark done**, changes nothing and a notice
+  says so: choose which version to keep first.
 
 - Reminders go to the task's assignee only: the tasks assigned to your
   GitHub login, or to a person whose `github` is your login, in every
@@ -167,7 +166,8 @@ which version to keep first.
 - To stop reminders for a vault, open it and turn on **Mute Tasks** in
   Settings → Notifications. Like the other mutes, it's saved in the vault's
   `.config/settings.md`; unlike them, a muted vault's reminders aren't
-  recorded at all.
+  recorded at all, and a snooze that ends while it's muted doesn't bring its
+  reminder back.
 
 ## External agents
 
