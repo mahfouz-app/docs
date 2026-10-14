@@ -449,12 +449,30 @@ view: Reading now
 - `view` names one of its views. Without it, the first view is shown. If you
   rename or delete that view, the embed shows the first view and says so.
 
-In Preview, the block shows the view's rows as they are now, up to 10, with
-**Open database** to see the rest. The embed is read-only: clicking a row's
+In Preview, the block shows the view's rows as they are now. The embed is
+read-only: clicking a row's
 title opens its note in a new tab, and you edit rows in the database itself.
 The block's text shows when you move the cursor onto it or choose **Edit
-source**. Other apps show it as a code block. A Board, Gallery, or Calendar
-view shows as a table, with its type named above it.
+source**. Other apps show it as a code block.
+
+The embed keeps the view's layout, read-only:
+
+- **Table**: up to 10 rows.
+- **Board**: its columns, with up to 10 cards each. A column's heading counts
+  all its rows. You can't drag cards or add rows. A Board with no grouping,
+  or one grouped by something an embed can't show, such as a relation,
+  shows as a table and says why.
+- **Gallery**: up to 10 cards.
+- **Calendar**: the current month, with each row on its day. You can't move
+  to other months, and rows on other months' days or with no date aren't
+  shown. A Calendar with no date attribute says so instead. When the note
+  is narrow, days show a count; click or press <kbd>Enter</kbd> on a day to
+  list its rows below the month.
+
+When rows are left out, a line at the bottom says how many are shown (for a
+Calendar, how many aren't), with **Open database** to see the rest. In a
+Board, <kbd>Tab</kbd> moves between columns, and the arrow keys move between
+cards.
 
 A view's sort and filters apply, as saved in the database. Changes you
 haven't saved with **Save view** don't show in embeds. An embed in a note's
