@@ -427,9 +427,67 @@ properties:
 
 The values are never written to your notes.
 
+## Show a database in another note
+
+Any note can show one of a database's views, such as a weekly review showing
+the books you're reading. Type `/` and choose **Database view**, then start
+typing the database's name and pick it from the suggestions, which list only
+databases. Or, in the database's tab, open a view's
+**▾** menu and choose **Copy embed**, then paste it into the note.
+
+The note holds a small block:
+
+````markdown
+```database-view
+source: "[[Reading list]]"
+view: Reading now
+```
+````
+
+- `source` is the database, as a link. If you rename the database, Mahfouz
+  updates the link.
+- `view` names one of its views. Without it, the first view is shown. If you
+  rename or delete that view, the embed shows the first view and says so.
+
+In Preview, the block shows the view's rows as they are now, up to 10, with
+**Open database** to see the rest. The embed is read-only: clicking a row's
+title opens its note in a new tab, and you edit rows in the database itself.
+The block's text shows when you move the cursor onto it or choose **Edit
+source**. Other apps show it as a code block. A Board, Gallery, or Calendar
+view shows as a table, with its type named above it.
+
+A view's sort and filters apply, as saved in the database. Changes you
+haven't saved with **Save view** don't show in embeds. An embed in a note's
+history shows today's rows, not the rows as they were.
+
 ## Publishing
 
 Publishing a database note leaves the block out of the published page.
+
+Publishing a note with an embedded view, or exporting it to PDF, replaces the
+block with a table of the view's rows, up to 100: titles and the view's
+columns, as plain text. Exporting to Markdown keeps the block as written. The
+table is built each time the note is published, so rows added later appear
+when you next publish or update the page; a change to a row doesn't by itself
+mark the page out of date.
+
+If something a published table shows is later marked not to publish, made
+disk-only, or deleted, a page that publishes automatically is updated to
+remove it. That covers a row, a linked note in a relation column, or the
+database itself. For any other page, Mahfouz tells you which page still shows
+it, and it's removed when you update the page. Mahfouz remembers what each
+page showed on the computer that published it, so a page published from
+another computer, or before you cleared the app's site data, isn't checked
+until you update it from this one. Some rows and columns are always left out:
+
+- rows marked not to publish, disk-only rows, and people;
+- links to those notes in relation columns, and their values in rollups;
+- the **Created by** and **Last edited by** columns.
+
+An embed is published as *Database view (not published)* when its database is
+itself marked not to publish, is disk-only, or holds your people, and when
+Mahfouz can't find the database or read its block. The same rules apply when
+you export to PDF.
 
 ## The agent
 
