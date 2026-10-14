@@ -50,6 +50,10 @@ Present (unless the note's `hide` drops slide 1). The editor underlines it.
 When the block holds only a plain `layout` or `class` that the note's
 attributes don't already set differently, it offers **Move to attributes**
 (not while Suggesting; a `class` alone only when the note has a `layout`).
+When the block holds only text, with no `key:` line, Present drops that
+text too. The editor marks those lines and offers **Remove rule**, which
+deletes the rule (`---`) above them so they show on slide 1 (not while
+Suggesting).
 
 In a deck, the editor underlines lines Present won't show and offers
 **Add blank line**, and their page in the preview is marked **Not shown in
