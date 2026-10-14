@@ -113,8 +113,8 @@ In Settings → AI → External agents:
 - Unticking a vault takes that vault away from the client, and turns down
   its proposals still waiting there.
 - On the web, **Disconnect all agents** cuts off every client at once.
-  [**Sign out everywhere (including desktop)**](/guide/web-github/)
-  disconnects every agent connected through the web, too.
+  [**Sign out everywhere**](/guide/web-github/#signing-in-with-github) in
+  the account menu disconnects every agent connected through the web, too.
 
 Turning off **Allow external agents (MCP)** stops agents from reaching
 this app until you turn it back on.

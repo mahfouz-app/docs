@@ -5,10 +5,11 @@ description: "Report a bug or suggest a feature from inside the app."
 permalink: /guide/feedback/
 ---
 
-Click the speech-bubble button near the bottom of the left rail, or choose
-**Help → Send Feedback…**, to report a bug, suggest an idea, or ask a
-question. Pick a kind, give it a title and some details, and press
-**Submit**.
+Choose **Send feedback** in the account menu (click the account button at
+the bottom of the left rail), or **Help → Send Feedback…** on desktop, to
+report a bug, suggest an idea, or ask a question. On a phone, it's **Send
+feedback** in the **⋯** menu at the top right. Pick a kind, give it a title
+and some details, and press **Submit**.
 
 Feedback becomes a **public** issue on
 [mahfouz-app/docs](https://github.com/mahfouz-app/docs/issues), filed by the

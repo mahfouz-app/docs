@@ -5,8 +5,10 @@ description: "Preferences and per-vault settings."
 permalink: /guide/settings/
 ---
 
-**Settings…** (<kbd>Cmd/Ctrl</kbd><kbd>,</kbd>, or menu **Mahfouz → Settings…**): applies
-instantly and is stored in `.config/settings.md` (a plain Markdown file
+Open **Settings** from the account menu (the account button at the bottom
+of the left rail), with <kbd>Mod</kbd><kbd>,</kbd> (<kbd>Mod</kbd><kbd>;</kbd>
+on the web), or on desktop from menu **Mahfouz → Settings…**. Settings apply
+instantly and are stored in `.config/settings.md` (a plain Markdown file
 you can hand-edit):
 
 | Setting | Options | Default |

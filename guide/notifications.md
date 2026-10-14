@@ -5,7 +5,7 @@ description: "The notification center, sounds, quiet time and update notices."
 permalink: /guide/notifications/
 ---
 
-Everything Mahfouz has to tell you (exports, plugin installs and updates, errors saving, committing or syncing, [task reminders](/guide/tasks/#reminders)) collects in the notification center. Open it with the bell button on the left rail, just above **Send feedback**: the center takes the place of your notes in the left sidebar, the way Search and Tasks do, and clicking the bell again brings your notes back. On a phone, the bell is in the titlebar and opens the center as a full-screen sheet. Proposals from [external agents](/guide/external-agents/) have their own plug button in the titlebar.
+Everything Mahfouz has to tell you (exports, plugin installs and updates, errors saving, committing or syncing, [task reminders](/guide/tasks/#reminders)) collects in the notification center. Open it with the bell button on the left rail, just above your account button: the center takes the place of your notes in the left sidebar, the way Search and Tasks do, and clicking the bell again brings your notes back. On a phone, the bell is in the titlebar and opens the center as a full-screen sheet. Proposals from [external agents](/guide/external-agents/) have their own plug button in the titlebar.
 
 - A dot on the bell means there are notifications you haven't dealt with; hover over the bell to see how many. A ring around it means something is running, and hovering shows what.
 - The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read, or archive it with ×.
@@ -27,7 +27,7 @@ Settings → Notifications controls how notifications interrupt you:
 
 When a new version of Mahfouz is released, a notification tells you which version is out and which one you have. **What's new** opens the release notes; **Download** opens the installer where one is available for your platform. Mahfouz doesn't install anything itself.
 
-- Mahfouz checks at most once a day while it's open. **Mahfouz → Check for Updates…** checks right away and always tells you the result, including when you're up to date.
+- Mahfouz checks at most once a day while it's open. **Mahfouz → Check for Updates…**, or **Check for updates** at the bottom of the account menu, checks right away and always tells you the result, including when you're up to date.
 - If you installed Mahfouz with Homebrew, there's no Download button; the notification shows the command to run instead: `brew upgrade --cask mahfouz`.
 - Archive the notification to skip that version. It comes back when a newer one is released.
 - To stop the checks entirely, turn off **Automatically check for new versions** in Settings → Notifications. It applies to this computer only. Muting the **App updates** category keeps the checks but silences their notifications.

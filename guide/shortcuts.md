@@ -127,8 +127,8 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Reveal in Finder | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | (desktop only) |
 
 <kbd>Mod</kbd><kbd>;</kbd> assumes a US-style keyboard layout. On a layout where ";" needs
-Shift or another modifier, it can't be pressed: open Settings from the gear
-in the left rail instead.
+Shift or another modifier, it can't be pressed: choose **Settings** in the
+account menu (the account button at the bottom of the left rail) instead.
 
 On a Mac, shortcuts with ⌥ go by the key you press, not the character ⌥
 types with it, so <kbd>⌘</kbd><kbd>⌥</kbd><kbd>S</kbd> works although ⌥S types "ß".

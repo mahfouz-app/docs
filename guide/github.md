@@ -6,16 +6,17 @@ permalink: /guide/github/
 ---
 
 Signing in lets Mahfouz create repositories for your vaults and manage who
-can open them. Click the account button at the bottom of the left rail,
-below Settings, and choose **Sign in with GitHub**. (You can also sign in
-from **Vault settings → Collaborators**.)
+can open them. Click the account button at the bottom of the left rail
+and choose **Sign in with GitHub**. (You can also sign in from **Vault
+settings → Collaborators**.)
 
 1. Mahfouz shows a short code and opens GitHub. Enter the code and approve
    **Mahfouz**. This signs you in: it authorizes Mahfouz to act for you on
    GitHub, but doesn't yet give it any of your repositories.
 2. Installing the Mahfouz app on your repositories is a separate step. Until
-   the app is installed, the account menu and Collaborators show **Install
-   Mahfouz on your repositories**. Choose **Only select
+   the app is installed, the account menu says "Mahfouz isn't on any
+   repositories" with an **Install** button, and Collaborators shows
+   **Install Mahfouz on your repositories**. Choose **Only select
    repositories** and pick the repositories that hold your vaults. Mahfouz
    can see and manage only the repositories you pick. To change the
    selection later, use **Manage repository access** in the account menu or in
@@ -35,18 +36,38 @@ never in your vault.
 
 ## The account button
 
-The button at the bottom of the left rail shows your GitHub picture once
-you're signed in. A small dot means something needs you:
+The button at the bottom of the left rail, below the notification bell,
+shows your GitHub picture once you're signed in, and a person icon when
+you're not. A small dot means something needs you:
 
-- **Warning dot**: Mahfouz isn't installed on any of your repositories, your
-  sign-in expired (**Sign in again**), or you signed in with an earlier
-  version (**Upgrade GitHub connection**).
+- **Warning dot**: Mahfouz isn't installed on any of your repositories
+  (**Install**), your sign-in expired (**Sign in again**), or you signed in
+  with an earlier version (**Upgrade**).
 - **Clock dot** (on the web, once available): an organization owner still
   has to approve installing Mahfouz. The desktop app can't see pending
-  approvals, so it never shows this dot.
+  approvals, so it never shows this dot: it shows the warning dot and
+  **Install** until the owner approves.
 
-Its menu shows who you're signed in as and your GitHub connection, plus
-**Manage repository access**, **Open GitHub profile** and **Sign out**.
+Click the button to open the account menu:
+
+- Your name and GitHub login. **Open GitHub profile**, the link icon beside
+  them, opens your profile on github.com.
+- A status line: **Connected to GitHub**, or what needs you, with the
+  button that fixes it (the ones above). On the web it can also say
+  **Waiting for an organization owner to approve Mahfouz**.
+- **Manage repository access**, to change which repositories Mahfouz can
+  see.
+- **Settings**, **Keyboard shortcuts**, **User guide** and **Send
+  feedback**.
+- **Sign out** (on the web, also **Sign out everywhere**) and **Revoke
+  access on GitHub**: see [Signing out](#signing-out).
+- On desktop, the version at the bottom opens **About Mahfouz**, and
+  **Check for updates** checks for a new version of Mahfouz right away.
+
+Signed out, the menu shows **Sign in with GitHub** and the same Settings,
+Keyboard shortcuts, User guide and Send feedback items. On a phone,
+Settings, User guide and Send feedback are in the **⋯** menu at the top
+right, and **Account** there opens the account menu without them.
 
 ## Adding your vaults' repositories
 
@@ -105,19 +126,22 @@ sign-in and shows "GitHub is temporarily unavailable"; try again later.
 Other failed requests show "Couldn't reach GitHub" with the reason.
 
 Until you sign in again, the account button shows a warning dot, and the
-notification center a **GitHub sign-in expired** notice.
+notification center a **GitHub sign-in expired** notice. Choose **Sign in
+again** in the account menu to sign in.
 
 ## Upgrading from an earlier version
 
 If you signed in with an earlier version of Mahfouz, that sign-in keeps
 working. The account button shows a warning dot and the notification center an
-**Upgrade GitHub connection** notice: sign in once
-more to move to the Mahfouz app. The old sign-in is removed only after the
+**Upgrade GitHub connection** notice. Choose **Upgrade** in the account
+menu (or **Upgrade…** on the notice) and sign in once more to move to the
+Mahfouz app. The old sign-in is removed only after the
 new one is saved. Afterwards you can revoke the old "Mahfouz" entry on
 github.com under **Settings → Applications → Authorized OAuth Apps**.
 
 ## Signing out
 
 **Sign out** (in the account menu or Collaborators) removes the sign-in from this computer only. To revoke
-Mahfouz's access entirely, go to github.com → **Settings → Applications →
-Authorized GitHub Apps**.
+Mahfouz's access entirely, choose **Revoke access on GitHub** in the account
+menu, or go to github.com → **Settings → Applications → Authorized GitHub
+Apps**, and revoke Mahfouz there.
