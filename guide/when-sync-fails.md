@@ -116,6 +116,14 @@ A pull would overwrite notes you've changed but not yet committed. The notice na
 
 Then sync again.
 
+### Edits to “&lt;title&gt;” are waiting
+
+The note changed outside Mahfouz (a pull, another app, another device) while you were editing it, and the two versions can't be combined on their own. Your edits are kept on this device until you choose which version to keep. **Open note** opens it, where you choose.
+
+If you quit Mahfouz (or reload the page, on the web) before choosing, your edits are still kept: this notice offers them back the next time you open Mahfouz.
+
+Removing a vault discards the edits waiting in it. The removal question says how many notes have them.
+
 ### Problems with the vault's folder or git
 
 - **Another git process is using this vault**: wait a moment and **Retry**. If nothing else is running, a leftover lock file may be in the way.
