@@ -20,7 +20,11 @@ you can hand-edit):
 [slash menu](/guide/slash-menu/) on or off. Unlike the settings above, it's
 stored on this computer only, not in the vault. So is **Emoji suggestions
 when typing :**, which turns the [`:` emoji suggestions](/guide/slash-menu/#emoji)
-on or off.
+on or off. So is **First day of week**, the day every calendar starts its
+weeks on: a database's [Calendar](/guide/databases/#calendar) and the date
+pickers. **Automatic** follows your system's region in the desktop app on
+macOS and Windows, and your language on Linux and the web. Choose
+**Monday**, **Sunday** or **Saturday** to override it.
 
 Sidebar sort order (alphabetical vs. chronological) is also saved there,
 toggled from the Sidebar header.

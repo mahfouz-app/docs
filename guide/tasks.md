@@ -55,6 +55,8 @@ Click the date chip, or type ` //` after the title of a checklist item, to
 open the date picker.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
+  The calendar's weeks start on the day set in Settings → General →
+  [First day of week](/guide/settings/).
 - Add a time if you want one; leave it empty for an all-day task. The time
   is saved once it's complete, and again when you leave the field or close
   the picker.
