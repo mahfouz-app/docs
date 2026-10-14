@@ -459,8 +459,9 @@ The embed keeps the view's layout, read-only:
 
 - **Table**: up to 10 rows.
 - **Board**: its columns, with up to 10 cards each. A column's heading counts
-  all its rows. You can't drag cards or add rows, and a Board with no
-  grouping shows as a table.
+  all its rows. You can't drag cards or add rows. A Board with no grouping,
+  or one grouped by something an embed can't show, such as a relation,
+  shows as a table and says why.
 - **Gallery**: up to 10 cards.
 - **Calendar**: the current month, with each row on its day. You can't move
   to other months, and rows on other months' days or with no date aren't
