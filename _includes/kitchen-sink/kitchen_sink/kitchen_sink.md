@@ -138,7 +138,22 @@ Meet on {~~Monday~>Tuesday~~}{>>@owahab · 2026-10-12<<} at {++10 am++}{>>@owaha
 
 ## People
 
-Ask @ada about the engine: a mention of the person in the vault's [[People]] database.
+Ask @ada about the engine: a mention of the person in the vault's [[People]] database. Her note lists every mention of her under its text, one row per block: the quote, list item, long paragraph, heading and table row below.
+
+> Notes from a call with @ada: the engine reads its cards in order,
+> and @ada wants the **loop cards** checked before the next run.
+
+- Send @ada the `tables.csv` export
+- Book the room for Thursday
+
+The card reader needs a proper check before the next run. The engine reads its cards strictly in order, one at a time, so a single card punched in the wrong place sends every later result to the wrong column, and nobody notices until the printed tables disagree with the ones worked out by hand. @ada has written down, in [the run log](https://mahfouz.app), how a loop runs the same operation cards again with new variables, and _that_ is exactly where one misplaced card does the most damage. Until her steps have been read, keep each deck in its own box, label every card with the date it was punched, and don't reorder anything, however obvious the fix looks.
+
+### Questions for @ada
+
+| Topic | Owner | Notes |
+|---|---|---|
+| Card reader | @ada | Add a slide to [[Sample deck]] |
+| Mill | Charles | Fine as is |
 
 ## Slides
 
