@@ -36,6 +36,31 @@ The [plugin registry](/plugins/) lists every plugin submitted for
 Mahfouz, from the built-in registry and others, and you can filter it by
 category, platform, registry and author.
 
+## Plugin terms
+
+Some plugins have terms you accept before using them. Before Mahfouz
+installs, turns on or updates such a plugin, it shows the terms with an
+**I accept these terms** checkbox, and the confirm button works only once
+you tick it. This happens wherever you turn the plugin on: the switch in
+Settings → **Plugins**, the plugin's setup wizard, or an **Enable** button
+in a note. **Cancel** leaves everything as it was.
+
+- **Acceptance is remembered on this computer**, not in the vault, so each
+  collaborator accepts for themselves.
+- **You're asked again only when the terms change.** A new version with the
+  same terms doesn't ask.
+- **A plugin's dependencies show their terms too.** Installing PDF export,
+  for example, also shows Slidev presentations' terms if it has any.
+- **A vault can't skip the question.** If a vault turns on an installed
+  plugin whose terms you haven't accepted on this computer, the plugin
+  doesn't load, and a [notification](/guide/notifications/), "Accept
+  ⟨plugin⟩'s terms to use it", offers **Review terms**.
+
+Plugin authors add terms with `"terms": "terms.md"` in the plugin's
+manifest: a Markdown file in the plugin, at most 16 KB. It's shown as text
+with headings, paragraphs and `-` bullets; inline Markdown such as
+`**bold**` or links appears as written. Terms need Mahfouz 0.13.0 or later.
+
 ## Installing from the plugin registry
 
 Each plugin in the [plugin registry](/plugins/) has an **Install** button.
