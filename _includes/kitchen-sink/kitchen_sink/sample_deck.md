@@ -24,3 +24,14 @@ Points on the left.
 ## Right
 
 Points on the right.
+
+---
+
+```yaml
+layout: center
+class: wide
+```
+
+## Settings in a yaml block
+
+Slidev reads a `yaml` code block right after a `---` and a blank line as the slide's settings.
