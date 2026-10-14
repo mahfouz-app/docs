@@ -464,11 +464,14 @@ The embed keeps the view's layout, read-only:
 - **Gallery**: up to 10 cards.
 - **Calendar**: the current month, with each row on its day. You can't move
   to other months, and rows on other months' days or with no date aren't
-  shown; the embed says how many. A Calendar with no date attribute says so
-  instead.
+  shown. A Calendar with no date attribute says so instead. When the note
+  is narrow, days show a count; click or press <kbd>Enter</kbd> on a day to
+  list its rows below the month.
 
-When rows are left out, a line at the bottom says how many show, with
-**Open database** to see the rest.
+When rows are left out, a line at the bottom says how many are shown (for a
+Calendar, how many aren't), with **Open database** to see the rest. In a
+Board, <kbd>Tab</kbd> moves between columns, and the arrow keys move between
+cards.
 
 A view's sort and filters apply, as saved in the database. Changes you
 haven't saved with **Save view** don't show in embeds. An embed in a note's
