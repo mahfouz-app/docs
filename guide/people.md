@@ -82,8 +82,9 @@ menu at the top right.
 
 Under a person note's text, Mahfouz shows:
 
-- **Tasks:** the [tasks](/guide/tasks/) assigned to them, with the same
-  **List**/**Board** switch as the Tasks view.
+- **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
+  **Board** or **Calendar** like the Tasks tab. Its view settings are shared
+  by every person page.
 - **Mentions:** the notes that mention them, each with a snippet of the
   line. Click one to open the note there.
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
