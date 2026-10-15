@@ -21,7 +21,7 @@ To try it, copy this folder (`_includes/kitchen-sink/` in the docs repository) i
 
 **Bold**, _italic_, ++underline++, ~~strikethrough~~, ==highlight==, `inline code`, H~2~O (subscript), E = mc^2^ (superscript), and a literal \$5 price.
 
-A [link](https://mahfouz.app), an autolink <https://docs.mahfouz.app>, a wikilink to [[Sample deck]], and one through a folder with its own text: [[people/Ada Lovelace|Ada's note]].
+A [link](https://mahfouz.app), an autolink <https://docs.mahfouz.app>, a bare link https://mahfouz.app/guide/ and address ada@example.com, a wikilink to [[Sample deck]], and one through a folder with its own text: [[people/Ada Lovelace|Ada's note]].
 
 ## Headings
 
@@ -144,6 +144,7 @@ Ask @ada about the engine: a mention of the person in the vault's [[People]] dat
 > and @ada wants the **loop cards** checked before the next run.
 
 - Send @ada the `tables.csv` export
+- Mail @ada at ada@example.com, or post it at https://mahfouz.app
 - Book the room for Thursday
 
 The card reader needs a proper check before the next run. The engine reads its cards strictly in order, one at a time, so a single card punched in the wrong place sends every later result to the wrong column, and nobody notices until the printed tables disagree with the ones worked out by hand. @ada has written down, in [the run log](https://mahfouz.app), how a loop runs the same operation cards again with new variables, and _that_ is exactly where one misplaced card does the most damage. Until her steps have been read, keep each deck in its own box, label every card with the date it was punched, and don't reorder anything, however obvious the fix looks.
