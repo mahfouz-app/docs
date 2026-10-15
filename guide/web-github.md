@@ -8,7 +8,7 @@ permalink: /guide/web-github/
 ## Signing in with GitHub
 
 GitHub vaults need a GitHub sign-in. (The desktop app signs in differently:
-see [Signing in to GitHub](/guide/github/).) Click the account icon at
+see [Signing in to GitHub](/guide/github/).) Click the account button at
 the bottom of the left rail, then **Sign in with GitHub**: Mahfouz sends you
 to GitHub and back. Mahfouz's server keeps the authorization for this browser
 for up to 30 days, then you sign in again (the notification bell says when it
@@ -18,16 +18,19 @@ profile, and timestamps: never your notes.
 Signing in lets Mahfouz act as you on GitHub; it doesn't give it your
 repositories. That is a second step, installing the Mahfouz app on GitHub:
 choose **Only select repositories** and pick the ones you keep vaults in.
-The account popover then offers **Manage repository access** to change the
+The account menu then offers **Manage repository access** to change the
 selection later.
 
+The account menu has two ways to sign out:
+
 - **Sign out**: ends this browser's session only.
-- **Sign out everywhere (including desktop)**: ends every browser session
-  and revokes Mahfouz's GitHub authorization, which signs the desktop app out
-  too. If Mahfouz can't confirm that every session ended and that GitHub
-  revoked it, it says **Signed out of this browser only**: the desktop app
-  and other browsers may still be signed in. Open **GitHub settings** from
-  that notice and revoke Mahfouz to be sure.
+- **Sign out everywhere**: ends every browser session and revokes
+  Mahfouz's GitHub authorization, which signs the desktop app out too and
+  disconnects [external agents](/guide/external-agents/) connected through
+  the web. Mahfouz asks first. If it can't confirm that every session ended and
+  that GitHub revoked it, it says **Signed out of this browser only**: the
+  desktop app and other browsers may still be signed in. Click **Open
+  GitHub settings** on that notice and revoke Mahfouz to be sure.
 
 ## Opening a GitHub repository
 

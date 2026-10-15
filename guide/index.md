@@ -14,11 +14,12 @@ shows you comes from them.
 offers to install its own copy, or shows how to install git yourself. See
 [Git & sync](/guide/git/#git).
 
-This guide is the long-form manual. To open it from the app, click the **?**
-button near the bottom of the left rail (on desktop, also **Help → User
-Guide**). On a phone, it's **User guide** in the **⋯** menu at the top right.
-Menu → **Help → Keyboard Shortcuts** (<kbd>Cmd/Ctrl</kbd><kbd>?</kbd>) opens a quick-reference
-shortcut cheat sheet inside the app.
+This guide is the long-form manual. To open it from the app, choose **User
+guide** in the account menu (click the account button at the bottom of the
+left rail; on desktop, also **Help → User Guide**). On a phone, it's **User
+guide** in the **⋯** menu at the top right. **Keyboard shortcuts** in the
+account menu (<kbd>Mod</kbd><kbd>?</kbd>, or on desktop **Help → Keyboard
+Shortcuts**) opens a quick-reference shortcut cheat sheet inside the app.
 
 Your notes never leave your computer unless you send them somewhere: to a
 Git remote, an AI agent or a published page. See [Privacy: where your notes
