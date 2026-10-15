@@ -88,6 +88,9 @@ Under a person note's text, Mahfouz shows:
   line. Click one to open the note there.
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
 
+Clicking a task or a mention opens its note at that line, shaded until you
+click, type or move the cursor in the note.
+
 ## Import
 
 Click **Import** in the People view and pick a source:
