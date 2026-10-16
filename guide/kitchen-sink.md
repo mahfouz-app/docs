@@ -7,7 +7,7 @@ permalink: /guide/kitchen-sink/
 
 A sample vault that uses every Markdown feature Mahfouz supports: text
 formatting, lists and tasks, callouts, code, math, tables, media, diagrams,
-track changes and comments, people, slides and a database.
+track changes and comments, people, slides, a database and a tag to rename.
 
 To open it, copy the `_includes/kitchen-sink/` folder from the
 [docs repository](https://github.com/mahfouz-app/docs) into an empty folder
@@ -44,6 +44,22 @@ Below is each note's source.
 
 ````markdown
 {% include kitchen-sink/kitchen_sink/reading_list/the_left_hand_of_darkness.md %}
+````
+
+## Renaming a tag: Tag rename
+
+`kitchen_sink/tag_rename.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/tag_rename.md %}
+````
+
+## A flow-style tags list: Tag rename flow
+
+`kitchen_sink/tag_rename_flow.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/tag_rename_flow.md %}
 ````
 
 ## A deck: Sample deck

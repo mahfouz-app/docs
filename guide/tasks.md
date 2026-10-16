@@ -135,7 +135,7 @@ In every view:
   again. Only tags on the task's own line count, not the note's other
   tags. Clicking a `#tag` on a card or in the **Tags** column opens the
   [Tags view](/guide/links/#tags) with that tag added instead.
-- A reminder's **Open note** opens the task's note at its line too.
+- Clicking a reminder opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something
 needs attention: red when a task is overdue, blue when one is due later
@@ -145,8 +145,10 @@ over the icon to see the counts, such as **2 overdue · 1 due today**.
 
 ## Reminders
 
-When one of your tasks comes due, a notification tells you, with buttons
-to **Open note** at the task or **Mark done** without opening it. In the
+When one of your tasks comes due, a notification tells you. Click it to
+open the note at the task, or, on a pop-up you've moved to with
+<kbd>Tab</kbd>, press <kbd>Enter</kbd>. Its **Mark done** button ticks the
+task off without opening it. In the
 [notification center](/guide/notifications/) and its pop-ups (not in system
 notifications), it also has two menus:
 
@@ -175,8 +177,9 @@ notifications), it also has two menus:
   task still reminds you; only a done one doesn't.
 - Reminders come only while Mahfouz is open. If several came due while it
   was closed or your computer was asleep, they're summarized in one notice,
-  such as **3 tasks are overdue**; **Show tasks** opens the Tasks view, and
-  **Snooze all** snoozes every task in the notice; they come back together.
+  such as **3 tasks are overdue**. Click it (or press <kbd>Enter</kbd> on
+  the pop-up) to open the Tasks view; **Snooze all** snoozes every task in
+  the notice, and they come back together.
 - Each task reminds you once, and again when a snooze ends. Changing its date
   reminds you again at the new time and cancels a snooze; editing its title
   doesn't.

@@ -8,9 +8,10 @@ permalink: /guide/notifications/
 Everything Mahfouz has to tell you (exports, plugin installs and updates, errors saving, committing or syncing, [task reminders](/guide/tasks/#reminders)) collects in the notification center. Open it with the bell button on the left rail, just above your account button: the center takes the place of your notes in the left sidebar, the way Search and Tasks do, and clicking the bell again brings your notes back. On a phone, the bell is in the titlebar and opens the center as a full-screen sheet. Proposals from [external agents](/guide/external-agents/) have their own plug button in the titlebar.
 
 - A dot on the bell means there are notifications you haven't dealt with; hover over the bell to see how many. A ring around it means something is running, and hovering shows what.
-- The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read, or archive it with ×.
+- The filter button in the center's header switches between **Unread**, **All** and **Archived** and narrows the list by category; a dot on it means you're not looking at everything unread. The double-check button marks everything read. Click a notification to mark it read and run its main action, such as opening a reminder's note, or archive it with ×.
 - A finished PDF export waits in the center with **Open**, **Save…** and **Discard**.
-- Errors, and things waiting on you, also pop up briefly in the corner. Closing a pop-up leaves the notification in the center. While the center is showing, nothing pops up: new notifications appear in its list instead.
+- A notification's other actions are buttons on one row under its text, each with an icon. When the row is too narrow, buttons show only their icon; hover over one to see its name.
+- Errors, and things waiting on you, also pop up briefly in the corner. A pop-up doesn't take focus, but you can move to it with <kbd>Tab</kbd> and press <kbd>Enter</kbd> to run its main action; it stays up while it has focus. Closing a pop-up leaves the notification in the center. While the center is showing, nothing pops up: new notifications appear in its list instead.
 - History is kept on this computer for 30 days. It isn't part of your vault.
 
 ## Sounds, system notifications and quiet time
