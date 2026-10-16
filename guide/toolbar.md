@@ -58,8 +58,8 @@ Right-aligned at the end of the toolbar:
 ## The bottom bar
 
 The bar under the open note shows where the note stands on the left and
-how you're viewing it on the right. Apart from the word count, every
-control is an icon: point at one to see what it says or does. A mode
+how you're viewing it on the right. Apart from the word count and the zoom
+level, every control is an icon: point at one to see what it says or does. A mode
 that's on (Suggesting, a published page, a zoom other than 100%) is
 tinted. Its menus open upward.
 
@@ -110,8 +110,8 @@ On the right:
 - **Source / Preview** (an eye in Preview, code brackets in Source): shows
   the mode the note is in; click it to switch (see
   [The editor](/guide/editor/))
-- **Zoom** (a magnifier; point at it for the level, such as **Zoom
-  100%**): point at it, click it or tab to it, and it opens into a slider in the bar. Drag the slider or
+- **Zoom** (the percentage, such as **100%**, tinted when it isn't 100%):
+  point at it, click it or tab to it, and it opens into a slider in the bar. Drag the slider or
   use the arrow keys to step through the levels from 50% to 200%, or use
   **−** and **+**. Double-click the percentage to go back to 100%.
   <kbd>Escape</kbd>, moving the pointer away or clicking elsewhere closes it
