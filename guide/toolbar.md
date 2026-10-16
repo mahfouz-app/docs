@@ -62,6 +62,14 @@ how you're viewing it on the right. Its menus open upward.
 
 On the left:
 
+- **Word count**: how many words the note has, such as **1,284 words**.
+  While text is selected, it reads **212 of 1,284 words**. Point at it to
+  see the number of characters (not counting spaces) and the reading time,
+  at 200 words a minute. Only the text you'd read counts: Markdown markup,
+  code blocks, HTML, URLs, the target of a wikilink (the part before `|`),
+  pending [suggested insertions](/guide/track-changes/) and comments don't.
+  Inline code, text suggested for deletion and the text a comment is
+  anchored to do count
 - **Save status**: shows whether the note has been saved, and where its
   changes are: **Saved · Not committed**, **Not pushed**, **Pushing…**,
   **Pushed**, **Push failed** or **Conflict** (see
