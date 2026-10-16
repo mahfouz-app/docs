@@ -72,6 +72,17 @@ On the left:
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
   the page is behind the note (see [Publishing](/guide/publishing/))
+- **Share** (a box with an up arrow): opens the system share sheet to send
+  the note to another app, such as Mail or Messages. It sends the note's
+  text as Markdown, without its attributes or a database's view settings.
+  Pending [suggestions](/guide/track-changes/) go as the original text
+  (text proposed for deletion stays, insertions don't), and comments are
+  left out. A published note's page link goes too; it opens the page as
+  last published, so update the page first if it's out of date. Share is
+  in the macOS app (also **File → Share…**) and in browsers that can share:
+  Safari; Chrome and Edge on macOS, Windows and ChromeOS; mobile browsers.
+  An encrypted note can't be shared: it has no Share button, **File →
+  Share…** is greyed out, and the command palette refuses it
 
 On the right:
 
