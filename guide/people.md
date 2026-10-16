@@ -85,8 +85,11 @@ Under a person note's text, Mahfouz shows:
 - **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
   by every person page.
-- **Mentions:** the notes that mention them, each with a snippet of the
-  line. Click one to open the note there.
+- **Mentions:** a row for each mention of them, showing its line; two
+  mentions in one paragraph share a row. When there's more to see, the
+  chevron expands the row to the whole paragraph, list item, heading or
+  table row. Click the note's title on the right, or the row, to open the
+  note at the mention. Links in the text open their own targets.
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
 
 Clicking a task or a mention opens its note at that line, shaded until you
