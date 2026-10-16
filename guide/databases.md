@@ -484,7 +484,7 @@ history shows today's rows, not the rows as they were.
 
 Publishing a database note leaves the block out of the published page.
 
-Publishing a note with an embedded view, or exporting it to PDF, replaces the
+Publishing a note with an embedded view, or exporting it to Word or PDF, replaces the
 block with a table of the view's rows, up to 100: titles and the view's
 columns, as plain text. Exporting to Markdown keeps the block as written. The
 table is built each time the note is published, so rows added later appear
@@ -507,7 +507,7 @@ until you update it from this one. Some rows and columns are always left out:
 An embed is published as *Database view (not published)* when its database is
 itself marked not to publish, is disk-only, or holds your people, and when
 Mahfouz can't find the database or read its block. The same rules apply when
-you export to PDF.
+you export to Word or PDF.
 
 ## The agent
 
