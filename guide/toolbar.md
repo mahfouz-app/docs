@@ -93,7 +93,11 @@ On the right:
   under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Show source**: switches between Source and Preview (see
   [The editor](/guide/editor/))
-- **Zoom** dropdown
+- **Zoom** (the percentage, such as **100%**): point at it, click it or
+  tab to it, and it opens into a slider in the bar. Drag the slider or
+  use the arrow keys to step through the levels from 50% to 200%, or use
+  **−** and **+**. Double-click the percentage to go back to 100%.
+  <kbd>Escape</kbd>, moving the pointer away or clicking elsewhere closes it
 
 A plugin with toolbar items (such as draw.io's **New diagram**,
 Mermaid's **Insert diagram** or Slidev's **Present**) adds its own buttons
