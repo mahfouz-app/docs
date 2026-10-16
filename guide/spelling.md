@@ -31,6 +31,17 @@ In the desktop app, the right-click menu also has **Check Spelling While
 Typing**, but that only lasts until the app restarts. Use the setting to
 turn checking off for good.
 
+## Text substitutions
+
+In the desktop app on macOS, the editor doesn't apply macOS text
+substitutions: smart quotes, smart dashes, Text Replacements, automatic
+spelling correction and link detection are all off. What you type stays as
+typed, so `it's` keeps its straight apostrophe and `--` stays two hyphens.
+Misspelled words are still underlined; they just aren't corrected for you.
+
+The right-click menu's **Substitutions** submenu can turn one back on, but
+only until the app restarts.
+
 ## What isn't checked
 
 Code blocks are never checked. On the web in Chrome and Firefox, inline
