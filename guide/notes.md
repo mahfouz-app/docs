@@ -111,3 +111,51 @@ Sidebar and on its tab, and above the note in the editor.
   can't, because it has no note file to store it in.
 - **Published pages**: a [published page](/guide/publishing/) doesn't
   show the icon, so changing it doesn't mark the page out of date.
+
+## Exporting
+
+A note's ⋯ menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>)
+opens the Export dialog. Pick a format card, then **Export**:
+
+- **Word** makes an editable `.docx` document. It renders in the
+  background; when it's ready, a notification offers **Open**, **Save…**
+  and **Discard**.
+- **Markdown** copies the note's file, and the attachments it links to, to
+  a folder you pick.
+- **PDF** lays the note out as pages or slides through Slidev. It needs the
+  **PDF export** plugin: while it's off, the PDF card's **Turn on…** opens
+  Settings → Plugins. See [Slides](/guide/slides/).
+
+**Include children** adds every note under this one; in a Word document
+each starts on a new page. **Exclude files and images** leaves attachments
+out.
+
+What a Word document keeps:
+
+- Headings (as Word's heading styles, so the navigation pane works), bold,
+  italic, strikethrough, inline code, highlights, and links to web pages
+  and email addresses.
+- Lists, numbered lists and tasks (with a box for to do, in progress or
+  done), block quotes, callouts, tables with their column alignment, code
+  blocks and horizontal rules.
+- Images from your vault, at the width you gave them in the editor, scaled
+  to fit the page. WebP and AVIF images are converted to PNG.
+- Mermaid and draw.io diagrams as pictures, when the vault has that plugin
+  on; otherwise as their code.
+- A `[TOC]` marker, as a numbered list of the headings.
+
+What it leaves out or changes:
+
+- Links to other notes, and `[[wikilinks]]`, become plain text.
+- Math stays as its TeX source.
+- Images from the web are left out: an export never downloads anything.
+  The notification says how many images were left out.
+- Pending suggestions export as the original text, and comments are left
+  out, as when [publishing](/guide/publishing/). An embedded database view becomes
+  a table, and a database note's own views block is replaced by a short
+  placeholder.
+- The note's attributes (frontmatter) aren't exported; its title becomes
+  the document's title.
+
+The page is US Letter. Encrypted notes can't be exported, and export is
+desktop only.
