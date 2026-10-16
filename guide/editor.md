@@ -44,8 +44,10 @@ Other editor behavior:
   whitespace at the start of the line; anywhere else it's left free for
   OS-level autocomplete.
 - Misspelled words are underlined by your system's spell checker (see
-  [Spelling check](/guide/spelling/)). Native macOS autocorrect (including
-  Text Replacements) works normally.
+  [Spelling check](/guide/spelling/)). In the macOS desktop app, what you
+  type stays as typed: macOS substitutions (smart quotes, smart dashes,
+  Text Replacements, autocorrect and link detection) are off (see
+  [Text substitutions](/guide/spelling/#text-substitutions)).
 - <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
   note).
