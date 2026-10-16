@@ -11,8 +11,8 @@ until you or a collaborator accepts or rejects them.
 
 ## Suggesting and editing
 
-The bottom bar's **Editing ▴** / **Suggesting ▴** menu sets the mode for the
-open note:
+The bottom bar's track changes menu (a pencil while Editing, a tinted pencil
+with a plus while Suggesting) sets the mode for the open note:
 
 - **Editing**: your changes apply directly, as usual.
 - **Suggesting**: your changes become suggestions:
@@ -77,7 +77,7 @@ whatever its mode: see
 
 ## Comments
 
-Select some text and click **Comment** in the bottom bar, type your comment,
+Select some text and click **Comment** (the speech bubble with a plus) in the bottom bar, type your comment,
 and press Enter or click the send button (the paper plane). The commented
 text gets a soft amber highlight. Nothing is saved until you send the first
 comment; the × button next to the box drops it.

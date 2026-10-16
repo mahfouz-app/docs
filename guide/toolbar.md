@@ -58,7 +58,10 @@ Right-aligned at the end of the toolbar:
 ## The bottom bar
 
 The bar under the open note shows where the note stands on the left and
-how you're viewing it on the right. Its menus open upward.
+how you're viewing it on the right. Apart from the word count, every
+control is an icon: point at one to see what it says or does. A mode
+that's on (Suggesting, a published page, a zoom other than 100%) is
+tinted. Its menus open upward.
 
 On the left:
 
@@ -70,13 +73,17 @@ On the left:
   pending [suggested insertions](/guide/track-changes/) and comments don't.
   Inline code, text suggested for deletion and the text a comment is
   anchored to do count
-- **Save status**: shows whether the note has been saved, and where its
-  changes are: **Saved · Not committed**, **Not pushed**, **Pushing…**,
-  **Pushed**, **Push failed** or **Conflict** (see
-  [The save chip](/guide/git/#the-save-chip)). Click it to open the
+- **Save status**: an icon for whether the note has been saved and where
+  its changes are. A clock while it saves; a cloud once it's saved, marked
+  for **Not committed**, **Not pushed**, **Pushing…**, **Pushed**, **Push
+  failed** or **Conflict** (red for the last two); a tick for a note with
+  no remote; a floppy disk for a [disk-only](/guide/history/) note; a red
+  **!** when a save fails. Point at it for the words, such as **Saved 2m
+  ago · Not pushed** (see [The save chip](/guide/git/#the-save-chip)).
+  Click it to open the
   [Details](/guide/attributes/#note-pills--the-right-sidebar) section
-- **Publish**: publishes the note to the web. Once it's published, it reads
-  **Published ▴** and holds the page's actions: **Update published page**,
+- **Publish** (a globe): publishes the note to the web. Once it's
+  published, the globe is tinted and opens a menu of the page's actions: **Update published page**,
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
   the page is behind the note (see [Publishing](/guide/publishing/))
@@ -94,15 +101,17 @@ On the left:
 
 On the right:
 
-- **Editing ▴ / Suggesting ▴**: switches between making changes and
-  suggesting them, and reviews suggestions. It shows how many suggestions
-  the note has (see [Track changes](/guide/track-changes/))
-- **Comment**: comments on the selected text, or opens the comment
+- **Track changes** (a pencil while Editing, a tinted pencil with a plus
+  while Suggesting): switches between making changes and suggesting them,
+  and reviews suggestions. It shows how many suggestions the note has (see
+  [Track changes](/guide/track-changes/))
+- **Comment** (a speech bubble with a plus): comments on the selected text, or opens the comment
   under the cursor (see [Comments](/guide/track-changes/#comments))
-- **Show source**: switches between Source and Preview (see
+- **Source / Preview** (an eye in Preview, code brackets in Source): shows
+  the mode the note is in; click it to switch (see
   [The editor](/guide/editor/))
-- **Zoom** (the percentage, such as **100%**): point at it, click it or
-  tab to it, and it opens into a slider in the bar. Drag the slider or
+- **Zoom** (a magnifier; point at it for the level, such as **Zoom
+  100%**): point at it, click it or tab to it, and it opens into a slider in the bar. Drag the slider or
   use the arrow keys to step through the levels from 50% to 200%, or use
   **−** and **+**. Double-click the percentage to go back to 100%.
   <kbd>Escape</kbd>, moving the pointer away or clicking elsewhere closes it
