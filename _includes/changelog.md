@@ -1,4 +1,222 @@
 
+## 0.12.0 (2026-10-16) {#v0.12.0}
+
+* Share a note through the system share sheet
+* ci: give check-web 35 minutes
+* Editor: native Format submenu in the macOS context menu
+* fix: keep a source file an outside edit changed during a cross-vault move
+* fix(publish): a retry after PublishRecordError updates the first page
+* Editor toolbar: one model, regrouped like Google Docs
+* Tasks: show tasks as a database (Table, Board, Calendar) in the Tasks tab and on person pages
+* fix: refuse a cross-vault transfer whose source file was moved outside the app
+* fix(publish): keep URLs in a link's label; link www. and email autolinks
+* Plugins: host.vault.unlock, so a plugin's unlock command takes the button's steps
+* Embed menu: say why it's empty in an encrypted note
+* Person page mentions: the mention's line, the paragraph on demand, the note as a pill
+* feat(ui): the avatar opens an account menu with Settings, the guide and feedback
+* fix(shortcuts): leave the key alone for actions the platform doesn't have
+* Encrypted notes: no webview context menu over an unlocked note
+* test: check every invoked command is registered in generate_handler!
+* refactor(ui): one focus-out check and one Tab rule for ContextMenu and Dropdown
+* fix(notifications): stop rows taking the progress bar's and buttons' styles
+* fix(naming): naming and settings follow-ups from #389's review
+* fix(quicklook): color-mix() fallbacks for macOS 12, and #384's optional simplifications
+* Tasks: open the Tasks view as a tab in the main pane
+* fix(publish): unpublish leaves the row's page up when another note's file names it
+* fix(agent): agent chat follow-ups from #415's review
+* fix(cross-vault): refuse a move while a note's body waits in the source
+* fix(publish): publish a note as its file holds it
+* test(core): settle React updates inside act(), ending the act() warnings
+* fix(cross-vault): refuse copying an encrypted note to another vault
+* test(core): count operations instead of timing diff and palette scaling
+* fix(tauri): compile the lib tests on Windows
+* fix(publish): scan wikilinks in linear time
+* fix(plugins): the OS menu lists only the note commands whose `when` applies
+* Calendars start the week on your first day of the week
+* Cross-vault transfer writes the source files, not the index rows
+* fix(encrypted-notes): drop a late editor body for a locked encrypted note
+* fix(plugins): vault commands, #377's remaining review MINORs
+* feat(agent): fold tool calls and thinking into one line in the chat
+* test(worker): make the MCP registration rate-limit test window-proof
+* test(desktop): fix flaky check-desktop: ETXTBSY on fake git-crypt filters
+* fix(save): body writes start from the note's file frontmatter (#372, 2/2)
+* fix(save): a stale save settling mid-write no longer skips onSaved
+* Tint the line a jump lands on; open backlinks at the link's line
+* fix(editor): keep a person note's page under its text
+* fix(tasks): join a snoozed rollup with only the tasks still due
+* fix(save): every frontmatter writer starts from the note's file (#372, 1/2)
+* fix(encrypted-notes): a networked plugin's command doesn't run from its key or the palette
+* fix(quicklook): stale navigations, stuck renders, deadline after load, UTF-16/CP1252
+* fix(naming): fail closed on unreadable naming; hand off Trash title-read slots
+* feat(plugins): vault-scoped commands, listed in the palette with no note open
+* feat(encryption): vault host APIs: move to a private repo, rewrite history, note and commit naming
+* feat(encryption): plugin host APIs for re-encryption, settings pages and locked-vault unlock
+* feat(encrypted-notes): plugin host APIs and a core decrypt entry point
+* feat(encrypted-notes): unlock in the main editor through a plugin codec, with the plaintext kept in
+* test(desktop): turn off commit and tag signing for every git a test spawns
+* docs(instructions): lessons from the embed follow-up and layouts
+* Slides: hint and Remove rule for a prose block at the top of a deck
+* feat(tasks): snooze and reschedule from a due reminder
+* Databases: Board, Gallery and Calendar layouts in embeds
+* feat(plugins): accept a plugin's terms before installing, enabling or updating it
+* Finder Quick Look preview for Markdown notes (macOS)
+* fix(slides): usage counts read defaults.layout as Slidev's server does
+* fix(slides): a float that underflows to zero hides no slide
+* fix(merge): #369's Gate 3 fixes, which missed the merge
+* Share one YAML-aligned reader for slide layout:/class: lines
+* fix(merge): writers check the file; kept edits survive quit and reload
+* fix(slides): read a slide's leading yaml code block as its frontmatter
+* fix(slides): say hidden slides aren't counted in the layout sections copy
+* docs(instructions): lessons from the databases Gallery, Calendar and embeds
+* Databases: embed follow-up (gate 3 fixes, privacy)
+* fix(slides): resolve tagged and anchored hide values as yaml does
+* Slides: hint on a slide block at the top of a deck's text
+* fix(slides): leave hidden slides out of template usage counts
+* test(core): one global jsdom Range layout stub
+* feat(encrypted-notes): the encrypted key, a locked view and a fail-closed write boundary
+* feat: handle git-crypt vaults this device can't decrypt
+* test(editor): stub Range rects in tests that await with a view mounted
+* Plugin install links: web install page and mahfouz:// deep link
+* feat(slides): flag lines Present doesn't show under a tight ---
+* fix(merge): nothing written during a stopped git operation
+* fix(sync): leave a pending app commit's writes to it, not "External edits"
+* Databases: embed a database view in any note
+* fix(slides): a blank line after --- opens no slide frontmatter
+* History: group auto-saves into Edited rows
+* fix(editor): clear a word's underline when it's added to the vault dictionary
+* test(web): e2e for the slides preview's sandbox and meta CSP
+* fix(commit): credit in-app edits to Auto-save and name the changed notes
+* fix(disk-only): announce in-vault moves of disk-only notes
+* fix: commit vault dictionary edits under their own message
+* fix(sync): a file and a folder with the same name stop the merge instead of replacing each other
+* fix(git): apply content filters to resolved merges and blob reads
+* fix(db): tell listeners about writes to disk-only notes
+* fix: refresh an inactive vault's dictionary on its sync
+* feat(slides): template usage counts in Settings (Phase 4C)
+* chore: map the owner's other addresses in .mailmap
+* chore(riprap): refresh the payload to 0.13.0
+* Spelling check: native underlines and a vault dictionary
+* chore: map the leaked Smoke Test identity to its real author
+* fix(desktop): drop an inherited GIT_DIR from every git the app and its tests run
+* feat(slides): Render with Slidev in the template preview (Phase 4B)
+* Databases: the Calendar view
+* fix(core): never settle a note into a database block twice
+* fix(test): keep test git helpers off the repository an inherited GIT_DIR names
+* feat(core): choose each conflicting part in the Merge tab
+* ci: give check-desktop 25 minutes
+* feat(slides): approximate template preview in Settings (Phase 4A)
+* AGENTS.md is the one copy of agent guidance; CLAUDE.md imports it
+* Databases: the Gallery view
+* Configurable port for the web e2e server (MAHFOUZ_E2E_PORT)
+* Person page: contact fields inline, a Board that fits, one-line mentions
+* Spelling check spike: native underlines in the macOS webview
+* Slides templates: layout completion, Apply layout, slide 1 layout menu and hints (Phase 2b, part B)
+* Agents keep the docs repo's kitchen sink current
+* Fix duplicate toolbar, click offset and list selection; add code block card
+* Slides templates: SVG decorations per section (Phase 3)
+* test: fix flaky palette linear-growth timing test
+* test(web-e2e): wait out the boot commit, then require Mod+S's Manual save
+* People: import from macOS Contacts
+* feat(core): Merge tab bulk picks, picks that survive tab switches, and a merge-waiting banner
+* feat(tags): frontmatter tags: lists are tags
+* test(web-e2e): don't require Mod+S to be the commit that pushes the edit
+* Rollup columns
+* feat(tags): clickable tags and a search-style Tags view in the rail
+* feat(ui): Commit notes dialog (Commit notes 2/2)
+* fix(core): binary Merge tab rows hash by blob and read deletes as deletes
+* feat(core): the Merge tab — pick per file, with the differences shown
+* fix(toolbar): heading menu follows the cursor line
+* Tasks rail icon: due dot
+* Sidebar: hover + on notes, ⋮ on folders
+* fix(sidebar): show a parent note's chevron on hover
+* Breadcrumbs: home icon, note emoji, children popover
+* Add Find Selection (Mod+Alt+F): jump to the next occurrence
+* Note bottom bar: save status, Publish and view controls move under the note
+* feat(core): filter the Tasks view by the tasks' own #tags
+* Slides templates: authoring form with layout sections and palette (Phase 2b, part A)
+* fix(sidebar): renaming a file name no longer re-adds the new-note prefix
+* feat(ui): move notifications to the left rail as a sidebar view
+* fix(tasks): assignee chip opens a styled picker; time field writes in WebKit
+* feat(core): a pull merges notes changed on both sides when the edits don't overlap
+* Relation editing
+* fix(core): pull merges under the rebuild mutex, with the network outside it
+* feat: Mod+K command palette (notes, commands, settings)
+* Slides templates: format v2 with per-layout sections, palette and a core stylesheet (Phase 2a)
+* One Banner for notices; fix the external-change banner in dark mode
+* test(core): drop the serial timing project; fix three load flakes
+* fix(ui): pass vault ids to DB calls that run after an await
+* Move five more menus onto Dropdown
+* Slides templates: five built-in looks and a gallery (Phase 0)
+* Attribute links in Backlinks
+* feat(publish): Essay page theme and a QR code for published pages
+* Add Serif to the per-note font picker
+* test: bound timing tests on CPU time, not wall time
+* Editor saves never overwrite a change they haven't seen
+* docs(dev): notes on running and diagnosing core timing tests
+* test: cap local vitest workers at 4
+* fix(web): don't hold the vault's git lock across push and fetch transfers
+* test(agent): sample the linear-time diff check until it shows linear growth
+* Restore the Font picker in Settings → General
+* Shared icons, IconButton, .icon-btn sizes and caption classes
+* ci: a failing large push fails develop's run
+* ci: pin actions/checkout to v5.1.0 in the token-holding jobs
+* Slides templates: forward-compat release (Phase 1)
+* Clean pastes from Word/Outlook, add Paste as Plain Text
+* test(core): run wall-clock tests after the suite, one file at a time
+* fix(ci): call influpert/bws by its major, not a commit
+* test(web): markdownIn rereads a file the app is writing
+* fix(sync): a vault's first pull and push wait for its first index
+* fix: keep the completion menu's scrollbar off its shortcuts
+* Fix overlapping Key/Type inputs in vault Attributes settings
+* Vault and note sync indicators
+* docs(riprap): registry plugins and untrusted vault content
+* test(web): one FakeDocument and recordingLocks, from the web test harness
+* Read and keep frontmatter lists
+* Pull options to settle a merge: resolved text, keep theirs, expected refs
+* feat(ops): per-environment Terraform, applied by the web deploys
+* feat(shell): phone layout below 700px
+* refactor(mcp): remove duplication in the MCP executor, transports and settings
+* fix(shell): collapse the left sidebar below 700px until the user chooses
+* fix(web): keep the E2E build's built-in plugin registry off github.com
+* refactor(sidebar): drive the note drag with startPointerDrag
+* test: keep the remote E2E run away from GitHub
+* feat(import): Import dialog and plugin network layer (Notion import)
+* feat(import): core import writer and plan format
+* Refuse commits and pulls while a git merge or rebase is stopped
+* fix(web): count unpushed commits after a running commit lands
+* feat(web): turn on registry plugins in the web app (web plugins 5/5)
+* fix(editor): tighten the gap under a note's page icon
+* style(callouts): rounded borderless cards
+* feat(databases): the Board (Kanban) view (phase 2, PR 3)
+* fix(editor): style completion menus as a popover
+* feat(mcp): remote MCP server on the Worker and the web tab relay (3/3)
+* fix(db): make Convert table's link resolve to the new database
+* fix(db): gate commits and sync walks against half-done moves
+* feat(databases): group a database table by a Select attribute (phase 2, PR 1)
+* feat(notes): emoji page icons
+* Sync: push on every pass, merge different-file changes, push on quit
+* fix(db): hold folders and new notes against moves
+* Publish child notes with their parent
+* fix(mind-map): open zoomed out; grabbing cursor on right-drag
+* fix(editor): table widget write-back keeps every cell
+* docs(changelog): rewrite the 0.11.0 entry for readers
+* Use two shared empty-state styles
+* fix(db): hold a directory note's whole subtree while it moves
+* Ask the remaining confirmations in the app, re-checking after the answer (E2)
+* Publish: send the note's style with a publish
+* ci(release): announce a version only after its Workers are deployed
+* feat(shortcuts): one keycap per key in the keyboard shortcuts dialog
+* test(web): make readVault tolerate entries git removes mid-walk
+* docs(instructions): store riprap:prune's base branch and protected list
+* docs(instructions): editor completion lessons from the slash menu
+* Published pages: light Preview look, note styles, callouts
+* fix(frontmatter): escape line breaks in quoted attribute values
+* feat(editor): slash command menu
+* fix(editor): keep the link URL field open across an app or tab switch
+* feat(comments): restyle the comment popover as the link popover, with icon buttons
+* fix: typing lost or frozen during auto-commit
+
+
 ## 0.11.0 (2026-10-09) {#v0.11.0}
 
 ### Highlights
