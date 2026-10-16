@@ -18,6 +18,10 @@ you can hand-edit):
 | Font | Serif / Sans-serif / Monospace | Serif |
 | Line numbers | Shown / Hidden | Hidden |
 
+A single note can be shown Light or Dark whatever the Color mode, from the
+**Appearance** button in its [bottom bar](/guide/toolbar/#the-bottom-bar).
+That choice is kept on this device only.
+
 **Slash command menu** (Settings → General, on by default) turns the
 [slash menu](/guide/slash-menu/) on or off. Unlike the settings above, it's
 stored on this computer only, not in the vault. So is **Emoji suggestions

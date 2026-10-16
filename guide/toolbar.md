@@ -60,8 +60,8 @@ Right-aligned at the end of the toolbar:
 The bar under the open note shows where the note stands on the left and
 how you're viewing it on the right. Apart from the word count and the zoom
 level, every control is an icon: point at one to see what it says or does. A mode
-that's on (Suggesting, a published page, a zoom other than 100%) is
-tinted. Its menus open upward.
+that's on (Suggesting, a published page, a Light or Dark appearance, a
+zoom other than 100%) is tinted. Its menus open upward.
 
 On the left:
 
@@ -110,8 +110,22 @@ On the right:
 - **Source / Preview** (an eye in Preview, code brackets in Source): shows
   the mode the note is in; click it to switch (see
   [The editor](/guide/editor/))
+- **Appearance** (a half circle, a sun or a moon, tinted while it's Light
+  or Dark): shows this note in
+  **Light** or **Dark** whatever the app's
+  [Color mode](/guide/settings/), or **Auto** (the default) to follow it.
+  Only the note changes: its toolbar, the note and this bar, along with
+  the menus and diagrams inside it. The sidebars and tabs keep the app's
+  colors. The choice is yours alone, kept for this note on this device
+  (in the browser's or app's local storage), so collaborators and your
+  other devices still see Auto, and nothing is committed. A note's own
+  background and text colors still apply. **Cycle the active note's
+  appearance** in the [command palette](/guide/command-palette/) steps
+  through Auto, Light and Dark; it has no shortcut until you bind one in
+  **Settings → Shortcuts**
 - **Zoom** (the percentage, such as **100%**, tinted when it isn't 100%):
-  point at it, click it or tab to it, and it opens into a slider in the bar. Drag the slider or
+  point at it, click it or tab to it, and it opens into a slider in the
+  bar. Drag the slider or
   use the arrow keys to step through the levels from 50% to 200%, or use
   **−** and **+**. Double-click the percentage to go back to 100%.
   <kbd>Escape</kbd>, moving the pointer away or clicking elsewhere closes it
