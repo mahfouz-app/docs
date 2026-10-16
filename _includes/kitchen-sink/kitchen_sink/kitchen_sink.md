@@ -21,6 +21,8 @@ To try it, copy this folder (`_includes/kitchen-sink/` in the docs repository) i
 
 **Bold**, _italic_, ++underline++, ~~strikethrough~~, ==highlight==, `inline code`, H~2~O (subscript), E = mc^2^ (superscript), and a literal \$5 price.
 
+To try **Remove formatting**, select "new" in **the new** _toolbar_ and run it: the bold is split around it. Select the whole line to clear **bold**, ==highlight== and `code` while the [link](https://mahfouz.app), #kitchen-sink tag and [[Sample deck]] wikilink stay.
+
 A [link](https://mahfouz.app), an autolink <https://docs.mahfouz.app>, a wikilink to [[Sample deck]], and one through a folder with its own text: [[people/Ada Lovelace|Ada's note]].
 
 ## Headings
