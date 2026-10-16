@@ -253,6 +253,8 @@ Working with the month:
 
 - **‹** and **›** change the month, and **Today** goes back to this month.
   The month shown isn't saved.
+- Weeks start on the day set in Settings → General →
+  [First day of week](/guide/settings/).
 - A day shows up to three rows, then **+N more**, which lists the rest.
 - **Drag a row** to another day to change its date. A date keeps its form: a
   date stays a date, and a date and time keeps its time.

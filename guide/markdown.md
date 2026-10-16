@@ -52,8 +52,7 @@ There are five types: `NOTE`, `TIP`, `IMPORTANT`, `WARNING` and
 as a tinted box with the type's icon and name. A marker followed by other
 text, an unknown type, or a quote inside a list stays a plain blockquote.
 
-To insert one, open the menu next to the toolbar's **Quote** button and
-pick a type. With the cursor inside a callout, picking another type
+To insert one, open the toolbar's **Callout** menu and pick a type. With the cursor inside a callout, picking another type
 changes it, and picking its own type turns it back into a plain quote.
 A callout at the top of a note isn't the note's title: the title comes
 from the line after it.
@@ -110,8 +109,10 @@ is inside it, and on [published pages](/guide/publishing/).
 A line holding only `[TOC]` (or `[[_TOC_]]`) shows a numbered **Contents**
 list (1, 1.1, 2…) of the note's level 2–6 headings, each linking to its
 section. It shows in Preview mode, where clicking an entry jumps to the
-heading, and on [published pages](/guide/publishing/). With no headings,
-Preview shows **No headings yet** and a published page shows nothing.
+heading, and on [published pages](/guide/publishing/). In Preview, the
+heading's line stays shaded until you click, type or move the cursor. With
+no headings, Preview shows **No headings yet** and a published page shows
+nothing.
 
 ## Tables
 

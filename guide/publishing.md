@@ -124,7 +124,9 @@ asking.
 Once a note is published, its bottom bar reads **Published ▴**, with a dot
 while the page is behind the note. That menu, and the note's right-click
 menu in the sidebar, hold the page's actions, among them **Copy public
-link**, **Open published page** and **QR code**.
+link**, **Open published page** and **QR code**. The
+[Share](/guide/toolbar/#the-bottom-bar) button beside it sends the page's
+link along with the note's text.
 
 ## QR code
 

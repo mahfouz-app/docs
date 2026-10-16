@@ -37,6 +37,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | Create a database (no default key; action "New database") |
 | None | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
 | None | Set the active note's page icon (no default key; action "Set note icon") |
+| None | [Share the active note](/guide/toolbar/#the-bottom-bar) through the system share sheet (no default key; row `share_note`; in the macOS app and in browsers that can share) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
 
@@ -69,7 +70,8 @@ Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
-  **New Database**, New Vault, Open Vault, Save, Export, Close Tab.
+  **New Database**, New Vault, Open Vault, Save, Export, Share (macOS
+  only), Close Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
   Search Vault, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
@@ -127,8 +129,8 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Reveal in Finder | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | (desktop only) |
 
 <kbd>Mod</kbd><kbd>;</kbd> assumes a US-style keyboard layout. On a layout where ";" needs
-Shift or another modifier, it can't be pressed: open Settings from the gear
-in the left rail instead.
+Shift or another modifier, it can't be pressed: choose **Settings** in the
+account menu (the account button at the bottom of the left rail) instead.
 
 On a Mac, shortcuts with ⌥ go by the key you press, not the character ⌥
 types with it, so <kbd>⌘</kbd><kbd>⌥</kbd><kbd>S</kbd> works although ⌥S types "ß".

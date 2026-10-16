@@ -5,30 +5,42 @@ description: "Every button on the formatting toolbar, its More menu and the bott
 permalink: /guide/toolbar/
 ---
 
-The toolbar above the editor, left to right:
+The toolbar above the editor groups its buttons, with a separator between
+groups. Left to right:
 
-- **Undo / Redo**
-- **Bold, Italic, Underline, Strikethrough, Inline code, Highlight**
-- **Sub/Superscript** dropdown
-- **Link**: opens a field under the selection for the URL; **Enter**
-  links the selected text (`[text](url)`), **Esc** cancels
-- **Tag**: inserts a `#tag`
-- **Heading** dropdown: Normal text / H1 / H2 / H3
-- **List** dropdown: Bullet / Numbered / Checklist
-- **Quote** (blockquote), with a menu beside it for inserting or changing
-  a [callout](/guide/markdown/#callouts)
-- **Table**: opens the hover-grid size picker
-- **Embed** dropdown: inserts a block for each enabled embed plugin (such
-  as Mermaid). If none are enabled, it links to Preferences instead.
-- **Insert media or file**: opens a native multi-file picker and attaches
-  the chosen files (see [Media](/guide/media/))
-- **Find and replace**
-- **Font** dropdown: whole-note font override, stored as a note attribute
-- **Color** dropdown: Text / Background / Highlight tabs. Each has a
-  100-swatch grayscale + hue grid, a native "Custom…" color picker and
-  "Reset to default." Like Font, these are whole-note settings stored as
-  note attributes, not formatting for the selected text.
-- **Page orientation**: switches between Landscape and Portrait
+- **History**: **Undo**, **Redo**
+- **Style**: the **Heading** dropdown: Normal text / Heading 1 / Heading 2 /
+  Heading 3
+- **Text**: **Bold**, **Italic**, **Underline**, **Strikethrough**, the
+  **Subscript / Superscript** dropdown, **Highlight**, **Inline code** and
+  **Remove formatting** (see [Remove formatting](#remove-formatting))
+- **Insert**:
+  - **Link**: opens a field under the selection for the URL; **Enter**
+    links the selected text (`[text](url)`), **Esc** cancels
+  - **Tag**: inserts a `#tag`
+  - **Insert media or file**: opens a native multi-file picker and
+    attaches the chosen files (see [Media](/guide/media/))
+  - **Table**: opens the hover-grid size picker
+  - **Embed** dropdown: inserts a block for each enabled embed plugin (such
+    as Mermaid). If none are enabled, it links to Preferences instead.
+- **Paragraph**: the **List** dropdown (Bullet list / Numbered list /
+  Checklist), **Quote** (blockquote) and the **Callout** dropdown, for
+  inserting or changing a [callout](/guide/markdown/#callouts)
+- **Find**: **Find and replace**
+- **Note look**:
+  - **Font** dropdown: whole-note font override, stored as a note attribute
+  - **Color** dropdown: Text / Background / Highlight tabs. Each has a
+    100-swatch grayscale + hue grid, a native "Custom…" color picker and
+    "Reset to default." Like Font, these are whole-note settings stored as
+    note attributes, not formatting for the selected text.
+- **Slides**, when shown: **Page orientation** switches a slides PDF
+  export between Landscape and Portrait, and the slides-template menu
+  picks the note's [slides template](/guide/slides/)
+
+Table and Embed aren't available while
+[Suggesting](/guide/track-changes/); their tooltips say to switch to
+Editing. The same groups, in the same order and with the same labels,
+are in the editor's [right-click menu](/guide/editor/#right-click-menus).
 
 Right-aligned at the end of the toolbar:
 
@@ -60,6 +72,17 @@ On the left:
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
   the page is behind the note (see [Publishing](/guide/publishing/))
+- **Share** (a box with an up arrow): opens the system share sheet to send
+  the note to another app, such as Mail or Messages. It sends the note's
+  text as Markdown, without its attributes or a database's view settings.
+  Pending [suggestions](/guide/track-changes/) go as the original text
+  (text proposed for deletion stays, insertions don't), and comments are
+  left out. A published note's page link goes too; it opens the page as
+  last published, so update the page first if it's out of date. Share is
+  in the macOS app (also **File → Share…**) and in browsers that can share:
+  Safari; Chrome and Edge on macOS, Windows and ChromeOS; mobile browsers.
+  An encrypted note can't be shared: it has no Share button, **File →
+  Share…** is greyed out, and the command palette refuses it
 
 On the right:
 
@@ -85,3 +108,18 @@ All toggle-style formatting (bold, italic, lists, headings, blockquote,
 etc.) is a *smart toggle*: applying it again removes it, and applying a
 different list type to a line that already has one converts it in place
 rather than stacking markers.
+
+## Remove formatting
+
+**Remove formatting** takes the text formatting off the selected text:
+bold, italic, underline, strikethrough, highlight, inline code, subscript
+and superscript. It has no keyboard shortcut.
+
+- Only the selected text loses it. A mark that runs past the selection is
+  split, so the text outside keeps it: in `**the new**`, removing
+  formatting from "new" leaves `**the** new`.
+- With no selection, it removes the marks the cursor is in.
+- Links, tags, wikilinks, headings, lists, quotes, comments and
+  suggestions stay.
+- It isn't available while Suggesting: switch to Editing to remove
+  formatting.

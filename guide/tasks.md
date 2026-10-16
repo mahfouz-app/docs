@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Tasks"
-description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, see every task in a list or on a board, and get reminded when one is due."
+description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, see every task in a table, on a board or on a calendar, and get reminded when one is due."
 permalink: /guide/tasks/
 ---
 
@@ -55,6 +55,8 @@ Click the date chip, or type ` //` after the title of a checklist item, to
 open the date picker.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
+  The calendar's weeks start on the day set in Settings → General →
+  [First day of week](/guide/settings/).
 - Add a time if you want one; leave it empty for an all-day task. The time
   is saved once it's complete, and again when you leave the field or close
   the picker.
@@ -88,35 +90,52 @@ Like the date picker, these changes apply directly, even in Suggesting mode.
 
 ## The Tasks view
 
-Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>6</kbd>) to see every task. The
-**List**/**Board** switch at the top picks how they're laid out; Mahfouz
-remembers your choice on this computer.
+Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>6</kbd>) to open the
+Tasks tab in the main pane, beside your notes. It shows every task as a
+database, with three views to pick from at the top:
 
-- **List** groups the tasks into **Overdue**, **Today**, **Upcoming** and
-  **Completed**. An in-progress task carries an **In progress** chip.
-- **Board** puts them in three columns: **To do**, **In progress** and
-  **Done**. Drag a card to another column to change its status, or open
-  the card's menu and pick a column under **Move to**. Each card shows its
-  note and its due date, with an icon for whether it's overdue, due today,
-  upcoming or done.
+- **Table** lists the tasks grouped into **Overdue**, **Today**,
+  **Upcoming** and **Done** (collapsed at first), sorted by due date. An
+  in-progress task carries an **In progress** chip. Edit a task right in
+  the table:
+  - Tick its checkbox to mark it done, or untick it.
+  - Click its title to open its note at that line, shaded until you click,
+    type or move the cursor in the note. Click ✎ to rename it.
+  - Click its due date to pick another day; its time stays. To change the
+    time, use the date chip in the note.
+  - Click its assignee to pick someone else, or **Unassign**.
+  Each change rewrites the task's line in its note. **Columns** shows or
+  hides **Status**, **When**, **Assignee**, **Note**, **Vault** and
+  **Tags**, and **Group** groups by **When** or **Status**, or not at all.
+- **Board** puts the tasks in three columns: **To do**, **In progress**
+  and **Done**. Drag a card to another column to change its status, or
+  open the card's menu and pick a column under **Move to**. Each card
+  shows its note and its due date, with an icon for whether it's overdue,
+  due today, upcoming or done.
+- **Calendar** shows the tasks on a month by their due date. Drag one to
+  another day, or pick **Move to date…** in its menu; its time stays.
+  Overdue tasks are tinted and done ones are struck through.
 
-In both layouts:
+**Filter** and **Sort** narrow and order any view. Mahfouz remembers each
+view's settings, and the view you picked, on this computer; **Reset**
+goes back to the defaults.
+
+In every view:
 
 - **Mine** shows the tasks assigned to your GitHub login, or to the handle
   of a person whose `github` is your login; you need to be signed in with
   GitHub. **Everyone** shows every task, including the ones
-  with no assignee.
-- With more than one vault, the list covers all of them. Pick a single
-  vault from the menu at the top, and each task shows which vault it's in.
-- To narrow the list by topic, put `#tags` on the task line itself, such
+  with no assignee, and adds an **Assignee** column.
+- With more than one vault, the Tasks tab covers all of them, with a
+  **Vault** column. Pick a single vault from the menu at the top.
+- To narrow the tasks by topic, put `#tags` on the task line itself, such
   as `- [ ] Fix login #bug @sam // 2026-10-14`. Each tag on the listed
-  tasks shows as a chip with its count above the list. Click chips to
+  tasks shows as a chip with its count under the toolbar. Click chips to
   show only the tasks carrying any of them; **Clear** shows every task
   again. Only tags on the task's own line count, not the note's other
-  tags. Clicking a `#tag` in a task's title opens the
+  tags. Clicking a `#tag` on a card or in the **Tags** column opens the
   [Tags view](/guide/links/#tags) with that tag added instead.
-- Click a task to open its note at that line. In the list, tick its
-  checkbox to mark it done without opening the note.
+- A reminder's **Open note** opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something
 needs attention: red when a task is overdue, blue when one is due later

@@ -31,11 +31,14 @@ permalink: /guide/links/
   a text selection turns the selection into `[selected text](url)`.
 - **Backlinks**: the right sidebar's "Linked from N notes" section lists
   every note that links to the one you're viewing (via `[[wikilink]]` or a
-  regular link to its title). The backlinks pill above the note shows the
-  count and opens it (see [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
+  regular link to its title). Click one to open it at the line holding its
+  link, shaded until you click, type or move the cursor in the note; a
+  [database](/guide/databases/) opens as a table instead. The backlinks
+  pill above the note shows the count and opens it (see
+  [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
   A wikilink in an attribute counts too, such as `author: "[[Ursula K. Le Guin]]"`
   or an item in a list. That note is listed with the attribute it links
-  through, for example "The Dispossessed via author".
+  through, for example "The Dispossessed via author", and opens at the top.
 
 ## Tags
 
@@ -77,6 +80,9 @@ the selection is still there when you come back to Tags.
 search view in the left sidebar. It searches **all open vaults** as you
 type, matching title and body text, and lists the results under each
 vault. The buttons beside the search box change how results are sorted.
+Click a result to open the note with your matches highlighted and the line
+of the first one shaded until you click, type or move the cursor in the
+note. Edit the query and the shading follows the first match.
 
 To jump to a note by its title, run a command or open a setting, use the
 [command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.
