@@ -74,6 +74,51 @@ search:
 The selection only filters the Tags view. Home always shows every note, and
 the selection is still there when you come back to Tags.
 
+### Rename a tag
+
+**Rename tag…** renames a tag in every note of every vault that has it.
+Open it from the tag's menu:
+
+- In the **Tags** view, right-click a tag in the list, a selected tag's
+  chip, or a row under **Narrow by**.
+- In the editor, right-click a tag (in Preview or Source) and choose
+  **Rename tag #name…**. With the cursor on a tag and nothing selected,
+  <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key opens the same
+  menu.
+
+The dialog counts the notes it will change in each vault. Type the new name
+after the `#`. A tag starts with a letter, followed by letters, digits, `-`
+or `_`. Capitals are lowercased as you type, and a leading `#` is dropped.
+If the new name is a tag that already exists, the dialog says so and the
+button becomes **Merge**: the two tags become one, and a `tags:` list that
+had both keeps it once.
+
+Each vault gets one commit, `Rename tag #old to #new`. What's rewritten:
+
+- `#old` in note bodies, in any case (`#Old` becomes `#new`), including
+  inside pending [suggestions](/guide/track-changes/).
+- Items of a frontmatter `tags:` list. The list keeps its style: one
+  `- item` per line, or `[a, b]`, with any quotes or leading `#`.
+
+What stays as it is:
+
+- `#old` inside code, a URL, a link's destination or a wikilink, and in
+  comment entries.
+- Longer tags that start the same way, such as `#old-ideas` or `#older`.
+- Vaults with a stopped git operation (a merge or rebase, for example), and
+  vaults that are [git-crypt locked](/guide/encryption/) or need to be
+  reconnected. These aren't searched.
+- Notes whose [edits are waiting](/guide/when-sync-fails/#edits-to-title-are-waiting)
+  for your choice, and encrypted notes.
+
+The dialog lists what will be skipped before you rename.
+[Disk-only notes](/guide/history/#auto-commit-and-disk-only-notes) are
+renamed but stay out of the commit.
+
+When it's done, one notification reports every vault. If a vault fails, its
+changes are undone, the others keep theirs, and the notification offers
+**Try again**.
+
 ## Search
 
 **Search** in the left rail (<kbd>Mod</kbd><kbd>5</kbd>, or <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> on the web) opens the

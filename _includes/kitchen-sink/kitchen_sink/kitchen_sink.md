@@ -25,6 +25,8 @@ To try **Remove formatting**, select "new" in **the new** _toolbar_ and run it: 
 
 A [link](https://mahfouz.app), an autolink <https://docs.mahfouz.app>, a bare link https://mahfouz.app/guide/ and address ada@example.com, a wikilink to [[Sample deck]], and one through a folder with its own text: [[people/Ada Lovelace|Ada's note]].
 
+A link whose label holds a URL goes to its destination, not the label's URL: [see https://mahfouz.app/guide/ in the docs](https://docs.mahfouz.app/guide/). A bare www.example.com and a bare someone@example.com are links too.
+
 ## Headings
 
 ### Level 3
@@ -118,6 +120,10 @@ $$
 ## Media
 
 ![A team around a laptop (photo: Brooke Cagle, Unsplash)](/files/sample.jpg)
+
+An image whose alt text is a URL still shows its own file:
+
+![https://example.com/photo]((/files/sample.jpg)
 
 ## Diagrams
 
