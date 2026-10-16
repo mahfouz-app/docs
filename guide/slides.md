@@ -69,9 +69,9 @@ Present**.
   presenter view, with speaker notes and a timer, in your system browser),
   **Browser** (opens the deck itself there), and **Restart** (restarts
   Slidev) in its toolbar.
-- **PDF**: a note's menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>) → Format
-  **PDF** renders the deck to a PDF; once it's ready, **Save…** asks where
-  to put it. Page shape follows the note's **Orientation**.
+- **PDF**: a note's menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>), then
+  the **PDF** card, renders the deck to a PDF; once it's ready, **Save…**
+  asks where to put it. Page shape follows the note's **Orientation**.
 - **Enable it first**: Present is the **Slidev presentations** plugin and
   PDF export the **PDF export** plugin (Settings → Plugins), both from
   the built-in `mahfouz` registry. Each can be on without the other; while

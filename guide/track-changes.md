@@ -162,7 +162,7 @@ A pending suggestion doesn't count as part of the note yet:
 - The note's **title**, and its file and folder name, come from the text
   *before* suggestions. Suggesting a new heading renames nothing until the
   suggestion is accepted.
-- **Export** to PDF and other plugin formats uses the text before
+- **Export** to Word, PDF and other plugin formats uses the text before
   suggestions. **Markdown** export copies the file as it is, markup
   included.
 - **Links, tags and attachments** in a suggestion count right away, so an
