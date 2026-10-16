@@ -10,7 +10,8 @@ certain syntax renders visually as you type (checkboxes, bullets,
 highlights, tags, wikilinks, media) rather than showing raw symbols.
 
 There are two independent view modes for how much raw syntax stays
-visible, switched with the bottom bar's **Show source** button
+visible, switched with the bottom bar's view button (an eye in Preview, code
+brackets in Source)
 (remembered on this device, not per note):
 
 - **Source** (default): most Markdown punctuation stays visible

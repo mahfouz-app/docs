@@ -66,8 +66,8 @@ you say so.
   auto-commit for note** can be bound to a key in Settings → Shortcuts; it
   has no default key.
 - **How to tell**: a disk-only note shows a drive glyph in the sidebar
-  (filled while it has uncommitted changes), and the bottom bar's save chip
-  reads **Saved · not in history**.
+  (filled while it has uncommitted changes), and the bottom bar's save icon
+  is a floppy disk that reads **Saved · not in history** when you point at it.
 - **Commit… / Discard changes**: when a disk-only note has uncommitted
   changes, the Attributes panel shows both buttons. **Commit…** opens
   [Commit notes](#commit-notes) with the note checked; the commit is a

@@ -139,8 +139,8 @@ keeps its own drive glyph.
 
 ### The save chip
 
-The bottom bar's save chip adds the note's sync state after **Saved**:
-**Saved · Not committed**, **Saved · Not pushed**, **Saved · Pushing…**,
+The bottom bar's save icon shows the note's sync state as a cloud, and
+pointing at it reads the state after **Saved**: **Saved · Not committed**, **Saved · Not pushed**, **Saved · Pushing…**,
 **Saved · Pushed**, **Saved · Push failed** or **Saved · Conflict**.
 
 ## Git LFS for large media
