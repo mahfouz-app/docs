@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "The editor"
-description: "Editing and preview modes, the table of contents and page preview."
+description: "Editing and preview modes, right-click menus, the table of contents and page preview."
 permalink: /guide/editor/
 ---
 
@@ -59,6 +59,41 @@ Other editor behavior:
   <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back.
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
+
+## Right-click menus
+
+What a right-click in the editor opens depends on whether you click
+inside a selection.
+
+**Inside a selection**, on the desktop and on the web, Mahfouz opens its
+own menu:
+
+- **Cut**, **Copy**, **Paste**
+- **Comment** (see [Comments](/guide/track-changes/#comments))
+- the toolbar's **Style**, **Text**, **Insert** and **Paragraph** groups,
+  in the [toolbar](/guide/toolbar/)'s order and with its labels. Each
+  toolbar dropdown (Heading, Subscript / Superscript, Embed, List,
+  Callout) is a submenu.
+
+A check mark shows the formatting the cursor is in. A row that can't be
+used right now is dimmed and says why, such as "switch to Editing to
+insert" while Suggesting. In a read-only note, such as a revision
+preview, the menu has **Copy** only. On macOS, **Paste** from this menu
+works like <kbd>Cmd</kbd><kbd>V</kbd>.
+
+**Anywhere else in the editor**, a right-click opens the system's menu:
+
+- In the macOS desktop app, that menu (spelling suggestions, **Look Up**,
+  **Writing Tools**) has a **Format** submenu with the same items, in
+  place of the system's Font submenu.
+- On the web, and in the desktop app on Windows and Linux, it's your
+  browser's or system's usual menu.
+- In an unlocked encrypted note, no menu opens.
+
+**Outside the editor**, a right-click opens no system menu, except in
+text fields. The app's own menus (on sidebar rows, tabs and breadcrumbs)
+open as before. On the web this means the browser's menu, with items
+such as "Open link in new tab", isn't there outside text fields.
 
 ## Table of contents & page preview
 

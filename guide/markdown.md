@@ -52,8 +52,7 @@ There are five types: `NOTE`, `TIP`, `IMPORTANT`, `WARNING` and
 as a tinted box with the type's icon and name. A marker followed by other
 text, an unknown type, or a quote inside a list stays a plain blockquote.
 
-To insert one, open the menu next to the toolbar's **Quote** button and
-pick a type. With the cursor inside a callout, picking another type
+To insert one, open the toolbar's **Callout** menu and pick a type. With the cursor inside a callout, picking another type
 changes it, and picking its own type turns it back into a plain quote.
 A callout at the top of a note isn't the note's title: the title comes
 from the line after it.
