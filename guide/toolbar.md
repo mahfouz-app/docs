@@ -101,6 +101,18 @@ On the right:
   under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Show source**: switches between Source and Preview (see
   [The editor](/guide/editor/))
+- **Appearance** (a half circle, a sun or a moon): shows this note in
+  **Light** or **Dark** whatever the app's
+  [Color mode](/guide/settings/), or **Auto** (the default) to follow it.
+  Only the note changes: its toolbar, the note and this bar, along with
+  the menus and diagrams inside it. The sidebars and tabs keep the app's
+  colors. The choice is yours alone, kept for this note on this device
+  (in the browser's or app's local storage), so collaborators and your
+  other devices still see Auto, and nothing is committed. A note's own
+  background and text colors still apply. **Cycle the active note's
+  appearance** in the [command palette](/guide/command-palette/) steps
+  through Auto, Light and Dark; it has no shortcut until you bind one in
+  **Settings → Shortcuts**
 - **Zoom** (the percentage, such as **100%**): point at it, click it or
   tab to it, and it opens into a slider in the bar. Drag the slider or
   use the arrow keys to step through the levels from 50% to 200%, or use
