@@ -41,6 +41,14 @@ Other editor behavior:
   item above, wherever your cursor is on the line, and its sub-items move
   with it. **Shift+Tab** moves it back out a level. On the first item of a
   list Tab does nothing, since there's nothing above to nest under.
+- In Preview, <kbd>Backspace</kbd> at the start of a nested list item's
+  text moves it, with its sub-items, out a level, the same as
+  <kbd>Shift</kbd><kbd>Tab</kbd>. On a top-level item, and in Source,
+  Backspace works as usual.
+- In Preview, the cursor never sits in front of a list item's bullet or
+  checkbox. Clicking left of the bullet, pressing <kbd>Home</kbd>, or
+  moving up or down onto the marker puts it at the start of the item's
+  text, and <kbd>←</kbd> from there goes to the end of the line above.
 - On any other line, **Tab** re-indents only when your cursor is in leading
   whitespace at the start of the line; anywhere else it's left free for
   OS-level autocomplete.
