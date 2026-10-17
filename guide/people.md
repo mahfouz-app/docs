@@ -70,7 +70,8 @@ menu at the top right.
 - **Add person** asks for a name and adds a row to the People database.
 - **Open People database** opens the database itself, as a table.
 - **Import** and **Export all** are described [below](#import).
-- Right-click a person for **Open**, **Export vCard** and **Delete**.
+- Right-click a person for **Open**, **Export vCard**, **Change handle…**
+  ([below](#changing-a-handle)) and **Delete**.
 - A warning icon marks a person whose handle doesn't work; hover it to see
   why. The handle is used by another person note (the first by path keeps
   it), is also a collaborator's GitHub login (this note takes it, so the
@@ -91,9 +92,54 @@ Under a person note's text, Mahfouz shows:
   table row. Click the note's title on the right, or the row, to open the
   note at the mention. Links in the text open their own targets.
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
+  **Change handle…**, next to it, changes their handle (see
+  [Changing a handle](#changing-a-handle)).
 
 Clicking a task or a mention opens its note at that line, shaded until you
 click, type or move the cursor in the note.
+
+## Changing a handle
+
+**Change handle…** changes a person's handle and rewrites every reference
+to it in the vault, so no mention is left behind. It's in three places:
+
+- the person's right-click menu in the [People view](#the-people-view);
+- the button next to **Export vCard** on [their page](#a-persons-page);
+- the right-click menu on an `@mention` in a note, which also has **Open**
+  for the person. <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key
+  opens it too, with the cursor on the mention.
+
+The dialog starts with the current handle, selected. Type the new one
+(the `@` is already there) and click **Change handle**:
+
+- A handle uses letters, digits, `-` and `_`, like a GitHub login.
+- You can't take a handle another person has, or a collaborator's GitHub
+  login: there's no merging two people. Changing only the case, such as
+  `ada` to `Ada`, is fine.
+- A collaborator with no note yet can't be changed: their handle is their
+  GitHub login, so the item is dimmed with the hint "GitHub login".
+
+The change is one commit in the person's vault, **Change handle @old to
+@new**. It rewrites:
+
+- the person note's `person:`;
+- every `@old` mention in the vault's notes;
+- tasks assigned to `@old`, whatever the case;
+- `@old` on every side of a pending [suggestion](/guide/track-changes/).
+
+It leaves alone `@old` in code, in email addresses and URLs, `@old/…`,
+longer handles that start with `@old`, and the author and text of
+[comments](/guide/track-changes/#comments). A note with edits waiting for
+your choice, an encrypted note, or a vault that's locked, unreachable or
+in the middle of a git operation is skipped, and the result says which. If
+the change fails, every note is put back and the notice offers **Try
+again**.
+
+A person whose `github` is set still answers to their GitHub login after
+the change: `@login` keeps naming them. A person note whose handle is a
+duplicate, or isn't valid, gets only its own `person:` changed; no
+mention is rewritten. The change covers one vault, and other people's
+copies of it pick it up when they pull.
 
 ## Import
 

@@ -111,8 +111,10 @@ $$
 
 ## Table
 
+Its columns are aligned left, center and right. In Preview, click a grip for a row's or column's menu, including Align left, center and right.
+
 | Feature | Mode | Status |
-|---|:---:|---:|
+|:---|:---:|---:|
 | Code blocks | Preview | Done |
 | Math | Both | Done |
 | Tables | Preview | Done |
@@ -144,6 +146,10 @@ Meet on {~~Monday~>Tuesday~~}{>>@owahab · 2026-10-12<<} at {++10 am++}{>>@owaha
 
 {==This sentence has a comment thread.==}{>>@owahab · 2026-10-12 · Is this clear enough?<<}{>>@agent · 2026-10-12 · Yes, it reads fine.<<}
 
+{==A second thread==}{>>@owahab · 2026-10-13 · Right below the first, so their cards in the comment margin stack. @ada, this one runs long on purpose: a card shows only the first three lines of its first comment, and the open thread cuts a comment off after six lines behind Show more, so this sentence keeps going for a while about cards, readers and loops until it is well past six lines in the thread's narrow column, which is about as wide as a sticky note and not much more.<<}{>>@ada · 2026-10-14 · Noted.<<} starts here.
+
+{==This thread is resolved.==}{>>@owahab · 2026-10-12 · Should the meeting move?<<}{>>@ada · 2026-10-12 · Yes, to Tuesday.<<}{>>@owahab · 2026-10-13 · Done.<<}{>>✓@owahab · 2026-10-13<<} It has no card in the margin; find it under Resolved in the sidebar's Comments.
+
 ## People
 
 Ask @ada about the engine: a mention of the person in the vault's [[People]] database. Her note lists every mention of her under its text, one row per block: the quote, list item, long paragraph, heading and table row below.
@@ -153,6 +159,7 @@ Ask @ada about the engine: a mention of the person in the vault's [[People]] dat
 
 - Send @ada the `tables.csv` export
 - Mail @ada at ada@example.com, or post it at https://mahfouz.app
+- Not mentions of her, so Change handle leaves them alone: `@ada` in code, @ada/engine and @adam
 - Book the room for Thursday
 
 The card reader needs a proper check before the next run. The engine reads its cards strictly in order, one at a time, so a single card punched in the wrong place sends every later result to the wrong column, and nobody notices until the printed tables disagree with the ones worked out by hand. @ada has written down, in [the run log](https://mahfouz.app), how a loop runs the same operation cards again with new variables, and _that_ is exactly where one misplaced card does the most damage. Until her steps have been read, keep each deck in its own box, label every card with the date it was punched, and don't reorder anything, however obvious the fix looks.

@@ -62,7 +62,8 @@ Fixed editor shortcuts (not remappable):
 
 Other useful bindings: <kbd>Tab</kbd>/<kbd>Enter</kbd> inside a checklist or list continue
 it; <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
-autocomplete; `!` triggers field autocomplete.
+autocomplete; `!` triggers field autocomplete. The Find and Replace bar has
+its own keys, listed under [Find and replace](/guide/editor/#find-and-replace).
 
 ## The menu bar (desktop)
 

@@ -110,8 +110,12 @@ database, with three views to pick from at the top:
 - **Board** puts the tasks in three columns: **To do**, **In progress**
   and **Done**. Drag a card to another column to change its status, or
   open the card's menu and pick a column under **Move to**. Each card
-  shows its note and its due date, with an icon for whether it's overdue,
-  due today, upcoming or done.
+  shows its title, then its `#tags` on their own line (click one to open
+  it in the Tags view), then its note and its due date, with an icon for
+  whether it's overdue, due today, upcoming or done. Tags at the end of
+  the title move to the tag line; a tag in the middle of the title stays
+  there, tinted. On a [person's page](/guide/people/#a-persons-page), a
+  card keeps its title as written, with no tag line.
 - **Calendar** shows the tasks on a month by their due date. Drag one to
   another day, or pick **Move to date…** in its menu; its time stays.
   Overdue tasks are tinted and done ones are struck through.

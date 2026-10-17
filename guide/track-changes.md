@@ -77,29 +77,18 @@ whatever its mode: see
 
 ## Comments
 
-Select some text and click **Comment** (the speech bubble with a plus) in the bottom bar, type your comment,
-and press Enter or click the send button (the paper plane). The commented
-text gets a soft amber highlight. Nothing is saved until you send the first
-comment; the × button next to the box drops it.
-
-When the cursor is inside commented text, its thread opens beside it. The
-buttons are icons; point at one to see its name:
-
-- **Reply** (paper plane): type in the box and press Enter or click it.
-- **Resolve** (check mark): marks the thread done. The highlight goes
-  away, but the thread stays in the note, and **Reopen** (the curved arrow
-  that takes its place) brings it back. Replying to a resolved thread
-  reopens it too.
-- **Delete thread** (trash can): removes the comments and keeps the text.
-  One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
-
-Tab moves between the box and the buttons; Esc goes back to the note.
+Select some text and click **Comment** (the speech bubble with a plus) in
+the bottom bar, type your comment and press <kbd>Enter</kbd> or click
+**Comment**. The commented text gets a soft amber highlight. Nothing is
+saved until you send the first comment; **Cancel** drops it.
 
 The **Comments** section in the right sidebar lists the note's open
-threads, with resolved ones collapsed at the bottom. Click one to jump to
-it; its line is shaded until you click, type or move the cursor in the
-note. **Add comment** has no keyboard shortcut by default; you can give it
-one under Settings → Shortcuts.
+threads, with resolved ones collapsed at the bottom; it's where you find
+resolved threads again. Click one to jump to it (and to its card in the
+[comment margin](#the-comment-margin)); its line is shaded until you
+click, type or move the cursor in the note. **Add comment** has no
+keyboard shortcut by default; you can give it one under Settings →
+Shortcuts.
 
 Comments work in both **Editing** and **Suggesting**, and they never become
 suggestions. A comment stays on one line of text: it can't cover a heading
@@ -113,6 +102,66 @@ see its comments in the chat first, and nothing is added until you accept.
 In the other modes they're added right away. **Undo** on the chat card
 removes them. The agent never resolves a thread, and it won't remove
 someone else's reply.
+
+### The thread
+
+When the cursor is inside commented text, its thread opens beside it, or
+in its card when the [comment margin](#the-comment-margin) shows:
+
+- **The header** says how many comments there are, or **✓ Resolved**. Next
+  to it are **Resolve** (or **Reopen**) and a **⋯** menu with **Delete
+  thread…**.
+- **Each comment** shows its author's avatar (their GitHub picture, or
+  their initials; the agent has a sparkle), their name from the
+  [People](/guide/people/) directory or their GitHub login (point at the
+  name to see the login), and when they wrote it: "today", "yesterday",
+  "2d ago" and so on, with the full date when you point at it. A long
+  comment is cut off after six lines behind **Show more**, and `@handles`
+  in it are marked.
+- **Resolve** marks the thread done. The highlight goes away, but the
+  thread stays in the note, folded to its first comment, **Show N more
+  replies** and who resolved it. **Reopen** brings it back, and so does
+  replying: the button then reads **Reply and reopen**.
+- **Delete thread…** asks "Delete this thread?" first. It removes the
+  comments and keeps the text, and one undo
+  (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
+- **The reply field** is one line until you click it. Type and press
+  <kbd>Enter</kbd> (or click **Reply**) to send; **Cancel** clears it.
+  <kbd>Shift</kbd><kbd>Enter</kbd> adds no new line, because a comment is
+  stored on one line. Type `@` to pick someone from the People directory;
+  <kbd>Enter</kbd> or <kbd>Tab</kbd> picks them, and <kbd>Esc</kbd> closes
+  the list. If a reply can't be saved, the thread says why and keeps your
+  text.
+- In a read-only note, such as a revision, the thread has no reply field
+  or buttons.
+
+<kbd>Tab</kbd> moves between the field and the buttons; <kbd>Esc</kbd> goes
+back to the note.
+
+### The comment margin
+
+When a note has open threads and its pane is wide enough (about 880 pixels
+or more), each thread shows as a card in a margin to the right of the text,
+in Source and Preview alike. The text moves over to make room. A card sits
+level with its commented text and scrolls with it; when cards would
+overlap, they stack in order, and the one you're reading stays level with
+its text.
+
+- A card shows the first comment, cut off after three lines, and how many
+  replies there are. Click it, or press <kbd>Enter</kbd> on it, to put the
+  cursor in its text: the card opens in place as the full thread, with
+  its reply field.
+- Pointing at a card tints its text, and pointing at commented text
+  outlines its card.
+- A resolved thread has no card, except while you're reading it, for
+  example after clicking it in the sidebar.
+- **On a narrower pane**, a thin strip of markers beside the text stands
+  in for the cards. Markers too close together merge into one with a
+  count; press it again to go through them. A marker opens its thread
+  beside the text.
+- **On a phone**, the markers open the thread as a sheet from the bottom
+  of the screen, quoting the commented text. Tap outside it, or press
+  <kbd>Esc</kbd>, to put it away.
 
 ## What gets tracked
 

@@ -54,14 +54,53 @@ Other editor behavior:
   note).
 - In Preview, a plain click on a link opens a small editor for it (see
   [Links](/guide/links/#links-wikilinks--backlinks)).
-- **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the search
-  and replace panel.
+- **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the
+  [Find and Replace bar](#find-and-replace).
 - **Find selection**: <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd> jumps to the next
   occurrence of the selected text, or of the word under the cursor when
   nothing is selected, without opening the panel. Press
   <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back.
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
+
+## Find and replace
+
+<kbd>Cmd/Ctrl</kbd><kbd>F</kbd>, **Edit → Find and Replace** or the
+toolbar's **Find and replace** opens the Find and Replace bar, with the
+selection, or the word at the cursor, already in the **Find** field. On a
+wide pane the bar floats as a card at the top right, so the note doesn't
+move; on a narrow pane it's a full-width strip under the toolbar. It stays
+open, with its query, when you switch between Source and Preview.
+
+- **Match case** (`Aa`), **Match whole word** (`ab`) and **Use regular
+  expression** (`.*`) are toggles inside the Find field. From the field,
+  <kbd>Alt</kbd><kbd>C</kbd>, <kbd>Alt</kbd><kbd>W</kbd> and
+  <kbd>Alt</kbd><kbd>R</kbd> switch them.
+- **The count** beside the field reads "12 results", then "3 of 12" once
+  you're on a match. It counts the note's text, so matches hidden inside
+  markup in Preview count too. Past 1,000 matches it reads "1,000+". With
+  no match, the field turns red, the count reads "No results" and the
+  buttons are dimmed; an invalid regular expression says so in place of
+  the count.
+- <kbd>Enter</kbd> and <kbd>Shift</kbd><kbd>Enter</kbd> (or the up and down
+  arrows beside the count) go to the next and previous match.
+- **Select every match** with <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>L</kbd>
+  or <kbd>Alt</kbd><kbd>Enter</kbd> in the Find field, to edit them all at
+  once.
+- **Replace** is folded away at first. Click the chevron at the bar's left,
+  or press <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> again in the Find field, to show
+  the Replace field with **Replace** and **Replace all**. <kbd>Enter</kbd>
+  in the Replace field replaces the current match. The bar remembers
+  whether Replace was open until you quit. A read-only note has no Replace.
+- **While Suggesting**, Replace and Replace all write each replacement as
+  a [tracked substitution](/guide/track-changes/), and the bar says
+  "Replacements are added as suggestions." Matches a suggestion can't
+  change, such as text already suggested for deletion or someone else's
+  suggestion, are skipped.
+- <kbd>Esc</kbd> closes the bar and puts you back in the note.
+
+**Find selection** (<kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd>) never
+opens the bar.
 
 ## Right-click menus
 
