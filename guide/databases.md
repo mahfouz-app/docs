@@ -43,9 +43,14 @@ You can create a database in three ways:
 
 - **New database.** Right-click the sidebar background or a vault and choose
   **New database**. To create a database inside a note, right-click the note
-  and choose **New child database**. The new database opens in the editor with an empty heading; type
-  its name. The **File** menu also has a **New Database** action, with no
-  default key; see [Keyboard shortcuts](/guide/shortcuts/).
+  and choose **New child database**. The **File** menu also has a **New
+  Database** action, with no default key; see
+  [Keyboard shortcuts](/guide/shortcuts/).
+
+  First, choose what it starts with: **Empty** (a Title column only), or a
+  template: **Projects**, **Reading list**, **Meeting notes**, or
+  **Bookmarks**. The new database opens as a table, ready for you to type its
+  first row. To name it, click its title at the top of the tab.
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
   attributes they already use become the columns. The block goes below the
@@ -62,11 +67,41 @@ You can create a database in three ways:
 None of these are available while a note is in Suggesting mode, because they
 change the note directly.
 
+### Templates
+
+A template gives the database its columns, their types, a few views, and one
+example row you can delete:
+
+| Template | Columns | Views |
+|---|---|---|
+| Projects | Status, Owner, Start, Due | Table, Board by Status, Calendar by Due |
+| Reading list | Author, Shelf, Rating, Cover | Table, Gallery |
+| Meeting notes | Date, Attendees, Type | Table, Calendar by Date |
+| Bookmarks | Link, Topic, Read, Cover | Table, Gallery |
+
+Column types belong to the whole vault (see [Columns](#columns)). If your
+vault already gives one of these attributes a type, it keeps that type: a
+Select gains the options it's missing, and anything else stays as it is. If
+your notes already use one of these attributes without a type, it gets the
+template's type everywhere. The picker tells you about each of these, with
+how many notes they affect, before anything is created.
+
+Owner and Attendees are relations to your [People](/guide/people/)
+database, which is created if you don't have one. Each person's row gets a
+column linking back to the new database. If your notes already use that
+attribute as text, or the relation can't be made, the column stays plain
+text; the picker or a notification says so.
+
 ## The table
 
 A database note opens as a table in its own tab. To see or edit the
 note itself, click **View source**. In Preview, the block shows as an
 **Open database** card.
+
+To rename the database, click its title at the top of the tab, type the new
+name, and press <kbd>Enter</kbd>. Press <kbd>Escape</kbd> to cancel. The
+name is the note's heading, so its file follows it, as it does when you
+retitle any note.
 
 In the sidebar, a database starts collapsed and shows how many rows it has.
 Expand it to see the rows as ordinary notes.
@@ -127,6 +162,11 @@ vault directly instead of becoming suggestions.
 
 ## Columns
 
+- **+** at the end of the header adds a column: type its name, then choose
+  its type. The column is added to the view for everyone, in the database
+  block, and a name with spaces or capitals is kept as the column's label
+  (**Due date** is stored as `due_date`). If your vault already gives that
+  attribute a type, the picker starts from it.
 - **Columns** shows or hides columns and changes their order. Title is always
   shown.
 - A column header's menu offers **Rename…**, **Set type…**, sorting, and
