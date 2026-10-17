@@ -1,3 +1,6 @@
+---
+id: 01a14b8813bd70de9ce5e78e71e8b146
+---
 # Website design
 
 How docs.mahfouz.app looks, for anyone changing a page or adding one. The site

@@ -1,10 +1,9 @@
 ---
+id: 01a14b8847be75f1a0e2bfc977dc0a36
 layout: guide
-title: "Kitchen sink"
 description: "A sample vault that uses every Markdown feature Mahfouz supports, to see them all in one place."
 permalink: /guide/kitchen-sink/
 ---
-
 A sample vault that uses every Markdown feature Mahfouz supports: text
 formatting, lists and tasks, callouts, code, math, tables, media, diagrams,
 track changes and comments, people, slides, a database and a tag to rename.
