@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "The editor"
-description: "Editing and preview modes, right-click menus, the table of contents and page preview."
+description: "Editing and preview modes, right-click menus, the outline, the table of contents and page preview."
 permalink: /guide/editor/
 ---
 
@@ -98,11 +98,19 @@ text fields. The app's own menus (on sidebar rows, tabs and breadcrumbs)
 open as before. On the web this means the browser's menu, with items
 such as "Open link in new tab", isn't there outside text fields.
 
-## Table of contents & page preview
+## Outline, table of contents & page preview
 
-Two right/left-hand panels, both driven by the editor's current scroll
-position ("whichever section is at the top of the viewport is active"):
+Three ways to find your place in a long note, all driven by the editor's
+current scroll position ("whichever section is at the top of the viewport
+is active"):
 
+- **Outline** (floating over the editor's right edge) shows one short dash
+  per heading (levels 1–6), deeper levels shorter, with the current
+  section's dash darker. Hover over it, or move keyboard focus to it, to
+  open the list of headings; click one to jump the editor there. It's
+  hidden when the note has fewer than two headings, in the phone layout
+  (a window narrower than 700px) and for [encrypted notes](/guide/encryption/).
+  Turn it off in [Settings → General → **Note outline**](/guide/settings/).
 - **Table of contents** (right sidebar) lists every heading (levels 1–6,
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.
@@ -111,4 +119,6 @@ position ("whichever section is at the top of the viewport is active"):
   line appears (the same rule [presenting](/guide/slides/)
   uses for slide breaks). Click a thumbnail to jump there. Drag cards to
   reorder pages, or right-click one for **Move up / Move down / Delete
-  page**.
+  page**. It's off by default: turn it on in [Settings → General →
+  **Page previews**](/guide/settings/). Switched off, the column isn't
+  shown at all, its collapse bar included.

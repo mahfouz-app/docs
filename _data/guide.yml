@@ -31,7 +31,7 @@
   pages:
     - slug: editor
       title: "The editor"
-      description: "Editing and preview modes, the table of contents and page preview."
+      description: "Editing and preview modes, the outline, the table of contents and page preview."
     - slug: toolbar
       title: "The formatting toolbar"
       description: "Every button on the formatting toolbar and its More menu."
