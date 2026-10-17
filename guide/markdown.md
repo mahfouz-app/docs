@@ -124,6 +124,20 @@ grid instead of raw pipe syntax:
 - Click a cell to edit it inline; **Tab**/**Shift+Tab** moves between
   cells (Tab at the last cell adds a new row); **Enter** commits the cell.
 - Hover the bottom or right edge for a **+** button to add a row or column.
-- Each column header shows a drag handle (reorder columns) and a trash
-  icon (delete column, hidden when only one remains); rows with more than
-  one row get the same drag handle to reorder.
+- Each column header and each body row has a grip. Drag a grip to move
+  its column or row, or click it for a menu:
+  - **Row:** **Insert row above**, **Insert row below**, **Move row up**,
+    **Move row down** and **Delete row**.
+  - **Column:** **Insert column left**, **Insert column right**, **Move
+    column left**, **Move column right**, **Align left**, **Align center**,
+    **Align right** (the current alignment is checked) and **Delete
+    column**. Alignment writes `:---`, `:---:` or `---:` under the header.
+
+  An item that can't be used is dimmed and says why, such as "Already
+  first" or "A table needs a column". Grips show on one-row and one-column
+  tables too; the header row has no row grip. Each action is one undo.
+- <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key in a cell opens
+  the same items for its row and column in one menu (a header cell gets the
+  column items only). When the menu closes, you're back in the cell.
+- While Suggesting, and in a read-only note, the table can't be edited:
+  there are no grips, **+** buttons or menus.

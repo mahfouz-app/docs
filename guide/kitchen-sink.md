@@ -86,6 +86,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/deck_with_a_prose_top_block.md %}
 ````
 
+## A deck with text above a yaml block: Deck with a prose top block before yaml
+
+`kitchen_sink/deck_with_a_prose_top_block_before_yaml.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/deck_with_a_prose_top_block_before_yaml.md %}
+````
+
 ## The People database
 
 `people/people.md`
