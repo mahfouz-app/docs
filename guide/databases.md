@@ -48,8 +48,8 @@ You can create a database in three ways:
   [Keyboard shortcuts](/guide/shortcuts/).
 
   First, choose what it starts with: **Empty** (a Title column only), or a
-  template: **Issue tracker**, **Projects**, **Reading list**, or **Meeting
-  notes**. The new database opens as a table, ready for you to type its
+  template: **Projects**, **Reading list**, **Meeting notes**, or
+  **Bookmarks**. The new database opens as a table, ready for you to type its
   first row. To name it, click **View source** and type its heading.
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
@@ -74,21 +74,23 @@ example row you can delete:
 
 | Template | Columns | Views |
 |---|---|---|
-| Issue tracker | Status, Priority, Assignee, Due | Table, Board by Status |
 | Projects | Status, Owner, Start, Due | Table, Board by Status, Calendar by Due |
 | Reading list | Author, Shelf, Rating, Cover | Table, Gallery |
 | Meeting notes | Date, Attendees, Type | Table, Calendar by Date |
+| Bookmarks | Link, Topic, Read, Cover | Table, Gallery |
 
 Column types belong to the whole vault (see [Columns](#columns)). If your
 vault already gives one of these attributes a type, it keeps that type: a
-Select gains the options it's missing, and anything else stays as it is.
-The picker tells you which before anything is created.
+Select gains the options it's missing, and anything else stays as it is. If
+your notes already use one of these attributes without a type, it gets the
+template's type everywhere. The picker tells you about each of these, with
+how many notes they affect, before anything is created.
 
-Assignee, Owner, and Attendees are relations to your
-[People](/guide/people/) database, which is created if you don't have one.
-Each person's row gets a column linking back to the new database. If the
-relation can't be made, the column stays plain text and a notification
-says why.
+Owner and Attendees are relations to your [People](/guide/people/)
+database, which is created if you don't have one. Each person's row gets a
+column linking back to the new database. If your notes already use that
+attribute as text, or the relation can't be made, the column stays plain
+text; the picker or a notification says so.
 
 ## The table
 
