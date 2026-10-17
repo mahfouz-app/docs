@@ -116,8 +116,9 @@ database, with three views to pick from at the top:
   the title move to the tag line; a tag in the middle of the title stays
   there, tinted. On a [person's page](/guide/people/#a-persons-page), a
   card keeps its title as written, with no tag line.
-- **Calendar** shows the tasks on a month by their due date. Drag one to
-  another day, or pick **Move to date…** in its menu; its time stays.
+- **Calendar** shows the tasks on a month, or on a week with **Week**, by
+  their due date. Drag one to another day, or pick **Move to date…** in its
+  menu; its time stays.
   Overdue tasks are tinted and done ones are struck through.
 
 **Filter** and **Sort** narrow and order any view. Mahfouz remembers each

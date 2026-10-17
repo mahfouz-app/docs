@@ -233,8 +233,8 @@ them yet.
 
 ## Calendar
 
-A Calendar shows a month, with each row on the day of one of its dates, such
-as a due date. In the block, a Calendar is a view with `type: calendar` and
+A Calendar shows a month or a week, with each row on the day of one of its
+dates, such as a due date. In the block, a Calendar is a view with `type: calendar` and
 `date: <attribute>`. This view is Mahfouz's own; other apps that read the
 block show it as an unknown view.
 
@@ -249,10 +249,16 @@ block show it as an unknown view.
 If the view's `date` is missing or names an attribute that isn't a date, the
 Calendar asks you to choose one, and your choice is written into the view.
 
-Working with the month:
+Working with the calendar:
 
 - **‹** and **›** change the month, and **Today** goes back to this month.
   The month shown isn't saved.
+- **Month** and **Week**, next to **Today**, switch between the month and
+  one week. A week shows seven tall days with every row on them, and a row
+  with a time shows it before its title. **‹** and **›** then move by a
+  week. The choice is kept on this computer until you click **Save view**,
+  which writes `range: week` into the view (picking **Month** and saving
+  removes it), so everyone with the vault sees the same layout.
 - Weeks start on the day set in Settings → General →
   [First day of week](/guide/settings/).
 - A day shows up to three rows, then **+N more**, which lists the rest.
@@ -268,7 +274,7 @@ A value Mahfouz can't read exactly as a date, such as `10/13/2026` or
 `2026-02-30`, is listed under **No date** with its text, and can't be moved
 until you fix it in the note.
 
-From the keyboard, the month is one stop: the arrow keys move between days,
+From the keyboard, the month or week is one stop: the arrow keys move between days,
 <kbd>Enter</kbd> enters a day so its rows and buttons can be reached with
 the arrow keys, and <kbd>Escape</kbd> leaves it. When the Calendar is 600
 pixels wide or less, as on a phone or in a split, days show a count; tap or
@@ -465,9 +471,9 @@ The embed keeps the view's layout, read-only:
   or one grouped by something an embed can't show, such as a relation,
   shows as a table and says why.
 - **Gallery**: up to 10 cards.
-- **Calendar**: the current month, with each row on its day. You can't move
-  to other months, and rows on other months' days or with no date aren't
-  shown. A Calendar with no date attribute says so instead. When the note
+- **Calendar**: the current month, with each row on its day, or the current
+  week for a view saved as a week. You can't move to other months or weeks,
+  and rows on other days or with no date aren't shown. A Calendar with no date attribute says so instead. When the note
   is narrow, days show a count; click or press <kbd>Enter</kbd> on a day to
   list its rows below the month.
 
