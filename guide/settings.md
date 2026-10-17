@@ -28,6 +28,12 @@ stored on this computer only, not in the vault. So is **Emoji suggestions
 when typing :**, which turns the [`:` emoji suggestions](/guide/slash-menu/#emoji)
 on or off.
 
+**Note outline** (Settings → General, on by default) shows or hides the
+[outline](/guide/editor/#outline-table-of-contents--page-preview) that floats
+over the editor's right edge. **Page previews** (Settings → General, off by
+default) shows or hides the [page preview](/guide/editor/#outline-table-of-contents--page-preview)
+column to the left of the editor. Both are stored on this computer only.
+
 Sidebar sort order (alphabetical vs. chronological) is also saved there,
 toggled from the Sidebar header.
 
