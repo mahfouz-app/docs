@@ -144,7 +144,7 @@ graph LR
 
 Meet on {~~Monday~>Tuesday~~}{>>@owahab · 2026-10-12<<} at {++10 am++}{>>@owahab · 2026-10-12<<}{--noon--}{>>@owahab · 2026-10-12<<}.
 
-{==This sentence has a comment thread.==}{>>@owahab · 2026-10-12 · Is this clear enough?<<}{>>@agent · 2026-10-12 · Yes, it reads fine.<<}
+{==This sentence has a comment thread.==}{>>@owahab · 2026-10-12 · edited · Is this clear enough now?<<}{>>@agent · 2026-10-12 · Yes, it reads fine.<<}{>>@owahab · 2026-10-13 · edited\ · is how this reply begins, but it was never edited, so it shows no (edited).<<}
 
 {==A second thread==}{>>@owahab · 2026-10-13 · Right below the first, so their cards in the comment margin stack. @ada, this one runs long on purpose: a card shows only the first three lines of its first comment, and the open thread cuts a comment off after six lines behind Show more, so this sentence keeps going for a while about cards, readers and loops until it is well past six lines in the thread's narrow column, which is about as wide as a sticky note and not much more.<<}{>>@ada · 2026-10-14 · Noted.<<} starts here.
 

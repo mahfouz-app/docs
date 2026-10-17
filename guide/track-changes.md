@@ -117,7 +117,24 @@ in its card when the [comment margin](#the-comment-margin) shows:
   name to see the login), and when they wrote it: "today", "yesterday",
   "2d ago" and so on, with the full date when you point at it. A long
   comment is cut off after six lines behind **Show more**, and `@handles`
-  in it are marked.
+  in it are marked. A comment that was changed after it was sent shows
+  **(edited)** after its date.
+- **Your own comments** have a **⋯** (**Comment actions**) that shows when
+  you point at the comment or move to it with the keyboard, and always on a
+  phone. Its menu has **Edit** and **Delete comment…**. The agent's
+  comments have a **⋯** with **Delete comment…** only.
+- **Edit** turns the comment into a field in place, with your text in it.
+  Press <kbd>Enter</kbd> (or click **Save**) to save, or <kbd>Esc</kbd>
+  (or **Cancel**) to leave it as it was; `@` picks people as in a reply.
+  **Save** is off while the text is empty or unchanged. If the edit can't
+  be saved, the thread says why and keeps your text.
+- **Delete comment…** asks "Delete this comment?" first. The replies stay.
+  Deleting the first comment keeps the highlight, and the next reply
+  becomes the first. Deleting a thread's only comment asks "Delete this
+  thread?" and deletes the thread.
+- Each edit or delete is one undo step (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>),
+  and in **Suggesting** it applies directly instead of becoming a
+  suggestion.
 - **Resolve** marks the thread done. The highlight goes away, but the
   thread stays in the note, folded to its first comment, **Show N more
   replies** and who resolved it. **Reopen** brings it back, and so does
@@ -132,8 +149,8 @@ in its card when the [comment margin](#the-comment-margin) shows:
   <kbd>Enter</kbd> or <kbd>Tab</kbd> picks them, and <kbd>Esc</kbd> closes
   the list. If a reply can't be saved, the thread says why and keeps your
   text.
-- In a read-only note, such as a revision, the thread has no reply field
-  or buttons.
+- In a read-only note, such as a revision, the thread has no reply field,
+  buttons or **⋯**.
 
 <kbd>Tab</kbd> moves between the field and the buttons; <kbd>Esc</kbd> goes
 back to the note.
@@ -220,7 +237,11 @@ A pending suggestion doesn't count as part of the note yet:
 ## Limits
 
 - Comments are stored in the note's Markdown as `{==text==}` followed by
-  `{>>@who · date · comment<<}`, so other editors show that markup.
+  `{>>@who · date · comment<<}`, so other editors show that markup. An
+  edited comment keeps its author and date and is stored as
+  `{>>@who · YYYY-MM-DD · edited · comment<<}`. A comment whose own text
+  starts with `edited · ` is stored as `edited\ · `, so it isn't read as
+  edited.
 - Two people replying to comments in the same paragraph at the same time
   will hit a merge conflict on sync.
 - Two people suggesting changes to the *same line* at the same time will
