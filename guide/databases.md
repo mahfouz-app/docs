@@ -50,7 +50,7 @@ You can create a database in three ways:
   First, choose what it starts with: **Empty** (a Title column only), or a
   template: **Issue tracker**, **Projects**, **Reading list**, or **Meeting
   notes**. The new database opens as a table, ready for you to type its
-  first row. To name it, click **View source** and type its heading.
+  first row. To name it, click its title at the top of the tab.
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
   attributes they already use become the columns. The block goes below the
@@ -95,6 +95,11 @@ says why.
 A database note opens as a table in its own tab. To see or edit the
 note itself, click **View source**. In Preview, the block shows as an
 **Open database** card.
+
+To rename the database, click its title at the top of the tab, type the new
+name, and press <kbd>Enter</kbd>. Press <kbd>Escape</kbd> to cancel. The
+name is the note's heading, so its file follows it, as it does when you
+retitle any note.
 
 In the sidebar, a database starts collapsed and shows how many rows it has.
 Expand it to see the rows as ordinary notes.
