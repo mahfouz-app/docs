@@ -130,6 +130,19 @@ opens the Export dialog. Pick a format card, then **Export**:
 each starts on a new page. **Exclude files and images** leaves attachments
 out.
 
+Word and PDF (and any other format a plugin adds) offer two more choices.
+Both start at **As written** each time the dialog opens:
+
+- **Tags**: **As written** keeps `#launch`; **Without #** writes `launch`.
+- **People**: **As written** keeps `@ada`; **As names** writes the
+  person's name from [People](/guide/people/), such as `Ada Lovelace`. An
+  `@handle` that names no one in People loses its `@` (`@someone` becomes
+  `someone`).
+
+A `#` or `@` in code, a URL, a link, a `[[wikilink]]` or an email address
+isn't a tag or a mention, so it's left alone. Markdown offers neither
+choice: it copies the note's file exactly as written.
+
 What a Word document keeps:
 
 - Headings (as Word's heading styles, so the navigation pane works), bold,
