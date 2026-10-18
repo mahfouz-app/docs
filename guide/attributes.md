@@ -5,7 +5,7 @@ description: "Note pills, the right sidebar and per-note attributes."
 permalink: /guide/attributes/
 ---
 
-## Note pills & the right sidebar
+## Note pills & the right sidebar {% include since.html v="0.13.0" %} {#note-pills--the-right-sidebar}
 
 A row of pills always sits at the right of the note header, above the
 text, whether the right sidebar is open or not:
