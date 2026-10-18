@@ -47,6 +47,30 @@ The read-only Created, Updated and Path rows live in the sidebar's
 **Details** section; the block in the document shows them only if you've
 chosen to there.
 
+### Rows {% include since.html v="0.13.0" %} {#rows}
+
+Every attribute is one row: its type's icon, its name, its value, an eye
+and a menu.
+
+- **The type icon** shows the attribute's type (an attribute with no
+  type shows Text's). Click it to change the type.
+- **The eye** says whether the attribute shows in the block in the
+  document: always, only while it has a value (dashed), or never (struck
+  through). Click it to move to the next state.
+- **The menu** (the **⋯** button on hover) has **Rename…**, **Change type…**,
+  **Visibility** and **Delete**. Rename and Delete change only this note.
+  Delete happens at once; its notification has **Undo**.
+- **+ Add attribute** adds a row and puts you in its name. Press
+  <kbd>Enter</kbd> to go to its value, or <kbd>Esc</kbd> to drop the row.
+
+In the document, the eye and the menu show when you hover a row, and a
+row you're editing stays until you leave it, even if you clear a value
+that's only shown while filled. A note with nothing to show has no
+block: hover its title to see **+ Add attribute**.
+
+A Select shows its value as a colored pill; click it to pick another
+option or **Clear**.
+
 - **Render external images**: a switch; see
   [Media](/guide/media/).
 - **Orientation**: Landscape / Portrait segmented control for PDF export
