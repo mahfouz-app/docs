@@ -52,8 +52,8 @@ declining keeps the older one-folder-per-note shape, which still works.
   - A note whose auto-commit is off (disk only) can't be moved or copied
     to another vault. Turn auto-commit back on first.
 - **Folders**: a folder doesn't have to belong to a note. Right-click a
-  plain folder in the Sidebar for **New note**, **New folder**, **Rename
-  folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
+  plain folder in the Sidebar for **New note**, **New database**, **New
+  folder**, **Rename folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
   **Reveal in Finder**, and **Delete folder**. A note's own menu has
   **New folder** too: the folder goes inside the note's folder and shows
   under the note (a note without a folder gets one first).
