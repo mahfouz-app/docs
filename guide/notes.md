@@ -66,9 +66,14 @@ declining keeps the older one-folder-per-note shape, which still works.
   vault…**, and the grouping, sort and filename-display options.
 - **Reveal in Finder** is called **Reveal in File Explorer** on Windows
   and **Open Containing Folder** on Linux.
-- **Bookmarks**: click the ribbon icon on a Sidebar row, or use the
-  toolbar's ⋯ menu → Bookmark, to pin a note. <kbd>Cmd/Ctrl</kbd><kbd>2</kbd> jumps to the
-  Bookmarks view (a flat list across all vaults).
+- **Bookmarks**: bookmark a note from its menu (right-click its Sidebar
+  row, or the toolbar's ⋯ menu → **Bookmark**) or with
+  <kbd>Cmd/Ctrl</kbd><kbd>D</kbd>. Each vault lists its bookmarked notes
+  in a **Bookmarks** section above its **Notes** section, which holds the
+  whole tree; a bookmarked note shows in both. Click a section's header to
+  collapse or expand it; Mahfouz remembers that per vault on this device.
+  <kbd>Cmd/Ctrl</kbd><kbd>2</kbd> (Go → Bookmarks) opens and scrolls to
+  the active vault's Bookmarks section. {% include since.html v="0.13.0" %}
 - **Unimported files**: if you drop a plain `.md` file into the vault
   folder outside Mahfouz (no `id:` in its frontmatter), it shows up right
   away in the Sidebar as a clickable "pending" row, in the folder (or under
@@ -88,7 +93,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   shows a drive glyph instead
   (see [Auto-commit and disk-only notes](/guide/history/#auto-commit-and-disk-only-notes)).
 - **Sort order**: toggle alphabetical vs. chronological (by last-updated)
-  ordering from the Sidebar header in Trash/Bookmarks views, or globally
+  ordering from the Sidebar header in the Trash view, or globally
   via Settings.
 
 ## Page icons {% include since.html v="0.12.0" %} {#page-icons}
