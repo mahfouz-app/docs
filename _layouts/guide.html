@@ -72,8 +72,16 @@
           {% include guide-nav.html here=here %}
         </nav>
       </details>
+      {%- comment %} The release workflow writes the changelog newest first, so its first "## 0.12.0 (date)" heading is the current release. {% endcomment %}
+      {%- capture changelog %}{% include changelog.md %}{% endcapture %}
+      {%- assign version = changelog | split: "## " | slice: 1 | first | split: " " | first %}
       <article class="guide-content">
-        <h1>{{ page.title | escape }}</h1>
+        <div class="guide-title">
+          <h1>{{ page.title | escape }}</h1>
+          {%- if version %}
+          <a class="guide-version" href="/changelog/#v{{ version }}" title="What’s new in Mahfouz {{ version }}">For Mahfouz <b>{{ version }}</b></a>
+          {%- endif %}
+        </div>
         {{ content }}
       </article>
       {%- for p in pages %}{% if p.slug == here %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}

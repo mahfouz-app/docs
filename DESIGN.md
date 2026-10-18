@@ -103,6 +103,14 @@ Reuse these from `styles.css`:
   `--body-secondary`, no border. One fact per chip; keep a single fact like a
   minimum version as a line of text instead. A badge such as **Official** is
   the same chip in `--cm-text`, never in the accent colour.
+- **Version pills** (`.guide-version`, `.guide-since`): the one place a
+  single fact gets a chip, so a reader learns one shape for "which release".
+  `--tile` fill, pill shaped, 0.78rem, `--body-secondary` with the version
+  in bold `--cm-text`, no border; each links to that release in the
+  changelog. "For Mahfouz **0.12.0**" sits to the right of every guide
+  page's title and drops below it when the title is long. "New in
+  **0.12.0**" follows a heading or, smaller, the end of a bullet, for
+  something that first appeared in that release.
 - **Small buttons** on a card (`.registry-install`): the primary button's
   fill and pill shape at 32px tall, at the card's bottom right. At most one
   per card.
@@ -125,7 +133,8 @@ Reuse these from `styles.css`:
   the actions (**Source ›** and **Install**), a row of facts, then the
   write-up in guide styles.
 - Guide pages use the `guide` layout and are styled by `.guide-content`; just
-  write Markdown.
+  write Markdown. The layout reads the version for the title's pill from the
+  first heading of `_includes/changelog.md`.
 - Each page loads `/theme.js` in `<head>` (before the stylesheet, so there's
   no flash of the wrong theme) and `/styles.css`. Page scripts are plain
   JavaScript files at the root, loaded with `defer`, with no build step or
