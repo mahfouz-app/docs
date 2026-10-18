@@ -85,6 +85,7 @@ Reuse these from `styles.css`:
   (`border-radius: 980px`), at least 44px tall. Primary is filled blue;
   secondary is a blue outline that fills on hover.
 - **Text links** in running text are `--cm-text` with a thin blue underline.
+- **Footer** (`.footer-nav`): the header's links and more, in three groups of four or five (Product, Resources, Legal), each a small `--cm-text` heading over a list of `--body-secondary` links with no underline until hover. Three columns, two on phones. Beside them, the emblem, the tagline and "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted`. Every page repeats the same footer.
 - **`.more` links** ("Learn more ›", "Compare ›"): `--link`, no underline
   until hover, with the chevron added by `.more::after`. Use them for calls
   to action in tiles and cards.

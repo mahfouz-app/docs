@@ -3,6 +3,7 @@ exclude:
   - AGENTS.md
   - DESIGN.md
   - CLAUDE.md
+  - bin
 
 collections:
   plugins:
