@@ -595,6 +595,66 @@ h1 {
   letter-spacing: -0.045em;
 }
 
+.guide-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  margin-bottom: 22px;
+}
+
+.guide-title h1 {
+  margin-bottom: 0;
+}
+
+/* Version pills: the release a guide page is written for, and the release a
+   section or bullet first appeared in (_includes/since.html). */
+.guide-version,
+.guide-since {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 980px;
+  background: var(--tile);
+  color: var(--body-secondary);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.guide-version:hover,
+.guide-since:hover {
+  color: var(--cm-text);
+}
+
+.guide-version:focus-visible,
+.guide-since:focus-visible {
+  border-radius: 980px;
+}
+
+.guide-version b,
+.guide-since b {
+  color: var(--cm-text);
+  font-weight: 600;
+}
+
+.guide-content .guide-since {
+  margin-left: 10px;
+  vertical-align: 0.35em;
+}
+
+.guide-content li .guide-since {
+  margin-left: 6px;
+  padding: 2px 9px;
+  font-size: 0.72rem;
+  vertical-align: 0.1em;
+}
+
 .guide-content h2 {
   margin: 54px 0 18px;
   padding-top: 18px;
