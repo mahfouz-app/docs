@@ -106,7 +106,7 @@ database, with three views to pick from at the top:
   - Click its assignee to pick someone else, or **Unassign**.
   Each change rewrites the task's line in its note. **Columns** shows or
   hides **Status**, **When**, **Assignee**, **Note**, **Vault** and
-  **Tags**, and **Group** groups by **When** or **Status**, or not at all.
+  **Tags**, and **Group** groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
 - **Board** puts the tasks in three columns: **To do**, **In progress**
   and **Done**. Drag a card to another column to change its status, or
   open the card's menu and pick a column under **Move to**. Each card
@@ -115,11 +115,11 @@ database, with three views to pick from at the top:
   whether it's overdue, due today, upcoming or done. Tags at the end of
   the title move to the tag line; a tag in the middle of the title stays
   there, tinted. On a [person's page](/guide/people/#a-persons-page), a
-  card keeps its title as written, with no tag line.
+  card keeps its title as written, with no tag line. {% include since.html v="0.12.0" %}
 - **Calendar** shows the tasks on a month, or on a week with **Week**, by
   their due date. Drag one to another day, or pick **Move to date…** in its
   menu; its time stays.
-  Overdue tasks are tinted and done ones are struck through.
+  Overdue tasks are tinted and done ones are struck through. {% include since.html v="0.12.0" %}
 
 **Filter** and **Sort** narrow and order any view. Mahfouz remembers each
 view's settings, and the view you picked, on this computer; **Reset**
@@ -139,14 +139,14 @@ In every view:
   show only the tasks carrying any of them; **Clear** shows every task
   again. Only tags on the task's own line count, not the note's other
   tags. Clicking a `#tag` on a card or in the **Tags** column opens the
-  [Tags view](/guide/links/#tags) with that tag added instead.
+  [Tags view](/guide/links/#tags) with that tag added instead. {% include since.html v="0.12.0" %}
 - Clicking a reminder opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something
 needs attention: red when a task is overdue, blue when one is due later
 today. It counts the same tasks the view shows, so it follows the
 **Mine**/**Everyone** choice, the vault menu and the picked tags. Hover
-over the icon to see the counts, such as **2 overdue · 1 due today**.
+over the icon to see the counts, such as **2 overdue · 1 due today**. {% include since.html v="0.12.0" %}
 
 ## Reminders
 
@@ -163,7 +163,7 @@ notifications), it also has two menus:
   notice. Snoozing doesn't change the note, so the task stays overdue for
   everyone. The snooze applies to this computer only (on the web, this
   browser): your other computers still remind you on time. It survives
-  quitting Mahfouz.
+  quitting Mahfouz. {% include since.html v="0.12.0" %}
 - **Reschedule** moves the task to **Tomorrow**, **Next week** (the coming
   Monday; not offered on a Sunday, when that's tomorrow) or, with **Pick
   date…**, any later day, keeping its time. It changes the date on the
@@ -172,7 +172,7 @@ notifications), it also has two menus:
   opens at the task instead, so you can set the date there. If the note has
   [edits waiting](/guide/when-sync-fails/#edits-to-title-are-waiting) for
   your choice, Reschedule, like **Mark done**, changes nothing and a notice
-  says so: choose which version to keep first.
+  says so: choose which version to keep first. {% include since.html v="0.12.0" %}
 
 - Reminders go to the task's assignee only: the tasks assigned to your
   GitHub login, or to a person whose `github` is your login, in every

@@ -65,7 +65,7 @@ If Mahfouz's data in the browser is ever damaged, it offers **Rebuild and
 reload**. Your notes are safe: they live in your vaults, and Mahfouz reads
 them again.
 
-## On a phone
+## On a phone {% include since.html v="0.12.0" %} {#on-a-phone}
 
 When the window is narrower than 700 pixels, as on a phone, Mahfouz
 switches to a layout made for it:

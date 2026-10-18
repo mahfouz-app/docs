@@ -60,7 +60,7 @@ then `git-crypt add-gpg-user` to give each person's GPG key access. Its
 [README](https://github.com/AGWA/git-crypt#readme) covers the steps,
 including which files to encrypt in `.gitattributes`.
 
-## A locked vault
+## A locked vault {% include since.html v="0.12.0" %} {#a-locked-vault}
 
 When a vault uses git-crypt and this device can't decrypt it, the vault is
 locked. That happens when git-crypt isn't set up in this copy of the

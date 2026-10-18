@@ -59,7 +59,7 @@ chosen to there.
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
 
-### Lists
+### Lists {% include since.html v="0.12.0" %} {#lists}
 
 An attribute can hold a list of values, such as Obsidian's `tags` or
 `aliases`. Mahfouz reads a list written either of these two ways:

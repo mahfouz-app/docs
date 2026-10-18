@@ -55,7 +55,7 @@ Right-aligned at the end of the toolbar:
   **Revisions** (opens the note's history in the Details section), and **Delete** (danger). Each
   item shows its keyboard shortcut.
 
-## The bottom bar
+## The bottom bar {% include since.html v="0.12.0" %} {#the-bottom-bar}
 
 The bar under the open note shows where the note stands on the left and
 how you're viewing it on the right. Apart from the word count and the zoom
@@ -97,7 +97,7 @@ On the left:
   in the macOS app (also **File → Share…**) and in browsers that can share:
   Safari; Chrome and Edge on macOS, Windows and ChromeOS; mobile browsers.
   An encrypted note can't be shared: it has no Share button, **File →
-  Share…** is greyed out, and the command palette refuses it
+  Share…** is greyed out, and the command palette refuses it {% include since.html v="0.12.0" %}
 
 On the right:
 

@@ -128,13 +128,13 @@ link**, **Open published page** and **QR code**. The
 [Share](/guide/toolbar/#the-bottom-bar) button beside it sends the page's
 link along with the note's text.
 
-## QR code
+## QR code {% include since.html v="0.12.0" %} {#qr-code}
 
 **QR code**, in a published note's menu or on the notification after you
 publish, shows a code for the page's link. Scan it with a phone to open the
 page, or click **Download SVG** to save it. Nothing is stored.
 
-## Publish child notes
+## Publish child notes {% include since.html v="0.12.0" %} {#publish-child-notes}
 
 A note's children can be published with it. Tick **Also publish child
 notes** in the publish dialog, or, for a note that's already published,
@@ -167,7 +167,7 @@ until it's turned on there. On your other computer, or for a collaborator,
 the parent's menu shows **Publish child notes on this device…**. So a child
 is only ever published under the account of someone who chose to.
 
-## How a published page looks
+## How a published page looks {% include since.html v="0.12.0" %} {#how-a-published-page-looks}
 
 A published page looks like the note does in the editor's
 [Preview mode](/guide/editor/):
@@ -214,7 +214,7 @@ A page has one of two themes:
 
 - **Default** — the look described above.
 - **Essay** — for long reading: larger serif text in a narrower column, a
-  centred title, small-caps section headings and quieter quotes.
+  centred title, small-caps section headings and quieter quotes. {% include since.html v="0.12.0" %}
 
 Choose it in the publish dialog or in **Page settings…**. The theme is
 stored as the note's `page_theme` attribute (`page_theme: essay`), so you

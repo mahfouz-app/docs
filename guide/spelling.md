@@ -48,7 +48,7 @@ Code blocks are never checked. On the web in Chrome and Firefox, inline
 code, links, wikilinks, tags and mentions aren't checked either. In Safari
 and in the desktop app, they can be.
 
-## The vault dictionary
+## The vault dictionary {% include since.html v="0.12.0" %} {#the-vault-dictionary}
 
 To stop a word from being underlined, put the cursor in it and run **Add
 word to vault dictionary** (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd>, or

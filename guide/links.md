@@ -38,9 +38,9 @@ permalink: /guide/links/
   [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
   A wikilink in an attribute counts too, such as `author: "[[Ursula K. Le Guin]]"`
   or an item in a list. That note is listed with the attribute it links
-  through, for example "The Dispossessed via author", and opens at the top.
+  through, for example "The Dispossessed via author", and opens at the top. {% include since.html v="0.12.0" %}
 
-## Tags
+## Tags {% include since.html v="0.12.0" %} {#tags}
 
 Any `#` immediately followed by a letter (and not inside code, a link or a
 URL) is a tag: `#project`, `#ideas`, etc. A note's frontmatter `tags:` list
