@@ -41,8 +41,9 @@ sub-pages, not rows of the database.
 
 You can create a database in three ways:
 
-- **New database.** Right-click the sidebar background or a vault and choose
-  **New database**. To create a database inside a note, right-click the note
+- **New database.** Right-click the sidebar background, a vault or a plain
+  folder and choose **New database**; from a folder, the database goes
+  inside that folder. To create a database inside a note, right-click the note
   and choose **New child database**. The **File** menu also has a **New
   Database** action, with no default key; see
   [Keyboard shortcuts](/guide/shortcuts/).
