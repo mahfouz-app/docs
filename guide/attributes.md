@@ -7,20 +7,39 @@ permalink: /guide/attributes/
 
 ## Note pills & the right sidebar
 
-A row of pills sits at the right end of the note's path, above the text:
+A row of pills always sits at the right of the note header, above the
+text, whether the right sidebar is open or not:
 
-- **Who and when**: initials for the person who last edited the note
+- **Who and when**: avatars for the person who last edited the note
   and, if different, the person who created it, then how long ago it was
-  last edited ("Not committed" for a note that has no commit yet). Hover
-  for names. Opens **Details**.
-- **Backlinks**, **Tags**, **Attributes**: an icon and a count each.
-  A pill at zero is dimmed but still clickable.
+  last edited ("Edited 5m ago", or "Not committed" for a note that has
+  no commit yet). Hover for names. Opens **Details**.
+- **Backlinks**, **Tags**, **Attributes**, **Comments**: an icon and a
+  count each. A pill at zero is dimmed but still clickable. The
+  **Comments** pill is tinted while the note has unresolved comments.
 
-Clicking a pill opens the right sidebar on that section. While the
-sidebar is open, the pills move into the top of it and turn sections on
-and off there; a highlighted pill means its section is showing. Turning
-off the last section closes the sidebar, and opening it again from the
-toolbar (or <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd>) shows every section.
+With the right sidebar closed, clicking a pill opens a card under it
+with that section:
+
+- **Details**: who created and last edited the note, its path, and the
+  latest 5 entries of its [history](/guide/history/).
+- **Backlinks**: the notes that link here.
+- **Tags**: the note's tags.
+- **Attributes**: the note's attributes, read-only, with **Edit in
+  sidebar**.
+- **Comments**: the open threads, each with **Reply**, which opens the
+  thread in the editor, and **Resolve**.
+
+Every card has **Open in sidebar**, which opens the right sidebar on
+that section.
+
+With the sidebar open, clicking a pill scrolls the sidebar to that
+section and expands it.
+
+Open and close the sidebar with the titlebar button or
+<kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd>. Click a section's
+heading (the chevron) to fold or unfold it; Mahfouz remembers which
+sections you folded on this device.
 
 The sidebar's sections, in order:
 
@@ -32,6 +51,8 @@ The sidebar's sections, in order:
 - **Backlinks**: see [Links](/guide/links/#links-wikilinks--backlinks).
 - **Tags**: the note's tags; click one to add it to the [Tags view](/guide/links/#tags).
 - **Attributes**: see [Attributes panel](#attributes-panel).
+- **Comments**: the note's comment threads; see
+  [Track changes](/guide/track-changes/).
 
 ## Attributes panel
 
@@ -40,8 +61,8 @@ is a free-form row. Both are saved in the note's frontmatter, so
 they're visible and hand-editable outside the app too.
 
 The panel shows in two places: as a block in the document under the
-note's first heading, and as a right-sidebar section (open it with the
-attributes pill; see [Note pills](#note-pills--the-right-sidebar)).
+note's first heading, and as a right-sidebar section (open it from the
+attributes pill's card; see [Note pills](#note-pills--the-right-sidebar)).
 
 The read-only Created, Updated and Path rows live in the sidebar's
 **Details** section; the block in the document shows them only if you've

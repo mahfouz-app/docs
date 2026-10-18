@@ -34,7 +34,7 @@ permalink: /guide/links/
   regular link to its title). Click one to open it at the line holding its
   link, shaded until you click, type or move the cursor in the note; a
   [database](/guide/databases/) opens as a table instead. The backlinks
-  pill above the note shows the count and opens it (see
+  pill above the note shows the count; click it for a card listing them (see
   [Note pills](/guide/attributes/#note-pills--the-right-sidebar)).
   A wikilink in an attribute counts too, such as `author: "[[Ursula K. Le Guin]]"`
   or an item in a list. That note is listed with the attribute it links
