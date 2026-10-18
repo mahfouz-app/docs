@@ -121,13 +121,47 @@ changes are undone, the others keep theirs, and the notification offers
 
 ## Search
 
-**Search** in the left rail (<kbd>Mod</kbd><kbd>5</kbd>, or <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> on the web) opens the
-search view in the left sidebar. It searches **all open vaults** as you
-type, matching title and body text, and lists the results under each
-vault. The buttons beside the search box change how results are sorted.
-Click a result to open the note with your matches highlighted and the line
-of the first one shaded until you click, type or move the cursor in the
-note. Edit the query and the shading follows the first match.
+**Search** in the left rail (<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>) opens the search view in the left
+sidebar. It searches the titles and text of your notes in **all open
+vaults** as you type.
+
+A word matches anywhere inside a word, so `udget` finds "budget", and
+`كتاب` finds "والكتاب" and "بالكتاب". Words
+of three letters or more are looked up in the search index; shorter words
+still match, more slowly. A note has to match every word you type. Notes
+whose title matches come first.
+
+You can narrow a search with:
+
+| Type | To find |
+|---|---|
+| `"exact phrase"` | Notes with those words together, in that order |
+| `-word` | Only notes without that word |
+| `tag:name` | Only notes with that tag (`tag:#name` works too) |
+| `in:vault` | Only notes in that vault; quote a name with spaces, `in:"Work notes"` |
+
+Under the search box, a summary line shows the `tag:` and `in:` filters
+you've used (click one to remove it from the search), how many notes
+matched, and the sort: **Relevance**, **Edited** or **Title**.
+
+Each result shows the note's title, a snippet with your matches
+highlighted, and where the note sits: its folders, and its vault when you
+have more than one open. The note you open highlights the words and
+phrases you searched for, never the operators, and shades the line of the
+first match until you click, type or move the cursor in the note. Edit the
+query and the shading follows the first match.
+
+| Key | What it does |
+|---|---|
+| <kbd>↑</kbd> / <kbd>↓</kbd> | Move through the results |
+| <kbd>Enter</kbd> | Open the note beside the results, keeping the search box focused, so <kbd>↓</kbd> then <kbd>Enter</kbd> walks through the results |
+| <kbd>Mod</kbd><kbd>Enter</kbd> | Open the note and move into the editor |
+
+With the search box empty, the view lists your recent searches and a few
+search tips. Recent searches are kept on this device only.
+
+An [encrypted note](/guide/encryption/) is found by its title only: its
+text isn't searched.
 
 To jump to a note by its title, run a command or open a setting, use the
 [command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.

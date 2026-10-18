@@ -26,7 +26,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>2</kbd> | Go to bookmarks |
 | <kbd>Mod</kbd><kbd>3</kbd> | Go to tags |
 | <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
-| <kbd>Mod</kbd><kbd>5</kbd> | Go to search |
+| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Search note contents (<kbd>Mod</kbd><kbd>5</kbd> is no longer used) |
 | <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd> | Add the word under the cursor to the [vault dictionary](/guide/spelling/#the-vault-dictionary) |
@@ -107,7 +107,6 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Action | Desktop | Web |
 |---|---|---|
 | New note at the same level | <kbd>Mod</kbd><kbd>N</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd> |
-| Go to search | <kbd>Mod</kbd><kbd>5</kbd> | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> |
 | Close the active tab | <kbd>Mod</kbd><kbd>W</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>W</kbd> |
 | Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>A</kbd> |
 | Go to bookmarks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> |
