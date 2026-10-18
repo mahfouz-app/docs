@@ -54,7 +54,9 @@ declining keeps the older one-folder-per-note shape, which still works.
 - **Folders**: a folder doesn't have to belong to a note. Right-click a
   plain folder in the Sidebar for **New note**, **New folder**, **Rename
   folder** (edit the name in place: <kbd>Enter</kbd> saves, <kbd>Esc</kbd> cancels),
-  **Reveal in Finder**, and **Delete folder**.
+  **Reveal in Finder**, and **Delete folder**. A note's own menu has
+  **New folder** too: the folder goes inside the note's folder and shows
+  under the note (a note without a folder gets one first).
 - **Breadcrumb**: the bar above the editor shows where the open note
   lives: a home icon for the vault (hover it for the vault's name), then
   every folder it's nested in, each note with its icon. Click a folder that
