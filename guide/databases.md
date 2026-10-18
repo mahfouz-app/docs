@@ -146,7 +146,12 @@ Like sorting and filtering, grouping applies on this device until you choose
   <kbd>Enter</kbd> on it. Press <kbd>Enter</kbd> or click elsewhere to save
   the value, or press <kbd>Escape</kbd> to cancel. <kbd>Tab</kbd> saves the
   value and moves to the next cell.
-- A Select option or a checkbox saves as soon as you choose or tick it.
+- A Select option saves as soon as you choose it. A checkbox cell toggles
+  with one click, or <kbd>Enter</kbd>; an unchecked one shows an empty box.
+- The arrow keys move between cells, as in a spreadsheet.
+- Select and Multi-select values show as pills in their options' colors
+  (see [Select options](/guide/attributes/#options)). Hover a value that's
+  cut short to read it whole.
 - Click a row's title to rename it. The open icon next to the title opens the
   note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click) opens it in a new tab.
 - **New row** adds a row: type its title and press <kbd>Enter</kbd>. Another
@@ -221,8 +226,9 @@ columns after them, and rows with no value go in the last column, "No
   too. The card's menu also offers **Open**, **Open in new tab**, and
   **Delete row**.
 - **Click a card** to open its note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click)
-  opens it in a new tab. Cards show the view's fields, read-only; edit them
-  in a Table view or in the note.
+  opens it in a new tab. Cards show the view's fields, each with its name.
+  Click a field to edit it on the card, as you would a table cell; relations
+  and rollups are edited in a Table view.
 - **New in ⟨column⟩** adds a card that already has that column's value.
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
@@ -248,7 +254,8 @@ from:
 Cards work like a Board's:
 
 - **Click a card** to open its note; <kbd>Cmd</kbd>-click
-  (<kbd>Ctrl</kbd>-click) opens it in a new tab.
+  (<kbd>Ctrl</kbd>-click) opens it in a new tab. Click one of its fields
+  to edit it on the card instead.
 - **⋯** on a card offers **Open**, **Open in new tab**, and **Delete row**.
 - **+ New row**, in the toolbar or after the last card, adds a row.
 - **Fields** chooses which attributes the cards show, and sort and filters
