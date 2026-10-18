@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "The command palette"
-description: "Press Mod+K to jump to a note, run a command or open a setting."
+description: "Press Mod+K to go to a note, run a command or open a setting."
 permalink: /guide/command-palette/
 ---
 
@@ -19,21 +19,31 @@ Type to match against:
 - **Settings**: the Settings pages and the individual settings on them.
   Picking one opens Settings on that page.
 
-The palette matches titles only. To search the text inside your notes, pick
-the last row, **Search note contents for "…"**. It opens the
-[search view](/guide/links/#search) with what you typed, and it's there for
-every query, even when nothing else matches.
+All three kinds are listed together, a few of each. To see one kind only,
+pick **Notes**, **Commands** or **Settings** in the row under the search
+field, or press <kbd>Alt</kbd><kbd>1</kbd> to <kbd>Alt</kbd><kbd>4</kbd>
+(⌥1 to ⌥4 on macOS); **All** goes back to the mixed list. Notes alone shows
+up to 30 matches, and Commands or Settings alone shows every match. Before
+you type anything, Commands and Settings list everything of their kind.
+
+The palette matches titles only. To search the text inside your notes,
+press the search key (<kbd>Mod</kbd><kbd>5</kbd> by default) while the
+palette is open. It closes the palette and opens the
+[search view](/guide/links/#search) with what you typed. The palette's
+footer names the key, and so does the list when nothing matches. If you
+unbind **Go to search**, the palette doesn't show it.
 
 Before you type anything, the palette lists the notes you've opened since
-you started the app, the most recent first. Right after starting it shows
-the notes in your open tabs, and when there are none it suggests a few
-commands instead.
+you started the app, the most recent first, followed by a few suggested
+commands. Right after starting it shows the notes in your open tabs.
 
 | Key | What it does |
 |---|---|
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Move through the results |
 | <kbd>Enter</kbd> | Open the note in a new tab (or switch to its tab if it's already open), run the command or open the setting |
 | <kbd>Mod</kbd><kbd>Enter</kbd> | Open the note in the current tab instead |
+| <kbd>Alt</kbd><kbd>1</kbd> to <kbd>Alt</kbd><kbd>4</kbd> | Show all kinds, or only notes, commands or settings |
+| <kbd>Mod</kbd><kbd>5</kbd> | Close the palette and search note contents for what you typed |
 | <kbd>Esc</kbd> | Close the palette |
 
 You can change the palette's key in **Settings → Shortcuts** (action
