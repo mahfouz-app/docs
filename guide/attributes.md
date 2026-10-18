@@ -58,15 +58,19 @@ and a menu.
   document: always, only while it has a value (dashed), or never (struck
   through). Click it to move to the next state.
 - **The menu** (the **⋯** button on hover) has **Rename…**, **Change type…**,
-  **Visibility** and **Delete**. Rename and Delete change only this note.
-  Delete happens at once; its notification has **Undo**.
+  **Visibility** and **Delete**. Delete changes only this note, and
+  happens at once; its notification has **Undo**. **Rename…** of an
+  attribute with a type renames it in every note and database, as in
+  Settings → Attributes (it asks first); without a type, only in this
+  note. Clearing the name keeps the old one.
 - **+ Add attribute** adds a row and puts you in its name. Press
   <kbd>Enter</kbd> to go to its value, or <kbd>Esc</kbd> to drop the row.
 
 In the document, the eye and the menu show when you hover a row, and a
 row you're editing stays until you leave it, even if you clear a value
 that's only shown while filled. A note with nothing to show has no
-block: hover its title to see **+ Add attribute**.
+block: add its first attribute from the right sidebar's Attributes
+panel.
 
 A Select shows its value as a colored pill; click it to pick another
 option or **Clear**.
@@ -165,8 +169,13 @@ row to open it:
   Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
   date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`.
 - **Rename…** renames the attribute in every note that has it and in
-  every database view that uses it, as one commit. A Relation is renamed
-  from its database column instead.
+  every database view that uses it, as one commit, rollups reading it
+  included. A Relation is renamed from its database column instead. Keys
+  Mahfouz reads itself (below, and page settings such as `description`,
+  `icon` or `page_theme`) can't be renamed, from or to. Renaming onto a
+  name that already has a type, or a column a database already has, is
+  refused rather than merged. If a rename stops partway, run it again to
+  finish it.
 - **Delete** removes the type. Notes keep their values, as text.
 
 **+ Add attribute** adds a type: give it a name and a type and press
