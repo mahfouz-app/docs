@@ -10,7 +10,7 @@ groups. Left to right:
 
 - **History**: **Undo**, **Redo**
 - **Style**: the **Heading** dropdown: Normal text / Heading 1 / Heading 2 /
-  Heading 3
+  Heading 3 / Heading 4 / Heading 5 / Heading 6
 - **Text**: **Bold**, **Italic**, **Underline**, **Strikethrough**, the
   **Subscript / Superscript** dropdown, **Highlight**, **Inline code** and
   **Remove formatting** (see [Remove formatting](#remove-formatting))

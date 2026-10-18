@@ -53,7 +53,7 @@ Fixed editor shortcuts (not remappable):
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>.</kbd> (period) | Superscript |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>H</kbd> | Highlight |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>K</kbd> | Link the selection (asks for the URL) |
-| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> | Heading 1 / 2 / 3 |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>1</kbd> to <kbd>6</kbd> | Heading 1 to 6 |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>8</kbd> | Bullet list |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>7</kbd> | Ordered list |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>9</kbd> | Checklist |
