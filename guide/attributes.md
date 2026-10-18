@@ -109,9 +109,10 @@ column header's menu.
   up** and **Move down**.
 - **Delete** in the option's menu removes it. Notes that already use it
   keep their value; the panel shows it as a free-form row.
-- **Rename** works only on an option you added since opening the picker.
-  To rename one that notes may already use, delete it and add the new
-  name.
+- **Rename…** in the option's menu renames it everywhere: in every note
+  that uses it and in every database filter that compares the attribute
+  with it, as one commit. Mahfouz says how many notes and databases change
+  before it does it.
 
 Colors are saved in `.config/attributes.md`, as a `colors:` list under the
 attribute's options:
