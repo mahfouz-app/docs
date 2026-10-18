@@ -41,7 +41,7 @@ Other editor behavior:
   shows its level as a gray hint (**Heading 2**) until you type its text,
   in Source and Preview. The hint is never saved, and it goes when the
   cursor leaves the line. A new note's first line shows **New Note**
-  instead.
+  instead. {% include since.html v="0.13.0" %}
 - **Tab** on a list item (bullet, numbered, or checklist) nests it under the
   item above, wherever your cursor is on the line, and its sub-items move
   with it. **Shift+Tab** moves it back out a level. On the first item of a
