@@ -122,7 +122,7 @@ Some filters written in the block, such as `or` and `not` groups, can't be
 shown in the **Filter** list. They still apply, and the list marks them
 "can't be shown here".
 
-## Group rows
+## Group rows {% include since.html v="0.12.0" %} {#group-rows}
 
 **Group** splits the table into sections by a Select attribute, such as a
 status. The sections follow the order of the attribute's options. A value
@@ -206,7 +206,7 @@ you choose **Save view** while showing it.
 A view type this app doesn't support yet, for example one written in another
 app, is shown as a table, with a note saying so.
 
-## Board
+## Board {% include since.html v="0.12.0" %} {#board}
 
 A Board shows the rows as cards in columns, one column per option of a
 Select attribute, such as a status. Values that aren't options get their own
@@ -230,7 +230,7 @@ columns after them, and rows with no value go in the last column, "No
 
 Cards in a column follow the view's sort. There's no manual card order.
 
-## Gallery
+## Gallery {% include since.html v="0.12.0" %} {#gallery}
 
 A Gallery shows the rows as cards in a grid, each with a cover image above
 its title and fields. It suits rows that have a picture, such as books,
@@ -271,7 +271,7 @@ with `type: cards` keeps its `image` and other settings, such as
 `imageFit` and `cardSize`, exactly as written, though Mahfouz doesn't use
 them yet.
 
-## Calendar
+## Calendar {% include since.html v="0.12.0" %} {#calendar}
 
 A Calendar shows a month or a week, with each row on the day of one of its
 dates, such as a due date. In the block, a Calendar is a view with `type: calendar` and
@@ -347,7 +347,7 @@ If the column already holds links, the other database's rows get their
 links back when you save. Once a relation's rows hold links, it can't be
 pointed at a different database.
 
-### Link rows
+### Link rows {% include since.html v="0.12.0" %} {#link-rows}
 
 - Click a Relation cell's edit button, or press <kbd>Enter</kbd> on it, to
   open the picker. Type to search the other database's rows; the rows
@@ -425,7 +425,7 @@ or a plugin, updates both sides. A view can't be grouped by a relation. Use
 the same Mahfouz version on every device that edits a vault with
 relations: a version from before relations edits only one side of a link.
 
-## Rollups
+## Rollups {% include since.html v="0.12.0" %} {#rollups}
 
 A Rollup column summarizes a property of each row's related rows: the
 average rating of an author's books, for example, or the date of their latest
@@ -475,7 +475,7 @@ properties:
 
 The values are never written to your notes.
 
-## Show a database in another note
+## Show a database in another note {% include since.html v="0.12.0" %} {#show-a-database-in-another-note}
 
 Any note can show one of a database's views, such as a weekly review showing
 the books you're reading. Type `/` and choose **Database view**, then start

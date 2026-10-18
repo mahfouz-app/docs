@@ -136,7 +136,7 @@ don't cover. The fields are available as variables, such as
 `var(--mahfouz-accent)` and `var(--mahfouz-heading)`. Target a layout with
 `[data-layout="quote"]`; slide N is also `.slidev-page-N`.
 
-### Styling each layout
+### Styling each layout {% include since.html v="0.12.0" %} {#styling-each-layout}
 
 A Slidev slide picks a layout (`layout: quote`, `layout: two-cols`), and a
 template can style each one through a **layout section**:
@@ -158,7 +158,7 @@ reserved and can't be used as variants. Each section shows how many fields
 it overrides; open it to edit them, see the inherited values in grey, add
 its own Custom CSS, or **Remove section**. Emptying a section keeps it.
 
-### Usage counts
+### Usage counts {% include since.html v="0.12.0" %} {#usage-counts}
 
 Settings → **Slides** shows how much of a template your decks use, so you
 can tell whether a section does anything before you change or remove it:
@@ -181,7 +181,7 @@ The rename and delete dialogs give a different number: how many notes
 pick the template by name. That counts only the notes whose own
 `slides_template` names it, not the ones that use it as the default.
 
-### Decorations
+### Decorations {% include since.html v="0.12.0" %} {#decorations}
 
 A decoration is one SVG shape, such as a wave, a corner or a mark, that a
 template places on its slides without any CSS. The template itself can
@@ -211,7 +211,7 @@ it owns: a template's Custom CSS can't style that layer on slides that
 show a decoration. Use another element, such as `.slidev-layout::after`,
 for your own effects.
 
-### Previewing a template
+### Previewing a template {% include since.html v="0.12.0" %} {#previewing-a-template}
 
 Settings → **Slides** shows a preview beside the form (below it in a
 narrow window), marked **Approximate**. It draws a sample deck with the
@@ -230,7 +230,7 @@ one for each layout section, and **Code and table**.
   and Google Fonts. A template with a Google font loads it from Google, on
   the web too ([Privacy](/privacy/#google-fonts-in-slides-templates)).
 
-#### Render with Slidev
+#### Render with Slidev {% include since.html v="0.12.0" %} {#render-with-slidev}
 
 On the desktop, **Render with Slidev** draws the same sample deck with
 Slidev itself and shows the slides as thumbnails, labelled "Rendered by
@@ -249,7 +249,7 @@ Slidev" with the time. It needs the **Slidev presentations** plugin, version
 - On the web there's no button: the preview says "Exact rendering needs
   the desktop app."
 
-### Layouts in the editor
+### Layouts in the editor {% include since.html v="0.12.0" %} {#layouts-in-the-editor}
 
 In a deck (a note with its own slides template, other than **None**, or
 one you've presented), the editor helps you pick layouts:
@@ -266,7 +266,7 @@ one you've presented), the editor helps you pick layouts:
   doesn't style, is marked with a suggestion ("Did you mean
   quote?").
 
-### Built-in templates
+### Built-in templates {% include since.html v="0.12.0" %} {#built-in-templates}
 
 **+ New template** in Settings → **Slides** offers **Blank template** or
 **From a built-in…**, which opens a gallery of five looks:

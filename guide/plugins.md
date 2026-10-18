@@ -36,7 +36,7 @@ The [plugin registry](/plugins/) lists every plugin submitted for
 Mahfouz, from the built-in registry and others, and you can filter it by
 category, platform, registry and author.
 
-## Plugin terms
+## Plugin terms {% include since.html v="0.13.0" %} {#plugin-terms}
 
 Some plugins have terms you accept before using them. Before Mahfouz
 installs, turns on or updates such a plugin, it shows the terms with an
@@ -61,7 +61,7 @@ manifest: a Markdown file in the plugin, at most 16 KB. It's shown as text
 with headings, paragraphs and `-` bullets; inline Markdown such as
 `**bold**` or links appears as written. Terms need Mahfouz 0.13.0 or later.
 
-## Installing from the plugin registry
+## Installing from the plugin registry {% include since.html v="0.12.0" %} {#installing-from-the-plugin-registry}
 
 Each plugin in the [plugin registry](/plugins/) has an **Install** button.
 It opens [the web app](/guide/web/), which offers:
@@ -121,9 +121,9 @@ The built-in `mahfouz` registry has:
   draw.io tab. Changes save back into the note as you go.
 - **Git LFS**: see [Git LFS for large media](/guide/git/#git-lfs-for-large-media).
 - **Notion import**: adds Notion to the Import dialog. See
-  [Importing from Notion](/guide/import-notion/).
+  [Importing from Notion](/guide/import-notion/). {% include since.html v="0.12.0" %}
 
-## Plugins on the web
+## Plugins on the web {% include since.html v="0.12.0" %} {#plugins-on-the-web}
 
 Settings → **Plugins** works the same way on [the web](/guide/web/):
 turn plugins on per vault, add registries, and install and update plugins.

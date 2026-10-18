@@ -26,7 +26,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   at the parent level. Each vault section also has a `+` button in the
   Sidebar for "new note here." Hover a note or a folder in the Sidebar for
   its own `+` (a new note inside it) and `⋮` (the same menu as a
-  right-click).
+  right-click). {% include since.html v="0.12.0" %}
 - **Title**: there's no separate title field; a note's title is always
   the first non-empty line of its body (with a leading `#` stripped if
   present). Rename a note by editing its first line.
@@ -60,7 +60,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   every folder it's nested in, each note with its icon. Click a folder that
   belongs to a note to open that note; click a plain folder to show it in
   the Sidebar. Hover any of them, or click the arrow after it, to list
-  what's inside it and jump to one.
+  what's inside it and jump to one. {% include since.html v="0.12.0" %}
 - **Sidebar menu**: right-click empty space in the Sidebar for **New
   note** and **New folder** (in the active vault), **New vault…**, **Open
   vault…**, and the grouping, sort and filename-display options.
@@ -91,7 +91,7 @@ declining keeps the older one-folder-per-note shape, which still works.
   ordering from the Sidebar header in Trash/Bookmarks views, or globally
   via Settings.
 
-## Page icons
+## Page icons {% include since.html v="0.12.0" %} {#page-icons}
 
 Any note can have an emoji icon. It shows before the note's title in the
 Sidebar and on its tab, and above the note in the editor.

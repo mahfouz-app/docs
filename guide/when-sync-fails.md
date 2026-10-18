@@ -69,7 +69,7 @@ The same note (or notes) changed on this device and on the remote since they las
 - **Keep both** keeps your version of each file and saves the remote's version as a separate note, "&lt;title&gt; (remote copy)", next to yours, then syncs. A changed file that isn't a note gets its copy as "&lt;name&gt; (remote copy)". It isn't offered when a settings file is among the changes.
 - **Retry** syncs again, for when you've settled it another way (on desktop, with git).
 
-#### The Merge tab
+#### The Merge tab {% include since.html v="0.12.0" %} {#the-merge-tab}
 
 The tab lists what couldn't be combined, grouped as **Notes**, **Settings** and **Files**. Each row says why, and expands to show the difference: an attribute's value before and on each side, the overlapping sections side by side, or a file's changed lines. The first row still to choose starts expanded.
 

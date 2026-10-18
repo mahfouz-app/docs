@@ -85,12 +85,12 @@ Under a person note's text, Mahfouz shows:
 
 - **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
-  by every person page.
+  by every person page. {% include since.html v="0.12.0" %}
 - **Mentions:** a row for each mention of them, showing its line; two
   mentions in one paragraph share a row. When there's more to see, the
   chevron expands the row to the whole paragraph, list item, heading or
   table row. Click the note's title on the right, or the row, to open the
-  note at the mention. Links in the text open their own targets.
+  note at the mention. Links in the text open their own targets. {% include since.html v="0.12.0" %}
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
   **Change handle…**, next to it, changes their handle (see
   [Changing a handle](#changing-a-handle)).
@@ -149,7 +149,7 @@ Click **Import** in the People view and pick a source:
   book. It works on desktop and on the web.
 - **macOS Contacts…** reads your Mac's address book. It's on the desktop
   app on macOS only: macOS asks for access first, then you choose which
-  contacts to bring in.
+  contacts to bring in. {% include since.html v="0.12.0" %}
 
 A review dialog lists each contact before anything is written:
 

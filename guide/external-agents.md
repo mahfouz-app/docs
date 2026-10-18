@@ -39,7 +39,7 @@ The agent reaches your vaults through the running app, so Mahfouz has to
 be open while you use it. If it isn't, the agent is told to open Mahfouz
 and turn on External agents.
 
-## Connect an agent on the web
+## Connect an agent on the web {% include since.html v="0.12.0" %} {#connect-an-agent-on-the-web}
 
 On [mahfouz.app](https://mahfouz.app), agents connect through a connector
 URL instead of a token:

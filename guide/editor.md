@@ -67,7 +67,7 @@ Other editor behavior:
 - **Find selection**: <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd> jumps to the next
   occurrence of the selected text, or of the word under the cursor when
   nothing is selected, without opening the panel. Press
-  <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back.
+  <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back. {% include since.html v="0.12.0" %}
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
 
@@ -135,7 +135,7 @@ works like <kbd>Cmd</kbd><kbd>V</kbd>.
 
 - In the macOS desktop app, that menu (spelling suggestions, **Look Up**,
   **Writing Tools**) has a **Format** submenu with the same items, in
-  place of the system's Font submenu.
+  place of the system's Font submenu. {% include since.html v="0.12.0" %}
 - On the web, and in the desktop app on Windows and Linux, it's your
   browser's or system's usual menu.
 - In an unlocked encrypted note, no menu opens.
