@@ -24,20 +24,20 @@ pick **Notes**, **Commands** or **Settings** in the row under the search
 field, or press <kbd>Alt</kbd><kbd>1</kbd> to <kbd>Alt</kbd><kbd>4</kbd>
 (⌥1 to ⌥4 on macOS); **All** goes back to the mixed list. Notes alone shows
 up to 30 matches, and Commands or Settings alone shows every match. Before
-you type anything, Commands and Settings list everything of their kind.
+you type anything, Commands and Settings list everything of their kind. {% include since.html v="0.13.0" %}
 
 The palette matches titles only. To search the text inside your notes,
 press the **Go to search** key while the palette is open. It closes the palette and opens the
 [search view](/guide/links/#search) with what you typed. The palette's
 footer names the key, and so does the list when nothing matches. If you
-unbind **Go to search**, the palette doesn't show it.
+unbind **Go to search**, the palette doesn't show it. {% include since.html v="0.13.0" %}
 
 Before you type anything, the palette lists your bookmarked notes, in the
 order the sidebar's Bookmarks view shows them (up to 10; pick **Notes** to
 see them all). Then come the notes you've opened since you started the app,
 the most recent first, leaving out the ones already listed as bookmarks.
 Right after starting, those are the notes in your open tabs. A few
-suggested commands come last.
+suggested commands come last. {% include since.html v="0.13.0" %}
 
 | Key | What it does |
 |---|---|
