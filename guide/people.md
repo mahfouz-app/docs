@@ -93,10 +93,56 @@ Under a person note's text, Mahfouz shows:
   note at the mention. Links in the text open their own targets. {% include since.html v="0.12.0" %}
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
   **Change handle…**, next to it, changes their handle (see
-  [Changing a handle](#changing-a-handle)).
+  [Changing a handle](#changing-a-handle)). When the note has no summary
+  yet, **Generate summary** is there too (see [Summary](#summary)).
 
 Clicking a task or a mention opens its note at that line, shaded until you
 click, type or move the cursor in the note.
+
+## Summary {% include since.html v="0.13.0" %} {#summary}
+
+A person's summary is a section of their note: the first heading whose
+text is **Summary** (any level, any case) and the text under it, up to the
+next heading of the same or a higher level. It's ordinary note text, so you
+write and edit it like any other.
+
+```markdown
+## Summary
+
+Leads the engine team. Owns the Q3 release and reviews the docs.
+```
+
+Mahfouz can draft it for you from what the vault knows about the person.
+This is on the desktop app only, and needs an AI provider and its key in
+Settings → AI.
+
+- **The sparkle button** at the end of the Summary heading, in Preview and
+  Source, generates a draft.
+- **Generate summary**, at the top of [their page](#a-persons-page) next to
+  **Export vCard**, does the same for a note with no Summary section.
+
+The draft streams into a card under the heading, labelled **Draft from N
+tasks and M mentions** with the provider's name. Nothing is saved until you
+choose:
+
+- **Use this** replaces the section's text with the draft, as one undo
+  step. In a note with no Summary section, it adds a `## Summary` section
+  under the title. In [Suggesting](/guide/track-changes/) mode, the draft
+  is written as suggestions by `@agent`, for you to review.
+- **Discard**, or <kbd>Esc</kbd>, throws the draft away. The stop button
+  does too, while the draft is still streaming.
+
+What's sent to the provider:
+
+- the person's `name`, `company` and `position`;
+- the title, status and due date of each [task](/guide/tasks/) assigned to
+  them;
+- the passage around each mention of them, without
+  [comments](/guide/track-changes/#comments) or pending suggestions.
+
+[Encrypted notes](/guide/encryption/) are never sent. The first time you
+generate a summary in a vault, and again after you switch provider,
+Mahfouz asks before sending anything.
 
 ## Changing a handle
 
