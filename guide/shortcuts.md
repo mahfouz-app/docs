@@ -65,6 +65,25 @@ it; <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
 autocomplete; `!` triggers field autocomplete. The Find and Replace bar has
 its own keys, listed under [Find and replace](/guide/editor/#find-and-replace).
 
+## The sidebar from the keyboard {% include since.html v="0.13.0" %} {#the-sidebar-from-the-keyboard}
+
+The sidebar's notes, folders, Bookmarks and Notes headers, tags and Trash
+entries are one stop when you press <kbd>Tab</kbd>: focus lands on the row of the
+open note, or on the row you last moved to. Then:
+
+| Key | Action |
+|---|---|
+| <kbd>↓</kbd> / <kbd>↑</kbd> | Move to the next or previous row |
+| <kbd>Home</kbd> / <kbd>End</kbd> | Move to the first or last row |
+| <kbd>→</kbd> | Expand a row, or move to its first child when it's already expanded |
+| <kbd>←</kbd> | Collapse a row, or move to its parent when it's already collapsed |
+| <kbd>Enter</kbd> | Open a note (<kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab), expand or collapse a folder or header, add a tag to the filter, or preview a Trash entry |
+| <kbd>F2</kbd> | Rename the focused note or folder (the Rename note shortcut, so a new key you give it works here too) |
+| <kbd>Shift</kbd><kbd>F10</kbd> | Open the row's menu, as **⋯** would |
+
+In Search, <kbd>↓</kbd> and <kbd>↑</kbd> in the search field move through the results and
+<kbd>Enter</kbd> opens one.
+
 ## The menu bar (desktop)
 
 Every app action above is also in the desktop menu bar, next to its
