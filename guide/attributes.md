@@ -68,6 +68,34 @@ The read-only Created, Updated and Path rows live in the sidebar's
 **Details** section; the block in the document shows them only if you've
 chosen to there.
 
+### Rows {% include since.html v="0.13.0" %} {#rows}
+
+Every attribute is one row: its type's icon, its name, its value, an eye
+and a menu.
+
+- **The type icon** shows the attribute's type (an attribute with no
+  type shows Text's). Click it to change the type.
+- **The eye** says whether the attribute shows in the block in the
+  document: always, only while it has a value (dashed), or never (struck
+  through). Click it to move to the next state.
+- **The menu** (the **⋯** button on hover) has **Rename…**, **Change type…**,
+  **Visibility** and **Delete**. Delete changes only this note, and
+  happens at once; its notification has **Undo**. **Rename…** of an
+  attribute with a type renames it in every note and database, as in
+  Settings → Attributes (it asks first); without a type, only in this
+  note. Clearing the name keeps the old one.
+- **+ Add attribute** adds a row and puts you in its name. Press
+  <kbd>Enter</kbd> to go to its value, or <kbd>Esc</kbd> to drop the row.
+
+In the document, the eye and the menu show when you hover a row, and a
+row you're editing stays until you leave it, even if you clear a value
+that's only shown while filled. A note with nothing to show has no
+block: add its first attribute from the right sidebar's Attributes
+panel.
+
+A Select shows its value as a colored pill; click it to pick another
+option or **Clear**.
+
 - **Render external images**: a switch; see
   [Media](/guide/media/).
 - **Orientation**: Landscape / Portrait segmented control for PDF export
@@ -114,6 +142,66 @@ Mahfouz doesn't keep these when it saves a note's frontmatter: comments,
 blank lines between keys, the order of keys, and multi-line values
 written with `|` or `>`. Edit those notes in another editor if you need
 them kept.
+
+### Select options {% include since.html v="0.13.0" %} {#options}
+
+A Select or Multi-select attribute picks from a list of options. Set
+them when you choose the type: in the panel, open the attribute's menu
+and choose **Change type…**; in a database, choose **Set type…** in the
+column header's menu.
+
+- Type in **Add option** and press <kbd>Enter</kbd> to add one. An option
+  can't contain a comma, and two options can't have the same name.
+- Click the dot before an option to give it a color, or **No color**.
+- Drag an option by its handle to reorder it, or focus the handle and
+  press <kbd>↑</kbd> or <kbd>↓</kbd>. The option's menu also has **Move
+  up** and **Move down**.
+- **Delete** in the option's menu removes it. Notes that already use it
+  keep their value; the panel shows it as a free-form row.
+- **Rename…** in the option's menu renames it everywhere: in every note
+  that uses it and in every database filter that compares the attribute
+  with it, as one commit. Mahfouz says how many notes and databases change
+  before it does it.
+
+Colors are saved in `.config/attributes.md`, as a `colors:` list under the
+attribute's options:
+
+```markdown
+### status
+type: Select
+options: Draft, Review, Done
+colors:
+- Draft: gray
+- Review: yellow
+- Done: green
+```
+
+The colors are gray, red, orange, yellow, green, blue, purple and pink.
+
+### Attribute types in Settings {% include since.html v="0.13.0" %} {#types}
+
+Vault Settings → **Attributes** lists every attribute type in the vault:
+its icon, name, type, its options as colored pills, and how many notes
+use it. Pick another type in the row's Type column. Click the arrow at the end of a
+row to open it:
+
+- **Options** uses the same option editor as **Change type…**.
+- **Display** picks how the control looks: Menu, Segmented or Radio for a
+  Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
+  date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`.
+- **Rename…** renames the attribute in every note that has it and in
+  every database view that uses it, as one commit, rollups reading it
+  included. A Relation is renamed from its database column instead. Keys
+  Mahfouz reads itself (below, and page settings such as `description`,
+  `icon` or `page_theme`) can't be renamed, from or to. Renaming onto a
+  name that already has a type, or a column a database already has, is
+  refused rather than merged. If a rename stops partway, run it again to
+  finish it.
+- **Delete** removes the type. Notes keep their values, as text.
+
+**+ Add attribute** adds a type: give it a name and a type and press
+<kbd>Enter</kbd>. A Select or Multi-select opens so you can add its
+options.
 
 ### Names Mahfouz keeps for itself
 
