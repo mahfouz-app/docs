@@ -26,7 +26,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>2</kbd> | Go to bookmarks |
 | <kbd>Mod</kbd><kbd>3</kbd> | Go to tags |
 | <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
-| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Go to search (<kbd>Mod</kbd><kbd>5</kbd> is no longer used) |
+| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Search note contents (<kbd>Mod</kbd><kbd>5</kbd> is no longer used) |
 | <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd> | Add the word under the cursor to the [vault dictionary](/guide/spelling/#the-vault-dictionary) |
