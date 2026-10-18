@@ -53,15 +53,16 @@ doesn't open it.
 - **Before a word:** with the cursor right before a word, press `@`. It
   works as though you'd selected the word, or the words that follow when
   they're exactly someone's name: `@` before **Ada Lovelace** makes
-  `@ada`. Press Esc to keep the word and type a plain `@` in front of it.
+  `@ada`. Press Esc to keep the word and type a plain `@` in front of it. {% include since.html v="0.13.0" %}
 - Adding someone shows **Added Ada Lovelace to people**, with an **Undo**
   that removes the new person and the mention. It works only while the
   person note is unchanged and nothing else mentions them.
-- A mention that names someone shows as a chip. In Preview, the chip
-  shows the person's initials and name instead of their `@handle`.
-  Backspace deletes it whole. Click it, or move onto it with the arrow
-  keys, to open the people menu and pick someone else; typing starts a new
-  mention in its place. A mention of a handle nobody has stays plain text.
+- A mention that names someone shows as a chip. A mention of a handle
+  nobody has stays plain text.
+- In Preview, the chip shows the person's initials and name instead of
+  their `@handle`. Backspace deletes it whole. Click it, or move onto it
+  with the arrow keys, to open the people menu and pick someone else;
+  typing starts a new mention in its place. {% include since.html v="0.13.0" %}
 - Hover a mention to see the person's card: their email, phone, GitHub and
   website, with **Open** to open their note, **Copy email**, and **vCard**
   to export them.
