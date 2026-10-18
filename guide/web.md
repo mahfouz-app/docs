@@ -90,8 +90,7 @@ The Slidev presentations and PDF export plugins, the AI agent, Export,
 Git LFS (and its plugin), syncing a local folder with a remote (a GitHub vault syncs on the
 web), merging diverged histories, Reveal in Finder, moving a vault, system
 notifications, update checks and the [Finder preview](/guide/quick-look/). Settings say **Available in the desktop
-app** where one would be. **Send feedback** opens a new issue on GitHub
-instead of sending it from the app.
+app** where one would be.
 
 Other plugins, such as Mermaid and Draw.io, work on the web: see [Plugins
 on the web](/guide/plugins/#plugins-on-the-web).

@@ -38,7 +38,7 @@ published pages and this website.
 | Use the AI agent | The messages you send and the notes it reads to answer | The provider whose API key you add: Anthropic, OpenAI or OpenRouter |
 | [Connect an external agent](/guide/external-agents/) | What the agent reads in the vaults you tick | That agent, such as Claude Code or Codex |
 | [Publish a note](/guide/publishing/) | That one note and its images | A public page, at the link you share |
-| [Send feedback](/guide/feedback/) | What you write, plus the app version, operating system and CPU architecture if you leave **Include diagnostics** on | A public GitHub issue |
+| [Send feedback](/guide/feedback/) | What you write, plus the app version, operating system and CPU architecture if you leave **Include diagnostics** on, and your GitHub login if you tick **Include my GitHub login** | A public GitHub issue, filed through mahfouz.app |
 | [Install a plugin](/guide/plugins/) | Requests for the plugin and its files | The repository it's shared from, and the hosts the plugin lists |
 
 Each of these is off until you turn it on:
