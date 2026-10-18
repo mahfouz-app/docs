@@ -168,11 +168,12 @@ vault directly instead of becoming suggestions.
 
 ## Columns
 
-- **+** at the end of the header adds a column: type its name, then choose
-  its type. The column is added to the view for everyone, in the database
-  block, and a name with spaces or capitals is kept as the column's label
-  (**Due date** is stored as `due_date`). If your vault already gives that
-  attribute a type, the picker starts from it.
+- **+** at the end of the header adds a column: type its name, click the
+  type icon beside it to choose its type, then **Add column** (or press
+  <kbd>Enter</kbd>). The column is added to the view for everyone, in the
+  database block, and a name with spaces or capitals is kept as the
+  column's label (**Due date** is stored as `due_date`). If your vault
+  already gives that attribute a type, the icon starts from it.
 - **Columns** shows or hides columns and changes their order. Title is always
   shown.
 - A column header's menu offers **Rename…**, **Set type…**, sorting, and
@@ -180,7 +181,8 @@ vault directly instead of becoming suggestions.
 - **Rename** changes the attribute's name in every row in a single commit.
   If a row already has an attribute with the new name, the rename isn't
   made.
-- **Set type** sets the attribute's type for the whole vault. Types are
+- **Set type** sets the attribute's type for the whole vault. A typed
+  column's icon in the header opens the same list of types. Types are
   stored in `.config/attributes.md`, so another database that uses the same
   attribute shows the same type.
 
@@ -341,12 +343,14 @@ same commit.
 
 ### Create a relation
 
-1. In the column header's menu, choose **Set type…**, then **Relation**.
+1. Click the column's type icon, or choose **Set type…** in its header
+   menu, then **Relation…**.
 2. Under **Related database**, choose the other database. If there's no
    other database yet, create one first.
 3. Choose **Two-way** and type the **Reverse name**: the column the other
    database gets, such as `books`. Or choose **One-way** to link in this
    direction only.
+4. Choose **Save**.
 
 The reverse name can't be a name Mahfouz keeps for itself, a column the
 other database already has, or an attribute its rows already hold.

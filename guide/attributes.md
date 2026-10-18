@@ -74,7 +74,9 @@ Every attribute is one row: its type's icon, its name, its value, an eye
 and a menu.
 
 - **The type icon** shows the attribute's type (an attribute with no
-  type shows Text's). Click it to change the type.
+  type shows Text's). Click it for the list of types, the current one
+  checked. Choosing a type changes it at once. **Select…** and
+  **Multi-select…** ask for their options first, then **Save**.
 - **The eye** says whether the attribute shows in the block in the
   document: always, only while it has a value (dashed), or never (struck
   through). Click it to move to the next state.
@@ -86,6 +88,8 @@ and a menu.
   note. Clearing the name keeps the old one.
 - **+ Add attribute** adds a row and puts you in its name. Press
   <kbd>Enter</kbd> to go to its value, or <kbd>Esc</kbd> to drop the row.
+  Click the new row's type icon to choose its type first: it's set when
+  you keep the name. A name the vault already types keeps that type.
 
 In the document, the eye and the menu show when you hover a row, and a
 row you're editing stays until you leave it, even if you clear a value
@@ -146,9 +150,10 @@ them kept.
 ### Select options {% include since.html v="0.13.0" %} {#options}
 
 A Select or Multi-select attribute picks from a list of options. Set
-them when you choose the type: in the panel, open the attribute's menu
-and choose **Change type…**; in a database, choose **Set type…** in the
-column header's menu.
+them when you choose the type: click the attribute's type icon (or its
+column's, in a database) and choose **Select…** or **Multi-select…**.
+The options take the menu's place; **Back** returns to the types and
+**Save** sets the type.
 
 - Type in **Add option** and press <kbd>Enter</kbd> to add one. An option
   can't contain a comma, and two options can't have the same name.
@@ -181,11 +186,13 @@ The colors are gray, red, orange, yellow, green, blue, purple and pink.
 ### Attribute types in Settings {% include since.html v="0.13.0" %} {#types}
 
 Vault Settings → **Attributes** lists every attribute type in the vault:
-its icon, name, type, its options as colored pills, and how many notes
-use it. Pick another type in the row's Type column. Click the arrow at the end of a
+its type icon, name, its options as colored pills, and how many notes
+use it. Click a row's type icon to pick another type, and the new row's
+icon to choose its type before **Add**. Click the arrow at the end of a
 row to open it:
 
-- **Options** uses the same option editor as **Change type…**.
+- **Options** uses the same option editor as the type menu's
+  **Select…**.
 - **Display** picks how the control looks: Menu, Segmented or Radio for a
   Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
   date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`.
