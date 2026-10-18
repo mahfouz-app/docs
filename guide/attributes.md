@@ -94,6 +94,40 @@ blank lines between keys, the order of keys, and multi-line values
 written with `|` or `>`. Edit those notes in another editor if you need
 them kept.
 
+### Select options {% include since.html v="0.13.0" %} {#options}
+
+A Select or Multi-select attribute picks from a list of options. Set
+them when you choose the type: in the panel, open the attribute's menu
+and choose **Change type…**; in a database, choose **Set type…** in the
+column header's menu.
+
+- Type in **Add option** and press <kbd>Enter</kbd> to add one. An option
+  can't contain a comma, and two options can't have the same name.
+- Click the dot before an option to give it a color, or **No color**.
+- Drag an option by its handle to reorder it, or focus the handle and
+  press <kbd>↑</kbd> or <kbd>↓</kbd>. The option's menu also has **Move
+  up** and **Move down**.
+- **Delete** in the option's menu removes it. Notes that already use it
+  keep their value; the panel shows it as a free-form row.
+- **Rename** works only on an option you added since opening the picker.
+  To rename one that notes may already use, delete it and add the new
+  name.
+
+Colors are saved in `.config/attributes.md`, as a `colors:` list under the
+attribute's options:
+
+```markdown
+### status
+type: Select
+options: Draft, Review, Done
+colors:
+- Draft: gray
+- Review: yellow
+- Done: green
+```
+
+The colors are gray, red, orange, yellow, green, blue, purple and pink.
+
 ### Names Mahfouz keeps for itself
 
 Some frontmatter keys hold Mahfouz's own settings, so an attribute can't
