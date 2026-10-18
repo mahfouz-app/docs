@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Build _data/third_party.json: the open-source components shipped in Mahfouz, as one sorted list.
+
+Usage: bin/third-party-notices <app checkout> _data/third_party.json
+Needs cargo, the app's Rust crates already fetched (build it once), and network access to npm.
+Rust: runtime (normal) dependencies of the Tauri app for macOS.
+JS: production dependencies of src/core, src/desktop and src/web, licences from npm.
+"""
+import json, re, subprocess, sys, urllib.request, urllib.parse
+from concurrent.futures import ThreadPoolExecutor
+
+app, out = sys.argv[1], sys.argv[2]
+TARGETS = ["aarch64-apple-darwin", "x86_64-apple-darwin"]  # Mahfouz ships for macOS only so far
+
+
+def rust():
+    found = {}
+    for t in TARGETS:
+        meta = json.loads(subprocess.run(
+            ["cargo", "metadata", "--offline", "--locked", "--format-version", "1", "--filter-platform", t,
+             "--manifest-path", f"{app}/src/desktop/tauri/Cargo.toml"],
+            check=True, capture_output=True, text=True).stdout)
+        pkgs = {p["id"]: p for p in meta["packages"]}
+        nodes = {n["id"]: n for n in meta["resolve"]["nodes"]}
+        root = meta["resolve"]["root"]
+        seen, stack = set(), [root]
+        while stack:
+            nid = stack.pop()
+            if nid in seen:
+                continue
+            seen.add(nid)
+            for d in nodes[nid]["deps"]:
+                if any(k["kind"] is None for k in d["dep_kinds"]):
+                    stack.append(d["pkg"])
+        for nid in seen - {root}:
+            p = pkgs[nid]
+            if p["source"] is None:  # the app's own crates
+                continue
+            found[(p["name"], p["version"])] = {
+                "name": p["name"], "version": p["version"],
+                "license": (p.get("license") or "See source").replace("/", " OR "),
+                "url": p.get("repository") or f"https://crates.io/crates/{p['name']}",
+            }
+    return sorted(found.values(), key=lambda x: (x["name"].lower(), x["version"]))
+
+
+def js():
+    text = open(f"{app}/bun.lock").read()
+    lock = json.loads(re.sub(r",(\s*[}\]])", r"\1", text))
+    pkgs = lock["packages"]
+    wanted = {}  # key -> (name, version)
+    stack = []
+    for ws in ("src/core", "src/desktop", "src/web"):
+        for name in lock["workspaces"][ws].get("dependencies", {}):
+            stack.append(("", name))
+    while stack:
+        parent, name = stack.pop()
+        key = parent + "/" + name if parent and parent + "/" + name in pkgs else name
+        if key not in pkgs or key in wanted:
+            continue
+        spec = pkgs[key][0]
+        if spec.startswith(name + "@workspace:") or "@workspace:" in spec:
+            ws = next(w for w, v in lock["workspaces"].items() if v.get("name") == name)
+            for dep in lock["workspaces"][ws].get("dependencies", {}):
+                stack.append(("", dep))
+            wanted[key] = None
+            continue
+        version = spec.rsplit("@", 1)[1]
+        wanted[key] = (name, version)
+        info = pkgs[key][2] if len(pkgs[key]) > 2 and isinstance(pkgs[key][2], dict) else {}
+        for dep in {**info.get("dependencies", {}), **info.get("optionalDependencies", {})}:
+            stack.append((key, dep))
+
+    def fetch(nv):
+        name, version = nv
+        url = "https://registry.npmjs.org/" + urllib.parse.quote(name, safe="@") + "/" + version
+        with urllib.request.urlopen(url, timeout=30) as r:
+            m = json.load(r)
+        lic = m.get("license")
+        if isinstance(lic, dict):
+            lic = lic.get("type")
+        repo = m.get("repository")
+        if isinstance(repo, dict):
+            repo = repo.get("url")
+        if repo:
+            repo = re.sub(r"^git\+|\.git$", "", repo).replace("git://", "https://").replace("ssh://git@", "https://")
+            if repo.startswith("github:"):
+                repo = "https://github.com/" + repo[7:]
+        return {"name": name, "version": version, "license": lic or "See source",
+                "url": repo if repo and repo.startswith("http") else f"https://www.npmjs.com/package/{name}"}
+
+    unique = sorted({v for v in wanted.values() if v})
+    with ThreadPoolExecutor(16) as ex:
+        return sorted(ex.map(fetch, unique), key=lambda x: (x["name"].lower(), x["version"]))
+
+
+data = sorted(rust() + js(), key=lambda x: (x["name"].lower(), x["version"]))
+json.dump(data, open(out, "w"), indent=1)
+print(len(data), "components")

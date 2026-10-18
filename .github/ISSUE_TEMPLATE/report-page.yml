@@ -1,0 +1,48 @@
+# Issue form for reporting a published page (p.mahfouz.app). Every page's
+# footer links here as
+#   https://github.com/mahfouz-app/docs/issues/new?template=report-page.yml&page=<page URL>
+# and GitHub fills the field whose id is `page` from that query parameter.
+name: Report a published page
+description: Report a page on p.mahfouz.app that breaks the rules, infringes your rights or exposes private information.
+title: "Report: "
+labels: ["report-page"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a page published with Mahfouz. Reports are public issues, so don't include private information here: for anything sensitive, say so and we'll contact you.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: The address of the page you're reporting.
+      placeholder: https://p.mahfouz.app/...
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - Illegal content
+        - Copyright or trademark infringement
+        - Private or personal information
+        - Harassment or hate
+        - Spam, phishing or malware
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What's wrong with the page, and anything that helps us check it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: good-faith
+    attributes:
+      label: Confirmation
+      options:
+        - label: I believe in good faith that this report is accurate.
+          required: true
