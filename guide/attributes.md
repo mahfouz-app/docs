@@ -153,6 +153,26 @@ colors:
 
 The colors are gray, red, orange, yellow, green, blue, purple and pink.
 
+### Attribute types in Settings {% include since.html v="0.13.0" %} {#types}
+
+Vault Settings → **Attributes** lists every attribute type in the vault:
+its icon, name, type, its options as colored pills, and how many notes
+use it. Change the type from its menu. Click the arrow at the end of a
+row to open it:
+
+- **Options** uses the same option editor as **Change type…**.
+- **Display** picks how the control looks: Menu, Segmented or Radio for a
+  Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
+  date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`.
+- **Rename…** renames the attribute in every note that has it and in
+  every database view that uses it, as one commit. A Relation is renamed
+  from its database column instead.
+- **Delete** removes the type. Notes keep their values, as text.
+
+**+ Add attribute** adds a type: give it a name and a type and press
+<kbd>Enter</kbd>. A Select or Multi-select opens so you can add its
+options.
+
 ### Names Mahfouz keeps for itself
 
 Some frontmatter keys hold Mahfouz's own settings, so an attribute can't
