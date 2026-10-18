@@ -37,6 +37,11 @@ brackets in Source)
 
 Other editor behavior:
 
+- An empty heading on the cursor's line, such as a `## ` you've just typed,
+  shows its level as a gray hint (**Heading 2**) until you type its text,
+  in Source and Preview. The hint is never saved, and it goes when the
+  cursor leaves the line. A new note's first line shows **New Note**
+  instead.
 - **Tab** on a list item (bullet, numbered, or checklist) nests it under the
   item above, wherever your cursor is on the line, and its sub-items move
   with it. **Shift+Tab** moves it back out a level. On the first item of a

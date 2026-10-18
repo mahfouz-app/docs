@@ -20,7 +20,7 @@ name, <kbd>Enter</kbd> starts a new line instead, so `/usr` followed by
 
 | Group | Commands |
 |---|---|
-| Text | Heading 1–3, bullet list, numbered list, checklist, quote |
+| Text | Heading 1–6, bullet list, numbered list, checklist, quote |
 | Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, [database view](/guide/databases/), image or file, task with due date, tag, [emoji](#emoji), and in a slides deck [Apply layout…](/guide/slides/) |
 | Review | Comment on the current line |
 | Plugins | A block for each enabled diagram plugin, such as [Mermaid or draw.io](/guide/plugins/) |
@@ -33,6 +33,10 @@ Some commands depend on where you are:
 - **Table**, **Database view** and diagram blocks aren't available while you're
   [suggesting](/guide/track-changes/). They're shown dimmed, with the reason.
 - **Image or file** and diagram blocks need an open note.
+
+A heading leaves an empty heading line with the cursor after its `#`
+marks and a gray hint naming its level, such as **Heading 2**, until you
+type. The hint isn't part of the note.
 
 Inline formatting such as bold or italic isn't in the menu. Use its
 [keyboard shortcut](/guide/shortcuts/) or the [toolbar](/guide/toolbar/).
