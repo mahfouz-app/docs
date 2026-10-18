@@ -6,7 +6,7 @@ permalink: /guide/tasks/
 ---
 
 A task is a checklist item with a due date. Write it on one line: the
-checkbox, the title, optionally who it's for, then ` // ` and the date.
+checkbox, the title, optionally who it's for, then `//` and the date.
 
 ```markdown
 - [ ] Ship release notes @omar // 2026-10-12 14:00
@@ -19,8 +19,8 @@ checkbox, the title, optionally who it's for, then ` // ` and the date.
 - **The date** is `YYYY-MM-DD`. The time, `HH:MM` in 24-hour form, is
   optional; a task without one is due all day.
 - **The assignee** is a [person's](/guide/people/) handle after `@`,
-  just before the ` // `, such as a GitHub login. It's optional.
-- **The ` // `** needs a space on each side. That is what makes the line
+  just before the `//`, such as a GitHub login. It's optional.
+- **The `//`** needs a space on each side. That is what makes the line
   a task: a checklist item that only mentions a date, such as
   `- [ ] Read 2026-03-02`, stays an ordinary checklist item.
 - **Times** are read in your own time zone. A collaborator elsewhere sees
@@ -51,8 +51,8 @@ the raw text; Preview always shows the chips.
 
 ### Set a date
 
-Click the date chip, or type ` //` after the title of a checklist item, to
-open the date picker.
+Click the date chip, or type a space and `//` after the title of a
+checklist item, to open the date picker.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
   The calendar's weeks start on the day set in Settings → General →
