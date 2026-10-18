@@ -157,7 +157,7 @@ The colors are gray, red, orange, yellow, green, blue, purple and pink.
 
 Vault Settings → **Attributes** lists every attribute type in the vault:
 its icon, name, type, its options as colored pills, and how many notes
-use it. Change the type from its menu. Click the arrow at the end of a
+use it. Pick another type in the row's Type column. Click the arrow at the end of a
 row to open it:
 
 - **Options** uses the same option editor as **Change type…**.
