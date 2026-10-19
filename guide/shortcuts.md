@@ -82,8 +82,8 @@ open note, or on the row you last moved to. Then:
 | <kbd>F2</kbd> | Rename the focused note or folder (the Rename note shortcut, so a new key you give it works here too) |
 | <kbd>Shift</kbd><kbd>F10</kbd> | Open the row's menu, as **⋯** would |
 
-In the [Search tab](/guide/links/#search), <kbd>↓</kbd> and <kbd>↑</kbd> in the search field move through the matching lines,
-<kbd>Enter</kbd> opens the note at one and <kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab. {% include since.html v="0.13.0" %}
+In the [Search tab](/guide/links/#search), <kbd>↓</kbd> and <kbd>↑</kbd> in the search field move through each note's title and its matching lines,
+<kbd>Enter</kbd> opens the note at that line (at its top on its title) and <kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab. {% include since.html v="0.13.0" %}
 
 ## The menu bar (desktop)
 

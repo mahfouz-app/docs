@@ -62,6 +62,11 @@ other tags those notes carry. Click one to add it as another `tag:`: only
 notes with **all** the tags stay. To remove a tag, use the × on its chip
 in the summary line, or delete it from the field. {% include since.html v="0.13.0" %}
 
+While you type `tag:` and part of a name, **Matching tags** lists the tags
+whose names contain it, so `tag:pro` offers `#project` and `#improv`.
+Click one to finish the word. `person:` does the same with people's
+handles and names. {% include since.html v="0.13.0" %}
+
 With the search field empty, the Search tab lists every tag with its note
 count, and **Untagged**, which searches `is:untagged` for notes with no
 tags. {% include since.html v="0.13.0" %}
@@ -159,9 +164,9 @@ lists up to 20 lines, then says how many more it has. {% include since.html v="0
 
 | Key | What it does |
 |---|---|
-| <kbd>↑</kbd> / <kbd>↓</kbd> | Move through the matching lines |
-| <kbd>Enter</kbd> | Open the note at that line |
-| <kbd>Mod</kbd><kbd>Enter</kbd> | Open the note at that line in a new tab (or <kbd>Cmd/Ctrl</kbd>+click the line) |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | Move through each note's title and its matching lines |
+| <kbd>Enter</kbd> | Open the note at that line, or at its top on its title |
+| <kbd>Mod</kbd><kbd>Enter</kbd> | Open it in a new tab (or <kbd>Cmd/Ctrl</kbd>+click the line or title) |
 
 The note you open highlights the words and phrases you searched for, never
 the operators, while the Search tab stays open, and shades the line you
