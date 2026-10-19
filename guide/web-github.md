@@ -34,8 +34,10 @@ The account menu has two ways to sign out:
 
 ## Opening a GitHub repository
 
-On first run (in the bar above the welcome page), or from Open Vault, click
-**Open a GitHub repository…**:
+In [Choose a vault](/guide/vaults/#choosing-a-vault), on first run or from
+**Add vault…** in Settings → Vaults, click **GitHub repository** under
+**Open existing** {% include since.html v="0.13.0" %}. To start a new vault
+on GitHub instead, see [New vault on GitHub](/guide/vaults/#new-vault-on-github).
 
 1. Sign in with GitHub and install the Mahfouz app on your repositories, as
    above. If the repository belongs to an organization and an owner has to

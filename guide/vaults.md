@@ -6,10 +6,9 @@ permalink: /guide/vaults/
 ---
 
 A **vault** is a folder on disk containing your notes, and (usually) a git
-repository. Mahfouz doesn't create a vault for you on first launch. Use
-**File → Open Vault…** (<kbd>Cmd/Ctrl</kbd><kbd>O</kbd>) to point it at an existing folder or
-an empty one you want to turn into a vault. An empty folder stays empty:
-Mahfouz writes no starter note into it.
+repository. Mahfouz doesn't create a vault for you on first launch: it asks
+you to [choose one](#choosing-a-vault). An empty folder stays empty: Mahfouz
+writes no starter note into it.
 
 You can have multiple vaults open at once. Each appears as its own
 collapsible section at the top of the Sidebar's Notes view, showing either
@@ -32,11 +31,63 @@ vault specifically (see [Git sync & remotes](/guide/git/#git-sync--remotes) and
 
 On the web, vaults open differently: see [Mahfouz on the web](/guide/web/).
 
-## The welcome page
+## Choosing a vault
 
-Until you open a vault, Mahfouz shows a welcome page: a note that tours
-the main features, with a bar above it holding **Open or create a vault…**
-(and, on the web, **Open a GitHub repository…**). The welcome page is a
-sandbox: you can type in it, tick its checkboxes and try the formatting
-toolbar, but nothing on it is saved. Reloading resets it, and opening a
-vault replaces it.
+{% include since.html v="0.13.0" %} With no vault open (on first run, or
+after you remove the last one), the main pane shows **Choose a vault**, with
+two groups:
+
+- **Start new**
+  - **On this computer**: a new folder of notes, with a git repository in it.
+  - **On GitHub**: a new private repository on GitHub (see
+    [New vault on GitHub](#new-vault-on-github)).
+- **Open existing**
+  - **Folder**: a folder of notes you already have, or an empty one.
+  - **GitHub repository**: clone a repository you already keep notes in (see
+    [Opening a GitHub repository](/guide/web-github/#opening-a-github-repository)).
+
+What you see depends on where you run Mahfouz:
+
+| | On this computer | On GitHub | Folder | GitHub repository |
+|---|---|---|---|---|
+| Desktop app | Yes | Yes | Yes | Not yet |
+| Web | No | Yes | Chrome, Edge and other Chromium browsers | Yes |
+
+On the web, **Folder** needs a browser that can open folders on your
+computer (see [Mahfouz on the web](/guide/web/)). A browser that can neither
+open a folder nor keep a GitHub vault says so and links to the desktop app.
+
+**Add vault…** in **Settings → Vaults** opens the same choices as a dialog.
+On the desktop app, **File → New Vault…**
+(<kbd>Mod</kbd><kbd>Shift</kbd><kbd>N</kbd>) and **File → Open Vault…**
+(<kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd>) skip it and go straight to the
+folder picker; on the web, <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> opens a
+folder.
+
+### The tour
+
+**Take the tour**, below the choices, opens a note that tours the main
+features. It's a sandbox: you can type in it, tick its checkboxes and try the
+formatting toolbar, but nothing on it is saved. Reloading resets it. Click
+**Back** to return to **Choose a vault**.
+
+## New vault on GitHub
+
+{% include since.html v="0.13.0" %} **On GitHub** creates a private
+repository and makes it a vault. It needs a GitHub sign-in with the Mahfouz
+app installed on your own account (see [Signing in to
+GitHub](/guide/github/), or [on the web](/guide/web-github/#signing-in-with-github)).
+Mahfouz walks you through both if you haven't done them yet.
+
+1. Name the repository. It's always private; Mahfouz never creates a public
+   one.
+2. On the desktop app, also pick the folder the vault lives in on this
+   computer. It starts as `~/Documents/<name>`. The first push uses this
+   computer's SSH key, not your GitHub sign-in, so Mahfouz checks that it can
+   push before it creates anything. If the check fails, nothing is created,
+   and Mahfouz says what to fix.
+3. On the web, the vault is kept in the browser's storage, like a [cloned
+   repository](/guide/web-github/#where-a-github-vault-lives).
+
+If the repository was created but the first push failed, **Try again**
+pushes to that same repository instead of creating another.

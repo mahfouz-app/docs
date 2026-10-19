@@ -27,18 +27,20 @@ Mahfouz** with a link to the desktop app (or, over plain http, **Mahfouz
 needs a secure connection**).
 
 Only Chromium browsers can open a folder on your computer. In Safari and
-Firefox the bar above the [welcome page](/guide/vaults/#the-welcome-page)
-says so and links here.
+Firefox, [Choose a vault](/guide/vaults/#choosing-a-vault) leaves out
+**Folder** {% include since.html v="0.13.0" %}.
 
 GitHub vaults are kept in the browser's own storage, which Safari supports
-from version 26. In an older Safari, **Open a GitHub repository…** is
-disabled and the bar says why. [Plugins](/guide/plugins/#plugins-on-the-web)
+from version 26. An older Safari can open neither a folder nor a GitHub
+vault, so Choose a vault says so and links to the desktop app
+{% include since.html v="0.13.0" %}. [Plugins](/guide/plugins/#plugins-on-the-web)
 need the same storage, so an older Safari can't install them either.
 
 ## Opening a folder
 
-On first run, click **Open or create a vault…** in the bar above the
-welcome page and choose a folder. The
+On first run, click **Folder** under **Open existing** in [Choose a
+vault](/guide/vaults/#choosing-a-vault) {% include since.html v="0.13.0" %}
+and choose a folder. The
 browser asks whether Mahfouz may edit the folder: choose **Edit files**.
 Press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>O</kbd> on a Mac) to open another folder later.
 
