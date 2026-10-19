@@ -35,6 +35,6 @@ if you'd like a reply.
 
 If Mahfouz's server can't be reached, or it's had too many reports from your
 network in the last minute, the dialog says **Saved. Mahfouz will send it
-the next time it can reach mahfouz.app.** The report waits on this device,
+once it can connect.** The report waits on this device,
 up to 10 of them, and is sent the next time you open Mahfouz or your
 connection comes back. A notification links to the issue once it's filed.
