@@ -69,17 +69,61 @@ const total = items.reduce((sum, item) => sum + item.price, 0);
 ````
 
 A code block shows as a card, highlighted for its language. In Preview mode
-the backticks are hidden while the cursor is outside the block: the card
-shows the language at the top, and pointing at the block shows two buttons:
+the backticks are hidden while the cursor is outside the block. The card's
+header shows a collapse chevron and the language, and pointing at the block
+shows its buttons:
 
-- **Copy** copies the code, without the backticks.
+- The chevron at the left collapses the block to its header and its line
+  count ("· 12 lines"), or expands it again. {% include since.html v="0.13.0" %}
+- The language button shows the block's language. Click it to pick another
+  from the **Language** menu, which you can search. {% include since.html v="0.13.0" %}
+- The moon or sun button shows this one block dark or light, whatever the
+  note's appearance. {% include since.html v="0.13.0" %}
 - The line-numbers button numbers the block's lines, or stops numbering them.
+- **Copy code** copies the whole block's code, without the backticks, even
+  while it's collapsed or folded.
+
+Picking a language rewrites only the word after the opening backticks, so
+`showLineNumbers` and anything else after it stay. The change is never a
+suggestion, even in Suggesting mode, and one undo takes it back. A block
+written as `text` (or with no language) shows **Plain text**, and a file
+extension works as a language too: `py` is Python, `rs` is Rust.
+{% include since.html v="0.13.0" %}
+
+Collapsing a block and switching it light or dark are remembered on this
+device only, for that note. They aren't written to the note, so they don't
+sync, aren't committed, and collaborators see the block as it is.
+{% include since.html v="0.13.0" %}
 
 Line numbers are kept in the note itself, as `showLineNumbers` after the
 language (<code>&#96;&#96;&#96;ts showLineNumbers</code>), so they show for
 everyone you share the note with. You can also type it yourself. A block
 with no language gets `text` as its language when you number it. Click into
 the block to see and edit its backticks.
+
+With the cursor in a block, <kbd>Shift</kbd><kbd>F10</kbd> (or the
+<kbd>Menu</kbd> key) opens the block's actions as a menu: Language…,
+Collapse block, the light or dark switch, Line numbers and Copy code.
+{% include since.html v="0.13.0" %}
+
+### Folding code {% include since.html v="0.13.0" %} {#folding-code}
+
+In Preview mode, pointing at a code block shows a chevron in the rail
+beside the line numbers on each line where a region starts: a function, a
+class, an object or an indented section. Click it to fold that region to
+its first line and a "…", and click it again to unfold it. Languages without
+their own folding rules fold by indentation.
+
+Folds are temporary: switching the note to Source mode, picking a new
+language for the block, or reloading unfolds them. The fold keys act only
+with the cursor on a line of code in Preview, and do nothing elsewhere:
+
+| Shortcut | Action |
+|---|---|
+| <kbd>Cmd</kbd><kbd>Alt</kbd><kbd>&#91;</kbd> on a Mac, <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>&#91;</kbd> elsewhere | Fold the region at the cursor |
+| <kbd>Cmd</kbd><kbd>Alt</kbd><kbd>&#93;</kbd> on a Mac, <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>&#93;</kbd> elsewhere | Unfold it |
+| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>&#91;</kbd> | Fold every region in the block |
+| <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>&#93;</kbd> | Unfold every region in the block |
 
 ## Math
 

@@ -64,7 +64,8 @@ Other useful bindings: <kbd>Tab</kbd>/<kbd>Enter</kbd> inside a checklist or lis
 it; <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
 autocomplete; `!` triggers field autocomplete. The Find and Replace bar has
 its own keys, listed under [Find and replace](/guide/editor/#find-and-replace);
-the Search tab shares them.
+the Search tab shares them. Code blocks have their own fold keys, listed under
+[Folding code](/guide/markdown/#folding-code). {% include since.html v="0.13.0" %}
 
 ## The sidebar from the keyboard {% include since.html v="0.13.0" %} {#the-sidebar-from-the-keyboard}
 
