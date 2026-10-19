@@ -84,10 +84,16 @@ Mahfouz walks you through both if you haven't done them yet.
 2. On the desktop app, also pick the folder the vault lives in on this
    computer. It starts as `~/Documents/<name>`. The first push uses this
    computer's SSH key, not your GitHub sign-in, so Mahfouz checks that it can
-   push before it creates anything. If the check fails, nothing is created,
-   and Mahfouz says what to fix.
+   push before it creates anything on GitHub. If the check fails, no
+   repository is created: the vault stays on this computer, and Mahfouz says
+   what to fix.
 3. On the web, the vault is kept in the browser's storage, like a [cloned
    repository](/guide/web-github/#where-a-github-vault-lives).
 
 If the repository was created but the first push failed, **Try again**
 pushes to that same repository instead of creating another.
+
+On the web, if the Mahfouz app was installed for selected repositories only
+and can't reach the new repository yet, Mahfouz says so: click **Open
+installation settings**, give the app access to it, then click **Try
+again**.
