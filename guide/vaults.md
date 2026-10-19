@@ -53,7 +53,7 @@ What you see depends on where you run Mahfouz:
 
 | | On this computer | On GitHub | Folder | GitHub repository |
 |---|---|---|---|---|
-| Desktop app | Yes | Yes | Yes | Not yet |
+| Desktop app | Yes | Yes | Yes | Yes {% include since.html v="0.13.0" %} |
 | Web | No | Yes | Chrome, Edge and other Chromium browsers | Yes |
 
 On the web, **Folder** needs a browser that can open folders on your
@@ -73,6 +73,29 @@ folder.
 features. It's a sandbox: you can type in it, tick its checkboxes and try the
 formatting toolbar, but nothing on it is saved. Reloading resets it. Click
 **Back** to return to **Choose a vault**.
+
+## Opening a GitHub repository on the desktop app
+
+{% include since.html v="0.13.0" %} On the desktop app, **GitHub
+repository** under **Open existing** clones a repository you already keep
+notes in. On the web it's kept in the browser instead (see [Opening a GitHub
+repository](/guide/web-github/#opening-a-github-repository)).
+
+1. Sign in with GitHub and install the Mahfouz app on the repository, as for
+   [New vault on GitHub](#new-vault-on-github).
+2. Pick the repository.
+3. Click **Choose folder…** and pick the folder the vault goes in. Mahfouz
+   clones the repository into a new folder named after it inside that
+   folder, such as `~/Documents/notes`. If that folder already has one with
+   the same name, or it's a vault or inside one, Mahfouz says so and you
+   choose another.
+4. Click **Clone**. If the repository is public, Mahfouz asks first, since
+   everything you add to the vault becomes public once it syncs.
+
+The clone and every sync after it use this computer's own SSH key, not your
+GitHub sign-in. Mahfouz checks that the key works before it clones; if it
+doesn't, it says how to fix it, and **Check again** tries again. A clone that
+fails leaves nothing behind.
 
 ## New vault on GitHub
 
