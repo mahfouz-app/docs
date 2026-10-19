@@ -36,6 +36,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | Create a database (no default key; action "New database") |
 | None | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
 | None | Set the active note's page icon (no default key; action "Set note icon") |
+| None | Find the notes that mention the person at the cursor: opens the [Search tab](/guide/links/#search) on `person:handle` for the @mention the cursor is on (no default key; action "Find mentions of person", row `find_mentions`) {% include since.html v="0.13.0" %} |
 | None | [Share the active note](/guide/toolbar/#the-bottom-bar) through the system share sheet (no default key; row `share_note`; in the macOS app and in browsers that can share) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |

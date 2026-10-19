@@ -137,7 +137,7 @@ You can narrow a search with:
 | `"exact phrase"` | Notes with those words together, in that order |
 | `-word` | Only notes without that word |
 | `tag:name` | Only notes with that tag (`tag:#name` works too) |
-| `person:handle` | Only notes that [mention](/guide/people/#mentions) `@handle` or have a [task](/guide/tasks/) assigned to them. A GitHub login also finds the person whose `github` is that login {% include since.html v="0.13.0" %} |
+| `person:handle` | Only notes that [mention](/guide/people/#mentions) `@handle` or have a [task](/guide/tasks/) assigned to them. A person's handle and their GitHub login find the same notes, mentions and tasks under either. `person:@handle` works too {% include since.html v="0.13.0" %} |
 | `is:untagged` | Only notes with no tags {% include since.html v="0.13.0" %} |
 | `in:vault` | Only notes in that vault; quote a name with spaces, `in:"Work notes"` |
 
