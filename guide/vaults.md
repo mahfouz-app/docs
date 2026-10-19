@@ -23,6 +23,9 @@ vault specifically (see [Git sync & remotes](/guide/git/#git-sync--remotes) and
 - **Vault path**: shown with buttons to reveal it in Finder/Explorer, or
   **Move or rename…** it (type a new path, or pick a new parent folder;
   same-disk moves only).
+- **Notes**: **New note prefix**, the text every new note's file name in
+  this vault starts with (see [Notes & organization](/guide/notes/)).
+  {% include since.html v="0.13.0" %}
 - **Rebuild from vault**: re-reads every note from the files in the vault
   folder. Use this if the sidebar or search ever looks out of sync
   with what's actually in the folder.
