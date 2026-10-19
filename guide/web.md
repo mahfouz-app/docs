@@ -5,7 +5,7 @@ description: "Use Mahfouz in a browser: supported browsers, opening a folder, an
 permalink: /guide/web/
 ---
 
-Mahfouz also runs in your browser, at **mahfouz.app**. It works on the
+Mahfouz also runs in your browser, at **web.mahfouz.app**. It works on the
 same vaults as the desktop app: a folder of Markdown notes in a git
 repository. You can open a folder on your computer (Chromium browsers only),
 or a repository from GitHub, which Mahfouz keeps in the browser and syncs

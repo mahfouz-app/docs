@@ -19,8 +19,8 @@ an account to use it. We don't sell or share data about you, and we don't
 use it for advertising.
 
 This policy is from Influpert LLC, the company that makes Mahfouz. It
-covers the desktop app, the web app at [mahfouz.app](https://mahfouz.app),
-published pages and this website.
+covers the desktop app, the web app at [web.mahfouz.app](https://web.mahfouz.app),
+published pages and this website, mahfouz.app.
 
 ## What stays on your computer
 
@@ -40,7 +40,7 @@ published pages and this website.
 | Use the AI agent | The messages you send and the notes it reads to answer | The provider whose API key you add: Anthropic, OpenAI or OpenRouter |
 | [Connect an external agent](/guide/external-agents/) | What the agent reads in the vaults you tick | That agent, such as Claude Code or Codex |
 | [Publish a note](/guide/publishing/) | That one note and its images | A public page, at the link you share |
-| [Send feedback](/guide/feedback/) | What you write, plus the app version, operating system and CPU architecture if you leave **Include diagnostics** on, and your GitHub login if you tick **Include my GitHub login** | A public GitHub issue, filed through mahfouz.app |
+| [Send feedback](/guide/feedback/) | What you write, plus the app version, operating system and CPU architecture if you leave **Include diagnostics** on, and your GitHub login if you tick **Include my GitHub login** | A public GitHub issue, filed through Mahfouz's server |
 | [Install a plugin](/guide/plugins/) | Requests for the plugin and its files | The repository it's shared from, and the hosts the plugin lists |
 
 Each of these is off until you turn it on:
@@ -65,7 +65,7 @@ uninstall the plugin or [unpublish](/guide/publishing/) the note.
 
 ## The desktop app checks for updates
 
-The desktop app downloads `docs.mahfouz.app/version.json` to see whether a
+The desktop app downloads `mahfouz.app/version.json` to see whether a
 newer version is out. The request sends nothing about you or your notes.
 
 ## Error reports and usage counts
@@ -111,7 +111,7 @@ copied into the vault's `files/` folder and never fetched from Google.
 
 ## On the web
 
-At [mahfouz.app](https://mahfouz.app), a folder you open is read and
+At [web.mahfouz.app](https://web.mahfouz.app), a folder you open is read and
 written by the browser directly. A [GitHub vault](/guide/web-github/) is
 kept in the browser's storage, and its sync passes through Mahfouz's
 server on its way to GitHub without being stored. The AI agent is
@@ -123,7 +123,7 @@ Mahfouz's server runs on Cloudflare. It keeps only these things, and only
 once you use the feature:
 
 - **Your GitHub sign-in on the web.** When you sign in to GitHub at
-  mahfouz.app, the server keeps your GitHub account ID, username, name and
+  web.mahfouz.app, the server keeps your GitHub account ID, username, name and
   avatar, and the GitHub tokens for your session, encrypted. Your browser
   holds a cookie that identifies the session. The session ends, and all of
   it is deleted, when you sign out or 30 days after you signed in.
@@ -134,12 +134,12 @@ once you use the feature:
   page's title, link, your GitHub account ID and when it was published and
   unpublished.
 - **Agents on the web.** If you connect an agent such as claude.ai to
-  mahfouz.app, the server keeps the connection you approved, with its
+  web.mahfouz.app, the server keeps the connection you approved, with its
   tokens stored as hashes, for up to 30 days or until you revoke it. What
   the agent reads and writes passes through to your open tab and isn't
   stored.
 - **Request logs.** Like any web server, Cloudflare records requests to
-  mahfouz.app and published pages, including the IP address, the address
+  Mahfouz's server and published pages, including the IP address, the address
   requested and the time. We use these logs only to run the service and
   stop abuse, and they're kept for at most a few days.
 - **Server errors and timings.** The server sends its own errors and how
@@ -150,7 +150,7 @@ once you use the feature:
 
 ## Cookies
 
-mahfouz.app sets two cookies, both needed for signing in, and no others:
+web.mahfouz.app sets two cookies, both needed for signing in, and no others:
 one that holds your session for up to 30 days, and one that lasts 10
 minutes while GitHub sign-in completes. Published pages and this website
 set no cookies. This website remembers your Light / Dark choice in your
@@ -158,7 +158,7 @@ browser only.
 
 ## Who else handles data
 
-- **Cloudflare** hosts mahfouz.app and published pages.
+- **Cloudflare** hosts the web app, Mahfouz's server and published pages.
 - **Datadog** receives error reports, timings and usage counts from the
   apps and the server, under [Datadog's privacy
   policy](https://www.datadoghq.com/legal/privacy/).

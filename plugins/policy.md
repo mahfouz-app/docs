@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Plugin registry policy
-description: "The rules for listing a plugin on docs.mahfouz.app, what a listing means, and how to report a plugin."
+description: "The rules for listing a plugin on mahfouz.app, what a listing means, and how to report a plugin."
 permalink: /plugins/policy/
 ---
 

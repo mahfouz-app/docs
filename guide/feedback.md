@@ -13,7 +13,7 @@ and some details, and press **Submit**.
 
 Feedback becomes a **public** issue on
 [mahfouz-app/docs](https://github.com/mahfouz-app/docs/issues), filed by the
-Mahfouz feedback bot through mahfouz.app, on desktop and on the web alike,
+Mahfouz feedback bot through Mahfouz's server, on desktop and on the web alike,
 whether or not you're signed in to GitHub. Once it's filed, the dialog
 links to the new issue. {% include since.html v="0.13.0" %}
 
@@ -26,14 +26,14 @@ included** to see the exact lines, or untick the box to leave them out.
 
 Feedback is anonymous unless you tick **Include my GitHub login (@you)**,
 which appears when you're signed in to GitHub. The issue then ends with
-"Sent by @you", so GitHub notifies you of replies. mahfouz.app checks the
+"Sent by @you", so GitHub notifies you of replies. Mahfouz's server checks the
 login with GitHub using your sign-in, so nobody can send feedback in your
 name. Signed out, the box is greyed: add a way to reach you in the details
 if you'd like a reply.
 
 ## When you're offline {% include since.html v="0.13.0" %} {#when-youre-offline}
 
-If mahfouz.app can't be reached, or it's had too many reports from your
+If Mahfouz's server can't be reached, or it's had too many reports from your
 network in the last minute, the dialog says **Saved. Mahfouz will send it
 the next time it can reach mahfouz.app.** The report waits on this device,
 up to 10 of them, and is sent the next time you open Mahfouz or your

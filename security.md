@@ -15,7 +15,7 @@ Email [security@influpert.com](mailto:security@influpert.com) with:
 
 - what the problem is, and what someone could do with it;
 - the steps to reproduce it, or a proof of concept;
-- the Mahfouz version and operating system, or the address on mahfouz.app;
+- the Mahfouz version and operating system, or the address on web.mahfouz.app;
 - whether, and how, you'd like to be credited.
 
 We'll confirm we've received your report within 3 business days, and keep
@@ -28,9 +28,11 @@ We don't offer a bug bounty.
 ## In scope
 
 - The Mahfouz desktop app, in its latest release.
-- The web app at `mahfouz.app` and its server.
+- The web app at `web.mahfouz.app` and Mahfouz's server, including
+  `api.mahfouz.app`, which the desktop app uses to publish and send
+  feedback.
 - Published pages at `p.mahfouz.app`.
-- This website, `docs.mahfouz.app`, and the official `mahfouz` [plugin
+- This website, `mahfouz.app`, and the official `mahfouz` [plugin
   registry](/plugins/).
 
 Only the latest release gets security fixes, so check the problem is
@@ -55,7 +57,7 @@ While you look for a problem, please:
 - test only against your own vaults, accounts and published pages;
 - not read, change or delete anyone else's data, and stop as soon as you
   reach any;
-- not degrade mahfouz.app for other people.
+- not degrade Mahfouz's web app or server for other people.
 
 If you act in good faith and follow this policy, we won't take legal
 action against you or ask anyone else to, and we'll treat your research as
@@ -79,19 +81,19 @@ authorized.
   checksums, and it can reach only the web addresses it lists. A plugin
   still runs inside the app with access to your vaults, so install only
   plugins you trust.
-- **Sign-ins on the web are protected.** At mahfouz.app your GitHub tokens
+- **Sign-ins on the web are protected.** At web.mahfouz.app your GitHub tokens
   stay on the server, encrypted, and never reach the browser. Your session
   cookie can't be read by scripts or sent from other sites, and it ends 30
   days after you sign in. Requests that change something must come from
-  mahfouz.app itself.
-- **Feedback is filed by mahfouz.app.** The bot account that files
+  web.mahfouz.app itself.
+- **Feedback is filed by Mahfouz's server.** The bot account that files
   feedback issues keeps its token on the server; the app carries none.
   Your GitHub sign-in goes along only when you choose to include your
-  login, and only so mahfouz.app can check it with GitHub.
+  login, and only so the server can check it with GitHub.
 - **Published pages are kept apart.** Pages live on their own domain,
   `p.mahfouz.app`, with a strict content security policy, so a page can't
-  reach your mahfouz.app session.
-- **Strict web settings.** mahfouz.app uses HTTPS only, a content security
+  reach your web.mahfouz.app session.
+- **Strict web settings.** web.mahfouz.app uses HTTPS only, a content security
   policy that lets it talk only to itself, and refuses to be framed by
   other sites.
 
