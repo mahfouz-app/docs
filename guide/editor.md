@@ -80,9 +80,9 @@ Other editor behavior:
 
 <kbd>Cmd/Ctrl</kbd><kbd>F</kbd>, **Edit → Find and Replace** or the
 toolbar's **Find and replace** opens the Find and Replace bar, with the
-selection, or the word at the cursor, already in the **Find** field. On a
-wide pane the bar floats as a card at the top right, so the note doesn't
-move; on a narrow pane it's a full-width strip under the toolbar. It stays
+selection, or the word at the cursor, already in the **Find** field. The
+bar sits across the top of the note, full width, and stays in place while
+the note scrolls. {% include since.html v="0.13.0" %} It stays
 open, with its query, when you switch between Source and Preview.
 
 - **Match case** (`Aa`), **Match whole word** (`ab`) and **Use regular
@@ -102,9 +102,17 @@ open, with its query, when you switch between Source and Preview.
   once.
 - **Replace** is folded away at first. Click the chevron at the bar's left,
   or press <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> again in the Find field, to show
-  the Replace field with **Replace** and **Replace all**. <kbd>Enter</kbd>
-  in the Replace field replaces the current match. The bar remembers
+  the Replace field with the **Replace** and **Replace all** buttons.
+  <kbd>Enter</kbd> in the Replace field replaces the current match, and
+  <kbd>Cmd/Ctrl</kbd><kbd>Enter</kbd> replaces them all. {% include since.html v="0.13.0" %} The bar remembers
   whether Replace was open until you quit. A read-only note has no Replace.
+- **Find in all notes**: the scope button beside the Find field takes the
+  query, with its `Aa`, `ab` and `.*` settings, to the
+  [Search tab](/guide/links/#search), which searches every note. When
+  Replace is open, the Search tab opens with its Replace field open too,
+  holding the same text, to [replace across notes](/guide/links/#replace-across-notes).
+  <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> does the same from the
+  note. {% include since.html v="0.13.0" %}
 - **While Suggesting**, Replace and Replace all write each replacement as
   a [tracked substitution](/guide/track-changes/), and the bar says
   "Replacements are added as suggestions." Matches a suggestion can't

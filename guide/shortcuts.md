@@ -24,9 +24,8 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd> | Toggle right sidebar |
 | <kbd>Mod</kbd><kbd>1</kbd> | Go to all notes |
 | <kbd>Mod</kbd><kbd>2</kbd> | Go to bookmarks |
-| <kbd>Mod</kbd><kbd>3</kbd> | Go to tags |
 | <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
-| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Search note contents (<kbd>Mod</kbd><kbd>5</kbd> is no longer used) |
+| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Open the [Search tab](/guide/links/#search) to search note contents, starting from the Find bar's query or the selection {% include since.html v="0.13.0" %} (<kbd>Mod</kbd><kbd>3</kbd> and <kbd>Mod</kbd><kbd>5</kbd> are no longer used) |
 | <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd> | Add the word under the cursor to the [vault dictionary](/guide/spelling/#the-vault-dictionary) |
@@ -63,11 +62,12 @@ Fixed editor shortcuts (not remappable):
 Other useful bindings: <kbd>Tab</kbd>/<kbd>Enter</kbd> inside a checklist or list continue
 it; <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
 autocomplete; `!` triggers field autocomplete. The Find and Replace bar has
-its own keys, listed under [Find and replace](/guide/editor/#find-and-replace).
+its own keys, listed under [Find and replace](/guide/editor/#find-and-replace);
+the Search tab shares them.
 
 ## The sidebar from the keyboard {% include since.html v="0.13.0" %} {#the-sidebar-from-the-keyboard}
 
-The sidebar's notes, folders, Bookmarks and Notes headers, tags and Trash
+The sidebar's notes, folders, Bookmarks and Notes headers, and Trash
 entries are one stop when you press <kbd>Tab</kbd>: focus lands on the row of the
 open note, or on the row you last moved to. Then:
 
@@ -77,12 +77,12 @@ open note, or on the row you last moved to. Then:
 | <kbd>Home</kbd> / <kbd>End</kbd> | Move to the first or last row |
 | <kbd>→</kbd> | Expand a row, or move to its first child when it's already expanded |
 | <kbd>←</kbd> | Collapse a row, or move to its parent when it's already collapsed |
-| <kbd>Enter</kbd> | Open a note (<kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab), expand or collapse a folder or header, add a tag to the filter, or preview a Trash entry |
+| <kbd>Enter</kbd> | Open a note (<kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab), expand or collapse a folder or header, or preview a Trash entry |
 | <kbd>F2</kbd> | Rename the focused note or folder (the Rename note shortcut, so a new key you give it works here too) |
 | <kbd>Shift</kbd><kbd>F10</kbd> | Open the row's menu, as **⋯** would |
 
-In Search, <kbd>↓</kbd> and <kbd>↑</kbd> in the search field move through the results and
-<kbd>Enter</kbd> opens one.
+In the [Search tab](/guide/links/#search), <kbd>↓</kbd> and <kbd>↑</kbd> in the search field move through the matching lines,
+<kbd>Enter</kbd> opens the note at one and <kbd>Mod</kbd><kbd>Enter</kbd> opens it in a new tab. {% include since.html v="0.13.0" %}
 
 ## The menu bar (desktop)
 
@@ -93,13 +93,13 @@ shortcut:
   **New Database**, New Vault, Open Vault, Save, Export, Share (macOS
   only), Close Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
-  Search Vault, Command Palette.
+  Find in All Notes {% include since.html v="0.13.0" %}, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
   Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
   File Explorer), Revision History, plugin commands such as Present, and
   Delete. These items are greyed out when no note tab is open.
 - **View**: the sidebars, Line Numbers, Zoom In and Out, Stop Presenting.
-- **Go**: All Notes, Bookmarks, Tags, Trash, Mind Map, Back, Forward.
+- **Go**: All Notes, Bookmarks, Trash, Mind Map, Back, Forward.
 - **Help**: Keyboard Shortcuts, User Guide, Send Feedback.
 
 The keys shown in the menu follow your `## Shortcuts` table: change a
@@ -129,7 +129,6 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Close the active tab | <kbd>Mod</kbd><kbd>W</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>W</kbd> |
 | Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>A</kbd> |
 | Go to bookmarks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> |
-| Go to tags | <kbd>Mod</kbd><kbd>3</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>T</kbd> |
 | Go to trash | <kbd>Mod</kbd><kbd>4</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> |
 | Go to tasks | <kbd>Mod</kbd><kbd>6</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd> |
 | Bookmark the active note | <kbd>Mod</kbd><kbd>D</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>S</kbd> |

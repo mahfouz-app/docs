@@ -110,8 +110,8 @@ database, with three views to pick from at the top:
 - **Board** puts the tasks in three columns: **To do**, **In progress**
   and **Done**. Drag a card to another column to change its status, or
   open the card's menu and pick a column under **Move to**. Each card
-  shows its title, then its `#tags` on their own line (click one to open
-  it in the Tags view), then its note and its due date, with an icon for
+  shows its title, then its `#tags` on their own line (click one to search
+  for it in the [Search tab](/guide/links/#tags)), then its note and its due date, with an icon for
   whether it's overdue, due today, upcoming or done. Tags at the end of
   the title move to the tag line; a tag in the middle of the title stays
   there, tinted. On a [person's page](/guide/people/#a-persons-page), a
@@ -138,8 +138,8 @@ In every view:
   tasks shows as a chip with its count under the toolbar. Click chips to
   show only the tasks carrying any of them; **Clear** shows every task
   again. Only tags on the task's own line count, not the note's other
-  tags. Clicking a `#tag` on a card or in the **Tags** column opens the
-  [Tags view](/guide/links/#tags) with that tag added instead. {% include since.html v="0.12.0" %}
+  tags. {% include since.html v="0.12.0" %} Clicking a `#tag` on a card or in the **Tags** column opens the
+  [Search tab](/guide/links/#tags) with `tag:name` instead. {% include since.html v="0.13.0" %}
 - Clicking a reminder opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something

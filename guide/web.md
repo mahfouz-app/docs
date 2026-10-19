@@ -74,9 +74,9 @@ switches to a layout made for it:
 
 - The note takes the whole width. A bar at the bottom of the screen holds
   **Home**, **Tasks** and **Search**.
-- Tapping one of them opens the sidebar on that view, over the whole
-  screen. Opening a note closes it, and so does the close button in its
-  top corner.
+- Tapping **Home** opens the sidebar over the whole screen. Opening a
+  note closes it, and so does the close button in its top corner.
+  **Tasks** and **Search** open their tabs instead. {% include since.html v="0.13.0" %}
 - The **⋯** button at the top right holds **Settings**, **Account**,
   **People**, **Trash**, **User guide** and **Send feedback**.
 - The AI chat opens over the whole screen. The right sidebar isn't
