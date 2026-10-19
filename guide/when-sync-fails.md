@@ -49,6 +49,8 @@ On the web, your GitHub sign-in ended. Syncing stops for every vault until you *
 
 It may have been renamed, moved or deleted, or your account can't see it. Check the remote's address with **Open remote settings**, then **Retry**.
 
+Until you do, Mahfouz stops syncing the vault in the background: it doesn't pull or push again until you **Retry**, use **Sync now**, connect another remote, or restart the app. Your commits wait on this device. The vault shows **Remote not found**, and connecting a remote that doesn't exist shows this notice rather than **Connected**. {% include since.html v="0.13.0" %}
+
 ### The remote repository has moved
 
 GitHub says it has a new address. Update the remote with **Open remote settings**.
