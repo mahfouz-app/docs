@@ -49,7 +49,7 @@ The sidebar's sections, in order:
   your file manager. Click a row's label to choose whether it also shows in the
   attributes block in the document.
 - **Backlinks**: see [Links](/guide/links/#links-wikilinks--backlinks).
-- **Tags**: the note's tags; click one to add it to the [Tags view](/guide/links/#tags).
+- **Tags**: the note's tags; click one to [search for it](/guide/links/#tags). {% include since.html v="0.13.0" %}
 - **Attributes**: see [Attributes panel](#attributes-panel).
 - **Comments**: the note's comment threads; see
   [Track changes](/guide/track-changes/).
