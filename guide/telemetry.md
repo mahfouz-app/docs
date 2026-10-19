@@ -24,7 +24,9 @@ and the web app in that browser.
   left out, because messages can name a note or a path.
 - **Crashes of the desktop app.** Where in the app's code it stopped, the
   app version, operating system and CPU architecture, sent the next time
-  you open Mahfouz.
+  you open Mahfouz. A report saved while the switch was on is still sent
+  once, even if you turn the switch off before then; Settings → Privacy
+  says so while it's off. {% include since.html v="0.13.0" %}
 - **Timings.** How long it takes to open the app, sync a vault, save a
   note, commit and push, in milliseconds.
 - **Counts.** That something happened, from a fixed list, such as "a note
