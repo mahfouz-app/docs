@@ -84,8 +84,12 @@ Mahfouz walks you through both if you haven't done them yet.
 
 1. Name the repository. It's always private; Mahfouz never creates a public
    one.
-2. On the desktop app, also pick the folder the vault lives in on this
-   computer. It starts as `~/Documents/<name>`. The first push uses this
+2. On the desktop app, also click **Choose folder…** and pick the folder the
+   vault lives in on this computer. It must be a new or empty folder: one
+   that already holds files is refused and left untouched, so its files and
+   history are never pushed. To back up notes you already have, open their
+   folder with **Open existing → Folder** and connect it to GitHub from
+   there. {% include since.html v="0.13.0" %} The first push uses this
    computer's SSH key, not your GitHub sign-in, so Mahfouz checks that it can
    push before it creates anything on GitHub. If the check fails, no
    repository is created: the vault stays on this computer, and Mahfouz says
