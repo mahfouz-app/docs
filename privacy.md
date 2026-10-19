@@ -5,16 +5,18 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 18 October 2026*
+*Effective 19 October 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
-doesn't send them to an AI. Nothing leaves your computer until you choose
-one of the options on this page.
+doesn't send them to an AI. None of it leaves your computer until you
+choose one of the options on this page.
 
-Mahfouz also collects no analytics, has no crash reporting, and you don't
-need an account to use it. We don't sell or share data about you, and we
-don't use it for advertising.
+Mahfouz sends error reports, timings and usage counts to help find bugs,
+never with your notes in them, and you can turn that off: see [Error
+reports and usage counts](#error-reports-and-usage-counts). You don't need
+an account to use it. We don't sell or share data about you, and we don't
+use it for advertising.
 
 This policy is from Influpert LLC, the company that makes Mahfouz. It
 covers the desktop app, the web app at [mahfouz.app](https://mahfouz.app),
@@ -66,6 +68,34 @@ uninstall the plugin or [unpublish](/guide/publishing/) the note.
 The desktop app downloads `docs.mahfouz.app/version.json` to see whether a
 newer version is out. The request sends nothing about you or your notes.
 
+## Error reports and usage counts
+
+Unless you turn it off, the desktop app and the web app send:
+
+- **Errors and crashes:** the kind of error, its code, and where in the
+  app's code it happened, without the error's message. A desktop crash is
+  sent the next time you open the app, with the app version, operating
+  system and CPU architecture.
+- **Timings:** how long opening the app, syncing, saving, committing and
+  pushing take.
+- **Counts** of features used, from a fixed list, such as "a note was
+  created from the sidebar".
+- **A random id for that computer or browser**, not tied to your GitHub
+  account or to you.
+
+Note text, titles, attributes, file paths, vault and repository names,
+tags, people, commit messages, the plaintext of encrypted notes, your
+GitHub account, email address and tokens are never sent, and the screen
+is never recorded. Everything sent is built from a fixed list in the app's
+code: anything not on it is dropped first.
+
+It goes to Datadog, in the United States, and is kept for at most 30 days.
+It's on by default. Turn it off in **Settings → Privacy → Help improve
+Mahfouz**: nothing more is sent from that computer or browser, and its
+random id is deleted. A crash that happened while it was on is still
+reported the next time you open the app. See [Help improve
+Mahfouz](/guide/telemetry/).
+
 ## Google Fonts in slides templates
 
 A [slides template](/guide/slides/#editing-a-template) font can be a
@@ -112,6 +142,11 @@ once you use the feature:
   mahfouz.app and published pages, including the IP address, the address
   requested and the time. We use these logs only to run the service and
   stop abuse, and they're kept for at most a few days.
+- **Server errors and timings.** The server sends its own errors and how
+  long each request takes to Datadog, kept for at most 30 days. These
+  record the kind of request, such as "a published page", never its
+  address, so no page title or repository name is in them. The switch in
+  Settings → Privacy doesn't cover them.
 
 ## Cookies
 
@@ -124,6 +159,9 @@ browser only.
 ## Who else handles data
 
 - **Cloudflare** hosts mahfouz.app and published pages.
+- **Datadog** receives error reports, timings and usage counts from the
+  apps and the server, under [Datadog's privacy
+  policy](https://www.datadoghq.com/legal/privacy/).
 - **GitHub** hosts this website, the app's downloads, feedback issues and
   page reports, and signs you in. It handles data under [GitHub's privacy
   statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement).

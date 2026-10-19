@@ -104,6 +104,9 @@
     - slug: settings
       title: "Settings"
       description: "Preferences and per-vault settings."
+    - slug: telemetry
+      title: "Help improve Mahfouz"
+      description: "The error reports, timings and usage counts Mahfouz sends to find bugs, what it never sends, and how to turn it off."
     - slug: notifications
       title: "Notifications"
       description: "The notification center, sounds, quiet time and update notices."

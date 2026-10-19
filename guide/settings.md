@@ -53,6 +53,11 @@ Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard short
 Edit the file directly to remap or disable one; blank a binding to
 disable it.
 
+**Help improve Mahfouz** (Settings → Privacy, on by default) sends error
+reports, timings and usage counts that never include your notes. It's stored
+on this computer only: see [Help improve Mahfouz](/guide/telemetry/).
+{% include since.html v="0.13.0" %}
+
 Settings → AI → External agents connects AI apps such as Claude Code and
 claude.ai to your vaults: see [External agents (MCP)](/guide/external-agents/).
 
