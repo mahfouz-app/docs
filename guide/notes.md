@@ -21,6 +21,15 @@ pick up a title-based name the next time their title changes. Vaults
 created before this layout are offered a one-time migration on open;
 declining keeps the older one-folder-per-note shape, which still works.
 
+{% include since.html v="0.13.0" %} To start every new note's file name with
+the same text, such as the date it was created, set **New note prefix** in
+**Settings → Vaults →** your vault **→ Notes**. Each vault has its own. It
+takes the date tokens `YYYY`, `YY`, `MM`, `DD`, `HH`, `hh`, `mm`, `ss` and `a`,
+plus `R` for the note's id: `YYYYMMDD_` names a note `20261019_meeting_notes.md`.
+The tokens are filled in from the date the note was created, so the prefix
+stays the same when the file name follows a new title. It's stored in the vault's
+`.config/settings.md` as `new_note_prefix`.
+
 - **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the

@@ -49,6 +49,10 @@ time you open Mahfouz. Choose **Monday**, **Sunday** or **Saturday** to
 override it. A Date attribute's field uses your system's or browser's own
 date picker, which doesn't follow this setting.
 
+**New note prefix** is set per vault, in **Settings → Vaults →** your vault
+**→ Notes**, not in Settings → General: see [Notes &
+organization](/guide/notes/). {% include since.html v="0.13.0" %}
+
 Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard shortcuts](/guide/shortcuts/)).
 Edit the file directly to remap or disable one; blank a binding to
 disable it.
