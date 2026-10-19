@@ -32,7 +32,8 @@ what goes public:
 - **Your vault's settings** (`.config/`) are never sent.
 
 Choose the page's **Visibility** (see [Visibility](#visibility)) and
-**Theme** (see [Themes](#themes)). Tick **Auto-publish changes** if you want
+**Theme** (see [Themes](#themes)). Turn on **Auto-publish changes**
+{% include since.html v="0.13.0" %} if you want
 the page to follow the note (see
 [Keeping the page up to date](#keeping-the-page-up-to-date)), then click
 **Publish**. The link is copied to your clipboard, and a notification offers
