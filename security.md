@@ -84,6 +84,10 @@ authorized.
   cookie can't be read by scripts or sent from other sites, and it ends 30
   days after you sign in. Requests that change something must come from
   mahfouz.app itself.
+- **Feedback is filed by mahfouz.app.** The bot account that files
+  feedback issues keeps its token on the server; the app carries none.
+  Your GitHub sign-in goes along only when you choose to include your
+  login, and only so mahfouz.app can check it with GitHub.
 - **Published pages are kept apart.** Pages live on their own domain,
   `p.mahfouz.app`, with a strict content security policy, so a page can't
   reach your mahfouz.app session.
