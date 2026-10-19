@@ -57,9 +57,11 @@ checklist item, to open the date picker.
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
   The calendar's weeks start on the day set in Settings → General →
   [First day of week](/guide/settings/).
-- Add a time if you want one; leave it empty for an all-day task. The time
-  is saved once it's complete, and again when you leave the field or close
-  the picker.
+- Add a time if you want one; leave it empty for an all-day task. Type it
+  as you'd write it: `14:30`, `1430`, `9`, `2:30pm` or `2.30 p` all work, and
+  the line under the field shows how it was read. {% include since.html v="0.13.0" %}
+  The time is saved when you leave the field, press Enter, click **Done** or
+  close the picker; one it can't read is marked in red and isn't saved.
 - **Remove date** turns the task back into an ordinary checklist item.
 - The keyboard works too: the arrow keys move between days, Page Up and Page
   Down change the month, Enter picks the day, and Esc closes the picker.
