@@ -186,7 +186,11 @@ through, the new text underlined.
   file renamed in a following commit.
 - A note in [Suggesting mode](/guide/track-changes/) is marked **as
   suggestions**: it gets each replacement as a tracked substitution
-  instead.
+  instead. Matches a suggestion can't change, such as someone else's
+  suggestion or a link's address, are left as they are.
+- In every note, matches in suggestion and comment markup (a
+  suggestion's author, a comment's entries) are left as they are, so a
+  replace never changes who wrote them.
 - Encrypted notes, notes whose
   [edits are waiting](/guide/when-sync-fails/#edits-to-title-are-waiting)
   for your choice and vaults that are [git-crypt locked](/guide/encryption/)
@@ -196,12 +200,15 @@ through, the new text underlined.
 the highlighted line. **Replace all** (<kbd>Mod</kbd><kbd>Enter</kbd>)
 names what it changes, such as "7 in 2 notes", and asks once before
 writing. When the search stopped early, because it hit its limit or ran
-too long, Replace all is off until you narrow it.
+too long, Replace all is off until you narrow it. After you change the
+Replace text, both buttons are off for a moment, until the preview shows
+the new text.
 
 Each vault gets one commit, `Replace "old" with "new" in N notes`. A note
-that changed since the preview, or has Windows line endings, is skipped,
-and the others go ahead. One notification reports what changed and what
-was skipped. If a vault fails, its changes are undone.
+that changed since the preview (its text, or a switch between Editing and
+Suggesting), or has Windows line endings, is skipped, and the others go
+ahead. One notification reports what changed, what was skipped and how
+many matches were left as they are. If a vault fails, its changes are undone.
 
 To jump to a note by its title, run a command or open a setting, use the
 [command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.

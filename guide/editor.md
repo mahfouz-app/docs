@@ -118,6 +118,13 @@ open, with its query, when you switch between Source and Preview.
   "Replacements are added as suggestions." Matches a suggestion can't
   change, such as text already suggested for deletion or someone else's
   suggestion, are skipped.
+- **While Editing**, Replace and Replace all skip the matches in
+  suggestion and comment markup: a suggestion's delimiters and its
+  `{>>@name · date<<}` author, and a comment's entries. A replace never
+  changes who a suggestion or comment is credited to. The text a
+  suggestion adds or removes is replaced like any other. While the note
+  holds suggestions or comments, the bar says "Matches in suggestion and
+  comment markup are left as they are." {% include since.html v="0.13.0" %}
 - <kbd>Esc</kbd> closes the bar and puts you back in the note.
 
 **Find selection** (<kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd>) never
