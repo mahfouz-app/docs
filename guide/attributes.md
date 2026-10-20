@@ -195,7 +195,11 @@ row to open it:
   **Select…**.
 - **Display** picks how the control looks: Menu, Segmented or Radio for a
   Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
-  date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`.
+  date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`. It
+  takes the same codes as a [Date field](/guide/fields/#dates), month and
+  weekday names (`MMMM`, `MMM`, `dddd`, `ddd`, in English) and the ISO
+  week (`ww`) and week-year (`GGGG`) included, so `dddd, DD MMMM YYYY`
+  reads `Wednesday, 09 December 2026`. {% include since.html v="0.13.0" %}
 - **Rename…** renames the attribute in every note that has it and in
   every database view that uses it, as one commit, rollups reading it
   included. A Relation is renamed from its database column instead. Keys
