@@ -49,7 +49,7 @@
       description: "See misspelled words as you type, turn checking on or off, and keep a vault dictionary of words to accept."
     - slug: fields
       title: "Fields"
-      description: "Type !name to expand a field such as !today, and define your own."
+      description: "Insert today's date, a signature or the note's ID with a field, and define your own."
     - slug: attributes
       title: "Attributes & the right sidebar"
       description: "Note pills, the right sidebar and per-note attributes."

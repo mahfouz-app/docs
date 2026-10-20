@@ -23,12 +23,43 @@ declining keeps the older one-folder-per-note shape, which still works.
 
 {% include since.html v="0.13.0" %} To start every new note's file name with
 the same text, such as the date it was created, set **New note prefix** in
-**Settings → Vaults →** your vault **→ Notes**. Each vault has its own. It
-takes the date tokens `YYYY`, `YY`, `MM`, `DD`, `HH`, `hh`, `mm`, `ss` and `a`,
-plus `R` for the note's id: `YYYYMMDD_` names a note `20261019_meeting_notes.md`.
-The tokens are filled in from the date the note was created, so the prefix
-stays the same when the file name follows a new title. It's stored in the vault's
-`.config/settings.md` as `new_note_prefix`.
+**Settings → Vaults →** your vault **→ Notes**. Each vault has its own.
+The prefix is text plus [fields](/guide/fields/) from the vault's Fields:
+**+** in the prefix inserts one, showing what it reads today, and clicking
+a field's chip swaps or removes it. With the `today` field, `{today}_`
+names a note `2026-10-19_meeting_notes.md`; `{id}` adds the note's ID.
+Below the prefix, a line shows what a note created now would start with.
+It's stored in the vault's `.config/settings.md` as `new_note_prefix`,
+the fields by name: `{today}_{id}_`.
+{: #new-note-prefix}
+
+- **Which fields**: Date, Timestamp and Note ID fields, and Text fields on
+  one line. A field whose value changes every time (Random text, or a Text
+  field using `{uuid}`), needs the note's title or a slide, or holds
+  several lines can't be used. {% include since.html v="0.13.0" %}
+- **Dates** are filled in from the date the note was created, so the
+  prefix stays the same when the file name follows a new title. {% include since.html v="0.13.0" %}
+- **A field's format decides how the prefix reads.** The prefix is worked
+  out again whenever a note's file name follows its title, so after you
+  change a field's format, notes take the new format the next time they're
+  renamed. Renaming a field in the Fields list renames it in the prefix
+  too. {% include since.html v="0.13.0" %}
+- **A missing field**: if the prefix names a field that's been deleted, or
+  one that can't be used, its chip is marked, new notes get no prefix, and
+  existing notes keep their file names when their titles change. {% include since.html v="0.13.0" %}
+- **Older prefixes**: a prefix written with the earlier date codes
+  (`YYYYMMDD_`, `R` for the note's ID) keeps working as before, and shows
+  with **Convert**, which adds a Date field such as `prefix_date` for the
+  date part, uses the Note ID field for `R`, and rewrites the prefix with
+  them, reading the same. A prefix using `YY`, `hh` or `a`, which have no
+  field equivalent, can't be converted; it keeps working, and Settings
+  says why. A prefix of plain text with no field is read the earlier way
+  too, so letters that spell a code (`a`, `MM`) would become part of a
+  date: Settings flags it, so add a field or leave the prefix empty. {% include since.html v="0.13.0" %}
+- **Named by ID**: in a vault where new notes are named by their ID, the
+  prefix isn't used, and its field is greyed out. {% include since.html v="0.13.0" %}
+
+^
 
 - **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
