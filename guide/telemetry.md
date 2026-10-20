@@ -10,7 +10,8 @@ permalink: /guide/telemetry/
 Mahfouz sends error reports, how long common tasks take, and counts of
 the features you use, so bugs and slow spots can be found and fixed. It's
 **on by default** and never includes your notes. Turn it off in
-**Settings → Privacy → Help improve Mahfouz**.
+**Settings → General → Help improve Mahfouz**; its **What's sent** link
+lists what it sends and never sends.
 
 The switch is stored on this computer only, not in the vault, so a
 collaborator can't turn it on or off for you. It covers the desktop app
@@ -25,8 +26,8 @@ and the web app in that browser.
 - **Crashes of the desktop app.** Where in the app's code it stopped, the
   app version, operating system and CPU architecture, sent the next time
   you open Mahfouz. A report saved while the switch was on is still sent
-  once, even if you turn the switch off before then; Settings → Privacy
-  says so while it's off. {% include since.html v="0.13.0" %}
+  once, even if you turn the switch off before then; the switch's
+  description in Settings → General says so while it's off. {% include since.html v="0.13.0" %}
 - **Timings.** How long it takes to open the app, sync a vault, save a
   note, commit and push, in milliseconds.
 - **Counts.** That something happened, from a fixed list, such as "a note

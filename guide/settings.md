@@ -57,8 +57,9 @@ Keyboard shortcuts are also stored in `.config/settings.md` (see [Keyboard short
 Edit the file directly to remap or disable one; blank a binding to
 disable it.
 
-**Help improve Mahfouz** (Settings → Privacy, on by default) sends error
-reports, timings and usage counts that never include your notes. It's stored
+**Help improve Mahfouz** (Settings → General, on by default) sends error
+reports, timings and usage counts that never include your notes. Its
+**What's sent** link lists what it sends and what it never does. It's stored
 on this computer only: see [Help improve Mahfouz](/guide/telemetry/).
 {% include since.html v="0.13.0" %}
 
