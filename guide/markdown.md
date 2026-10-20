@@ -101,6 +101,11 @@ everyone you share the note with. You can also type it yourself. A block
 with no language gets `text` as its language when you number it. Click into
 the block to see and edit its backticks.
 
+When a code block is the last thing in a note, press <kbd>↓</kbd> on its
+closing backticks, or click below the text, to start a new line under the
+block. Pressing <kbd>Enter</kbd> inside the block only adds lines of code.
+{% include since.html v="0.13.0" %}
+
 With the cursor in a block, <kbd>Shift</kbd><kbd>F10</kbd> (or the
 <kbd>Menu</kbd> key) opens the block's actions as a menu: Language…,
 Collapse block, the light or dark switch, Line numbers and Copy code.
