@@ -35,9 +35,26 @@ which of its edits wait for your approval.
 The snippet holds the client's token, and Mahfouz shows it only once. If
 you lose it, revoke the client and connect it again.
 
-The agent reaches your vaults through the running app, so Mahfouz has to
-be open while you use it. If it isn't, the agent is told to open Mahfouz
-and turn on External agents.
+The agent reaches your vaults through the running app.
+
+### When Mahfouz is closed {% include since.html v="0.13.0" %} {#when-mahfouz-is-closed}
+
+- **Mahfouz isn't running:** a connected agent starts it in the
+  background. No window opens and nothing takes focus. The agent's first
+  call waits up to 20 seconds while your vaults load. If External agents
+  is turned off, the agent is told to open Mahfouz and turn it on.
+- **You close the window:** turn on **Keep available when the window is
+  closed**, under **Allow external agents (MCP)**, and Mahfouz keeps
+  running. A Mahfouz item in the menu bar shows that it's running, and
+  offers **Open Mahfouz** and **Quit Mahfouz**. **Quit** always quits.
+- **Nothing is happening:** with no window open and no agent request for
+  30 minutes, Mahfouz quits on its own. This applies whether the window
+  was closed or an agent started the app.
+
+Only agents connected with the desktop snippet can start Mahfouz. A vault
+that needs you first, such as one encrypted with git-crypt that isn't
+unlocked, isn't prompted for: the agent gets the same error it would with
+the app open.
 
 ## Connect an agent on the web {% include since.html v="0.12.0" %} {#connect-an-agent-on-the-web}
 
@@ -157,5 +174,6 @@ reaches an agent before then. For everywhere your notes can go, see
   the edits that are hard to spot afterwards. Keep **Ask before every
   edit** for vaults whose content you didn't write yourself.
 - **The desktop token is a password for your vaults.** Anyone with it can
-  act as that client while Mahfouz is open. Don't share the snippet;
+  act as that client, and can start Mahfouz if it isn't running
+  {% include since.html v="0.13.0" %}. Don't share the snippet;
   revoke the client if it leaks.
