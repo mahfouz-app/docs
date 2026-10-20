@@ -48,14 +48,13 @@ the fields by name: `{today}_{id}_`.
   one that can't be used, its chip is marked, new notes get no prefix, and
   existing notes keep their file names when their titles change. {% include since.html v="0.13.0" %}
 - **Older prefixes**: a prefix written with the earlier date codes
-  (`YYYYMMDD_`, `R` for the note's ID) keeps working as before, and shows
-  with **Convert**, which adds a Date field such as `prefix_date` for the
-  date part, uses the Note ID field for `R`, and rewrites the prefix with
-  them, reading the same. A prefix using `YY`, `hh` or `a`, which have no
-  field equivalent, can't be converted; it keeps working, and Settings
-  says why. A prefix of plain text with no field is read the earlier way
-  too, so letters that spell a code (`a`, `MM`) would become part of a
-  date: Settings flags it, so add a field or leave the prefix empty. {% include since.html v="0.13.0" %}
+  (`YYYYMMDD_`, `R` for the note's ID) is converted once, when the vault
+  opens, in a commit of its own: the date part becomes a Date field such
+  as `prefix_date`, `R` becomes the Note ID field, and the prefix reads the
+  same. One using `YY`, `hh` or `a`, which have no field equivalent, keeps
+  working as before; Settings shows it read-only with the reason, and
+  **Replace** lets you write it again with text and fields. Letters are
+  otherwise never read as codes: `draft-` stays `draft-`. {% include since.html v="0.13.0" %}
 - **Named by ID**: in a vault where new notes are named by their ID, the
   prefix isn't used, and its field is greyed out. {% include since.html v="0.13.0" %}
 
