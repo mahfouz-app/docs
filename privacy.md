@@ -90,7 +90,7 @@ is never recorded. Everything sent is built from a fixed list in the app's
 code: anything not on it is dropped first.
 
 It goes to Datadog, in the United States, and is kept for at most 30 days.
-It's on by default. Turn it off in **Settings → Privacy → Help improve
+It's on by default. Turn it off in **Settings → General → Help improve
 Mahfouz**: nothing more is sent from that computer or browser, and its
 random id is deleted. A crash that happened while it was on is still
 reported the next time you open the app. See [Help improve
@@ -146,7 +146,7 @@ once you use the feature:
   long each request takes to Datadog, kept for at most 30 days. These
   record the kind of request, such as "a published page", never its
   address, so no page title or repository name is in them. The switch in
-  Settings → Privacy doesn't cover them.
+  Settings → General doesn't cover them.
 
 ## Cookies
 
