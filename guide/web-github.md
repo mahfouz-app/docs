@@ -54,6 +54,15 @@ on GitHub instead, see [New vault on GitHub](/guide/vaults/#new-vault-on-github)
 Mahfouz downloads the repository's whole history. If it's already open in
 this browser, the picker offers **Switch to it** instead of a second copy.
 
+If the repository is **public**, Mahfouz asks before it clones. Once the
+vault syncs, everything you add to it is readable by anyone on the internet:
+every note, plus `.config/bookmarks.md` (the notes you've bookmarked),
+`.config/fields.md` (your fields) and the People database (the people you've
+added, with their contact details). Deleting them later doesn't help, since
+the git history keeps them. Click **Open as vault** to go ahead, or
+**Cancel** to go back with nothing cloned. The **Edit** link on a published
+page asks the same question. {% include since.html v="0.13.0" %}
+
 ### Where a GitHub vault lives
 
 The vault is kept in this browser, not in a folder you can see. The

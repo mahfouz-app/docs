@@ -49,10 +49,30 @@ due: **Today 14:00**, **Wed, Oct 14**, or **Overdue · Oct 6**. A done task's
 chips are dimmed. In Live mode, put the cursor on the line to see and edit
 the raw text; Preview always shows the chips.
 
+### Placeholder chips {% include since.html v="0.13.0" %} {#placeholder-chips}
+
+While the cursor is on a checklist item that has a title, dashed
+**Assign** and **Due date** chips show after it for whatever the line is
+still missing. Click one to open the assignee or date picker; hover it to
+see its key (<kbd>@</kbd> or <kbd>!</kbd>). The × beside a chip hides it on
+that line until you reload; hiding **Assign** also stops a date from adding
+your own `@login`. Assigning someone on a line with no date yet opens the date
+picker next, since a line without a date isn't a task. A handle typed at the
+end of a checklist item (`- [ ] Call @ana`) counts as its assignee once it
+gets a date.
+
 ### Set a date
 
-Click the date chip, or type a space and `//` after the title of a
-checklist item, to open the date picker.
+Type a space and <kbd>!</kbd> after the title of a checklist item to choose
+a due date from a menu. {% include since.html v="0.13.0" %} It starts with **Today**, **Tomorrow** and
+**Next week**, and narrows as you type: a weekday (`!fri`), a day of a month
+(`!oct 30` or `!30 oct`), an ISO date (`!2026-10-30`), each with an optional
+time (`!tomorrow 3pm`, `!fri 15:00`). Pick a row and the line gets
+` // YYYY-MM-DD`; **Pick a date and time…** opens the date picker. Typing
+`//` no longer opens anything; the `//` in the line is written for you.
+{% include since.html v="0.13.0" %}
+
+Click the date chip to open the date picker on a task's date.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
   The calendar's weeks start on the day set in Settings → General →

@@ -99,8 +99,9 @@ can style each kind of slide differently through its layout sections.
   template): **Default**, a named template, or **None** to opt the note
   out. The choice is stored as the note's `slides_template` attribute.
 - **Header and footer**: one line of inline Markdown drawn at the top and
-  bottom of every slide. Both can use [fields](/guide/fields/) (`!title`,
-  `!page`, `!total`), expanded when the deck is presented or exported.
+  bottom of every slide. Both can use [fields](/guide/fields/) (such as
+  `{page}` and `{total}`, or `{id}` for the note's ID {% include since.html v="0.13.0" %}),
+  expanded when the deck is presented or exported.
 - A note overrides a template's header/footer with its own `header` /
   `footer` attribute (`none` turns that side off), and a `title_slide`
   attribute leaves slide 1 bare of either. A note whose `slides_template` is
