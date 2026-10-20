@@ -24,7 +24,7 @@ name, <kbd>Enter</kbd> starts a new line instead, so `/usr` followed by
 | Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, [database view](/guide/databases/), image or file, task with due date, tag, [emoji](#emoji), and in a slides deck [Apply layout…](/guide/slides/) |
 | Review | Comment on the current line |
 | Plugins | A block for each enabled diagram plugin, such as [Mermaid or draw.io](/guide/plugins/) |
-| Fields | Each of your [fields](/guide/fields/), such as `!today` |
+| Fields | Each of your [fields](/guide/fields/), such as `now` |
 
 Some commands depend on where you are:
 

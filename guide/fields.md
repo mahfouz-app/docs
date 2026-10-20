@@ -1,14 +1,21 @@
 ---
 layout: guide
 title: "Fields"
-description: "Type !name to expand a field such as !today, and define your own."
+description: "Type { to pick a field such as {title}, and define your own."
 permalink: /guide/fields/
 ---
 
-Type `!` followed by letters anywhere in a note to trigger autocomplete
-over your custom fields. Selecting one inserts it in place, once, as fixed
-text. Comes seeded with `!today`, `!now`, `!time`, `!iso`, `!uuid`,
-`!title`, `!page`, `!total`.
+Type <kbd>{</kbd> in a note to pick one of your fields from a menu, and keep
+typing to narrow it (`{si`). {% include since.html v="0.13.0" %} Each row shows what it will insert;
+picking one inserts it in place, once, as fixed text. The menu stays closed
+for CriticMarkup (`{++`, `{--`, `{~~`, `{==`, `{>>`), a second `{`, and
+inside code and math. **Edit fields…** at the bottom opens Vault Settings →
+**Fields**. Comes seeded with `now`, `time`, `iso`, `uuid`, `title`, `page`
+and `total`. For a date, type a space and <kbd>!</kbd> instead (see
+[Tasks](/guide/tasks/#set-a-date)). {% include since.html v="0.13.0" %}
+
+Before 0.13.0 fields were typed as `!name`. In `.config/fields.md` the
+Field column still reads `!name`, so older versions keep reading it.
 
 Manage them in Vault Settings → **Fields**: an editable table of
 Field / Expansion / Description rows. Expansions support these tokens:
@@ -27,6 +34,8 @@ hand-edit directly.
 Fields also work in a slides template's header or footer (Vault Settings →
 **Slides**), or a note's `header` / `footer` attribute, where (unlike in
 the editor) they're evaluated fresh every time the note is presented or
-exported, so `{date:YYYY-MM-DD}` and friends stay current. Two extra
+exported, so `{date:YYYY-MM-DD}` and friends stay current. Write a field
+there as `{name}`, such as `{sig}`, or as `!name`. Use `!name` if the vault is also opened with a version before 0.13.0, which shows `{name}` as written. {% include since.html v="0.13.0" %} A built-in token
+wins over a field with the same name. Two extra
 tokens, `{page}` and `{total}`, are available only there (headers and
 footers).
