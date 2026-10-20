@@ -74,6 +74,19 @@ features. It's a sandbox: you can type in it, tick its checkboxes and try the
 formatting toolbar, but nothing on it is saved. Reloading resets it. Click
 **Back** to return to **Choose a vault**.
 
+### A new vault's first note
+
+{% include since.html v="0.13.0" %} A vault you make with **On this
+computer** or **On GitHub** opens on a first note, untitled, with the cursor
+in its title. Nothing is saved until you type in it.
+
+Under its title, a **Next steps** card lists what to try: type <kbd>/</kbd>
+for headings, lists and tables, type <kbd>[</kbd><kbd>[</kbd> to link to
+another note, **Import…** to bring notes in from Notion or a folder (desktop
+app), and **Back up to GitHub…** to keep a private copy there (when the vault
+isn't on GitHub yet). The card isn't part of the note. Close it with **×**
+and it doesn't come back on this computer.
+
 ## New vault on GitHub
 
 {% include since.html v="0.13.0" %} **On GitHub** creates a private
