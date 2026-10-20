@@ -37,8 +37,9 @@ On the web, vaults open differently: see [Mahfouz on the web](/guide/web/).
 ## Choosing a vault
 
 {% include since.html v="0.13.0" %} With no vault open (on first run, or
-after you remove the last one), the main pane shows **Choose a vault**, with
-two groups:
+after you remove the last one), the window shows **Choose a vault** and
+nothing else, under the Mahfouz emblem and the app's version, with two
+groups:
 
 - **Start new**
   - **On this computer**: a new folder of notes, with a git repository in it
@@ -69,12 +70,18 @@ on this computer**, and **File → Open Vault…**
 folder picker; on the web, <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> opens a
 folder.
 
-### The tour
+### Recent vaults
 
-**Take the tour**, below the choices, opens a note that tours the main
-features. It's a sandbox: you can type in it, tick its checkboxes and try the
-formatting toolbar, but nothing on it is saved. Reloading resets it. Click
-**Back** to return to **Choose a vault**.
+{% include since.html v="0.13.0" %} Vaults you remove from Mahfouz are
+listed under **Recent**, on the left of **Choose a vault** and of **Add
+vault…**, newest first (up to 10). The list is kept on this computer only,
+not in any vault. A vault kept in the browser's storage on the web isn't
+listed, since removing it deletes it.
+
+Click a vault to open it again: Mahfouz asks you to pick its folder, starting
+at the folder it was in on the desktop app. Right-click it, or click **⋯**,
+for **Open…**, **Reveal in Finder** and **Copy path** (desktop app only), and
+**Remove from Recent**, which forgets it without touching the folder.
 
 ## New vault on this computer
 
