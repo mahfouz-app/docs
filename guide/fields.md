@@ -35,7 +35,7 @@ Fields also work in a slides template's header or footer (Vault Settings →
 **Slides**), or a note's `header` / `footer` attribute, where (unlike in
 the editor) they're evaluated fresh every time the note is presented or
 exported, so `{date:YYYY-MM-DD}` and friends stay current. Write a field
-there as `{name}`, such as `{sig}`, or as `!name`. {% include since.html v="0.13.0" %} A built-in token
+there as `{name}`, such as `{sig}`, or as `!name`. Use `!name` if the vault is also opened with a version before 0.13.0, which shows `{name}` as written. {% include since.html v="0.13.0" %} A built-in token
 wins over a field with the same name. Two extra
 tokens, `{page}` and `{total}`, are available only there (headers and
 footers).
