@@ -60,6 +60,10 @@ Which vaults a client can reach is set per browser, in the browser where
 you allow them. Agents can reach your vaults only while a Mahfouz tab is
 open.
 
+To let an agent work with no Mahfouz window or tab open, connect it to
+your GitHub repositories instead: see
+[Agents on GitHub](/guide/online-agents/).
+
 ## Approval modes
 
 Each client has its own mode in each vault it can use, chosen next to the
