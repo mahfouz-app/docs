@@ -9,7 +9,7 @@ External agents are AI apps outside Mahfouz, such as Claude Code, Claude
 Desktop, Codex or claude.ai, connected to it over MCP. Once connected, an
 agent can read the vaults you allow and work in them: create notes and nest
 them under other notes, create databases and add rows, add tasks and tick
-them off, comment, and ask to publish a note. You decide which vaults each agent can reach, and
+them off, comment, look up and add [people](/guide/people/) {% include since.html v="0.13.0" %}, and ask to publish a note. You decide which vaults each agent can reach, and
 which of its edits wait for your approval.
 
 ## Connect an agent in the desktop app
@@ -68,7 +68,8 @@ vault in Settings → AI → External agents:
 - **Ask before every edit**: every change waits for you.
 - **Ask before destructive edits**: the default. Changes apply right
   away, except deletes, moves, attribute removals, turning a note into a
-  database, and rewrites that drop most of a note.
+  database, changing a person's handle {% include since.html v="0.13.0" %},
+  and rewrites that drop most of a note.
 - **Don't ask**: every change applies right away, deletes included.
 
 An agent can ask to change its own mode. It can make it stricter on its
@@ -102,6 +103,29 @@ Accepting a publish opens the usual publish dialog, where you choose the
 options and click **Publish**; accepting an unpublish takes the page down
 at once. Neither can be undone from **Recently applied**: publish the note
 again from its menu to bring a page back.
+
+### People {% include since.html v="0.13.0" %} {#people}
+
+An agent can read your [People](/guide/people/) directory: each person's
+handle, name and contact details, plus the collaborators on the vault's
+GitHub repository, and one person's open tasks and the notes that mention
+them. It can also ask to:
+
+- **Add a person**, as a new row of the People database, with the same
+  handle rules as **Add person**.
+- **Change a person's contact details**. A collaborator with no person note
+  gets one first.
+- **Change a person's handle**, which rewrites their mentions and task
+  assignees across the vault, just like
+  [Change handle…](/guide/people/#changing-a-handle). Under **Ask before
+  destructive edits** it waits for you.
+
+Each one has **Undo** under **Recently applied**. Undoing a handle change
+changes the handle back.
+
+Contact details are vault content: everyone with access to the vault's
+repository can read them, and an agent you connect can read them too.
+Nothing about people is ever published.
 
 ## Disconnect an agent
 
