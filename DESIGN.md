@@ -85,7 +85,8 @@ Reuse these from `styles.css`:
   (`border-radius: 980px`), at least 44px tall. Primary is filled blue;
   secondary is a blue outline that fills on hover.
 - **Text links** in running text are `--cm-text` with a thin blue underline.
-- **Footer** (`.footer-nav`): the header's links and more, in three groups of four or five (Product, Resources, Legal), each a small `--cm-text` heading over a list of `--body-secondary` links with no underline until hover. Three columns, two on phones. Beside them, the emblem, the tagline and "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted`. Every page repeats the same footer.
+- **Logo:** the header shows the wordmark at 96px wide: `images/logo.png` in light mode, `images/logo-dark.png` (the mark's dark colours, papyrus-white type) in dark mode, swapped by `.brand-logo-light` and `.brand-logo-dark`. Never invert or filter it; its colours are fixed. The files come from the app repo (`assets/images/`, rendered by `bin/brand-wordmark`).
+- **Footer** (`.footer-nav`): the header's links and more, in three groups of four or five (Product, Resources, Legal), each a small `--cm-text` heading over a list of `--body-secondary` links with no underline until hover. Three columns, two on phones. Beside them, the emblem (`images/emblem.png`, the app icon's night tile, 48px), the tagline and "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted`. Every page repeats the same footer.
 - **`.more` links** ("Learn more ›", "Compare ›"): `--link`, no underline
   until hover, with the chevron added by `.more::after`. Use them for calls
   to action in tiles and cards.
