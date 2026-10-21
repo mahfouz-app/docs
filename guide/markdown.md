@@ -69,8 +69,19 @@ const total = items.reduce((sum, item) => sum + item.price, 0);
 ```
 ````
 
+You can also insert one with **Code block** in the toolbar's Insert group
+or `/code` in the [slash menu](/guide/slash-menu/). On an empty line it adds
+an empty block with the cursor in it. With text selected (or on a line with
+text), it puts those lines in a block, and inside a block it turns the block
+back into plain lines. Type the opening backticks and the language and
+press <kbd>Enter</kbd>: the closing backticks are added below and the cursor
+goes between them, so the block ends there instead of taking in the rest of
+the note. {% include since.html v="0.13.0" %}
+
 A code block shows as a card, highlighted for its language. In Preview mode
-the backticks are hidden while the cursor is outside the block. The card's
+the backticks stay hidden, even while you edit the code
+{% include since.html v="0.13.0" %}, and the cursor steps over them.
+<kbd>Backspace</kbd> in an empty block removes the block. The card's
 header shows a collapse chevron and the language, and pointing at the block
 shows its buttons:
 
@@ -99,11 +110,12 @@ sync, aren't committed, and collaborators see the block as it is.
 Line numbers are kept in the note itself, as `showLineNumbers` after the
 language (<code>&#96;&#96;&#96;ts showLineNumbers</code>), so they show for
 everyone you share the note with. You can also type it yourself. A block
-with no language gets `text` as its language when you number it. Click into
-the block to see and edit its backticks.
+with no language gets `text` as its language when you number it. Switch to
+Source mode to see and edit its backticks.
+{% include since.html v="0.13.0" %}
 
 When a code block is the last thing in a note, press <kbd>↓</kbd> on its
-closing backticks, or click below the text, to start a new line under the
+last line of code, or click below the text, to start a new line under the
 block. Pressing <kbd>Enter</kbd> inside the block only adds lines of code.
 {% include since.html v="0.13.0" %}
 

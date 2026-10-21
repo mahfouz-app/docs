@@ -22,6 +22,9 @@ groups. Left to right:
   - **Insert media or file**: opens a native multi-file picker and
     attaches the chosen files (see [Media](/guide/media/))
   - **Table**: opens the hover-grid size picker
+  - **Code block**: inserts a [code block](/guide/markdown/#code-blocks),
+    puts the selected lines in one, or, inside a block, removes its
+    backticks {% include since.html v="0.13.0" %}
   - **Embed** dropdown: inserts a block for each enabled embed plugin (such
     as Mermaid). If none are enabled, it links to Preferences instead.
 - **Paragraph**: the **List** dropdown (Bullet list / Numbered list /
@@ -38,7 +41,7 @@ groups. Left to right:
   export between Landscape and Portrait, and the slides-template menu
   picks the note's [slides template](/guide/slides/)
 
-Table and Embed aren't available while
+Table, Code block and Embed aren't available while
 [Suggesting](/guide/track-changes/); their tooltips say to switch to
 Editing. The same groups, in the same order and with the same labels,
 are in the editor's [right-click menu](/guide/editor/#right-click-menus).
