@@ -34,9 +34,13 @@ turn checking off for good.
 
 ## Text substitutions
 
-In the desktop app on macOS, the editor doesn't apply macOS text
-substitutions: smart quotes, smart dashes, Text Replacements, automatic
-spelling correction and link detection are all off. What you type stays as
+In the desktop app on macOS, the editor applies your Text Replacements
+(System Settings → Keyboard → Text Replacements): type a shortcut and a
+space, and it's replaced, with the cursor after the space. They don't apply
+in code blocks. {% include since.html v="0.14.0" %}
+
+The other macOS text substitutions are off: smart quotes, smart dashes,
+automatic spelling correction and link detection. What you type stays as
 typed, so `it's` keeps its straight apostrophe and `--` stays two hyphens.
 Misspelled words are still underlined; they just aren't corrected for you.
 
