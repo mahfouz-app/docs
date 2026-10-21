@@ -58,8 +58,8 @@ Click the button, or press <kbd>Mod</kbd><kbd>0</kbd> {% include since.html v="0
   **Waiting for an organization owner to approve Mahfouz**.
 - **Manage repository access**, to change which repositories Mahfouz can
   see.
-- **Trash** {% include since.html v="0.14.0" %}, **Settings**, **Keyboard shortcuts**, **User guide**
-  and **Send feedback**.
+- **Settings**, **Keyboard shortcuts**, **User guide**, **Send
+  feedback** and **Trash** {% include since.html v="0.14.0" %}.
 - **Sign out** (on the web, also **Sign out everywhere**) and **Revoke
   access on GitHub**: see [Signing out](#signing-out).
 - On desktop, the version at the bottom opens **About Mahfouz**, and
