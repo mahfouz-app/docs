@@ -3,7 +3,7 @@ id: 01a14b8813bd70de9ce5e78e71e8b146
 ---
 # Website design
 
-How docs.mahfouz.app looks, for anyone changing a page or adding one. The site
+How mahfouz.app looks, for anyone changing a page or adding one. The site
 follows Apple's product-page style: plain white (or black) pages, large tight
 headlines, soft grey tiles, blue links, and very little else. When in doubt,
 copy an existing component from `styles.css` instead of inventing one.

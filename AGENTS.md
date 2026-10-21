@@ -1,6 +1,6 @@
 # Mahfouz docs
 
-The user guide and website for docs.mahfouz.app (Jekyll). The app lives in
+The user guide and website for mahfouz.app (Jekyll). The app lives in
 [mahfouz-app/app](https://github.com/mahfouz-app/app).
 
 ## Design

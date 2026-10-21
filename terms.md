@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Terms of service
-description: "The terms for using the Mahfouz app, mahfouz.app and published pages: your notes stay yours, and what you agree to when you use them."
+description: "The terms for using the Mahfouz app, web.mahfouz.app and published pages: your notes stay yours, and what you agree to when you use them."
 permalink: /terms/
 ---
 
@@ -9,8 +9,8 @@ permalink: /terms/
 
 These terms are an agreement between you and Influpert LLC ("we", "us"),
 the company that makes Mahfouz. They cover the Mahfouz desktop app, the web
-app at [mahfouz.app](https://mahfouz.app), pages published with Mahfouz
-(at `p.mahfouz.app`), the plugin registry and this website. By installing
+app at [web.mahfouz.app](https://web.mahfouz.app), pages published with Mahfouz
+(at `p.mahfouz.app`), the plugin registry and this website, mahfouz.app. By installing
 or using any of them, you agree to these terms and to the [privacy
 policy](/privacy/). If you use Mahfouz for an organization, you agree for
 that organization too.
@@ -42,7 +42,7 @@ You may not, and may not help anyone else to:
 - decompile, reverse engineer or disassemble it, except where the law
   allows you to despite this term;
 - remove or change any copyright, trademark or licence notice;
-- get around a limit the app or mahfouz.app sets, such as a rate limit or
+- get around a limit the app or web.mahfouz.app sets, such as a rate limit or
   a restriction on publishing;
 - use Mahfouz to break the law or to harm someone else's systems.
 
@@ -72,21 +72,21 @@ publish what you publish.
 You're responsible for your content and for keeping your own backups. A
 Git remote is a good backup; Mahfouz isn't one.
 
-## mahfouz.app and published pages
+## web.mahfouz.app and published pages
 
-To use mahfouz.app with a GitHub vault, or to publish, you sign in with
+To use web.mahfouz.app with a GitHub vault, or to publish, you sign in with
 GitHub. You must have a GitHub account in good standing and follow
 [GitHub's terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service).
 You're responsible for what happens under your sign-in.
 
-We run mahfouz.app and published pages on a best-effort basis. We may
+We run web.mahfouz.app, Mahfouz's server and published pages on a best-effort basis. We may
 change them, limit them, or stop offering them. If we plan to stop a
 service, we'll give notice here and in the [changelog](/changelog/) first,
 when we can.
 
 ## Acceptable use
 
-Don't use Mahfouz, mahfouz.app or a published page to publish, store or
+Don't use Mahfouz, web.mahfouz.app or a published page to publish, store or
 send anything that:
 
 - breaks the law, or infringes someone's copyright, trademark, privacy or
@@ -95,7 +95,7 @@ send anything that:
 - harasses, threatens or incites violence against a person or a group;
 - is malware, phishing, a scam, or spam;
 - shares someone's personal information without their permission;
-- tries to break, overload or probe mahfouz.app, except as our [security
+- tries to break, overload or probe web.mahfouz.app or Mahfouz's server, except as our [security
   policy](/security/) allows.
 
 We may remove or disable a published page, or end a sign-in, that we
@@ -148,7 +148,7 @@ live, or have a parent or guardian agree for you.
 
 ## No warranty
 
-Mahfouz, mahfouz.app, published pages, the plugin registry and this
+Mahfouz, web.mahfouz.app, published pages, the plugin registry and this
 website are provided "as is" and "as available". To the fullest extent the
 law allows, we disclaim all warranties, express or implied, including
 merchantability, fitness for a particular purpose, non-infringement, and
@@ -176,8 +176,8 @@ of that claim, including legal fees, as far as the law allows.
 ## Ending these terms
 
 You can stop using Mahfouz at any time: delete the app, sign out of
-mahfouz.app and unpublish your pages. We may end your licence, or your
-access to mahfouz.app, if you break these terms. Your notes stay yours
+web.mahfouz.app and unpublish your pages. We may end your licence, or your
+access to web.mahfouz.app, if you break these terms. Your notes stay yours
 either way; they're files on your computer and in your own repositories.
 The sections on your content, warranties, liability, indemnity and the law
 that applies continue after these terms end.

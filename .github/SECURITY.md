@@ -5,4 +5,4 @@ To report a security problem in Mahfouz, email
 public issue for it.
 
 The full policy, with what's in scope and how we handle reports, is at
-<https://docs.mahfouz.app/security/>.
+<https://mahfouz.app/security/>.

@@ -91,11 +91,11 @@ Plugin authors can link to their own plugins the same way. The
 `registry` part can be left out for the built-in `mahfouz` registry:
 
 ```text
-https://mahfouz.app/plugins/install?plugin=<registry>/<plugin>&registry=<git URL or owner/repo>
+https://web.mahfouz.app/plugins/install?plugin=<registry>/<plugin>&registry=<git URL or owner/repo>
 ```
 
 The desktop app also opens the same link with `mahfouz://` in place of
-`https://mahfouz.app/`. A link's registry must be a GitHub `owner/repo` or
+`https://web.mahfouz.app/`. A link's registry must be a GitHub `owner/repo` or
 an `https://` git URL.
 
 ## The built-in registry

@@ -58,12 +58,12 @@ the app open.
 
 ## Connect an agent on the web {% include since.html v="0.12.0" %} {#connect-an-agent-on-the-web}
 
-On [mahfouz.app](https://mahfouz.app), agents connect through a connector
+On [web.mahfouz.app](https://web.mahfouz.app), agents connect through a connector
 URL instead of a token:
 
 1. Open Settings → AI → External agents in the browser you use Mahfouz in,
    and turn on **Allow external agents (MCP)**.
-2. Copy the **Connector URL**, `https://mahfouz.app/mcp`, and add it as a
+2. Copy the **Connector URL**, `https://api.mahfouz.app/mcp`, and add it as a
    custom connector in your agent: in Claude, Settings → Connectors; or in
    Claude Desktop or Codex.
 3. The agent opens a Mahfouz page. Sign in with GitHub if asked, check the
