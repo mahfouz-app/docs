@@ -2,7 +2,7 @@
 layout: guide
 title: "The command palette"
 since: "0.12.0"
-description: "Press Mod+K to go to a note, run a command or open a setting."
+description: "Press Mod+K to go to a note by its title or contents, run a command or open a setting."
 permalink: /guide/command-palette/
 ---
 
@@ -12,8 +12,10 @@ the menu bar too, as **Edit → Command Palette…**.
 
 Type to match against:
 
-- **Notes**: note titles in every vault. Each result shows the folders the
-  note sits in, and its vault when you have more than one.
+- **Notes**: note titles in every vault, then the text inside your notes. {% include since.html v="0.14.0" %}
+  Each result shows the folders the note sits in, and its vault when you
+  have more than one. The words you typed are highlighted in the title,
+  and a note found by its text shows a line of it around the match. {% include since.html v="0.14.0" %}
 - **Commands**: the app's actions, such as New note, Rename or Go to tasks,
   and commands from your enabled plugins, each with its shortcut. Commands
   that act on a note only appear while a note is open.
@@ -27,15 +29,22 @@ field, or press <kbd>Alt</kbd><kbd>1</kbd> to <kbd>Alt</kbd><kbd>4</kbd>
 up to 30 matches, and Commands or Settings alone shows every match. Before
 you type anything, Commands and Settings list everything of their kind. {% include since.html v="0.13.0" %}
 
-The palette matches titles only. To search the text inside your notes,
-pick the last row, **Search all notes for “…”**, which shows whenever
-you've typed something (in **All** and **Notes**). It closes the palette and
-opens the [Search tab](/guide/links/#search) with what you typed, so
-operators such as `tag:`, `in:` and `person:` work there too. {% include since.html v="0.14.0" %}
+Notes found by their text come after the notes whose titles match, once
+you pause typing, so the title matches stay where they are. A note whose
+title matches is listed once. Some rows are always kept for text matches,
+so many matching titles never hide them. The text search reads your
+notes as last saved, and it understands the
+[Search tab's operators](/guide/links/#search), such as `tag:` and `in:`. {% include since.html v="0.14.0" %}
+
+For case-sensitive or whole-word matching, regular expressions or
+replacing text, pick the last row, **Search all notes for “…”**, which
+shows whenever you've typed something (in **All** and **Notes**). It
+closes the palette and opens the [Search tab](/guide/links/#search) with
+what you typed. {% include since.html v="0.14.0" %}
 
 You can also press the **Go to search** key while the palette is open. It closes the palette and opens the
 [Search tab](/guide/links/#search) with what you typed. The palette's
-footer names the key, and so does the list when nothing matches. If you
+footer names the key, and so does the list when nothing matches in **Commands** or **Settings**. If you
 unbind **Go to search**, the palette doesn't show it. {% include since.html v="0.13.0" %}
 
 Before you type anything, the palette lists your bookmarked notes, in the
