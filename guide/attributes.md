@@ -134,6 +134,11 @@ shows as chips:
 - Click **×** on a chip to remove that item.
 - Type in **Add…** and press <kbd>Enter</kbd> to add an item. Press
   <kbd>Backspace</kbd> in an empty **Add…** to remove the last item.
+- In the `tags` attribute, **Add tag** opens a list of the vault's tags
+  instead, with a search field, your **Recent** tags and **All tags**.
+  Click a tag (or press <kbd>Enter</kbd>) to add it, again to remove it;
+  the list stays open for more. Type a new tag and choose **Create #tag**
+  to add one no note has yet. See [Suggested tags](/guide/links/#suggested-tags). {% include since.html v="0.14.0" %}
 
 A Multiselect attribute keeps its own option chips. In a database, a list
 shows as read-only pills, and editing the cell opens the same chips.

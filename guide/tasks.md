@@ -162,10 +162,11 @@ In every view:
 - With more than one vault, the Tasks tab covers all of them, with a
   **Vault** column. Pick a single vault from the menu at the top.
 - To narrow the tasks by topic, put `#tags` on the task line itself, such
-  as `- [ ] Fix login #bug @sam // 2026-10-14`. Each tag on the listed
-  tasks shows as a chip with its count under the toolbar. Click chips to
-  show only the tasks carrying any of them; **Clear** shows every task
-  again. Only tags on the task's own line count, not the note's other
+  as `- [ ] Fix login #bug @sam // 2026-10-14`. Click **Tags** under the
+  toolbar to pick from the tags on the listed tasks, each with its count
+  of tasks; type to search them. Only the tasks carrying any picked tag
+  stay. Each picked tag shows as a chip: click it to remove it, or click
+  **Clear** to show every task again. {% include since.html v="0.14.0" %} Only tags on the task's own line count, not the note's other
   tags. {% include since.html v="0.12.0" %} Clicking a `#tag` on a card or in the **Tags** column opens the
   [Search tab](/guide/links/#tags) with `tag:name` instead. {% include since.html v="0.13.0" %}
 - Clicking a reminder opens the task's note at its line too.
