@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Track changes"
+since: "0.11.0"
 description: "Suggest edits instead of making them, then accept or reject each one."
 permalink: /guide/track-changes/
 ---

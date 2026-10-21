@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Agents on GitHub (online MCP)"
+since: "0.13.0"
 description: "Connect an agent to your GitHub repositories so it works with no Mahfouz window or tab open, and how that differs from connecting through the app."
 permalink: /guide/online-agents/
 ---

@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Encrypted vaults"
+since: "0.12.0"
 description: "Use a vault encrypted with git-crypt: what's encrypted on GitHub, unlocking it on a new device, and what stays visible."
 permalink: /guide/encryption/
 ---

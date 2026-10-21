@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Mahfouz on the web"
+since: "0.9.0"
 description: "Use Mahfouz in a browser: supported browsers, opening a folder, and what's desktop-only."
 permalink: /guide/web/
 ---

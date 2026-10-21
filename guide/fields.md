@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Fields"
+since: "0.2.0"
 description: "Type { to pick a field such as {today}, and define your own."
 permalink: /guide/fields/
 ---

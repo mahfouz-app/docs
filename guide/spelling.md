@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Spelling check"
+since: "0.12.0"
 description: "See misspelled words as you type, turn checking on or off, and keep a vault dictionary of words to accept."
 permalink: /guide/spelling/
 ---

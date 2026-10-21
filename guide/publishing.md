@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Publishing notes to the web"
+since: "0.11.0"
 description: "Publish a note as a public page anyone with the link can read, keep it up to date, and unpublish it."
 permalink: /guide/publishing/
 ---

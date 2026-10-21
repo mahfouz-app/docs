@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Importing from Notion"
+since: "0.12.0"
 description: "Bring pages, databases, tasks, comments and files from a Notion workspace into a vault."
 permalink: /guide/import-notion/
 ---

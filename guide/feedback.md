@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Sending feedback"
+since: "0.8.0"
 description: "Report a bug or suggest a feature from inside the app."
 permalink: /guide/feedback/
 ---

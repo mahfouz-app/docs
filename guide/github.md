@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Signing in to GitHub"
+since: "0.4.0"
 description: "Connect your GitHub account to create repositories and invite collaborators."
 permalink: /guide/github/
 ---

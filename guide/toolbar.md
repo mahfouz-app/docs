@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "The formatting toolbar"
+since: "0.4.0"
 description: "Every button on the formatting toolbar, its More menu and the bottom bar."
 permalink: /guide/toolbar/
 ---

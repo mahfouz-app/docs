@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "The vault mind map"
+since: "0.11.0"
 description: "See a vault's notes as a radial map, browse by folder or by tag, and add notes from it."
 permalink: /guide/mind-map/
 ---

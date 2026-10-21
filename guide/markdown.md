@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Markdown"
+since: "0.2.0"
 description: "The Markdown syntax Mahfouz understands, from headings and links to tables."
 permalink: /guide/markdown/
 ---

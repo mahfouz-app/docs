@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Attributes & the right sidebar"
+since: "0.2.0"
 description: "Note pills, the right sidebar and per-note attributes."
 permalink: /guide/attributes/
 ---

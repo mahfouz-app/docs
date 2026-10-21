@@ -354,6 +354,18 @@ h1 {
   text-decoration: none;
 }
 
+.button svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .button-primary {
   color: #fff;
   background: var(--cm-accent);
@@ -1218,6 +1230,63 @@ h1 {
   text-decoration: underline;
 }
 
+.home-install {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  padding: 6px 6px 6px 18px;
+  background: var(--tile);
+  border-radius: 14px;
+}
+
+.alt .home-install {
+  background: var(--cm-bg);
+}
+
+.home-install code {
+  min-width: 0;
+  overflow-x: auto;
+  color: var(--cm-text);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.home-copy {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: var(--link);
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home-copy:hover,
+.home-copy:focus-visible {
+  background: var(--highlight);
+}
+
+.home-copy svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-copy[data-copied] {
+  color: var(--cm-accent);
+}
+
 .home-platforms {
   margin: 18px 0 0;
   color: var(--cm-muted);
@@ -1787,17 +1856,6 @@ h1 {
   font-size: 1.24rem;
 }
 
-.home-brew {
-  display: inline-block;
-  margin-top: 26px;
-  padding: 10px 16px;
-  color: var(--cm-text);
-  background: var(--cm-bg);
-  border-radius: 12px;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0;
-}
 
 @media (max-width: 900px) {
   .home-app {

@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Notes & organization"
+since: "0.2.0"
 description: "Create notes, nest them in a tree, and organize them with folders and bookmarks."
 permalink: /guide/notes/
 ---

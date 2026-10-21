@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Help improve Mahfouz"
+since: "0.13.0"
 description: "The error reports, timings and usage counts Mahfouz sends to find bugs, what it never sends, and how to turn it off."
 permalink: /guide/telemetry/
 ---

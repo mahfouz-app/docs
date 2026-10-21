@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "The command palette"
+since: "0.12.0"
 description: "Press Mod+K to go to a note, run a command or open a setting."
 permalink: /guide/command-palette/
 ---

@@ -30,7 +30,7 @@
           <a href="/compare/">Compare</a>
           <a href="/plugins/">Plugins</a>
           <a href="/guide/" aria-current="page">User guide</a>
-          <a class="nav-download" href="/#downloads">Download</a>
+          <a class="nav-download" href="/#downloads">Install</a>
         </nav>
         <div class="theme-switch" role="group" aria-label="Theme">
           <button type="button" data-theme="light" aria-pressed="false" title="Light">
@@ -72,14 +72,12 @@
           {% include guide-nav.html here=here %}
         </nav>
       </details>
-      {%- comment %} The release workflow writes the changelog newest first, so its first "## 0.12.0 (date)" heading is the current release. {% endcomment %}
-      {%- capture changelog %}{% include changelog.md %}{% endcapture %}
-      {%- assign version = changelog | split: "## " | slice: 1 | first | split: " " | first %}
       <article class="guide-content">
         <div class="guide-title">
           <h1>{{ page.title | escape }}</h1>
-          {%- if version %}
-          <a class="guide-version" href="/changelog/#v{{ version }}" title="What’s new in Mahfouz {{ version }}">For Mahfouz <b>{{ version }}</b></a>
+          {%- comment %} page.since is the release the page's topic first shipped in. {% endcomment %}
+          {%- if page.since %}
+          <a class="guide-version" href="/changelog/#v{{ page.since }}" title="What’s new in Mahfouz {{ page.since }}">Since <b>{{ page.since }}</b></a>
           {%- endif %}
         </div>
         {{ content }}
@@ -122,7 +120,7 @@
             <li><a href="/#privacy">Privacy</a></li>
             <li><a href="/#agents">Agents</a></li>
             <li><a href="/compare/">Compare</a></li>
-            <li><a href="/#downloads">Download</a></li>
+            <li><a href="/#downloads">Install</a></li>
           </ul>
         </div>
         <div class="footer-group">

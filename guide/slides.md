@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Presenting notes as slides"
+since: "0.4.0"
 description: "Present a note as a slide deck and style it with slides templates."
 permalink: /guide/slides/
 ---

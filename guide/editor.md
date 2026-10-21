@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "The editor"
+since: "0.2.0"
 description: "Editing and preview modes, right-click menus, the outline, the table of contents and page preview."
 permalink: /guide/editor/
 ---

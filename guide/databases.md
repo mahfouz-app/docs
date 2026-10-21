@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Databases"
+since: "0.12.0"
 description: "Turn a note into a table of its child notes: typed columns, sorting, filters, and saved views, all stored in your files."
 permalink: /guide/databases/
 ---

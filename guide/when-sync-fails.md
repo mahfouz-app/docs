@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "When sync fails"
+since: "0.12.0"
 description: "What each sync notice means, what its buttons do, and how to fix the problem."
 permalink: /guide/when-sync-fails/
 ---

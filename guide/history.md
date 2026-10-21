@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "History & trash"
+since: "0.2.0"
 description: "Every change is a commit: browse history, restore notes, and choose what gets committed."
 permalink: /guide/history/
 ---

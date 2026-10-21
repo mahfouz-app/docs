@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Notifications"
+since: "0.8.0"
 description: "The notification center, sounds, quiet time and update notices."
 permalink: /guide/notifications/
 ---

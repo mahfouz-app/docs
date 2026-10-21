@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Settings"
+since: "0.2.0"
 description: "Preferences and per-vault settings."
 permalink: /guide/settings/
 ---

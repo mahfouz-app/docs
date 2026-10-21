@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Tasks"
+since: "0.11.0"
 description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, see every task in a table, on a board or on a calendar, and get reminded when one is due."
 permalink: /guide/tasks/
 ---

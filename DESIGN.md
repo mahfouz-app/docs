@@ -108,8 +108,9 @@ Reuse these from `styles.css`:
   single fact gets a chip, so a reader learns one shape for "which release".
   `--tile` fill, pill shaped, 0.78rem, `--body-secondary` with the version
   in bold `--cm-text`, no border; each links to that release in the
-  changelog. "For Mahfouz **0.12.0**" sits to the right of every guide
-  page's title and drops below it when the title is long. "New in
+  changelog. "Since **0.5.0**" sits to the right of a guide page's
+  title, from the page's `since:` front matter (the release its topic first
+  shipped in), and drops below it when the title is long. "Since
   **0.12.0**" follows a heading or, smaller, the end of a bullet, for
   something that first appeared in that release.
 - **Small buttons** on a card (`.registry-install`): the primary button's
