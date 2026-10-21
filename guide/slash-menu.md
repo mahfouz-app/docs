@@ -21,7 +21,7 @@ name, <kbd>Enter</kbd> starts a new line instead, so `/usr` followed by
 
 | Group | Commands |
 |---|---|
-| Text | Heading 1–6 ({% include since.html v="0.13.0" %} for 4–6), bullet list, numbered list, checklist, quote |
+| Text | Heading 1–6 ({% include since.html v="0.13.0" %} for 4–6), bullet list, numbered list, checklist, quote, inline code and [code block](/guide/markdown/#code-blocks) {% include since.html v="0.13.0" %} |
 | Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, [database view](/guide/databases/), image or file, task with due date, tag, [emoji](#emoji), and in a slides deck [Apply layout…](/guide/slides/) |
 | Review | Comment on the current line |
 | Plugins | A block for each enabled diagram plugin, such as [Mermaid or draw.io](/guide/plugins/) |
@@ -31,7 +31,7 @@ Some commands depend on where you are:
 
 - **Task with due date** and **Comment** need text on the line. The comment
   is anchored on the whole line.
-- **Table**, **Database view** and diagram blocks aren't available while you're
+- **Table**, **Code block**, **Database view** and diagram blocks aren't available while you're
   [suggesting](/guide/track-changes/). They're shown dimmed, with the reason.
 - **Image or file** and diagram blocks need an open note.
 
