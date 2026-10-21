@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
-      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Your notes are plain files anyone, and any agent, can read and edit directly, versioned and shared with Git. Nothing goes to a cloud or an AI unless you choose."
+      content="Mahfouz is a calm, open Markdown workspace with zero lock-in. Notes, people, tags, tasks and databases are plain files anyone, and any agent, can read and edit directly, versioned and shared with Git. Nothing goes to a cloud or an AI unless you choose."
     />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
@@ -34,7 +34,7 @@
           <a href="/compare/">Compare</a>
           <a href="/plugins/">Plugins</a>
           <a href="/guide/">User guide</a>
-          <a class="nav-download" href="/#downloads">Download</a>
+          <a class="nav-download" href="/#downloads">Install</a>
         </nav>
         <div class="theme-switch" role="group" aria-label="Theme">
           <button type="button" data-theme="light" aria-pressed="false" title="Light">
@@ -57,16 +57,23 @@
       <section class="home-hero" aria-labelledby="hero-title">
         <div class="shell">
           <p class="eyebrow">Open. No lock-in. Ever.</p>
-          <h1 id="hero-title">Notes that<br />stay yours.</h1>
+          <h1 id="hero-title">More than notes.<br />Still just Markdown.</h1>
           <p class="home-lede">
-            Plain Markdown files in a folder on your computer. Git keeps the
-            history. Nothing goes to a cloud or an AI until you choose where.
+            People, tags, tasks and databases, all built on plain Markdown
+            files in Git. Work with them on the desktop, on the web, or
+            through your AI agents, and edit them in any editor you like.
           </p>
           <div class="home-ctas">
-            <a class="button button-primary" href="#downloads">Download for Mac</a>
+            <div class="home-install">
+              <code>brew install --cask mahfouz-app/tap/mahfouz</code>
+              <button type="button" class="home-copy" data-copy="brew install --cask mahfouz-app/tap/mahfouz" title="Copy">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
+                <span class="sr-only">Copy the install command</span>
+              </button>
+            </div>
             <a class="more" href="https://web.mahfouz.app">Open the web app</a>
           </div>
-          <p class="home-platforms">macOS on Apple silicon. Windows and Linux coming soon.</p>
+          <p class="home-platforms">Homebrew, on macOS with Apple silicon.</p>
 
           <div class="home-window" aria-label="Interactive preview of a Mahfouz vault">
             <div class="home-titlebar">
@@ -101,7 +108,81 @@
         </div>
       </section>
 
-      <section class="alt" id="features" aria-labelledby="features-title">
+      <section class="alt" id="build" aria-labelledby="build-title">
+        <div class="shell">
+          <div class="home-head">
+            <p class="eyebrow">More than notes</p>
+            <h2 id="build-title">Build it all on Markdown.</h2>
+            <p>
+              People, tags, tasks and databases aren't hidden in an app
+              database. Each one is a line, a field or a folder in your notes,
+              so you can change it in any editor and Mahfouz picks it up.
+            </p>
+          </div>
+          <div class="home-bento">
+            <div class="home-tile span-3">
+              <p class="k">People</p>
+              <h3>Everyone you work with.</h3>
+              <p>A person is a note with a handle. Mention <code class="home-inline">@ada</code> anywhere, and their page gathers the tasks and notes that mention them.</p>
+              <pre class="home-term" aria-label="A person note's frontmatter"><span class="dim">Ada Lovelace.md</span>
+---
+person: ada
+email?: ada@engine.co
+company?: Analytical Engines
+---</pre>
+            </div>
+            <div class="home-tile span-3">
+              <p class="k">Tasks</p>
+              <h3>Due dates, right in the line.</h3>
+              <p>A checkbox, an assignee and a date. The Tasks view collects them from every vault, and reminds you when they're due.</p>
+              <pre class="home-term" aria-label="Task lines in a note"><span class="dim">Reading list.md</span>
+- [ ] Finish Dune @ada // 2026-11-04
+- [/] Notes on chapter 3 // 2026-11-02
+- [x] Order the next book</pre>
+            </div>
+            <div class="home-tile span-3">
+              <p class="k">Tags</p>
+              <h3>Tag as you write.</h3>
+              <p>Type a <code class="home-inline">#tag</code> in a sentence or list tags in the frontmatter. Search, filter and map your vault by them.</p>
+              <pre class="home-term" aria-label="Tags in a note"><span class="dim">Cairo Journal.md</span>
+---
+tags: [travel, cairo]
+---
+The old stone holds the warmth. #field-notes</pre>
+            </div>
+            <div class="home-tile span-3">
+              <p class="k">Databases</p>
+              <h3>Tables, boards and calendars.</h3>
+              <p>A database is a note whose child notes are its rows. Each cell is a row's own frontmatter, and the views are YAML in the note.</p>
+              <pre class="home-term" aria-label="A database's folder"><span class="dim">Books/</span>
+Books.md              <span class="dim">database: true</span>
+Dune.md               <span class="dim">status: Reading</span>
+The Dispossessed.md   <span class="dim">status: Done</span></pre>
+            </div>
+            <div class="home-tile span-6">
+              <p class="k">Everywhere</p>
+              <h3>Everything you build, wherever you work.</h3>
+              <p>
+                People, tasks, tags and databases work the same in the desktop
+                app, in the web app, and for AI agents over MCP. Underneath,
+                every one of them is text in a
+                <code class="home-inline">.md</code> file, so any editor can
+                change it too, with nothing to export.
+              </p>
+              <ul class="home-plugins">
+                <li><b>Desktop</b><span>macOS with Apple silicon</span></li>
+                <li><b>Web</b><span>Any modern browser</span></li>
+                <li><b>Agents</b><span>Claude, Codex and more, over MCP</span></li>
+                <li><b>Any editor</b><span>Plain Markdown and YAML</span></li>
+                <li><b>Git</b><span>Every change, on any remote</span></li>
+                <li><b>Mobile</b><span>Coming soon</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" aria-labelledby="features-title">
         <div class="shell">
           <div class="home-head">
             <p class="eyebrow">A little more room to think</p>
@@ -155,7 +236,7 @@
         </div>
       </section>
 
-      <section id="privacy" aria-labelledby="privacy-title">
+      <section class="alt" id="privacy" aria-labelledby="privacy-title">
         <div class="shell">
           <div class="home-head">
             <p class="eyebrow">Private by default</p>
@@ -195,7 +276,7 @@
         </div>
       </section>
 
-      <section class="alt" id="agents" aria-labelledby="agents-title">
+      <section id="agents" aria-labelledby="agents-title">
         <div class="shell">
           <div class="home-head">
             <p class="eyebrow">AI agents</p>
@@ -291,12 +372,17 @@ https://api.mahfouz.app/mcp</pre>
       <section class="alt home-get" id="downloads" aria-labelledby="downloads-title">
         <div class="shell">
           <h2 id="downloads-title">Get Mahfouz.</h2>
-          <p>Free for macOS. Windows and Linux coming soon.</p>
+          <p>Free for macOS with Apple silicon. Install it with Homebrew.</p>
           <div class="home-ctas">
-            <a class="button button-primary" href="https://github.com/mahfouz-app/homebrew-tap/releases/latest">Download for Mac</a>
-            <a class="more" href="/changelog/">What's new</a>
+            <div class="home-install">
+              <code>brew install --cask mahfouz-app/tap/mahfouz</code>
+              <button type="button" class="home-copy" data-copy="brew install --cask mahfouz-app/tap/mahfouz" title="Copy">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
+                <span class="sr-only">Copy the install command</span>
+              </button>
+            </div>
           </div>
-          <code class="home-brew">brew install --cask mahfouz-app/tap/mahfouz</code>
+          <p class="home-platforms">Updates arrive with <code class="home-inline">brew upgrade --cask mahfouz</code>. <a class="more" href="/changelog/">What's new</a></p>
         </div>
       </section>
     </main>
@@ -319,7 +405,7 @@ https://api.mahfouz.app/mcp</pre>
             <li><a href="/#privacy">Privacy</a></li>
             <li><a href="/#agents">Agents</a></li>
             <li><a href="/compare/">Compare</a></li>
-            <li><a href="/#downloads">Download</a></li>
+            <li><a href="/#downloads">Install</a></li>
           </ul>
         </div>
         <div class="footer-group">

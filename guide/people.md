@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "People"
+since: "0.12.0"
 description: "Keep the people you work with in a People database, mention them with @, assign them tasks, and import or export them as vCards."
 permalink: /guide/people/
 ---

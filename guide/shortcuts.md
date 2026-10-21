@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Keyboard shortcuts"
+since: "0.2.0"
 description: "Every keyboard shortcut, on desktop and on the web, and how to change them."
 permalink: /guide/shortcuts/
 ---

@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Preview notes in Finder"
+since: "0.12.0"
 description: "Select a Markdown file in Finder and press Space to see it rendered, with Mahfouz's Quick Look preview on macOS."
 permalink: /guide/quick-look/
 ---

@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Links, tags & search"
+since: "0.2.0"
 description: "Link notes with wikilinks, see backlinks, tag notes and search the vault."
 permalink: /guide/links/
 ---

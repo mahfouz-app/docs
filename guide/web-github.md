@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "GitHub vaults on the web"
+since: "0.9.0"
 description: "Sign in with GitHub in the browser and open a repository as a vault."
 permalink: /guide/web-github/
 ---

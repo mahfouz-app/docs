@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "The slash menu"
+since: "0.12.0"
 description: "Type / to insert headings, lists, tables, callouts, links, tasks, comments, emoji, diagrams and fields."
 permalink: /guide/slash-menu/
 ---

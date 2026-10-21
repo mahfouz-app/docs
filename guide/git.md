@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Git & sync"
+since: "0.2.0"
 description: "How Mahfouz uses git, syncing with a remote, and Git LFS for large media."
 permalink: /guide/git/
 ---

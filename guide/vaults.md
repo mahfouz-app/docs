@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Vaults"
+since: "0.2.0"
 description: "Create, open and switch between vaults: the folders your notes live in."
 permalink: /guide/vaults/
 ---

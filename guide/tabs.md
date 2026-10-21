@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Tabs"
+since: "0.2.0"
 description: "Opening, switching, arranging, pinning and closing tabs."
 permalink: /guide/tabs/
 ---

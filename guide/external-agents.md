@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "External agents (MCP)"
+since: "0.12.0"
 description: "Let Claude Code, Claude Desktop, Codex or claude.ai read and edit your vaults, and choose which edits wait for you."
 permalink: /guide/external-agents/
 ---

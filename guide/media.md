@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Images & attachments"
+since: "0.2.0"
 description: "Add images, video, audio and other files to notes, and how Mahfouz stores them."
 permalink: /guide/media/
 ---

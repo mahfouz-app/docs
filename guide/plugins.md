@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: "Plugins & registries"
+since: "0.5.0"
 description: "Install plugins such as Mermaid, draw.io and Slidev, and add plugin registries."
 permalink: /guide/plugins/
 ---
