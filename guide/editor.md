@@ -49,8 +49,23 @@ Other editor behavior:
   list Tab does nothing, since there's nothing above to nest under.
 - In Preview, <kbd>Backspace</kbd> at the start of a nested list item's
   text moves it, with its sub-items, out a level, the same as
-  <kbd>Shift</kbd><kbd>Tab</kbd>. On a top-level item, and in Source,
-  Backspace works as usual.
+  <kbd>Shift</kbd><kbd>Tab</kbd>.
+- In Preview, <kbd>Backspace</kbd> and <kbd>Delete</kbd> never remove
+  hidden markup on its own. {% include since.html v="0.13.0" %}
+  - Next to a wikilink, a link, or bold, italic, strikethrough, code,
+    highlighted, underlined, subscript or superscript text, they remove the
+    visible character past the hidden markup: Backspace after `[[Note]]`
+    leaves `[[Not]]`.
+  - Removing an element's last character, or deleting a selection of all
+    its text, removes the element with its markup, so no stray `[[]]` or
+    `****` is left behind.
+  - At the start of a heading's, quote's, top-level list item's or task's
+    text, Backspace removes the line's markup and leaves a plain
+    paragraph.
+  - <kbd>Delete</kbd> at the end of a line joins the next line's text
+    without its markup.
+
+  In Source, Backspace and Delete work as usual.
 - In Preview, the cursor never sits in front of a list item's bullet or
   checkbox. Clicking left of the bullet, pressing <kbd>Home</kbd>, or
   moving up or down onto the marker puts it at the start of the item's
