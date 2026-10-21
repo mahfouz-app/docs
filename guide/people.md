@@ -14,6 +14,8 @@ ordinary note you can open, edit and link to.
 ---
 person: ada
 name: Ada Lovelace
+first_name: Ada
+last_name: Lovelace
 email: ada@example.com
 company: Analytical Engines
 position: Engineer
@@ -25,11 +27,17 @@ github: ada
   letters, numbers, `-` and `_`, like a GitHub login, and case doesn't
   matter. A new person's handle is made from their name; if it's taken,
   Mahfouz adds `-2`, `-3` and so on.
-- **The contact fields** are `name`, `email`, `phone`, `company`,
-  `position` (the job title), `github`, `birthday`, `address`, `url` and
-  `nickname`. Each is an ordinary [attribute](/guide/attributes/), edited in
-  the note's Attributes. A field with several values, such as two email
-  addresses, holds a list.
+- **The contact fields** are `name`, `first_name` and `last_name`
+  ({% include since.html v="0.14.0" %}), `email`, `phone`, `company`,
+  `position` (the job title, shown as **Title**), `github`, `birthday`,
+  `address`, `url` and `nickname`. Each is an ordinary
+  [attribute](/guide/attributes/), edited in the note's Attributes. A field
+  with several values, such as two email addresses, holds a list.
+- **Missing fields** show in the note's Attributes as placeholders, such
+  as **Add email…**: Name, First name, Last name, Email, Phone, Title,
+  Company and GitHub, then a **More** row for Nickname, Birthday, Address
+  and URL. Type in one to write just that field. Nothing is stored for a
+  field you leave empty. {% include since.html v="0.14.0" %}
 - **The People database** is created at the vault root, titled **People**,
   the first time you add someone. It starts with the Title, `email`,
   `phone`, `company`, `position` and `github` columns.
@@ -47,6 +55,9 @@ doesn't open it.
 
 - **Add “x” as a person…**, the last row, adds someone new from what you
   typed and writes their mention.
+- **Add “x” with details…**, the row under it when no one matches, opens
+  the [Add person form](#adding-a-person) with the name filled in, and
+  writes the mention once you add them. Reach it with the arrow keys. {% include since.html v="0.14.0" %}
 - **Over a selection:** select a name and press `@`. If it's exactly one
   person's name or handle, it becomes their mention at once. Otherwise the
   menu opens with **Add “name” as a person** first; press Esc to type a
@@ -84,7 +95,9 @@ menu at the top right.
 
 - Type in **Search people** to filter the list. Click a person to open
   their note. A collaborator with no note yet shows **GitHub only**.
-- **Add person** asks for a name and adds a row to the People database.
+- **Add person** (＋) asks for a name: type it and press <kbd>Enter</kbd> to
+  add a row to the People database. The chevron beside the name field
+  opens the [Add person form](#adding-a-person) instead. {% include since.html v="0.14.0" %}
 - **Open People database** opens the database itself, as a table.
 - **Import** and **Export all** are described [below](#import).
 - Right-click a person for **Open**, **Export vCard**, **Change handle…**
@@ -95,6 +108,25 @@ menu at the top right.
   collaborator isn't listed), or isn't a valid handle.
 - Under the list, **Shared with N collaborators on this vault** is a
   reminder of who can read these notes.
+
+## Adding a person {% include since.html v="0.14.0" %} {#adding-a-person}
+
+The **Add person** form takes a person's contact details in one go. Open it
+from the chevron beside **Add person**'s name field in the
+[People view](#the-people-view), from **Add “x” with details…** in the
+[mention menu](#mentions), or from the chevron beside **New row** in a
+People database.
+
+- **First name**, **Last name** and **Full name**. Full name fills itself
+  from the first and last names until you type over it.
+- **Email**, **Phone**, **Title**, **Company**, **GitHub**, **Nickname**,
+  **Birthday** (`YYYY-MM-DD`, or `--MM-DD` without a year), **URL** and
+  **Address**.
+
+Only the fields you fill in are written to the new person note.
+
+In a People database, **New row** and **New in ⟨group⟩** add a person too:
+the new row gets a handle, made from its title, so you can mention it. {% include since.html v="0.14.0" %}
 
 ## A person's page
 
@@ -110,44 +142,47 @@ Under a person note's text, Mahfouz shows:
   note at the mention. Links in the text open their own targets. {% include since.html v="0.12.0" %}
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
   **Change handle…**, next to it, changes their handle (see
-  [Changing a handle](#changing-a-handle)). When the note has no summary
-  yet, **Generate summary** is there too (see [Summary](#summary)).
+  [Changing a handle](#changing-a-handle)).
 
 Clicking a task or a mention opens its note at that line, shaded until you
 click, type or move the cursor in the note.
 
-## Summary {% include since.html v="0.13.0" %} {#summary}
+## Notes {% include since.html v="0.14.0" %} {#notes}
 
-A person's summary is a section of their note: the first heading whose
-text is **Summary** (any level, any case) and the text under it, up to the
-next heading of the same or a higher level. It's ordinary note text, so you
-write and edit it like any other.
+Under a person's contact fields, in the note's Attributes, **Notes** is a
+text box for what you know about them. It saves as you type, into the
+note's `## Notes` section:
 
 ```markdown
-## Summary
+## Notes
 
 Leads the engine team. Owns the Q3 release and reviews the docs.
 ```
 
-Mahfouz can draft it for you from what the vault knows about the person.
-This is on the desktop app only, and needs an AI provider and its key in
-Settings → AI.
+- A note with no Notes section gets one when you first type in the box:
+  right after the title when the note holds nothing else, or else at the
+  end.
+- An older `## Summary` section is read as the person's notes.
+- In Preview, the section is hidden from the note's text, since the box
+  shows it. Source mode shows it as written.
+- In [Suggesting](/guide/track-changes/) mode, what you type in the box is
+  a suggestion, as in the note's text.
 
-- **The sparkle button** at the end of the Summary heading, in Preview and
-  Source, generates a draft.
-- **Generate summary**, at the top of [their page](#a-persons-page) next to
-  **Export vCard**, does the same for a note with no Summary section.
+### Generating notes
 
-The draft streams into a card under the heading, labelled **Draft from N
-tasks and M mentions** with the provider's name. Nothing is saved until you
-choose:
+Mahfouz can draft notes for you from what the vault knows about the
+person. This is on the desktop app only, and needs an AI provider and its
+key in Settings → AI.
 
-- **Use this** replaces the section's text with the draft, as one undo
-  step. In a note with no Summary section, it adds a `## Summary` section
-  under the title. In [Suggesting](/guide/track-changes/) mode, the draft
-  is written as suggestions by `@agent`, for you to review.
-- **Discard**, or <kbd>Esc</kbd>, throws the draft away. The stop button
-  does too, while the draft is still streaming.
+Once the person has mentions or tasks, a sparkle button sits inside the
+Notes box: **Generate notes from N mentions and M tasks**. The draft
+streams in below the box, and nothing is written until you choose:
+
+- **Append** adds the draft after the notes you have.
+- **Replace** replaces your notes with the draft.
+- **Discard**, or <kbd>Esc</kbd>, throws the draft away.
+
+A draft never overwrites your notes by itself.
 
 What's sent to the provider:
 
@@ -158,8 +193,8 @@ What's sent to the provider:
   [comments](/guide/track-changes/#comments) or pending suggestions.
 
 [Encrypted notes](/guide/encryption/) are never sent. The first time you
-generate a summary in a vault, and again after you switch provider,
-Mahfouz asks before sending anything.
+generate notes in a vault, and again after you switch provider, Mahfouz
+asks before sending anything.
 
 ## Changing a handle
 

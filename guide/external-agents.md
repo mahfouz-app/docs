@@ -137,6 +137,8 @@ them. It can also ask to:
   handle rules as **Add person**.
 - **Change a person's contact details**. A collaborator with no person note
   gets one first.
+- Adding or changing a person takes `first_name` and `last_name` too, beside
+  the other [contact fields](/guide/people/). {% include since.html v="0.14.0" %}
 - **Change a person's handle**, which rewrites their mentions and task
   assignees across the vault, just like
   [Change handle…](/guide/people/#changing-a-handle). Under **Ask before
