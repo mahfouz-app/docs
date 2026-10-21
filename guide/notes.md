@@ -116,7 +116,7 @@ the fields by name: `{today}_{id}_`.
   in a **Bookmarks** section above its **Notes** section, which holds the
   whole tree; a bookmarked note shows in both. Click a section's header to
   collapse or expand it; Mahfouz remembers that per vault on this device.
-  <kbd>Cmd/Ctrl</kbd><kbd>2</kbd> (Go → Bookmarks) opens and scrolls to
+  <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> {% include since.html v="0.14.0" %} (Go → Bookmarks) opens and scrolls to
   the active vault's Bookmarks section. {% include since.html v="0.13.0" %}
 - **Unimported files**: if you drop a plain `.md` file into the vault
   folder outside Mahfouz (no `id:` in its frontmatter), it shows up right

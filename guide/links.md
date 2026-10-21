@@ -138,7 +138,7 @@ changes are undone, the others keep theirs, and the notification offers
 
 ## Search
 
-<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>, **Search** in the left rail, or
+<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>, the [command palette](/guide/command-palette/)'s **Search all notes** row {% include since.html v="0.14.0" %}, or
 the scope button in the note's [Find bar](/guide/editor/#find-and-replace)
 opens the **Search tab** in the main pane. There's one Search tab: opening
 it again brings it to the front with its query, results and place kept.

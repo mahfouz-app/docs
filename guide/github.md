@@ -49,7 +49,7 @@ you're not. A small dot means something needs you:
   approvals, so it never shows this dot: it shows the warning dot and
   **Install** until the owner approves.
 
-Click the button to open the account menu:
+Click the button, or press <kbd>Mod</kbd><kbd>0</kbd> {% include since.html v="0.14.0" %}, to open the account menu:
 
 - Your name and GitHub login. **Open GitHub profile**, the link icon beside
   them, opens your profile on github.com.
@@ -58,8 +58,8 @@ Click the button to open the account menu:
   **Waiting for an organization owner to approve Mahfouz**.
 - **Manage repository access**, to change which repositories Mahfouz can
   see.
-- **Settings**, **Keyboard shortcuts**, **User guide** and **Send
-  feedback**.
+- **Settings**, **Keyboard shortcuts**, **User guide**, **Send
+  feedback** and **Trash** {% include since.html v="0.14.0" %}.
 - **Sign out** (on the web, also **Sign out everywhere**) and **Revoke
   access on GitHub**: see [Signing out](#signing-out).
 - On desktop, the version at the bottom opens **About Mahfouz**, and
