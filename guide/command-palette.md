@@ -28,7 +28,12 @@ up to 30 matches, and Commands or Settings alone shows every match. Before
 you type anything, Commands and Settings list everything of their kind. {% include since.html v="0.13.0" %}
 
 The palette matches titles only. To search the text inside your notes,
-press the **Go to search** key while the palette is open. It closes the palette and opens the
+pick the last row, **Search all notes for “…”**, which shows whenever
+you've typed something (in **All** and **Notes**). It closes the palette and
+opens the [Search tab](/guide/links/#search) with what you typed, so
+operators such as `tag:`, `in:` and `person:` work there too. {% include since.html v="0.14.0" %}
+
+You can also press the **Go to search** key while the palette is open. It closes the palette and opens the
 [Search tab](/guide/links/#search) with what you typed. The palette's
 footer names the key, and so does the list when nothing matches. If you
 unbind **Go to search**, the palette doesn't show it. {% include since.html v="0.13.0" %}

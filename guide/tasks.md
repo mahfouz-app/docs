@@ -118,7 +118,7 @@ Like the date picker, these changes apply directly, even in Suggesting mode.
 
 ## The Tasks view
 
-Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>6</kbd>) to open the
+Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}) to open the
 Tasks tab in the main pane, beside your notes. It shows every task as a
 database, with three views to pick from at the top:
 

@@ -95,9 +95,9 @@ doesn't open it.
 
 ## The People view
 
-Click **People** in the left rail to list the vault's people; click it
-again to go back to your notes. On a phone, it's **People** in the **⋯**
-menu at the top right.
+Click **People** in the left rail (<kbd>Mod</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %}) to list the vault's people; click it
+again to go back to your notes. On a phone, it's **People** in the bar at
+the bottom of the screen. {% include since.html v="0.14.0" %}
 
 - Type in **Search people** to filter the list. Click a person to open
   their note. A collaborator with no note yet shows **GitHub only**.
