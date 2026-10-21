@@ -1,4 +1,167 @@
 
+## 0.13.0 (2026-10-21) {#v0.13.0}
+
+* feat(editor): Code dropdown (Inline code, Code block), ``` + Enter closes the fence, Preview keeps fences hidden
+* fix(editor): apply macOS text replacements and spelling corrections with the cursor after the space
+* fix(attributes): keep a new row when its type icon is clicked before naming it
+* fix(notifications): keep pop-ups in the note pane and compact
+* fix(editor): Backspace and Delete in Preview never take a hidden delimiter
+* New brand: nuqta ladder mark, Nile accent, Flow loader
+* fix(search): put the Search tab's sort on the field's row
+* fix(editor): scroll the page icon with the title; name the note in the breadcrumbs
+* docs(instructions): guide pages carry since:, badges read Since
+* Sort the Logpush jobs' field_names as Cloudflare returns them
+* Quote the Google SPF's content as Cloudflare stores it
+* Forget the deleted no-mail SPF so the live Google SPF is adopted
+* fix(desktop): menu actions ran twice in dev, so the command palette never opened
+* feat(settings): a laptop icon marks settings kept on this computer only
+* fix(ci): cancel a superseded PR run whole
+* feat(settings): larger plugin icons, chevron in the registry field, heading buttons on the right
+* Quit dialog: show the commit/push a quit waits for, with Quit now
+* fix(sidebar): hide a swapping row's chevron at rest
+* docs: three-host layout in docs, comments and test names (three-host split, 5/5)
+* feat(settings): move Help improve Mahfouz into General
+* feat(desktop): keep the local MCP available with the window closed, and start the app on demand
+* feat(mcp): tools for people
+* fix(ui): center the Settings modal and make it larger
+* fix(ui): restore .visually-hidden for sync labels
+* fix(editor): a way out below a code block that ends the note
+* Remote MCP step 7a: consent, grants and routing for the server path
+* feat(vaults): Next steps card in a new vault's first note (#686)
+* refactor(editor): one triggerBefore helper behind the :, { and ! menus
+* feat(fields): the new note prefix uses fields
+* feat(vaults): open an existing GitHub repository on desktop (#682)
+* fix(vaults): ask before cloning a public GitHub repository as a vault (#683)
+* Remote MCP step 6b1: warm state from container snapshots
+* Server platform follow-ups: unborn HEAD and non-ASCII tests, test helper and git helper tidy
+* feat(tasks): type ! for a due date, drop the // trigger
+* fix(telemetry): no timings for git-crypt vaults, locked or not
+* Settings → Privacy: a crash report saved while on is still sent; list committing
+* Remote MCP step 4: the container's HTTP server and image
+* fix(desktop): seed the vault registry only when its file is missing; check sidecar vault params
+* Telemetry: usage counts and timings from their call sites (#664)
+* fix(tasks): the date picker's time is a text field, so a typed time is written
+* test(worker): insert pagesForNotes' 250 pages in one DO call
+* Telemetry: desktop webview and Rust panic reports
+* test(watch): run the real-FSEvents test on CI's macOS job, not locally
+* test(web-e2e): wait for the boot sync before signing out (#753)
+* Sync: keep a note renamed with an edit (D + A) instead of reporting it removed
+* fix(search): Search tab headers as stops, tag:/person: completion, slim scrollbar, scope as an image
+* Web telemetry: Datadog RUM and errors (#662)
+* Widen the left rail and enlarge its icons
+* fix(find): the bar owns its Alt toggles, fewer exports, room to type at 320px
+* feat(editor): fold regions inside code blocks from the rail
+* feat(worker): log route classes, never paths, and turn Logpush on
+* chore(tags): remove dead tag code left by the Search tab
+* fix(sync): drop the old note's row when a modified path holds another id
+* fix(search): no Find mentions in an encrypted note's palette; a failed search answers its request
+* fix(db): a bulk write while auto-commit is paused leaves disk-only notes out
+* fix(search): keep CriticMarkup markup out of replaces; follow-ups to #695
+* chore(ops): drop the Terraform-managed Datadog dashboard
+* fix(settings): show a vault's sync error in the Vaults list
+* Remote MCP step 2: the server workspace and its Node platform
+* fix(settings): move New note prefix to a vault Notes tab
+* feat(search): replace across notes in the Search tab
+* feat(ops): Datadog resources for telemetry, Workers' logs by Logpush
+* fix(ui): task checkboxes use the app's .checkbox
+* fix(sync): stop treating a missing remote as connected
+* Declare Google Workspace mail on mahfouz.app in Terraform
+* Public site at mahfouz.app, web app at web.mahfouz.app, desktop API at api.mahfouz.app
+* feat(desktop): strict content security policy for the webview (#622 stage 2)
+* feat(ui): new vault on GitHub
+* test(ui): form-control guard reads conditional and spread input types
+* fix(ui): Columns popover announces a move only when it applied
+* feat(settings): Privacy section with the Help improve Mahfouz switch
+* feat(feedback): file Send feedback through the Worker, drop the compiled-in token
+* Desktop: enforce the vault registry in every file command (#622 stage 1, part 2)
+* Unify text fields (3/3)
+* Ship third-party licence texts in the app; keep the docs list current
+* docs(rules): every guide addition carries its since.html version
+* fix(watch): resync on a rescan flag, and check the vault every 60 s
+* feat(engine): move the database-only read side into the engine
+* feat(editor): Heading N hint on an empty heading; Heading 4 to 6 in the menus
+* feat(attributes): a styled type menu, opened from the type icon (#629)
+* fix(a11y): the collapsed right sidebar is inert (#631)
+* fix(ui): a press counts as nested only in the layers it was opened inside
+* test(watch): test the debounce loop with synthetic events, not FSEvents
+* fix(agent): open Settings → AI on the keyless provider; key status hook
+* fix(editor): keep the note's title block fixed in section drag (#586)
+* docs: attach PR mockups with gh --attach
+* fix(sidebar): scope the drag highlight per vault (#602)
+* fix(ui): pill cards — no hidden sidebar queries, encrypted tag count, relation chips (#605, #606, #607)
+* feat(engine): add @mahfouz/engine, its context, and move the first pure modules (headless MCP, step 2)
+* fix(sidebar): drag to own vault root (#567); clamp width to the window (#568)
+* fix(sidebar): keyboard tree rows and ARIA state (#581, #584)
+* fix(a11y): collapsed sidebar is inert; resize handles work from the keyboard
+* fix(ui): right sidebar shows nothing without a note; encrypted tags are plain text
+* fix(sidebar): reveal a new child under a collapsed parent (#564)
+* fix(sidebar): phone sheet is a modal Escape and back close; row actions on touch; pills as cards (#576–#580)
+* fix(attributes): a re-list mid-debounce keeps the typed value
+* fix(sidebar): forget per-vault collapse state of unregistered vaults (#565)
+* fix(sidebar): rev:/ptab: tabs highlight their note's row; db: tab shows the note's emoji
+* fix(sidebar): note and folder menus offer only what works (#559, #560, #561)
+* ci: split check-web into parallel jobs, core's suite in three shards
+* fix(sidebar): view shortcuts reveal a collapsed sidebar; tag filter only in Tags
+* fix(ui): drop the right sidebar's own header and close button
+* feat(search): sidebar search view with snippets, keyboard nav and ⌘⇧F
+* Database: colored pills, one-click checkboxes, arrow keys, editable cards
+* fix(sidebar): guard localStorage reads and writes
+* Sidebar: show plain folders under their owning note (#552, #553)
+* feat(ui): note pill cards
+* feat(sidebar): a Bookmarks section above each vault's notes
+* Command palette: kind filter and search-key hand-off
+* fix(ai): keep Settings key edits from switching the agent
+* feat(people): person summary on the person page
+* fix(sidebar): scope rename and collapse per vault, reveal rename targets
+* fix(sidebar): drag only the pressed note, not its ancestors
+* fix(comments): keep an unlocked encrypted note's threads out of the sidebar
+* People: @ before a word mentions it; Preview draws mentions as pills
+* fix(editor): `!` fields empty after a fast-path boot
+* fix(notes): line the page icon up with the note title
+* feat(database): rename a database from its tab's title
+* feat(export): choose how tags and people are written
+* Comments: edit or delete your own entry in a thread
+* feat(databases): Month and Week on Calendar views
+* fix(editor): keep the cursor past list bullets in Preview
+* feat(share): send the note's title on macOS too
+* style(tables): slimmer pill handles and full-length add bars
+* Share through navigator.share on macOS
+* Show each database column's type and what a cell opens
+* fix(tags): index body tags with the rename's grammar
+* Pin and reorder tabs
+* test: flush publish debounces instead of sleeping; split sync.test.ts; pin Node 24
+* ci: run core, web and worker tests once when check-web runs
+* Deck prose block at the top: mark page 1, and say why Remove rule isn't offered before a yaml block
+* Row and column menus on the table grips
+* Show comment threads in a margin beside the note
+* Redesign the comment popover as a shared CommentThread
+* feat(ui): compact Banner density for the account menu
+* fix(tasks): Board card tags on their own line, out of the title button
+* Change a person's handle everywhere it's referenced
+* Redesign the Find and Replace panel
+* Floating note outline; page previews become optional
+* fix(ui): drop the duplicate EyeIcon that broke the develop build
+* feat: icon-only buttons in the note's bottom bar
+* Notification actions on one compact row, with icons
+* Export notes to Word (.docx)
+* Rename a tag everywhere from its context menu
+* Encrypted notes: refuse macOS Services and Look Up while plaintext shows
+* Per-note Light / Dark / Auto appearance in the bottom bar
+* fix: turn off macOS text substitutions that drop the typed space
+* feat: word count at the far left of the note bottom bar
+* fix(tauri): embed the Windows app manifest in test binaries
+* Account menu: status table, shared app items, announced keys, headless focus
+* feat: zoom level opens into a slider in the bottom bar
+* fix(tasks): Tasks tab scroll memory and task database test gaps
+* Plugins: host.commands.refresh re-evaluates `when` for the OS menu
+* refactor: share the main-thread webview helper
+* Fix Sub/Superscript keys, keyboard toolbar presses, slash menu drift
+* Drop a running plugin update from the update notice
+* refactor: read a note's file through noteFromFile in readRefreshed
+* refactor(ui): RelationPicker and AccountButton dismiss through useDismiss
+* Read a link's destination, never a URL in its label (#474)
+
+
 ## 0.12.0 (2026-10-16) {#v0.12.0}
 
 * Share a note through the system share sheet
