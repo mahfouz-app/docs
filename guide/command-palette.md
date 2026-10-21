@@ -37,10 +37,14 @@ notes as last saved, and it understands the
 [Search tab's operators](/guide/links/#search), such as `tag:` and `in:`. {% include since.html v="0.14.0" %}
 
 For case-sensitive or whole-word matching, regular expressions or
-replacing text, press the **Go to search** key while the palette is open.
-It closes the palette and opens the
+replacing text, pick the last row, **Search all notes for “…”**, which
+shows whenever you've typed something (in **All** and **Notes**). It
+closes the palette and opens the [Search tab](/guide/links/#search) with
+what you typed. {% include since.html v="0.14.0" %}
+
+You can also press the **Go to search** key while the palette is open. It closes the palette and opens the
 [Search tab](/guide/links/#search) with what you typed. The palette's
-footer names the key, and so does the list when nothing matches. If you
+footer names the key, and so does the list when nothing matches in **Commands** or **Settings**. If you
 unbind **Go to search**, the palette doesn't show it. {% include since.html v="0.13.0" %}
 
 Before you type anything, the palette lists your bookmarked notes, in the

@@ -19,7 +19,7 @@ Mahfouz keeps no separate history of its own: **history is git history.**
   minutes apart. Click the row to list its saves, then click a save to
   open it. A lone auto-save shows as **Edited**. Named commits (yours,
   the agent's, renames) always keep their own row. {% include since.html v="0.12.0" %}
-- **Trash** (Sidebar, <kbd>Cmd/Ctrl</kbd><kbd>4</kbd>) is a flat, cross-vault list of every
+- **Trash** (the account menu's **Trash**, or <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> {% include since.html v="0.14.0" %}) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
 - Every note edit auto-commits within about 30 seconds of your last

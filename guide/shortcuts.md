@@ -24,14 +24,17 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>Mod</kbd><kbd>&#92;</kbd> | Toggle left sidebar |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>&#92;</kbd> | Toggle right sidebar |
 | <kbd>Mod</kbd><kbd>1</kbd> | Go to all notes |
-| <kbd>Mod</kbd><kbd>2</kbd> | Go to bookmarks |
-| <kbd>Mod</kbd><kbd>4</kbd> | Go to trash |
-| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Open the [Search tab](/guide/links/#search) to search note contents, starting from the Find bar's query or the selection {% include since.html v="0.13.0" %} (<kbd>Mod</kbd><kbd>3</kbd> and <kbd>Mod</kbd><kbd>5</kbd> are no longer used) |
+| <kbd>Mod</kbd><kbd>2</kbd> | Go to tasks (was <kbd>Mod</kbd><kbd>6</kbd>) {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>3</kbd> | Go to people {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>9</kbd> | Show notifications {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>0</kbd> | Open the account menu {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> | Go to bookmarks (was <kbd>Mod</kbd><kbd>2</kbd>) {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> | Go to trash (was <kbd>Mod</kbd><kbd>4</kbd>) {% include since.html v="0.14.0" %} |
+| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> | Open the [Search tab](/guide/links/#search) to search note contents, starting from the Find bar's query or the selection {% include since.html v="0.13.0" %} |
 | <kbd>Mod</kbd><kbd>K</kbd> | Open the [command palette](/guide/command-palette/) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>F</kbd> | Find the next occurrence of the selection, or of the word under the cursor (row `find_selection`) |
 | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>;</kbd> | Add the word under the cursor to the [vault dictionary](/guide/spelling/#the-vault-dictionary) |
 | None | Remove the word under the cursor from the vault dictionary (no default key) |
-| <kbd>Mod</kbd><kbd>6</kbd> | Go to tasks |
 | None | Toggle auto-commit for note (no default key) |
 | None | Open the vault mind map (no default key; action "Open mind map") |
 | None | Create a database (no default key; action "New database") |
@@ -41,6 +44,19 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | [Share the active note](/guide/toolbar/#the-bottom-bar) through the system share sheet (no default key; row `share_note`; in the macOS app and in browsers that can share) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
+
+The rail's keys follow its order: the items at the top count up from
+<kbd>Mod</kbd><kbd>1</kbd> (all notes, tasks, people), and the ones at the
+bottom count back from <kbd>Mod</kbd><kbd>0</kbd> (the account menu, then
+notifications). Each rail button's tooltip shows its key. {% include since.html v="0.14.0" %}
+
+A vault whose `## Shortcuts` table still holds the old default keys
+(<kbd>Mod</kbd><kbd>6</kbd> for tasks, <kbd>Mod</kbd><kbd>2</kbd> for
+bookmarks, <kbd>Mod</kbd><kbd>4</kbd> for trash) gets the new ones. If your
+vault already gives <kbd>Mod</kbd><kbd>3</kbd>, <kbd>Mod</kbd><kbd>9</kbd> or
+<kbd>Mod</kbd><kbd>0</kbd> to another action, that action keeps it, and Go to
+people, Show notifications or Open the account menu has no key until you give
+it one in **Settings → Shortcuts**. {% include since.html v="0.14.0" %}
 
 Fixed editor shortcuts (not remappable):
 
@@ -130,10 +146,13 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 |---|---|---|
 | New note at the same level | <kbd>Mod</kbd><kbd>N</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd> |
 | Close the active tab | <kbd>Mod</kbd><kbd>W</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>W</kbd> |
-| Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>A</kbd> |
-| Go to bookmarks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> |
-| Go to trash | <kbd>Mod</kbd><kbd>4</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> |
-| Go to tasks | <kbd>Mod</kbd><kbd>6</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd> |
+| Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>1</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>A</kbd>) {% include since.html v="0.14.0" %} |
+| Go to tasks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>2</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd>) {% include since.html v="0.14.0" %} |
+| Go to people | <kbd>Mod</kbd><kbd>3</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %} |
+| Show notifications | <kbd>Mod</kbd><kbd>9</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>9</kbd> {% include since.html v="0.14.0" %} |
+| Open the account menu | <kbd>Mod</kbd><kbd>0</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>0</kbd> {% include since.html v="0.14.0" %} |
+| Go to bookmarks | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> {% include since.html v="0.14.0" %} | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> |
+| Go to trash | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> {% include since.html v="0.14.0" %} | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> |
 | Bookmark the active note | <kbd>Mod</kbd><kbd>D</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>S</kbd> |
 | Duplicate the active note | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>D</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>D</kbd> |
 | Copy the note's name | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>C</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>C</kbd> |
@@ -154,7 +173,14 @@ Shift or another modifier, it can't be pressed: choose **Settings** in the
 account menu (the account button at the bottom of the left rail) instead.
 
 On a Mac, shortcuts with ⌥ go by the key you press, not the character ⌥
-types with it, so <kbd>⌘</kbd><kbd>⌥</kbd><kbd>S</kbd> works although ⌥S types "ß".
+types with it, so <kbd>⌥</kbd><kbd>⌘</kbd><kbd>S</kbd> works although ⌥S types "ß".
+Mahfouz shows a shortcut's symbols in Apple's order: ⌃, ⌥, ⇧, then ⌘ (⌥⌘S,
+not ⌘⌥S). {% include since.html v="0.14.0" %}
+
+On Windows and Linux, some keyboard layouts (German, Polish and others) treat
+Ctrl+Alt as AltGr, so in the browser a Ctrl+Alt+digit key may type a
+character instead of running its action. If one does, give the action
+another key in **Settings → Shortcuts**. {% include since.html v="0.14.0" %}
 
 Shortcuts you change in **Settings → Shortcuts** are saved in the vault
 (`.config/settings.md`) and apply on both. A default you haven't changed

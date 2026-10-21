@@ -43,7 +43,7 @@ On first run, click **Folder** under **Open existing** in [Choose a
 vault](/guide/vaults/#choosing-a-vault) {% include since.html v="0.13.0" %}
 and choose a folder. The
 browser asks whether Mahfouz may edit the folder: choose **Edit files**.
-Press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>O</kbd> on a Mac) to open another folder later.
+Press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd> (<kbd>⌥</kbd><kbd>⌘</kbd><kbd>O</kbd> on a Mac) to open another folder later.
 
 If the folder isn't a git repository yet, Mahfouz asks before creating one
 (`git init`). A browser can't see the folders above the one you picked, so it
@@ -74,12 +74,18 @@ When the window is narrower than 700 pixels, as on a phone, Mahfouz
 switches to a layout made for it:
 
 - The note takes the whole width. A bar at the bottom of the screen holds
-  **Home**, **Tasks** and **Search**.
-- Tapping **Home** opens the sidebar over the whole screen. Opening a
-  note closes it, and so does the close button in its top corner.
-  **Tasks** and **Search** open their tabs instead. {% include since.html v="0.13.0" %}
-- The **⋯** button at the top right holds **Settings**, **Account**,
-  **People**, **Trash**, **User guide** and **Send feedback**.
+  a **Search** button on the left and **Tasks** and **People** on the
+  right. {% include since.html v="0.14.0" %}
+- Tapping **Search** opens the [command palette](/guide/command-palette/)
+  at the bottom of the screen, just above the keyboard, with a **Cancel**
+  button beside its field. {% include since.html v="0.14.0" %}
+- **Tasks** opens the Tasks tab, and **People** opens the
+  [People view](/guide/people/#the-people-view) over the whole screen. {% include since.html v="0.14.0" %}
+- To see your notes, choose **Notes** in the **⋯** menu, or **Go to all
+  notes** in the palette: the sidebar opens over the whole screen. Opening
+  a note closes it, and so does the close button in its top corner. {% include since.html v="0.14.0" %}
+- The **⋯** button at the top right holds **Notes** {% include since.html v="0.14.0" %}, **Settings**,
+  **Account**, **Trash**, **User guide** and **Send feedback**.
 - The AI chat opens over the whole screen. The right sidebar isn't
   available at this width.
 
