@@ -236,5 +236,5 @@ Suggesting), or has Windows line endings, is skipped, and the others go
 ahead. One notification reports what changed, what was skipped and how
 many matches were left as they are. If a vault fails, its changes are undone.
 
-To jump to a note by its title, run a command or open a setting, use the
+To jump to a note by its title or text {% include since.html v="0.14.0" %}, run a command or open a setting, use the
 [command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.
