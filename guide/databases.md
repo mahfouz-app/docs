@@ -100,6 +100,20 @@ A database note opens as a table in its own tab. To see or edit the
 note itself, click **View source**. In Preview, the block shows as an
 **Open database** card.
 
+The tab is laid out like a note: {% include since.html v="0.14.0" %}
+
+- The breadcrumbs, with the note's **Details**, **Backlinks** and
+  **Attributes** pills to their right.
+- The page icon and the title, at the width of a note's text, then the
+  number of rows. When filters hide some rows, it says how many are shown,
+  such as **3 of 4 rows**.
+- The views as tabs, then **Filter**, **Sort**, **Group** and **Columns**.
+- The bottom bar shows where the note stands and offers **Publish** and
+  **Share**. Its **View source** button opens the note itself. The width
+  button switches the tab between the text width and the full width of the
+  pane; this device remembers the choice for each database. **Appearance**
+  and **Zoom** work as they do for a note.
+
 To rename the database, click its title at the top of the tab, type the new
 name, and press <kbd>Enter</kbd>. Press <kbd>Escape</kbd> to cancel. The
 name is the note's heading, so its file follows it, as it does when you
@@ -196,8 +210,9 @@ and formatting elsewhere in the block are kept.
 ## Views
 
 A database can have several views of the same rows, each with its own sort,
-filters, grouping, and columns. The views appear as buttons in the toolbar;
-click one to show it. The view you picked is remembered on this device.
+filters, grouping, and columns. The views appear as tabs under the title,
+each with an icon for its kind {% include since.html v="0.14.0" %}; click one
+to show it. The view you picked is remembered on this device.
 
 - **+ View** adds a view: **Table**, **Board** grouped by one of the
   database's Select attributes, **Gallery** with the cover image you
