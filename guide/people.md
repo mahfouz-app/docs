@@ -45,6 +45,12 @@ vault's people and collaborators, matched on handle and name; pick one to
 write their `@handle`. An `@` inside code, a link or an email address
 doesn't open it.
 
+- With nothing typed after `@`, the people you picked recently come first,
+  under **Recent**, then **All people**. What you type after `@` searches
+  them all. Recent is kept for each vault on this computer only: it isn't
+  saved in the vault or shared with collaborators. The task assignee picker
+  and a relation to the People database list the same recent people.
+  {% include since.html v="0.14.0" %}
 - **Add “x” as a person…**, the last row, adds someone new from what you
   typed and writes their mention.
 - **Over a selection:** select a name and press `@`. If it's exactly one

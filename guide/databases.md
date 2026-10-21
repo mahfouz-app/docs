@@ -365,6 +365,9 @@ pointed at a different database.
 - Click a Relation cell's edit button, or press <kbd>Enter</kbd> on it, to
   open the picker. Type to search the other database's rows; the rows
   already linked are listed first.
+- A relation to your People database lists people by name and `@handle`,
+  with **Search people**: the people you picked recently come first, under
+  **Recent**, then **All people**. {% include since.html v="0.14.0" %}
 - Click a row, or press <kbd>Enter</kbd> on it, to link or unlink it. Choose
   **Done**, or click or move focus outside the picker, to apply your changes
   as one commit. <kbd>Tab</kbd> moves to the picker's buttons.

@@ -103,8 +103,13 @@ your own login.
 To change a task's assignee, click its assignee chip. The picker checks the
 current assignee:
 
-- Type to filter the list, then click a person or use the arrow keys and
-  Enter.
+- With nothing typed in **Search people**, it lists the current assignee,
+  then **Recent**: the last five people you picked in this vault on this
+  computer. **All people** and **Unassign** follow.
+  {% include since.html v="0.14.0" %}
+- Type to search by handle and name, then click a person or use the arrow
+  keys and Enter. Among equally good matches, recent people come first.
+  {% include since.html v="0.14.0" %}
 - To assign someone who isn't listed, type their login and pick
   **Assign @login**.
 - **Unassign** removes the assignee and keeps the date.
