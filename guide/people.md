@@ -66,6 +66,14 @@ doesn't open it.
 - Hover a mention to see the person's card: their email, phone, GitHub and
   website, with **Open** to open their note, **Copy email**, and **vCard**
   to export them.
+- To find every note that mentions someone, choose **Find mentions** on
+  their card, or <kbd>Cmd/Ctrl</kbd>+click the mention. From the keyboard,
+  put the cursor on the mention and run **Find mentions of person** from
+  the [command palette](/guide/command-palette/), or give it a key in
+  [Shortcuts](/guide/shortcuts/). It opens the
+  [Search tab](/guide/links/#search) with `person:handle`, which also finds
+  the notes with a task assigned to them, and the notes that mention the
+  person's GitHub login. {% include since.html v="0.13.0" %}
 
 ## The People view
 

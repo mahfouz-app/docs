@@ -97,6 +97,44 @@ def greet(name: str) -> str:
     return f"Hello, {name}!"
 ```
 
+A longer block to fold from the rail, collapse, or switch light or dark:
+
+```ts
+class Library {
+  private notes = new Map<string, Note>();
+
+  add(note: Note): void {
+    if (this.notes.has(note.id)) {
+      throw new Error(`Duplicate note ${note.id}`);
+    }
+    this.notes.set(note.id, note);
+  }
+
+  titles(): string[] {
+    return [...this.notes.values()].map((note) => {
+      const title = note.title.trim();
+      return title || "Untitled";
+    });
+  }
+}
+```
+
+A file extension as the language (`py` shows Python), folding by its
+indentation:
+
+```py
+def summarize(notes):
+    for note in notes:
+        if note.title:
+            print(note.title)
+        else:
+            print("Untitled")
+```
+
+```text
+Plain text, written as text.
+```
+
 ```
 A block with no language.
 ```

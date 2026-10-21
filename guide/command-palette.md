@@ -28,7 +28,7 @@ you type anything, Commands and Settings list everything of their kind. {% inclu
 
 The palette matches titles only. To search the text inside your notes,
 press the **Go to search** key while the palette is open. It closes the palette and opens the
-[search view](/guide/links/#search) with what you typed. The palette's
+[Search tab](/guide/links/#search) with what you typed. The palette's
 footer names the key, and so does the list when nothing matches. If you
 unbind **Go to search**, the palette doesn't show it. {% include since.html v="0.13.0" %}
 

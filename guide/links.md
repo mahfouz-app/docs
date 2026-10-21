@@ -47,8 +47,9 @@ URL) is a tag: `#project`, `#ideas`, etc. A note's frontmatter `tags:` list
 counts too (`tags: [project, ideas]`, or one `- item` per line; a leading `#`
 is optional). Mahfouz picks tags up automatically.
 
-Every tag can be clicked. Clicking one opens the **Tags** view in the left
-rail and adds that tag to the selection:
+Every tag can be clicked. Clicking one opens the [Search tab](#search)
+with `tag:name` in its field, listing the notes that have that tag in
+every vault: {% include since.html v="0.13.0" %}
 
 - In Preview, click the tag. In Source, <kbd>Cmd/Ctrl</kbd>+click it (a
   plain click places the cursor so you can edit it).
@@ -56,31 +57,27 @@ rail and adds that tag to the selection:
   note's `tags` attribute, and a tag in the right sidebar's **Tags** section
   work the same way.
 
-Clicking a tag that's already selected keeps it selected. To remove a tag,
-use the × on its chip, or **Clear** to start over.
+With a `tag:` in the search, **Narrow by** under the search field lists the
+other tags those notes carry. Click one to add it as another `tag:`: only
+notes with **all** the tags stay. To remove a tag, use the × on its chip
+in the summary line, or delete it from the field. {% include since.html v="0.13.0" %}
 
-The **Tags** view (**Tags** in the left rail, <kbd>Mod</kbd><kbd>3</kbd>) works like
-search:
+While you type `tag:` and part of a name, **Matching tags** lists the tags
+whose names contain it, so `tag:pro` offers `#project` and `#improv`.
+Click one to finish the word. `person:` does the same with people's
+handles and names. {% include since.html v="0.13.0" %}
 
-- The field at the top holds the selected tags as chips. Type in it to
-  find a tag and press <kbd>Enter</kbd> to add it; <kbd>Backspace</kbd> in
-  the empty field removes the last one.
-- With nothing selected, it lists every tag with its note count, and typing
-  in the field filters that list. **Untagged** lists notes with no tags.
-- With tags selected, it shows only notes that have **all** of them, across
-  every vault. **Narrow by** lists the other tags those notes carry, with
-  counts; pick one to narrow further.
-
-The selection only filters the Tags view. Home always shows every note, and
-the selection is still there when you come back to Tags.
+With the search field empty, the Search tab lists every tag with its note
+count, and **Untagged**, which searches `is:untagged` for notes with no
+tags. {% include since.html v="0.13.0" %}
 
 ### Rename a tag
 
 **Rename tag…** renames a tag in every note of every vault that has it.
 Open it from the tag's menu:
 
-- In the **Tags** view, right-click a tag in the list, a selected tag's
-  chip, or a row under **Narrow by**.
+- In the [Search tab](#search), right-click a tag in the list it shows
+  while the field is empty, or a tag under **Narrow by**. {% include since.html v="0.13.0" %}
 - In the editor, right-click a tag (in Preview or Source) and choose
   **Rename tag #name…**. With the cursor on a tag and nothing selected,
   <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key opens the same
@@ -121,9 +118,16 @@ changes are undone, the others keep theirs, and the notification offers
 
 ## Search
 
-**Search** in the left rail (<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>) opens the search view in the left
-sidebar. It searches the titles and text of your notes in **all open
-vaults** as you type.
+<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>, **Search** in the left rail, or
+the scope button in the note's [Find bar](/guide/editor/#find-and-replace)
+opens the **Search tab** in the main pane. There's one Search tab: opening
+it again brings it to the front with its query, results and place kept.
+The tab is titled with what you searched for. {% include since.html v="0.13.0" %}
+
+It searches the titles and text of your notes in **all open vaults** as
+you type. With text selected in the note, or a query in its Find bar,
+<kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd> starts the search with it. On
+the desktop, **Edit → Find in All Notes** does the same. {% include since.html v="0.13.0" %}
 
 A word matches anywhere inside a word, so `udget` finds "budget", and
 `كتاب` finds "والكتاب" and "بالكتاب". Words
@@ -138,30 +142,78 @@ You can narrow a search with:
 | `"exact phrase"` | Notes with those words together, in that order |
 | `-word` | Only notes without that word |
 | `tag:name` | Only notes with that tag (`tag:#name` works too) |
+| `person:handle` | Only notes that [mention](/guide/people/#mentions) `@handle` or have a [task](/guide/tasks/) assigned to them. A person's handle and their GitHub login find the same notes, mentions and tasks under either. `person:@handle` works too {% include since.html v="0.13.0" %} |
+| `is:untagged` | Only notes with no tags {% include since.html v="0.13.0" %} |
 | `in:vault` | Only notes in that vault; quote a name with spaces, `in:"Work notes"` |
 
-Under the search box, a summary line shows the `tag:` and `in:` filters
-you've used (click one to remove it from the search), how many notes
-matched, and the sort: **Relevance**, **Edited** or **Title**.
+**Match case** (`Aa`), **Match whole word** (`ab`) and **Use regular
+expression** (`.*`) in the search field work as they do in the note's Find
+bar, and <kbd>Alt</kbd><kbd>C</kbd>, <kbd>Alt</kbd><kbd>W</kbd> and
+<kbd>Alt</kbd><kbd>R</kbd> switch them. With one of them on, a long search
+can stop with "Search too slow; narrow it". {% include since.html v="0.13.0" %}
 
-Each result shows the note's title, a snippet with your matches
-highlighted, and where the note sits: its folders, and its vault when you
-have more than one open. The note you open highlights the words and
-phrases you searched for, never the operators, and shades the line of the
-first match until you click, type or move the cursor in the note. Edit the
-query and the shading follows the first match.
+Under the search field, a summary line shows the `tag:`, `person:`, `in:`
+and `is:untagged` filters you've used as chips (click × on one to remove it
+from the search), and the sort: **Relevance**, **Edited** or **Title**. The
+count in the field reads how many matches in how many notes. {% include since.html v="0.13.0" %}
+
+The results are grouped by note: its title, where it sits (its folders,
+and its vault when you have more than one open), then a row for each
+matching line, with its line number and your matches highlighted. A note
+lists up to 20 lines, then says how many more it has. {% include since.html v="0.13.0" %}
 
 | Key | What it does |
 |---|---|
-| <kbd>↑</kbd> / <kbd>↓</kbd> | Move through the results |
-| <kbd>Enter</kbd> | Open the note beside the results, keeping the search box focused, so <kbd>↓</kbd> then <kbd>Enter</kbd> walks through the results |
-| <kbd>Mod</kbd><kbd>Enter</kbd> | Open the note and move into the editor |
+| <kbd>↑</kbd> / <kbd>↓</kbd> | Move through each note's title and its matching lines |
+| <kbd>Enter</kbd> | Open the note at that line, or at its top on its title |
+| <kbd>Mod</kbd><kbd>Enter</kbd> | Open it in a new tab (or <kbd>Cmd/Ctrl</kbd>+click the line or title) |
 
-With the search box empty, the view lists your recent searches and a few
-search tips. Recent searches are kept on this device only.
+The note you open highlights the words and phrases you searched for, never
+the operators, while the Search tab stays open, and shades the line you
+opened until you click, type or move the cursor in the note.
+
+With the search field empty, the tab lists your recent searches, every tag
+with its note count (see [Tags](#tags)) and a few search tips. Recent
+searches are kept on this device only.
 
 An [encrypted note](/guide/encryption/) is found by its title only: its
 text isn't searched.
+
+### Replace across notes {% include since.html v="0.13.0" %} {#replace-across-notes}
+
+Click the chevron at the left of the search field to show the **Replace**
+field. Each match in the results then reads old → new: the old text struck
+through, the new text underlined.
+
+- Each note has a checkbox. Untick a note to leave it out.
+- A match on the line a note's title comes from has its own **changes the
+  title** box, unticked at first. A note whose title changes may have its
+  file renamed in a following commit.
+- A note in [Suggesting mode](/guide/track-changes/) is marked **as
+  suggestions**: it gets each replacement as a tracked substitution
+  instead. Matches a suggestion can't change, such as someone else's
+  suggestion or a link's address, are left as they are.
+- In every note, matches in suggestion and comment markup (a
+  suggestion's author, a comment's entries) are left as they are, so a
+  replace never changes who wrote them.
+- Encrypted notes, notes whose
+  [edits are waiting](/guide/when-sync-fails/#edits-to-title-are-waiting)
+  for your choice and vaults that are [git-crypt locked](/guide/encryption/)
+  are skipped. A line under the summary says what's left out.
+
+**Replace** (<kbd>Enter</kbd> in the Replace field) changes the matches on
+the highlighted line. **Replace all** (<kbd>Mod</kbd><kbd>Enter</kbd>)
+names what it changes, such as "7 in 2 notes", and asks once before
+writing. When the search stopped early, because it hit its limit or ran
+too long, Replace all is off until you narrow it. After you change the
+Replace text, both buttons are off for a moment, until the preview shows
+the new text.
+
+Each vault gets one commit, `Replace "old" with "new" in N notes`. A note
+that changed since the preview (its text, or a switch between Editing and
+Suggesting), or has Windows line endings, is skipped, and the others go
+ahead. One notification reports what changed, what was skipped and how
+many matches were left as they are. If a vault fails, its changes are undone.
 
 To jump to a note by its title, run a command or open a setting, use the
 [command palette](/guide/command-palette/) (<kbd>Mod</kbd><kbd>K</kbd>) instead.

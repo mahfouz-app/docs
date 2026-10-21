@@ -49,17 +49,39 @@ due: **Today 14:00**, **Wed, Oct 14**, or **Overdue · Oct 6**. A done task's
 chips are dimmed. In Live mode, put the cursor on the line to see and edit
 the raw text; Preview always shows the chips.
 
+### Placeholder chips {% include since.html v="0.13.0" %} {#placeholder-chips}
+
+While the cursor is on a checklist item that has a title, dashed
+**Assign** and **Due date** chips show after it for whatever the line is
+still missing. Click one to open the assignee or date picker; hover it to
+see its key (<kbd>@</kbd> or <kbd>!</kbd>). The × beside a chip hides it on
+that line until you reload; hiding **Assign** also stops a date from adding
+your own `@login`. Assigning someone on a line with no date yet opens the date
+picker next, since a line without a date isn't a task. A handle typed at the
+end of a checklist item (`- [ ] Call @ana`) counts as its assignee once it
+gets a date.
+
 ### Set a date
 
-Click the date chip, or type a space and `//` after the title of a
-checklist item, to open the date picker.
+Type a space and <kbd>!</kbd> after the title of a checklist item to choose
+a due date from a menu. {% include since.html v="0.13.0" %} It starts with **Today**, **Tomorrow** and
+**Next week**, and narrows as you type: a weekday (`!fri`), a day of a month
+(`!oct 30` or `!30 oct`), an ISO date (`!2026-10-30`), each with an optional
+time (`!tomorrow 3pm`, `!fri 15:00`). Pick a row and the line gets
+` // YYYY-MM-DD`; **Pick a date and time…** opens the date picker. Typing
+`//` no longer opens anything; the `//` in the line is written for you.
+{% include since.html v="0.13.0" %}
+
+Click the date chip to open the date picker on a task's date.
 
 - Pick a day in the calendar, or use **Today**, **Tomorrow** or **Next Mon**.
   The calendar's weeks start on the day set in Settings → General →
   [First day of week](/guide/settings/).
-- Add a time if you want one; leave it empty for an all-day task. The time
-  is saved once it's complete, and again when you leave the field or close
-  the picker.
+- Add a time if you want one; leave it empty for an all-day task. Type it
+  as you'd write it: `14:30`, `1430`, `9`, `2:30pm` or `2.30 p` all work, and
+  the line under the field shows how it was read. {% include since.html v="0.13.0" %}
+  The time is saved when you leave the field, press Enter, click **Done** or
+  close the picker; one it can't read is marked in red and isn't saved.
 - **Remove date** turns the task back into an ordinary checklist item.
 - The keyboard works too: the arrow keys move between days, Page Up and Page
   Down change the month, Enter picks the day, and Esc closes the picker.
@@ -110,8 +132,8 @@ database, with three views to pick from at the top:
 - **Board** puts the tasks in three columns: **To do**, **In progress**
   and **Done**. Drag a card to another column to change its status, or
   open the card's menu and pick a column under **Move to**. Each card
-  shows its title, then its `#tags` on their own line (click one to open
-  it in the Tags view), then its note and its due date, with an icon for
+  shows its title, then its `#tags` on their own line (click one to search
+  for it in the [Search tab](/guide/links/#tags)), then its note and its due date, with an icon for
   whether it's overdue, due today, upcoming or done. Tags at the end of
   the title move to the tag line; a tag in the middle of the title stays
   there, tinted. On a [person's page](/guide/people/#a-persons-page), a
@@ -138,8 +160,8 @@ In every view:
   tasks shows as a chip with its count under the toolbar. Click chips to
   show only the tasks carrying any of them; **Clear** shows every task
   again. Only tags on the task's own line count, not the note's other
-  tags. Clicking a `#tag` on a card or in the **Tags** column opens the
-  [Tags view](/guide/links/#tags) with that tag added instead. {% include since.html v="0.12.0" %}
+  tags. {% include since.html v="0.12.0" %} Clicking a `#tag` on a card or in the **Tags** column opens the
+  [Search tab](/guide/links/#tags) with `tag:name` instead. {% include since.html v="0.13.0" %}
 - Clicking a reminder opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something

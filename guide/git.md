@@ -61,9 +61,15 @@ Vault Settings → **Vault** section:
   - Every 5 minutes, when the app regains focus and when you come back
     online, it pulls, then pushes anything still waiting. A push that failed
     (offline, a sign-in problem) is retried this way, and at the next launch.
-  - When you close the window or quit, it saves, commits and pushes first,
-    waiting a few seconds at most. A quit the system starts (logging out,
-    shutting down) doesn't wait; those commits go out at the next launch. {% include since.html v="0.12.0" %}
+  - A vault whose remote repository isn't found stops syncing in the
+    background until you fix it (see
+    [When sync fails](/guide/when-sync-fails/#the-remote-repository-wasnt-found)). {% include since.html v="0.13.0" %}
+  - When you close the window or quit, it saves, commits and pushes first.
+    A quit the system starts (logging out, shutting down) doesn't wait;
+    those commits go out at the next launch. {% include since.html v="0.12.0" %}
+  - If that takes more than a moment, a dialog shows what it's waiting
+    for. **Quit now** quits without waiting (anything not pushed goes out
+    at the next launch), and **Don't quit** keeps Mahfouz open. {% include since.html v="0.13.0" %}
 - **When both sides have new commits**: Mahfouz combines them in a "Merge
   remote changes" commit. That includes a note changed on both sides, when
   the two sides changed different attributes or different lines: for
@@ -103,6 +109,10 @@ a remote shows a cloud:
   [When sync fails](/guide/when-sync-fails/)).
 
 A local-only vault, with no remote, shows a computer icon instead.
+
+**Settings → Vaults** lists each vault's status: **Local only**,
+**Connected**, or, after a failed sync, what failed, such as **Push failed**
+or **Remote not found**. Hover the status for details. {% include since.html v="0.13.0" %}
 
 Click the cloud to sync now. Hover it to see when the vault last pushed and
 last pulled.

@@ -21,6 +21,45 @@ pick up a title-based name the next time their title changes. Vaults
 created before this layout are offered a one-time migration on open;
 declining keeps the older one-folder-per-note shape, which still works.
 
+{% include since.html v="0.13.0" %} To start every new note's file name with
+the same text, such as the date it was created, set **New note prefix** in
+**Settings → Vaults →** your vault **→ Notes**. Each vault has its own.
+The prefix is text plus [fields](/guide/fields/) from the vault's Fields:
+**+** in the prefix inserts one, showing what it reads today, and clicking
+a field's chip swaps or removes it. With the `today` field, `{today}_`
+names a note `2026-10-19_meeting_notes.md`; `{id}` adds the note's ID.
+Below the prefix, a line shows what a note created now would start with.
+It's stored in the vault's `.config/settings.md` as `new_note_prefix`,
+the fields by name: `{today}_{id}_`.
+{: #new-note-prefix}
+
+- **Which fields**: Date, Timestamp and Note ID fields, and Text fields on
+  one line. A field whose value changes every time (Random text, or a Text
+  field using `{uuid}`), needs the note's title or a slide, or holds
+  several lines can't be used. {% include since.html v="0.13.0" %}
+- **Dates** are filled in from the date the note was created, so the
+  prefix stays the same when the file name follows a new title. {% include since.html v="0.13.0" %}
+- **A field's format decides how the prefix reads.** The prefix is worked
+  out again whenever a note's file name follows its title, so after you
+  change a field's format, notes take the new format the next time they're
+  renamed. Renaming a field in the Fields list renames it in the prefix
+  too. {% include since.html v="0.13.0" %}
+- **A missing field**: if the prefix names a field that's been deleted, or
+  one that can't be used, its chip is marked, new notes get no prefix, and
+  existing notes keep their file names when their titles change. {% include since.html v="0.13.0" %}
+- **Older prefixes**: a prefix written with the earlier date codes
+  (`YYYYMMDD_`, `R` for the note's ID) is converted once, when the vault
+  opens, in a commit of its own: the date part becomes a Date field such
+  as `prefix_date`, `R` becomes the Note ID field, and the prefix reads the
+  same. One using `YY`, `hh` or `a`, which have no field equivalent, keeps
+  working as before; Settings shows it read-only with the reason, and
+  **Replace** lets you write it again with text and fields. Letters are
+  otherwise never read as codes: `draft-` stays `draft-`. {% include since.html v="0.13.0" %}
+- **Named by ID**: in a vault where new notes are named by their ID, the
+  prefix isn't used, and its field is greyed out. {% include since.html v="0.13.0" %}
+
+^
+
 - **New note**: <kbd>Cmd/Ctrl</kbd><kbd>N</kbd> creates a sibling of whatever's selected;
   <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd> creates a child of it; <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>N</kbd> creates a note
   at the parent level. Each vault section also has a `+` button in the

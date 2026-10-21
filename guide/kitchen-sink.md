@@ -61,6 +61,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/tag_rename_flow.md %}
 ````
 
+## A note ending in a code block: Ends with a code block
+
+`kitchen_sink/ends_with_code_block.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/ends_with_code_block.md %}
+````
+
 ## A deck: Sample deck
 
 `kitchen_sink/sample_deck.md`

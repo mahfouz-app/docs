@@ -81,7 +81,19 @@ authorized.
   when you approve it, its files are checked against their recorded
   checksums, and it can reach only the web addresses it lists. A plugin
   still runs inside the app with access to your vaults, so install only
-  plugins you trust.
+  plugins you trust. Installed plugins share the app's page, so one plugin
+  can use another's features. A plugin's helper program, such as the one
+  Slidev presentations run, runs with your user account's access to your
+  files: the app checks that the vault it's handed is one you opened, but
+  not what the helper does after that. {% include since.html v="0.13.0" %}
+- **The desktop app opens only the folders you chose.** File and git
+  operations reach only the vaults you've opened in the app, and so does
+  the vault a plugin's helper program is handed. The search index
+  (`mahfouz.db`) is a cache that the app's own page can rewrite, so it
+  never decides which folders the app may open. If the sidebar or search
+  ever looks wrong, **Rebuild from vault** in [Vault
+  Settings](/guide/vaults/) rebuilds it from your notes.
+  {% include since.html v="0.13.0" %}
 - **Sign-ins on the web are protected.** You sign in at
   platform.mahfouz.app. Your GitHub tokens stay on the server, encrypted,
   and never reach the browser. Your session cookies can't be read by
