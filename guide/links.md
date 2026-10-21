@@ -48,6 +48,25 @@ URL) is a tag: `#project`, `#ideas`, etc. A note's frontmatter `tags:` list
 counts too (`tags: [project, ideas]`, or one `- item` per line; a leading `#`
 is optional). Mahfouz picks tags up automatically.
 
+### Suggested tags {% include since.html v="0.14.0" %} {#suggested-tags}
+
+Type `#` in a note and Mahfouz lists the vault's tags, most used first,
+with how many notes carry each. Keep typing to narrow the list: tags that
+start with what you typed come first, then tags that contain it. The tags
+you picked last appear under **Recent** at the top.
+
+- Use the arrow keys to pick a tag, then press <kbd>Enter</kbd>. Without
+  the arrow keys, <kbd>Enter</kbd> starts a new line, so a tag you finish
+  typing yourself stays as you typed it.
+- At the start of a line the list waits for the first letter (`#i`), since
+  `#` followed by a space starts a heading.
+- The list doesn't open inside code, links or wikilinks.
+
+The same list, with a search field, opens from **Add tag** in a note's
+[`tags` attribute](/guide/attributes/#lists) and from **Tags** in the
+[Tasks tab](/guide/tasks/). Recent tags are kept on this computer only,
+per vault, and never in the vault.
+
 Every tag can be clicked. Clicking one opens the [Search tab](#search)
 with `tag:name` in its field, listing the notes that have that tag in
 every vault: {% include since.html v="0.13.0" %}
