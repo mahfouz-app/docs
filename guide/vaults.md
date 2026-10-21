@@ -169,3 +169,42 @@ another note, **Import…** to bring notes in from Notion or a folder (desktop
 app), and **Back up to GitHub…** to keep a private copy there (when the vault
 isn't on GitHub yet). The card isn't part of the note. Close it with **×**
 and it doesn't come back on this computer.
+
+## Open Markdown files from Finder
+
+{% include since.html v="0.14.0" %} The desktop app opens `.md` and
+`.markdown` files. Double-click one in Finder or File Explorer, or choose
+**Open With → Mahfouz**, and Mahfouz opens it:
+
+- **A note in one of your vaults** opens as that note.
+- **A file in a vault that isn't a note yet** opens with *This file is in
+  ⟨vault⟩ but isn't a note yet.* Click **Make it a note** to add it to the
+  vault.
+- **Any other file** opens in a tab of its own, outside any vault.
+
+### Files outside your vaults
+
+A file outside your vaults opens as just that file. Your edits save
+straight to it, with no history. It has no attributes, backlinks, comments,
+publishing or sharing, and its `[[wikilinks]]` and `@mentions` don't lead
+anywhere. A strip at the top offers two ways to bring it in:
+
+- **Open folder as vault** opens the folder around the file as a vault: the
+  root of the git repository it's in, or the file's own folder when it isn't
+  in one. Mahfouz asks first. It won't open your home folder, Downloads,
+  Desktop or Documents this way, unless that folder is a git repository.
+- **Import into…** copies the file into a vault you pick, as a new note.
+  The original file stays as it is.
+
+These tabs don't reopen after you quit Mahfouz.
+
+### Make Mahfouz the default Markdown app
+
+- **macOS**: in **Settings → General → Default Markdown app**, click **Make
+  Mahfouz the default**. macOS asks you to confirm; once you do, the setting
+  reads **Mahfouz is the default**.
+- **Windows**: right-click a Markdown file, choose **Open with → Choose
+  another app**, pick Mahfouz and select **Always**.
+- **Linux**: use your file manager's **Open With** (or the file's
+  **Properties**), or run `xdg-mime default` with Mahfouz's `.desktop` file
+  for `text/markdown`.

@@ -50,6 +50,11 @@ time you open Mahfouz. Choose **Monday**, **Sunday** or **Saturday** to
 override it. A Date attribute's field uses your system's or browser's own
 date picker, which doesn't follow this setting.
 
+**Default Markdown app** (Settings → General, desktop app on macOS) makes
+Mahfouz the app that opens `.md` and `.markdown` files: see [Open Markdown
+files from Finder](/guide/vaults/#open-markdown-files-from-finder).
+{% include since.html v="0.14.0" %}
+
 **New note prefix** is set per vault, in **Settings → Vaults →** your vault
 **→ Notes**, not in Settings → General: see [Notes &
 organization](/guide/notes/). {% include since.html v="0.13.0" %}
