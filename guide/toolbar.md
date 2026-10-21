@@ -100,10 +100,11 @@ On the left:
   (text proposed for deletion stays, insertions don't), and comments are
   left out. A published note's page link goes too; it opens the page as
   last published, so update the page first if it's out of date. Share is
-  in the macOS app (also **File → Share…**) and in browsers that can share:
-  Safari; Chrome and Edge on macOS, Windows and ChromeOS; mobile browsers.
-  An encrypted note can't be shared: it has no Share button, **File →
-  Share…** is greyed out, and the command palette refuses it {% include since.html v="0.12.0" %}
+  in the macOS app and in browsers that can share: Safari; Chrome and Edge
+  on macOS, Windows and ChromeOS; mobile browsers. An encrypted note can't
+  be shared: it has no Share button, and the command palette refuses it {% include since.html v="0.12.0" %}
+  The File menu has no Share item: use the button, the command palette or
+  a key you set for Share in Settings → Shortcuts {% include since.html v="0.14.0" %}
 
 On the right:
 
