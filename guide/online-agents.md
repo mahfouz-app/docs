@@ -23,9 +23,10 @@ choose when you approve the agent decides which one it gets.
 
 ## Connect an agent
 
-1. Add `https://web.mahfouz.app/mcp` as a custom connector in your agent:
+1. Add `https://api.mahfouz.app/mcp` as a custom connector in your agent:
    in Claude, Settings → Connectors; or in Claude Desktop or Codex.
-2. The agent opens a Mahfouz page. Sign in with GitHub if asked.
+2. The agent opens a Mahfouz page on platform.mahfouz.app. Sign in with
+   GitHub if asked.
 3. Under **Repositories**, choose an access level for each repository the
    agent may use (see below), then click **Allow and continue to GitHub**.
 4. GitHub may ask you to confirm. This is a second authorization, separate
