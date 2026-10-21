@@ -103,6 +103,8 @@ the fields by name: `{today}_{id}_`.
   belongs to a note to open that note; click a plain folder to show it in
   the Sidebar. Hover any of them, or click the arrow after it, to list
   what's inside it and jump to one. {% include since.html v="0.12.0" %}
+  The bar ends with the open note's own icon and title, so the note stays
+  named after its title scrolls out of view. {% include since.html v="0.13.0" %}
 - **Sidebar menu**: right-click empty space in the Sidebar for **New
   note** and **New folder** (in the active vault), **New vault…**, **Open
   vault…**, and the grouping, sort and filename-display options.
