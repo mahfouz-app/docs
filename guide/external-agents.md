@@ -46,7 +46,7 @@ URL instead of a token:
 
 1. Open Settings → AI → External agents in the browser you use Mahfouz in,
    and turn on **Allow external agents (MCP)**.
-2. Copy the **Connector URL**, `https://web.mahfouz.app/mcp`, and add it as a
+2. Copy the **Connector URL**, `https://api.mahfouz.app/mcp`, and add it as a
    custom connector in your agent: in Claude, Settings → Connectors; or in
    Claude Desktop or Codex.
 3. The agent opens a Mahfouz page. Sign in with GitHub if asked, check the

@@ -5,7 +5,7 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 19 October 2026*
+*Effective 21 October 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
@@ -119,13 +119,16 @@ desktop-only. See [Mahfouz on the web](/guide/web/).
 
 ## What Mahfouz's server keeps
 
-Mahfouz's server runs on Cloudflare. It keeps only these things, and only
+Mahfouz's server runs on Cloudflare, at two addresses: `api.mahfouz.app`
+answers the web app's and the desktop app's requests, and
+`platform.mahfouz.app` signs you in. It keeps only these things, and only
 once you use the feature:
 
-- **Your GitHub sign-in on the web.** When you sign in to GitHub at
-  web.mahfouz.app, the server keeps your GitHub account ID, username, name and
-  avatar, and the GitHub tokens for your session, encrypted. Your browser
-  holds a cookie that identifies the session. The session ends, and all of
+- **Your GitHub sign-in on the web.** When you sign in to GitHub on the
+  web, which happens at platform.mahfouz.app, the server keeps your GitHub
+  account ID, username, name and avatar, and the GitHub tokens for your
+  session, encrypted. Your browser holds a cookie on platform.mahfouz.app
+  and one on api.mahfouz.app that identify the session. The session ends, and all of
   it is deleted, when you sign out or 30 days after you signed in.
 - **Published pages.** A note you publish, its images and the page made
   from it are stored until you unpublish it, along with its title, link,
@@ -134,7 +137,8 @@ once you use the feature:
   page's title, link, your GitHub account ID and when it was published and
   unpublished.
 - **Agents on the web.** If you connect an agent such as claude.ai to
-  web.mahfouz.app, the server keeps the connection you approved, with its
+  Mahfouz on the web, which you approve at platform.mahfouz.app, the
+  server keeps the connection you approved, with its
   tokens stored as hashes, for up to 30 days or until you revoke it. What
   the agent reads and writes passes through to your open tab and isn't
   stored.
@@ -150,15 +154,19 @@ once you use the feature:
 
 ## Cookies
 
-web.mahfouz.app sets two cookies, both needed for signing in, and no others:
-one that holds your session for up to 30 days, and one that lasts 10
-minutes while GitHub sign-in completes. Published pages and this website
+Mahfouz's server sets cookies only for signing in, and no others:
+platform.mahfouz.app and api.mahfouz.app each set one that holds your
+session for up to 30 days; platform.mahfouz.app sets one that lasts 10
+minutes while GitHub sign-in completes; and api.mahfouz.app sets one that
+lasts 5 minutes while you're sent to sign in, and one that lasts a minute
+when you sign out. The web app at web.mahfouz.app sets none. Published pages and this website
 set no cookies. This website remembers your Light / Dark choice in your
 browser only.
 
 ## Who else handles data
 
-- **Cloudflare** hosts the web app, Mahfouz's server and published pages.
+- **Cloudflare** hosts the web app, Mahfouz's server (`api.mahfouz.app` and
+  `platform.mahfouz.app`) and published pages.
 - **Datadog** receives error reports, timings and usage counts from the
   apps and the server, under [Datadog's privacy
   policy](https://www.datadoghq.com/legal/privacy/).

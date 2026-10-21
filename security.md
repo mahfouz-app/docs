@@ -28,9 +28,10 @@ We don't offer a bug bounty.
 ## In scope
 
 - The Mahfouz desktop app, in its latest release.
-- The web app at `web.mahfouz.app` and Mahfouz's server, including
-  `api.mahfouz.app`, which the desktop app uses to publish and send
-  feedback.
+- The web app at `web.mahfouz.app` and Mahfouz's server:
+  `api.mahfouz.app`, which answers the web app's requests and the desktop
+  app's publishing and feedback and hosts the MCP connector, and
+  `platform.mahfouz.app`, which handles sign-in and approving agents.
 - Published pages at `p.mahfouz.app`.
 - This website, `mahfouz.app`, and the official `mahfouz` [plugin
   registry](/plugins/).
@@ -81,10 +82,11 @@ authorized.
   checksums, and it can reach only the web addresses it lists. A plugin
   still runs inside the app with access to your vaults, so install only
   plugins you trust.
-- **Sign-ins on the web are protected.** At web.mahfouz.app your GitHub tokens
-  stay on the server, encrypted, and never reach the browser. Your session
-  cookie can't be read by scripts or sent from other sites, and it ends 30
-  days after you sign in. Requests that change something must come from
+- **Sign-ins on the web are protected.** You sign in at
+  platform.mahfouz.app. Your GitHub tokens stay on the server, encrypted,
+  and never reach the browser. Your session cookies can't be read by
+  scripts or sent from other sites, and they end 30 days after you sign
+  in. Requests to api.mahfouz.app that change something must come from
   web.mahfouz.app itself.
 - **Feedback is filed by Mahfouz's server.** The bot account that files
   feedback issues keeps its token on the server; the app carries none.
@@ -92,8 +94,8 @@ authorized.
   login, and only so the server can check it with GitHub.
 - **Published pages are kept apart.** Pages live on their own domain,
   `p.mahfouz.app`, with a strict content security policy, so a page can't
-  reach your web.mahfouz.app session.
+  reach your Mahfouz session.
 - **Strict web settings.** web.mahfouz.app uses HTTPS only, a content security
-  policy that lets it talk only to itself, and refuses to be framed by
+  policy that lets it talk only to itself and api.mahfouz.app, and refuses to be framed by
   other sites.
 
