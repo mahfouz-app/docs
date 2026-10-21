@@ -98,6 +98,9 @@
     - slug: external-agents
       title: "External agents (MCP)"
       description: "Let Claude Code, Claude Desktop, Codex or claude.ai read and edit your vaults, and choose which edits wait for you."
+    - slug: online-agents
+      title: "Agents on GitHub (online MCP)"
+      description: "Connect an agent to your GitHub repositories so it works with no Mahfouz window or tab open, and how that differs from connecting through the app."
     - slug: quick-look
       title: "Preview notes in Finder"
       description: "Select a Markdown file in Finder and press Space to see it rendered, with Mahfouz's Quick Look preview on macOS."
