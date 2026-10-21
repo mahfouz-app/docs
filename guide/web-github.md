@@ -44,16 +44,22 @@ on GitHub instead, see [New vault on GitHub](/guide/vaults/#new-vault-on-github)
    above. If the repository belongs to an organization and an owner has to
    approve the installation first, Mahfouz says so; click **Check again**
    once they have.
-2. Pick the repository. Don't see it? **Manage repository access** adds it.
-   A repository encrypted with git-crypt is marked **Encrypted · desktop
-   only**: the web can't decrypt it (see [Encrypted vaults](/guide/encryption/)).
-3. Mahfouz shows the repository's size (GitHub's estimate). Above 250 MB it
-   warns that the clone may take a long time and fill that much of the
-   browser's storage. Click **Clone** and keep the tab open until it ends: a
-   clone can't be stopped part way, and a failed one leaves nothing behind.
+2. Pick the repository. Type in the filter to narrow the list, and fold an
+   account's repositories away with the arrow beside its name. Don't see it?
+   **Manage repository access** adds it. Repositories already open in this
+   browser are listed first, under **Open in Mahfouz**: picking one offers
+   **Switch to it** instead of a second copy. A repository encrypted with
+   git-crypt is dimmed and can't be picked: the web can't decrypt it (see
+   [Encrypted vaults](/guide/encryption/)).
+3. The size beside each repository is GitHub's estimate. Above 250 MB,
+   Mahfouz warns that the clone may take a long time and fill that much of
+   the browser's storage. Click **Clone** and keep the tab open until it
+   ends: a clone can't be stopped part way, and a failed one says why and
+   leaves nothing behind. To keep working meanwhile, close the dialog with
+   **×**; a notification says when the clone is done, with **Open vault**.
+   {% include since.html v="0.13.0" %}
 
-Mahfouz downloads the repository's whole history. If it's already open in
-this browser, the picker offers **Switch to it** instead of a second copy.
+Mahfouz downloads the repository's whole history.
 
 If the repository is **public**, Mahfouz asks before it clones. Once the
 vault syncs, everything you add to it is readable by anyone on the internet:

@@ -112,19 +112,32 @@ repository](/guide/web-github/#opening-a-github-repository)).
 
 1. Sign in with GitHub and install the Mahfouz app on the repository, as for
    [New vault on GitHub](#new-vault-on-github).
-2. Pick the repository.
-3. Click **Choose folder…** and pick the folder the vault goes in. Mahfouz
-   clones the repository into a new folder named after it inside that
-   folder, such as `~/Documents/notes`. If that folder already has one with
-   the same name, or it's a vault or inside one, Mahfouz says so and you
-   choose another.
-4. Click **Clone**. If the repository is public, Mahfouz asks first, since
-   everything you add to the vault becomes public once it syncs.
+2. Pick the repository from the list. Type in the filter to narrow it down;
+   repositories already open in Mahfouz are listed first, under **Open in
+   Mahfouz**, and picking one offers **Switch to it** instead of a second
+   copy. Each account's repositories fold away with the arrow beside its
+   name.
+3. Check the folder under the list. Mahfouz clones the repository into a new
+   folder named after it, such as `~/Documents/notes`, inside the folder it
+   shows; it starts at the folder your last clone went into. Click **Change
+   folder…** to pick another. If that folder already has one with the same
+   name, Mahfouz says so, with **Choose another folder…** and **Reveal in
+   Finder**: the clone always takes the repository's name, so it never
+   renames it. A folder that's a vault, or inside one, is refused too.
+4. Click **Clone**. The first time, Mahfouz asks you to confirm the folder.
+   If the repository is public, it asks first, since everything you add to
+   the vault becomes public once it syncs.
+
+While it clones, Mahfouz shows how far it has got: checking access,
+downloading (with how much has arrived) and unpacking. Close the dialog with
+**×** to keep working: the clone carries on, and a notification says when
+it's done, with **Open vault**.
 
 The clone and every sync after it use this computer's own SSH key, not your
 GitHub sign-in. Mahfouz checks that the key works before it clones; if it
 doesn't, it says how to fix it, and **Check again** tries again. A clone that
-fails leaves nothing behind.
+fails says why (a dropped connection, a full disk), with git's own message
+under **Details**, and leaves nothing behind.
 
 ## New vault on GitHub
 
