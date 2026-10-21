@@ -75,9 +75,9 @@ Other editor behavior:
   OS-level autocomplete.
 - Misspelled words are underlined by your system's spell checker (see
   [Spelling check](/guide/spelling/)). In the macOS desktop app, what you
-  type stays as typed, except for your Text Replacements: the other macOS
-  substitutions (smart quotes, smart dashes, autocorrect and link
-  detection) are off (see
+  type stays as typed, except for your Text Replacements and spelling
+  corrections: the other macOS substitutions (smart quotes, smart dashes and
+  link detection) are off (see
   [Text substitutions](/guide/spelling/#text-substitutions)).
   {% include since.html v="0.14.0" %}
 - <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
