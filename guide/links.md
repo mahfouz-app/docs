@@ -153,10 +153,11 @@ bar, and <kbd>Alt</kbd><kbd>C</kbd>, <kbd>Alt</kbd><kbd>W</kbd> and
 <kbd>Alt</kbd><kbd>R</kbd> switch them. With one of them on, a long search
 can stop with "Search too slow; narrow it". {% include since.html v="0.13.0" %}
 
-Under the search field, a summary line shows the `tag:`, `person:`, `in:`
-and `is:untagged` filters you've used as chips (click × on one to remove it
-from the search), and the sort: **Relevance**, **Edited** or **Title**. The
-count in the field reads how many matches in how many notes. {% include since.html v="0.13.0" %}
+The sort sits beside the search field, on the same row: **Relevance**,
+**Edited** or **Title** (on a narrow pane, on its own line under the field).
+Under the field, a summary line shows the `tag:`, `person:`, `in:` and
+`is:untagged` filters you've used as chips (click × on one to remove it from
+the search). The count in the field reads how many matches in how many notes. {% include since.html v="0.13.0" %}
 
 The results are grouped by note: its title, where it sits (its folders,
 and its vault when you have more than one open), then a row for each
