@@ -13,8 +13,13 @@ groups. Left to right:
 - **Style**: the **Heading** dropdown: Normal text / Heading 1 / Heading 2 /
   Heading 3 / Heading 4 / Heading 5 / Heading 6 (4 to 6 {% include since.html v="0.13.0" %})
 - **Text**: **Bold**, **Italic**, **Underline**, **Strikethrough**, the
-  **Subscript / Superscript** dropdown, **Highlight**, **Inline code** and
-  **Remove formatting** (see [Remove formatting](#remove-formatting))
+  **Subscript / Superscript** dropdown, **Highlight**, the **Code** dropdown
+  and **Remove formatting** (see [Remove formatting](#remove-formatting)).
+  **Code** holds **Inline code** and **Code block**, which inserts a
+  [code block](/guide/markdown/#code-blocks), puts the selected lines in
+  one, or, inside a block, removes its backticks. The **Code** button shows
+  pressed while the cursor is in inline code or a code block.
+  {% include since.html v="0.13.0" %}
 - **Insert**:
   - **Link**: opens a field under the selection for the URL; **Enter**
     links the selected text (`[text](url)`), **Esc** cancels
@@ -22,9 +27,6 @@ groups. Left to right:
   - **Insert media or file**: opens a native multi-file picker and
     attaches the chosen files (see [Media](/guide/media/))
   - **Table**: opens the hover-grid size picker
-  - **Code block**: inserts a [code block](/guide/markdown/#code-blocks),
-    puts the selected lines in one, or, inside a block, removes its
-    backticks {% include since.html v="0.13.0" %}
   - **Embed** dropdown: inserts a block for each enabled embed plugin (such
     as Mermaid). If none are enabled, it links to Preferences instead.
 - **Paragraph**: the **List** dropdown (Bullet list / Numbered list /

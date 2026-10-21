@@ -69,8 +69,8 @@ const total = items.reduce((sum, item) => sum + item.price, 0);
 ```
 ````
 
-You can also insert one with **Code block** in the toolbar's Insert group
-or `/code` in the [slash menu](/guide/slash-menu/). On an empty line it adds
+You can also insert one with **Code block** in the toolbar's **Code**
+menu or `/code` in the [slash menu](/guide/slash-menu/). On an empty line it adds
 an empty block with the cursor in it. With text selected (or on a line with
 text), it puts those lines in a block, and inside a block it turns the block
 back into plain lines. Type the opening backticks and the language and
