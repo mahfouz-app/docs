@@ -1866,6 +1866,12 @@
   "url": "https://github.com/madsmtm/objc2"
  },
  {
+  "name": "objc2-uniform-type-identifiers",
+  "version": "0.3.2",
+  "license": "Zlib OR Apache-2.0 OR MIT",
+  "url": "https://github.com/madsmtm/objc2"
+ },
+ {
   "name": "objc2-web-kit",
   "version": "0.3.2",
   "license": "Zlib OR Apache-2.0 OR MIT",
