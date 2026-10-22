@@ -41,6 +41,37 @@ permalink: /guide/links/
   or an item in a list. That note is listed with the attribute it links
   through, for example "The Dispossessed via author", and opens at the top. {% include since.html v="0.12.0" %}
 
+### Link to a heading {% include since.html v="0.14.0" %} {#link-to-a-heading}
+
+Add `#` and a heading's text after the note's title to link to that
+heading: `[[Roadmap#Next steps]]`, or `[[Roadmap#Next steps|what's next]]`
+with different link text. `[[#Next steps]]` links to a heading in the note
+you're writing.
+
+- In Preview the link reads **Roadmap › Next steps**, or **› Next steps**
+  for a heading in the same note.
+- Type `[[Roadmap#` to list that note's headings, or `[[#` for the current
+  note's.
+- Opening the link opens the note at the heading. If the note has no such
+  heading any more, it opens at the top and a notice says **Heading not
+  found**.
+- The heading's text matches ignoring case. When two headings have the same
+  text, the link goes to the first. Only headings at the top level of the
+  note count, not one inside a quote or a list.
+- A heading link counts as a backlink to its note.
+- Markdown links work the same way: `[next steps](roadmap.md#next-steps)`
+  and `[next steps](#next-steps)` jump to the heading, by its text or by its
+  anchor (lowercase, with dashes for spaces).
+
+To copy a link to a heading, hover over it (or put the cursor on its line)
+and click the link icon at the end of the line, which copies
+`[[Roadmap#Next steps]]`. You can also right-click a heading in the
+[outline](/guide/editor/#outline-table-of-contents--page-preview), or run
+**Copy link to heading** from the
+[command palette](/guide/command-palette/) with the cursor on a heading.
+There's no copy for the note's title, in an
+[encrypted note](/guide/encryption/) or in a read-only view.
+
 ## Tags {% include since.html v="0.12.0" %} {#tags}
 
 Any `#` immediately followed by a letter (and not inside code, a link or a

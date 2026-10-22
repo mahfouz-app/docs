@@ -244,6 +244,11 @@ down. Any other link to a note appears as plain text. When you publish a
 note later, links to it on pages that are already up turn into links within
 an hour, without updating those pages.
 
+A [link to a heading](/guide/links/#link-to-a-heading) goes to that heading
+on the other note's page, and `[[#Heading]]` jumps to the heading on the
+same page. When the heading's text holds a link or math, or another heading
+has the same text, the link opens the page at the top instead. {% include since.html v="0.14.0" %}
+
 ### Link previews and language
 
 When someone shares a page's link, apps that show link previews show its
