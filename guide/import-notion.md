@@ -63,8 +63,11 @@ The dialog has these steps:
    pages or rows each holds, all ticked. Untick the ones to leave out
    (**Select none** and **Select all** help), then click **Continue**.
    Sub-pages and database rows come with the page they're in, and a link
-   to a page you left out becomes plain text. With a page link, or a single
-   shared page, this step is skipped.
+   to a page you left out becomes plain text. When there's only one, as
+   with a page link, this step is skipped; a database link lists each of
+   the database's data sources. **Back** returns to the first step and
+   keeps what was read, unless you change the link, an option or the
+   token.
 4. **Preview.** You see how many notes, databases, files, tasks and
    comments will be created, and any warnings about what can't come
    across. Under **People**, type a GitHub login for each person Notion
@@ -85,6 +88,11 @@ The dialog has these steps:
 Only that page and the pages under it are read, so this is quick even in a
 large workspace. If the page isn't connected, the dialog says so and
 nothing is read.
+
+A link to a row of a database imports the row as a page, without its
+properties; link the database to bring its rows in with their
+properties. A relation or mention that points outside the linked page
+becomes a link back to Notion.
 
 The files are downloaded, then everything is written and committed as one
 change in the vault's history: **Import from Notion: N notes**. A
