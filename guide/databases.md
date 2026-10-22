@@ -186,9 +186,11 @@ Like sorting and filtering, grouping applies on this device until you choose
   with a search box. {% include since.html v="0.14.0" %} Type to filter the
   options, and click one (or press <kbd>Enter</kbd>) to choose it; a
   Select saves as soon as you choose. When no option matches what you
-  typed exactly, **Create “⟨text⟩”** adds it as a new option, in the next
-  unused color, and sets the cell to it. **Edit options…** at the bottom
-  opens the column's type menu at its options. An attribute can be a Select
+  typed (ignoring case), the last row is **Create** followed by the new
+  option's pill, in the next unused color: choose it to add the option and
+  set the cell to it. A name that can't be an option, such as one with a
+  comma, has no Create row. **Edit options…** at the bottom opens the
+  column's options. An attribute can be a Select
   with no options yet: create them from the cells as you go.
 - A checkbox cell toggles
   with one click, or <kbd>Enter</kbd>; an unchecked one shows an empty box.
@@ -213,15 +215,20 @@ vault directly instead of becoming suggestions.
 
 - **+** at the end of the header adds an **Untitled** column right in the
   header, with its name selected. {% include since.html v="0.14.0" %}
-  - Type the column's name. A list of types opens under it: press
-    <kbd>↑</kbd> or <kbd>↓</kbd> to choose one.
-  - Press <kbd>Enter</kbd> to add the column. If you didn't choose a type,
-    it's added as Text, or with the type your vault already gives an
-    attribute of that name.
-  - Or click a type to add the column with that type and open the type's
-    step, such as a Select's options.
-  - <kbd>Escape</kbd>, or clicking elsewhere, discards the column; nothing
-    is written. A name that can't be used says why under the header.
+  - Type the column's name. The list of types is open under it from the
+    start; **More types** shows the rest. **Relation** is listed only when
+    the vault has another database.
+  - Click a type to add the column with that type. Select, Multi-select,
+    Date, Date & time and Relation then open their next step, such as a
+    Select's options; any other type puts the cursor in the column's first
+    cell.
+  - Or press <kbd>Enter</kbd> to add the column as Text. If you moved to a
+    type with <kbd>↑</kbd> or <kbd>↓</kbd> first, it's added with that type,
+    opening its step if it has one. A name your vault already gives a type
+    keeps that type.
+  - <kbd>Escape</kbd>, clicking elsewhere, or moving away with
+    <kbd>Tab</kbd> discards the column; nothing is written. A name that
+    can't be used says why under the header.
 
   The column is added to the view for everyone, in the database block, and
   a name with spaces or capitals is kept as the column's label (**Due
@@ -294,8 +301,8 @@ columns after them, and rows with no value go in the last column, "No
   (rollups, attributes with no type, Created and Updated), and on narrow
   screens. {% include since.html v="0.14.0" %}
 - A column's header shows its option as a colored pill, how many cards it
-  holds, and **+**, which adds a card that already has that column's value.
-  {% include since.html v="0.14.0" %}
+  holds, and **+**, which opens that column's new row: type a title to add
+  a card with that column's value. {% include since.html v="0.14.0" %}
 - **New in ⟨column⟩** adds a card that already has that column's value.
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
