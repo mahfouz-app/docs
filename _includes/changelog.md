@@ -1,4 +1,31 @@
 
+## 0.14.0 (2026-10-22) {#v0.14.0}
+
+* feat(plugins): host.slides.deck so Present shows child notes and resolves wikilinks
+* fix(ui): give the External agents popover its own chrome and layout
+* feat(publish): anchor links to headings on published pages
+* feat(tags): Merge into… in the tag menus
+* feat(mcp): merge_people tool
+* fix(editor): Enter at a heading's start moves the heading down
+* fix(tables): typing into a new table's header row and first column
+* Heading numbers (heading_numbers: true)
+* Import: choose which pages to import, and a Notion page link
+* Database tab: lay it out like a note
+* feat(share): the shared: marker in note frontmatter
+* feat(databases): add a column right in the header
+* fix(ui): two FolderOpenIcon exports broke develop's typecheck
+* feat(palette): match note contents after titles, with highlights
+* Clone a GitHub repository: one-screen picker, progress and hiding
+* feat(phone): a glass Search pill and a Tasks and People pill
+* feat(desktop): make Mahfouz the default Markdown app from Settings
+* feat(share): remove Share… from the File menu
+* Suggest tags as you type: #, the tags attribute and the Tasks filter
+* fix(people): New row in a People database adds a person
+* fix(editor): no drag grip on blank lines or past the note's end
+* chore(infra): remove the domain swap's one-off Terraform allowances
+* fix(editor): keep the page icon's gap from growing with the note
+
+
 ## 0.13.0 (2026-10-21) {#v0.13.0}
 
 * feat(editor): Code dropdown (Inline code, Code block), ``` + Enter closes the fence, Preview keeps fences hidden
