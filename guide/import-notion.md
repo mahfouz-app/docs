@@ -47,20 +47,52 @@ The import lands inside it. You can also run the **Import** action, which
 imports into the active note. It has no shortcut until you give it one in
 **Settings → Shortcuts** (see [Keyboard shortcuts](/guide/shortcuts/)).
 
-The dialog has three steps:
+The dialog has these steps:
 
 1. **Source and destination.** Pick **Notion**, check **Import into**
-   (**Change** picks another note or folder), and paste the token.
-   **Include comments** is on by default; turn it off for a faster import.
-   Click **Continue**.
-2. **Reading.** Mahfouz reads the shared pages. **Cancel** stops it, and
-   nothing has been written yet.
-3. **Preview.** You see how many notes, databases, files, tasks and
+   (**Change** picks another note or folder), and paste the token. To
+   import a single page, paste its link into **Page link** (next section);
+   leave it empty to import from everything shared with the integration.
+   {% include since.html v="0.14.0" %} **Include comments** is on by
+   default; turn it off for a faster import. Click **Continue**.
+2. **Reading.** Mahfouz reads the shared pages, or only the linked page
+   and what's under it. **Cancel** stops it, and nothing has been written
+   yet.
+3. **Choose pages.** {% include since.html v="0.14.0" %} When Notion shares
+   more than one top-level page or database, they're listed with how many
+   pages or rows each holds, all ticked. Untick the ones to leave out
+   (**Select none** and **Select all** help), then click **Continue**.
+   Sub-pages and database rows come with the page they're in, and a link
+   to a page you left out becomes plain text. When there's only one, as
+   with a page link, this step is skipped; a database link lists each of
+   the database's data sources. **Back** returns to the first step and
+   keeps what was read, unless you change the link, an option or the
+   token.
+4. **Preview.** You see how many notes, databases, files, tasks and
    comments will be created, and any warnings about what can't come
    across. Under **People**, type a GitHub login for each person Notion
    mentions; a login is filled in when the person's email matches one of
    the vault's collaborators. A person left blank keeps their name as plain
-   text, and their tasks stay unassigned. Click **Import**.
+   text, and their tasks stay unassigned. **Back** returns to the page
+   list with your choices kept. Click **Import**.
+
+### Import one page {% include since.html v="0.14.0" %} {#import-one-page}
+
+1. In Notion, open the page, click **•••** in its top-right corner, and
+   choose **Copy link**. A database's link works too.
+2. Make sure the page is connected to your integration: **•••** →
+   **Connections** should list it, on the page or on a page above it.
+3. In the Import dialog, paste the link into **Page link** and click
+   **Continue**.
+
+Only that page and the pages under it are read, so this is quick even in a
+large workspace. If the page isn't connected, the dialog says so and
+nothing is read.
+
+A link to a row of a database imports the row as a page, without its
+properties; link the database to bring its rows in with their
+properties. A relation or mention that points outside the linked page
+becomes a link back to Notion.
 
 The files are downloaded, then everything is written and committed as one
 change in the vault's history: **Import from Notion: N notes**. A
