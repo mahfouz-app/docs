@@ -107,7 +107,12 @@ the bottom of the screen. {% include since.html v="0.14.0" %}
 - **Open People database** opens the database itself, as a table.
 - **Import** and **Export all** are described [below](#import).
 - Right-click a person for **Open**, **Export vCard**, **Change handle…**
-  ([below](#changing-a-handle)) and **Delete**.
+  ([below](#changing-a-handle)) and **Delete**. **Merge with…** is there
+  too, and on a duplicate **Merge into ⟨owner⟩…** ([below](#merging-people)). {% include since.html v="0.14.0" %}
+- <kbd>Shift</kbd>+click people to select several (once a selection exists,
+  <kbd>Cmd/Ctrl</kbd>+click adds or removes one), then click **Merge…** in
+  the bar at the bottom (**N selected**), or right-click a selected person
+  for **Merge N people…**. {% include since.html v="0.14.0" %}
 - A warning icon marks a person whose handle doesn't work; hover it to see
   why. The handle is used by another person note (the first by path keeps
   it), is also a collaborator's GitHub login (this note takes it, so the
@@ -148,7 +153,10 @@ Under a person note's text, Mahfouz shows:
   note at the mention. Links in the text open their own targets. {% include since.html v="0.12.0" %}
 - **Export vCard**, at the top, saves the person as a `.vcf` file.
   **Change handle…**, next to it, changes their handle (see
-  [Changing a handle](#changing-a-handle)).
+  [Changing a handle](#changing-a-handle)). **Merge…** merges them with
+  other people ([Merging people](#merging-people)). {% include since.html v="0.14.0" %}
+- On a duplicate's page, a banner says another note owns the handle and
+  offers **Merge into ⟨owner⟩…**. {% include since.html v="0.14.0" %}
 
 Clicking a task or a mention opens its note at that line, shaded until you
 click, type or move the cursor in the note.
@@ -218,7 +226,7 @@ The dialog starts with the current handle, selected. Type the new one
 
 - A handle uses letters, digits, `-` and `_`, like a GitHub login.
 - You can't take a handle another person has, or a collaborator's GitHub
-  login: there's no merging two people. Changing only the case, such as
+  login. To make two people one, [merge them](#merging-people) instead. {% include since.html v="0.14.0" %} Changing only the case, such as
   `ada` to `Ada`, is fine.
 - A collaborator with no note yet can't be changed: their handle is their
   GitHub login, so the item is dimmed with the hint "GitHub login".
@@ -244,6 +252,49 @@ the change: `@login` keeps naming them. A person note whose handle is a
 duplicate, or isn't valid, gets only its own `person:` changed; no
 mention is rewritten. The change covers one vault, and other people's
 copies of it pick it up when they pull.
+
+## Merging people {% include since.html v="0.14.0" %} {#merging-people}
+
+**Merge people** turns two or more person notes into one: the person you
+keep gets everyone's details, and every reference to the others points at
+them. Open it from:
+
+- a person's right-click menu in the [People view](#the-people-view):
+  **Merge with…**, then pick the others;
+- a duplicate's right-click menu (the warning icon: two notes claiming one
+  handle): **Merge into ⟨owner⟩…**;
+- a selection of people in the People view: **Merge…** in the bar at the
+  bottom, or **Merge N people…** in a selected person's right-click menu;
+- **Merge…** on [a person's page](#a-persons-page), or the banner's
+  **Merge into ⟨owner⟩…** on a duplicate's page.
+
+In the dialog, pick who to **Keep**. The **Result** table shows what the
+kept person ends up with:
+
+- **Email**, **phone**, **URL**, tags, list attributes and relation columns
+  combine every value.
+- Any other attribute whose value differs between the people offers a
+  choice. It starts on the kept person's value.
+
+Click **Merge** and Mahfouz:
+
+- adds the others' [Notes](#notes) after the kept person's own, and puts
+  the rest of their text under a **From ⟨name⟩** heading;
+- rewrites their `@handle` mentions and task assignees to the kept handle
+  everywhere in the vault (a duplicate's handle already names the kept
+  person, so nothing changes there);
+- points wikilinks and relation links to them at the kept person;
+- moves the merged notes to [Trash](/guide/history/), where you can restore
+  them.
+
+It's one commit in the vault, **Merge @a into @b**.
+
+Nothing changes, and the dialog says why, when a note you're merging away
+has notes inside it, is [published](/guide/publishing/) (unpublish it
+first), is only on this computer (disk-only), or is
+[encrypted](/guide/encryption/), or when any note the merge touches has
+edits waiting for your choice. Encrypted notes can't be searched, so a
+mention inside one keeps the old handle.
 
 ## Import
 
