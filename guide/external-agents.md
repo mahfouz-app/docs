@@ -143,8 +143,12 @@ them. It can also ask to:
   assignees across the vault, just like
   [Change handle…](/guide/people/#changing-a-handle). Under **Ask before
   destructive edits** it waits for you.
+- **Merge people** with `merge_people`, just like
+  [Merge people](/guide/people/#merging-people). It always waits for you,
+  even under **Don't ask**, and can't be undone from **Recently applied**:
+  restore the merged notes from [Trash](/guide/history/). {% include since.html v="0.14.0" %}
 
-Each one has **Undo** under **Recently applied**. Undoing a handle change
+Each of the others has **Undo** under **Recently applied**. Undoing a handle change
 changes the handle back.
 
 Contact details are vault content: everyone with access to the vault's
