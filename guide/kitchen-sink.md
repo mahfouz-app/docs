@@ -79,10 +79,18 @@ Below is each note's source.
 
 ## A deck: Sample deck
 
-`kitchen_sink/sample_deck.md`
+`kitchen_sink/sample_deck/sample_deck.md`
 
 ````markdown
-{% include kitchen-sink/kitchen_sink/sample_deck.md %}
+{% include kitchen-sink/kitchen_sink/sample_deck/sample_deck.md %}
+````
+
+## A deck's child note: Sample deck appendix
+
+`kitchen_sink/sample_deck/sample_deck_appendix.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/sample_deck/sample_deck_appendix.md %}
 ````
 
 ## A deck with a block at the top: Deck with a top block
