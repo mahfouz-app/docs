@@ -97,9 +97,8 @@ text; the picker or a notification says so.
 ## The table
 
 A database note opens as a table in its own tab. To see or edit the
-note itself, click **⋯** (**More view actions**) at the end of the toolbar
-and choose **View source**. {% include since.html v="0.14.0" %} In Preview, the block shows as an
-**Open database** card.
+note itself, click **View source** in the bottom bar. {% include since.html v="0.14.0" %}
+In Preview, the block shows as an **Open database** card.
 
 The tab is laid out like a note: {% include since.html v="0.14.0" %}
 
@@ -110,11 +109,11 @@ The tab is laid out like a note: {% include since.html v="0.14.0" %}
   such as **3 of 4 rows**.
 - The views as tabs, then the **Filter**, **Sort**, **Group** and
   **Columns** buttons, as icons (a Board or Gallery has **Fields** instead
-  of **Columns**), and **⋯**, which holds **View source**.
+  of **Columns**).
 - When the view has filters, sorts or a grouping, a second row shows them
   as chips; see [The settings row](#the-settings-row).
 - The bottom bar shows where the note stands and offers **Publish** and
-  **Share**. The width
+  **Share**. Its **View source** button opens the note itself. The width
   button switches the tab between the text width and the full width of the
   pane; this device remembers the choice for each database. **Appearance**
   and **Zoom** work as they do for a note.
