@@ -87,6 +87,27 @@ Present**.
   only: on the web they show **Desktop only** in Settings → Plugins.
   Editing the note updates the presentation live.
 
+### Child notes {% include since.html v="0.14.0" %} {#child-notes}
+
+Presenting a note also presents its child notes: after the note's own
+slides come its descendants' slides, depth first, in the order the
+sidebar shows them. Notes in plain folders inside the note's folder count
+too.
+
+- Encrypted notes, and everything under them, are left out.
+- A deck holds at most 200 notes.
+- To present a note on its own, without its children, give it the
+  attribute `no_slides_children: true`.
+
+### Wikilinks in a deck {% include since.html v="0.14.0" %} {#wikilinks-in-a-deck}
+
+A wikilink to a note that's in the deck (the presented note or one of its
+descendants) jumps to that note's first slide. Any other wikilink shows as
+plain text: its alias when it has one (`[[Dune|the novel]]` shows "the
+novel"), otherwise the linked note's title, or the link's own text when it
+names no note. In PDF and PowerPoint exports, every wikilink is plain
+text, with no brackets.
+
 ## Slides templates
 
 A template gives your decks a look (colors, a background image, fonts, a
