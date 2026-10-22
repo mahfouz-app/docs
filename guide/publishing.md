@@ -187,7 +187,7 @@ A published page looks like the note does in the editor's
   typeset. Pages published before Mahfouz rendered math show its source
   until you update them.
 - **A table of contents**: a `[TOC]` line becomes a numbered **Contents**
-  list of the note's headings (see
+  list of the note's headings, the title left out (see
   [Markdown](/guide/markdown/#table-of-contents)).
 - **Diagrams** are drawn as images when they can be (see
   [Diagrams](#diagrams)).
@@ -201,6 +201,9 @@ apply to the page:
   (say `red`) is ignored on the page.
 - **Font**. With no Font attribute, the page uses the vault's editor font
   setting.
+- **Heading numbers**. A note with
+  [numbered headings](/guide/markdown/#heading-numbers) shows them on its
+  page too. {% include since.html v="0.14.0" %}
 
 If you set only a dark background, or only a light text colour, the rest
 of the page's colours (the text or background you didn't set, highlights,

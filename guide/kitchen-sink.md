@@ -69,6 +69,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/ends_with_code_block.md %}
 ````
 
+## Heading numbers: Numbered headings
+
+`kitchen_sink/numbered_headings.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/numbered_headings.md %}
+````
+
 ## A deck: Sample deck
 
 `kitchen_sink/sample_deck.md`

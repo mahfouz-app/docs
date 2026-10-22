@@ -196,6 +196,8 @@ is active"):
   hidden when the note has fewer than two headings, in the phone layout
   (a window narrower than 700px) and for [encrypted notes](/guide/encryption/).
   Turn it off in [Settings → General → **Note outline**](/guide/settings/).
+  In a note with [numbered headings](/guide/markdown/#heading-numbers), the
+  list shows each heading's number. {% include since.html v="0.14.0" %}
 - **Table of contents** (right sidebar) lists every heading (levels 1–6,
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.

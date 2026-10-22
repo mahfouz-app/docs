@@ -169,12 +169,32 @@ is inside it, and on [published pages](/guide/publishing/).
 ## Table of contents
 
 A line holding only `[TOC]` (or `[[_TOC_]]`) shows a numbered **Contents**
-list (1, 1.1, 2…) of the note's level 2–6 headings, each linking to its
-section. It shows in Preview mode, where clicking an entry jumps to the
+list (1., 1.1., 2.…) of the note's headings, each linking to its
+section. Every heading is listed except the title, a level 1 heading on the
+note's first line, and headings inside quotes or lists. Numbers follow the
+heading levels, counted from the shallowest level listed, and a skipped
+level counts as 0: a level 4 heading straight under a level 2 one is
+1.0.1. {% include since.html v="0.14.0" %} It shows in Preview mode, where clicking an entry jumps to the
 heading, and on [published pages](/guide/publishing/). In Preview, the
 heading's line stays shaded until you click, type or move the cursor. With
 no headings, Preview shows **No headings yet** and a published page shows
 nothing.
+
+## Heading numbers {% include since.html v="0.14.0" %} {#heading-numbers}
+
+**Number headings** in the note's ⋯ menu (or the command palette) numbers
+the note's headings with the same numbers its table of contents uses: the
+first section is 1., its first subsection 1.1., the next section 2., and
+so on. The title on the first line stays unnumbered. In Preview the number
+comes before each heading; in Source it sits in the left margin, so the
+text doesn't move while you type. The [outline](/guide/editor/) shows the
+numbers too, and so does the [published page](/guide/publishing/).
+
+The numbers are drawn on screen, never written into the note: links to a
+heading and exports are unchanged. The setting is the note's
+`heading_numbers: true` [attribute](/guide/attributes/), so it travels with
+the note to collaborators and other devices. Choose **Number headings**
+again to turn it off.
 
 ## Tables
 
