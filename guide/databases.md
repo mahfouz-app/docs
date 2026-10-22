@@ -97,7 +97,8 @@ text; the picker or a notification says so.
 ## The table
 
 A database note opens as a table in its own tab. To see or edit the
-note itself, click **View source**. In Preview, the block shows as an
+note itself, click **⋯** (**More view actions**) at the end of the toolbar
+and choose **View source**. {% include since.html v="0.14.0" %} In Preview, the block shows as an
 **Open database** card.
 
 The tab is laid out like a note: {% include since.html v="0.14.0" %}
@@ -107,9 +108,13 @@ The tab is laid out like a note: {% include since.html v="0.14.0" %}
 - The page icon and the title, at the width of a note's text, then the
   number of rows. When filters hide some rows, it says how many are shown,
   such as **3 of 4 rows**.
-- The views as tabs, then **Filter**, **Sort**, **Group** and **Columns**.
+- The views as tabs, then the **Filter**, **Sort**, **Group** and
+  **Columns** buttons, as icons (a Board or Gallery has **Fields** instead
+  of **Columns**), and **⋯**, which holds **View source**.
+- When the view has filters, sorts or a grouping, a second row shows them
+  as chips; see [The settings row](#the-settings-row).
 - The bottom bar shows where the note stands and offers **Publish** and
-  **Share**. Its **View source** button opens the note itself. The width
+  **Share**. The width
   button switches the tab between the text width and the full width of the
   pane; this device remembers the choice for each database. **Appearance**
   and **Zoom** work as they do for a note.
@@ -133,6 +138,21 @@ Expand it to see the rows as ordinary notes.
 Sorts and filters you change apply on this device until you choose
 **Save view**. **Reset** returns to the saved view. If someone else changes
 the saved view, your unsaved changes are dropped.
+
+### The settings row {% include since.html v="0.14.0" %} {#the-settings-row}
+
+When a view has filters, sorts or a grouping, a row under the toolbar shows
+each one as a chip, such as **Rating descending** or **Grouped by Status**:
+
+- Click a chip to edit it: it opens **Filter**, **Sort** or **Group** at
+  that setting.
+- Click a chip's **×** to remove just that filter, sort or grouping. A
+  Board's grouping chip has no **×**, because a Board is always grouped.
+- **+ Add filter** opens **Filter** to add one.
+- When you've changed the view on this device, the row ends with
+  **Changed on this device**, **Reset** and **Save view**.
+
+A view with none of these shows no second row.
 
 Some filters written in the block, such as `or` and `not` groups, can't be
 shown in the **Filter** list. They still apply, and the list marks them
@@ -162,7 +182,15 @@ Like sorting and filtering, grouping applies on this device until you choose
   <kbd>Enter</kbd> on it. Press <kbd>Enter</kbd> or click elsewhere to save
   the value, or press <kbd>Escape</kbd> to cancel. <kbd>Tab</kbd> saves the
   value and moves to the next cell.
-- A Select option saves as soon as you choose it. A checkbox cell toggles
+- A Select or Multi-select cell opens a list of the attribute's options,
+  with a search box. {% include since.html v="0.14.0" %} Type to filter the
+  options, and click one (or press <kbd>Enter</kbd>) to choose it; a
+  Select saves as soon as you choose. When no option matches what you
+  typed exactly, **Create “⟨text⟩”** adds it as a new option, in the next
+  unused color, and sets the cell to it. **Edit options…** at the bottom
+  opens the column's type menu at its options. An attribute can be a Select
+  with no options yet: create them from the cells as you go.
+- A checkbox cell toggles
   with one click, or <kbd>Enter</kbd>; an unchecked one shows an empty box.
 - The arrow keys move between cells, as in a spreadsheet.
 - Select and Multi-select values show as pills in their options' colors
@@ -183,12 +211,21 @@ vault directly instead of becoming suggestions.
 
 ## Columns
 
-- **+** at the end of the header adds a column: type its name, click the
-  type icon beside it to choose its type, then **Add column** (or press
-  <kbd>Enter</kbd>). The column is added to the view for everyone, in the
-  database block, and a name with spaces or capitals is kept as the
-  column's label (**Due date** is stored as `due_date`). If your vault
-  already gives that attribute a type, the icon starts from it.
+- **+** at the end of the header adds an **Untitled** column right in the
+  header, with its name selected. {% include since.html v="0.14.0" %}
+  - Type the column's name. A list of types opens under it: press
+    <kbd>↑</kbd> or <kbd>↓</kbd> to choose one.
+  - Press <kbd>Enter</kbd> to add the column. If you didn't choose a type,
+    it's added as Text, or with the type your vault already gives an
+    attribute of that name.
+  - Or click a type to add the column with that type and open the type's
+    step, such as a Select's options.
+  - <kbd>Escape</kbd>, or clicking elsewhere, discards the column; nothing
+    is written. A name that can't be used says why under the header.
+
+  The column is added to the view for everyone, in the database block, and
+  a name with spaces or capitals is kept as the column's label (**Due
+  date** is stored as `due_date`).
 - **Columns** shows or hides columns and changes their order. Title is always
   shown.
 - A column header's menu offers **Rename…**, **Set type…**, sorting, and
@@ -199,12 +236,17 @@ vault directly instead of becoming suggestions.
 - **Set type** sets the attribute's type for the whole vault. A typed
   column's icon in the header opens the same list of types. Types are
   stored in `.config/attributes.md`, so another database that uses the same
-  attribute shows the same type.
+  attribute shows the same type. A type's next step, such as a Select's
+  options or a date's format, has **←** to go back and no **Save**: each
+  change applies as you make it. See
+  [Changing a type](/guide/attributes/#change-type). {% include since.html v="0.14.0" %}
 
 ## Save view
 
 **Save view** writes your current sort, filters, grouping, and columns into the
-view you're looking at, in the database block. Other views and the comments
+view you're looking at, in the database block. It's at the end of the
+[settings row](#the-settings-row) while the view has changes on this
+device. {% include since.html v="0.14.0" %} Other views and the comments
 and formatting elsewhere in the block are kept.
 
 ## Views
@@ -245,9 +287,15 @@ columns after them, and rows with no value go in the last column, "No
   too. The card's menu also offers **Open**, **Open in new tab**, and
   **Delete row**.
 - **Click a card** to open its note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click)
-  opens it in a new tab. Cards show the view's fields, each with its name.
-  Click a field to edit it on the card, as you would a table cell; relations
-  and rollups are edited in a Table view.
+  opens it in a new tab. Click a field to edit it on the card, as you would
+  a table cell; relations and rollups are edited in a Table view.
+- Each field on a card shows its type's icon and its value. The field's
+  name shows too when two fields share an icon, when a field has no icon
+  (rollups, attributes with no type, Created and Updated), and on narrow
+  screens. {% include since.html v="0.14.0" %}
+- A column's header shows its option as a colored pill, how many cards it
+  holds, and **+**, which adds a card that already has that column's value.
+  {% include since.html v="0.14.0" %}
 - **New in ⟨column⟩** adds a card that already has that column's value.
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
@@ -258,7 +306,8 @@ Cards in a column follow the view's sort. There's no manual card order.
 ## Gallery {% include since.html v="0.12.0" %} {#gallery}
 
 A Gallery shows the rows as cards in a grid, each with a cover image above
-its title and fields. It suits rows that have a picture, such as books,
+its title and fields. The cover runs to the card's edges, and fields show
+as they do on a Board card. {% include since.html v="0.14.0" %} It suits rows that have a picture, such as books,
 places, or recipes. In the block, a Gallery is a view with `type: cards`.
 
 When you add one with **+ View** ▸ **Gallery**, choose where its covers come
@@ -361,12 +410,13 @@ same commit.
 
 1. Click the column's type icon, or choose **Set type…** in its header
    menu, then **Relation…**.
-2. Under **Related database**, choose the other database. If there's no
-   other database yet, create one first.
-3. Choose **Two-way** and type the **Reverse name**: the column the other
-   database gets, such as `books`. Or choose **One-way** to link in this
-   direction only.
-4. Choose **Save**.
+2. Pick the other database from the list; type to search it. If there's no
+   other database yet, create one first. {% include since.html v="0.14.0" %}
+3. One click makes a two-way relation: the other database gets a column
+   named after this one, linking back. To choose **One-way** instead, or to
+   rename the reverse column, click **›** next to the database: **Two-way**
+   with its **Reverse name**, such as `books`, or **One-way** to link in this
+   direction only. Your choice applies as you make it.
 
 The reverse name can't be a name Mahfouz keeps for itself, a column the
 other database already has, or an attribute its rows already hold.

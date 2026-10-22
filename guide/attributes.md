@@ -76,8 +76,9 @@ and a menu.
 
 - **The type icon** shows the attribute's type (an attribute with no
   type shows Text's). Click it for the list of types, the current one
-  checked. Choosing a type changes it at once. **Select…** and
-  **Multi-select…** ask for their options first, then **Save**.
+  checked. Choosing a type changes it at once. **Select…**,
+  **Multi-select…**, the dates and **Relation…** then open their next
+  step; see [Changing a type](#change-type). {% include since.html v="0.14.0" %}
 - **The eye** says whether the attribute shows in the block in the
   document: always, only while it has a value (dashed), or never (struck
   through). Click it to move to the next state.
@@ -153,26 +154,45 @@ blank lines between keys, the order of keys, and multi-line values
 written with `|` or `>`. Edit those notes in another editor if you need
 them kept.
 
+### Changing a type {% include since.html v="0.14.0" %} {#change-type}
+
+Click an attribute's type icon (or its column's, in a database, or **Set
+type…** in the column's menu) to change its type. A type that needs
+nothing else is set with one click. A few open a next step in the menu's
+place, with **←** to go back to the types and no **Save**: the type is set
+at once, and every change in the step applies as you make it.
+
+- **Select…** and **Multi-select…**: the options (below), then **Show as**:
+  **Menu**, **Buttons** or **Radio** for a Select; **Chips** or
+  **Checkboxes** for a Multi-select. A Select or Multi-select can have no
+  options yet; in a database you can add them from a cell.
+- **Date** and **Date & time**: **Show as** **Date** or **Relative**, and a
+  format: `YYYY-MM-DD`, `DD MMM YYYY` or `MM/DD/YYYY` (Date & time adds
+  `HH:mm`), each shown with an example, or **Custom…** to type your own.
+- **Relation…** (a database column): see
+  [Create a relation](/guide/databases/#create-a-relation).
+
 ### Select options {% include since.html v="0.13.0" %} {#options}
 
-A Select or Multi-select attribute picks from a list of options. Set
-them when you choose the type: click the attribute's type icon (or its
-column's, in a database) and choose **Select…** or **Multi-select…**.
-The options take the menu's place; **Back** returns to the types and
-**Save** sets the type.
+A Select or Multi-select attribute picks from a list of options. Edit them
+in the type's step (see [Changing a type](#change-type)) or in
+[Vault Settings → Attributes](#types).
 
-- Type in **Add option** and press <kbd>Enter</kbd> to add one. An option
-  can't contain a comma, and two options can't have the same name.
-- Click the dot before an option to give it a color, or **No color**.
-- Drag an option by its handle to reorder it, or focus the handle and
-  press <kbd>↑</kbd> or <kbd>↓</kbd>. The option's menu also has **Move
-  up** and **Move down**.
-- **Delete** in the option's menu removes it. Notes that already use it
-  keep their value; the panel shows it as a free-form row.
-- **Rename…** in the option's menu renames it everywhere: in every note
-  that uses it and in every database filter that compares the attribute
-  with it, as one commit. Mahfouz says how many notes and databases change
-  before it does it.
+- Type in **Type an option, Enter to add** and press <kbd>Enter</kbd> to add
+  one; the field stays open so you can type the next. Pasting several lines
+  adds one option per line. Each new option takes the next unused color. An
+  option can't contain a comma, and two options can't have the same name.
+  {% include since.html v="0.14.0" %}
+- Click an option to open it: {% include since.html v="0.14.0" %}
+  - Change its name to rename it. The rename applies when you press
+    <kbd>Enter</kbd> or leave the field. If notes use the option, Mahfouz
+    asks once, then renames it everywhere: in every note that uses it and in
+    every database filter that compares the attribute with it, as one commit.
+  - Pick one of the 8 colors.
+  - **Delete** removes it. Notes that already use it keep their value as
+    text; if any do, Mahfouz asks first and says how many.
+- Drag an option to reorder it, or press <kbd>Alt</kbd><kbd>↑</kbd> or
+  <kbd>Alt</kbd><kbd>↓</kbd> on it. {% include since.html v="0.14.0" %}
 
 Colors are saved in `.config/attributes.md`, as a `colors:` list under the
 attribute's options:
@@ -198,10 +218,10 @@ icon to choose its type before **Add**. Click the arrow at the end of a
 row to open it:
 
 - **Options** uses the same option editor as the type menu's
-  **Select…**.
-- **Display** picks how the control looks: Menu, Segmented or Radio for a
-  Select; Chips or Checkboxes for a Multi-select; Fixed or Relative for a
-  date. **Format** sets a fixed date's format, such as `DD/MM/YYYY`. It
+  **Select…**, and changes apply as you make them. {% include since.html v="0.14.0" %}
+- **Display** picks how the control looks: Menu, Buttons or Radio for a
+  Select; Chips or Checkboxes for a Multi-select; Date or Relative for a
+  date. {% include since.html v="0.14.0" %} **Format** sets a fixed date's format, such as `DD/MM/YYYY`. It
   takes the same codes as a [Date field](/guide/fields/#dates), month and
   weekday names (`MMMM`, `MMM`, `dddd`, `ddd`, in English) and the ISO
   week (`ww`) and week-year (`GGGG`) included, so `dddd, DD MMMM YYYY`
