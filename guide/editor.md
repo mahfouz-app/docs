@@ -198,6 +198,8 @@ is active"):
   Turn it off in [Settings → General → **Note outline**](/guide/settings/).
   In a note with [numbered headings](/guide/markdown/#heading-numbers), the
   list shows each heading's number. {% include since.html v="0.14.0" %}
+  Right-click a heading in the list and choose **Copy link to heading**
+  to copy a [link to it](/guide/links/#link-to-a-heading). {% include since.html v="0.14.0" %}
 - **Table of contents** (right sidebar) lists every heading (levels 1–6,
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.
