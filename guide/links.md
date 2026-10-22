@@ -136,6 +136,17 @@ When it's done, one notification reports every vault. If a vault fails, its
 changes are undone, the others keep theirs, and the notification offers
 **Try again**.
 
+### Merge a tag into another
+
+{% include since.html v="0.14.0" %}
+
+**Merge into…**, under **Rename tag…** in the same menus, folds a tag into
+one that already exists. In the editor it reads **Merge #name into…**. The
+dialog lists every other tag in your vaults with its note count; type to
+filter it, pick the tag to keep, and choose **Merge**. It's the same change
+as renaming onto that tag: one commit per vault, the same text rewritten and
+the same notes skipped.
+
 ## Search
 
 <kbd>Mod</kbd><kbd>Shift</kbd><kbd>F</kbd>, the [command palette](/guide/command-palette/)'s **Search all notes** row {% include since.html v="0.14.0" %}, or
