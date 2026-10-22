@@ -151,7 +151,10 @@ database, with three views to pick from at the top:
 
 **Filter** and **Sort** narrow and order any view. Mahfouz remembers each
 view's settings, and the view you picked, on this computer; **Reset**
-goes back to the defaults.
+goes back to the defaults. As in a [database](/guide/databases/#the-settings-row),
+a row under the toolbar shows each filter, sort and grouping as a chip:
+click one to edit it, or its **×** to remove it. While you've changed the
+view, the row ends with **Changed on this device** and **Reset**. {% include since.html v="0.14.0" %}
 
 In every view:
 
