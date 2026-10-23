@@ -25,7 +25,7 @@ To try **Remove formatting**, select "new" in **the new** _toolbar_ and run it: 
 
 A [link](https://mahfouz.app), an autolink <https://docs.mahfouz.app>, a bare link https://mahfouz.app/guide/ and address ada@example.com, a wikilink to [[Sample deck]], and one through a folder with its own text: [[people/Ada Lovelace|Ada's note]].
 
-A person mention, @ada, is a pill with the person's name in Preview. To try `@` before a word, put the cursor before Ada Lovelace here and press `@`.
+A person mention, @ada, is a pill with the person's name in Preview. In Preview, a click selects it and Cmd/Ctrl-click opens Ada's note; right-click it for the person menu. To try `@` before a word, put the cursor before Ada Lovelace here and press `@`.
 
 A link whose label holds a URL goes to its destination, not the label's URL: [see https://mahfouz.app/guide/ in the docs](https://docs.mahfouz.app/guide/). A bare www.example.com and a bare someone@example.com are links too.
 

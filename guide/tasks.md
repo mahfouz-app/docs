@@ -100,8 +100,13 @@ on its GitHub repository, with their access level. Without a GitHub remote,
 or when the collaborators can't be loaded, it offers only your people and
 your own login.
 
-To change a task's assignee, click its assignee chip. The picker checks the
-current assignee:
+The assignee shows as a [person chip](/guide/people/#person-chips): click
+the name to open the person's note, or right-click the chip for the person
+menu. {% include since.html v="0.15.0" %}
+
+To change a task's assignee, click the ▾ on its assignee chip
+{% include since.html v="0.15.0" %}, or focus the chip and press
+<kbd>Space</kbd>. The picker checks the current assignee:
 
 - With nothing typed in **Search people**, it lists the current assignee,
   then **Recent**: the last five people you picked in this vault on this
@@ -134,7 +139,9 @@ coming. {% include since.html v="0.15.0" %} The views:
     type or move the cursor in the note. Click ✎ to rename it.
   - Click its due date to pick another day; its time stays. To change the
     time, use the date chip in the note.
-  - Click its assignee to pick someone else, or **Unassign**.
+  - Its assignee is a [person chip](/guide/people/#person-chips): click
+    the name to open the person's note, or the ▾ to pick someone else or
+    **Unassign**. {% include since.html v="0.15.0" %}
   Each change rewrites the task's line in its note. **Columns** shows or
   hides **Status**, **When**, **Assignee**, **Note**, **Vault** and
   **Tags**, and **Group** groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
