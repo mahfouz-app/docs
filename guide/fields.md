@@ -10,8 +10,8 @@ A field is a named snippet: today's date, a signature, the note's ID.
 Type <kbd>{</kbd> in a note to pick one of your fields from a menu, and keep
 typing to narrow it (`{si`). {% include since.html v="0.13.0" %} Each row shows what it will insert;
 picking one inserts it in place, once, as fixed text. <kbd>Enter</kbd>
-picks a field once you've typed part of its name or moved with the arrow
-keys, so a bare `{` then <kbd>Enter</kbd> is a line break. The menu stays
+picks the highlighted field, the first one too, even before you type a
+name. {% include since.html v="0.15.0" %} The menu stays
 closed for CriticMarkup (`{++`, `{--`, `{~~`, `{==`, `{>>`), a second `{`,
 and inside code and math. **Edit fields…** at the bottom opens Vault
 Settings → **Fields**. Fields are also in the [slash menu](/guide/slash-menu/).
