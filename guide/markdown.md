@@ -182,8 +182,10 @@ nothing.
 
 ## Heading numbers {% include since.html v="0.14.0" %} {#heading-numbers}
 
-**Number headings** in the note's ⋯ menu (or the command palette) numbers
-the note's headings with the same numbers its table of contents uses: the
+**Number headings**, at the bottom of the toolbar's Heading menu
+{% include since.html v="0.15.0" %} (or `/number` in the
+[slash menu](/guide/slash-menu/), or the command palette), numbers the note's
+headings with the same numbers its table of contents uses: the
 first section is 1., its first subsection 1.1., the next section 2., and
 so on. The title on the first line stays unnumbered. In Preview the number
 comes before each heading; in Source it sits in the left margin, so the
