@@ -17,6 +17,25 @@ and links are typed as usual. If what you typed doesn't start any command's
 name, <kbd>Enter</kbd> starts a new line instead, so `/usr` followed by
 <kbd>Enter</kbd> stays as text.
 
+## Opening it without typing / {% include since.html v="0.15.0" %}
+
+In Preview, an empty line with the cursor on it shows a gray **Type / to
+insert elements** hint. The hint isn't part of the note, and it goes as
+soon as you type. It doesn't show in code blocks or tables.
+
+Point at a block in Preview and a **+** appears to the left of its drag
+grip. Click it to open the menu at the end of that block, with nothing
+typed. Type to filter it as usual (`h2` rather than `/h2`). A command that
+works on a line, such as **Heading 2** or **Quote**, turns that block: on a
+heading it acts on the heading's own line, and on a list item on that
+item's first line. On a code block, table or math block, the menu opens on
+a new empty line below it. <kbd>Esc</kbd> closes the menu and leaves the
+note as it was.
+
+Neither shows while the slash menu is turned off in
+[Settings](/guide/settings/), while you're
+[suggesting](/guide/track-changes/), or in Source.
+
 ## What's in the menu
 
 | Group | Commands |
