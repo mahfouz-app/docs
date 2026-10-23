@@ -40,7 +40,13 @@ github: ada
   field you leave empty. {% include since.html v="0.14.0" %}
 - **The People database** is created at the vault root, titled **People**,
   the first time you add someone. It starts with the Title, `email`,
-  `phone`, `company`, `position` and `github` columns.
+  `phone`, `company`, `position` and `github` columns, and with **Manager**
+  and **Direct reports**: setting someone's manager adds them to that
+  person's direct reports. {% include since.html v="0.15.0" %} If your vault
+  already uses `manager` or `reports` for something else, those two columns
+  are left out; you can
+  [relate the database to itself](/guide/databases/#relate-a-database-to-itself)
+  under other names.
 - **GitHub collaborators** on the vault's repository appear as people
   automatically, with their GitHub login as the handle. A collaborator gets
   a note the first time you edit them. A person note whose `github` is a

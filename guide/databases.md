@@ -215,8 +215,7 @@ vault directly instead of becoming suggestions.
 - **+** at the end of the header adds an **Untitled** column right in the
   header, with its name selected. {% include since.html v="0.14.0" %}
   - Type the column's name. The list of types is open under it from the
-    start; **More types** shows the rest. **Relation** is listed only when
-    the vault has another database.
+    start; **More types** shows the rest.
   - Click a type to add the column with that type. Select, Multi-select,
     Date, Date & time and Relation then open their next step, such as a
     Select's options; any other type puts the cursor in the column's first
@@ -417,7 +416,8 @@ saved in the view is kept in the block but not shown.
 ## Relations
 
 A Relation column links each row to rows of another database: each book to
-its authors, for example. A relation is usually two-way. When you link a
+its authors, for example. It can also link rows of the same database, such
+as each person to their manager. A relation is usually two-way. When you link a
 book to an author, the author's row gets the book in its own column, in the
 same commit.
 
@@ -425,8 +425,10 @@ same commit.
 
 1. Click the column's type icon, or choose **Set type…** in its header
    menu, then **Relation…**.
-2. Pick the other database from the list; type to search it. If there's no
-   other database yet, create one first. {% include since.html v="0.14.0" %}
+2. Pick the other database from the list; type to search it. This database
+   is listed first, as **⟨name⟩ (this database)**; see
+   [Relate a database to itself](#relate-a-database-to-itself).
+   {% include since.html v="0.14.0" %}
 3. One click makes a two-way relation: the other database gets a column
    named after this one, linking back. To choose **One-way** instead, or to
    rename the reverse column, click **›** next to the database: **Two-way**
@@ -439,6 +441,22 @@ other database already has, or an attribute its rows already hold.
 If the column already holds links, the other database's rows get their
 links back when you save. Once a relation's rows hold links, it can't be
 pointed at a different database.
+
+### Relate a database to itself {% include since.html v="0.15.0" %} {#relate-a-database-to-itself}
+
+Pick **⟨name⟩ (this database)** in the list to link rows of this database to
+each other. Its details open, since there's no other database to name the
+reverse column after. For a two-way relation, choose how it links back under
+**Links back through**:
+
+- **Another column** links back in a second column you name, such as a
+  `manager` column with `reports` linking back. Nothing is written until you
+  type a name. Linking Ada's manager to Grace adds Ada to Grace's reports.
+- **This column** links back in the same column, such as `related`: linking
+  Ada to Grace also links Grace to Ada.
+
+**One-way** links in this direction only. A row can't link to itself, so the
+picker doesn't list the row you're editing.
 
 ### Link rows {% include since.html v="0.12.0" %} {#link-rows}
 
