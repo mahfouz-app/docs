@@ -119,8 +119,10 @@ Like the date picker, these changes apply directly, even in Suggesting mode.
 ## The Tasks view
 
 Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}) to open the
-Tasks tab in the main pane, beside your notes. It shows every task as a
-database, with three views to pick from at the top. You can
+Tasks tab in the main pane, beside your notes. Click **Tasks** again, or
+the home button, to go back to the tab you were on. {% include since.html v="0.15.0" %}
+It shows every task as a database, with three views to pick from at the
+top. You can
 [remove **Tasks** from the rail](/guide/notes/#rail-pins):
 <kbd>Mod</kbd><kbd>2</kbd> still opens the Tasks tab, and reminders keep
 coming. {% include since.html v="0.15.0" %} The views:
