@@ -146,7 +146,7 @@ The comparisons are written as words: {% include since.html v="0.15.0" %}
 
 | Column | Comparisons |
 |---|---|
-| Text, and columns with no type | **is**, **is not**, **contains** |
+| Text, and columns with no type | **is**, **is not**, **contains**, **doesn't contain** |
 | Select | **is**, **is not** |
 | Checkbox | **is**, **is not** (**Checked** or **Unchecked**) |
 | Number | **is**, **is not**, **is less than**, **is at most**, **is greater than**, **is at least** |
