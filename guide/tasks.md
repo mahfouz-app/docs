@@ -137,7 +137,8 @@ database, with three views to pick from at the top:
   **Tags**, and **Group** groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
 - **Board** puts the tasks in three columns: **To do**, **In progress**
   and **Done**. Drag a card to another column to change its status, or
-  open the card's menu and pick a column under **Move to**. Each card
+  open the card's menu and pick a column under **Move to**. While you
+  drag, a space opens where the task will land, by the Board's sort. {% include since.html v="0.15.0" %} Each card
   shows its title, then its `#tags` on their own line (click one to search
   for it in the [Search tab](/guide/links/#tags)), then its note and its due date, with an icon for
   whether it's overdue, due today, upcoming or done. Tags at the end of

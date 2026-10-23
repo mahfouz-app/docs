@@ -289,6 +289,11 @@ columns after them, and rows with no value go in the last column, "No
 - **Move a card** by dragging it to another column. That sets the card's
   attribute to the column's value; dropping it on "No ⟨attribute⟩" clears it.
   Press <kbd>Escape</kbd> while dragging to cancel.
+  While you drag, the card follows the pointer, the column under it is
+  tinted, and a space opens where the card will land. A Board has no
+  manual card order: each column keeps the view's sort, so the space shows
+  where the sort puts the card, and none opens in a column whose filters
+  would hide it. An empty column still has room to drop into. {% include since.html v="0.15.0" %}
 - Or use **⋯** on a card, then **Move to**, which works from the keyboard
   too. The card's menu also offers **Open**, **Open in new tab**, and
   **Delete row**.
