@@ -46,8 +46,12 @@ The agent reaches your vaults through the running app.
   is turned off, the agent is told to open Mahfouz and turn it on.
 - **You close the window:** turn on **Keep available when the window is
   closed**, under **Allow external agents (MCP)**, and Mahfouz keeps
-  running. A Mahfouz item in the menu bar shows that it's running, and
-  offers **Open Mahfouz** and **Quit Mahfouz**. **Quit** always quits.
+  running. A Mahfouz item in the menu bar shows that it's running: click
+  it to open Mahfouz. Right-click it for a menu
+  {% include since.html v="0.15.0" %} that shows the version and how many
+  agents made a request in the last 5 minutes, with **About**,
+  **Settings…** and **Quit**. Click the version to open Mahfouz too.
+  **Quit** always quits.
 - **Nothing is happening:** with no window open and no agent request for
   30 minutes, Mahfouz quits on its own. This applies whether the window
   was closed or an agent started the app.
