@@ -233,9 +233,13 @@ vault directly instead of becoming suggestions.
   a name with spaces or capitals is kept as the column's label (**Due
   date** is stored as `due_date`).
 - **Columns** shows or hides columns and changes their order. Title is always
-  shown.
-- A column header's menu offers **Rename…**, **Set type…**, sorting, and
-  **Hide column**.
+  shown. To move a column, drag the grip beside its name, or focus its switch
+  and press <kbd>Alt</kbd>+<kbd>↑</kbd> or <kbd>Alt</kbd>+<kbd>↓</kbd>. {% include since.html v="0.15.0" %}
+- To move a column from the table, point at its header and drag the grip on
+  its top edge; a line shows where it will land. Click the grip to open the
+  header's menu. {% include since.html v="0.15.0" %}
+- A column header's menu offers **Rename…**, **Set type…**, sorting,
+  **Move left**, **Move right** and **Hide column**.
 - **Rename** changes the attribute's name in every row in a single commit.
   If a row already has an attribute with the new name, the rename isn't
   made.
