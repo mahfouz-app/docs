@@ -86,8 +86,14 @@ On the left:
   no remote; a floppy disk for a [disk-only](/guide/history/) note; a red
   **!** when a save fails. Point at it for the words, such as **Saved 2m
   ago · Not pushed** (see [The save chip](/guide/git/#the-save-chip)).
-  Click it to open the
-  [Details](/guide/attributes/#note-pills--the-right-sidebar) section
+  Click it to open the note's **Status** card {% include since.html v="0.15.0" %}:
+  the same words with a line on what they mean, **Commit…** while the note
+  has uncommitted changes (it opens [Commit notes](/guide/history/#commit-notes)
+  with the note checked), the note's **Auto-commit** switch (see
+  [Auto-commit and disk-only notes](/guide/history/#auto-commit-and-disk-only-notes)),
+  and who created and last edited it, and when. **Open in sidebar** shows the
+  [Details](/guide/attributes/#note-pills--the-right-sidebar) section, with
+  the note's path and history
 - **Publish** (a globe): publishes the note to the web. Once it's
   published, the globe is tinted and opens a menu of the page's actions: **Update published page**,
   **Copy public link**, **Open published page**, **QR code**, **Publish
