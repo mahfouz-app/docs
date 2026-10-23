@@ -1,4 +1,24 @@
 
+## 0.15.0 (2026-10-23) {#v0.15.0}
+
+* feat(brand): add a transparent bare-mark emblem
+* One person chip: Tasks tab, People relations, authors
+* fix(rail): Tasks toggles like People; Home leaves the Tasks tab
+* feat(editor): + beside the grip opens the slash menu; empty-line hint
+* Tasks: tags as a filter, plus filter redesign review fixes (4/4)
+* fix(ui): cap every dropdown and menu at one shared height
+* chore: refresh riprap payload to 0.14.1
+* feat(desktop): menu bar item opens on click; menu shows version and active agents
+* fix(editor): Enter and Tab accept a # tag suggestion
+* feat(database): drag to reorder columns
+* feat(databases): Board drag carries the card and shows where it lands
+* Save status icon opens the note's Status card
+* Number headings in the toolbar's Heading menu
+* fix(editor): Enter on a bare { picks the highlighted field
+* Custom rail: pin notes and databases, hide Tasks or People
+* Database self-relations, and Manager ↔ Direct reports in People
+
+
 ## 0.14.0 (2026-10-22) {#v0.14.0}
 
 * feat(plugins): host.slides.deck so Present shows child notes and resolves wikilinks
