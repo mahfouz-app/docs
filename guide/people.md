@@ -90,7 +90,8 @@ doesn't open it.
   the arrow keys. With it selected, <kbd>Enter</kbd> opens the person's note
   and <kbd>Space</kbd> lists people to put someone else in its place.
   <kbd>Cmd/Ctrl</kbd>+click opens the person's note.
-  {% include since.html v="0.15.0" %}
+  {% include since.html v="0.15.0" %} Typing over a selected mention starts
+  a new mention in its place. {% include since.html v="0.13.0" %}
 - Hover a mention to see the person's card: their email, phone, GitHub and
   website. Click the card to open their note. {% include since.html v="0.15.0" %}
 - To find every note that mentions someone, choose **Find mentions** in the
