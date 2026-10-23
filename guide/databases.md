@@ -516,7 +516,14 @@ picker doesn't list the row you're editing.
 
 A cell shows up to three links, then a **+K** button that shows the rest. A
 Board card shows them as pills. The Attributes panel edits a row's relations
-with the same picker, and each link there has an **×** to remove it.
+with the same picker, and each link there has an **×** to remove it, except a person (below).
+
+In a relation to your People database, such as **Manager** and **Direct
+reports**, each link is a [person chip](/guide/people/#person-chips), in the
+table and in the Attributes panel. Click a person's name to open their note:
+the cell has no separate open button. To remove a person, focus their chip
+and press <kbd>Backspace</kbd>, or choose **Remove** in its right-click menu.
+{% include since.html v="0.15.0" %}
 
 A link to a note that no longer exists is struck through. To remove it,
 unselect it in the picker, or click its **×** in the Attributes panel. If the

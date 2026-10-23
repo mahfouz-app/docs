@@ -83,21 +83,67 @@ doesn't open it.
   person note is unchanged and nothing else mentions them.
 - A mention that names someone shows as a chip. A mention of a handle
   nobody has stays plain text.
-- In Preview, the chip shows the person's initials and name instead of
-  their `@handle`. Backspace deletes it whole. Click it, or move onto it
-  with the arrow keys, to open the people menu and pick someone else;
-  typing starts a new mention in its place. {% include since.html v="0.13.0" %}
+- In Preview, the chip is a [person chip](#person-chips): the person's
+  initials and name instead of their `@handle`. Backspace deletes it whole.
+  {% include since.html v="0.13.0" %}
+- In Preview, a click selects the mention, and so does moving onto it with
+  the arrow keys. With it selected, <kbd>Enter</kbd> opens the person's note
+  and <kbd>Space</kbd> lists people to put someone else in its place.
+  <kbd>Cmd/Ctrl</kbd>+click opens the person's note.
+  {% include since.html v="0.15.0" %} Typing over a selected mention starts
+  a new mention in its place. {% include since.html v="0.13.0" %}
 - Hover a mention to see the person's card: their email, phone, GitHub and
-  website, with **Open** to open their note, **Copy email**, and **vCard**
-  to export them.
-- To find every note that mentions someone, choose **Find mentions** on
-  their card, or <kbd>Cmd/Ctrl</kbd>+click the mention. From the keyboard,
+  website. Click the card to open their note. {% include since.html v="0.15.0" %}
+- To find every note that mentions someone, choose **Find mentions** in the
+  [person menu](#person-chips) (right-click the mention).
+  {% include since.html v="0.15.0" %} From the keyboard,
   put the cursor on the mention and run **Find mentions of person** from
   the [command palette](/guide/command-palette/), or give it a key in
   [Shortcuts](/guide/shortcuts/). It opens the
   [Search tab](/guide/links/#search) with `person:handle`, which also finds
   the notes with a task assigned to them, and the notes that mention the
   person's GitHub login. {% include since.html v="0.13.0" %}
+
+## Person chips {% include since.html v="0.15.0" %} {#person-chips}
+
+A person looks the same everywhere in Mahfouz: a pill with their initials
+in a colour of their own, then their name. Your own chip adds **(you)**.
+You'll see one for:
+
+- a [mention](#mentions) in Preview;
+- a [task's assignee](/guide/tasks/#assign-someone), in the note and in the
+  Tasks tab's **Assignee** column;
+- a link in a People database's relation columns, such as **Manager** and
+  **Direct reports**, in the table and in the
+  [Attributes panel](/guide/attributes/#attributes-panel);
+- **Created by** and **Last edited by** in a note's
+  [Details](/guide/attributes/#note-pills--the-right-sidebar).
+
+What a chip does:
+
+- **Click the name** to open the person's note. In a note's text, a click
+  selects the mention instead; <kbd>Cmd/Ctrl</kbd>+click opens it.
+- **Click ▾** on an editable chip (an assignee, a relation link) to pick
+  someone else.
+- **Hover** a chip, or move focus to it, to see the person's card. The card
+  has no buttons: click it to open the person's note.
+- **Right-click** a chip, press <kbd>Shift</kbd><kbd>F10</kbd> on it, or
+  long-press it for the person menu: **Open**, **Change person…**,
+  **Change handle…** ([below](#changing-a-handle)), **Find mentions**,
+  **Copy @handle**, **Send email**, **Copy email**, **Export vCard…** and
+  **Remove**. Each item shows only where it applies.
+
+With a chip focused:
+
+| Key | Does |
+|---|---|
+| <kbd>Enter</kbd> | Opens the person's note |
+| <kbd>Space</kbd> or <kbd>Alt</kbd><kbd>↓</kbd> | Picks someone else |
+| <kbd>Backspace</kbd> | Removes the person |
+
+A commit author who isn't in your People shows as a chip in their own
+colour too, under Created by and Last edited by. Their menu offers **Send
+email** and **Copy email**.
 
 ## The People view
 
@@ -336,7 +382,8 @@ or delete it.
 Export saves people as vCard 3.0 files, for another address book:
 
 - **One person:** **Export vCard** in their row's menu in the People view,
-  **vCard** on their hover card, or **Export vCard** on their page.
+  **Export vCard…** in the [person menu](#person-chips)
+  {% include since.html v="0.15.0" %}, or **Export vCard** on their page.
 - **Everyone:** **Export all** in the People view saves `People.vcf`.
 
 On the web, the file downloads. A person note's body isn't exported.

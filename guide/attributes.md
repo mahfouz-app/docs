@@ -45,7 +45,9 @@ sections you folded on this device.
 The sidebar's sections, in order:
 
 - **Details**: Created, Created by, Updated, Last edited by and Path,
-  then the note's [history](/guide/history/). These rows come from git
+  then the note's [history](/guide/history/). Created by and Last edited by
+  are [person chips](/guide/people/#person-chips): click one to open the
+  person's note. {% include since.html v="0.15.0" %} These rows come from git
   and the file on disk, so they're read-only; Path reveals the file in
   your file manager. Click a row's label to choose whether it also shows in the
   attributes block in the document.
