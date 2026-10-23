@@ -159,6 +159,10 @@ goes back to the defaults. As in a [database](/guide/databases/#the-settings-row
 a row under the toolbar shows each filter, sort and grouping as a chip:
 click one to edit it, or its **×** to remove it. While you've changed the
 view, the row ends with **Changed on this device** and **Reset**. {% include since.html v="0.14.0" %}
+**+ Add filter** and **+ Add sort** in that row add one, and clicking a
+sort chip flips its direction. {% include since.html v="0.15.0" %} When
+the filters hide every task, the view says **No tasks match these
+filters.**, with **Reset**. {% include since.html v="0.15.0" %}
 
 In every view:
 
@@ -169,19 +173,25 @@ In every view:
 - With more than one vault, the Tasks tab covers all of them, with a
   **Vault** column. Pick a single vault from the menu at the top.
 - To narrow the tasks by topic, put `#tags` on the task line itself, such
-  as `- [ ] Fix login #bug @sam // 2026-10-14`. Click **Tags** under the
-  toolbar to pick from the tags on the listed tasks, each with its count
-  of tasks; type to search them. Only the tasks carrying any picked tag
-  stay. Each picked tag shows as a chip: click it to remove it, or click
-  **Clear** to show every task again. {% include since.html v="0.14.0" %} Only tags on the task's own line count, not the note's other
-  tags. {% include since.html v="0.12.0" %} Clicking a `#tag` on a card or in the **Tags** column opens the
-  [Search tab](/guide/links/#tags) with `tag:name` instead. {% include since.html v="0.13.0" %}
+  as `- [ ] Fix login #bug @sam // 2026-10-14`. Only tags on the task's own
+  line count, not the note's other tags. {% include since.html v="0.12.0" %}
+  To filter by them, choose **+ Add filter**, then **Tags**, and tick tags
+  in the checklist, each with its count of tasks; type to search them.
+  **has any of** keeps the tasks carrying at least one ticked tag; switch
+  it to **has all of** or **has none of** as in a
+  [database](/guide/databases/#sort-and-filter). Like the other filters,
+  tag filters belong to the view (Table, Board or Calendar), and
+  [renaming a tag](/guide/links/#rename-a-tag) updates them.
+  {% include since.html v="0.15.0" %} Clicking a `#tag` on a card or in the
+  **Tags** column opens the [Search tab](/guide/links/#tags) with
+  `tag:name` instead. {% include since.html v="0.13.0" %}
 - Clicking a reminder opens the task's note at its line too.
 
 A dot on the **Tasks** icon in the left rail tells you when something
 needs attention: red when a task is overdue, blue when one is due later
-today. It counts the same tasks the view shows, so it follows the
-**Mine**/**Everyone** choice, the vault menu and the picked tags. Hover
+today. It follows the **Mine**/**Everyone** choice and the vault menu,
+but not the views' filters: it counts every one of those tasks that is
+overdue or due today. {% include since.html v="0.15.0" %} Hover
 over the icon to see the counts, such as **2 overdue · 1 due today**. {% include since.html v="0.12.0" %}
 The dot goes with the button: with **Tasks** removed from the rail, it
 isn't shown anywhere. {% include since.html v="0.15.0" %}

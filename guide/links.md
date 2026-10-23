@@ -94,9 +94,10 @@ you picked last appear under **Recent** at the top.
 - The list doesn't open inside code, links or wikilinks.
 
 The same list, with a search field, opens from **Add tag** in a note's
-[`tags` attribute](/guide/attributes/#lists) and from **Tags** in the
-[Tasks tab](/guide/tasks/). Recent tags are kept on this computer only,
-per vault, and never in the vault.
+[`tags` attribute](/guide/attributes/#lists). Recent tags are kept on this
+computer only, per vault, and never in the vault. The
+[Tasks tab](/guide/tasks/) filters by tags with **+ Add filter** →
+**Tags** instead. {% include since.html v="0.15.0" %}
 
 Every tag can be clicked. Clicking one opens the [Search tab](#search)
 with `tag:name` in its field, listing the notes that have that tag in
