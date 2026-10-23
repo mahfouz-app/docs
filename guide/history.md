@@ -9,7 +9,7 @@ permalink: /guide/history/
 Mahfouz keeps no separate history of its own: **history is git history.**
 
 - **History** (the bottom of the sidebar's Details section; toolbar ⋯ →
-  Revisions, <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>R</kbd>, or click the save status) lists
+  Revisions, <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>R</kbd>, or **Open in sidebar** on the save status's card) lists
   every commit that touched the current note (subject, relative time,
   short SHA). Click one to open that revision read-only in a new tab,
   with a banner offering **Restore** (writes a *new* commit restoring
@@ -40,11 +40,14 @@ To choose what goes into a commit yourself, open **Commit notes…**:
 [command palette](/guide/command-palette/), the vault header's right-click
 menu, File → Commit Notes… on desktop, or **Commit…** in the right-sidebar
 [Attributes panel](/guide/attributes/#attributes-panel) of a note with
-uncommitted changes (which opens the dialog with that note checked).
+uncommitted changes (which opens the dialog with that note checked). The
+bottom bar's save status card has the same **Commit…** {% include since.html v="0.15.0" %}.
 
 - The dialog lists every note in the vault with uncommitted changes, with
-  its path. Disk-only notes (below) are marked with the drive glyph, and new
-  and deleted notes carry a **new** or **deleted** badge.
+  its path. New and deleted notes carry a **new** or **deleted** badge.
+- Each note but a deleted one has its **Auto-commit** switch {% include since.html v="0.15.0" %},
+  off for a disk-only note (below). Turning it off or on there is the same
+  as anywhere else, and doesn't check or uncheck the note.
 - Check the notes to commit (**Select all** checks every one), then edit
   the message if you like. It's generated from your pick (`Commit: <title>`
   for one note, `Commit <N> notes` for several) until you change it.
@@ -62,7 +65,9 @@ Mahfouz never commits it on its own, so it isn't pushed or shared until
 you say so.
 
 - **Turn it off or on** with the **Auto-commit** switch in the right-sidebar
-  [Attributes panel](/guide/attributes/#attributes-panel), or right-click the note and pick
+  [Attributes panel](/guide/attributes/#attributes-panel), on the bottom bar's
+  save status card or in [Commit notes](#commit-notes) {% include since.html v="0.15.0" %},
+  or right-click the note and pick
   **Turn off auto-commit** / **Turn on auto-commit**. The action **Toggle
   auto-commit for note** can be bound to a key in Settings → Shortcuts; it
   has no default key.
