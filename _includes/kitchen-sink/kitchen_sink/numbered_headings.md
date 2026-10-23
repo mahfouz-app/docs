@@ -4,7 +4,7 @@ heading_numbers: true
 ---
 # Numbered headings
 
-This note sets `heading_numbers: true`, so every heading but this title shows its number. In Preview the number comes before the heading; in Source it sits in the left margin. The numbers are never written into the text. Turn them off from the note menu's **Number headings**.
+This note sets `heading_numbers: true`, so every heading but this title shows its number. In Preview the number comes before the heading; in Source it sits in the left margin. The numbers are never written into the text. Turn them off from **Number headings** at the bottom of the toolbar's Heading menu.
 
 [TOC]
 
