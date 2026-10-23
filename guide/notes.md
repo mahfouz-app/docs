@@ -161,6 +161,42 @@ Sidebar and on its tab, and above the note in the editor.
 - **Published pages**: a [published page](/guide/publishing/) doesn't
   show the icon, so changing it doesn't mark the page out of date.
 
+## Pin notes to the rail {% include since.html v="0.15.0" %} {#rail-pins}
+
+Pin the notes and databases you open most to the left rail, so each is
+one click away.
+
+- **Pin a note**: choose **Add to rail** from the note's ⋯ menu, its
+  right-click menu in the Sidebar, or its tab's menu. You can also drag
+  the note from the Sidebar onto the rail. The same menus then offer
+  **Remove from rail**.
+- **What a pin shows**: the note's [page icon](#page-icons), or, without
+  one, a page glyph with the first letter of its title. A database shows
+  a table glyph with the letter.
+- **Open it**: click the pin. A database opens in its database tab.
+- **Where pins go**: below **Tasks** and **People**, after a thin divider.
+- **Rail item menu**: right-click a rail item, or focus it and press
+  <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key, for **Open**,
+  **Move up**, **Move down** and **Remove from rail**. **Tasks** and
+  **People** can be removed too; the home button can't. Removing
+  **Tasks** keeps its key (<kbd>Mod</kbd><kbd>2</kbd>) and your
+  [due reminders](/guide/tasks/#reminders), but the dot that warns of
+  overdue tasks goes with the button. Removing **People** keeps its key
+  (<kbd>Mod</kbd><kbd>3</kbd>).
+- **Show on rail**: right-click the rail's empty space, or the home
+  button, for **Show on rail**: tick **Tasks** or **People** to bring it
+  back, and untick a pin to remove it.
+- **Reorder**: drag rail items up and down. **Tasks** and **People** move
+  among themselves, and pins among themselves.
+- **Deleted notes**: a pin whose note was deleted shows faded and struck
+  through. Restore the note from Trash and the pin comes back. A pin in a
+  [locked vault](/guide/encryption/#a-locked-vault) shows a lock. Removing
+  a vault removes its pins.
+- **Where it's stored**: on this device only, not in the vault. Your
+  collaborators and your other devices keep their own rail.
+- **On a phone**: pins show in the bar at the bottom of the screen
+  ([On a phone](/guide/web/#on-a-phone)).
+
 ## Exporting
 
 A note's ⋯ menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>)

@@ -98,6 +98,8 @@ doesn't open it.
 Click **People** in the left rail (<kbd>Mod</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %}) to list the vault's people; click it
 again to go back to your notes. On a phone, it's **People** in the bar at
 the bottom of the screen. {% include since.html v="0.14.0" %}
+You can [hide **People** from the rail](/guide/notes/#rail-pins);
+<kbd>Mod</kbd><kbd>3</kbd> still opens the view. {% include since.html v="0.15.0" %}
 
 - Type in **Search people** to filter the list. Click a person to open
   their note. A collaborator with no note yet shows **GitHub only**.

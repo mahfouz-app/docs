@@ -76,6 +76,10 @@ switches to a layout made for it:
 - The note takes the whole width. A bar at the bottom of the screen holds
   a **Search** button on the left and **Tasks** and **People** on the
   right. {% include since.html v="0.14.0" %}
+- Your [rail pins](/guide/notes/#rail-pins) follow **Tasks** and
+  **People** in the bar, up to five buttons in all (four on very small
+  screens), and **Search** becomes a round button. Press and hold a
+  button for its menu. {% include since.html v="0.15.0" %}
 - Tapping **Search** opens the [command palette](/guide/command-palette/)
   at the bottom of the screen, just above the keyboard, with a **Cancel**
   button beside its field. {% include since.html v="0.14.0" %}
@@ -85,7 +89,9 @@ switches to a layout made for it:
   notes** in the palette: the sidebar opens over the whole screen. Opening
   a note closes it, and so does the close button in its top corner. {% include since.html v="0.14.0" %}
 - The **⋯** button at the top right holds **Notes** {% include since.html v="0.14.0" %}, **Settings**,
-  **Account**, **Trash**, **User guide** and **Send feedback**.
+  **Account**, **Trash**, **User guide** and **Send feedback**. When
+  you've hidden **Tasks** or **People** from the rail, it also has
+  **Show Tasks** or **Show People** to bring it back. {% include since.html v="0.15.0" %}
 - The AI chat opens over the whole screen. The right sidebar isn't
   available at this width.
 

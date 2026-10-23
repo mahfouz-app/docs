@@ -50,6 +50,8 @@ The rail's keys follow its order: the items at the top count up from
 <kbd>Mod</kbd><kbd>1</kbd> (all notes, tasks, people), and the ones at the
 bottom count back from <kbd>Mod</kbd><kbd>0</kbd> (the account menu, then
 notifications). Each rail button's tooltip shows its key. {% include since.html v="0.14.0" %}
+Each key belongs to its action, not to a place on the rail: it keeps
+working when you [move or hide](/guide/notes/#rail-pins) the rail item. {% include since.html v="0.15.0" %}
 
 A vault whose `## Shortcuts` table still holds the old default keys
 (<kbd>Mod</kbd><kbd>6</kbd> for tasks, <kbd>Mod</kbd><kbd>2</kbd> for
