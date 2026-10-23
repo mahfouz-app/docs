@@ -110,8 +110,9 @@ The tab is laid out like a note: {% include since.html v="0.14.0" %}
 - The views as tabs, then the **Filter**, **Sort**, **Group** and
   **Columns** buttons, as icons (a Board or Gallery has **Fields** instead
   of **Columns**).
-- When the view has filters, sorts or a grouping, a second row shows them
-  as chips; see [The settings row](#the-settings-row).
+- A second row shows the view's filters, sorts and grouping as chips, then
+  **+ Add filter** and **+ Add sort**; see
+  [The settings row](#the-settings-row). {% include since.html v="0.15.0" %}
 - The bottom bar shows where the note stands and offers **Publish** and
   **Share**. Its **View source** button opens the note itself. The width
   button switches the tab between the text width and the full width of the
@@ -130,9 +131,35 @@ Expand it to see the rows as ordinary notes.
 
 - Click a column header to sort by it. Click again to reverse the order, and
   once more to stop sorting by it.
-- To sort by several columns, use **Sort**.
+- To sort by several columns, use **Sort**. Each sort has a direction
+  button: click **Ascending** to make it **Descending**, and again to flip
+  it back. To change which sort comes first, drag a sort by its handle, or
+  focus the handle and press <kbd>Alt</kbd><kbd>↑</kbd> or
+  <kbd>Alt</kbd><kbd>↓</kbd>. {% include since.html v="0.15.0" %}
 - **Filter** shows the rows that match every filter in the list. Each filter
   is a column, a comparison, and a value. A Select column offers its options.
+- When the view has no filters, **Filter** opens the list of columns right
+  away, with a search box; pick one to add a filter on it. **Sort** does the
+  same while the view has no sorts. {% include since.html v="0.15.0" %}
+
+The comparisons are written as words: {% include since.html v="0.15.0" %}
+
+| Column | Comparisons |
+|---|---|
+| Text, and columns with no type | **is**, **is not**, **contains**, **doesn't contain** |
+| Select | **is**, **is not** |
+| Checkbox | **is**, **is not** (**Checked** or **Unchecked**) |
+| Number | **is**, **is not**, **is less than**, **is at most**, **is greater than**, **is at least** |
+| Date and Date & time | **is**, **is not**, **is before**, **is on or before**, **is after**, **is on or after** |
+| Multi-select | **has any of**, **has all of**, **has none of**, plus **is** and **is not** for an exact match |
+| Relation | **has any of**, **has all of**, **has none of** |
+
+Every column but a Checkbox also offers **is empty** and **is not empty**.
+With **has any of**, **has all of** and **has none of**, the value is a
+checklist of the column's values: tick as many as you need, and type to
+search them. A row matches **has any of** when it holds at least one ticked
+value, **has all of** when it holds every one, and **has none of** when it
+holds none. Unticking the last value removes the filter. {% include since.html v="0.15.0" %}
 
 Sorts and filters you change apply on this device until you choose
 **Save view**. **Reset** returns to the saved view. If someone else changes
@@ -140,18 +167,30 @@ the saved view, your unsaved changes are dropped.
 
 ### The settings row {% include since.html v="0.14.0" %} {#the-settings-row}
 
-When a view has filters, sorts or a grouping, a row under the toolbar shows
-each one as a chip, such as **Rating descending** or **Grouped by Status**:
+A row under the toolbar shows each of the view's filters, sorts and
+grouping as a chip, such as **Status is not Done**, **Rating descending** or
+**Grouped by Status**:
 
-- Click a chip to edit it: it opens **Filter**, **Sort** or **Group** at
-  that setting.
+- Click a filter chip to edit just that filter, right on the chip: its
+  comparison and its value, or for a list column, its checklist.
+  {% include since.html v="0.15.0" %}
+- Click a sort chip to flip it between ascending and descending, and a
+  Checkbox filter chip to flip it between **Checked** and **Unchecked**.
+  {% include since.html v="0.15.0" %}
+- Click the grouping chip to open **Group**.
 - Click a chip's **×** to remove just that filter, sort or grouping. A
   Board's grouping chip has no **×**, because a Board is always grouped.
-- **+ Add filter** opens **Filter** to add one.
+- **+ Add filter** and **+ Add sort** open the list of columns, with a
+  search box. Pick a column: a new filter shows as a dashed chip with its
+  editor open, and stays dashed until it has a value; close the editor
+  without a value and it's gone. A Checkbox column is added as **is
+  Checked** right away, and a new sort starts ascending.
+  {% include since.html v="0.15.0" %}
 - When you've changed the view on this device, the row ends with
   **Changed on this device**, **Reset** and **Save view**.
 
-A view with none of these shows no second row.
+A view with no filters, sorts or grouping shows just **+ Add filter** and
+**+ Add sort** in that row. {% include since.html v="0.15.0" %}
 
 Some filters written in the block, such as `or` and `not` groups, can't be
 shown in the **Filter** list. They still apply, and the list marks them
@@ -508,9 +547,10 @@ To fix them, click **Repair…** in the column header:
 
 ### Filter and sort by a relation
 
-A Relation column's filter offers **contains**, **doesn't contain**, **is
-empty** and **is not empty**. For **contains**, choose a row of the other
-database. Sorting a Relation column sorts by its linked titles.
+A Relation column's filter offers **has any of**, **has all of**, **has
+none of**, **is empty** and **is not empty**. {% include since.html v="0.15.0" %}
+For the first three, tick rows of the other database in the checklist.
+Sorting a Relation column sorts by its linked titles.
 
 ### In your files
 
