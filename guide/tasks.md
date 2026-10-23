@@ -120,7 +120,10 @@ Like the date picker, these changes apply directly, even in Suggesting mode.
 
 Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}) to open the
 Tasks tab in the main pane, beside your notes. It shows every task as a
-database, with three views to pick from at the top:
+database, with three views to pick from at the top. You can
+[remove **Tasks** from the rail](/guide/notes/#rail-pins):
+<kbd>Mod</kbd><kbd>2</kbd> still opens the Tasks tab, and reminders keep
+coming. {% include since.html v="0.15.0" %} The views:
 
 - **Table** lists the tasks grouped into **Overdue**, **Today**,
   **Upcoming** and **Done** (collapsed at first), sorted by due date. An
@@ -179,6 +182,8 @@ needs attention: red when a task is overdue, blue when one is due later
 today. It counts the same tasks the view shows, so it follows the
 **Mine**/**Everyone** choice, the vault menu and the picked tags. Hover
 over the icon to see the counts, such as **2 overdue · 1 due today**. {% include since.html v="0.12.0" %}
+The dot goes with the button: with **Tasks** removed from the rail, it
+isn't shown anywhere. {% include since.html v="0.15.0" %}
 
 ## Reminders
 
