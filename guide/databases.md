@@ -272,8 +272,10 @@ Like sorting and filtering, grouping applies on this device until you choose
   with "⟨group⟩ (continued)". A group's count is always the whole group's,
   not just the rows on this page. {% include since.html v="0.16.0" %}
 - The table goes back to the first page when you change the view, its
-  filters, its sort or its grouping. A row you create with <kbd>Enter</kbd>,
-  or a row your edit moves to another page, takes you to that page.
+  filters, its sort or its grouping. A row you create with <kbd>Enter</kbd>
+  takes you to its page when the New row you typed in is on that page too;
+  otherwise the table stays where it is and says the row was added. A row
+  you're editing that your edit moves to another page takes you with it.
   <kbd>↓</kbd> stops at the last row of a page; use **Next** to go on.
   {% include since.html v="0.16.0" %}
 - Select and Multi-select values show as pills in their options' colors
