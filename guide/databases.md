@@ -258,9 +258,11 @@ Like sorting and filtering, grouping applies on this device until you choose
   with one click, or <kbd>Enter</kbd>; an unchecked one shows an empty box.
 - The arrow keys move between cells, as in a spreadsheet. They don't move
   onto a row's **⋯**; <kbd>Tab</kbd> reaches it. {% include since.html v="0.16.0" %}
-- A table wider than the pane scrolls sideways inside the tab. The **Title**
-  column stays at the left edge while it scrolls, and each row's **⋯** stays
-  at the right edge. {% include since.html v="0.16.0" %}
+  <kbd>Home</kbd> and <kbd>End</kbd> move to a row's first and last cells. {% include since.html v="0.16.0" %}
+- A table wider than the pane scrolls sideways inside the tab. Its first
+  column stays at the left edge while it scrolls, whichever column it is, and
+  each row's **⋯** stays at the right edge. When **Title** isn't the first
+  column, it scrolls with the rest. {% include since.html v="0.16.0" %}
 - A table with more rows than fit on a page shows them in pages. Under the
   table, a line such as "Showing 1–25 of 60 rows" sits beside **Previous**,
   **Next**, a button for each page, and a menu for how many rows a page
@@ -320,11 +322,21 @@ vault directly instead of becoming suggestions.
 - **Columns** shows or hides columns and changes their order. Title is always
   shown. To move a column, drag the grip beside its name, or focus its switch
   and press <kbd>Alt</kbd>+<kbd>↑</kbd> or <kbd>Alt</kbd>+<kbd>↓</kbd>. {% include since.html v="0.15.0" %}
+  - **Title** is in the list at its place, and any column can go before it.
+    Its switch can't be turned off, but <kbd>Alt</kbd>+<kbd>↑</kbd> and
+    <kbd>Alt</kbd>+<kbd>↓</kbd> move it like any column. {% include since.html v="0.16.0" %}
+  - Turning a column off or on leaves it where it is while **Columns** is
+    open. The next time you open it, hidden columns are listed after the
+    shown ones. {% include since.html v="0.16.0" %}
+  - A hidden column you move takes that place when you turn it on. {% include since.html v="0.16.0" %}
 - To move a column from the table, point at its header and drag the grip on
   its top edge; a line shows where it will land. Click the grip to open the
-  header's menu. {% include since.html v="0.15.0" %}
+  header's menu. {% include since.html v="0.15.0" %} **Title**'s header has
+  the grip too, and a column can be dragged before it. {% include since.html v="0.16.0" %}
 - A column header's menu offers **Rename…**, **Set type…**, sorting,
-  **Move left**, **Move right** and **Hide column**.
+  **Move left**, **Move right** and **Hide column**. **Title**'s menu has
+  **Move left** and **Move right** too, and either one moves a column past
+  Title. {% include since.html v="0.16.0" %}
 - **Rename** changes the attribute's name in every row in a single commit.
   If a row already has an attribute with the new name, the rename isn't
   made.
@@ -351,7 +363,8 @@ note](#show-a-database-in-another-note), the id shows but isn't copied.
 
 ## Save view
 
-**Save view** writes your current sort, filters, grouping, and columns into the
+**Save view** writes your current sort, filters, grouping, and columns, with
+their order, {% include since.html v="0.16.0" %} into the
 view you're looking at, in the database block. It's at the end of the
 [settings row](#the-settings-row) while the view has changes on this
 device. {% include since.html v="0.14.0" %} Other views and the comments
@@ -417,6 +430,8 @@ columns after them, and rows with no value go in the last column, "No
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.
+- **Fields** orders the fields as **Columns** orders a table's columns,
+  Title included. Fields placed before Title show above the card's title. {% include since.html v="0.16.0" %}
 
 Cards in a column follow the view's sort. There's no manual card order.
 
@@ -443,6 +458,8 @@ Cards work like a Board's:
   to edit it on the card instead.
 - **⋯** on a card offers **Open**, **Open in new tab**, and **Delete row**.
 - **New** in the toolbar, {% include since.html v="0.16.0" %} or **+ New row** after the last card, adds a row.
+- **Fields** chooses which attributes the cards show and in what order, as on
+  a Board. Fields placed before Title show above the card's title. {% include since.html v="0.16.0" %}
 - **Fields** chooses which attributes the cards show, and sort and filters
   apply as in a table. A Gallery isn't grouped: a grouping saved in the view
   is kept in the block but not shown.
@@ -750,7 +767,7 @@ Calendar, how many aren't), with **Open database** to see the rest. In a
 Board, <kbd>Tab</kbd> moves between columns, and the arrow keys move between
 cards.
 
-A view's sort and filters apply, as saved in the database. Changes you
+A view's sort, filters and column order {% include since.html v="0.16.0" %} apply, as saved in the database. A column before Title comes first in a table, and above the title on a card. Changes you
 haven't saved with **Save view** don't show in embeds. An embed in a note's
 history shows today's rows, not the rows as they were.
 
@@ -760,7 +777,8 @@ Publishing a database note leaves the block out of the published page.
 
 Publishing a note with an embedded view, or exporting it to Word or PDF, replaces the
 block with a table of the view's rows, up to 100: titles and the view's
-columns, as plain text. Exporting to Markdown keeps the block as written. The
+columns, as plain text, in the view's column order, so a column placed before
+Title comes first. {% include since.html v="0.16.0" %} Exporting to Markdown keeps the block as written. The
 table is built each time the note is published, so rows added later appear
 when you next publish or update the page; a change to a row doesn't by itself
 mark the page out of date.

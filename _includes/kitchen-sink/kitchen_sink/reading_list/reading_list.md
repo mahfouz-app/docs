@@ -16,5 +16,10 @@ views:
     name: Note IDs
     order:
       - title
-      - id
+      - id  - type: table
+    name: Status first
+    order:
+      - status
+      - title
+      - author
 ```

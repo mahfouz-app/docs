@@ -53,6 +53,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/database_view_note_ids.md %}
 ````
 
+## A database view with a column before Title: Database view with a column before Title {% include since.html v="0.16.0" %}
+
+`kitchen_sink/database_view_status_first.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/database_view_status_first.md %}
+````
+
 ## Renaming a tag: Tag rename
 
 `kitchen_sink/tag_rename.md`
