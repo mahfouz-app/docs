@@ -12,4 +12,9 @@ views:
       - title
       - author
       - status
+  - type: table
+    name: Note IDs
+    order:
+      - title
+      - id
 ```

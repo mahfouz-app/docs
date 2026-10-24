@@ -58,7 +58,9 @@ You can create a database in three ways:
   attributes they already use become the columns. The block goes below the
   note's heading; if the note doesn't start with one, a heading with the
   note's title is added above the text, which is otherwise left as it was.
-  **Turn back into a note** removes the block. The child notes stay.
+  **Turn back into a note** removes the block. The child notes stay. In
+  the database's tab, it's in the **⋯ Database actions** menu too, except
+  while the note is in Suggesting mode. {% include since.html v="0.16.0" %}
 - **Convert a Markdown table.** Hover over a table in a note and click the
   **Convert to database** icon next to the wrap toggle. Each table row
   becomes a note: the first column becomes the note's title, and every other
@@ -97,27 +99,49 @@ text; the picker or a notification says so.
 ## The table
 
 A database note opens as a table in its own tab. To see or edit the
-note itself, click **View source** in the bottom bar. {% include since.html v="0.14.0" %}
+note itself, click **View source** in the bottom bar. {% include since.html v="0.14.0" %} It's in the
+**⋯ Database actions** menu too. {% include since.html v="0.16.0" %}
 In Preview, the block shows as an **Open database** card.
 
-The tab is laid out like a note: {% include since.html v="0.14.0" %}
+The tab is laid out like a note, {% include since.html v="0.14.0" %} but always fills the pane, with a
+small margin at each side: {% include since.html v="0.16.0" %}
 
 - The breadcrumbs, with the note's **Details**, **Backlinks** and
   **Attributes** pills to their right.
-- The page icon and the title, at the width of a note's text, then the
-  number of rows. When filters hide some rows, it says how many are shown,
+- The page icon and the title, lined up with the table's left edge
+  rather than a note's text, {% include since.html v="0.16.0" %} then the number of rows. When filters hide some rows, it says how many are shown,
   such as **3 of 4 rows**.
 - The views as tabs, then the **Filter**, **Sort**, **Group** and
   **Columns** buttons, as icons (a Board or Gallery has **Fields** instead
   of **Columns**).
+- After them, **⋯ Database actions**: {% include since.html v="0.16.0" %}
+  - **Copy embed** copies an embed of the view you're looking at; see
+    [Show a database in another note](#show-a-database-in-another-note).
+    It isn't offered when that view has no name or shares its name with
+    another view: rename the view first.
+  - **View source** opens the note itself.
+  - **Turn back into a note** removes the block; the rows stay as child
+    notes. It isn't offered while the note is in Suggesting mode.
+- **New**, at the end of the toolbar in every view, adds a row: type its
+  title and press <kbd>Enter</kbd>. {% include since.html v="0.16.0" %}
+  - In a table, it opens the **New row** at the bottom, or in a grouped
+    table, the first group's.
+  - In a Gallery, it opens a new card after the last one.
+  - On a Board, it opens a new card at the top of the first column, and
+    the row gets that column's value.
+  - On a Calendar, it opens a new row on today, and the row is due today.
+  - In a [People database](/guide/people/#adding-a-person), the chevron
+    beside **New** offers **Add with details…**.
+  - **New** isn't available on a Board with no grouping it can show, on
+    a Calendar whose dates can't be changed there (its date comes from
+    Created, Updated or a rollup), or while the database is renaming a
+    column.
 - A second row shows the view's filters, sorts and grouping as chips, then
   **+ Add filter** and **+ Add sort**; see
   [The settings row](#the-settings-row). {% include since.html v="0.15.0" %}
 - The bottom bar shows where the note stands and offers **Publish** and
-  **Share**. Its **View source** button opens the note itself. The width
-  button switches the tab between the text width and the full width of the
-  pane; this device remembers the choice for each database. **Appearance**
-  and **Zoom** work as they do for a note.
+  **Share**. Its **View source** button opens the note itself.
+  **Appearance** and **Zoom** work as they do for a note.
 
 To rename the database, click its title at the top of the tab, type the new
 name, and press <kbd>Enter</kbd>. Press <kbd>Escape</kbd> to cancel. The
@@ -232,15 +256,38 @@ Like sorting and filtering, grouping applies on this device until you choose
   with no options yet: create them from the cells as you go.
 - A checkbox cell toggles
   with one click, or <kbd>Enter</kbd>; an unchecked one shows an empty box.
-- The arrow keys move between cells, as in a spreadsheet.
+- The arrow keys move between cells, as in a spreadsheet. They don't move
+  onto a row's **⋯**; <kbd>Tab</kbd> reaches it. {% include since.html v="0.16.0" %}
+- A table wider than the pane scrolls sideways inside the tab. The **Title**
+  column stays at the left edge while it scrolls, and each row's **⋯** stays
+  at the right edge. {% include since.html v="0.16.0" %}
+- A table with more rows than fit on a page shows them in pages. Under the
+  table, a line such as "Showing 1–25 of 60 rows" sits beside **Previous**,
+  **Next**, a button for each page, and a menu for how many rows a page
+  holds: 25, 50 or 100. This device remembers your choice for every
+  database. When every row fits on one page, there's no pager.
+  {% include since.html v="0.16.0" %}
+- In a grouped table, a group that runs onto the next page ends with
+  "⟨group⟩ continues on the next page · N more", and the next page starts
+  with "⟨group⟩ (continued)". A group's count is always the whole group's,
+  not just the rows on this page. {% include since.html v="0.16.0" %}
+- The table goes back to the first page when you change the view, its
+  filters, its sort or its grouping. A row you create with <kbd>Enter</kbd>
+  takes you to its page when the New row you typed in is on that page too;
+  otherwise the table stays where it is and says the row was added. A row
+  you're editing that your edit moves to another page takes you with it.
+  <kbd>↓</kbd> stops at the last row of a page; use **Next** to go on.
+  {% include since.html v="0.16.0" %}
 - Select and Multi-select values show as pills in their options' colors
   (see [Select options](/guide/attributes/#options)). Hover a value that's
   cut short to read it whole.
 - Click a row's title to rename it. The open icon next to the title opens the
   note; <kbd>Cmd</kbd>-click (<kbd>Ctrl</kbd>-click) opens it in a new tab.
-- **New row** adds a row: type its title and press <kbd>Enter</kbd>. Another
+- **New row**, under the last row, or **New** in the toolbar, adds a row:
+  type its title and press <kbd>Enter</kbd>. Another
   empty row opens for the next one. A row without a title isn't created.
-- **⋯** on a row offers **Open**, **Open in new tab**, and **Delete row**.
+- **⋯** at the end of a row offers **Open**, **Open in new tab**, **Open
+  linked note** (for a row with relations), and **Delete row**. {% include since.html v="0.16.0" %}
   You can restore a deleted row from Trash.
 
 Each edit is an ordinary change to that note and is committed like any other.
@@ -288,6 +335,19 @@ vault directly instead of becoming suggestions.
   options or a date's format, has **←** to go back and no **Save**: each
   change applies as you make it. See
   [Changing a type](/guide/attributes/#change-type). {% include since.html v="0.14.0" %}
+
+### Note ID {% include since.html v="0.16.0" %} {#note-id}
+
+Every database lists **Note ID** in **Columns** (**Fields** on a Board or
+Gallery), after **Updated**; the [Tasks](/guide/tasks/) table, which has
+no Updated, lists it last. It's off until you turn it on. It shows each
+row's note id, the `id` in the row's frontmatter, in monospace. You can't
+edit it, but you can sort and filter by it.
+
+Click a Note ID cell, or the Note ID line on a card, to copy the id; **Note
+ID copied** confirms it. Clicking a card's Note ID line copies the id
+without opening the row. In a [database view embedded in a
+note](#show-a-database-in-another-note), the id shows but isn't copied.
 
 ## Save view
 
@@ -350,6 +410,10 @@ columns after them, and rows with no value go in the last column, "No
   holds, and **+**, which opens that column's new row: type a title to add
   a card with that column's value. {% include since.html v="0.14.0" %}
 - **New in ⟨column⟩** adds a card that already has that column's value.
+- Each column shows 25 cards at first, then **Show 25 more** (or **Show N
+  more** when fewer are left). The count in the column's header is all its
+  cards, not just the ones shown. A card you move or create there shows,
+  even when the sort puts it past the cards shown. {% include since.html v="0.16.0" %}
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.
@@ -378,7 +442,7 @@ Cards work like a Board's:
   (<kbd>Ctrl</kbd>-click) opens it in a new tab. Click one of its fields
   to edit it on the card instead.
 - **⋯** on a card offers **Open**, **Open in new tab**, and **Delete row**.
-- **+ New row**, in the toolbar or after the last card, adds a row.
+- **New** in the toolbar, {% include since.html v="0.16.0" %} or **+ New row** after the last card, adds a row.
 - **Fields** chooses which attributes the cards show, and sort and filters
   apply as in a table. A Gallery isn't grouped: a grouping saved in the view
   is kept in the block but not shown.
@@ -642,7 +706,10 @@ Any note can show one of a database's views, such as a weekly review showing
 the books you're reading. Type `/` and choose **Database view**, then start
 typing the database's name and pick it from the suggestions, which list only
 databases. Or, in the database's tab, open a view's
-**▾** menu and choose **Copy embed**, then paste it into the note.
+**▾** menu and choose **Copy embed**, then paste it into the note. **⋯
+Database actions** → **Copy embed** {% include since.html v="0.16.0" %} copies the view you're looking at the same
+way; neither is offered for a view with no name, or one that shares its name
+with another view, until you rename it.
 
 The note holds a small block:
 
@@ -710,6 +777,12 @@ until you update it from this one. Some rows and columns are always left out:
 - rows marked not to publish, disk-only rows, and people;
 - links to those notes in relation columns, and their values in rollups;
 - the **Created by** and **Last edited by** columns.
+
+A view that shows [Note ID](#note-id) publishes each row's id. Note ids are
+time-ordered, so they reveal when each row was created, even with
+**Created** hidden; the publish dialog and **Page settings** warn when a view
+on the page shows Note ID. Hide Note ID in the view and save the view to
+leave it out. {% include since.html v="0.16.0" %}
 
 An embed is published as *Database view (not published)* when its database is
 itself marked not to publish, is disk-only, or holds your people, and when
