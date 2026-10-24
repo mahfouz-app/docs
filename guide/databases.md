@@ -132,6 +132,10 @@ small margin at each side: {% include since.html v="0.16.0" %}
   - On a Calendar, it opens a new row on today, and the row is due today.
   - In a [People database](/guide/people/#adding-a-person), the chevron
     beside **New** offers **Add with details…**.
+  - **New** isn't available on a Board with no grouping it can show, on
+    a Calendar whose dates can't be changed there (its date comes from
+    Created, Updated or a rollup), or while the database is renaming a
+    column.
 - A second row shows the view's filters, sorts and grouping as chips, then
   **+ Add filter** and **+ Add sort**; see
   [The settings row](#the-settings-row). {% include since.html v="0.15.0" %}
