@@ -261,6 +261,21 @@ Like sorting and filtering, grouping applies on this device until you choose
 - A table wider than the pane scrolls sideways inside the tab. The **Title**
   column stays at the left edge while it scrolls, and each row's **⋯** stays
   at the right edge. {% include since.html v="0.16.0" %}
+- A table with more rows than fit on a page shows them in pages. Under the
+  table, a line such as "Showing 1–25 of 60 rows" sits beside **Previous**,
+  **Next**, a button for each page, and a menu for how many rows a page
+  holds: 25, 50 or 100. This device remembers your choice for every
+  database. When every row fits on one page, there's no pager.
+  {% include since.html v="0.16.0" %}
+- In a grouped table, a group that runs onto the next page ends with
+  "⟨group⟩ continues on the next page · N more", and the next page starts
+  with "⟨group⟩ (continued)". A group's count is always the whole group's,
+  not just the rows on this page. {% include since.html v="0.16.0" %}
+- The table goes back to the first page when you change the view, its
+  filters, its sort or its grouping. A row you create with <kbd>Enter</kbd>,
+  or a row your edit moves to another page, takes you to that page.
+  <kbd>↓</kbd> stops at the last row of a page; use **Next** to go on.
+  {% include since.html v="0.16.0" %}
 - Select and Multi-select values show as pills in their options' colors
   (see [Select options](/guide/attributes/#options)). Hover a value that's
   cut short to read it whole.
@@ -380,6 +395,10 @@ columns after them, and rows with no value go in the last column, "No
   holds, and **+**, which opens that column's new row: type a title to add
   a card with that column's value. {% include since.html v="0.14.0" %}
 - **New in ⟨column⟩** adds a card that already has that column's value.
+- Each column shows 25 cards at first, then **Show 25 more** (or **Show N
+  more** when fewer are left). The count in the column's header is all its
+  cards, not just the ones shown. A card you move or create there shows,
+  even when the sort puts it past the cards shown. {% include since.html v="0.16.0" %}
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.
