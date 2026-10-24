@@ -45,6 +45,14 @@ Below is each note's source.
 {% include kitchen-sink/kitchen_sink/reading_list/the_left_hand_of_darkness.md %}
 ````
 
+## A database view showing Note ID: Database view with note IDs
+
+`kitchen_sink/database_view_note_ids.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/database_view_note_ids.md %}
+````
+
 ## Renaming a tag: Tag rename
 
 `kitchen_sink/tag_rename.md`

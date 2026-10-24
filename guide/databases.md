@@ -336,6 +336,18 @@ vault directly instead of becoming suggestions.
   change applies as you make it. See
   [Changing a type](/guide/attributes/#change-type). {% include since.html v="0.14.0" %}
 
+### Note ID {% include since.html v="0.16.0" %} {#note-id}
+
+Every database lists **Note ID** in **Columns** (**Fields** on a Board or
+Gallery), after **Updated**. It's off until you turn it on. It shows each
+row's note id, the `id` in the row's frontmatter, in monospace. You can't
+edit it, but you can sort and filter by it.
+
+Click a Note ID cell, or the Note ID line on a card, to copy the id; **Note
+ID copied** confirms it. Clicking a card's Note ID line copies the id
+without opening the row. In a [database view embedded in a
+note](#show-a-database-in-another-note), the id shows but isn't copied.
+
 ## Save view
 
 **Save view** writes your current sort, filters, grouping, and columns into the
@@ -764,6 +776,12 @@ until you update it from this one. Some rows and columns are always left out:
 - rows marked not to publish, disk-only rows, and people;
 - links to those notes in relation columns, and their values in rollups;
 - the **Created by** and **Last edited by** columns.
+
+A view that shows [Note ID](#note-id) publishes each row's id. Note ids are
+time-ordered, so they reveal when each row was created, even with
+**Created** hidden; the publish dialog and **Page settings** warn when a view
+on the page shows Note ID. Hide Note ID in the view, and save it, to leave it
+out. {% include since.html v="0.16.0" %}
 
 An embed is published as *Database view (not published)* when its database is
 itself marked not to publish, is disk-only, or holds your people, and when
