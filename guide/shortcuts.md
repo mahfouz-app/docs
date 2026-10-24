@@ -112,8 +112,9 @@ Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
-  **New Database**, New Vault, Open Vault, Save, Export, Share (macOS
-  only), Close Tab.
+  **New Database**, New Vault, Open Vault, Save, Import
+  {% include since.html v="0.16.0" %}, Export, Share (macOS only), Close
+  Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
   Find in All Notes {% include since.html v="0.13.0" %}, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
