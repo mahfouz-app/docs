@@ -90,6 +90,9 @@ The tools an agent sees depend on the highest level you gave it.
 | Edit | `create_note`, `update_note_body`, `replace_in_note`, `delete_note`, `move_note`, `set_attributes`, `delete_attribute`, `add_comment`, `create_database`, `turn_into_database`, `add_database_row`, `add_task`, `complete_task` |
 | Publish | `publish_note`, `unpublish_note` |
 
+`read_note`, and `create_note` once the note is created, also answer with
+the note's [permalink](/guide/permalinks/) {% include since.html v="0.16.0" %}.
+
 `publish_note` publishes one note, never its children, as an **Unlisted**
 page. It refuses a note that is already published; that page updates
 through auto-publish or the note's menu.
