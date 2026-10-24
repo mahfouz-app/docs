@@ -179,8 +179,8 @@ You can [hide **People** from the rail](/guide/notes/#rail-pins);
 The **Add person** form takes a person's contact details in one go. Open it
 from the chevron beside **Add person**'s name field in the
 [People view](#the-people-view), from **Add “x” with details…** in the
-[mention menu](#mentions), or from the chevron beside **New row** in a
-People database.
+[mention menu](#mentions), or from the chevron beside **New** in a
+People database's toolbar ({% include since.html v="0.16.0" %} **Add with details…**).
 
 - **First name**, **Last name** and **Full name**. Full name fills itself
   from the first and last names until you type over it.
@@ -190,7 +190,7 @@ People database.
 
 Only the fields you fill in are written to the new person note.
 
-In a People database, **New row** and **New in ⟨group⟩** add a person too:
+In a People database, **New** {% include since.html v="0.16.0" %}, **New row** and **New in ⟨group⟩** add a person too:
 the new row gets a handle, made from its title, so you can mention it. {% include since.html v="0.14.0" %}
 
 ## A person's page

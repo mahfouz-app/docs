@@ -144,7 +144,9 @@ coming. {% include since.html v="0.15.0" %} The views:
   - Its assignee is a [person chip](/guide/people/#person-chips): click
     the name to open the person's note, or the ▾ to pick someone else or
     **Unassign**. {% include since.html v="0.15.0" %}
-  Each change rewrites the task's line in its note. **Columns** shows or
+  Each change rewrites the task's line in its note. A table wider than the
+  pane scrolls sideways, and the title column stays at the left edge while
+  it does. {% include since.html v="0.16.0" %} **Columns** shows or
   hides **Status**, **When**, **Assignee**, **Note**, **Vault** and
   **Tags**, and **Group** groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
 - **Board** puts the tasks in three columns: **To do**, **In progress**
