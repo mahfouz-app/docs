@@ -43,21 +43,35 @@ emails. The preview's warnings say when either is missing.
 ## Import
 
 Right-click a note or folder in the sidebar and choose **Import here…**.
-The import lands inside it. You can also run the **Import** action, which
-imports into the active note. It has no shortcut until you give it one in
-**Settings → Shortcuts** (see [Keyboard shortcuts](/guide/shortcuts/)).
+The import lands inside it. You can also choose **File → Import…**
+{% include since.html v="0.16.0" %} or run the **Import** action. Both
+import into the active note, or the vault's top level when no note is
+open. The action has no shortcut until you give it one in **Settings →
+Shortcuts** (see [Keyboard shortcuts](/guide/shortcuts/)).
 
-The dialog has these steps:
+The import runs in the background, so you can keep working while Notion
+is read and while the notes are written. {% include since.html v="0.16.0" %}
+One notification in the [notification area](/guide/notifications/) follows
+it from start to finish, with its progress. A click outside the dialog
+doesn't close it: use **Cancel**, the **×** or <kbd>Esc</kbd>.
+
+The import has these steps:
 
 1. **Source and destination.** Pick **Notion**, check **Import into**
    (**Change** picks another note or folder), and paste the token. To
    import a single page, paste its link into **Page link** (next section);
    leave it empty to import from everything shared with the integration.
    {% include since.html v="0.14.0" %} **Include comments** is on by
-   default; turn it off for a faster import. Click **Continue**.
-2. **Reading.** Mahfouz reads the shared pages, or only the linked page
-   and what's under it. **Cancel** stops it, and nothing has been written
-   yet.
+   default; turn it off for a faster import. Click **Start**
+   {% include since.html v="0.16.0" %}.
+2. **Reading.** {% include since.html v="0.16.0" %} The dialog closes and
+   Mahfouz reads the shared pages, or only the linked page and what's
+   under it, in the background. A notification shows the progress, and its
+   **Cancel** stops the read; nothing has been written yet. When the read
+   is done, the notification says what's ready to import: click
+   **Review…** to reopen the dialog on the next step, or **Discard** to
+   drop it. If the read fails, the notification says why, and **Try
+   again…** reopens the dialog with your choices kept.
 3. **Choose pages.** {% include since.html v="0.14.0" %} When Notion shares
    more than one top-level page or database, they're listed with how many
    pages or rows each holds, all ticked. Untick the ones to leave out
@@ -67,14 +81,15 @@ The dialog has these steps:
    with a page link, this step is skipped; a database link lists each of
    the database's data sources. **Back** returns to the first step and
    keeps what was read, unless you change the link, an option or the
-   token.
+   token, which reads again in the background.
 4. **Preview.** You see how many notes, databases, files, tasks and
    comments will be created, and any warnings about what can't come
    across. Under **People**, type a GitHub login for each person Notion
    mentions; a login is filled in when the person's email matches one of
    the vault's collaborators. A person left blank keeps their name as plain
    text, and their tasks stay unassigned. **Back** returns to the page
-   list with your choices kept. Click **Import**.
+   list with your choices kept. Click **Import**. The dialog closes and
+   the same notification shows the import's progress until it's done.
 
 ### Import one page {% include since.html v="0.14.0" %} {#import-one-page}
 
@@ -83,11 +98,11 @@ The dialog has these steps:
 2. Make sure the page is connected to your integration: **•••** →
    **Connections** should list it, on the page or on a page above it.
 3. In the Import dialog, paste the link into **Page link** and click
-   **Continue**.
+   **Start**.
 
 Only that page and the pages under it are read, so this is quick even in a
-large workspace. If the page isn't connected, the dialog says so and
-nothing is read.
+large workspace. If the page isn't connected, the notification says so and
+nothing is imported.
 
 A link to a row of a database imports the row as a page, without its
 properties; link the database to bring its rows in with their
@@ -95,8 +110,9 @@ properties. A relation or mention that points outside the linked page
 becomes a link back to Notion.
 
 The files are downloaded, then everything is written and committed as one
-change in the vault's history: **Import from Notion: N notes**. A
-notification shows the progress. If something fails partway, the import
+change in the vault's history: **Import from Notion: N notes**. The
+notification shows the progress, then **Imported N notes** with **Open**.
+If something fails partway, the import
 removes what it wrote and nothing is left behind.
 
 Because the import is a single commit, you can take it back in one step
