@@ -9,6 +9,9 @@
     - slug: links
       title: "Links, tags & search"
       description: "Link notes with wikilinks, see backlinks, tag notes and search the vault."
+    - slug: permalinks
+      title: "Permalinks"
+      description: "Copy a permanent link to a note, paste it into a pull request or a chat, and open it on any device that has the note."
     - slug: command-palette
       title: "The command palette"
       description: "Press Mod+K to jump to a note, run a command or open a setting."

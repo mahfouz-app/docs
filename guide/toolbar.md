@@ -56,7 +56,7 @@ Right-aligned at the end of the toolbar:
   publish items, which are in the bottom bar):
   **Present**, **Export…**, **New child note**, **New folder**,
   **Bookmark** / **Remove bookmark**, **Move…**, **Rename**, **Duplicate**,
-  **Copy name**, **Copy as wikilink**, **Copy ID**, **Reveal in Finder**
+  **Copy ›** (**Name**, **Wikilink**, **ID**, and **[Permalink](/guide/permalinks/)** {% include since.html v="0.16.0" %}), **Reveal in Finder**
   (**Reveal in File Explorer** on Windows, **Open Containing Folder** on Linux),
   **Revisions** (opens the note's history in the Details section), and **Delete** (danger). Each
   item shows its keyboard shortcut.

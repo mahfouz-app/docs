@@ -40,6 +40,9 @@ permalink: /guide/links/
   A wikilink in an attribute counts too, such as `author: "[[Ursula K. Le Guin]]"`
   or an item in a list. That note is listed with the attribute it links
   through, for example "The Dispossessed via author", and opens at the top. {% include since.html v="0.12.0" %}
+- **Linking from outside the vault**: a [permalink](/guide/permalinks/)
+  links to a note from a pull request, an issue or a chat, and keeps working
+  when the note is renamed or moved. {% include since.html v="0.16.0" %}
 
 ### Link to a heading {% include since.html v="0.14.0" %} {#link-to-a-heading}
 
