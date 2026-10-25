@@ -297,14 +297,18 @@ You can ask the [AI agent](/guide/track-changes/#suggestions-from-the-agent),
 or an [external agent](/guide/external-agents/) whose
 [access level](/guide/external-agents/#access-levels) in the vault is
 **Publish** {% include since.html v="0.17.0" %}, to publish or unpublish a
-note. Either always waits for you, in every approval mode, including the
-ones that apply everything else.
+note. The AI agent always waits for you, in every approval mode. An
+external agent follows its approval mode: it waits unless the mode is
+**Don't ask** {% include since.html v="0.17.0" %}.
 
 - **Publish.** The agent's card lists the images to upload, the attachments
-  that aren't published and the diagrams shown as code. Accepting it
-  doesn't publish yet: it opens the usual publish dialog, where you choose
-  the options and click **Publish**, or cancel. An agent can't turn on
-  child-note publishing or change a page's visibility.
+  that aren't published and the diagrams shown as code. Accepting the AI
+  agent's card doesn't publish yet: it opens the usual publish dialog,
+  where you choose the options and click **Publish**, or cancel. An
+  external agent's publish puts the note online at once, as an
+  **Unlisted** page without its child notes, and gives the agent the
+  link {% include since.html v="0.17.0" %}. An agent can't turn on child-note publishing or change a page's
+  visibility.
 - **Unpublish.** Accepting it takes the page down at once, like
   **Unpublish** in the note's menu.
 
