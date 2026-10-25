@@ -12,4 +12,12 @@ views:
       - title
       - author
       - status
+  - type: gantt
+    name: Reading time
+    date: started
+    end: finished
+    dependsOn: after
+properties:
+  after:
+    relation: { target: "[[Reading list]]" }
 ```
