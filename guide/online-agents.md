@@ -102,7 +102,8 @@ through auto-publish or the note's menu.
 | | Through Mahfouz | On GitHub |
 |---|---|---|
 | Approvals | [Approval modes](/guide/external-agents/#approval-modes), proposals and **Recently applied** with Undo | None: edits apply and push at once. Undo them from [history](/guide/history/) or the Trash |
-| Publishing | Waits for you and opens the Publish dialog | Publishes at once, at the Publish level |
+| Access | [Access levels](/guide/external-agents/#access-levels) per vault {% include since.html v="0.17.0" %} | [Access levels](#access-levels) per repository |
+| Publishing | At the Publish level, waits for you and opens the Publish dialog | Publishes at once, at the Publish level |
 | Vaults | Every vault you allow, including ones with no GitHub remote, on any branch | Only the repositories you chose, on their default branch |
 | Freshness | Sees edits you haven't committed or pushed | Sees GitHub's copy, which lags until Mahfouz pushes |
 | Disk-only notes | Visible | Not visible |
