@@ -92,8 +92,14 @@ chip: {% include since.html v="0.13.0" %}
 
 - **+** inside the field inserts a part at the cursor: year, month,
   day, weekday, hour, minute, second, week. Each part shows a sample value
-  from 11 December 1911, Naguib Mahfouz's birthday.
-- **Click a chip** to swap it for another part, or to **Remove** it.
+  from 11 December 1911, Naguib Mahfouz's birthday. A part that would run
+  into the text beside the cursor is greyed out, since the two would read
+  as a different part: Month right after Month reads as the month name.
+  Type a separator, such as a space or `-`, first.
+  {% include since.html v="0.17.0" %}
+- **Click a chip** to swap it for another part, or to **Remove** it. A
+  part that would run into its neighbours is greyed out there too.
+  {% include since.html v="0.17.0" %}
 - **Type** anything else, such as `/`, `-` or a word, between the chips.
 - **Arrow keys** step over a chip as one character, and
   <kbd>Backspace</kbd> deletes it whole. <kbd>Alt</kbd><kbd>←</kbd> and
