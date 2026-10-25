@@ -42,6 +42,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | Set the active note's page icon (no default key; action "Set note icon") |
 | None | Find the notes that mention the person at the cursor: opens the [Search tab](/guide/links/#search) on `person:handle` for the @mention the cursor is on (no default key; action "Find mentions of person", row `find_mentions`) {% include since.html v="0.13.0" %} |
 | None | Copy a [link to the heading](/guide/links/#link-to-a-heading) the cursor is on (no default key; action "Copy link to heading", row `copy_heading_link`) {% include since.html v="0.14.0" %} |
+| None | Copy the active note's [permalink](/guide/permalinks/) (no default key; action "Copy permalink", row `copy_permalink`) {% include since.html v="0.16.0" %} |
 | None | [Share the active note](/guide/toolbar/#the-bottom-bar) through the system share sheet (no default key; row `share_note`; in the macOS app and in browsers that can share) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
@@ -112,12 +113,14 @@ Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
-  **New Database**, New Vault, Open Vault, Save, Export, Share (macOS
-  only), Close Tab.
+  **New Database**, New Vault, Open Vault, Save, Import
+  {% include since.html v="0.16.0" %}, Export, Share (macOS only), Close
+  Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
   Find in All Notes {% include since.html v="0.13.0" %}, Command Palette.
 - **Note**: acts on the note in the active tab. It has Bookmark, Auto-commit,
-  Rename, Duplicate, Move, the three Copy commands, Reveal in Finder (or
+  Rename, Duplicate, Move, the Copy commands (Copy Permalink
+  {% include since.html v="0.16.0" %}), Reveal in Finder (or
   File Explorer), Revision History, plugin commands such as Present, and
   Delete. These items are greyed out when no note tab is open.
 - **View**: the sidebars, Line Numbers, Zoom In and Out, Stop Presenting.

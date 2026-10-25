@@ -10,6 +10,9 @@ Publishing turns one note into a public web page. Anyone with the link can
 read it, without Mahfouz or a GitHub account. The rest of your vault stays
 private: only that note and its images are sent.
 
+To share a note with chosen people instead, who can then comment on it or
+edit it with you, see [Sharing a note with people](/guide/sharing/) {% include since.html v="0.16.0" %}.
+
 Publishing works in the desktop app and on the web. You need to be
 [signed in to GitHub](/guide/github/), and the vault needs at least one
 commit.

@@ -10,6 +10,10 @@ Track changes lets you **suggest** edits to a note instead of making them,
 as in Word or Google Docs. Your suggestions stay in the note, marked up,
 until you or a collaborator accepts or rejects them.
 
+When you [share a note](/guide/sharing/), the people you give **Can
+comment** or **Can suggest** add comments and suggestions the same way, and
+you accept or reject theirs {% include since.html v="0.16.0" %}.
+
 ## Suggesting and editing
 
 The bottom bar's track changes menu (a pencil while Editing, a tinted pencil

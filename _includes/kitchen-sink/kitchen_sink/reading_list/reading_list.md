@@ -16,10 +16,19 @@ views:
     name: Note IDs
     order:
       - title
-      - id  - type: table
+      - id
+  - type: table
     name: Status first
     order:
       - status
       - title
       - author
+  - type: gantt
+    name: Reading time
+    date: started
+    end: finished
+    dependsOn: after
+properties:
+  after:
+    relation: { target: "[[Reading list]]" }
 ```

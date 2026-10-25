@@ -56,7 +56,7 @@ Right-aligned at the end of the toolbar:
   publish items, which are in the bottom bar):
   **Present**, **Export…**, **New child note**, **New folder**,
   **Bookmark** / **Remove bookmark**, **Move…**, **Rename**, **Duplicate**,
-  **Copy name**, **Copy as wikilink**, **Copy ID**, **Reveal in Finder**
+  **Copy ›** (**Name**, **Wikilink**, **ID**, and **[Permalink](/guide/permalinks/)** {% include since.html v="0.16.0" %}), **Reveal in Finder**
   (**Reveal in File Explorer** on Windows, **Open Containing Folder** on Linux),
   **Revisions** (opens the note's history in the Details section), and **Delete** (danger). Each
   item shows its keyboard shortcut.
@@ -99,6 +99,10 @@ On the left:
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
   the page is behind the note (see [Publishing](/guide/publishing/))
+- **Share…** (two people): shares the note with chosen GitHub accounts or
+  a secret link, so they can read, comment on, suggest edits to or edit it
+  live with you (see [Sharing a note with people](/guide/sharing/)). It
+  shows only where sharing is on for your account {% include since.html v="0.16.0" %}
 - **Share** (a box with an up arrow): opens the system share sheet to send
   the note to another app, such as Mail or Messages. It sends the note's
   text as Markdown, without its attributes or a database's view settings.
