@@ -225,8 +225,8 @@ Under a person note's text, Mahfouz shows:
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
   by every person page. {% include since.html v="0.12.0" %}
   It's a compact copy of the Tasks tab, in a frame: the fixed **Table**,
-  **Board** and **Calendar** tabs, **Filter**, **Sort** and **Columns**,
-  with no **Group**. The toolbar shows even when they have no tasks yet.
+  **Board** and **Calendar** tabs, **Filter, sort and group** with no
+  **Group** tab {% include since.html v="0.17.0" %}, and **Columns**. The toolbar shows even when they have no tasks yet.
   {% include since.html v="0.16.0" %}
   - **New task for @handle**, under the table, adds a task assigned to
     them, into the note [New task](/guide/tasks/#new-task) remembers for

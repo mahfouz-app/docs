@@ -111,9 +111,20 @@ small margin at each side: {% include since.html v="0.16.0" %}
 - The page icon and the title, lined up with the table's left edge
   rather than a note's text, {% include since.html v="0.16.0" %} then the number of rows. When filters hide some rows, it says how many are shown,
   such as **3 of 4 rows**.
-- The views as tabs, then the **Filter**, **Sort**, **Group** and
-  **Columns** buttons, as icons (a Board or Gallery has **Fields** instead
-  of **Columns**).
+- The views as tabs, then **Filter, sort and group** (an icon of three
+  lines getting shorter, with a count of the filters, sorts and grouping
+  the view has) and **Columns** (a Board or Gallery has **Fields** instead
+  of **Columns**). {% include since.html v="0.17.0" %} **Filter, sort and group** opens one
+  panel with **Filter**, **Sort** and **Group** tabs; a view that shows no
+  grouping, such as a Gallery or a Calendar, has no **Group** tab.
+  {% include since.html v="0.17.0" %}
+- When the views don't all fit, the first ones stay in the row, the view
+  you're looking at always among them, and the rest are in an **N more**
+  menu at the end of the row. Pick one there to show it. {% include since.html v="0.17.0" %}
+- As the pane narrows, the toolbar's buttons give way to their icons one
+  at a time: first **Columns** (and a Gantt's **View settings**, which
+  becomes a cog), then **+ View**, then **New**. Hover over an icon to see
+  its name. {% include since.html v="0.17.0" %}
 - After them, **⋯ Database actions**: {% include since.html v="0.16.0" %}
   - **Copy embed** copies an embed of the view you're looking at; see
     [Show a database in another note](#show-a-database-in-another-note).
@@ -158,15 +169,16 @@ Expand it to see the rows as ordinary notes.
 
 - Click a column header to sort by it. Click again to reverse the order, and
   once more to stop sorting by it.
-- To sort by several columns, use **Sort**. Each sort has a direction
+- To sort by several columns, open **Filter, sort and group** and pick its
+  **Sort** tab. {% include since.html v="0.17.0" %} Each sort has a direction
   button: click **Ascending** to make it **Descending**, and again to flip
   it back. To change which sort comes first, drag a sort by its handle, or
   focus the handle and press <kbd>Alt</kbd><kbd>↑</kbd> or
   <kbd>Alt</kbd><kbd>↓</kbd>. {% include since.html v="0.15.0" %}
-- **Filter** shows the rows that match every filter in the list. Each filter
+- The **Filter** tab shows the rows that match every filter in the list. Each filter
   is a column, a comparison, and a value. A Select column offers its options.
-- When the view has no filters, **Filter** opens the list of columns right
-  away, with a search box; pick one to add a filter on it. **Sort** does the
+- When the view has no filters, the **Filter** tab opens the list of columns right
+  away, with a search box; pick one to add a filter on it. The **Sort** tab does the
   same while the view has no sorts. {% include since.html v="0.15.0" %}
 
 The comparisons are written as words: {% include since.html v="0.15.0" %}
@@ -204,7 +216,7 @@ grouping as a chip, such as **Status is not Done**, **Rating descending** or
 - Click a sort chip to flip it between ascending and descending, and a
   Checkbox filter chip to flip it between **Checked** and **Unchecked**.
   {% include since.html v="0.15.0" %}
-- Click the grouping chip to open **Group**.
+- Click the grouping chip to open the **Group** tab. {% include since.html v="0.17.0" %}
 - Click a chip's **×** to remove just that filter, sort or grouping. A
   Board's grouping chip has no **×**, because a Board is always grouped.
 - **+ Add filter** and **+ Add sort** open the list of columns, with a
@@ -231,7 +243,8 @@ that isn't one of the options gets its own section after them, and rows with
 no value come last, under "No ⟨attribute⟩". Your sort applies inside each
 section.
 
-- Choose **Group**, then an attribute, or **None** to stop grouping. Only
+- Open **Filter, sort and group**, pick its **Group** tab {% include since.html v="0.17.0" %}, then an
+  attribute, or **None** to stop grouping. Only
   Select attributes are offered; if there are none, set a column's type to
   Select first.
 - Click a section's name to collapse or expand it.
@@ -450,7 +463,7 @@ columns after them, and rows with no value go in the last column, "No
   either sort direction: sorting a Board descending reverses only the
   options. They have no grip, and option columns can't be moved among
   them. {% include since.html v="0.16.0" %}
-- **Group** chooses which Select attribute the Board uses, and **Fields**
+- The **Group** tab chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.
 - **Fields** orders the fields as **Columns** orders a table's columns,
@@ -633,7 +646,7 @@ at once. There's no **Save view** step and no **Reset** for it.
 
 ### Lanes
 
-**Group** splits the rows into lanes by a Select attribute, such as a
+The **Group** tab splits the rows into lanes by a Select attribute, such as a
 status; its list is captioned **Group rows into lanes by**. The lanes follow
 the order of the attribute's options, as a table's sections do, and each
 lane's header says how many rows it holds. Click a lane's chevron, or press

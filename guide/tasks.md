@@ -193,7 +193,7 @@ The views:
   pane scrolls sideways, and the first column stays at the left edge while
   it does. {% include since.html v="0.16.0" %} **Columns** shows or
   hides **Status**, **When**, **Assignee**, **Note**, **Vault** and
-  **Tags**, and **Group** groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
+  **Tags**, and the **Group** tab groups by **When** or **Status**, or not at all. {% include since.html v="0.12.0" %}
   You can reorder the columns, Title included, as in a database: in
   **Columns**, with a header's grip, or with **Move left** and **Move right**.
   The order is kept on this device only. <kbd>Home</kbd> and <kbd>End</kbd>
@@ -224,7 +224,8 @@ The views:
   menu; its time stays.
   Overdue tasks are tinted and done ones are struck through. {% include since.html v="0.12.0" %}
 
-**Filter** and **Sort** narrow and order any view. Mahfouz remembers each
+**Filter** and **Sort**, the tabs of **Filter, sort and group** with
+**Group** {% include since.html v="0.17.0" %}, narrow and order any view. Mahfouz remembers each
 view's settings, and the view you picked, on this computer; **Reset**
 goes back to the defaults. As in a [database](/guide/databases/#the-settings-row),
 a row under the toolbar shows each filter, sort and grouping as a chip:
