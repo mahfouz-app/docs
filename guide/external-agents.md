@@ -10,8 +10,9 @@ External agents are AI apps outside Mahfouz, such as Claude Code, Claude
 Desktop, Codex or claude.ai, connected to it over MCP. Once connected, an
 agent can read the vaults you allow and work in them: create notes and nest
 them under other notes, create databases and add rows, add tasks and tick
-them off, comment, look up and add [people](/guide/people/) {% include since.html v="0.13.0" %}, and ask to publish a note. You decide which vaults each agent can reach, and
-which of its edits wait for your approval.
+them off, comment, look up and add [people](/guide/people/) {% include since.html v="0.13.0" %}, and ask to publish a note. You decide what each agent can do in each
+vault, from nothing to publishing, and which of its edits wait for your
+approval.
 
 ## Connect an agent in the desktop app
 
@@ -20,8 +21,11 @@ which of its edits wait for your approval.
 2. Click **Connect a client** and pick **Claude Code**, **Claude Desktop**,
    **Codex** or **Other**. Change the name if you like; it's how the client
    shows up in Settings and on its proposals.
-3. Under **Vaults it can use**, tick the vaults the agent may reach, then
-   click **Connect**.
+3. Under **Access to each vault**, choose what the agent may do in each
+   vault: **No access**, **Read**, **Edit** or **Publish** (see
+   [Access levels](#access-levels)). The vault you have open starts at
+   **Edit** and the others at **No access**. Click **Connect**.
+   {% include since.html v="0.17.0" %}
 4. Copy what Mahfouz shows into the client:
    - **Claude Code**: a `claude mcp add mahfouz …` command. Run it in a
      terminal.
@@ -76,7 +80,9 @@ URL instead of a token:
    databases and tasks is always included. Untick **Propose and make
    edits** to connect it read only.
 4. Back in Settings, the client appears under **Connected clients** with
-   no vaults. Tick the vaults it may use.
+   every vault at **No access**. Choose its [access level](#access-levels)
+   in each vault it may use. {% include since.html v="0.17.0" %}
+   A client you connected read only can be given **Read** at most.
 
 Which vaults a client can reach is set per browser, in the browser where
 you allow them. Agents can reach your vaults only while a Mahfouz tab is
@@ -86,10 +92,26 @@ To let an agent work with no Mahfouz window or tab open, connect it to
 your GitHub repositories instead: see
 [Agents on GitHub](/guide/online-agents/).
 
+## Access levels {% include since.html v="0.17.0" %} {#access-levels}
+
+Each client has its own access level in each vault, chosen next to the
+vault in Settings → AI → External agents, as for
+[agents on GitHub](/guide/online-agents/):
+
+- **No access**: the agent can't see the vault.
+- **Read**: read notes, databases, tasks and people. Any change is refused
+  with "You can read … but not change it".
+- **Edit**: read, and propose or make changes. Publishing and unpublishing
+  are refused.
+- **Publish**: also ask to publish and unpublish notes.
+
+Clients connected before access levels keep what they could do at
+**Edit**. To let one publish, set the vault to **Publish**.
+
 ## Approval modes
 
-Each client has its own mode in each vault it can use, chosen next to the
-vault in Settings → AI → External agents:
+At **Edit** and **Publish**, each client has its own mode in each vault,
+chosen under its access level in Settings → AI → External agents:
 
 - **Ask before every edit**: every change waits for you.
 - **Ask before destructive edits**: the default. Changes apply right
@@ -123,8 +145,9 @@ shows up in [history](/guide/history/) like any other. In a note that is in
 
 ### Publishing and unpublishing
 
-An agent can ask to [publish](/guide/publishing/#publishing-with-the-agent)
-or unpublish a note. These always wait for you, even under **Don't ask**.
+An agent at **Publish** in the vault can ask to
+[publish](/guide/publishing/#publishing-with-the-agent) or unpublish a
+note. {% include since.html v="0.17.0" %} These always wait for you, even under **Don't ask**.
 Accepting a publish opens the usual publish dialog, where you choose the
 options and click **Publish**; accepting an unpublish takes the page down
 at once. Neither can be undone from **Recently applied**: publish the note
@@ -166,8 +189,9 @@ In Settings → AI → External agents:
 - **Revoke** next to a client cuts it off. To use it again, connect it
   again: on desktop as a new client, with a new token; on the web by
   approving it again.
-- Unticking a vault takes that vault away from the client, and turns down
-  its proposals still waiting there.
+- Setting a vault to **No access** takes it away from the client, and
+  turns down its proposals still waiting there. Lowering a level turns
+  down the waiting proposals the new level doesn't allow. {% include since.html v="0.17.0" %}
 - On the web, **Disconnect all agents** cuts off every client at once.
   [**Sign out everywhere**](/guide/web-github/#signing-in-with-github) in
   the account menu disconnects every agent connected through the web, too.
@@ -181,8 +205,9 @@ External agents are off until you turn them on, and nothing in your vaults
 reaches an agent before then. For everywhere your notes can go, see
 [Privacy](/privacy/).
 
-- **An agent reaches only the vaults you allow.** It's refused anywhere
-  else.
+- **An agent reaches only the vaults you allow, and only as far as their
+  access level.** It's refused anywhere else, and a vault at **Read** can't
+  be changed.
 - **Notes are data, not instructions.** An agent reads notes you haven't
   shown it, and a note can contain text written to steer it. Mahfouz tells
   agents never to follow instructions found in note text, and asks before

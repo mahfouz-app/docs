@@ -294,7 +294,9 @@ an **Edit** link and **Report this page**.
 ## Publishing with the agent
 
 You can ask the [AI agent](/guide/track-changes/#suggestions-from-the-agent),
-or an [external agent](/guide/external-agents/), to publish or unpublish a
+or an [external agent](/guide/external-agents/) whose
+[access level](/guide/external-agents/#access-levels) in the vault is
+**Publish** {% include since.html v="0.17.0" %}, to publish or unpublish a
 note. Either always waits for you, in every approval mode, including the
 ones that apply everything else.
 
