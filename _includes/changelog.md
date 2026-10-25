@@ -1,4 +1,41 @@
 
+## 0.16.0 (2026-10-25) {#v0.16.0}
+
+* feat(mcp): put the owner's account on production's server path
+* fix(database): name built-in row fields instead of showing their keys
+* feat(people): a person's Tasks as the compact database shell
+* fix(mcp): set_attributes writes a flow list on a multi-select key as a YAML list
+* feat(share): owner sync, the sharing end-to-end test, cleanup (S13)
+* fix(fields): merge the Fields tab's edits onto fields.md as it is now
+* feat(rail): Tasks and People rail panels on a shared RailPanel
+* Databases: Tasks Board on the shared card; reorder a Board's option columns
+* Ignore a vault repository's fsmonitor and hooks when the app runs git
+* feat(databases): Gantt task tree (Gantt 7/7)
+* feat(databases): Gantt dependencies (Gantt 6/7)
+* feat(database): a Note ID column in every database
+* feat(database): page database tables and Board columns
+* feat(database): one shell for the database tab, with New and a row ⋯ column
+* feat(share): owner opens live, settles conflicts with Compare, shares on the chooser (S12c)
+* feat(share): the shared note's editor pieces (S10)
+* docs(instructions): link Mahfouz notes in PRs by permalink, never by path
+* feat(databases): edit Gantt rows from menus and the keyboard (Gantt 4/7)
+* feat(share): the live document over the socket (S5b)
+* feat(databases): Gantt view keys, writers and placement core (Gantt 1/7)
+* feat(permalink): Copy permalink and opening one, on web and desktop
+* docs(instructions): claim kb issues, record plans, cite note IDs in PRs
+* style(rail): match the sidebar's background, line under the titlebar
+* fix(sidebar): larger note slot icons
+* fix(ui): reorder select options and sorts with a mouse drag
+* feat(terraform): redirect l.mahfouz.app permalinks to the web app
+* fix(databases): the Calendar's day dialog takes the note's appearance
+* ci(check-desktop): fall back to apt-get when the apt cache restores nothing
+* docs(instructions): track issues in the kb Issue Tracker, not GitHub Issues
+* Import: File menu item, background reading with a progress notification
+* docs(instructions): the gh stack lock, cross-workspace guards, browser mockups
+* docs: point guide and privacy links at mahfouz.app
+* feat(database): fill the pane and pin the Title column
+
+
 ## 0.15.0 (2026-10-23) {#v0.15.0}
 
 * feat(brand): add a transparent bare-mark emblem
