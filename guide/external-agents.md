@@ -56,6 +56,9 @@ The agent reaches your vaults through the running app.
   agents made a request in the last 5 minutes, with **About**,
   **Settings…** and **Quit**. Click the version to open Mahfouz too.
   **Quit** always quits.
+  Closing the window locks every encrypted note you unlocked
+  {% include since.html v="0.17.0" %}: its tab closes, and you unlock it
+  again when you open Mahfouz.
 - **Nothing is happening:** with no window open and no agent request for
   30 minutes, Mahfouz quits on its own. This applies whether the window
   was closed or an agent started the app.
