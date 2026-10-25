@@ -121,13 +121,40 @@ To change a task's assignee, click the ▾ on its assignee chip
 
 Like the date picker, these changes apply directly, even in Suggesting mode.
 
+## The Tasks panel {% include since.html v="0.16.0" %} {#the-tasks-panel}
+
+Click **Tasks** in the left rail to show your tasks in the left sidebar,
+in place of your notes; click it again to bring your notes back. The
+button looks pressed while the panel shows.
+
+- Type in **Search tasks** to filter the list.
+- **Mine** and **Everyone** choose whose tasks show. The Tasks tab and the
+  rail's dot (below) follow the same choice.
+- Tasks are grouped under **Overdue**, **Today** and **Upcoming**, five
+  each; **Show N more** lists the rest of a group. **Done** starts
+  collapsed.
+- Each task has its checkbox, its due date (in red when it's overdue; just
+  the time under **Today**) and its assignee's avatar. Click a task to
+  open its note at its line.
+- A task's **⋯**, or a right-click, offers **Open note**, **Mark done**
+  (or **Mark to do**) and **Open in Tasks**.
+- **New task**, at the foot of the list or the **＋** at the top, asks for
+  a title: press <kbd>Enter</kbd> to add it, due today, to the note
+  [remembered for the vault](#new-task), or <kbd>Esc</kbd> to cancel. If
+  it can't be written, the title stays so you can try again.
+- The table button at the top, and **Open the Tasks database** at the
+  bottom, open the [Tasks tab](#the-tasks-view).
+
+Ticking a task here updates the Tasks tab and the rail's dot at once.
+
 ## The Tasks view
 
-Click **Tasks** in the left rail (<kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}) to open the
-Tasks tab in the main pane, beside your notes. Click **Tasks** again, or
-the home button, to go back to the tab you were on. {% include since.html v="0.15.0" %}
-It shows every task as a database, with three views to pick from at the
-top. You can
+The Tasks tab, in the main pane beside your notes, shows every task as a
+database, with three views to pick from at the top. Open it from the
+[Tasks panel](#the-tasks-panel), or press <kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}:
+the key, which the rail button's tooltip names, and
+[reminders](#reminders) open the tab directly. {% include since.html v="0.16.0" %}
+On a phone, **Tasks** in the bar at the bottom of the screen opens it. You can
 [remove **Tasks** from the rail](/guide/notes/#rail-pins):
 <kbd>Mod</kbd><kbd>2</kbd> still opens the Tasks tab, and reminders keep
 coming. {% include since.html v="0.15.0" %}

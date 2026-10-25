@@ -155,12 +155,21 @@ You can [hide **People** from the rail](/guide/notes/#rail-pins);
 
 - Type in **Search people** to filter the list. Click a person to open
   their note. A collaborator with no note yet shows **GitHub only**.
+- **All**, **Notes** and **GitHub** choose who's listed: everyone, only
+  person notes, or only collaborators without a note. Switching vaults
+  goes back to **All**. {% include since.html v="0.16.0" %}
+- The list shows 50 people at first; **Show N more** adds the next ones.
+  {% include since.html v="0.16.0" %}
 - **Add person** (＋) asks for a name: type it and press <kbd>Enter</kbd> to
   add a row to the People database. The chevron beside the name field
   opens the [Add person form](#adding-a-person) instead. {% include since.html v="0.14.0" %}
-- **Open People database** opens the database itself, as a table.
+- **Open People database** (the table button at the top) opens the
+  database itself, as a table, and so does **Open the People database**
+  under the list, shown once the vault has a People database.
+  {% include since.html v="0.16.0" %}
 - **Import** and **Export all** are described [below](#import).
-- Right-click a person for **Open**, **Export vCard**, **Change handle…**
+- Right-click a person, or click the **⋯** that shows when you point at
+  them {% include since.html v="0.16.0" %}, for **Open**, **Export vCard**, **Change handle…**
   ([below](#changing-a-handle)) and **Delete**. **Merge with…** is there
   too, and on a duplicate **Merge into ⟨owner⟩…** ([below](#merging-people)). {% include since.html v="0.14.0" %}
 - <kbd>Shift</kbd>+click people to select several (once a selection exists,
@@ -171,8 +180,8 @@ You can [hide **People** from the rail](/guide/notes/#rail-pins);
   why. The handle is used by another person note (the first by path keeps
   it), is also a collaborator's GitHub login (this note takes it, so the
   collaborator isn't listed), or isn't a valid handle.
-- Under the list, **Shared with N collaborators on this vault** is a
-  reminder of who can read these notes.
+- Under the **People** heading, **Shared with N collaborators on this
+  vault** is a reminder of who can read these notes. {% include since.html v="0.16.0" %}
 
 ## Adding a person {% include since.html v="0.14.0" %} {#adding-a-person}
 
