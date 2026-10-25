@@ -154,7 +154,9 @@ database, with three views to pick from at the top. Open it from the
 [Tasks panel](#the-tasks-panel), or press <kbd>Mod</kbd><kbd>2</kbd> {% include since.html v="0.14.0" %}:
 the key, which the rail button's tooltip names, and
 [reminders](#reminders) open the tab directly. {% include since.html v="0.16.0" %}
-On a phone, **Tasks** in the bar at the bottom of the screen opens it. You can
+On a phone, **Tasks** in [Home's navigation bar](/guide/web/#homes-navigation-bar)
+opens it, and the tab's toolbar is at the bottom of the screen: **Filter**,
+**Sort**, **Group**, **View** and **New task**. {% include since.html v="0.17.0" %} You can
 [remove **Tasks** from the rail](/guide/notes/#rail-pins):
 <kbd>Mod</kbd><kbd>2</kbd> still opens the Tasks tab, and reminders keep
 coming. {% include since.html v="0.15.0" %}

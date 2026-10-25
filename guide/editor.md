@@ -195,6 +195,8 @@ is active"):
   open the list of headings; click one to jump the editor there. It's
   hidden when the note has fewer than two headings, in the phone layout
   (a window narrower than 700px) and for [encrypted notes](/guide/encryption/).
+  On a phone, **Outline** in the note's toolbar lists the headings instead
+  ([Reading and editing a note](/guide/web/#editing-on-a-phone)). {% include since.html v="0.17.0" %}
   Turn it off in [Settings → General → **Note outline**](/guide/settings/).
   In a note with [numbered headings](/guide/markdown/#heading-numbers), the
   list shows each heading's number. {% include since.html v="0.14.0" %}

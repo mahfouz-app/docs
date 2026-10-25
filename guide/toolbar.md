@@ -7,7 +7,9 @@ permalink: /guide/toolbar/
 ---
 
 The toolbar above the editor groups its buttons, with a separator between
-groups. Left to right:
+groups. On a phone it shows only while you edit a note, as one row just
+above the keyboard that you swipe sideways (see [Reading and editing a
+note](/guide/web/#editing-on-a-phone)). {% include since.html v="0.17.0" %} Left to right:
 
 - **History**: **Undo**, **Redo**
 - **Style**: the **Heading** dropdown: Normal text / Heading 1 / Heading 2 /
@@ -65,7 +67,10 @@ Right-aligned at the end of the toolbar:
 
 The bar under the open note shows where the note stands on the left and
 how you're viewing it on the right. Apart from the word count and the zoom
-level, every control is an icon: point at one to see what it says or does. A mode
+level, every control is an icon: point at one to see what it says or does.
+On a phone the bar doesn't show: its controls are in the note's **⋯**
+menu instead (see [Reading and editing a
+note](/guide/web/#editing-on-a-phone)). {% include since.html v="0.17.0" %} A mode
 that's on (Suggesting, a published page, a Light or Dark appearance, a
 zoom other than 100%) is tinted. Its menus open upward.
 
