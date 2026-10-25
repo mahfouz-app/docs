@@ -83,8 +83,9 @@ switches to a layout made for it:
 - Tapping **Search** opens the [command palette](/guide/command-palette/)
   at the bottom of the screen, just above the keyboard, with a **Cancel**
   button beside its field. {% include since.html v="0.14.0" %}
-- **Tasks** opens the Tasks tab, and **People** opens the
-  [People view](/guide/people/#the-people-view) over the whole screen. {% include since.html v="0.14.0" %}
+- **Tasks** opens the [Tasks panel](/guide/tasks/#the-tasks-panel), and
+  **People** the [People view](/guide/people/#the-people-view), over the
+  whole screen. {% include since.html v="0.16.0" %}
 - To see your notes, choose **Notes** in the **⋯** menu, or **Go to all
   notes** in the palette: the sidebar opens over the whole screen. Opening
   a note closes it, and so does the close button in its top corner. {% include since.html v="0.14.0" %}
