@@ -104,7 +104,7 @@ note itself, click **View source** in the bottom bar. {% include since.html v="0
 In Preview, the block shows as an **Open database** card.
 
 On a phone, a database's toolbar is at the bottom of the screen:
-**Filter**, **Sort**, **Group**, **Columns** and **New row** (see [Pages
+**Filter**, **Sort**, **Group**, **Columns** and **+ New row** (see [Pages
 and their toolbars](/guide/web/#phone-pages)). {% include since.html v="0.17.0" %}
 
 The tab is laid out like a note, {% include since.html v="0.14.0" %} but always fills the pane, with a

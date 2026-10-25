@@ -16,9 +16,8 @@ offers to install its own copy, or shows how to install git yourself. See
 
 This guide is the long-form manual. To open it from the app, choose **User
 guide** in the account menu (click the account button at the bottom of the
-left rail; on desktop, also **Help → User Guide**). On a phone, tap
-your picture at the top of [Home](/guide/web/#phone-home) for the same
-menu. {% include since.html v="0.17.0" %} **Keyboard shortcuts** in the
+left rail; on desktop, also **Help → User Guide**). On a phone, it's in
+the **⋯** menu at the top of [Home](/guide/web/#phone-home). {% include since.html v="0.17.0" %} **Keyboard shortcuts** in the
 account menu (<kbd>Mod</kbd><kbd>?</kbd>, or on desktop **Help → Keyboard
 Shortcuts**) opens a quick-reference shortcut cheat sheet inside the app.
 

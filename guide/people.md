@@ -151,7 +151,7 @@ Click **People** in the left rail (<kbd>Mod</kbd><kbd>3</kbd> {% include since.h
 again to go back to your notes. On a phone, it's **People** in [Home's navigation
 bar](/guide/web/#homes-navigation-bar), and the view opens as a page with
 its own toolbar: **Find**, **Import**, **Export**, **Open People
-database** and **Add person**. {% include since.html v="0.17.0" %}
+database** and **+ Add person**. {% include since.html v="0.17.0" %}
 You can [hide **People** from the rail](/guide/notes/#rail-pins);
 <kbd>Mod</kbd><kbd>3</kbd> still opens the view. {% include since.html v="0.15.0" %}
 

@@ -9,9 +9,9 @@ permalink: /guide/command-palette/
 Press <kbd>Mod</kbd><kbd>K</kbd> (⌘K on macOS, Ctrl+K elsewhere) to open the command
 palette. It also works while you're typing in a note. On desktop it's in
 the menu bar too, as **Edit → Command Palette…**.
-On a phone, the palette is the [Search page](/guide/web/#search-on-a-phone):
-**Search** in Home's navigation bar, or <kbd>Mod</kbd><kbd>K</kbd> on a
-keyboard, opens it. {% include since.html v="0.17.0" %}
+On a phone, and in a window narrower than 700 pixels, the palette is the
+[Search page](/guide/web/#search-on-a-phone): **Search** in Home's
+navigation bar, or <kbd>Mod</kbd><kbd>K</kbd> on a keyboard, opens it. {% include since.html v="0.17.0" %}
 
 Type to match against:
 
