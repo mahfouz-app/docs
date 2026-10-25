@@ -122,6 +122,9 @@ small margin at each side: {% include since.html v="0.16.0" %}
   - **View source** opens the note itself.
   - **Turn back into a note** removes the block; the rows stay as child
     notes. It isn't offered while the note is in Suggesting mode.
+  - A [People database](/guide/people/#import) lists **Import vCard…**,
+    **Import macOS Contacts…** (on macOS) and **Export all as vCard…**
+    first. {% include since.html v="0.16.0" %}
 - **New**, at the end of the toolbar in every view, adds a row: type its
   title and press <kbd>Enter</kbd>. {% include since.html v="0.16.0" %}
   - In a table, it opens the **New row** at the bottom, or in a grouped

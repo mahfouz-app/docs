@@ -130,9 +130,27 @@ It shows every task as a database, with three views to pick from at the
 top. You can
 [remove **Tasks** from the rail](/guide/notes/#rail-pins):
 <kbd>Mod</kbd><kbd>2</kbd> still opens the Tasks tab, and reminders keep
-coming. {% include since.html v="0.15.0" %} The views:
+coming. {% include since.html v="0.15.0" %}
 
-- **Table** lists the tasks grouped into **Overdue**, **Today**,
+The Tasks tab looks like a [database](/guide/databases/#the-table):
+{% include since.html v="0.16.0" %}
+
+- The breadcrumbs start at **Home**, since the tab covers every vault, then
+  the counts. Under them, the **Tasks** heading says how many tasks are
+  open and how many are overdue, such as **12 open · 3 overdue**.
+- **Table**, **Board** and **Calendar** are tabs. They're fixed: you can't
+  add, rename or delete views here.
+- The bar at the bottom shows how many tasks there are.
+- Each task's **⋯** offers **Open note**, **Status ▸**, **Set due…** and
+  **Assign…**.
+- The table shows 25 tasks a page, with the same pager as a database's.
+  Changing **Mine**/**Everyone** or the vault goes back to the first page.
+
+The views:
+
+- **Table** shows **Title**, **Status**, **Due**, **Assignee** and
+  **Note** by default, and **Vault** last when you have several vaults. {% include since.html v="0.16.0" %}
+  It lists the tasks grouped into **Overdue**, **Today**,
   **Upcoming** and **Done** (collapsed at first), sorted by due date. An
   in-progress task carries an **In progress** chip. Edit a task right in
   the table:
@@ -190,14 +208,15 @@ sort chip flips its direction. {% include since.html v="0.15.0" %} When
 the filters hide every task, the view says **No tasks match these
 filters.**, with **Reset**. {% include since.html v="0.15.0" %}
 
-In every view:
+In every view, two chips at the start of the row under the toolbar set
+whose tasks and which vaults the tab shows. {% include since.html v="0.16.0" %}
 
 - **Mine** shows the tasks assigned to your GitHub login, or to the handle
   of a person whose `github` is your login; you need to be signed in with
   GitHub. **Everyone** shows every task, including the ones
   with no assignee, and adds an **Assignee** column.
 - With more than one vault, the Tasks tab covers all of them, with a
-  **Vault** column. Pick a single vault from the menu at the top.
+  **Vault** column. Pick a single vault from the vault chip.
 - To narrow the tasks by topic, put `#tags` on the task line itself, such
   as `- [ ] Fix login #bug @sam // 2026-10-14`. Only tags on the task's own
   line count, not the note's other tags. {% include since.html v="0.12.0" %}
@@ -221,6 +240,34 @@ overdue or due today. {% include since.html v="0.15.0" %} Hover
 over the icon to see the counts, such as **2 overdue · 1 due today**. {% include since.html v="0.12.0" %}
 The dot goes with the button: with **Tasks** removed from the rail, it
 isn't shown anywhere. {% include since.html v="0.15.0" %}
+
+## New task {% include since.html v="0.16.0" %} {#new-task}
+
+**New task**, at the end of the Tasks tab's toolbar, adds a task without
+opening a note. Type its title and press <kbd>Enter</kbd>.
+
+- In the table, it opens a **New task** row.
+- On the Board, it opens a new card at the top of **To do**. Each column
+  also has **+ New task** at its foot, which adds the task with that
+  column's status.
+- On the Calendar, it opens a new task due today. **+** on a day adds one
+  due that day.
+
+The task is written as one line, `- [ ] Title // date`, with your `@login`
+when you're signed in with GitHub, at the end of a note. The first time
+you add a task in a vault, Mahfouz asks which note: it remembers the note
+for that vault on this computer. To pick another, click the chevron beside
+**New task**. Mahfouz asks again only when the note is gone or has been
+encrypted.
+
+- If the note is in Suggesting mode, the task is added as your
+  suggestion. It isn't listed until the suggestion is accepted, so a
+  notice says where it went, with **Open note** at its line.
+- If the task can't be written, its title stays in the draft, so you can
+  try again.
+- **New task** is off while the vault is [encrypted with
+  git-crypt](/guide/encryption/) and locked on this device; hover it to see
+  why.
 
 ## Reminders
 

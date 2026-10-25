@@ -194,6 +194,20 @@ Only the fields you fill in are written to the new person note.
 In a People database, **New** {% include since.html v="0.16.0" %}, **New row** and **New in ⟨group⟩** add a person too:
 the new row gets a handle, made from its title, so you can mention it. {% include since.html v="0.14.0" %}
 
+### GitHub only {% include since.html v="0.16.0" %} {#github-only}
+
+Under a People database's table, **GitHub only (N)** lists the vault's
+GitHub collaborators who don't have a person note yet. They aren't rows:
+filters, sorting, paging, embeds, publishing and the agent don't see them.
+
+- **Add as person** writes the collaborator's person note into the People
+  database you're looking at, even when the vault has several, and opens
+  it. It's off, with the reason, while the database can't be changed.
+- The section shows on the table's last page, below the table's message
+  when no rows are shown. Click its header to collapse it.
+- It doesn't show on a Board, or in a database that isn't a People
+  database.
+
 ## A person's page
 
 Under a person note's text, Mahfouz shows:
@@ -353,7 +367,9 @@ mention inside one keeps the old handle.
 
 ## Import
 
-Click **Import** in the People view and pick a source:
+Click **Import** in the People view and pick a source. A People
+database's **⋯ Database actions** has the same sources, as **Import
+vCard…** and **Import macOS Contacts…**. {% include since.html v="0.16.0" %}
 
 - **vCard file (.vcf)…** reads a vCard file exported from another address
   book. It works on desktop and on the web.
@@ -385,7 +401,10 @@ Export saves people as vCard 3.0 files, for another address book:
 - **One person:** **Export vCard** in their row's menu in the People view,
   **Export vCard…** in the [person menu](#person-chips)
   {% include since.html v="0.15.0" %}, or **Export vCard** on their page.
-- **Everyone:** **Export all** in the People view saves `People.vcf`.
+- **Everyone:** **Export all** in the People view, or **Export all as
+  vCard…** in a People database's **⋯ Database actions**
+  {% include since.html v="0.16.0" %}, saves `People.vcf`. It's off until
+  someone has a person note.
 
 On the web, the file downloads. A person note's body isn't exported.
 
