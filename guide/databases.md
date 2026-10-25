@@ -427,6 +427,17 @@ columns after them, and rows with no value go in the last column, "No
   more** when fewer are left). The count in the column's header is all its
   cards, not just the ones shown. A card you move or create there shows,
   even when the sort puts it past the cards shown. {% include since.html v="0.16.0" %}
+- **Reorder the columns** by dragging an option column's grip, the handle at
+  the top of its header, or with **Move left** and **Move right** in the
+  column's **⋯**. This changes the order of the Select's options everywhere:
+  in every database that uses the attribute, in table groups, in the option
+  picker and in **Settings → Attributes**. The menu says so under the two
+  items. {% include since.html v="0.16.0" %}
+- Values that aren't options say **not an option** after their name. Their
+  columns, and "No ⟨attribute⟩", always come after the option columns, in
+  either sort direction: sorting a Board descending reverses only the
+  options. They have no grip, and option columns can't be moved among
+  them. {% include since.html v="0.16.0" %}
 - **Group** chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.

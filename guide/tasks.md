@@ -166,6 +166,14 @@ coming. {% include since.html v="0.15.0" %} The views:
   the title move to the tag line; a tag in the middle of the title stays
   there, tinted. On a [person's page](/guide/people/#a-persons-page), a
   card keeps its title as written, with no tag line. {% include since.html v="0.12.0" %}
+  Each card starts with its checkbox: tick it to mark the task done (an
+  in-progress one too) without opening the card. The column names are
+  colored by status. **Fields** chooses what the cards show and in what
+  order, as **Columns** does for the table: by default the title, due date,
+  assignee, note and tags; **Status** and **Note ID** can be turned on.
+  Fields placed before Title show above the card's title. On a person's
+  page, cards don't show the assignee. Mahfouz remembers the Board's fields
+  on this computer. {% include since.html v="0.16.0" %}
 - **Calendar** shows the tasks on a month, or on a week with **Week**, by
   their due date. Drag one to another day, or pick **Move to date…** in its
   menu; its time stays.
