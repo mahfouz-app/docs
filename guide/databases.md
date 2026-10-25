@@ -452,22 +452,27 @@ columns after them, and rows with no value go in the last column, "No
   more** when fewer are left). The count in the column's header is all its
   cards, not just the ones shown. A card you move or create there shows,
   even when the sort puts it past the cards shown. {% include since.html v="0.16.0" %}
-- **Reorder the columns** by dragging an option column's grip, the handle at
-  the top of its header, or with **Move left** and **Move right** in the
-  column's **⋯**. This changes the order of the Select's options everywhere:
-  in every database that uses the attribute, in table groups, in the option
-  picker and in **Settings → Attributes**. The menu says so under the two
-  items. {% include since.html v="0.16.0" %}
-- Values that aren't options say **not an option** after their name. Their
-  columns, and "No ⟨attribute⟩", always come after the option columns, in
-  either sort direction: sorting a Board descending reverses only the
-  options. They have no grip, and option columns can't be moved among
-  them. {% include since.html v="0.16.0" %}
+- **Reorder the columns** by dragging a column's grip, the handle at the
+  top of its header, or with **Move left** and **Move right** in the
+  column's **⋯**, as you reorder a table's columns. Any column moves,
+  "No ⟨attribute⟩" and values that aren't options included. The order
+  belongs to this view: like sorting and filtering, it applies on this
+  device until you choose **Save view**, and **Reset** puts the default order
+  back. The Select's own option order doesn't change; edit it in the
+  option editor. Choosing another attribute in **Group** starts from the
+  default order again. {% include since.html v="0.17.0" %}
+- Values that aren't options say **not an option** after their name. Until
+  you reorder the columns, their columns and "No ⟨attribute⟩" come after
+  the option columns, in either sort direction: sorting a Board descending
+  reverses only the options. {% include since.html v="0.16.0" %}
 - The **Group** tab chooses which Select attribute the Board uses, and **Fields**
   chooses which attributes the cards show. Like sorting and filtering, these
   apply on this device until you choose **Save view**.
 - **Fields** orders the fields as **Columns** orders a table's columns,
   Title included. Fields placed before Title show above the card's title. {% include since.html v="0.16.0" %}
+- **Reorder a card's fields** by dragging a field's grip, which shows at
+  the card's left edge when you point at the field. The field moves on
+  every card of the view, as it would in **Fields**. {% include since.html v="0.17.0" %}
 
 Cards in a column follow the view's sort. There's no manual card order.
 
@@ -496,6 +501,7 @@ Cards work like a Board's:
 - **New** in the toolbar, {% include since.html v="0.16.0" %} or **+ New row** after the last card, adds a row.
 - **Fields** chooses which attributes the cards show and in what order, as on
   a Board. Fields placed before Title show above the card's title. {% include since.html v="0.16.0" %}
+  You can also drag a field's grip on a card, as on a Board. {% include since.html v="0.17.0" %}
 - **Fields** chooses which attributes the cards show, and sort and filters
   apply as in a table. A Gallery isn't grouped: a grouping saved in the view
   is kept in the block but not shown.
