@@ -187,8 +187,7 @@ note opens ready to type. While you edit:
   at the end of the row. The note's toolbar steps aside.
 
 Editing ends only when you choose to: **Done editing**, **‹**, going to
-another page, or opening the command palette. Closing the palette goes
-back to editing.
+another page, or opening Search.
 
 The note's **⋯** at the top starts with **Details**, **Backlinks** and
 **Attributes**, then the note's actions. On a phone it also holds what
@@ -207,11 +206,25 @@ out of Mahfouz.
 
 ### Search {% include since.html v="0.17.0" %} {#search-on-a-phone}
 
-**Search** in Home's navigation bar opens the [Search tab](/guide/links/#search)
-as a page, with its field in the bar at the top and the keyboard up. Tap
-**Cancel** to go back. The [command
-palette](/guide/command-palette/) still opens with its shortcut, at the
-bottom of the screen, just above the keyboard.
+On a phone, Search is one field that finds notes and runs commands, like
+the [command palette](/guide/command-palette/) on a wider screen. Open it
+with **Search** in Home's navigation bar, or press <kbd>Mod</kbd><kbd>K</kbd>
+on a keyboard. It opens as a page, with **‹**, **Search** and **⋯** in the
+bar at the top.
+
+The field, **Search or run a command**, sits at the bottom of the screen,
+right above the keyboard, with a round **×** beside it to cancel. With the
+keyboard down, the field sits where a page's toolbar is.
+
+- **Before you type**, the page lists the notes and databases you opened
+  recently.
+- **As you type**, it lists notes whose titles match, a **Search note
+  contents for “…”** row, then matching commands and settings. Tap a
+  command to run it, such as **New note**.
+- **Search note contents for “…”** shows the notes whose text matches, on
+  the same page, as the [Search tab](/guide/links/#search) does.
+- **⋯** holds the options for searching note contents: **Match case**,
+  **Whole word**, **Regular expression**, **Show replace** and **Sort by**.
 
 ### Install it on your home screen {% include since.html v="0.17.0" %} {#install-it-on-your-home-screen}
 
