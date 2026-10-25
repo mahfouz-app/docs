@@ -155,12 +155,21 @@ You can [hide **People** from the rail](/guide/notes/#rail-pins);
 
 - Type in **Search people** to filter the list. Click a person to open
   their note. A collaborator with no note yet shows **GitHub only**.
+- **All**, **Notes** and **GitHub** choose who's listed: everyone, only
+  person notes, or only collaborators without a note. Switching vaults
+  goes back to **All**. {% include since.html v="0.16.0" %}
+- The list shows 50 people at first; **Show N more** adds the next ones.
+  {% include since.html v="0.16.0" %}
 - **Add person** (＋) asks for a name: type it and press <kbd>Enter</kbd> to
   add a row to the People database. The chevron beside the name field
   opens the [Add person form](#adding-a-person) instead. {% include since.html v="0.14.0" %}
-- **Open People database** opens the database itself, as a table.
+- **Open People database** (the table button at the top) opens the
+  database itself, as a table, and so does **Open the People database**
+  under the list, shown once the vault has a People database.
+  {% include since.html v="0.16.0" %}
 - **Import** and **Export all** are described [below](#import).
-- Right-click a person for **Open**, **Export vCard**, **Change handle…**
+- Right-click a person, or click the **⋯** that shows when you point at
+  them {% include since.html v="0.16.0" %}, for **Open**, **Export vCard**, **Change handle…**
   ([below](#changing-a-handle)) and **Delete**. **Merge with…** is there
   too, and on a duplicate **Merge into ⟨owner⟩…** ([below](#merging-people)). {% include since.html v="0.14.0" %}
 - <kbd>Shift</kbd>+click people to select several (once a selection exists,
@@ -171,16 +180,17 @@ You can [hide **People** from the rail](/guide/notes/#rail-pins);
   why. The handle is used by another person note (the first by path keeps
   it), is also a collaborator's GitHub login (this note takes it, so the
   collaborator isn't listed), or isn't a valid handle.
-- Under the list, **Shared with N collaborators on this vault** is a
-  reminder of who can read these notes.
+- Under the **People** heading, **Shared with N collaborators on this
+  vault** is a reminder of who can read these notes. {% include since.html v="0.16.0" %}
 
 ## Adding a person {% include since.html v="0.14.0" %} {#adding-a-person}
 
 The **Add person** form takes a person's contact details in one go. Open it
 from the chevron beside **Add person**'s name field in the
 [People view](#the-people-view), from **Add “x” with details…** in the
-[mention menu](#mentions), or from the chevron beside **New row** in a
-People database.
+[mention menu](#mentions), or from **Add with details…** under the
+chevron beside **New** in a People database's toolbar
+{% include since.html v="0.16.0" %} or beside its **New row** draft.
 
 - **First name**, **Last name** and **Full name**. Full name fills itself
   from the first and last names until you type over it.
@@ -190,8 +200,22 @@ People database.
 
 Only the fields you fill in are written to the new person note.
 
-In a People database, **New row** and **New in ⟨group⟩** add a person too:
+In a People database, **New** {% include since.html v="0.16.0" %}, **New row** and **New in ⟨group⟩** add a person too:
 the new row gets a handle, made from its title, so you can mention it. {% include since.html v="0.14.0" %}
+
+### GitHub only {% include since.html v="0.16.0" %} {#github-only}
+
+Under a People database's table, **GitHub only (N)** lists the vault's
+GitHub collaborators who don't have a person note yet. They aren't rows:
+filters, sorting, paging, embeds, publishing and the agent don't see them.
+
+- **Add as person** writes the collaborator's person note into the People
+  database you're looking at, even when the vault has several, and opens
+  it. It's off, with the reason, while the database can't be changed.
+- The section shows on the table's last page, below the table's message
+  when no rows are shown. Click its header to collapse it.
+- It doesn't show on a Board, or in a database that isn't a People
+  database.
 
 ## A person's page
 
@@ -200,6 +224,17 @@ Under a person note's text, Mahfouz shows:
 - **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
   by every person page. {% include since.html v="0.12.0" %}
+  It's a compact copy of the Tasks tab, in a frame: the fixed **Table**,
+  **Board** and **Calendar** tabs, **Filter**, **Sort** and **Columns**,
+  with no **Group**. The toolbar shows even when they have no tasks yet.
+  {% include since.html v="0.16.0" %}
+  - **New task for @handle**, under the table, adds a task assigned to
+    them, into the note [New task](/guide/tasks/#new-task) remembers for
+    the vault. A Board column's **+ New task** and a Calendar day's **+**
+    assign it to them too. {% include since.html v="0.16.0" %}
+  - **Open in Tasks** opens the Tasks tab on **Everyone**, filtered to
+    their handle as a change on this device; **Reset** clears it.
+    {% include since.html v="0.16.0" %}
 - **Mentions:** a row for each mention of them, showing its line; two
   mentions in one paragraph share a row. When there's more to see, the
   chevron expands the row to the whole paragraph, list item, heading or
@@ -352,7 +387,9 @@ mention inside one keeps the old handle.
 
 ## Import
 
-Click **Import** in the People view and pick a source:
+Click **Import** in the People view and pick a source. A People
+database's **⋯ Database actions** has the same sources, as **Import
+vCard…** and **Import macOS Contacts…**. {% include since.html v="0.16.0" %}
 
 - **vCard file (.vcf)…** reads a vCard file exported from another address
   book. It works on desktop and on the web.
@@ -384,7 +421,10 @@ Export saves people as vCard 3.0 files, for another address book:
 - **One person:** **Export vCard** in their row's menu in the People view,
   **Export vCard…** in the [person menu](#person-chips)
   {% include since.html v="0.15.0" %}, or **Export vCard** on their page.
-- **Everyone:** **Export all** in the People view saves `People.vcf`.
+- **Everyone:** **Export all** in the People view, or **Export all as
+  vCard…** in a People database's **⋯ Database actions**
+  {% include since.html v="0.16.0" %}, saves `People.vcf`. It's off until
+  someone has a person note.
 
 On the web, the file downloads. A person note's body isn't exported.
 

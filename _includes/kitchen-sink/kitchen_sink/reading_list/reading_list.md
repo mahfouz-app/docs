@@ -12,6 +12,17 @@ views:
       - title
       - author
       - status
+  - type: table
+    name: Note IDs
+    order:
+      - title
+      - id
+  - type: table
+    name: Status first
+    order:
+      - status
+      - title
+      - author
   - type: gantt
     name: Reading time
     date: started

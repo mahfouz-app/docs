@@ -34,6 +34,10 @@ what goes public:
   published, and appear as plain text otherwise (see
   [Links between published notes](#links-between-published-notes)).
 - **Your vault's settings** (`.config/`) are never sent.
+- **Note IDs**: when a [database view](/guide/databases/#publishing) on
+  the page shows **Note ID**, the dialog warns that the ids reveal when
+  each row was created. **Page settings** warns the same way. Hide Note ID
+  in the view to leave it out. {% include since.html v="0.16.0" %}
 
 Choose the page's **Visibility** (see [Visibility](#visibility)) and
 **Theme** (see [Themes](#themes)). Turn on **Auto-publish changes**
