@@ -37,6 +37,13 @@ vault, so Choose a vault says so and links to the desktop app
 {% include since.html v="0.13.0" %}. [Plugins](/guide/plugins/#plugins-on-the-web)
 need the same storage, so an older Safari can't install them either.
 
+### New versions {% include since.html v="0.17.0" %} {#new-versions}
+
+When a new version of Mahfouz for the web is out while you have it open, a
+banner under the title bar offers **Reload**. Mahfouz saves your changes
+first, then loads the new version. **Dismiss** hides it until the next
+version.
+
 ## Opening a folder
 
 On first run, click **Folder** under **Open existing** in [Choose a
@@ -61,8 +68,10 @@ changes made meanwhile.
 
 ### One tab at a time
 
-Mahfouz runs in one tab at a time. A second tab shows **Mahfouz is open in
-another tab**: switch to the first one, or close it and reload.
+Mahfouz runs in one tab at a time. A second tab shows **Mahfouz is open
+somewhere else** {% include since.html v="0.17.0" %}: switch to the first
+one, or close it and reload. On Android, the [installed
+app](#install-it-on-your-home-screen) counts as a tab too.
 
 If Mahfouz's data in the browser is ever damaged, it offers **Rebuild and
 reload**. Your notes are safe: they live in your vaults, and Mahfouz reads
@@ -99,6 +108,34 @@ switches to a layout made for it:
 The sidebar always starts closed at this width, whatever you chose on a
 wider screen. The desktop app uses the same layout when you make its
 window that narrow.
+
+### Install it on your home screen {% include since.html v="0.17.0" %} {#install-it-on-your-home-screen}
+
+You can install Mahfouz on your phone's home screen. It then opens in its
+own window, with no browser toolbars.
+
+- **Android (Chrome):** open web.mahfouz.app, then tap **Install app** in
+  Chrome's **⋮** menu, or in the prompt Chrome shows.
+- **iPhone and iPad (Safari):** open web.mahfouz.app, tap **Share**, then
+  **Add to Home Screen**.
+
+Some things to know:
+
+- **On iPhone and iPad, the installed app keeps its own storage, apart from
+  Safari's.** Sign in to GitHub again in the app, and open your vaults
+  again there. Vaults you opened in Safari stay in Safari, so push your
+  changes before you switch. In return, Safari doesn't clear the app's data
+  after a week without use, as it can for a website.
+- On iPhone and iPad, links to web.mahfouz.app open in Safari, not in the
+  installed app. On Android they open in the installed app.
+- On Android, the installed app and Chrome share one copy of Mahfouz's
+  data, so only one of them can be open at a time (see [One tab at a
+  time](#one-tab-at-a-time)).
+- Mahfouz needs a connection to start. Opened offline, the app shows your
+  browser's offline page.
+- The installed app has no browser Reload button. When a new version of
+  Mahfouz is out while the app is open, a banner offers **Reload** (see
+  [New versions](#new-versions)).
 
 ## What's only in the desktop app
 
