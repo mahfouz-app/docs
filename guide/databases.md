@@ -303,8 +303,12 @@ vault directly instead of becoming suggestions.
 
 ## Columns
 
-- **+** at the end of the header adds an **Untitled** column right in the
-  header, with its name selected. {% include since.html v="0.14.0" %}
+- **+** at the end of the header adds a column right in the header, with
+  its name selected. {% include since.html v="0.14.0" %}
+  - Until you type a name, the column is named after the highlighted type:
+    **Text** to start, **URL** once you move to URL. When that name is
+    already used, a number one past the highest is added (with **URL** and
+    **URL 2** taken, the next is **URL 3**). {% include since.html v="0.17.0" %}
   - Type the column's name. The list of types is open under it from the
     start; **More types** shows the rest.
   - Click a type to add the column with that type. Select, Multi-select,
