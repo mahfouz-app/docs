@@ -67,8 +67,9 @@ Click the button, or press <kbd>Mod</kbd><kbd>0</kbd> {% include since.html v="0
 
 Signed out, the menu shows **Sign in with GitHub** and the same Settings,
 Keyboard shortcuts, User guide and Send feedback items. On a phone,
-Settings, User guide and Send feedback are in the **⋯** menu at the top
-right, and **Account** there opens the account menu without them.
+there's no account button: the **⋯** menu at the top of
+[Home](/guide/web/#phone-home) starts with your account, and its **App**
+part holds the menu's other items. {% include since.html v="0.17.0" %}
 
 ## Adding your vaults' repositories
 

@@ -13,6 +13,10 @@ without switching away from your current one. History revisions and
 Present-as-tab both open as their own read-only/embedded tabs alongside
 your regular notes.
 
+On a phone there's no tab strip. Your open tabs are listed at the top of
+[Home](/guide/web/#phone-home), where you can switch to one, close it, or
+press and hold it for its menu. {% include since.html v="0.17.0" %}
+
 ## Arrange tabs
 
 Drag a tab left or right to move it. A line shows where it'll land when

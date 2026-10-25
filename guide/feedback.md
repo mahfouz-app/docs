@@ -8,8 +8,8 @@ permalink: /guide/feedback/
 
 Choose **Send feedback** in the account menu (click the account button at
 the bottom of the left rail), or **Help → Send Feedback…** on desktop, to
-report a bug, suggest an idea, or ask a question. On a phone, it's **Send
-feedback** in the **⋯** menu at the top right. Pick a kind, give it a title
+report a bug, suggest an idea, or ask a question. On a phone, it's in
+the **⋯** menu at the top of [Home](/guide/web/#phone-home). {% include since.html v="0.17.0" %} Pick a kind, give it a title
 and some details, and press **Submit**.
 
 Feedback becomes a **public** issue on

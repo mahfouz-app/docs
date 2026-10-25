@@ -189,13 +189,65 @@ one click away.
 - **Reorder**: drag rail items up and down. **Tasks** and **People** move
   among themselves, and pins among themselves.
 - **Deleted notes**: a pin whose note was deleted shows faded and struck
-  through. Restore the note from Trash and the pin comes back. A pin in a
-  [locked vault](/guide/encryption/#a-locked-vault) shows a lock. Removing
-  a vault removes its pins.
-- **Where it's stored**: on this device only, not in the vault. Your
-  collaborators and your other devices keep their own rail.
-- **On a phone**: pins show in the bar at the bottom of the screen
-  ([On a phone](/guide/web/#on-a-phone)).
+  through. Restore the note from Trash and the pin comes back.
+- **One rail per vault** {% include since.html v="0.17.0" %}: the rail
+  shows the active vault's views and pins, so switching vaults switches
+  the rail. A vault's pins are its own notes and databases. Choosing **Add
+  to rail** on a note from a vault that isn't active pins it to that
+  vault's rail, and Mahfouz says **Pinned to &lt;vault&gt;'s rail**.
+  Moving a note to another vault moves its pin with it.
+- **Where it's stored** {% include since.html v="0.17.0" %}: in the vault,
+  as `.config/navigation.md` (see [The navigation file](#the-navigation-file)).
+  It syncs to your other devices, and survives **Rebuild from vault**.
+- **Shared with collaborators** {% include since.html v="0.17.0" %}: everyone
+  who works in the vault sees the same rail. When a collaborator pins,
+  unpins, hides or reorders an item, your rail follows when you pull their
+  change. Changes made on two devices at once are merged, so they
+  never stop a pull.
+- **On a phone**: the same items show in Home's navigation bar, up to
+  three of them ([Home's navigation bar](/guide/web/#homes-navigation-bar)). {% include since.html v="0.17.0" %}
+
+### The navigation file {% include since.html v="0.17.0" %} {#the-navigation-file}
+
+Each vault's rail is a plain Markdown file in the vault,
+`.config/navigation.md`. You can edit it by hand in any text editor, or
+change it on another device; the rail follows once the change is in the
+vault:
+
+```markdown
+# Navigation
+
+What this vault's navigation shows (the rail, and the phone's bottom bar), in order.
+
+## Views
+- tasks
+- people
+
+## Pinned
+- 01a16c9ba1b67962b25a4739f187b5cf — Roadmap
+```
+
+- **Views** lists `tasks` and `people` in the order the rail shows them.
+  Leave one out to hide it.
+- **Pinned** lists the pinned notes and databases in order, each by its
+  [note ID](/guide/databases/#note-id). The title after the ID is only
+  there to help you read the file: Mahfouz refreshes it, and leaves it out
+  for [disk-only](/guide/history/#auto-commit-and-disk-only-notes) and
+  [encrypted](/guide/encryption/) notes, so their titles never show in
+  plain text.
+- Without the file, the rail shows **Tasks** and **People** and no pins.
+  Mahfouz creates it the first time you change the rail. When it writes
+  the file, it keeps your other lines and headings.
+- Mahfouz batches a burst of rail changes into one commit, **Update
+  navigation**.
+- If Mahfouz can't read the file, as in a [locked
+  vault](/guide/encryption/#a-locked-vault), the rail shows **Tasks** and
+  **People** until it can.
+
+The first time you open a vault in Mahfouz 0.17.0 or later, the rail you
+had on that device (saved there, not in the vault) moves into the vault's
+file, once. If the file already came from another device, your pins are
+added to it.
 
 ## Exporting
 

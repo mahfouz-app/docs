@@ -80,34 +80,185 @@ them again.
 ## On a phone {% include since.html v="0.12.0" %} {#on-a-phone}
 
 When the window is narrower than 700 pixels, as on a phone, Mahfouz
-switches to a layout made for it:
+switches to a layout made for it. It's made of pages: **Home** is where
+you start, and every other page has a way back to where you came from. {% include since.html v="0.17.0" %}
+There's no tab strip: your open tabs are listed on Home.
 
-- The note takes the whole width. A bar at the bottom of the screen holds
-  a **Search** button on the left and **Tasks** and **People** on the
-  right. {% include since.html v="0.14.0" %}
-- Your [rail pins](/guide/notes/#rail-pins) follow **Tasks** and
-  **People** in the bar, up to five buttons in all (four on very small
-  screens), and **Search** becomes a round button. Press and hold a
-  button for its menu. {% include since.html v="0.15.0" %}
-- Tapping **Search** opens the [command palette](/guide/command-palette/)
-  at the bottom of the screen, just above the keyboard, with a **Cancel**
-  button beside its field. {% include since.html v="0.14.0" %}
-- **Tasks** opens the [Tasks panel](/guide/tasks/#the-tasks-panel), and
-  **People** the [People view](/guide/people/#the-people-view), over the
-  whole screen. {% include since.html v="0.16.0" %}
-- To see your notes, choose **Notes** in the **⋯** menu, or **Go to all
-  notes** in the palette: the sidebar opens over the whole screen. Opening
-  a note closes it, and so does the close button in its top corner. {% include since.html v="0.14.0" %}
-- The **⋯** button at the top right holds **Notes** {% include since.html v="0.14.0" %}, **Settings**,
-  **Account**, **Trash**, **User guide** and **Send feedback**. When
-  you've hidden **Tasks** or **People** from the rail, it also has
-  **Show Tasks** or **Show People** to bring it back. {% include since.html v="0.15.0" %}
-- The AI chat opens over the whole screen. The right sidebar isn't
-  available at this width.
+Launching or reloading Mahfouz shows the note you had open, or Home when
+there's none. The desktop app uses the same layout, editing included,
+when you make its window that narrow, with the mouse. At 700 pixels and
+wider, nothing changes.
 
-The sidebar always starts closed at this width, whatever you chose on a
-wider screen. The desktop app uses the same layout when you make its
-window that narrow.
+Wherever you can add something under what you're looking at, the button
+is the same round **+** at the end of the bottom bar: **New note**, **New
+child note**, **New row**, **New task** and **Add person**.
+
+### Home {% include since.html v="0.17.0" %} {#phone-home}
+
+Home shows your notes as a page:
+
+- **Open tabs** come first. Tap one to go to it, or tap its close button
+  to close it; **Close all** closes them all. Press and hold a tab for
+  its menu, the same one a tab has on a wider screen, such as **Pin tab**.
+- Then your vaults, [bookmarks](/guide/notes/), the notes tree and
+  **Shared with me**.
+
+The bar at the top of Home holds **Alerts** and **⋯**:
+
+- **Alerts** (a bell) opens [Notifications](/guide/notifications/). A
+  badge shows how many notifications are unread.
+- **⋯** holds your account and the app's menus, in three parts:
+  - Your account: the same row and status as the [account
+    menu](/guide/github/#the-account-button).
+  - **Notes**: **Sort by**, **Collapse all**, **New folder**, **New
+    database**, **New vault…** and **Open vault…**. When you've hidden
+    **Tasks** or **People** from the bar, it also has **Show Tasks** or
+    **Show People** to bring it back.
+  - **App**: **AI chat**, **Settings**, **Trash**, **External agents**,
+    **Keyboard shortcuts**, **User guide**, **Send feedback**, **About**
+    and **Check for updates**. When an [external
+    agent](/guide/external-agents/#review-and-undo) has proposals
+    waiting, **External agents** and the **⋯** button show how many. The
+    AI chat opens over the whole screen.
+
+### Home's navigation bar {% include since.html v="0.17.0" %} {#homes-navigation-bar}
+
+Only Home has the navigation bar at the bottom of the screen. It shows
+icons only, in this order:
+
+- **Home**.
+- Up to three items from the vault's [rail](/guide/notes/#rail-pins): the
+  **Tasks** and **People** views, then your pinned notes and databases.
+  With more than three, the third slot becomes **More**, with a count;
+  tap it for the rest.
+- **Search** (see [Search](#search-on-a-phone)).
+- **New note**, the round **+**. The note opens ready to type.
+
+The bar shows the same items, in the same order, as the vault's rail on
+a wider screen, so changing one changes the other. Press and hold an
+item, or a row in **More**, for its menu: **Move left**, **Move right**,
+**Remove from bar** and **Show in bar**, which brings back a view or pin
+you removed.
+
+### Pages and their toolbars {% include since.html v="0.17.0" %} {#phone-pages}
+
+Every page other than Home has a bar at the top with **‹**, the page's
+icon and title, and **⋯** or the page's own actions. **‹** goes back to
+the page you came from, and to Home when there's nothing to go back to.
+Your phone's back gesture does the same.
+
+Each page also has its own toolbar at the bottom of the screen. It starts
+with **Home** and ends with the page's main action:
+
+| Page | Toolbar |
+|---|---|
+| A note | **Home** · **Find** · **Outline** · **Comments** · **Details** · **+ New child note** (see [Reading and editing a note](#editing-on-a-phone)) |
+| A [database](/guide/databases/) | **Home** · **Filter** · **Sort** · **Group** · **Columns** · **+ New row** |
+| [Tasks](/guide/tasks/#the-tasks-view) | **Home** · **Filter** · **Sort** · **Group** · **View** · **+ New task** |
+| [People](/guide/people/#the-people-view) | **Home** · **Find** · **Import** · **Export** · **Open People database** · **+ Add person** |
+| [Notifications](/guide/notifications/) | **Home** · **Filter** · **Do not disturb** · **Clear archive** · **Settings** · **Mark all read** |
+| Trash | **Home** |
+
+- **Filter**, **Sort**, **Group**, **Columns** and view settings open
+  just above the toolbar, and stay above the keyboard while you type in
+  them. Tap the same button again to close the panel.
+- **A button you can't use right now** says why when you tap it, such as
+  **Group, this view has no grouping**.
+- **A database**: its **⋯** starts with **Rename…**, **Pin to bottom
+  bar** or **Remove from bottom bar**, **Copy embed** and **Open as
+  note**. Below them come the save and sync status, the database's
+  actions (such as **View settings…** for a Calendar or Gantt, and **Add
+  with details…** in the People database), **Appearance**, **History**
+  and the note's actions. The view switcher stays on the page.
+- **Tasks**: **View** picks Table, Board or Calendar, and has
+  **Columns…** (**Fields…** on the Board). The **Mine** and **Everyone**
+  and vault chips stay on the page. **⋯** has **Change note…**, which
+  picks the note [new tasks](/guide/tasks/#new-task) go into.
+- **Notifications**: **Unread**, **All** and **Archived** sit at the top
+  of the page. **Clear archive** asks before it deletes the archived
+  notifications.
+- **Trash**: its sort is in **⋯** at the top.
+
+Any other page, such as a plugin's tab, a revision or a merge, has
+**‹**, its title and **⋯** at the top, and **Home** at the bottom.
+
+### Reading and editing a note {% include since.html v="0.17.0" %} {#editing-on-a-phone}
+
+A note opens for reading: the text takes the whole screen and no
+formatting toolbar shows. Links, wikilinks, mentions and checkboxes work
+as usual, and pressing and holding selects text without bringing up the
+keyboard.
+
+- **Find** opens [Find in note](/guide/editor/#find-and-replace).
+- **Outline** opens a list of the note's headings. Tap one to jump to it;
+  the note stays in reading.
+- **Comments** shows how many unresolved comments the note has, and opens
+  them.
+- **Details** opens the note's [Details](/guide/attributes/#note-pills--the-right-sidebar).
+- **+ New child note** creates a note under this one and opens it ready
+  to type. It's hidden when you can't edit the note, such as a read-only,
+  locked or shared read-only note.
+
+To edit, tap the text where you want the cursor. **Edit**, the first row
+of the note's **⋯**, does the same, which helps with a screen reader or a
+keyboard. You can't edit a read-only, locked or shared read-only note.
+While you edit:
+
+- The bar at the top shows **‹**, the title and **Done editing**.
+- The [formatting toolbar](/guide/toolbar/) sits right above the
+  keyboard, as one row: swipe it sideways for more buttons. Its **⋯** stays
+  at the end of the row. The note's toolbar steps aside.
+
+Editing ends only when you choose to: **Done editing**, **‹**, going to
+another page, or opening Search. Coming back from Search goes back to
+editing.
+
+The note's **⋯** at the top starts with **Edit**, then **Details**,
+**Backlinks** and **Attributes**, then the note's actions. On a phone it
+also holds what the [bottom bar](/guide/toolbar/#the-bottom-bar) has on a
+wider screen:
+
+- The save and sync status, which opens the note's **Status** card.
+- The word count and reading time.
+- **Source** or **Preview**, and **Editing** or **Suggesting**.
+- **Suggestions**: previous, next, accept all and reject all, and track
+  changes for everyone (see [Track changes](/guide/track-changes/)).
+- **Add comment**, **History**, **Publish**, **Share**, **Send a copy**,
+  **Appearance**, **Zoom**, **Pin to bottom bar** and **Set icon…**.
+
+An [encrypted note](/guide/encryption/) gets nothing that sends its text
+out of Mahfouz.
+
+### Search {% include since.html v="0.17.0" %} {#search-on-a-phone}
+
+On a phone, Search is one field that finds notes and runs commands, like
+the [command palette](/guide/command-palette/) on a wider screen. Open it
+with **Search** in Home's navigation bar, or press <kbd>Mod</kbd><kbd>K</kbd>
+on a keyboard; press <kbd>Mod</kbd><kbd>K</kbd> again to close it. It
+opens as a page, with **‹**, **Search** and **⋯** in the bar at the top.
+
+The field, **Search or run a command**, sits at the bottom of the screen,
+right above the keyboard, with a round **×** beside it to cancel. With the
+keyboard down, the field sits where a page's toolbar is.
+
+- **Before you type**, the page lists the notes and databases you opened
+  recently, or suggested commands when there are none yet.
+- **As you type**, it lists notes whose titles match, a **Search note
+  contents for “…”** row with how many notes match, then matching
+  commands and settings. Tap a command to run it, such as **New note**.
+- **Opened from a note**, the list also has that note's commands, such as
+  **Bookmark** and **Export…**, and they act on that note.
+- **Search note contents for “…”** shows the notes whose text matches, on
+  the same page, as the [Search tab](/guide/links/#search) does. **‹**
+  goes back to the list.
+- **⋯** holds the options for searching note contents: **Match case**,
+  **Whole word**, **Regular expression**, **Show replace** and **Sort by**.
+- **×** leaves Search and goes back to where you opened it. <kbd>Esc</kbd>
+  clears the field, and pressed again, goes back.
+
+Recent searches aren't kept on a phone: your recent notes take their
+place. In a narrow desktop window, <kbd>Alt</kbd><kbd>1</kbd> to
+<kbd>Alt</kbd><kbd>4</kbd> still show one kind of result at a time.
 
 ### Install it on your home screen {% include since.html v="0.17.0" %} {#install-it-on-your-home-screen}
 

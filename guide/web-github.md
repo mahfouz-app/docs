@@ -64,7 +64,8 @@ Mahfouz downloads the repository's whole history.
 If the repository is **public**, Mahfouz asks before it clones. Once the
 vault syncs, everything you add to it is readable by anyone on the internet:
 every note, plus `.config/bookmarks.md` (the notes you've bookmarked),
-`.config/fields.md` (your fields) and the People database (the people you've
+`.config/fields.md` (your fields), `.config/navigation.md` (your rail's
+pins, with their titles) {% include since.html v="0.17.0" %} and the People database (the people you've
 added, with their contact details). Deleting them later doesn't help, since
 the git history keeps them. Click **Open as vault** to go ahead, or
 **Cancel** to go back with nothing cloned. The **Edit** link on a published

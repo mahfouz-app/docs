@@ -141,7 +141,8 @@ After you decline, that client can't ask again for ten minutes.
 
 When an agent has proposals waiting or has applied changes recently, a
 plug button appears in the titlebar, next to the AI chat button; the
-number on it is how many proposals are waiting. Click it to see
+number on it is how many proposals are waiting. On a phone, it's **External agents** in the **⋯** menu on
+[Home](/guide/web/#phone-home), and the number shows on **⋯** too. {% include since.html v="0.17.0" %} Click it to see
 each one, with the client, the vault and how many lines change, then
 **Accept** or **Reject** it. Proposals that always need your approval say
 **Destructive — always asks**.
