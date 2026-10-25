@@ -131,8 +131,17 @@ Some things to know:
 - On Android, the installed app and Chrome share one copy of Mahfouz's
   data, so only one of them can be open at a time (see [One tab at a
   time](#one-tab-at-a-time)).
-- Mahfouz needs a connection to start. Opened offline, the app shows your
-  browser's offline page.
+- **It starts with no connection.** {% include since.html v="0.17.0" %}
+  Once the app has been opened online, it keeps a copy of itself (about
+  9 MB, or twice that for a while after an update), so it opens offline,
+  and your vaults open and save as usual. On iPhone and iPad, open it online
+  once in the installed app itself: Safari's copy doesn't count. Syncing
+  with GitHub, signing in, publishing, sharing and installing plugins wait
+  for a connection. Signing in while offline says **You're offline. Connect
+  to the internet to sign in.**
+- Online, the app opens the newest version, unless the connection takes
+  more than a few seconds to answer: it then opens the copy it keeps, and a
+  banner offers **Reload** once the new version can load.
 - The installed app has no browser Reload button. When a new version of
   Mahfouz is out while the app is open, a banner offers **Reload** (see
   [New versions](#new-versions)).
