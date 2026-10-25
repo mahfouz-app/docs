@@ -99,6 +99,10 @@ On the left:
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
   the page is behind the note (see [Publishing](/guide/publishing/))
+- **Share…** (two people): shares the note with chosen GitHub accounts or
+  a secret link, so they can read, comment on, suggest edits to or edit it
+  live with you (see [Sharing a note with people](/guide/sharing/)). It
+  shows only where sharing is on for your account {% include since.html v="0.16.0" %}
 - **Share** (a box with an up arrow): opens the system share sheet to send
   the note to another app, such as Mail or Messages. It sends the note's
   text as Markdown, without its attributes or a database's view settings.
