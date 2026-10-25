@@ -281,7 +281,9 @@ opening a note. Type its title and press <kbd>Enter</kbd>.
   due that day.
 
 The task is written as one line, `- [ ] Title // date`, with your `@login`
-when you're signed in with GitHub, at the end of a note. The first time
+when you're signed in with GitHub, at the end of a note. On a
+[person's page](/guide/people/#a-persons-page), **New task for @handle**
+writes their `@handle` instead. {% include since.html v="0.16.0" %} The first time
 you add a task in a vault, Mahfouz asks which note: it remembers the note
 for that vault on this computer. To pick another, click the chevron beside
 **New task**. Mahfouz asks again only when the note is gone or has been

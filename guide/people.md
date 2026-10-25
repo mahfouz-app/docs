@@ -224,6 +224,17 @@ Under a person note's text, Mahfouz shows:
 - **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
   by every person page. {% include since.html v="0.12.0" %}
+  It's a compact copy of the Tasks tab, in a frame: the fixed **Table**,
+  **Board** and **Calendar** tabs, **Filter**, **Sort** and **Columns**,
+  with no **Group**. The toolbar shows even when they have no tasks yet.
+  {% include since.html v="0.16.0" %}
+  - **New task for @handle**, under the table, adds a task assigned to
+    them, into the note [New task](/guide/tasks/#new-task) remembers for
+    the vault. A Board column's **+ New task** and a Calendar day's **+**
+    assign it to them too. {% include since.html v="0.16.0" %}
+  - **Open in Tasks** opens the Tasks tab on **Everyone**, filtered to
+    their handle as a change on this device; **Reset** clears it.
+    {% include since.html v="0.16.0" %}
 - **Mentions:** a row for each mention of them, showing its line; two
   mentions in one paragraph share a row. When there's more to see, the
   chevron expands the row to the whole paragraph, list item, heading or
