@@ -304,8 +304,8 @@ When one of your tasks comes due, a notification tells you. Click it to
 open the note at the task, or, on a pop-up you've moved to with
 <kbd>Tab</kbd>, press <kbd>Enter</kbd>. Its **Mark done** button ticks the
 task off without opening it. In the
-[notification center](/guide/notifications/) and its pop-ups (not in system
-notifications), it also has two menus:
+[notification center](/guide/notifications/) and its pop-ups (not in device
+notifications {% include since.html v="0.17.0" %}), it also has two menus:
 
 - **Snooze** hides the reminder for **10 minutes**, **1 hour**, **3 hours**
   or until the next 09:00 (**Today 09:00** or **Tomorrow 09:00**). It comes
@@ -330,7 +330,9 @@ notifications), it also has two menus:
   tasks with no assignee never remind anyone.
 - A task reminds you at its time; an all-day task at 09:00. An in-progress
   task still reminds you; only a done one doesn't.
-- Reminders come only while Mahfouz is open. If several came due while it
+- Reminders come only while Mahfouz is open, except on the web, where
+  [Device notifications](/guide/notifications/#task-reminders-while-mahfouz-is-closed)
+  can bring them while it's closed {% include since.html v="0.17.0" %}. If several came due while it
   was closed or your computer was asleep, they're summarized in one notice,
   such as **3 tasks are overdue**. Click it (or press <kbd>Enter</kbd> on
   the pop-up) to open the Tasks view; **Snooze all** snoozes every task in
