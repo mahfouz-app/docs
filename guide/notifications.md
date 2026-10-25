@@ -27,9 +27,11 @@ Settings → Notifications controls how notifications interrupt you:
 
 ## New versions of Mahfouz
 
-When a new version of Mahfouz is released, a notification tells you which version is out and which one you have. **What's new** opens the release notes; **Download** opens the installer where one is available for your platform. Mahfouz doesn't install anything itself.
+{% include since.html v="0.17.0" %} When a new version of Mahfouz is released, a banner under the title bar says which version is out and which one you have. **What's new** opens the release notes; **Download** opens the installer where one is available for your platform. Mahfouz doesn't install anything itself.
 
-- Mahfouz checks at most once a day while it's open. **Mahfouz → Check for Updates…**, or **Check for updates** at the bottom of the account menu, checks right away and always tells you the result, including when you're up to date.
-- If you installed Mahfouz with Homebrew, there's no Download button; the notification shows the command to run instead: `brew upgrade --cask mahfouz`.
-- Archive the notification to skip that version. It comes back when a newer one is released.
-- To stop the checks entirely, turn off **Automatically check for new versions** in Settings → Notifications. It applies to this computer only. Muting the **App updates** category keeps the checks but silences their notifications.
+- Mahfouz checks when it starts and then at most once a day. **Mahfouz → Check for Updates…**, or **Check for updates** at the bottom of the account menu, checks right away and always tells you the result, including when you're up to date.
+- If you installed Mahfouz with Homebrew, there's no Download button; the banner shows the command to run instead: `brew upgrade --cask mahfouz`.
+- **Skip this version** (the × on the banner) hides it until a newer version is released. Check for Updates… shows it again.
+- If Mahfouz isn't in front when it finds a new version, you also get one system notification for that version, unless Do not disturb is on.
+- To stop the checks entirely, turn off **Automatically check for new versions** in Settings → Notifications. It applies to this computer only. Muting the **App updates** category stops the automatic banner too; Check for Updates… still shows it.
+- On the web, the banner offers **Reload** instead: see [New versions](/guide/web/#new-versions).
