@@ -108,6 +108,13 @@ vault in Settings → AI → External agents, as for
   are refused.
 - **Publish**: also ask to publish and unpublish notes.
 
+The agent is offered only the tools its levels allow: no tool that changes
+notes while every vault is at **Read**, and `publish_note` and
+`unpublish_note` only while a vault is at **Publish**. `list_vaults` tells
+it, for each vault, whether it can change notes (`can_write`) and publish
+them (`can_publish`). Most clients read the tools when they connect, so
+after you raise a level, reconnect the client to offer it the new tools.
+
 Clients connected before access levels keep what they could do at
 **Edit**. To let one publish, set the vault to **Publish**.
 

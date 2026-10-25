@@ -142,16 +142,38 @@ Some things to know:
 - Online, the app opens the newest version, unless the connection takes
   more than a few seconds to answer: it then opens the copy it keeps, and a
   banner offers **Reload** once the new version can load.
+- On iPhone and iPad, [notifications](#notifications-on-iphone) need the
+  installed app. {% include since.html v="0.17.0" %}
 - The installed app has no browser Reload button. When a new version of
   Mahfouz is out while the app is open, a banner offers **Reload** (see
   [New versions](#new-versions)).
+
+### Notifications on iPhone {% include since.html v="0.17.0" %} {#notifications-on-iphone}
+
+On iPhone and iPad, [device notifications](/guide/notifications/#device-notifications)
+and [task reminders while Mahfouz is
+closed](/guide/notifications/#task-reminders-while-mahfouz-is-closed) work
+only in the Home Screen app, on iOS 16.4 or later. In Safari, Settings →
+Notifications says **Add Mahfouz to your Home Screen (Share → Add to Home
+Screen) to get them.**
+
+1. In Safari, open web.mahfouz.app, tap **Share**, then **Add to Home
+   Screen**.
+2. Open Mahfouz from your Home Screen, sign in, and turn on **Device
+   notifications** in Settings → Notifications. Allow notifications when
+   iOS asks.
+
+To allow or stop them later, go to iPhone **Settings** → **Notifications**
+→ **Mahfouz**.
 
 ## What's only in the desktop app
 
 The Slidev presentations and PDF export plugins, the AI agent, Export,
 Git LFS (and its plugin), syncing a local folder with a remote (a GitHub vault syncs on the
-web), merging diverged histories, Reveal in Finder, moving a vault, system
-notifications, update checks and the [Finder preview](/guide/quick-look/). Settings say **Available in the desktop
+web), merging diverged histories, Reveal in Finder, moving a vault, update
+checks and the [Finder preview](/guide/quick-look/). [Device
+notifications](/guide/notifications/#device-notifications) work on the web
+too {% include since.html v="0.17.0" %}. Settings say **Available in the desktop
 app** where one would be.
 
 Other plugins, such as Mermaid and Draw.io, work on the web: see [Plugins
