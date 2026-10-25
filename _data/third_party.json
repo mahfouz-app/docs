@@ -6,6 +6,12 @@
   "url": "https://github.com/codemirror/autocomplete"
  },
  {
+  "name": "@codemirror/collab",
+  "version": "6.1.1",
+  "license": "MIT",
+  "url": "https://github.com/codemirror/collab"
+ },
+ {
   "name": "@codemirror/commands",
   "version": "6.10.3",
   "license": "MIT",
