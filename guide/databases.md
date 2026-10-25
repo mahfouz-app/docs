@@ -344,9 +344,12 @@ vault directly instead of becoming suggestions.
   **Move left**, **Move right** and **Hide column**. **Title**'s menu has
   **Move left** and **Move right** too, and either one moves a column past
   Title. {% include since.html v="0.16.0" %}
-- **Rename** changes the attribute's name in every row in a single commit.
-  If a row already has an attribute with the new name, the rename isn't
-  made.
+- **Rename** starts from the name the header shows, and the header shows
+  the name you type. {% include since.html v="0.17.0" %} The attribute is
+  renamed the way **+** names a new column ("Due date" is `due_date`), in
+  every row in a single commit. If a row already has an attribute with the
+  new name, the rename isn't made. A new name that only changes how the
+  name is written ("notes" to "Notes") changes the header alone, and no row.
 - **Set type** sets the attribute's type for the whole vault. A typed
   column's icon in the header opens the same list of types. Types are
   stored in `.config/attributes.md`, so another database that uses the same
