@@ -76,7 +76,7 @@ example row you can delete:
 
 | Template | Columns | Views |
 |---|---|---|
-| Projects | Status, Owner, Start, Due | Table, Board by Status, Calendar by Due |
+| Projects | Status, Owner, Start, Due | Table, Board by Status, Calendar by Due, Gantt from Start to Due {% include since.html v="0.16.0" %} |
 | Reading list | Author, Shelf, Rating, Cover | Table, Gallery |
 | Meeting notes | Date, Attendees, Type | Table, Calendar by Date |
 | Bookmarks | Link, Topic, Read, Cover | Table, Gallery |
@@ -306,7 +306,9 @@ to show it. The view you picked is remembered on this device.
 
 - **+ View** adds a view: **Table**, **Board** grouped by one of the
   database's Select attributes, **Gallery** with the cover image you
-  choose, or **Calendar** by one of the rows' dates.
+  choose, **Calendar** by one of the rows' dates, or
+  [**Gantt**](#gantt) from a start date to an end date.
+  {% include since.html v="0.16.0" %}
 - The **▾** next to the current view offers **Rename**, **Duplicate**, and
   **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
   save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
@@ -451,6 +453,351 @@ button to add one.
 
 Sort and filters apply as in a table. A Calendar isn't grouped: a grouping
 saved in the view is kept in the block but not shown.
+
+## Gantt {% include since.html v="0.16.0" %} {#gantt}
+
+A Gantt shows each row as a bar on a timeline, from its start date to its
+end date, such as a project phase from its start to its due date. The end
+day is included: a bar from 3 March to 14 March covers 12 days. In the
+block, a Gantt is a view with `type: gantt`, `date: <start attribute>` and
+`end: <end attribute>`. This view is Mahfouz's own; other apps that read the
+block show it as an unknown view.
+
+**+ View** ▸ **Gantt** offers the start first, then the end:
+
+- **Start** lists the rows' dates: Date and Date & time attributes,
+  attributes with no type whose values are dates, **Created**, and rollups
+  that calculate **Earliest date** or **Latest date**.
+- **End** lists the same dates without the start you picked, and with
+  **Updated** instead of **Created**.
+
+A Gantt needs two date attributes it can change. When the database has
+fewer, the item reads **Gantt (needs two date attributes)** and can't be
+chosen. If the view's `date` or `end` is missing or isn't a date, the Gantt
+asks you to choose one, and your choice is written into the view.
+
+### Read the timeline
+
+- **Day**, **Week**, **Month** and **Quarter**, at the right of the
+  Gantt's header, set the zoom. Like a sort, the zoom applies on this
+  device until you click **Save view**, which writes it into the view as
+  `range` (picking **Month** and saving removes it).
+- The Gantt opens on today when its rows reach today, and otherwise on the
+  first bar. **Earlier** and **Later** scroll by a day, a week, a month or
+  a quarter, following the zoom, and **Today** goes back to today. A line
+  marks today, and at Day and Week the weekends are shaded. The header
+  names the months the rows span. Where you've scrolled isn't saved.
+- The column on the left lists the rows, each with its dates under its
+  title. Click a title or a bar to open the row's note.
+
+Each row shows one of these:
+
+- **A bar**, when the row has both dates and the end isn't before the start.
+- **A milestone**, a mark on one day, when the row has only one of its
+  dates. If the view's start and end are the same attribute, every dated
+  row is a milestone, and a note says so.
+- **A hatched red bar**, when the end comes before the start. Point at it to
+  read both dates. Fix it with **Set dates…** in its **⋯** menu; it can't be
+  dragged.
+- **The text it can't read**, such as *Start “next week” isn't a date*, when
+  a date is written in a form Mahfouz can't read exactly, such as
+  `10/13/2026`. The row has no bar until you fix the date: **Set dates…**
+  replaces the text, or you can edit it in the note.
+- **No dates** in an empty track, when the row has neither date. With a
+  mouse or a trackpad, the track reads **Drag to set dates** instead; see
+  [Drag bars](#drag-bars).
+
+Sort and filters apply as in a table. Rows with no dates stay in the list, so
+you can give them dates.
+
+### View settings
+
+**View settings**, in the toolbar, changes the Gantt's **Start**, **End**,
+**Color by**, **Dependencies** and **Sub-items**:
+
+- **Start** and **End** pick the dates again. Start doesn't list the end,
+  and End doesn't list the start.
+- **Color by** colors each bar with the option color of a Select attribute,
+  such as a status (see [Select options](/guide/attributes/#options)).
+  **None** removes it, and the bars take the accent color.
+- **Dependencies** picks the relation the Gantt's arrows follow; see
+  [Dependencies](#gantt-dependencies).
+- **Sub-items** picks the relation that nests rows under other rows; see
+  [Sub-items](#gantt-sub-items).
+
+Unlike sorting and filtering, each change in View settings is written into
+the view straight away, so it changes the view for everyone with the vault
+at once. There's no **Save view** step and no **Reset** for it.
+
+### Lanes
+
+**Group** splits the rows into lanes by a Select attribute, such as a
+status; its list is captioned **Group rows into lanes by**. The lanes follow
+the order of the attribute's options, as a table's sections do, and each
+lane's header says how many rows it holds. Click a lane's chevron, or press
+<kbd>Enter</kbd>, <kbd>←</kbd> or <kbd>→</kbd> on its header, to collapse or
+expand it. Like a table's grouping, lanes apply on this device until you
+click **Save view**. A grouping the Gantt can't show as lanes, such as one
+written by hand on a relation, is kept in the block, and a note says the
+rows aren't grouped.
+
+### Change dates
+
+**⋯** on a row offers **Open**, **Open in new tab**, **Set dates…**, **Remove
+dates** and **Delete row**:
+
+- **Set dates…** picks the start on a month, then **Next** to pick the end
+  (**Back** returns to the start). Nothing is written until you click
+  **Save**, and only the dates you changed are written. A date that comes
+  from **Created**, **Updated** or a rollup shows its day and why it can't be
+  changed.
+- **Remove dates** removes both dates. If one of them can't be changed here,
+  only the other is removed.
+
+A row's two dates are written together, in one commit. A date keeps its
+form: a date stays a date, and a date and time keeps its time.
+
+### Keyboard
+
+The list of rows on the left is one stop for <kbd>Tab</kbd>. On a row:
+
+- <kbd>↑</kbd> and <kbd>↓</kbd> move between rows, and <kbd>Enter</kbd> opens
+  the row's note (<kbd>Cmd</kbd><kbd>Enter</kbd>, or
+  <kbd>Ctrl</kbd><kbd>Enter</kbd>, opens it in a new tab).
+- <kbd>→</kbd> opens the row's **⋯** menu, and <kbd>Escape</kbd> closes it.
+- <kbd>Alt</kbd><kbd>←</kbd> and <kbd>Alt</kbd><kbd>→</kbd> move the row's
+  bar a day earlier or later. At Quarter, they move it to the previous or
+  next week.
+- <kbd>Shift</kbd><kbd>Alt</kbd><kbd>←</kbd> and
+  <kbd>Shift</kbd><kbd>Alt</kbd><kbd>→</kbd> move only its end.
+
+Each change, and each change that can't be made, shows in a short message
+at the bottom of the Gantt and is announced to screen readers.
+
+### Drag bars {#drag-bars}
+
+With a mouse or a trackpad:
+
+- **Drag a bar**, or the name on the bar, to move it. Both dates move
+  together. Dragging a milestone moves its one date.
+- **Drag a bar's left or right edge** to change only its start or its end.
+  Bars narrower than 24 pixels have no edges; drag them to move them, or use
+  **Set dates…**.
+- **Drag across an undated row's track**, where it reads **Drag to set
+  dates**, to draw its dates in: the bar grows as you drag, and both dates
+  are set when you let go. A drag that stays on one day sets a one-day span.
+
+While you drag, the bar shows where it will land, and nothing is written
+until you let go. Press <kbd>Escape</kbd> to cancel. Dragging near the
+Gantt's edges scrolls it. Bars snap to whole days, and at Quarter to whole
+weeks: a start lands on the first day of a week, and an end on the last.
+Moving up or down never moves a row to another lane, and an end can't be
+dragged before its start.
+
+Some drags can't be made. The pointer shows it over such a bar, and as soon
+as you start one, a message at the bottom of the Gantt says why:
+
+- a date that comes from **Created**, **Updated** or a rollup, such as
+  *Can't move ‘Launch’: its start comes from Created. Drag its end edge
+  instead.*;
+- a date written in another time zone, whose day here isn't the day it was
+  written on; change it in the table;
+- a bar whose end comes before its start;
+- any drag while the database is being updated.
+
+If the row changes while you drag it, for example when someone else's edit
+arrives, nothing is written, and a message says so.
+
+An undated row can only be drawn in when both its start and its end can be
+changed here and they're different attributes. Otherwise its track reads
+**No dates**, as it does on a touch screen.
+
+### Dependencies {% include since.html v="0.16.0" %} {#gantt-dependencies}
+
+A Gantt can draw an arrow from each row to the rows that wait for it, such
+as from *Design* to *Build* when the build can't start until the design is
+done. The arrows follow a relation of the database to itself (see
+[Relate a database to itself](#relate-a-database-to-itself)): a row's links
+in it are the rows it depends on.
+
+To choose the relation, open **View settings** and pick it under
+**Dependencies**. The **Dependencies** setting appears only when the
+database has a relation to itself, or when the view already names one.
+**None** removes the arrows. Like the view's other settings, the choice is
+written into the view straight away, as `dependsOn: <key>`. A two-way
+relation that links back through the same column, listed as **⟨key⟩
+(two-way, same key)**, can't show dependencies, since each link points both
+ways; a note says so, such as *“related” links both ways, so it can't show
+dependencies. Pick another relation in View settings.* A two-way relation
+that links back through another column works.
+
+The list also offers the relation **Sub-items** uses (see
+[Sub-items](#gantt-sub-items)). Picking it draws the arrows, but the rows
+stop nesting, and a note says why, such as *“under” already shows
+dependencies, so it can't nest rows. Pick another relation in View
+settings.*
+
+An arrow runs from the end of a row's dependency to the start of the row.
+When the row starts on or before the day its dependency ends, the arrow is
+dashed and in the warning color: the row starts too early. Screen readers
+read each row's dependencies with its name, such as *Build, depends on
+Design (conflict)*.
+
+A row with no dates of its own whose sub-items have dates is drawn as its
+bracket (see [Sub-items](#gantt-sub-items)), and its arrows attach to the
+bracket: as a dependency it ends on the bracket's last day, and as a
+dependent it starts on its first, so an arrow to or from it is dashed when
+the dates overlap the bracket. A row whose dates can't be read has no
+bracket to stand in for them, and no arrows.
+
+Arrows are drawn only between rows the Gantt shows, so rows in a collapsed
+lane have none. When dependencies point to rows the view's filter hides, a
+note counts them, such as *1 dependency points to a row this view's filter
+hides.*
+
+With a mouse or a trackpad, point at a bar: a dot appears past its right
+end. Drag the dot onto another row's bar or milestone, or a milestone's
+name, to make that row depend on this one. A dashed line follows the
+pointer, and dragging near the Gantt's edges scrolls it. Press
+<kbd>Escape</kbd> to cancel. Bars narrower than 24 pixels have no dot.
+
+On a touch screen or with the keyboard, use the row's **⋯** menu:
+
+- **Add dependency…** opens *‘Build’ depends on…*, a list of the rows the
+  view shows, with a search field. The rows it already depends on are
+  checked. A row that would make a loop is greyed out, marked *(depends on
+  it)*.
+- **Remove dependency** lists the rows it depends on; pick one to remove it.
+  A link to a row that no longer exists is listed with *(missing)*, and a
+  link from the row to itself, written by hand, as *Build (itself)*, so you
+  can remove those too.
+
+Each change is one commit, and a message at the bottom of the Gantt says
+what happened, such as *‘Build’ now depends on ‘Design’*. When the row
+starts too early, the message adds *it starts before that ends*. Some
+changes are refused, and nothing is written:
+
+- a row can't depend on itself, or twice on the same row;
+- a dependency can't make a loop, such as *Refused: ‘Design’ already depends
+  on ‘Build’, so this would make a loop. Nothing was changed.*;
+- if the relation has come to link both ways since the Gantt was drawn
+  (someone changed the database, say), the change says *“blocked_by” links
+  both ways now, so it can't show dependencies. Nothing was changed.*;
+- removing a dependency that's already gone says *Nothing was changed*;
+- dropping the dot anywhere but another bar or milestone says *Drop on
+  another bar to add a dependency*;
+- nothing can change while the database is being updated: *Can't change
+  dependencies while the database is being updated.*
+
+In a database embed, the arrows are drawn but can't be changed. In the list
+a narrow Gantt shows instead of the timeline (see [On a phone](#on-a-phone)),
+a row that starts too early says so, such as *starts before Design ends*.
+
+### Sub-items {% include since.html v="0.16.0" %} {#gantt-sub-items}
+
+A Gantt can nest rows under other rows, as a project's phases hold their
+tasks: *API* and *UI* under *Build*, say. Like dependencies, the nesting
+follows a relation of the database to itself (see
+[Relate a database to itself](#relate-a-database-to-itself)): the row a row
+links in it is its parent, and the rows that link a row are its sub-items.
+
+To choose the relation, open **View settings** and pick it under
+**Sub-items**. It lists the same relations as **Dependencies**, except the
+one the arrows already follow. The **Sub-items** setting appears only when
+there's a relation to choose or the view already names one. **None** shows
+every row at the top level. The choice is written into the view straight
+away, as `parentBy: <key>`. Some relations can't nest rows, and a note says
+why:
+
+- a two-way relation that links back through the same column, such as
+  *“related” links both ways, so it can't nest rows. Pick another relation
+  in View settings.*;
+- the relation the arrows follow, *“blocked_by” already shows
+  dependencies, so it can't nest rows. Pick another relation in View
+  settings.*;
+- anything that isn't a relation of the database to itself, *“client”
+  can't nest rows: it isn't a relation of this database to itself.*
+
+The rows show as a tree: each parent, then its sub-items, indented under
+it, at every level, in the view's sort among rows of the same parent. A
+parent's title is bold, and screen readers read its sub-items with its name,
+such as *Build, no dates, 3 sub-items, spanning 23 Oct – 16 Nov*; a
+sub-item adds its parent, such as *, sub-item of Build*. In lanes, a
+sub-item stays with its parent, in its top-level row's lane, whatever its
+own value.
+
+The timeline draws a bracket over the days a parent's sub-items cover, at
+every level. A parent with no dates of its own shows only the bracket, with
+its title next to it, and its line on the left says the span. A parent with
+dates shows its own bar, and a thin bracket under it. Point at a bracket to
+read it, such as *Span of 3 sub-items: 23 Oct – 16 Nov. Change it by moving
+the sub-items.* The bracket can't be dragged: it follows its sub-items. When
+none of a parent's sub-items have dates, it has no bracket, and an undated
+parent keeps its **Drag to set dates** track.
+
+Click a parent's chevron to collapse or expand it. On a parent, <kbd>→</kbd>
+expands it when it's collapsed, and <kbd>←</kbd> collapses it; on a
+sub-item, <kbd>←</kbd> moves to its parent. Which parents are collapsed
+isn't saved: reopening the database shows every row.
+
+Some rows can't be nested as their links say, and a note says so:
+
+- a row whose parent the view's filter hides is shown at the top level, such
+  as *1 row is shown at the top level: its parent is hidden by this view's
+  filter.*;
+- a loop written by hand, such as two rows under each other, is shown from
+  its first row, such as *‘Design’ is shown at the top level: its parent ‘QA’
+  is inside it.*;
+- a row linking more than one other row is shown under the first one the
+  view shows, such as *1 row has more than one parent; it's shown under the
+  first.*
+
+Use a row's **⋯** menu to change where it sits:
+
+- **Make sub-item of…** opens *Make ‘QA’ a sub-item of…*, a list of the rows
+  the view shows, with a search field. Its parent now is checked, and a row
+  inside it, which would make a loop, is greyed out, marked *(inside it)*.
+  A row has one parent: picking another moves it there, and its other
+  parents in this database are removed, such as *‘QA’ is now a sub-item of
+  ‘Build’ (no longer under ‘Design’)*. On a row that links more than one
+  parent, picking one it already links keeps that one and removes the
+  others, with the same message. Links to notes outside the database, links
+  that no longer lead anywhere, and a link from the row to itself, written
+  by hand, stay. If the new parent is collapsed, it expands, so the row
+  stays in view. If it's in a collapsed lane, the lane stays collapsed, the
+  message adds *it's in the collapsed ‘Todo’ lane*, and the lane's header
+  takes the focus.
+- **Remove from ‘Build’** moves the row out from under the parent it's shown
+  under, such as *‘QA’ is no longer a sub-item of ‘Build’*. A row with
+  another parent is then shown under it, and the message adds *it's now
+  under ‘Design’*. A row at the top level shows **Remove from parent**,
+  greyed out.
+
+Each change is one commit, and a message at the bottom of the Gantt says
+what happened. Some changes are refused, and nothing is written:
+
+- picking the row's parent now says *‘QA’ is already a sub-item of
+  ‘Build’*;
+- a row inside it makes a loop: *Refused: ‘Auth’ is inside ‘Build’, so this
+  would make a loop. Nothing was changed.*;
+- a row can't be a sub-item of itself;
+- if the relation has come to link both ways since the Gantt was drawn, the
+  change says *“under” links both ways now, so it can't nest rows. Nothing
+  was changed.*;
+- nothing can change while the database is being updated: *Can't change
+  sub-items while the database is being updated.*
+
+In the list a narrow Gantt shows (see [On a phone](#on-a-phone)), rows are
+indented the same way, and a parent with no dates says its span and how many
+sub-items it has, such as *spans 23 Oct – 16 Nov · 3 sub-items*.
+
+### On a phone
+
+When the Gantt is 600 pixels wide or less, as on a phone or in a split, it
+shows a list instead of the timeline: each row's title and its dates, such
+as *10 Oct – 22 Oct · 13 days*, grouped by lane. Each row keeps its **⋯**
+menu, so you can set and remove its dates there. The zoom switch and dragging
+aren't shown.
 
 ## Relations
 
@@ -677,6 +1024,17 @@ The embed keeps the view's layout, read-only:
   and rows on other days or with no date aren't shown. A Calendar with no date attribute says so instead. When the note
   is narrow, days show a count; click or press <kbd>Enter</kbd> on a day to
   list its rows below the month.
+- **Gantt**: {% include since.html v="0.16.0" %} one month of the timeline,
+  or a quarter for a view saved at Quarter: the one holding today when the
+  rows reach today, otherwise the one holding the first start. It shows up
+  to 10 rows with dates in that month, in their lanes and colors, and bars
+  that run past it are cut at its edges. You can't scroll, zoom or drag. The
+  line at the bottom counts the rows outside the month, the rows without
+  dates, and the rows that didn't fit, such as *2 more rows*. Dependency
+  arrows are drawn, but can't be changed. Sub-items stay under their
+  parents, and nothing collapses; a parent with no dates is drawn as its
+  bracket when its sub-items in that month give it one. It counts as one of
+  the 10 rows, and is left out when none of its sub-items fit.
 
 When rows are left out, a line at the bottom says how many are shown (for a
 Calendar, how many aren't), with **Open database** to see the rest. In a
@@ -720,7 +1078,12 @@ you export to Word or PDF.
 
 The agent can read a database with its `query_database` tool. The tool
 returns the database's views, the columns of the view it asked for, and up to
-200 rows, which the agent treats as data. To
+200 rows, which the agent treats as data. For a Gantt view, it also returns
+the view's start (`date`), `end`, zoom (`range`: day, week, month or quarter),
+the Select attribute its bars are colored by (`color_by`), the relation
+its dependency arrows follow (`depends_on`), and the relation that nests its
+rows (`parent_by`).
+{% include since.html v="0.16.0" %} To
 add a row, the agent creates a child note and then sets its attributes. You
 approve both steps.
 
