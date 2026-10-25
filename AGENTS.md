@@ -30,8 +30,22 @@ imported into the tracker on 2026-10-24.
   characters, `status`, `labels`, `opened`) and a `# Title`; pull, commit,
   push.
 - **Rules:** one row per finding, never a checklist row; check for a
-  duplicate first; cite the row from the PR (`tracked in kb: <title>`); set
-  it Closed when the fix merges; don't take a follow-up into the current PR.
+  duplicate first; cite the row from the PR by its permalink (`tracked in
+  kb: [<title>](<permalink>)`, below); set it Closed when the fix merges;
+  don't take a follow-up into the current PR.
+- **Permalinks, never paths:** a PR, commit message or PR comment names a
+  Mahfouz note (a kb row or any other vault note) by its permalink,
+  `https://l.mahfouz.app/<slug>`, never by its path
+  (`issue_tracker/<file>.md`). A path breaks when the note is renamed or
+  moved and means nothing on GitHub; a permalink opens the note for anyone
+  with the vault and offers a clone to anyone who can reach its repository
+  ([guide](https://mahfouz.app/guide/permalinks/)). Get it from MCP's
+  `read_note` (its `permalink` field), or for a kb row as
+  `https://l.mahfouz.app/a0petb` followed by the row's frontmatter `id`
+  (`mahfouz-app/kb`'s repo hash is fixed):
+  `printf 'https://l.mahfouz.app/a0petb%s\n' "$(sed -n 's/^id: //p' issue_tracker/<file>.md)"`.
+  A note whose `id` isn't 32 lowercase hex characters has none: name it by
+  its title, not its path.
 
 The app repo's `.riprap/instructions/issue-tracker.md` has the full rules.
 
