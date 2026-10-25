@@ -127,8 +127,10 @@ chosen under its access level in Settings → AI → External agents:
 - **Ask before destructive edits**: the default. Changes apply right
   away, except deletes, moves, attribute removals, turning a note into a
   database, changing a person's handle {% include since.html v="0.13.0" %},
-  and rewrites that drop most of a note.
-- **Don't ask**: every change applies right away, deletes included.
+  publishing and unpublishing, and rewrites that drop most of a note.
+- **Don't ask**: every change applies right away, deletes included. At
+  **Publish**, publishing and unpublishing apply right away too {% include since.html v="0.17.0" %}.
+  Merging people always waits for you.
 
 An agent can ask to change its own mode. It can make it stricter on its
 own, but a looser mode needs your yes: Mahfouz asks **Let "…" edit "…"
@@ -157,10 +159,12 @@ shows up in [history](/guide/history/) like any other. In a note that is in
 
 An agent at **Publish** in the vault can ask to
 [publish](/guide/publishing/#publishing-with-the-agent) or unpublish a
-note. {% include since.html v="0.17.0" %} These always wait for you, even under **Don't ask**.
-Accepting a publish opens the usual publish dialog, where you choose the
-options and click **Publish**; accepting an unpublish takes the page down
-at once. Neither can be undone from **Recently applied**: publish the note
+note. {% include since.html v="0.17.0" %} These follow the client's approval mode: they wait
+for you under **Ask before every edit** and **Ask before destructive
+edits**, and apply right away under **Don't ask**. Once applied, a publish
+puts that one note online as an **Unlisted** page, never its child notes,
+and the agent gets the page's link; an unpublish takes the page down at
+once. Neither can be undone from **Recently applied**: publish the note
 again from its menu to bring a page back.
 
 ### People {% include since.html v="0.13.0" %} {#people}
