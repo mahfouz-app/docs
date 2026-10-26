@@ -679,6 +679,16 @@ Each row shows one of these:
 Sort and filters apply as in a table. Rows with no dates stay in the list, so
 you can give them dates.
 
+The **Name** column on the left stays in place as the timeline scrolls. To
+make it wider or narrower, drag the right edge of its header, or
+<kbd>Tab</kbd> to the edge (**Resize Name**) and press <kbd>←</kbd> or
+<kbd>→</kbd> (with <kbd>Shift</kbd> for bigger steps). Double-click the edge,
+or press <kbd>Enter</kbd> on it, to fit the longest name. The timeline takes
+the rest of the width. As with a table's [column widths](#columns), the width
+applies on this device until you **Save view**, which stores it as the
+view's `columnSize` for `title`.
+{% include since.html v="0.18.0" %}
+
 ### View settings
 
 **View settings**, in the toolbar, changes the Gantt's **Start**, **End**,
