@@ -126,7 +126,7 @@ small margin at each side: {% include since.html v="0.16.0" %}
   you're looking at always among them, and the rest are in an **N more**
   menu at the end of the row. Pick one there to show it. {% include since.html v="0.17.0" %}
 - As the pane narrows, the toolbar's buttons give way to their icons one
-  at a time: first **Columns** (and a Gantt's **View settings**, which
+  at a time: first **Columns** (and **View settings**, which
   becomes a cog), then **+ View**, then **New**. Hover over an icon to see
   its name. {% include since.html v="0.17.0" %}
 - After them, **⋯ Database actions**: {% include since.html v="0.16.0" %}
@@ -496,6 +496,10 @@ from:
   the default when the view has no `image` key.
 - **No image** shows cards without covers, written as `image: false`.
 
+To change it later, open **View settings** in the toolbar and pick another
+source under **Cover**. {% include since.html v="0.17.0" %} The change is written into the view straight
+away, as the Gantt's [View settings](#view-settings) are.
+
 Cards work like a Board's:
 
 - **Click a card** to open its note; <kbd>Cmd</kbd>-click
@@ -543,6 +547,9 @@ block show it as an unknown view.
 
 If the view's `date` is missing or names an attribute that isn't a date, the
 Calendar asks you to choose one, and your choice is written into the view.
+To change the date later, open **View settings** in the toolbar and pick
+another under **Date**, which lists the same dates. {% include since.html v="0.17.0" %} The change is written
+into the view straight away, with no **Save view** step.
 
 Working with the calendar:
 

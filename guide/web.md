@@ -167,7 +167,7 @@ with **Home** and ends with the page's main action:
 - **A database**: its **⋯** starts with **Rename…**, **Pin to bottom
   bar** or **Remove from bottom bar**, **Copy embed** and **Open as
   note**. Below them come the save and sync status, the database's
-  actions (such as **View settings…** for a Calendar or Gantt, and **Add
+  actions (such as **View settings…** for a Calendar, Gallery or Gantt, and **Add
   with details…** in the People database), **Appearance**, **History**
   and the note's actions. The view switcher stays on the page.
 - **Tasks**: **View** picks Table, Board or Calendar, and has
