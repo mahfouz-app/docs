@@ -185,7 +185,9 @@ Any other page, such as a plugin's tab, a revision or a merge, has
 ### Reading and editing a note {% include since.html v="0.17.0" %} {#editing-on-a-phone}
 
 A note opens for reading: the text takes the whole screen and no
-formatting toolbar shows. Links, wikilinks, mentions and checkboxes work
+formatting toolbar shows. There's no breadcrumb bar above the note: its
+**Details**, **Backlinks**, **Attributes** and **Comments** open from the
+toolbar and the **⋯**, just above the toolbar. {% include since.html v="0.19.0" %} Links, wikilinks, mentions and checkboxes work
 as usual, and pressing and holding selects text without bringing up the
 keyboard.
 

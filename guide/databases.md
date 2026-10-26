@@ -120,7 +120,8 @@ The tab is laid out like a note, {% include since.html v="0.14.0" %} but always 
 small margin at each side: {% include since.html v="0.16.0" %}
 
 - The breadcrumbs, with the note's **Details**, **Backlinks** and
-  **Attributes** pills to their right.
+  **Attributes** pills to their right. A phone shows no breadcrumbs: those
+  open from the **⋯**. {% include since.html v="0.19.0" %}
 - The page icon and the title, lined up with the table's left edge
   rather than a note's text, {% include since.html v="0.16.0" %} then the number of rows. When filters hide some rows, it says how many are shown,
   such as **3 of 4 rows**.
