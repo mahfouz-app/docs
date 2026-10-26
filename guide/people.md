@@ -147,8 +147,11 @@ email** and **Copy email**.
 
 ## The People view
 
-Click **People** in the left rail (<kbd>Mod</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %}) to list the vault's people; click it
-again to go back to your notes. On a phone, it's **People** in [Home's navigation
+Click **People** in the left rail (<kbd>Mod</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %}) to list the vault's people and open the
+People database in a tab. If the vault has no People database yet, the click
+creates one, as [adding a person](#adding-a-person) does. {% include since.html v="0.19.0" %}
+Click it again to go back to your notes; the tab stays open.
+<kbd>Mod</kbd><kbd>3</kbd> shows the list only. On a phone, it's **People** in [Home's navigation
 bar](/guide/web/#homes-navigation-bar), and the view opens as a page with
 its own toolbar: **Find**, **Import**, **Export**, **Open People
 database** and **+ Add person**. {% include since.html v="0.17.0" %}
