@@ -1,4 +1,40 @@
 
+## 0.17.0 (2026-10-26) {#v0.17.0}
+
+* Step 5/6: phone Search — one field for notes, commands and contents, at the bottom
+* fix(fields): refuse a date part that would merge; keep Long text lines in slide headers
+* fix(database): ask a database's questions in its note's Light or Dark
+* Move a Board's columns and a card's fields per view, like a table's columns
+* Step 3/6: the phone note page — read first, tap to edit, toolbar above the keyboard
+* feat(mcp): a local client at Publish publishes without the dialog
+* Step 3/4: say "You're offline" instead of leaving the app to sign in
+* Step 1/4: start the installed web app with no network (offline app shell)
+* Databases: one Filter, sort and group menu, icon steps and an N more menu in the view bar
+* Databases: a column's Rename renames the name its header shows
+* fix(server): answer a call only once the git it started has finished
+* fix(mcp): replay a local client's retried write instead of applying it twice
+* Step 3/3: Task reminders while Mahfouz is closed (Web Push)
+* Step 2/3: Worker Web Push service for task reminders
+* Step 1/3: Device notifications on the web (OS notifications while open)
+* fix(server): forget idle MCP sessions' reads on a long-lived server
+* feat(mcp): filter a local client's tools/list by its levels and report them in list_vaults
+* fix(agent): add_database_row into a People database adds a person
+* fix(web): commit as the signed-in account after an offline launch
+* fix(desktop): keep a vault's own git config from naming programs the app's git runs
+* feat(web): theme-color follows the app's appearance
+* Lock unlocked encrypted notes when the window hides for agents
+* ci: run the web suites in parallel for a desktop-only change
+* Step 2/2: App: shared new-version banner (desktop + web)
+* fix(database): draw option pills bare, with no dropdown frame around them
+* fix(mcp): headless server's own wording, no active vault in list_vaults
+* fix(mcp): page query_database and return the view's columns
+* feat(mcp): per-vault access levels for local clients
+* fix(databases): name new columns after their type, numbered, and size the draft's icons
+* fix(sync): a note whose file became a Git LFS pointer leaves the index and refuses writes
+* fix(database): views scroll again, and no scrollbars on the view switcher
+* ci: move actions/checkout and dorny/paths-filter to Node 24 releases
+
+
 ## 0.16.0 (2026-10-25) {#v0.16.0}
 
 * feat(mcp): put the owner's account on production's server path
