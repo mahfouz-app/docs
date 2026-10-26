@@ -152,9 +152,9 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 |---|---|---|
 | New note at the same level | <kbd>Mod</kbd><kbd>N</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd> |
 | Close the active tab | <kbd>Mod</kbd><kbd>W</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>W</kbd> |
-| Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>1</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>A</kbd>) {% include since.html v="0.14.0" %} |
-| Go to tasks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>2</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd>) {% include since.html v="0.14.0" %} |
-| Go to people | <kbd>Mod</kbd><kbd>3</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>3</kbd> {% include since.html v="0.14.0" %} |
+| Go to all notes | <kbd>Mod</kbd><kbd>1</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>H</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>1</kbd>) {% include since.html v="0.18.0" %} |
+| Go to tasks | <kbd>Mod</kbd><kbd>2</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>2</kbd>) {% include since.html v="0.18.0" %} |
+| Go to people | <kbd>Mod</kbd><kbd>3</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>P</kbd> (was <kbd>Mod</kbd><kbd>Alt</kbd><kbd>3</kbd>) {% include since.html v="0.18.0" %} |
 | Show notifications | <kbd>Mod</kbd><kbd>9</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>9</kbd> {% include since.html v="0.14.0" %} |
 | Open the account menu | <kbd>Mod</kbd><kbd>0</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>0</kbd> {% include since.html v="0.14.0" %} |
 | Go to bookmarks | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> {% include since.html v="0.14.0" %} | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>K</kbd> |
