@@ -124,8 +124,9 @@ Like the date picker, these changes apply directly, even in Suggesting mode.
 ## The Tasks panel {% include since.html v="0.16.0" %} {#the-tasks-panel}
 
 Click **Tasks** in the left rail to show your tasks in the left sidebar,
-in place of your notes; click it again to bring your notes back. The
-button looks pressed while the panel shows.
+in place of your notes, and open the [Tasks tab](#the-tasks-view) beside
+them. {% include since.html v="0.19.0" %} Click it again to bring your notes
+back; the tab stays open. The button looks pressed while the panel shows.
 
 - Type in **Search tasks** to filter the list.
 - **Mine** and **Everyone** choose whose tasks show. The Tasks tab and the
