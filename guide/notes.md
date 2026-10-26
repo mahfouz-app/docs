@@ -249,6 +249,20 @@ had on that device (saved there, not in the vault) moves into the vault's
 file, once. If the file already came from another device, your pins are
 added to it.
 
+## When an open note is updated elsewhere {% include since.html v="0.17.1" %} {#updated-elsewhere}
+
+If a note you have open changes outside this editor (another app saves
+the file, or a pull brings in someone else's edit), a banner says **This
+note was updated elsewhere**, and the note is read-only until you choose:
+
+- **Refresh** loads the new version. The cursor goes back to the line
+  you were on, or the line now at its place if that line changed.
+- If you had edits here that weren't saved yet, **Resolve conflicts**
+  lets you combine the two versions. **Refresh…** drops your edits
+  instead, after asking.
+
+Your own saves never show the banner.
+
 ## Exporting
 
 A note's ⋯ menu → **Export…** (or <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>)
