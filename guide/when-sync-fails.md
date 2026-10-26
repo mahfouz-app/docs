@@ -89,6 +89,7 @@ The tab lists what couldn't be combined, grouped as **Notes**, **Settings** and 
 - **Another file changed on both sides**: **Mine** or **GitHub's** keeps that file as one side has it; **Keep both** saves GitHub's version beside it when the file is text.
 - **Take all mine…** and **Take all GitHub's…** choose for every row still open that isn't a delete or a whole-note choice, after you confirm a list of what's discarded. They never decide deletes or whole-note rows.
 - **Finish merge** checks every file again, then syncs with your choices and pushes. If something changed since you chose, it says which and writes nothing, so you can look again. **Postpone** closes the tab; your choices stay until the merge is finished or you quit Mahfouz (or reload the page, on the web).
+- **On a phone**, these actions are in the bottom bar: **Take all** opens a menu with **Take all mine…** and **Take all GitHub's…**, then **Postpone**, and **Finish merge** is the round button at the end. Each row's choices sit under its name. {% include since.html v="0.19.0" %}
 
 While a note is waiting on a choice, the editor shows "This note has a merge waiting in the Merge tab." with **Open merge**. You can keep editing; if you do, you choose that note again.
 
