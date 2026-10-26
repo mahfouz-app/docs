@@ -1,4 +1,31 @@
 
+## 0.18.0 (2026-10-26) {#v0.18.0}
+
+* fix(web): move Home, Tasks and People keys off the editor's heading keys
+* fix(people): call a People database's title column Name
+* fix(core): don't log a lost-access error as a failed unpushed/dirty refresh
+* test(worker): guard the GitHub Apps' callback URL with a pinned checklist
+* test: wait for the full parse in the personNotes and plugin placeholder tests; weekLabel reads ICU's dash spacing
+* fix(editor): a grip click selects a Mermaid block instead of revealing its source
+* fix(databases): Add icon above the database tab's title
+* Gantt: resize the frozen Name column
+* fix(sidebar): highlight the left sidebar's whole border while resizing
+* fix: reveal a permalink's note in the sidebar
+* fix(web): serve the touch icon at the root paths iOS probes
+* fix(editor): lock a note updated elsewhere until the user refreshes
+* Databases: resize a Table view's columns
+* fix(tabs): closing a tab returns to the tab and line it was opened from
+* fix(databases): show Filter, Sort and Group separately while the view bar fits them
+* Databases: Timeline template (a Gantt that shows bars at once) and Add sample data
+* fix: phone layout text sizes (17px body, 16px fields)
+* fix(people): person chips sit in their line, not below it
+* fix(gantt): week numbers, quarter labels, name-only Name column, scroller fills the pane
+* docs(instructions): file reported work in the issue tracker first
+* fix(databases): keep the View settings button on one line
+* fix(web): hand a published page's Edit link to the tab holding the database
+* feat(databases): View settings changes a Calendar's date and a Gallery's cover
+
+
 ## 0.17.0 (2026-10-26) {#v0.17.0}
 
 * Step 5/6: phone Search — one field for notes, commands and contents, at the bottom
