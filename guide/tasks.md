@@ -227,8 +227,9 @@ The views:
   menu; its time stays.
   Overdue tasks are tinted and done ones are struck through. {% include since.html v="0.12.0" %}
 
-**Filter** and **Sort**, the tabs of **Filter, sort and group** with
-**Group** {% include since.html v="0.17.0" %}, narrow and order any view. Mahfouz remembers each
+**Filter** and **Sort**, with **Group** (one **Filter, sort and group**
+button with a tab for each when the toolbar is narrow) {% include since.html v="0.18.0" %}, narrow and
+order any view. Mahfouz remembers each
 view's settings, and the view you picked, on this computer; **Reset**
 goes back to the defaults. As in a [database](/guide/databases/#the-settings-row),
 a row under the toolbar shows each filter, sort and grouping as a chip:
