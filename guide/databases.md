@@ -633,8 +633,17 @@ asks you to choose one, and your choice is written into the view.
   a quarter, following the zoom, and **Today** goes back to today. A line
   marks today, and at Day and Week the weekends are shaded. The header
   names the months the rows span. Where you've scrolled isn't saved.
-- The column on the left lists the rows, each with its dates under its
-  title. Click a title or a bar to open the row's note.
+- At Week, the time header numbers the weeks, such as *2026 W53*. {% include since.html v="0.18.0" %}
+  When the week starts on Monday, weeks follow ISO 8601: week 1 is the week
+  with 4 January in it. When it starts on Sunday or Saturday, week 1 is the
+  week with 1 January in it. The year is the week's own, so the days a week
+  takes from the next year carry its number. The week's first day follows
+  [First day of week](/guide/settings/).
+- At Quarter, the time header names each quarter, such as *2026 Q4*, with
+  a dotted line at each month in between. {% include since.html v="0.18.0" %}
+- The column on the left lists the rows by name. Point at a name or a bar
+  to read its dates. {% include since.html v="0.18.0" %} Click a name or a
+  bar to open the row's note.
 
 Each row shows one of these:
 
