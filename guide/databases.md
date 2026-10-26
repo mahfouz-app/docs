@@ -50,8 +50,8 @@ You can create a database in three ways:
   [Keyboard shortcuts](/guide/shortcuts/).
 
   First, choose what it starts with: **Empty** (a Title column only), or a
-  template: **Projects**, **Reading list**, **Meeting notes**, or
-  **Bookmarks**. The new database opens as a table, ready for you to type its
+  template: **Projects**, **Reading list**, **Meeting notes**, **Bookmarks**,
+  or **Timeline** {% include since.html v="0.18.0" %}. The new database opens as a table, ready for you to type its
   first row. To name it, click its title at the top of the tab.
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
@@ -73,8 +73,9 @@ change the note directly.
 
 ### Templates
 
-A template gives the database its columns, their types, a few views, and one
-example row you can delete:
+A template gives the database its columns, their types, a few views, and
+sample rows you can delete. To start with no rows, turn off **Add sample
+data** in the picker. {% include since.html v="0.18.0" %}
 
 | Template | Columns | Views |
 |---|---|---|
@@ -82,6 +83,7 @@ example row you can delete:
 | Reading list | Author, Shelf, Rating, Cover | Table, Gallery |
 | Meeting notes | Date, Attendees, Type | Table, Calendar by Date |
 | Bookmarks | Link, Topic, Read, Cover | Table, Gallery |
+| Timeline {% include since.html v="0.18.0" %} | Status, Start, End, Depends on, Parent | Gantt from Start to End, colored by Status; Table |
 
 Column types belong to the whole vault (see [Columns](#columns)). If your
 vault already gives one of these attributes a type, it keeps that type: a
@@ -89,6 +91,13 @@ Select gains the options it's missing, and anything else stays as it is. If
 your notes already use one of these attributes without a type, it gets the
 template's type everywhere. The picker tells you about each of these, with
 how many notes they affect, before anything is created.
+
+Timeline opens on its Gantt view with five sample rows: a project and the
+four tasks under it, each depending on the one before, so you see bars,
+dependency arrows and a task tree at once. Depends on and Parent link rows
+of the same database, and each gets a column linking back: **Blocks** and
+**Sub-items**. Those two columns aren't shown in the views; turn them on in
+**Columns** if you want them. {% include since.html v="0.18.0" %}
 
 Owner and Attendees are relations to your [People](/guide/people/)
 database, which is created if you don't have one. Each person's row gets a
@@ -594,6 +603,11 @@ day is included: a bar from 3 March to 14 March covers 12 days. In the
 block, a Gantt is a view with `type: gantt`, `date: <start attribute>` and
 `end: <end attribute>`. This view is Mahfouz's own; other apps that read the
 block show it as an unknown view.
+
+To start with everything a Gantt uses already set up, create a database
+from the [Timeline template](#templates): its Gantt has start and end
+dates, bars colored by status, dependencies and sub-items.
+{% include since.html v="0.18.0" %}
 
 **+ View** ▸ **Gantt** offers the start first, then the end:
 
