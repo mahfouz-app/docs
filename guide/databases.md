@@ -357,6 +357,18 @@ vault directly instead of becoming suggestions.
   its top edge; a line shows where it will land. Click the grip to open the
   header's menu. {% include since.html v="0.15.0" %} **Title**'s header has
   the grip too, and a column can be dragged before it. {% include since.html v="0.16.0" %}
+- To resize a column, Title included, drag the right edge of its header; a
+  line and the width follow the pointer. Double-click the edge to fit the
+  column to its widest cell. From the keyboard, <kbd>Tab</kbd> to the edge
+  (**Resize** and the column's name) and press <kbd>←</kbd> or
+  <kbd>→</kbd> (with <kbd>Shift</kbd> for bigger steps), <kbd>Home</kbd> or
+  <kbd>End</kbd> for the narrowest and widest, or <kbd>Enter</kbd> to fit.
+  **Reset width** in the column's menu puts it back to its natural width.
+  Like a sort, a new width is kept on this device until you **Save view**,
+  which stores it in the view as `columnSize`, the key Obsidian Bases uses,
+  so everyone sees it. Embedded views use the saved widths, and on a
+  phone the first column never takes more than 60% of the screen.
+  {% include since.html v="0.18.0" %}
 - A column header's menu offers **Rename…**, **Set type…**, sorting,
   **Move left**, **Move right** and **Hide column**. **Title**'s menu has
   **Move left** and **Move right** too, and either one moves a column past
