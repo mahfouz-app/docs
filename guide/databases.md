@@ -178,7 +178,7 @@ name, and press <kbd>Enter</kbd>. Press <kbd>Escape</kbd> to cancel. The
 name is the note's heading, so its file follows it, as it does when you
 retitle any note.
 
-In the sidebar, a database starts collapsed and shows how many rows it has.
+In the sidebar, a database starts collapsed.
 Expand it to see the rows as ordinary notes.
 
 ## Sort and filter
