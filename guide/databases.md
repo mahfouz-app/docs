@@ -115,13 +115,15 @@ small margin at each side: {% include since.html v="0.16.0" %}
 - The page icon and the title, lined up with the table's left edge
   rather than a note's text, {% include since.html v="0.16.0" %} then the number of rows. When filters hide some rows, it says how many are shown,
   such as **3 of 4 rows**.
-- The views as tabs, then **Filter, sort and group** (an icon of three
-  lines getting shorter, with a count of the filters, sorts and grouping
-  the view has) and **Columns** (a Board or Gallery has **Fields** instead
-  of **Columns**). {% include since.html v="0.17.0" %} **Filter, sort and group** opens one
-  panel with **Filter**, **Sort** and **Group** tabs; a view that shows no
-  grouping, such as a Gallery or a Calendar, has no **Group** tab.
-  {% include since.html v="0.17.0" %}
+- The views as tabs, then **Filter**, **Sort** and **Group**, each with a
+  count of the filters, sorts or grouping the view has, and **Columns** (a
+  Board or Gallery has **Fields** instead of **Columns**). A view that shows
+  no grouping, such as a Gallery or a Calendar, has no **Group**. {% include since.html v="0.18.0" %}
+- When the toolbar can't fit every view beside **Filter**, **Sort** and
+  **Group**, those three become one button, **Filter, sort and group** (an
+  icon of three lines getting shorter, with their counts added up), which
+  opens one panel with **Filter**, **Sort** and **Group** tabs. They combine
+  before any view moves into **N more**. {% include since.html v="0.18.0" %}
 - When the views don't all fit, the first ones stay in the row, the view
   you're looking at always among them, and the rest are in an **N more**
   menu at the end of the row. Pick one there to show it. {% include since.html v="0.17.0" %}
@@ -173,8 +175,8 @@ Expand it to see the rows as ordinary notes.
 
 - Click a column header to sort by it. Click again to reverse the order, and
   once more to stop sorting by it.
-- To sort by several columns, open **Filter, sort and group** and pick its
-  **Sort** tab. {% include since.html v="0.17.0" %} Each sort has a direction
+- To sort by several columns, open **Sort** (on a narrow toolbar, the
+  **Sort** tab of **Filter, sort and group**). {% include since.html v="0.18.0" %} Each sort has a direction
   button: click **Ascending** to make it **Descending**, and again to flip
   it back. To change which sort comes first, drag a sort by its handle, or
   focus the handle and press <kbd>Alt</kbd><kbd>↑</kbd> or
@@ -247,8 +249,8 @@ that isn't one of the options gets its own section after them, and rows with
 no value come last, under "No ⟨attribute⟩". Your sort applies inside each
 section.
 
-- Open **Filter, sort and group**, pick its **Group** tab {% include since.html v="0.17.0" %}, then an
-  attribute, or **None** to stop grouping. Only
+- Open **Group** (on a narrow toolbar, the **Group** tab of **Filter, sort
+  and group**) {% include since.html v="0.18.0" %}, then an attribute, or **None** to stop grouping. Only
   Select attributes are offered; if there are none, set a column's type to
   Select first.
 - Click a section's name to collapse or expand it.
