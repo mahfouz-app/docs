@@ -228,7 +228,10 @@ grouping as a chip, such as **Status is not Done**, **Rating descending** or
 
 - Click a filter chip to edit just that filter, right on the chip: its
   comparison and its value, or for a list column, its checklist.
-  {% include since.html v="0.15.0" %}
+  {% include since.html v="0.15.0" %} The column, the comparison and the
+  value sit on one line as pills, a choice's value in its option's color;
+  click a pill to change it. For a list column, click its values to open
+  the checklist. {% include since.html v="0.19.0" %}
 - Click a sort chip to flip it between ascending and descending, and a
   Checkbox filter chip to flip it between **Checked** and **Unchecked**.
   {% include since.html v="0.15.0" %}
