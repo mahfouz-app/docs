@@ -17,9 +17,9 @@ the app.
 ## What the preview shows
 
 - The rendered note, following macOS's light or dark appearance.
-- The note's [attributes](/guide/attributes/#attributes-panel) that show
-  in the document: those set to always show, and those set to show when
-  they're not empty.
+- The note's [attributes](/guide/attributes/#attributes-panel) that have
+  a value. Which ones the app shows depends on the note's database and the
+  vault, which Quick Look, reading one file, can't see. {% include since.html v="0.18.0" %}
 - [Track changes](/guide/track-changes/) as the original text, with a
   count of the pending suggestions.
 - [Math](/guide/markdown/#math), highlighted
