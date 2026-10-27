@@ -361,4 +361,4 @@ change their status. Each task it lists comes with its status: to do, in
 progress or done. When it asks to tick a task off, reopen it or mark it
 in progress, that's a proposal like its other edits: whether it waits for
 your approval depends on the vault's
-[approval mode](/guide/external-agents/#approval-modes).
+[Ask before changes](/guide/external-agents/#ask-before-changes) setting.

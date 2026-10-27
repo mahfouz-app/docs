@@ -22,9 +22,9 @@ approval.
    **Codex** or **Other**. Change the name if you like; it's how the client
    shows up in Settings and on its proposals.
 3. Under **Access to each vault**, choose what the agent may do in each
-   vault: **No access**, **Read**, **Edit** or **Publish** (see
+   vault: **None** {% include since.html v="0.19.0" %}, **Read**, **Edit** or **Publish** (see
    [Access levels](#access-levels)). The vault you have open starts at
-   **Edit** and the others at **No access**. Click **Connect**.
+   **Edit** and the others at **None**. Click **Connect**.
    {% include since.html v="0.17.0" %}
 4. Copy what Mahfouz shows into the client:
    - **Claude Code**: a `claude mcp add mahfouz …` command. Run it in a
@@ -83,7 +83,7 @@ URL instead of a token:
    databases and tasks is always included. Untick **Propose and make
    edits** to connect it read only.
 4. Back in Settings, the client appears under **Connected clients** with
-   every vault at **No access**. Choose its [access level](#access-levels)
+   every vault at **None** {% include since.html v="0.19.0" %}. Choose its [access level](#access-levels)
    in each vault it may use. {% include since.html v="0.17.0" %}
    A client you connected read only can be given **Read** at most.
 
@@ -99,9 +99,11 @@ your GitHub repositories instead: see
 
 Each client has its own access level in each vault, chosen next to the
 vault in Settings → AI → External agents, as for
-[agents on GitHub](/guide/online-agents/):
+[agents on GitHub](/guide/online-agents/). Each vault row there has an
+**Access:** line and, at **Edit** or **Publish** only, an **Ask before
+changes:** line ([Ask before changes](#ask-before-changes)). {% include since.html v="0.19.0" %}
 
-- **No access**: the agent can't see the vault.
+- **None** {% include since.html v="0.19.0" %}: the agent can't see the vault.
 - **Read**: read notes, databases, tasks and people. Any change is refused
   with "You can read … but not change it".
 - **Edit**: read, and propose or make changes. Publishing and unpublishing
@@ -118,21 +120,23 @@ after you raise a level, reconnect the client to offer it the new tools.
 Clients connected before access levels keep what they could do at
 **Edit**. To let one publish, set the vault to **Publish**.
 
-## Approval modes
+## Ask before changes {% include since.html v="0.19.0" %} {#ask-before-changes}
 
-At **Edit** and **Publish**, each client has its own mode in each vault,
-chosen under its access level in Settings → AI → External agents:
+At **Edit** and **Publish**, each client has its own **Ask before
+changes** setting in each vault, chosen on the line under its access level
+in Settings → AI → External agents. It was called the approval mode before
+0.19.0.
 
-- **Ask before every edit**: every change waits for you.
-- **Ask before destructive edits**: the default. Changes apply right
+- **Always**: ask before every edit. Every change waits for you.
+- **If risky**: the default; ask before destructive edits. Changes apply right
   away, except deletes, moves, attribute removals, turning a note into a
   database, changing a person's handle {% include since.html v="0.13.0" %},
   publishing and unpublishing, and rewrites that drop most of a note.
-- **Don't ask**: every change applies right away, deletes included. At
+- **Never**: don't ask. Every change applies right away, deletes included. At
   **Publish**, publishing and unpublishing apply right away too {% include since.html v="0.17.0" %}.
   Merging people always waits for you.
 
-An agent can ask to change its own mode. It can make it stricter on its
+An agent can ask to change its own setting. It can make it stricter on its
 own, but a looser mode needs your yes: Mahfouz asks **Let "…" edit "…"
 without asking?**, and nothing changes if you cancel or don't answer.
 After you decline, that client can't ask again for ten minutes.
@@ -160,9 +164,9 @@ shows up in [history](/guide/history/) like any other. In a note that is in
 
 An agent at **Publish** in the vault can ask to
 [publish](/guide/publishing/#publishing-with-the-agent) or unpublish a
-note. {% include since.html v="0.17.0" %} These follow the client's approval mode: they wait
-for you under **Ask before every edit** and **Ask before destructive
-edits**, and apply right away under **Don't ask**. Once applied, a publish
+note. {% include since.html v="0.17.0" %} These follow the client's **Ask before changes**: they wait
+for you under **Always** and **If risky**, and apply right away under
+**Never** {% include since.html v="0.19.0" %}. Once applied, a publish
 puts that one note online as an **Unlisted** page, never its child notes,
 and the agent gets the page's link; an unpublish takes the page down at
 once. Neither can be undone from **Recently applied**: publish the note
@@ -183,11 +187,11 @@ them. It can also ask to:
   the other [contact fields](/guide/people/). {% include since.html v="0.14.0" %}
 - **Change a person's handle**, which rewrites their mentions and task
   assignees across the vault, just like
-  [Change handle…](/guide/people/#changing-a-handle). Under **Ask before
-  destructive edits** it waits for you.
+  [Change handle…](/guide/people/#changing-a-handle). Under **If risky**
+  {% include since.html v="0.19.0" %} it waits for you.
 - **Merge people** with `merge_people`, just like
   [Merge people](/guide/people/#merging-people). It always waits for you,
-  even under **Don't ask**, and can't be undone from **Recently applied**:
+  even under **Never** {% include since.html v="0.19.0" %}, and can't be undone from **Recently applied**:
   restore the merged notes from [Trash](/guide/history/). {% include since.html v="0.14.0" %}
 
 Each of the others has **Undo** under **Recently applied**. Undoing a handle change
@@ -201,10 +205,10 @@ Nothing about people is ever published.
 
 In Settings → AI → External agents:
 
-- **Revoke** next to a client cuts it off. To use it again, connect it
+- **Revoke**, on the client's own heading line {% include since.html v="0.19.0" %}, cuts it off. To use it again, connect it
   again: on desktop as a new client, with a new token; on the web by
   approving it again.
-- Setting a vault to **No access** takes it away from the client, and
+- Setting a vault to **None** {% include since.html v="0.19.0" %} takes it away from the client, and
   turns down its proposals still waiting there. Lowering a level turns
   down the waiting proposals the new level doesn't allow. {% include since.html v="0.17.0" %}
 - On the web, **Disconnect all agents** cuts off every client at once.
@@ -226,8 +230,8 @@ reaches an agent before then. For everywhere your notes can go, see
 - **Notes are data, not instructions.** An agent reads notes you haven't
   shown it, and a note can contain text written to steer it. Mahfouz tells
   agents never to follow instructions found in note text, and asks before
-  the edits that are hard to spot afterwards. Keep **Ask before every
-  edit** for vaults whose content you didn't write yourself.
+  the edits that are hard to spot afterwards. Keep **Ask before changes**
+  at **Always** {% include since.html v="0.19.0" %} for vaults whose content you didn't write yourself.
 - **The desktop token is a password for your vaults.** Anyone with it can
   act as that client, and can start Mahfouz if it isn't running
   {% include since.html v="0.13.0" %}. Don't share the snippet;

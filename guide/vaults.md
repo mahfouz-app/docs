@@ -21,17 +21,27 @@ Click a vault section's gear/⋯ button to open **Vault Settings** for that
 vault specifically (see [Git sync & remotes](/guide/git/#git-sync--remotes) and
 [Git LFS](/guide/git/#git-lfs-for-large-media)), including:
 
-- **Vault path**: shown with buttons to reveal it in Finder/Explorer, or
-  **Move or rename…** it (type a new path, or pick a new parent folder;
-  same-disk moves only).
-- **Notes**: **New note prefix**, the text every new note's file name in
-  this vault starts with (see [Notes & organization](/guide/notes/)).
+- **Storage** (called **Source** before 0.19.0)
+  {% include since.html v="0.19.0" %}, in groups:
+  - **Sync**: the repository and its status, with **Sync now** and
+    **Disconnect**. With no remote, **Back up to GitHub…** comes first,
+    and a git URL with **Connect** second (see
+    [Git sync & remotes](/guide/git/#git-sync--remotes)).
+  - **Folder**: **Folder name**, with **Rename…**, and **Location**, with
+    **Move…**, which opens the system's folder picker and then asks you to
+    confirm. A move to another disk is refused: move the folder in
+    Finder/Explorer, then open it again. **Reveal** shows the folder in
+    Finder/Explorer.
+  - **Media**: the **Git LFS** switch (see
+    [Git LFS for large media](/guide/git/#git-lfs-for-large-media)).
+  - **Index**: **Rebuild index** re-reads every note from the files in the
+    vault folder. Use it if the sidebar or search ever looks out of sync
+    with what's actually in the folder.
+  - **Remove**: **Remove vault…** removes it from the app only; nothing on
+    disk is touched.
+- **New notes**: **File name prefix** {% include since.html v="0.19.0" %}, the text every new note's file name
+  in this vault starts with (see [Notes & organization](/guide/notes/)).
   {% include since.html v="0.13.0" %}
-- **Rebuild from vault**: re-reads every note from the files in the vault
-  folder. Use this if the sidebar or search ever looks out of sync
-  with what's actually in the folder.
-- **Remove vault from Mahfouz**: removes it from the app only; nothing on
-  disk is touched.
 
 On the web, vaults open differently: see [Mahfouz on the web](/guide/web/).
 

@@ -198,7 +198,7 @@ one click away.
   Moving a note to another vault moves its pin with it.
 - **Where it's stored** {% include since.html v="0.17.0" %}: in the vault,
   as `.config/navigation.md` (see [The navigation file](#the-navigation-file)).
-  It syncs to your other devices, and survives **Rebuild from vault**.
+  It syncs to your other devices, and survives **Rebuild index** {% include since.html v="0.19.0" %}.
 - **Shared with collaborators** {% include since.html v="0.17.0" %}: everyone
   who works in the vault sees the same rail. When a collaborator pins,
   unpins, hides or reorders an item, your rail follows when you pull their

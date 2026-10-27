@@ -188,6 +188,11 @@ Ctrl+Alt as AltGr, so in the browser a Ctrl+Alt+digit key may type a
 character instead of running its action. If one does, give the action
 another key in **Settings → Shortcuts**. {% include since.html v="0.14.0" %}
 
+In **Settings → Shortcuts**, each binding shows one keycap per key, such
+as <kbd>⌘</kbd><kbd>⇧</kbd><kbd>K</kbd>. Click it and press the new keys to
+record another one; each row has its own reset button to bring back the
+default. {% include since.html v="0.19.0" %}
+
 Shortcuts you change in **Settings → Shortcuts** are saved in the vault
 (`.config/settings.md`) and apply on both. A default you haven't changed
 stays each platform's own default.

@@ -42,7 +42,7 @@ GitHub, and come back.
 Each repository gets one of four levels. Every level includes the ones
 before it.
 
-- **No access**: the agent can't see the repository. Every repository
+- **None** {% include since.html v="0.19.0" %}: the agent can't see the repository. Every repository
   starts here, so nothing is shared until you choose it.
 - **Read**: search and read notes, databases, tags and tasks.
 - **Edit**: also create, change, move and delete notes, add database rows
@@ -64,7 +64,7 @@ marked **Works on GitHub**, with its repositories listed under it.
   it edit.
 - **Add repositories**: click **Add repositories** and tick the ones you
   want. A private repository starts at Edit and a public one at Read.
-- **Remove a repository**: set it to **No access**. Mahfouz deletes the
+- **Remove a repository**: set it to **None** {% include since.html v="0.19.0" %}. Mahfouz deletes the
   working copy it keeps for this agent. To remove the last repository,
   revoke the agent instead.
 - **Revoke** cuts the agent off from every repository. To use it again,
@@ -101,9 +101,9 @@ through auto-publish or the note's menu.
 
 | | Through Mahfouz | On GitHub |
 |---|---|---|
-| Approvals | [Approval modes](/guide/external-agents/#approval-modes), proposals and **Recently applied** with Undo | None: edits apply and push at once. Undo them from [history](/guide/history/) or the Trash |
+| Approvals | [Ask before changes](/guide/external-agents/#ask-before-changes) {% include since.html v="0.19.0" %}, proposals and **Recently applied** with Undo | None: edits apply and push at once. Undo them from [history](/guide/history/) or the Trash |
 | Access | [Access levels](/guide/external-agents/#access-levels) per vault {% include since.html v="0.17.0" %} | [Access levels](#access-levels) per repository |
-| Publishing | At the Publish level, follows the client's approval mode, then publishes at once {% include since.html v="0.17.0" %} | Publishes at once, at the Publish level |
+| Publishing | At the Publish level, follows the client's **Ask before changes**, then publishes at once {% include since.html v="0.17.0" %} | Publishes at once, at the Publish level |
 | Vaults | Every vault you allow, including ones with no GitHub remote, on any branch | Only the repositories you chose, on their default branch |
 | Freshness | Sees edits you haven't committed or pushed | Sees GitHub's copy, which lags until Mahfouz pushes |
 | Disk-only notes | Visible | Not visible |

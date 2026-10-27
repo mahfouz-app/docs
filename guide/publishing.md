@@ -297,9 +297,9 @@ You can ask the [AI agent](/guide/track-changes/#suggestions-from-the-agent),
 or an [external agent](/guide/external-agents/) whose
 [access level](/guide/external-agents/#access-levels) in the vault is
 **Publish** {% include since.html v="0.17.0" %}, to publish or unpublish a
-note. The AI agent always waits for you, in every approval mode. An
-external agent follows its approval mode: it waits unless the mode is
-**Don't ask** {% include since.html v="0.17.0" %}.
+note. The AI agent always waits for you. An
+external agent follows its **Ask before changes** setting: it waits unless
+**Ask before changes** is **Never** {% include since.html v="0.19.0" %}.
 
 - **Publish.** The agent's card lists the images to upload, the attachments
   that aren't published and the diagrams shown as code. Accepting the AI
