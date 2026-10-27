@@ -47,16 +47,23 @@ version and whether it's the system's or Mahfouz's own.
 
 ## Git sync & remotes
 
-Vault Settings → **Vault** section:
+Vault Settings → **Storage** → **Sync** {% include since.html v="0.19.0" %}:
 
-- **Connect a remote**: paste a `git@…`, `https://…`, or `ssh://…` URL.
+- **Back up to GitHub…**: with no remote, this comes first. It connects
+  the vault to a private GitHub repository (see
+  [Creating a repository for a vault](/guide/github/#creating-a-repository-for-a-vault)).
+- **Connect a remote**: second, paste a `git@…`, `https://…`, or
+  `ssh://…` URL and click **Connect**.
   - If the remote is empty, your local content is pushed as the initial
     commit automatically.
-  - If the remote already has content, you're asked to choose: **use
-    remote** (hard-resets your local vault to match it)
-    or **push local** (force-pushes your local content over it). Pick
-    carefully: both directions are destructive to whichever side loses.
+  - If the remote already has content, you're asked to choose which copy
+    to keep: the remote's (hard-resets your local vault to match it) or
+    yours (force-pushes your local content over it). Pick carefully: both
+    directions are destructive to whichever side loses. **Cancel**
+    disconnects the remote. {% include since.html v="0.19.0" %}
+- Once connected, it shows the repository and its sync status.
 - **Sync now**: pulls, then pushes, immediately.
+- **Disconnect**: stops syncing with the remote. The vault stays on disk.
 - Once connected, Mahfouz keeps syncing on its own:
   - It pushes about 60 seconds after each commit.
   - Every 5 minutes, when the app regains focus and when you come back
@@ -156,11 +163,13 @@ pointing at it reads the state after **Saved**: **Saved · Not committed**, **Sa
 
 ## Git LFS for large media
 
-If a vault will hold large media files, turn on Git LFS for it in Vault
-Settings → **Vault**: it shows whether `git-lfs` is installed and
-configured for this vault, and an **Enable Git LFS for media** button that
-sets up Git LFS for this vault and adds the tracking rules to
-`.gitattributes` for you. This is opt-in per vault, and only affects files
+If a vault will hold large media files, turn on the **Git LFS** switch in
+Vault Settings → **Storage** → **Media** {% include since.html v="0.19.0" %}.
+It sets up Git LFS for this vault and adds the tracking rules to
+`.gitattributes` for you. Once on, the switch stays locked on: turning
+LFS off would strand the files already stored with it. On a fresh clone
+of a vault that uses LFS, **Finish setting up on this computer** sets up
+Git LFS here too. This is opt-in per vault, and only affects files
 added *after* you enable it; existing committed media isn't migrated
 retroactively.
 

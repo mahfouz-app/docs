@@ -13,7 +13,7 @@ When a sync goes wrong, Mahfouz shows a notice in the [notification center](/gui
 - **Retry** syncs again. Use it after you've fixed the cause.
 - **Open merge** opens the vault's Merge tab, where you choose what to keep for each change that couldn't be combined. A click on that notice opens it too.
 - **Keep both** keeps your version of each file that changed on both sides, saves the remote's version beside it, then syncs.
-- **Open remote settings** opens the vault's settings on the **Source** tab, where its remote is set.
+- **Open remote settings** opens the vault's settings on the **Storage** tab {% include since.html v="0.19.0" %}, where its remote is set.
 - **Push this branch** creates the branch on the remote. It only runs when you click that button, never from a click on the notice itself.
 - **Install git** (desktop only) installs Mahfouz's own copy of git, then syncs again.
 - **Sign in** and **Sign in again** start the GitHub sign-in.

@@ -105,5 +105,5 @@ Limits worth knowing:
 - The setting is stored **per note, on this computer only**: in the vault's
   local git folder, never committed or pushed. Collaborators and your other
   machines are unaffected and keep auto-committing that note. It survives
-  removing and re-adding the vault and **Rebuild from vault**; a fresh clone
+  removing and re-adding the vault and **Rebuild index** {% include since.html v="0.19.0" %}; a fresh clone
   of the vault starts with every note auto-committing.

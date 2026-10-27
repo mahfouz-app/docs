@@ -9,8 +9,11 @@ permalink: /guide/feedback/
 Choose **Send feedback** in the account menu (click the account button at
 the bottom of the left rail), or **Help → Send Feedback…** on desktop, to
 report a bug, suggest an idea, or ask a question. On a phone, it's in
-the **⋯** menu at the top of [Home](/guide/web/#phone-home). {% include since.html v="0.17.0" %} Pick a kind, give it a title
-and some details, and press **Submit**.
+the **⋯** menu at the top of [Home](/guide/web/#phone-home). {% include since.html v="0.17.0" %} Give it a title
+and some details, then choose its kind, **Bug**, **Idea** or **Question**,
+which comes after the details. **Submit** is at the bottom right, after
+**Cancel**; the **×** at the top closes the dialog too.
+{% include since.html v="0.19.0" %}
 
 Feedback becomes a **public** issue on
 [mahfouz-app/docs](https://github.com/mahfouz-app/docs/issues), filed by the
