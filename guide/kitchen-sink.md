@@ -149,6 +149,22 @@ Below is each note's source.
 {% include kitchen-sink/people/people.md %}
 ````
 
+## The vault's attribute settings {% include since.html v="0.18.0" %}
+
+Which attributes show in a note's attributes block: the kitchen sink note's `status` always, its `reviewer` while it has a value. A database decides for its own notes, as the People database below does for its contact fields.
+
+`.config/attributes.md`
+
+````markdown
+# Attribute Types
+
+### status
+visibility: show
+
+### reviewer
+visibility: filled
+````
+
 ## A person: Ada Lovelace
 
 `people/ada_lovelace.md`

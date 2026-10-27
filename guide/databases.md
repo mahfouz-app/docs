@@ -382,9 +382,15 @@ vault directly instead of becoming suggestions.
   phone the first column never takes more than 60% of the screen.
   {% include since.html v="0.18.0" %}
 - A column header's menu offers **Rename…**, **Set type…**, sorting,
-  **Move left**, **Move right** and **Hide column**. **Title**'s menu has
+  **Move left**, **Move right** and **Show column**. **Title**'s menu has
   **Move left** and **Move right** too, and either one moves a column past
   Title. {% include since.html v="0.16.0" %}
+- **Show column** has two parts. {% include since.html v="0.18.0" %} **In this view**: **Shown**, or
+  **Hidden** to hide the column in this view. **In note pages (rows and
+  the notes inside them)**: **Always show**, **Hide when empty** or
+  **Always hide**, whether the attribute shows in the attributes block of
+  every row and every note under a row. That's saved in the database's
+  block; see [Where visibility is saved](/guide/attributes/#visibility).
 - **Rename** starts from the name the header shows, and the header shows
   the name you type. {% include since.html v="0.17.0" %} The attribute is
   renamed the way **+** names a new column ("Due date" is `due_date`), in

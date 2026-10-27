@@ -83,9 +83,14 @@ and a menu.
   step; see [Changing a type](#change-type). {% include since.html v="0.14.0" %}
 - **The eye** says whether the attribute shows in the block in the
   document: always, only while it has a value (dashed), or never (struck
-  through). Click it to move to the next state.
+  through). Click it to move to the next state. The setting isn't this
+  note's alone: it's saved for every note of its database, or in the
+  vault's settings, and the eye's tooltip says which ("Shown in every
+  note in Projects"); see [Where visibility is saved](#visibility). {% include since.html v="0.18.0" %}
 - **The menu** (the **⋯** button on hover) has **Rename…**, **Change type…**,
-  **Visibility** and **Delete**. Delete changes only this note, and
+  **Visibility** and **Delete**. The **Visibility** submenu ends with
+  where the setting is saved: "Saved in Projects (database)" or "Saved in
+  vault settings". {% include since.html v="0.18.0" %} Delete changes only this note, and
   happens at once; its notification has **Undo**. **Rename…** of an
   attribute with a type renames it in every note and database, as in
   Settings → Attributes (it asks first); without a type, only in this
@@ -94,6 +99,8 @@ and a menu.
   <kbd>Enter</kbd> to go to its value, or <kbd>Esc</kbd> to drop the row.
   Click the new row's type icon to choose its type first: it's set when
   you keep the name. A name the vault already types keeps that type.
+  An attribute added in the document shows there while it has a value,
+  unless its database or the vault already says otherwise. {% include since.html v="0.18.0" %}
 
 In the document, the eye and the menu show when you hover a row, and a
 row you're editing stays until you leave it, even if you clear a value
@@ -115,6 +122,33 @@ option or **Clear**.
 - A free-form key/value table for anything else. A recognized key with a
   value its control can't show (say `orientation: sideways`) stays in the
   table so you can fix it.
+
+### Where visibility is saved {% include since.html v="0.18.0" %} {#visibility}
+
+Visibility belongs to an attribute's name, not to one note, so notes that
+belong together look alike:
+
+- A note inside a [database](/guide/databases/), a row or any note under a
+  row at any depth, follows that database. The setting is in the
+  database's block, as `visibility` under the attribute in `properties`
+  (the column menu's **Show column** sets it). A database inside a row
+  decides its own attributes, and the outer database the rest.
+- Any other note, and an attribute no database above the note sets,
+  follows the vault: `visibility:` under the attribute's heading in
+  `.config/attributes.md`, the **Visibility** column of
+  [Settings → Attributes](#types).
+- An attribute set nowhere is hidden.
+
+Each setting is `show`, `filled` (shown while it has a value) or
+`hidden`. Moving a note into, out of or between databases changes what it
+shows, without changing any file.
+
+Earlier versions kept visibility in the note itself, on the attribute's
+name (`author!: …` always shown, `author?: …` shown while filled). When
+Mahfouz opens a vault that still has those, it moves them into these
+settings once, in one commit, `chore: move attribute visibility to
+settings`: for each attribute, the choice most notes of a database (or of
+the rest of the vault) had wins, and every note is left with plain names.
 
 ### Lists {% include since.html v="0.12.0" %} {#lists}
 
@@ -214,8 +248,10 @@ The colors are gray, red, orange, yellow, green, blue, purple and pink.
 ### Attribute types in Settings {% include since.html v="0.13.0" %} {#types}
 
 Vault Settings → **Attributes** lists every attribute type in the vault:
-its type icon, name, its options as colored pills, and how many notes
-use it. Click a row's type icon to pick another type, and the new row's
+its type icon, name, its options as colored pills, its visibility, and
+how many notes use it. The **Visibility** column is the vault's setting
+([Where visibility is saved](#visibility)); an attribute with a setting
+but no type is listed after the types as **No type**. {% include since.html v="0.18.0" %} Click a row's type icon to pick another type, and the new row's
 icon to choose its type before **Add**. Click the arrow at the end of a
 row to open it:
 
@@ -252,11 +288,11 @@ use them the same way:
   something else.
 - `database`, `auto_publish`, `publish_children`, `no_publish` and
   `published` are Mahfouz's only for certain values: `true` for the first
-  four, and a published page's id for `published`. When an attribute with one of these names is hidden from
-  the document, it's written to the file the same way Mahfouz writes its
-  own setting, so it can't hold those values. Show it in the document, or
-  give it another name. Other values are fine either way, so a Jekyll or
-  Hugo `published: false` stays your attribute.
+  four, and a published page's id for `published`. An attribute with one
+  of these names can't hold those values: it would be written the same way
+  as Mahfouz's own setting, so give it another name. {% include since.html v="0.18.0" %} Other values
+  are fine, so a Jekyll or Hugo `published: false` stays your attribute.
+- An attribute name can't end in `!` or `?`. {% include since.html v="0.18.0" %}
 
 An attribute's value, or each item of a list, has to fit on one line.
 
