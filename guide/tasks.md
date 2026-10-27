@@ -62,6 +62,13 @@ picker next, since a line without a date isn't a task. A handle typed at the
 end of a checklist item (`- [ ] Call @ana`) counts as its assignee once it
 gets a date.
 
+{% include since.html v="0.19.0" %} You can make a whole task without the
+mouse: type its title, then press <kbd>Tab</kbd> at the end of the line to
+open the assignee picker (or the date picker, when the line already names
+someone). Pick a person with <kbd>Enter</kbd>, or press <kbd>Esc</kbd> to
+assign no one, and the date picker opens next. <kbd>Tab</kbd> anywhere else
+on the line still indents it.
+
 ### Set a date
 
 Type a space and <kbd>!</kbd> after the title of a checklist item to choose
