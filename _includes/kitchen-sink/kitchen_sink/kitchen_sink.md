@@ -1,8 +1,8 @@
 ---
 id: 6258669d01e947aa938cc8403a8d863f
 icon: 🧪
-status!: draft
-reviewer?: ""
+status: draft
+reviewer: ""
 topic: testing
 tags: [reference, sample]
 aliases:
