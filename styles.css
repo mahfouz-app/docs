@@ -1299,6 +1299,10 @@ h1 {
   font-size: 0.82rem;
 }
 
+.home-web {
+  margin: 14px 0 0;
+}
+
 .home-window {
   max-width: 920px;
   margin: 64px auto 0;
