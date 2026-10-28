@@ -29,7 +29,7 @@ A person mention, @ada, is a pill with the person's name in Preview. In Preview,
 
 A link whose label holds a URL goes to its destination, not the label's URL: [see https://mahfouz.app/guide/ in the docs](https://docs.mahfouz.app/guide/). A bare www.example.com and a bare someone@example.com are links too.
 
-To try Backspace in Preview, put the cursor right after [[Sample deck]], **bold**, `code` or ==highlight== and press it: the last visible letter goes and the markup stays. Keep going and the element goes with its markup. Press it at the start of a heading's or quote's text and the line becomes a paragraph.
+To try Backspace in Preview, put the cursor right after [[Sample deck]], **bold**, `code` or ==highlight== and press it: the last visible letter goes and the markup stays. Keep going and the element goes with its markup. Press it at the start of a heading's or quote's text and the line becomes a paragraph. Try it on the line after a horizontal rule, too: the rule goes in one press, and undo brings it back. Delete the inserted text of a suggestion under Track changes and the suggestion goes, author line included. Next to the circle's area formula under Math, Backspace removes the whole formula.
 
 ## Headings
 

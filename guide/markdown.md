@@ -163,8 +163,17 @@ So that prices don't turn into math, the rules are Pandoc's:
   mustn't be followed by a digit.
 - `\$` is a literal dollar sign.
 
-Math is rendered in Preview mode, where its source shows while the cursor
-is inside it, and on [published pages](/guide/publishing/).
+Math is rendered in Preview mode and on
+[published pages](/guide/publishing/). In Preview, a formula is one object:
+click it to edit its source, which shows while the cursor is inside it, and
+<kbd>Backspace</kbd> or <kbd>Delete</kbd> next to it removes the whole
+formula. {% include since.html v="0.20.0" %}
+
+A horizontal rule, a table, an image card, an embed or a table of contents
+is a block too: in Preview, <kbd>Backspace</kbd> at the start of the line
+with text after it deletes the whole block in one press, and undo brings it
+back. On an empty line after one, Backspace deletes only that line (see
+[the editor](/guide/editor/)). {% include since.html v="0.20.0" %}
 
 ## Table of contents
 
