@@ -9,6 +9,12 @@ permalink: /guide/shortcuts/
 On the web, some of these keys differ: see [Keyboard shortcuts on the
 web](#keyboard-shortcuts-on-the-web).
 
+On a phone or a tablet used by touch, Mahfouz doesn't show keys: menus,
+the command palette, the `/` menu and tooltips leave them out, and
+**Keyboard shortcuts** and **Settings → Shortcuts** aren't offered. A
+keyboard connected to the device still runs every shortcut, and a tablet
+used with a trackpad shows them as usual. {% include since.html v="0.20.0" %}
+
 Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 <kbd>Mod</kbd> = ⌘ on macOS, Ctrl elsewhere:
 
