@@ -41,7 +41,7 @@ Neither shows while the slash menu is turned off in
 | Group | Commands |
 |---|---|
 | Text | Heading 1–6 ({% include since.html v="0.13.0" %} for 4–6), [Number headings](/guide/markdown/#heading-numbers) {% include since.html v="0.15.0" %} (in a note), bullet list, numbered list, checklist, quote, inline code and [code block](/guide/markdown/#code-blocks) {% include since.html v="0.13.0" %} |
-| Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, [database view](/guide/databases/), image or file, task with due date, tag, [emoji](#emoji), and in a slides deck [Apply layout…](/guide/slides/) |
+| Insert | Table (3 × 3), callout (pick note, tip, important, warning or caution next), link, link to note, [database view](/guide/databases/), image or file, task with due date, [tasks for a day](/guide/daily-notes/#the-tasks-block) {% include since.html v="0.20.0" %}, tag, [emoji](#emoji), and in a slides deck [Apply layout…](/guide/slides/) |
 | Review | Comment on the current line |
 | Plugins | A block for each enabled diagram plugin, such as [Mermaid or draw.io](/guide/plugins/) |
 | Fields | Each of your [fields](/guide/fields/), such as `now` |
