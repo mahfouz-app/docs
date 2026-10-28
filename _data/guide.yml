@@ -24,6 +24,9 @@
     - slug: tasks
       title: "Tasks"
       description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, and see every task in a list or on a board."
+    - slug: daily-notes
+      title: "Daily notes"
+      description: "Open today's note in one step: a note for each day in a Daily notes database, with a live list of the day's tasks."
     - slug: people
       title: "People"
       description: "Keep the people you work with in a People database, mention them with @, assign them tasks, and import or export them as vCards."

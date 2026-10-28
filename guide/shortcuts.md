@@ -38,6 +38,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | Toggle auto-commit for note (no default key) |
 | None | Open the vault mind map (no default key; action "Open mind map") |
 | None | Create a database (no default key; action "New database") |
+| None | Open [today's note](/guide/daily-notes/), creating it if needed (no default key; action "Today's note", row `today_note`) {% include since.html v="0.20.0" %} |
 | None | Add a comment on the selection, or reply to the comment under the cursor (no default key; action "Add comment") |
 | None | Set the active note's page icon (no default key; action "Set note icon") |
 | None | Find the notes that mention the person at the cursor: opens the [Search tab](/guide/links/#search) on `person:handle` for the @mention the cursor is on (no default key; action "Find mentions of person", row `find_mentions`) {% include since.html v="0.13.0" %} |

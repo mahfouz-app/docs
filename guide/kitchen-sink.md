@@ -6,7 +6,7 @@ permalink: /guide/kitchen-sink/
 ---
 A sample vault that uses every Markdown feature Mahfouz supports: text
 formatting, lists and tasks, callouts, code, math, tables, media, diagrams,
-track changes and comments, people, slides, a database and a tag to rename.
+track changes and comments, people, slides, a database, a day's tasks and a tag to rename.
 
 To open it, copy the `_includes/kitchen-sink/` folder from the
 [docs repository](https://github.com/mahfouz-app/docs) into an empty folder
@@ -59,6 +59,21 @@ Below is each note's source.
 
 ````markdown
 {% include kitchen-sink/kitchen_sink/database_view_status_first.md %}
+````
+
+## A day's tasks: Tasks for a day {% include since.html v="0.20.0" %}
+
+`kitchen_sink/tasks_for_a_day.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/tasks_for_a_day.md %}
+````
+
+Published, the `day-tasks` block becomes a placeholder, and the Obsidian
+`tasks` block is left as it is:
+
+````markdown
+*Tasks (not published)*
 ````
 
 ## Renaming a tag: Tag rename
