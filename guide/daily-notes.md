@@ -124,10 +124,11 @@ It inserts a block for today; change its `day:` line for another date.
 The list is drawn from your vault, so it can't go with the note
 everywhere:
 
-- [Publishing](/guide/publishing/), **Share** (sending a copy) and
-  [Quick Look](/guide/quick-look/) show a placeholder in place of the
-  block. A published page shows `*Tasks (not published)*`, so your tasks
-  never reach the web.
-- Markdown export, [slides](/guide/slides/) and a
+- [Publishing](/guide/publishing/), **Share** (sending a copy) and the
+  export formats that plugins add, such as PDF, show `*Tasks (not
+  published)*` in place of the block, so your tasks never reach the web.
+- [Quick Look](/guide/quick-look/) shows its own placeholder, **Tasks ·
+  open in Mahfouz**.
+- The built-in Markdown export, [slides](/guide/slides/) and a
   [live note share](/guide/sharing/) keep the block as written, its
   `day:` line included.

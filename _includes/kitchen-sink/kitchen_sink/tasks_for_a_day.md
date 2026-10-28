@@ -3,7 +3,7 @@ id: f1c0079d0d5b8c4d5db20b8c268784c0
 ---
 # Tasks for a day
 
-A `day-tasks` block, from the slash menu's Tasks for a day. In Preview it's a live list of the tasks due on its day, from this vault: yours and unassigned ones when signed in, everyone's when signed out. It leaves out this note's own task below, which already shows here. A published page, Share's copy and Quick Look show a placeholder instead.
+A `day-tasks` block, from the slash menu's Tasks for a day. In Preview it's a live list of the tasks due on its day, from this vault: yours and unassigned ones when signed in, everyone's when signed out. It leaves out this note's own task below, which already shows here. A published page, Share's copy and a plugin export such as PDF show a placeholder instead; Quick Look shows its own. The Markdown export keeps the block as written.
 
 ```day-tasks
 day: 2027-06-01
