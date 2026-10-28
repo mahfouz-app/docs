@@ -174,25 +174,26 @@ img {
 }
 
 /* The wordmark's colours can't be inverted, so dark mode swaps in its own
-   file: the mark's dark colours and papyrus-white type. */
-.brand .brand-logo-dark {
+   file: the mark's dark colours and papyrus-white type. The header and the
+   footer both use it. */
+.brand-logo-dark {
   display: none;
 }
 
-:root[data-theme="dark"] .brand .brand-logo-light {
+:root[data-theme="dark"] .brand-logo-light {
   display: none;
 }
 
-:root[data-theme="dark"] .brand .brand-logo-dark {
+:root[data-theme="dark"] .brand-logo-dark {
   display: block;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .brand .brand-logo-light {
+  :root:not([data-theme="light"]) .brand-logo-light {
     display: none;
   }
 
-  :root:not([data-theme="light"]) .brand .brand-logo-dark {
+  :root:not([data-theme="light"]) .brand-logo-dark {
     display: block;
   }
 }
@@ -457,30 +458,57 @@ h1 {
 }
 
 .site-footer {
+  padding-block: 72px 48px;
+}
+
+.footer-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 32px;
-  padding-block: 36px;
+  gap: 48px;
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.footer-brand p {
-  max-width: 25ch;
+.footer-tagline {
+  max-width: 16ch;
   margin: 0;
-  color: var(--body-secondary);
-  font-size: 0.9rem;
+  color: var(--cm-text);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
-.footer-brand .footer-copyright {
-  margin-top: 6px;
+/* The wordmark closes the page. Its file has 140px of empty canvas on every
+   side of 1720 x 540, so negative margins of 140/1720 of its width put the
+   ink flush with the shell's left edge and the space around it. */
+.footer-sign {
+  --footer-logo: clamp(240px, 58vw, 640px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 96px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.footer-logo img {
+  width: var(--footer-logo);
+  max-width: none;
+  height: auto;
+  margin: calc(var(--footer-logo) * -0.0814);
+  margin-right: 0;
+}
+
+.footer-copyright {
+  margin: 0;
   color: var(--cm-muted);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .footer-copyright a {
@@ -494,36 +522,24 @@ h1 {
   text-decoration-color: var(--cm-accent);
 }
 
-/* The emblem is the app icon's night tile, so it needs no surface of its own. */
-.emblem-link {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-}
-
-.emblem-link img {
-  width: 48px;
-  height: 48px;
-}
-
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 10rem));
-  gap: 24px 32px;
-  font-size: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 11rem));
+  gap: 28px clamp(24px, 4vw, 48px);
+  font-size: 1rem;
 }
 
 .footer-heading {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: var(--cm-text);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .footer-group ul {
   display: grid;
-  gap: 8px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -555,9 +571,14 @@ h1 {
     display: none;
   }
 
-  .site-footer {
-    align-items: flex-start;
+  .footer-top {
     flex-direction: column;
+  }
+
+  .footer-sign {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 72px;
   }
 
 }
@@ -594,7 +615,12 @@ h1 {
   }
 
   .site-footer {
-    padding-block: 26px;
+    padding-block: 48px 40px;
+  }
+
+  .footer-sign {
+    --footer-logo: clamp(200px, 80vw, 360px);
+    margin-top: 56px;
   }
 
   .footer-nav {
