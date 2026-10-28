@@ -125,8 +125,9 @@ The list is drawn from your vault, so it can't go with the note
 everywhere:
 
 - [Publishing](/guide/publishing/), **Share** (sending a copy) and the
-  export formats that plugins add, such as PDF, show `*Tasks (not
-  published)*` in place of the block, so your tasks never reach the web.
+  export formats that plugins add, such as PDF, show
+  `*Tasks (not published)*` in place of the block, so your tasks don't
+  leave with the note.
 - [Quick Look](/guide/quick-look/) shows its own placeholder, **Tasks ·
   open in Mahfouz**.
 - The built-in Markdown export, [slides](/guide/slides/) and a
