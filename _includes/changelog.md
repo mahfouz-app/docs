@@ -1,4 +1,59 @@
 
+## 0.19.0 (2026-10-28) {#v0.19.0}
+
+### Features
+
+* Plugins: refuse dialog footers a plugin draws itself
+* Release: group release notes into Features, Improvements and Bug fixes
+* User Interface: the last buttons on Button, and the guard's list gone
+* Database view buttons on Button
+* Plugin dialogs get footer slots, laid out by Dialog
+* Button, one component for every text button, with a guard
+* User Interface: move the hand-drawn state pills onto StatusLabel
+* SettingsRow: one component for every settings row
+* User Interface: every segmented control through SegmentedControl, with a guard
+* An icon on every segment, required
+* Attributes: move visibility out of notes, and the markers with it
+* Attributes: the eye, the row menu, Show column and Settings write visibility settings
+* Attributes: visibility settings in the vault and database blocks
+* Rail: Tasks and People open their database in a tab
+
+### Improvements
+
+* User Interface: search fields over a list move onto PickerPanel
+* User Interface: every clipboard copy goes through copyText
+* User Interface: move the remaining empty states onto .empty-inline and .empty-block
+* User Interface: one Avatar for every person's avatar
+* User Interface: AnchoredPanel for the hand-placed floating panels
+* Phone: bottom bars take iOS 27's frosted glass
+
+### Bug fixes
+
+* Databases: a filter chip's editor is one line of pills
+* Editor: Tab after a task's title opens its assignee, then date picker
+* Editor: no second scrollbar when hovering a block
+* Server, Worker: headless MCP stuck on "Indexing (0/0)": fetch blobs with no haves
+* Permalinks: one centered dialog when a link opens over the chooser
+* Tasks: Board scrolls clear of the phone bar; resizable Tasks table columns
+* Databases: keep a file cell open while its picker runs
+* Databases: a partly applied column rename offers Finish rename
+* Share: an image replaced in place reaches the share
+* Sidebar: no row count on database rows
+* Editor: media cards get the block grip, a Replace icon and a hairline frame
+* Notifications: drop confirmations for things already on screen
+* Phone: no breadcrumb row on the note screen
+* Phone: paint the strip under the status bar in the installed app
+* Sidebar: show the vault header's chevron, + and ⋯ on touch screens
+* Merge: Merge tab actions in the phone's bottom bar
+* Phone: bottom bars sit as low as iOS's own tab bars
+* Editor: typing right after a person chip keeps the chip
+* Editor: keep the block grip and + clear of heading numbers
+* Gantt: scrollbars run beside only the part that scrolls
+* Menus: a tap opens a submenu instead of picking its first item
+* Desktop: reach the SSH agent the user's shell sets up
+* Sidebar: a phone tap on a note opens it the first time
+
+
 ## 0.18.0 (2026-10-26) {#v0.18.0}
 
 * fix(web): move Home, Tasks and People keys off the editor's heading keys
