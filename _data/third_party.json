@@ -330,6 +330,18 @@
   "url": "https://github.com/paulmillr/noble-hashes"
  },
  {
+  "name": "@replit/codemirror-vim",
+  "version": "6.4.0",
+  "license": "MIT",
+  "url": "https://github.com/replit/codemirror-vim"
+ },
+ {
+  "name": "@replit/codemirror-vim-core",
+  "version": "0.1.0",
+  "license": "MIT",
+  "url": "https://github.com/replit/codemirror-vim"
+ },
+ {
   "name": "@sqlite.org/sqlite-wasm",
   "version": "3.53.4-build2",
   "license": "Apache-2.0",
