@@ -10,9 +10,9 @@ In Mahfouz's editor you're always editing plain Markdown text, but
 certain syntax renders visually as you type (checkboxes, bullets,
 highlights, tags, wikilinks, media) rather than showing raw symbols.
 
-There are two independent view modes for how much raw syntax stays
+There are three view modes for how much raw syntax stays
 visible, switched with the bottom bar's view button (an eye in Preview, code
-brackets in Source), or with <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
+brackets in Source, a terminal prompt in Vim), or with <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
 (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) {% include since.html v="0.20.0" %}
 (remembered on this device, not per note). The button opens a menu of
 Preview, Source and [Vim](#vim-mode); the shortcut switches between Preview
