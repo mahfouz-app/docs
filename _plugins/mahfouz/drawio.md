@@ -5,7 +5,7 @@ category: Diagrams
 author: Mahfouz
 author_url: https://github.com/mahfouz-app
 platforms: [macos, linux, windows, web]
-requires: 0.8.0
+requires: 0.20.0
 source: https://github.com/mahfouz-app/plugins/tree/main/plugins/drawio
 ---
 
