@@ -111,6 +111,8 @@ A database note opens as a table in its own tab. To see or edit the
 note itself, click **View source** in the bottom bar. {% include since.html v="0.14.0" %} It's in the
 **⋯ Database actions** menu too. {% include since.html v="0.16.0" %}
 In Preview, the block shows as an **Open database** card.
+<kbd>Mod</kbd><kbd>Enter</kbd> with the cursor on it, or <kbd>Enter</kbd>
+after <kbd>↓</kbd> moves onto the card, opens the database. {% include since.html v="0.20.0" %}
 
 On a phone, a database's toolbar is at the bottom of the screen:
 **Filter**, **Sort**, **Group**, **Columns** and **+ New row** (see [Pages
@@ -1231,6 +1233,12 @@ When rows are left out, a line at the bottom says how many are shown (for a
 Calendar, how many aren't), with **Open database** to see the rest. In a
 Board, <kbd>Tab</kbd> moves between columns, and the arrow keys move between
 cards.
+
+{% include since.html v="0.20.0" %} From the keyboard, <kbd>↓</kbd> from
+the line above an embed moves into it: <kbd>↑</kbd> and <kbd>↓</kbd> move
+between **Open database**, **Edit source** and the rows' links,
+<kbd>Enter</kbd> opens one, and <kbd>Esc</kbd> goes back to the text (see
+[Block widgets](/guide/keyboard-writing/#block-widgets)).
 
 A view's sort, filters and column order {% include since.html v="0.16.0" %} apply, as saved in the database. A column before Title comes first in a table, and above the title on a card. Changes you
 haven't saved with **Save view** don't show in embeds. An embed in a note's

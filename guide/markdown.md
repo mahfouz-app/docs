@@ -119,7 +119,8 @@ last line of code, or click below the text, to start a new line under the
 block. Pressing <kbd>Enter</kbd> inside the block only adds lines of code.
 {% include since.html v="0.13.0" %}
 
-With the cursor in a block, <kbd>Shift</kbd><kbd>F10</kbd> (or the
+With the cursor in a block, <kbd>Shift</kbd><kbd>F10</kbd> (or
+<kbd>Mod</kbd><kbd>.</kbd> {% include since.html v="0.20.0" %}, or the
 <kbd>Menu</kbd> key) opens the block's actions as a menu: Language…,
 Collapse block, the light or dark switch, Line numbers and Copy code.
 {% include since.html v="0.13.0" %}
@@ -178,7 +179,10 @@ level counts as 0: a level 4 heading straight under a level 2 one is
 heading, and on [published pages](/guide/publishing/). In Preview, the
 heading's line stays shaded until you click, type or move the cursor. With
 no headings, Preview shows **No headings yet** and a published page shows
-nothing.
+nothing. {% include since.html v="0.20.0" %} From the keyboard, <kbd>↓</kbd>
+from the line above moves into the list; <kbd>↑</kbd> and <kbd>↓</kbd>
+move between entries, and <kbd>Enter</kbd> jumps to one (see [Block
+widgets](/guide/keyboard-writing/#block-widgets)).
 
 ## Heading numbers {% include since.html v="0.14.0" %} {#heading-numbers}
 
@@ -220,8 +224,13 @@ grid instead of raw pipe syntax:
   An item that can't be used is dimmed and says why, such as "Already
   first" or "A table needs a column". Grips show on one-row and one-column
   tables too; the header row has no row grip. Each action is one undo.
-- <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key in a cell opens
+- <kbd>Shift</kbd><kbd>F10</kbd>, <kbd>Mod</kbd><kbd>.</kbd> {% include since.html v="0.20.0" %}
+  or the <kbd>Menu</kbd> key in a cell opens
   the same items for its row and column in one menu (a header cell gets the
   column items only). When the menu closes, you're back in the cell.
+  {% include since.html v="0.20.0" %} The menu starts with **Wrap text**
+  (checked when it's on), then **Convert to database…** where the table
+  offers it. The wrap toggle and the **+** buttons also answer
+  <kbd>Enter</kbd> and <kbd>Space</kbd>.
 - While Suggesting, and in a read-only note, the table can't be edited:
   there are no grips, **+** buttons or menus.

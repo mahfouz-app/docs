@@ -52,7 +52,15 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | None | Copy the active note's [permalink](/guide/permalinks/) (no default key; action "Copy permalink", row `copy_permalink`) {% include since.html v="0.16.0" %} |
 | None | [Share the active note](/guide/toolbar/#the-bottom-bar) through the system share sheet (no default key; row `share_note`; in the macOS app and in browsers that can share) |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | Reveal the active note in Finder / File Explorer (row `reveal_in_file_manager`) |
-| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`) |
+| <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | Switch the active note between Source and Preview (row `toggle_source_preview`) {% include since.html v="0.20.0" %} |
+| <kbd>F8</kbd> / <kbd>Shift</kbd><kbd>F8</kbd> | Go to the next or previous [suggestion](/guide/track-changes/) (rows `next_suggestion`, `previous_suggestion`) {% include since.html v="0.20.0" %} |
+| <kbd>F6</kbd> / <kbd>Shift</kbd><kbd>F6</kbd> | Move focus to the next or previous region: editor, toolbar, outline, right sidebar, bottom bar (rows `focus_next_region`, `focus_previous_region`; see [Writing from the keyboard](/guide/keyboard-writing/#moving-between-regions)) {% include since.html v="0.20.0" %} |
+| None | Switch between Editing and Suggesting, Accept all suggestions, Reject all suggestions, Publish the active note, Focus the note's comments, Focus the note's editor (no default keys; rows `toggle_suggesting`, `accept_all_suggestions`, `reject_all_suggestions`, `publish_note`, `focus_comments`, `focus_editor`) {% include since.html v="0.20.0" %} |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`; needs the Slidev presentations plugin 1.9.1 or later). Its old default, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>, now switches Source and Preview {% include since.html v="0.20.0" %} |
+
+If your vault's `## Shortcuts` table already gives <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>,
+<kbd>F8</kbd>, <kbd>Shift</kbd><kbd>F8</kbd>, <kbd>F6</kbd> or
+<kbd>Shift</kbd><kbd>F6</kbd> to another action, that action keeps it. {% include since.html v="0.20.0" %}
 
 The rail's keys follow its order: the items at the top count up from
 <kbd>Mod</kbd><kbd>1</kbd> (all notes, tasks, people), and the ones at the
@@ -87,9 +95,15 @@ Fixed editor shortcuts (not remappable):
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>9</kbd> | Checklist |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>.</kbd> | Blockquote |
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>M</kbd> | Insert media or file |
+| <kbd>Mod</kbd><kbd>Enter</kbd> | Open the link, mention or tag at the cursor, or tick its task; elsewhere add a blank line {% include since.html v="0.20.0" %} |
+| <kbd>Mod</kbd><kbd>.</kbd> | Open the menu for what's at the cursor (also <kbd>Shift</kbd><kbd>F10</kbd> and the <kbd>Menu</kbd> key) {% include since.html v="0.20.0" %} |
+| <kbd>Alt</kbd><kbd>↑</kbd> / <kbd>Alt</kbd><kbd>↓</kbd> | Move the heading's section, the list item, or the line {% include since.html v="0.20.0" %} |
+| <kbd>Esc</kbd> | From the toolbar, outline, right sidebar or bottom bar, go back to the note {% include since.html v="0.20.0" %} |
+
+These keys are explained in [Writing from the keyboard](/guide/keyboard-writing/). {% include since.html v="0.20.0" %}
 
 Other useful bindings: <kbd>Tab</kbd>/<kbd>Enter</kbd> inside a checklist or list continue
-it; <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
+it ({% include since.html v="0.20.0" %} on other lines, <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> move focus out of the editor); <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
 autocomplete; `{` opens the field menu and a space then `!` the date menu. {% include since.html v="0.13.0" %} The Find and Replace bar has
 its own keys, listed under [Find and replace](/guide/editor/#find-and-replace);
 the Search tab shares them. Code blocks have their own fold keys, listed under
@@ -130,7 +144,9 @@ shortcut:
   {% include since.html v="0.16.0" %}), Reveal in Finder (or
   File Explorer), Revision History, plugin commands such as Present, and
   Delete. These items are greyed out when no note tab is open.
-- **View**: the sidebars, Line Numbers, Zoom In and Out, Stop Presenting.
+- **View**: the sidebars, Toggle Source/Preview {% include since.html v="0.20.0" %}
+  (greyed out when no note editor shows), Line Numbers, Zoom In and Out,
+  Stop Presenting.
 - **Go**: All Notes, Bookmarks, Trash, Mind Map, Back, Forward.
 - **Help**: Keyboard Shortcuts, User Guide, Send Feedback.
 
@@ -145,7 +161,8 @@ the menu, though they still work:
 
 These menu keys are fixed and aren't in the `## Shortcuts` table:
 <kbd>Mod</kbd><kbd>,</kbd> Settings, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>N</kbd> New Vault, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> Open Vault, <kbd>Mod</kbd><kbd>F</kbd>
-Find and Replace, <kbd>Mod</kbd><kbd>.</kbd> Stop Presenting. Line Numbers has no key, so
+Find and Replace. Stop Presenting has no menu key: press <kbd>Esc</kbd>, since <kbd>Mod</kbd><kbd>.</kbd> opens the
+[menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor). {% include since.html v="0.20.0" %} Line Numbers has no key, so
 <kbd>Mod</kbd><kbd>Shift</kbd><kbd>L</kbd> copies the note as a wikilink.
 
 ## Keyboard shortcuts on the web
@@ -178,6 +195,8 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Next tab | <kbd>Mod</kbd><kbd>&#93;</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>&#93;</kbd> |
 | Settings | <kbd>Mod</kbd><kbd>,</kbd> | <kbd>Mod</kbd><kbd>;</kbd> |
 | Open Vault | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> |
+| Switch between Source and Preview | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> (Firefox keeps <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>) {% include since.html v="0.20.0" %} |
+| Move focus past the last region | <kbd>F6</kbd> goes back to the editor | <kbd>F6</kbd> goes on to the browser's address bar {% include since.html v="0.20.0" %} |
 | Export the active note | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>E</kbd> | (desktop only) |
 | Reveal in Finder | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>R</kbd> | (desktop only) |
 

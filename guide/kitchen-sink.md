@@ -100,6 +100,14 @@ Published, the `day-tasks` block becomes a placeholder, and the Obsidian
 {% include kitchen-sink/kitchen_sink/ends_with_code_block.md %}
 ````
 
+## Moving sections and list items: Moving sections {% include since.html v="0.20.0" %}
+
+`kitchen_sink/moving_sections.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/moving_sections.md %}
+````
+
 ## Heading numbers: Numbered headings
 
 `kitchen_sink/numbered_headings.md`
