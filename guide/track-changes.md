@@ -44,6 +44,14 @@ note.
   suggestion** and **Next suggestion** step through them.
 - **Accept all** and **Reject all** resolve every suggestion in the note at
   once, after asking. One undo (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) reverts either.
+- **From the keyboard** {% include since.html v="0.20.0" %}:
+  <kbd>F8</kbd> and <kbd>Shift</kbd><kbd>F8</kbd> go to the next and
+  previous suggestion. With the cursor in one, <kbd>Mod</kbd><kbd>.</kbd>
+  opens its menu: who made it and when, **Accept**, **Reject**, **Next
+  suggestion** and **Previous suggestion**. After you accept or reject
+  one, the next is selected. The [command palette](/guide/command-palette/)
+  also has Editing/Suggesting, Accept all and Reject all, which you can
+  give keys in **Settings → Shortcuts**.
 
 Accepting keeps the suggested text. Rejecting restores the original. Either
 way the change is saved and committed like any other edit. If a suggestion

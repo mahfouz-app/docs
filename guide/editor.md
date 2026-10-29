@@ -12,9 +12,11 @@ highlights, tags, wikilinks, media) rather than showing raw symbols.
 
 There are two independent view modes for how much raw syntax stays
 visible, switched with the bottom bar's view button (an eye in Preview, code
-brackets in Source)
+brackets in Source), or with <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
+(<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) {% include since.html v="0.20.0" %}
 (remembered on this device, not per note). The button opens a menu of
-Preview, Source and [Vim](#vim-mode). {% include since.html v="0.20.0" %}
+Preview, Source and [Vim](#vim-mode); the shortcut switches between Preview
+and Source, and from Vim goes to Preview. {% include since.html v="0.20.0" %}
 
 - **Source** (default): most Markdown punctuation stays visible
   (`# `, `**`, `_`, `[text](url)`, etc.) so it's obvious what you're
@@ -71,9 +73,15 @@ Other editor behavior:
   checkbox. Clicking left of the bullet, pressing <kbd>Home</kbd>, or
   moving up or down onto the marker puts it at the start of the item's
   text, and <kbd>←</kbd> from there goes to the end of the line above.
-- On any other line, **Tab** re-indents only when your cursor is in leading
-  whitespace at the start of the line; anywhere else it's left free for
-  OS-level autocomplete.
+- On any other line, outside code blocks and tables, <kbd>Tab</kbd> moves
+  focus out of the editor to the next control, and
+  <kbd>Shift</kbd><kbd>Tab</kbd> to the one before it. {% include since.html v="0.20.0" %}
+  See [Writing from the keyboard](/guide/keyboard-writing/) for moving
+  between the editor and the panels around it.
+- <kbd>Alt</kbd><kbd>↑</kbd> and <kbd>Alt</kbd><kbd>↓</kbd> on a heading
+  move its whole section, and on a list item the item with its sub-items
+  (see [Moving sections and list items](/guide/keyboard-writing/#moving-sections-and-list-items)).
+  {% include since.html v="0.20.0" %}
 - Misspelled words are underlined by your system's spell checker (see
   [Spelling check](/guide/spelling/)). In the macOS desktop app, what you
   type stays as typed, except for your Text Replacements and spelling
@@ -83,7 +91,10 @@ Other editor behavior:
   {% include since.html v="0.14.0" %}
 - <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
   it (external URLs in your system browser; wikilinks by switching to that
-  note).
+  note). With the cursor on it, <kbd>Mod</kbd><kbd>Enter</kbd> does the
+  same, and <kbd>Mod</kbd><kbd>.</kbd> opens its menu (see
+  [Writing from the keyboard](/guide/keyboard-writing/#acting-on-whats-at-the-cursor)).
+  {% include since.html v="0.20.0" %}
 - In Preview, a plain click on a link opens a small editor for it (see
   [Links](/guide/links/#links-wikilinks--backlinks)).
 - **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the
@@ -204,6 +215,12 @@ insert" while Suggesting. In a read-only note, such as a revision
 preview, the menu has **Copy** only. On macOS, **Paste** from this menu
 works like <kbd>Cmd</kbd><kbd>V</kbd>.
 
+From the keyboard, <kbd>Mod</kbd><kbd>.</kbd>, <kbd>Shift</kbd><kbd>F10</kbd>
+or the <kbd>Menu</kbd> key opens this menu for the selection, or a menu
+for the link, task, suggestion, tag, table or image at the cursor (see
+[The menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor)).
+{% include since.html v="0.20.0" %}
+
 **Anywhere else in the editor**, a right-click opens the system's menu:
 
 - In the macOS desktop app, that menu (spelling suggestions, **Look Up**,
@@ -237,6 +254,9 @@ is active"):
   list shows each heading's number. {% include since.html v="0.14.0" %}
   Right-click a heading in the list and choose **Copy link to heading**
   to copy a [link to it](/guide/links/#link-to-a-heading). {% include since.html v="0.14.0" %}
+  From the keyboard, <kbd>F6</kbd> reaches the outline; <kbd>↑</kbd> and
+  <kbd>↓</kbd> move between headings, <kbd>Enter</kbd> jumps to one, and
+  <kbd>Esc</kbd> goes back to the note. {% include since.html v="0.20.0" %}
 - **Table of contents** (right sidebar) lists every heading (levels 1–6,
   ignoring anything inside a code fence) in the note, indented by level;
   click one to jump to it.

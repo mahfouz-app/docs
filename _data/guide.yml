@@ -38,6 +38,9 @@
     - slug: editor
       title: "The editor"
       description: "Editing and preview modes, the outline, the table of contents and page preview."
+    - slug: keyboard-writing
+      title: "Writing from the keyboard"
+      description: "Move between the editor and the panels around it, act on what's at the cursor, open its menu, and move sections, all without the mouse."
     - slug: toolbar
       title: "The formatting toolbar"
       description: "Every button on the formatting toolbar and its More menu."

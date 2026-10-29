@@ -12,6 +12,16 @@ permalink: /guide/media/
   aac; anything else: image). In Preview mode the embed takes the place of
   its line; in Source mode the line stays visible above the embed. To
   change the path or alt text, switch to Source.
+- **From the keyboard** {% include since.html v="0.20.0" %}: in Preview,
+  <kbd>↓</kbd> or <kbd>↑</kbd> from the next line moves onto an image or
+  media card, then to its **Replace** and **Delete** buttons.
+  <kbd>Enter</kbd> or <kbd>Space</kbd> on the card, or
+  <kbd>Mod</kbd><kbd>.</kbd> on the image's line, opens its menu:
+  **Replace file…**, **Width** (**25%**, **50%**, **75%** or **Full
+  width**, the same width dragging the handle sets, kept on this device),
+  **Copy path** and **Delete**. A read-only note, or a shared note you can
+  only comment on, has no Replace or Delete. See [Writing from the
+  keyboard](/guide/keyboard-writing/#images-and-media).
 - **Adding files**: drag a file from the OS onto the editor, paste a file
   from your clipboard (e.g. a screenshot), or use the toolbar's **Insert
   media or file** button. The file is copied into the vault-level `files/`

@@ -21,7 +21,11 @@ Type to match against:
   and a note found by its text shows a line of it around the match. {% include since.html v="0.14.0" %}
 - **Commands**: the app's actions, such as New note, Rename or Go to tasks,
   and commands from your enabled plugins, each with its shortcut. Commands
-  that act on a note only appear while a note is open.
+  that act on a note only appear while a note is open. The bottom bar's
+  and toolbar's note controls are here too: Source/Preview,
+  Editing/Suggesting, the next and previous suggestion, Accept all, Reject
+  all, Publish, and focusing the note's comments or editor (see [Writing
+  from the keyboard](/guide/keyboard-writing/#note-actions-in-the-palette)). {% include since.html v="0.20.0" %}
 - **Settings**: the Settings pages and the individual settings on them.
   Picking one opens Settings on that page.
 
