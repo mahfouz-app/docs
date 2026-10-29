@@ -272,7 +272,10 @@ opens the Export dialog. Pick a format card, then **Export**:
   background; when it's ready, a notification offers **Open**, **Save…**
   and **Discard**.
 - **Markdown** copies the note's file, and the attachments it links to, to
-  a folder you pick.
+  a folder you pick. Once you've picked the folder, the dialog closes and
+  the export runs in the background: a notification shows **Exporting
+  "Trip notes" to Markdown…**, then **Exported "Trip notes" to
+  Markdown.**, or **Markdown export failed** with the reason. {% include since.html v="0.21.0" %}
 - **PDF** lays the note out as pages or slides through Slidev. It needs the
   **PDF export** plugin: while it's off, the PDF card's **Turn on…** opens
   Settings → Plugins. See [Slides](/guide/slides/).

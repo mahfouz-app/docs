@@ -111,7 +111,8 @@ On the left:
   published, the globe is tinted and opens a menu of the page's actions: **Update published page**,
   **Copy public link**, **Open published page**, **QR code**, **Publish
   child notes…**, **Page settings…** and **Unpublish**. A dot shows while
-  the page is behind the note (see [Publishing](/guide/publishing/))
+  the page is behind the note, and the globe shows it's busy while the
+  note is being published {% include since.html v="0.21.0" %} (see [Publishing](/guide/publishing/))
 - **Share…** (two people): shares the note with chosen GitHub accounts or
   a secret link, so they can read, comment on, suggest edits to or edit it
   live with you (see [Sharing a note with people](/guide/sharing/)). It

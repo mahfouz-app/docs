@@ -44,8 +44,20 @@ Choose the page's **Visibility** (see [Visibility](#visibility)) and
 {% include since.html v="0.13.0" %} if you want
 the page to follow the note (see
 [Keeping the page up to date](#keeping-the-page-up-to-date)), then click
-**Publish**. The link is copied to your clipboard, and a notification offers
-**Open** and **QR code**.
+**Publish**.
+
+The dialog closes right away and the page is published in the background,
+so you can keep working. {% include since.html v="0.21.0" %} A notification shows the progress
+(**Publishing "Trip notes"…**, then **3 of 8 child notes** when child
+notes are published with it) and, once it's done, says so (**Published
+"Trip notes" and 8 child notes.**) with **Open**, **Copy link** and **QR
+code**. The link isn't copied for you: click **Copy link** when you want
+it. While the note is being published, its bottom bar's globe shows it's
+busy, and publishing it again waits for the first to finish.
+
+If publishing fails, the notification says why. It offers **Sign in** when
+your GitHub sign-in is the problem, and **Publish…**, which opens the
+dialog again with the choices you made. {% include since.html v="0.21.0" %}
 
 The page's address is the note's title followed by an id, for example
 `https://p.mahfouz.app/trip-notes-ab3de7fgh2`. If you rename the note, the
@@ -148,7 +160,9 @@ page, or click **Download SVG** to save it. Nothing is stored.
 A note's children can be published with it. Tick **Also publish child
 notes** in the publish dialog, or, for a note that's already published,
 choose **Publish child notes…** from its menu. The dialog says how many
-notes that publishes now.
+notes that publishes now. After you confirm, they're published in the
+background, and a notification shows the progress (**Publishing the child
+notes of "Trip notes"…**). {% include since.html v="0.21.0" %}
 
 - Every note under the parent gets its own page and link: its children,
   their children, and so on. The parent's page links to a child only where
