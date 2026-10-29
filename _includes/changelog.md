@@ -1,4 +1,25 @@
 
+## 0.20.0 (2026-10-29) {#v0.20.0}
+
+### Features
+
+* Comments: links, tags and people in comments follow on click
+* Editor: Vim view mode for the note editor
+* User Interface: one inline-edit rule for Enter, Escape and blur (useInlineEdit)
+* ⌥↑/⌥↓ moves a heading's section or a list item
+* Shortcuts: hide key hints on touch devices
+* Daily: the Daily notes database and Today's note
+
+### Improvements
+
+* Phone: the bottom bars take Liquid Glass
+
+### Bug fixes
+
+* Editor: Preview formulas are one object; cut, drag and copy keep markup intact
+* Phone: lift the Search field clear of iPhone's keyboard bar
+
+
 ## 0.19.0 (2026-10-28) {#v0.19.0}
 
 ### Features
