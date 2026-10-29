@@ -164,10 +164,17 @@ So that prices don't turn into math, the rules are Pandoc's:
 - `\$` is a literal dollar sign.
 
 Math is rendered in Preview mode and on
-[published pages](/guide/publishing/). In Preview, a formula is one object:
-click it to edit its source, which shows while the cursor is inside it, and
-<kbd>Backspace</kbd> or <kbd>Delete</kbd> next to it removes the whole
-formula. {% include since.html v="0.20.0" %}
+[published pages](/guide/publishing/). In Preview, a formula is one object.
+{% include since.html v="0.20.0" %}
+
+- <kbd>Backspace</kbd> after a formula, or <kbd>Delete</kbd> before one,
+  removes the whole formula.
+- With the cursor at its edge, the formula stays drawn.
+- To edit its source, click the formula (the cursor lands just inside the
+  opening `$`), or press <kbd>Left</kbd> or <kbd>Right</kbd> at its edge to
+  step inside.
+- <kbd>Up</kbd> and <kbd>Down</kbd> pass over it, and
+  <kbd>Shift</kbd> with an arrow key selects it whole.
 
 A horizontal rule, a table, an image card, an embed or a table of contents
 is a block too: in Preview, <kbd>Backspace</kbd> at the start of the line

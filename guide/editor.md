@@ -31,10 +31,21 @@ brackets in Source)
   Copying from Preview copies formatted text: pasted into Mail, Google
   Docs, Slack or Word, headings, emphasis, lists, links and tables keep
   their formatting. Apps that only take plain text, and Mahfouz itself,
-  get the Markdown. Pending suggestions paste as the original text and
-  comments are left out (the text they mark stays); wikilinks and
+  get the Markdown, and so does **Paste and Match Style**. Wikilinks and
   attached images paste as their text. Copying in Source copies
   Markdown only.
+  - The copy holds the Markdown of what you selected. Formatting the
+    selection only partly covers is closed and reopened around the part
+    you copied, so no marker is left over: selecting `old t` in
+    `**bold** text` copies `**old** t`, and selecting the whole bold
+    word copies `**bold**`. {% include since.html v="0.20.0" %}
+  - Pending suggestions and comments copy as the text you see, with no
+    markup and no author line. {% include since.html v="0.20.0" %}
+  - Cut and dragging text to move it carry the same text, and the note
+    keeps the markers of the formatting that stays.
+    {% include since.html v="0.20.0" %}
+  - Code blocks, tables, a note in Suggesting mode, and a whole line
+    copied with nothing selected copy the raw Markdown, as before.
 
 Other editor behavior:
 
@@ -73,7 +84,9 @@ Other editor behavior:
     spans several lines. With several cursors, each one works the same way.
     {% include since.html v="0.20.0" %}
   - A person mention, a task's date or assignee chip, and a formula go
-    whole in one press. {% include since.html v="0.20.0" %}
+    whole in one press: <kbd>Backspace</kbd> after a formula or
+    <kbd>Delete</kbd> before one removes it.
+    {% include since.html v="0.20.0" %}
   - On a line with text right after a horizontal rule, a table, an image
     card, an embed or a table of contents, Backspace at the start of the
     line deletes the whole block in one press; <kbd>Cmd</kbd><kbd>Z</kbd>
