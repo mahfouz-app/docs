@@ -66,7 +66,8 @@ Present**.
 - **Present** shows the current note fullscreen, layered over
   the whole app rather than opening a tab. Arrow keys move between slides;
   <kbd>Esc</kbd> (or menu **View → Stop Presenting**) returns you exactly
-  where you were. Give it a key in **Settings → Shortcuts** or in
+  where you were. Its key is <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd>
+  (Slidev presentations plugin 1.9.1 or later); change it in **Settings → Shortcuts** or in
   `.config/settings.md` under `## Shortcuts`, row
   `mahfouz/slidev:present-fullscreen`. {% include since.html v="0.20.0" %}
   Its old default, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>, now

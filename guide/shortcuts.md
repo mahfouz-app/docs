@@ -56,7 +56,7 @@ Remappable app shortcuts (`.config/settings.md`, `## Shortcuts` table).
 | <kbd>F8</kbd> / <kbd>Shift</kbd><kbd>F8</kbd> | Go to the next or previous [suggestion](/guide/track-changes/) (rows `next_suggestion`, `previous_suggestion`) {% include since.html v="0.20.0" %} |
 | <kbd>F6</kbd> / <kbd>Shift</kbd><kbd>F6</kbd> | Move focus to the next or previous region: editor, toolbar, outline, right sidebar, bottom bar (rows `focus_next_region`, `focus_previous_region`; see [Writing from the keyboard](/guide/keyboard-writing/#moving-between-regions)) {% include since.html v="0.20.0" %} |
 | None | Switch between Editing and Suggesting, Accept all suggestions, Reject all suggestions, Publish the active note, Focus the note's comments, Focus the note's editor (no default keys; rows `toggle_suggesting`, `accept_all_suggestions`, `reject_all_suggestions`, `publish_note`, `focus_comments`, `focus_editor`) {% include since.html v="0.20.0" %} |
-| None | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`). Its old default, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>, now switches Source and Preview: give Present its own key here {% include since.html v="0.20.0" %} |
+| <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Enter</kbd> | Present active note as slides (a plugin command: its row is `mahfouz/slidev:present-fullscreen`; needs the Slidev presentations plugin 1.9.1 or later). Its old default, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>, now switches Source and Preview {% include since.html v="0.20.0" %} |
 
 If your vault's `## Shortcuts` table already gives <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>,
 <kbd>F8</kbd>, <kbd>Shift</kbd><kbd>F8</kbd>, <kbd>F6</kbd> or
