@@ -189,10 +189,9 @@ formatting toolbar shows. There's no breadcrumb bar above the note: its
 **Details**, **Backlinks**, **Attributes** and **Comments** open from the
 toolbar and the **⋯**, just above the toolbar. {% include since.html v="0.19.0" %} Links, wikilinks, mentions and checkboxes work
 as usual, and pressing and holding selects text without bringing up the
-keyboard. A tap on a link, a tag or a person follows it, and a tap on an
-image or a diagram opens it in the viewer. Touch and hold a link, a tag
-or a person for its card, or an image or a diagram for its menu, as a
-sheet from the bottom (see [Clicking in Preview](/guide/editor/#clicking-on-a-phone)).
+keyboard. A tap on a link, a tag or a person follows it, a tap on an
+image or a diagram opens the viewer, and touching and holding either
+opens its actions (see [Clicking on a phone](/guide/editor/#clicking-on-a-phone)).
 {% include since.html v="0.20.0" %}
 
 - **Find** opens [Find in note](/guide/editor/#find-and-replace).
@@ -206,7 +205,7 @@ sheet from the bottom (see [Clicking in Preview](/guide/editor/#clicking-on-a-ph
   locked or shared read-only note.
 
 To edit, tap the text where you want the cursor (a tap on a link follows
-it instead). **Edit**, the first row
+it instead). {% include since.html v="0.20.0" %} **Edit**, the first row
 of the note's **⋯**, does the same, which helps with a screen reader or a
 keyboard. You can't edit a read-only, locked or shared read-only note.
 While you edit:
@@ -215,9 +214,10 @@ While you edit:
 - The [formatting toolbar](/guide/toolbar/) sits right above the
   keyboard, as one row: swipe it sideways for more buttons. Its **⋯** stays
   at the end of the row. The note's toolbar steps aside.
-- A tap on a link, a tag or a person places the cursor in it, so you can
-  change its text, and a small **Open** button shows under it to follow
-  it. {% include since.html v="0.20.0" %}
+- A tap on a link, a tag or a person places the cursor in it, with a
+  small button under it to follow it (see
+  [Clicking on a phone](/guide/editor/#clicking-on-a-phone)).
+  {% include since.html v="0.20.0" %}
 
 Editing ends only when you choose to: **Done editing**, **‹**, going to
 another page, or opening Search. Coming back from Search goes back to

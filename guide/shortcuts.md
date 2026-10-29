@@ -97,14 +97,15 @@ Fixed editor shortcuts (not remappable):
 | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>M</kbd> | Insert media or file |
 | <kbd>Mod</kbd><kbd>Enter</kbd> | Open the link, mention, tag or path at the cursor, or tick its task; elsewhere add a blank line {% include since.html v="0.20.0" %} |
 | <kbd>Mod</kbd><kbd>.</kbd> | Open the menu for what's at the cursor, or a link's, tag's or person's card (also <kbd>Shift</kbd><kbd>F10</kbd> and the <kbd>Menu</kbd> key) {% include since.html v="0.20.0" %} |
-| <kbd>Enter</kbd> / <kbd>Delete</kbd> | On a selected image, diagram or other block in Preview: open it, or remove it {% include since.html v="0.20.0" %} |
+| <kbd>Enter</kbd> / <kbd>Delete</kbd> or <kbd>Backspace</kbd> | On a selected image, diagram or other block in Preview: open it, or remove it (not a database view) {% include since.html v="0.20.0" %} |
+| Click / <kbd>Cmd/Ctrl</kbd>+click / <kbd>Shift</kbd>+click | In Preview, on a link, tag or person: follow it / open a note in the background / extend the selection (see [Clicking in Preview](/guide/editor/#clicking-in-preview)) {% include since.html v="0.20.0" %} |
 | <kbd>Alt</kbd><kbd>↑</kbd> / <kbd>Alt</kbd><kbd>↓</kbd> | Move the heading's section, the list item, or the line {% include since.html v="0.20.0" %} |
 | <kbd>Esc</kbd> | From the toolbar, outline, right sidebar or bottom bar, go back to the note {% include since.html v="0.20.0" %} |
 
 These keys are explained in [Writing from the keyboard](/guide/keyboard-writing/). {% include since.html v="0.20.0" %}
 
 Other useful bindings: <kbd>Tab</kbd>/<kbd>Enter</kbd> inside a checklist or list continue
-it ({% include since.html v="0.20.0" %} on other lines, <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> move focus out of the editor); in Preview a click follows a link, tag or person, <kbd>Cmd/Ctrl</kbd>+click opens a note in the background, and <kbd>Shift</kbd>+click extends the selection (see [Clicking in Preview](/guide/editor/#clicking-in-preview)) {% include since.html v="0.20.0" %}; in Source <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink; `[[` triggers wikilink
+it ({% include since.html v="0.20.0" %} on other lines, <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> move focus out of the editor); in Source, <kbd>Cmd/Ctrl</kbd>+click opens a link or wikilink in the background {% include since.html v="0.20.0" %}; `[[` triggers wikilink
 autocomplete; `{` opens the field menu and a space then `!` the date menu. {% include since.html v="0.13.0" %} The Find and Replace bar has
 its own keys, listed under [Find and replace](/guide/editor/#find-and-replace);
 the Search tab shares them. Code blocks have their own fold keys, listed under

@@ -138,8 +138,9 @@ in its card when the [comment margin](#the-comment-margin) shows:
   do in the note: a click follows them, <kbd>Cmd/Ctrl</kbd>+click opens a
   note in the background, and a right-click opens their card, without the
   actions that edit (see [Clicking in Preview](/guide/editor/#clicking-in-preview)).
-  In the right sidebar's **Comments** section they're shown but don't
-  respond to clicks; open the thread to use them. {% include since.html v="0.20.0" %}
+  In the right sidebar's **Comments** section, and on a margin card that
+  isn't open, they're shown but don't respond to clicks; open the thread
+  to use them. {% include since.html v="0.20.0" %}
 - **Your own comments** have a **⋯** (**Comment actions**) that shows when
   you point at the comment or move to it with the keyboard, and always on a
   phone. Its menu has **Edit** and **Delete comment…**. The agent's
@@ -188,7 +189,8 @@ its text.
 - A card shows the first comment, cut off after three lines, and how many
   replies there are. Click it, or press <kbd>Enter</kbd> on it, to put the
   cursor in its text: the card opens in place as the full thread, with
-  its reply field.
+  its reply field. A link in a closed card's comment doesn't follow; open
+  the card first. {% include since.html v="0.20.0" %}
 - Pointing at a card tints its text, and pointing at commented text
   outlines its card.
 - A resolved thread has no card, except while you're reading it, for

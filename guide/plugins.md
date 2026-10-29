@@ -117,16 +117,15 @@ The built-in `mahfouz` registry has:
   - If the diagram changes in the note while its tab is open, the tab
     stops saving and offers **Copy my version** or **Reload from note**,
     so neither edit is overwritten.
-- **Draw.io diagrams**: ```` ```drawio ```` blocks render as diagrams.
-  **Edit** on a diagram, or inserting one from the toolbar's **Embed**
-  menu, opens it in a draw.io tab. Changes save back into the note as you
-  go.
+- **Draw.io diagrams**: ```` ```drawio ```` blocks render as diagrams. Click
+  one, or insert one from the toolbar's **Embed** menu, to edit it in a
+  draw.io tab. Changes save back into the note as you go. In 0.20.0 and
+  later, **Edit** on a diagram opens the draw.io tab, and a click opens the
+  viewer instead (an empty diagram still opens the tab).
+  {% include since.html v="0.20.0" %}
 - **Clicking a diagram** {% include since.html v="0.20.0" %}: in Preview, a
-  click opens the diagram in the viewer, with pan and zoom, and **Edit**,
-  **Copy** and **Delete**. Pointing at a diagram shows the same actions on
-  its toolbar. **Edit** opens the plugin's tab, and a click on an empty
-  diagram opens it straight away. See
-  [Clicking in Preview](/guide/editor/#clicking-blocks).
+  click opens the diagram full size in the viewer, with its actions (see
+  [Clicking images and diagrams](/guide/editor/#clicking-images-and-diagrams)).
 - **Diagrams from the keyboard** {% include since.html v="0.20.0" %}: in
   Preview, <kbd>↓</kbd> from the line above a rendered diagram focuses it.
   <kbd>Enter</kbd> opens it in the viewer, <kbd>+</kbd> and <kbd>-</kbd> zoom in

@@ -12,14 +12,11 @@ permalink: /guide/media/
   aac; anything else: image). In Preview mode the embed takes the place of
   its line; in Source mode the line stays visible above the embed. To
   change the path or alt text, switch to Source, or choose **Edit** on its
-  toolbar.
-- **Viewing an image** {% include since.html v="0.20.0" %}: in Preview,
-  click an image to open it full size in the viewer, with pan and zoom.
-  The viewer's bar has **Edit**, **Copy**, **Delete**, **⋯** (**Replace…**
-  and **Download**) and **Close**; <kbd>Esc</kbd> closes it. Point at an
-  image for the same actions on its toolbar, with **View**. A video or
-  audio player keeps its own controls. See
-  [Clicking in Preview](/guide/editor/#clicking-blocks).
+  toolbar. {% include since.html v="0.20.0" %}
+- **Viewing an image** {% include since.html v="0.20.0" %}: in Preview, a
+  click on an image on its own line opens it full size in the viewer,
+  with its actions (see
+  [Clicking images and diagrams](/guide/editor/#clicking-images-and-diagrams)).
 - **From the keyboard** {% include since.html v="0.20.0" %}: in Preview,
   <kbd>↓</kbd> or <kbd>↑</kbd> from the next line moves onto an image or
   media card, then to its toolbar's buttons. <kbd>Enter</kbd> or

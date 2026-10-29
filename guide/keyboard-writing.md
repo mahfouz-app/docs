@@ -94,13 +94,12 @@ What's at the cursor comes first in the menu:
 
 - **A link, a tag, a mention or a path**: its card, the same one a
   right-click opens (see
-  [Clicking in Preview](/guide/editor/#clicking-references)).
-  {% include since.html v="0.20.0" %} For a link: **Open**
-  (<kbd>Mod</kbd><kbd>Enter</kbd>), **Open in background**, **Edit
-  link…**, **Edit text**, **Copy link** and **Remove link**, which keeps
-  the link's text. Removing `[[#Intro]]` leaves `Intro`, not a `#Intro`
-  tag. While you're suggesting, **Edit link…** and **Remove link** are
-  written as your suggestions.
+  [Clicking in Preview](/guide/editor/#clicking-links-tags-and-people)).
+  {% include since.html v="0.20.0" %} **Remove link** keeps the link's
+  text: removing `[[#Intro]]` leaves `Intro`, not a `#Intro` tag. While
+  you're suggesting, **Edit link…** and **Remove link** are written as
+  your suggestions, or refused where a suggestion can't go, such as a
+  change to a link's URL.
 - **A task line**: **To do**, **In progress** and **Done**, then **Change
   due date…**, **Change assignee…** and **Remove due date**.
 - **A suggestion**: who made it and when, **Accept**, **Reject**, **Next
@@ -146,9 +145,10 @@ A rendered diagram is first one stop: <kbd>Enter</kbd> opens it in the
 viewer, as a click does (an empty diagram opens its editor), and while
 it's focused, <kbd>+</kbd> and <kbd>-</kbd> zoom in and out and
 <kbd>0</kbd> resets the zoom. {% include since.html v="0.20.0" %} Its
-toolbar's buttons come next. A selected block takes <kbd>Enter</kbd> and
-<kbd>Delete</kbd> too (see
-[Clicking in Preview](/guide/editor/#clicking-blocks)).
+toolbar's buttons come next. A selected block takes <kbd>Enter</kbd>, and
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> removes it, except a database
+view (see
+[Clicking in Preview](/guide/editor/#clicking-images-and-diagrams)).
 
 ### Images and media
 

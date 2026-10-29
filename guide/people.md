@@ -49,7 +49,7 @@ github: ada
   under other names.
 - **GitHub collaborators** on the vault's repository appear as people
   automatically, with their GitHub login as the handle. A collaborator gets
-  a note the first time you edit them. A person note whose `github` is a
+  a note the first time you edit or open them. {% include since.html v="0.20.0" %} A person note whose `github` is a
   collaborator's login is that collaborator.
 
 ## Mentions
@@ -89,22 +89,22 @@ doesn't open it.
 - In Preview, a click on a mention opens the person's note, and
   <kbd>Cmd/Ctrl</kbd>+click opens it in the background, so you stay on
   this note (see [Clicking in Preview](/guide/editor/#clicking-in-preview)).
-  {% include since.html v="0.20.0" %} A mention of someone with no note
-  and no GitHub login is selected instead.
+  {% include since.html v="0.20.0" %} Opening a GitHub collaborator who
+  has no note yet creates their person note in your People database.
+  {% include since.html v="0.20.0" %}
 - Moving onto a mention with the arrow keys selects it. With it selected,
   <kbd>Enter</kbd> opens the person's note and <kbd>Space</kbd> lists
   people to put someone else in its place. {% include since.html v="0.15.0" %}
   Typing over a selected mention starts a new mention in its place.
   {% include since.html v="0.13.0" %}
 - Rest the mouse on a mention to see the person's name and role.
-  Right-click it for their card, with their email, phone, GitHub and
-  website, and the person menu. {% include since.html v="0.20.0" %} With the
+  Right-click it for their card: their email, phone, GitHub and website,
+  then the person's actions. {% include since.html v="0.20.0" %} With the
   cursor in the mention, <kbd>Mod</kbd><kbd>Enter</kbd> opens the
   person's note, and <kbd>Mod</kbd><kbd>.</kbd> opens the card.
   {% include since.html v="0.20.0" %}
-- To find every note that mentions someone, choose **Find mentions** in the
-  [person menu](#person-chips) (right-click the mention).
-  {% include since.html v="0.15.0" %} From the keyboard,
+- To find every note that mentions someone, choose **Find mentions** on
+  the mention's card (right-click it). {% include since.html v="0.20.0" %} From the keyboard,
   put the cursor on the mention and run **Find mentions of person** from
   the [command palette](/guide/command-palette/), or give it a key in
   [Shortcuts](/guide/shortcuts/). It opens the
@@ -134,13 +134,13 @@ What a chip does:
   {% include since.html v="0.20.0" %}
 - **Click ▾** on an editable chip (an assignee, a relation link) to pick
   someone else.
-- **Hover** a chip, or move focus to it, to see the person's card. The card
-  has no buttons: click it to open the person's note. In a note's text,
-  hovering shows only the person's name and role; their card heads the
-  menu below. {% include since.html v="0.20.0" %}
+- **Hover** a chip, or move focus to it. Outside a note's text, hovering
+  a chip shows the person's card; click it to open their note. In a
+  note's text, hovering shows only their name and role.
+  {% include since.html v="0.20.0" %}
 - **Right-click** a chip, press <kbd>Shift</kbd><kbd>F10</kbd> on it, or
-  long-press it for the person menu: **Open**, **Change person…**,
-  **Change handle…** ([below](#changing-a-handle)), **Find mentions**,
+  long-press it for the person menu: **Open *name***, **Change person…**,
+  **Change handle @*handle*…** ([below](#changing-a-handle)), **Find mentions**,
   **Copy @handle**, **Send email**, **Copy email**, **Export vCard…** and
   **Remove**. Each item shows only where it applies.
 
@@ -324,7 +324,7 @@ to it in the vault, so no mention is left behind. It's in three places:
 - the person's right-click menu in the [People view](#the-people-view);
 - the button next to **Export vCard** on [their page](#a-persons-page);
 - the right-click card on an `@mention` in a note, which also has **Open
-  person**. <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key
+  person**. {% include since.html v="0.20.0" %} <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key
   opens it too, with the cursor on the mention.
 
 The dialog starts with the current handle, selected. Type the new one

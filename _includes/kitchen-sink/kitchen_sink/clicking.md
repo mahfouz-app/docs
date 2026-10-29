@@ -3,13 +3,13 @@ id: 84ace4650652b98f614009c039b49f64
 ---
 # Clicking
 
-What a click does in Preview. Switch this note to Preview to try each line; in Source a click places the cursor and Cmd/Ctrl-click follows.
+What a click does in Preview. Switch this note to Preview to try each line; in Source a click places the cursor and Cmd/Ctrl-click opens the link in the background.
 
 [TOC]
 
 ## References
 
-A click follows each of these, Cmd/Ctrl-click opens a note in the background, Shift-click extends the selection, and a right-click opens its card. Rest the mouse on one for half a second to preview it (a tag has no preview).
+A click follows each of these, Cmd/Ctrl-click opens a note in the background, Shift-click extends the selection, and a right-click opens its card. Rest the mouse on one for half a second to preview it (a tag or a path has none).
 
 - A wikilink: [[Sample deck]]
 - A wikilink with its own text: [[people/Ada Lovelace|Ada's note]]
@@ -17,7 +17,7 @@ A click follows each of these, Cmd/Ctrl-click opens a note in the background, Sh
 - A bare URL: https://mahfouz.app
 - A tag: #kitchen-sink
 - A person: @ada
-- A path on your computer: `~/Documents/notes.md`
+- A path (desktop app): `kitchen_sink/clicking.md`
 
 A task's assignee chip follows the same way:
 
@@ -33,7 +33,7 @@ To change a link's text, choose Edit text on its card, move the cursor into it w
 
 ## Blocks
 
-A click on the image or a diagram opens the viewer, with pan, zoom, Edit, Copy, Delete and Close. Point at a block for its toolbar. A click on the math block or on the Contents list above (outside an entry) shows its source.
+A click on the image or a diagram opens the viewer, with pan, zoom, Edit, Copy, Delete and Close. Point at a block for its toolbar, or right-click it for its menu. With the Mermaid diagrams plugin on, the Mermaid block below draws as a diagram. A click on the math block or on the Contents list above (outside an entry) shows its source.
 
 ![A team around a laptop (photo: Brooke Cagle, Unsplash)](/files/sample.jpg)
 
@@ -46,7 +46,7 @@ graph TD
 ```drawio
 ```
 
-The empty draw.io block above opens its editor on a click.
+With the Draw.io diagrams plugin on, the empty draw.io block above opens its editor on a click.
 
 $$
 e^{i\pi} + 1 = 0

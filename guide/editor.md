@@ -91,7 +91,7 @@ Other editor behavior:
   click on an image or a diagram opens it larger (see
   [Clicking in Preview](#clicking-in-preview)). {% include since.html v="0.20.0" %}
   In Source, a click places the cursor and <kbd>Cmd/Ctrl</kbd>+click
-  follows a link. With the cursor on a link, <kbd>Mod</kbd><kbd>Enter</kbd>
+  opens a link in the background. With the cursor on a link, <kbd>Mod</kbd><kbd>Enter</kbd>
   follows it in either mode, and <kbd>Mod</kbd><kbd>.</kbd> opens its card (see
   [Writing from the keyboard](/guide/keyboard-writing/#acting-on-whats-at-the-cursor)).
   {% include since.html v="0.20.0" %}
@@ -106,32 +106,36 @@ Other editor behavior:
 
 ## Clicking in Preview {% include since.html v="0.20.0" %} {#clicking-in-preview}
 
-In Preview, a click does what you'd expect from what's under it:
+In Preview, what a click does depends on what's under it:
 
 - **A reference**, such as a link, a tag or a person, goes where it points.
 - **A block**, such as an image or a diagram, opens larger.
 - **Anything else is text**: a click places the cursor.
 
-Everything else a reference offers is one right-click away, and a block's
-other actions are on the toolbar that shows when you point at it.
+A reference's other actions are on its card, a right-click away. A block's
+are on the toolbar that shows when you point at it, and in its menu.
 
-The first time a click follows a link, Mahfouz says so once: "Links open on
+The first time a click follows a link, a notice says: "Links open on
 click. Right-click to edit."
 
-### Links, tags and people {#clicking-references}
+### Clicking links, tags and people {#clicking-links-tags-and-people}
 
 References are wikilinks (in table cells too), Markdown links, bare URLs,
 paths to files on your computer, `#tags`, [mentions](/guide/people/#mentions)
-and the [person chips](/guide/people/#person-chips) of a task's assignee and
-of a note's attributes.
+and a task's assignee [chip](/guide/people/#person-chips).
 
 | Do this | What happens |
 |---|---|
-| Click | Follows it. A note opens in its tab: the tab comes to the front if the note is already open, or opens new. A URL opens in your browser, a path shows the file in your file manager, a tag opens the [Search tab](/guide/links/#search), and a person opens their note. |
+| Click | Follows it. A note opens in its tab: the tab comes to the front if the note is already open, or opens new. A URL opens in your browser, a tag opens the [Search tab](/guide/links/#search), and a person opens their note. In the desktop app, a path shows the file in your file manager. |
 | <kbd>Cmd/Ctrl</kbd>+click | Opens a note or a person's note in the background: its tab opens, and you stay on this note. A URL, a path or a tag opens as with a click. |
 | <kbd>Shift</kbd>+click | Extends the selection. Nothing opens. |
 | Right-click | Opens the reference's card. |
-| Rest the mouse on it for half a second | Shows a small preview: the note's title and folder, the URL, or the person's name and role. A tag has none. |
+| Rest the mouse on it for half a second | Shows a small preview: the note's title and folder, the URL, or the person's name and role. A tag or a path has none. |
+
+The person chips in a note's attributes open the same way: a click opens
+the person, and <kbd>Cmd/Ctrl</kbd>+click opens them in the background.
+Their right-click menu and hover card are the ones under
+[Person chips](/guide/people/#person-chips).
 
 From the keyboard, put the cursor on the reference: <kbd>Mod</kbd><kbd>Enter</kbd>
 follows it, and <kbd>Mod</kbd><kbd>.</kbd>, <kbd>Shift</kbd><kbd>F10</kbd>
@@ -149,10 +153,11 @@ actions, and <kbd>Esc</kbd> closes the card and puts you back in the note.
   **Edit text** and **Copy tag**.
 - **A person**: their card (email, phone, GitHub and website), then **Open
   person**, **Open in background**, **Change person…**, **Edit text** and
-  the person's other actions, such as **Change handle…** and **Find
-  mentions** (see [Person chips](/guide/people/#person-chips)).
+  the person's other actions, such as **Change handle @handle…** and
+  **Find mentions** (see [Person chips](/guide/people/#person-chips)).
 - **A path**: **Reveal in Finder** (**Reveal in File Explorer** on
-  Windows, **Open Containing Folder** on Linux) and **Copy path**.
+  Windows, **Open Containing Folder** on Linux) and **Copy path**. On the
+  web, only **Copy path**.
 - A reference inside commented text adds **Open thread**: a click on the
   reference follows it, so the card is where you reach the
   [comment](/guide/track-changes/#comments).
@@ -160,58 +165,69 @@ actions, and <kbd>Esc</kbd> closes the card and puts you back in the note.
 To change a reference's text, choose **Edit text** on its card, move the
 cursor into it with the arrow keys, or click just beside it.
 
-In Source, nothing changes: a click places the cursor, and
-<kbd>Cmd/Ctrl</kbd>+click follows the reference, in the background.
+In Source, a click places the cursor, and <kbd>Cmd/Ctrl</kbd>+click opens
+the reference in the background.
 
-### Images and diagrams {#clicking-blocks}
+### Clicking images and diagrams {#clicking-images-and-diagrams}
 
-Blocks are images, diagrams (Mermaid, draw.io, Excalidraw and other
+Blocks are images on their own line, diagrams (Mermaid, draw.io and other
 plugin diagrams), math on its own lines, a `[TOC]` table of contents and
 [database views](/guide/databases/).
 
-- **A click on an image or a diagram** opens the viewer: the image or
-  diagram at full size over the app. Drag to pan, and use **Zoom out**,
-  **Zoom in** and **Fit** to zoom. Its bar has **Edit**, **Copy**,
-  **Delete**, **⋯** (**Replace…** and **Download**, for an image file) and
-  **Close**. <kbd>Esc</kbd> closes it. Dragging to pan inside a diagram
-  never opens the viewer.
-- **Edit** opens the plugin's own editor in a tab for draw.io, Excalidraw
-  and Mermaid; for anything else, it shows the block's source in the note.
-  A diagram that's empty or failed to draw opens its editor on a click.
+- **A click on an image on its own line, or a diagram,** opens the viewer:
+  the image or diagram at full size over the app. Drag to pan, and use
+  **Zoom out**, **Zoom in** and **Fit** to zoom. Its bar has **Edit**,
+  **Copy**, **Delete**, **⋯** (**Replace…** and **Download**, for an image
+  file) and **Close**; at phone width, **⋯** and **Close**. <kbd>Esc</kbd>
+  closes it. An image inside a link follows the link instead.
+- **Edit** opens the plugin's own editor in a tab for draw.io and Mermaid;
+  for anything else, it shows the block's source in the note. A diagram
+  that's empty or failed to draw opens its editor on a click.
 - **A click on a math block or a table of contents** shows its source to
-  edit. A click on a table of contents entry still jumps to its heading.
+  edit. A click on a table of contents entry jumps to its heading.
 - **A click on a database view's frame**, such as its header or footer,
-  opens the database. Its rows and buttons work as before.
-- **Pointing at a block** shows its toolbar on the block: **View**,
-  **Edit**, **Copy**, **Delete** and **⋯** on a wide block, and **View**
-  and **⋯** on a narrow one, with the rest in the menu. Only the actions
-  that apply show.
+  opens the database. Its rows and buttons work as usual.
+- <kbd>Cmd/Ctrl</kbd>+click on a block does the same as a click.
+- **Pointing at an image, a diagram, math or a table of contents** shows
+  its toolbar. A block 360 pixels wide or wider shows **View**, **Edit**,
+  **Copy** and **Delete**, plus **⋯** (**Replace…** and **Download**) for a
+  file. A narrower image or diagram shows **View** and **⋯**. Only the
+  actions that apply show. A database view has no toolbar.
+- **A right-click** on an image, a diagram, math or a table of contents
+  opens the block's menu, with all of its actions. A database view keeps
+  its own menus.
 - A video or audio player keeps its own controls.
 
 From the keyboard, select the block, with <kbd>Shift</kbd> and the arrow
 keys or by moving onto it: <kbd>Enter</kbd> opens it as a click would,
-<kbd>Delete</kbd> or <kbd>Backspace</kbd> removes it, and
-<kbd>Shift</kbd><kbd>F10</kbd> lists all of its actions.
+<kbd>Shift</kbd><kbd>F10</kbd> opens its menu, and <kbd>Delete</kbd> or
+<kbd>Backspace</kbd> removes it (not a database view).
 
-### Read-only notes and suggestions {#clicking-read-only}
+### Clicking in read-only notes {#clicking-in-read-only-notes}
 
 A revision, a note in Trash and a [shared note](/guide/sharing/) you can
 only read work the same way, without the actions that change the note:
 no **Edit link…**, **Edit text**, **Remove link**, **Edit**, **Delete** or
-**Replace…**. A note shared with you isn't in any of your vaults, so its
-wikilinks don't open and its tags don't search.
+**Replace…**. A click or <kbd>Mod</kbd><kbd>Enter</kbd> on a wikilink to a
+note that doesn't exist does nothing, since following it would create the
+note; the card's **Open** and <kbd>Cmd/Ctrl</kbd>+click still follow it. A
+note shared with you isn't in any of your vaults, so its wikilinks don't
+open and its tags don't search.
 
 While you're [suggesting](/guide/track-changes/), **Edit link…**,
 **Remove link** and **Delete** are written as your suggestions, or
-refused where a suggestion can't go. **Replace…** isn't offered.
+refused where a suggestion can't go, such as a change to a link's URL.
+**Replace…** isn't offered.
 
-### On a phone {#clicking-on-a-phone}
+### Clicking on a phone {#clicking-on-a-phone}
 
 - **While you read** a note, a tap follows a reference or opens a block in
   the viewer, as a click does.
 - **While you edit**, a tap on a reference places the cursor in it, so you
-  can change its text, and a small **Open** button shows under it to
-  follow it.
+  can change its text (a tap on a mention selects it), and a small button
+  shows under it to follow it: **Open** and the name, **Search #tag**, or
+  the reveal item for a path. A tap on an image or a diagram still opens
+  the viewer.
 - **Touch and hold** a reference to open its card, or a block for its
   menu, as a sheet from the bottom of the screen.
 
@@ -299,8 +315,9 @@ for the link, task, suggestion, tag, table or image at the cursor (see
 [The menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor)).
 {% include since.html v="0.20.0" %}
 
-**On a link, a tag, a person or a path**, a right-click opens its card (see
-[Clicking in Preview](#clicking-in-preview)). {% include since.html v="0.20.0" %}
+**On a link, a tag, a person or a path**, a right-click opens its card,
+and on an image, a diagram, math or a table of contents, the block's menu
+(see [Clicking in Preview](#clicking-in-preview)). {% include since.html v="0.20.0" %}
 
 **Anywhere else in the editor**, a right-click opens the system's menu:
 

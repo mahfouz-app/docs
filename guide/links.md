@@ -38,9 +38,9 @@ permalink: /guide/links/
   {% include since.html v="0.20.0" %}
 - **From the keyboard** {% include since.html v="0.20.0" %}: with the
   cursor in a link, <kbd>Mod</kbd><kbd>Enter</kbd> opens it, and
-  <kbd>Mod</kbd><kbd>.</kbd> opens its card: **Open**, **Open in
-  background**, **Edit link…**, **Edit text**, **Copy link** and
-  **Remove link**, which keeps the text. Removing
+  <kbd>Mod</kbd><kbd>.</kbd> opens its card (see
+  [the card](/guide/editor/#clicking-links-tags-and-people)). **Remove
+  link** keeps the text: removing
   `[[#Intro]]` leaves `Intro`, not a tag; so does **Remove link** in the
   link editor. A wikilink inside code doesn't open or create a note.
 - Pasting a bare URL over an empty cursor wraps it as `<url>`; pasting over
@@ -154,7 +154,7 @@ Open it from the tag's menu:
   **Rename tag…** on its card. {% include since.html v="0.20.0" %} With the cursor on a tag and nothing selected,
   <kbd>Shift</kbd><kbd>F10</kbd>, <kbd>Mod</kbd><kbd>.</kbd> {% include since.html v="0.20.0" %}
   or the <kbd>Menu</kbd> key opens the same card. Its first item, **Search
-  #name**, searches for the tag, as <kbd>Mod</kbd><kbd>Enter</kbd> on
+  #tag**, searches for the tag, as <kbd>Mod</kbd><kbd>Enter</kbd> on
   it does. {% include since.html v="0.20.0" %}
 
 The dialog counts the notes it will change in each vault. Type the new name
