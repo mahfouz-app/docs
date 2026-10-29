@@ -52,6 +52,19 @@ and Source, and from Vim goes to Preview. {% include since.html v="0.20.0" %}
 
 Other editor behavior:
 
+- Pasting formatted text keeps its formatting as Markdown: from a web
+  page, Word, Outlook, Google Docs, Notion, Slack or Mail, headings, bold,
+  italic, strikethrough, inline code, links, bullet, numbered and task
+  lists, quotes, tables, code blocks (with their language) and horizontal
+  rules all come through. {% include since.html v="0.20.0" %}
+  - Images aren't pasted, nor are buttons and other page controls; links
+    keep their address only for web and email links.
+  - Code pastes as its text: from a code editor such as VS Code, a
+    selection that's all code, and anything pasted into a code block.
+  - Copying from Mahfouz and pasting back pastes the Markdown, wikilinks
+    and comments included.
+  - <kbd>Mod</kbd><kbd>Shift</kbd><kbd>V</kbd> (**Paste as Plain Text**)
+    pastes the text without formatting.
 - An empty heading on the cursor's line, such as a `## ` you've just typed,
   shows its level as a gray hint (**Heading 2**) until you type its text,
   in Source and Preview. The hint is never saved, and it goes when the
