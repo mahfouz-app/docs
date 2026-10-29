@@ -164,10 +164,29 @@ So that prices don't turn into math, the rules are Pandoc's:
   mustn't be followed by a digit.
 - `\$` is a literal dollar sign.
 
-Math is rendered in Preview mode, where its source shows while the cursor
-is inside it, and on [published pages](/guide/publishing/). In Preview, a
-click on a formula on its own lines shows its source to edit, and pointing
-at it shows **Edit**, **Copy** and **Delete**. {% include since.html v="0.20.0" %}
+Math is rendered in Preview mode and on
+[published pages](/guide/publishing/). In Preview, a formula is one object.
+{% include since.html v="0.20.0" %}
+
+- <kbd>Backspace</kbd> after a formula, or <kbd>Delete</kbd> before one,
+  removes the whole formula.
+- With the cursor at its edge, the formula stays drawn.
+- To edit its source, click the formula (the cursor lands just inside the
+  opening `$`), or press <kbd>Left</kbd> or <kbd>Right</kbd> at its edge to
+  step inside.
+- <kbd>Up</kbd> and <kbd>Down</kbd> pass over it, and
+  <kbd>Shift</kbd> with an arrow key selects it whole.
+
+A formula on its own lines is a block: a click on it shows its source to
+edit, and pointing at it shows **Edit**, **Copy** and **Delete** (see
+[Clicking in Preview](/guide/editor/#clicking-images-and-diagrams)).
+{% include since.html v="0.20.0" %}
+
+A horizontal rule, a table, an image card, an embed or a table of contents
+is a block too: in Preview, <kbd>Backspace</kbd> at the start of the line
+with text after it deletes the whole block in one press, and undo brings it
+back. On an empty line after one, Backspace deletes only that line (see
+[the editor](/guide/editor/)). {% include since.html v="0.20.0" %}
 
 ## Table of contents
 

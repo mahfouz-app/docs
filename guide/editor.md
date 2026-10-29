@@ -14,7 +14,9 @@ There are two independent view modes for how much raw syntax stays
 visible, switched with the bottom bar's view button (an eye in Preview, code
 brackets in Source), or with <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
 (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) {% include since.html v="0.20.0" %}
-(remembered on this device, not per note):
+(remembered on this device, not per note). The button opens a menu of
+Preview, Source and [Vim](#vim-mode); the shortcut switches between Preview
+and Source, and from Vim goes to Preview. {% include since.html v="0.20.0" %}
 
 - **Source** (default): most Markdown punctuation stays visible
   (`# `, `**`, `_`, `[text](url)`, etc.) so it's obvious what you're
@@ -32,10 +34,21 @@ brackets in Source), or with <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
   Copying from Preview copies formatted text: pasted into Mail, Google
   Docs, Slack or Word, headings, emphasis, lists, links and tables keep
   their formatting. Apps that only take plain text, and Mahfouz itself,
-  get the Markdown. Pending suggestions paste as the original text and
-  comments are left out (the text they mark stays); wikilinks and
+  get the Markdown, and so does **Paste and Match Style**. Wikilinks and
   attached images paste as their text. Copying in Source copies
   Markdown only.
+  - The copy holds the Markdown of what you selected. Formatting the
+    selection only partly covers is closed and reopened around the part
+    you copied, so no marker is left over: selecting `old t` in
+    `**bold** text` copies `**old** t`, and selecting the whole bold
+    word copies `**bold**`. {% include since.html v="0.20.0" %}
+  - Pending suggestions and comments copy as the text you see, with no
+    markup and no author line. {% include since.html v="0.20.0" %}
+  - Cut and dragging text to move it carry the same text, and the note
+    keeps the markers of the formatting that stays.
+    {% include since.html v="0.20.0" %}
+  - Code blocks, tables, a note in Suggesting mode, and a whole line
+    copied with nothing selected copy the raw Markdown, as before.
 
 Other editor behavior:
 
@@ -48,23 +61,45 @@ Other editor behavior:
   item above, wherever your cursor is on the line, and its sub-items move
   with it. **Shift+Tab** moves it back out a level. On the first item of a
   list Tab does nothing, since there's nothing above to nest under.
-- In Preview, <kbd>Backspace</kbd> at the start of a nested list item's
-  text moves it, with its sub-items, out a level, the same as
-  <kbd>Shift</kbd><kbd>Tab</kbd>.
-- In Preview, <kbd>Backspace</kbd> and <kbd>Delete</kbd> never remove
-  hidden markup on its own. {% include since.html v="0.13.0" %}
+- In Preview, <kbd>Backspace</kbd> and <kbd>Delete</kbd> remove what you
+  can see; hidden markup goes only with the thing it formats.
+  {% include since.html v="0.13.0" %}
   - Next to a wikilink, a link, or bold, italic, strikethrough, code,
-    highlighted, underlined, subscript or superscript text, they remove the
-    visible character past the hidden markup: Backspace after `[[Note]]`
-    leaves `[[Not]]`.
+    highlighted, underlined, subscript or superscript text, they step over
+    the hidden markup and remove the visible character: Backspace after
+    `[[Note]]` leaves `[[Not]]`.
   - Removing an element's last character, or deleting a selection of all
     its text, removes the element with its markup, so no stray `[[]]` or
     `****` is left behind.
-  - At the start of a heading's, quote's, top-level list item's or task's
-    text, Backspace removes the line's markup and leaves a plain
-    paragraph.
+  - At the start of a heading's, list item's, task's, quote's or
+    callout's text, Backspace removes the line's markup and leaves a plain
+    paragraph. A nested list item moves out a level instead, with its
+    sub-items, the same as <kbd>Shift</kbd><kbd>Tab</kbd>.
+    {% include since.html v="0.20.0" %}
   - <kbd>Delete</kbd> at the end of a line joins the next line's text
     without its markup.
+  - Deleting a word (<kbd>Alt</kbd><kbd>Backspace</kbd> on a Mac,
+    <kbd>Ctrl</kbd><kbd>Backspace</kbd> elsewhere) or to the start of the
+    line (<kbd>Cmd</kbd><kbd>Backspace</kbd> on a Mac) follows the same
+    rule. {% include since.html v="0.20.0" %}
+  - Deleting a selection removes only the text you see. The markup of
+    formatting that keeps some of its text stays, also when the selection
+    spans several lines. With several cursors, each one works the same way.
+    {% include since.html v="0.20.0" %}
+  - A person mention, a task's date or assignee chip, and a formula go
+    whole in one press: <kbd>Backspace</kbd> after a formula or
+    <kbd>Delete</kbd> before one removes it.
+    {% include since.html v="0.20.0" %}
+  - On a line with text right after a horizontal rule, a table, an image
+    card, an embed or a table of contents, Backspace at the start of the
+    line deletes the whole block in one press; <kbd>Cmd</kbd><kbd>Z</kbd>
+    (<kbd>Ctrl</kbd><kbd>Z</kbd> elsewhere) brings it back. On an empty
+    line after one, it deletes only that line.
+    {% include since.html v="0.20.0" %}
+  - Emptying a suggestion removes it, its author line included.
+    {% include since.html v="0.20.0" %}
+  - Typing or pasting over part of a formatted element's text keeps the
+    formatting around it. {% include since.html v="0.20.0" %}
 
   In Source, Backspace and Delete work as usual.
 - In Preview, the cursor never sits in front of a list item's bullet or
@@ -233,6 +268,40 @@ refused where a suggestion can't go, such as a change to a link's URL.
 
 The first time a tap follows a link, the notice reads "Links open on tap.
 Touch and hold for more."
+
+## Vim mode {% include since.html v="0.20.0" %} {#vim-mode}
+
+Pick **Vim** from the bottom bar's view menu to edit with vim keys. Vim
+shows the raw Markdown as Source does, with relative line numbers, and the
+bottom bar shows which vim mode you're in: **NORMAL**, **INSERT** or
+**VISUAL**. The choice is remembered on this device, like Preview and
+Source. The [command palette](/guide/command-palette/) also has
+**Switch to Vim mode**, which has no default key; you can give it one
+(see [Keyboard shortcuts](/guide/shortcuts/)).
+
+Vim is for the note editor only. Revisions, Trash previews, shared notes,
+Markdown files opened from outside a vault and the phone layout don't use
+it.
+
+- `:w` saves and commits at once, like
+  [Manual save](/guide/history/). It commits the vault's waiting changes,
+  not just this note's. A
+  [disk-only note](/guide/history/#auto-commit-and-disk-only-notes) isn't
+  committed.
+- `:q` closes the tab. A pinned tab has to be unpinned first.
+- `:wq` does both.
+- <kbd>Esc</kbd> first closes an open menu (wikilinks, `@` mentions, the
+  slash menu, emoji). A second <kbd>Esc</kbd> goes back to Normal mode.
+- In Insert mode, <kbd>Ctrl</kbd><kbd>P</kbd> and
+  <kbd>Ctrl</kbd><kbd>N</kbd> list words from the note (the nearest ones
+  above the cursor first for <kbd>Ctrl</kbd><kbd>P</kbd>, below for
+  <kbd>Ctrl</kbd><kbd>N</kbd>), and move through any list that's open.
+  <kbd>Ctrl</kbd><kbd>Y</kbd> accepts the highlighted word and
+  <kbd>Ctrl</kbd><kbd>E</kbd> closes the list. On the web on Windows and
+  Linux the browser keeps <kbd>Ctrl</kbd><kbd>N</kbd> (new window), so use
+  <kbd>Ctrl</kbd><kbd>P</kbd> there.
+- In [Suggesting mode](/guide/track-changes/), edits made with vim keys
+  are tracked as suggestions, like any other edit.
 
 ## Find and replace
 
