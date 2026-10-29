@@ -63,11 +63,16 @@ In a deck, the editor underlines lines Present won't show and offers
 **Add blank line**, and their page in the preview is marked **Not shown in
 Present**.
 
-- **<kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>** shows the current note fullscreen, layered over
+- **Present** shows the current note fullscreen, layered over
   the whole app rather than opening a tab. Arrow keys move between slides;
-  <kbd>Esc</kbd> (or menu **View → Stop Presenting**, <kbd>Cmd</kbd><kbd>.</kbd>) returns you exactly
-  where you were. Rebind it in `.config/settings.md` under `## Shortcuts`,
-  row `mahfouz/slidev:present-fullscreen`.
+  <kbd>Esc</kbd> (or menu **View → Stop Presenting**) returns you exactly
+  where you were. Give it a key in **Settings → Shortcuts** or in
+  `.config/settings.md` under `## Shortcuts`, row
+  `mahfouz/slidev:present-fullscreen`. {% include since.html v="0.20.0" %}
+  Its old default, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>, now
+  switches the note between [Source and Preview](/guide/editor/), and Stop
+  Presenting no longer has <kbd>Mod</kbd><kbd>.</kbd>, which opens the
+  [menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor).
 - A note's menu (sidebar, tab, or toolbar ⋯) offers **Present** as a
   regular tab instead, with **Reload**, **Presenter** (opens Slidev's
   presenter view, with speaker notes and a timer, in your system browser),

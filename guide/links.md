@@ -28,6 +28,12 @@ permalink: /guide/links/
   text and URL. **Open** follows the link, **Remove link** keeps the text
   and drops the link, **Save** (or <kbd>Enter</kbd>) applies, <kbd>Esc</kbd> cancels.
   <kbd>Cmd/Ctrl</kbd>+click still opens a link directly.
+- **From the keyboard** {% include since.html v="0.20.0" %}: with the
+  cursor in a link, <kbd>Mod</kbd><kbd>Enter</kbd> opens it, and
+  <kbd>Mod</kbd><kbd>.</kbd> opens its menu: **Open**, **Edit link…**,
+  **Copy link** and **Remove link**, which keeps the text. Removing
+  `[[#Intro]]` leaves `Intro`, not a tag; so does **Remove link** in the
+  link editor. A wikilink inside code doesn't open or create a note.
 - Pasting a bare URL over an empty cursor wraps it as `<url>`; pasting over
   a text selection turns the selection into `[selected text](url)`.
 - **Backlinks**: the right sidebar's "Linked from N notes" section lists
@@ -135,8 +141,10 @@ Open it from the tag's menu:
   while the field is empty, or a tag under **Narrow by**. {% include since.html v="0.13.0" %}
 - In the editor, right-click a tag (in Preview or Source) and choose
   **Rename tag #name…**. With the cursor on a tag and nothing selected,
-  <kbd>Shift</kbd><kbd>F10</kbd> or the <kbd>Menu</kbd> key opens the same
-  menu.
+  <kbd>Shift</kbd><kbd>F10</kbd>, <kbd>Mod</kbd><kbd>.</kbd> {% include since.html v="0.20.0" %}
+  or the <kbd>Menu</kbd> key opens the same menu. Its first item, **Search
+  tag #name**, searches for the tag, as <kbd>Mod</kbd><kbd>Enter</kbd> on
+  it does. {% include since.html v="0.20.0" %}
 
 The dialog counts the notes it will change in each vault. Type the new name
 after the `#`. A tag starts with a letter, followed by letters, digits, `-`

@@ -74,6 +74,12 @@ note](/guide/web/#editing-on-a-phone)). {% include since.html v="0.17.0" %} A mo
 that's on (Suggesting, a published page, a Light or Dark appearance, a
 zoom other than 100%) is tinted. Its menus open upward.
 
+The bar, like the formatting toolbar, is one stop for <kbd>Tab</kbd>:
+<kbd>←</kbd> and <kbd>→</kbd> move between its controls, <kbd>Home</kbd>
+and <kbd>End</kbd> go to the ends, and <kbd>Esc</kbd> goes back to the
+note. <kbd>F6</kbd> reaches either bar from the note (see [Writing from the
+keyboard](/guide/keyboard-writing/#the-toolbars-and-the-outline)). {% include since.html v="0.20.0" %}
+
 On the left:
 
 - **Word count**: how many words the note has, such as **1,284 words**.
@@ -92,7 +98,9 @@ On the left:
   **!** when a save fails. Point at it for the words, such as **Saved 2m
   ago · Not pushed** (see [The save chip](/guide/git/#the-save-chip)).
   Click it to open the note's **Status** card {% include since.html v="0.15.0" %}:
-  the same words with a line on what they mean, **Commit…** while the note
+  the same words with a line on what they mean, the note's counts, such as
+  **1,284 words · 6,912 characters · 7 min read** {% include since.html v="0.20.0" %},
+  **Commit…** while the note
   has uncommitted changes (it opens [Commit notes](/guide/history/#commit-notes)
   with the note checked), the note's **Auto-commit** switch (see
   [Auto-commit and disk-only notes](/guide/history/#auto-commit-and-disk-only-notes)),
@@ -131,7 +139,8 @@ On the right:
   under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Source / Preview** (an eye in Preview, code brackets in Source): shows
   the mode the note is in; click it to switch (see
-  [The editor](/guide/editor/))
+  [The editor](/guide/editor/)). <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
+  (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) does the same {% include since.html v="0.20.0" %}
 - **Appearance** (a half circle, a sun or a moon, tinted while it's Light
   or Dark): shows this note in
   **Light** or **Dark** whatever the app's

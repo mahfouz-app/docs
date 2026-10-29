@@ -42,6 +42,12 @@ and choose **To do**, **In progress** or **Done**.
 Preview shows an in-progress task with a partly filled checkbox, and so
 does a [published page](/guide/publishing/).
 
+{% include since.html v="0.20.0" %} From the keyboard, with the cursor on a
+task line, <kbd>Mod</kbd><kbd>Enter</kbd> ticks it as a click would, even
+while Suggesting. <kbd>Mod</kbd><kbd>.</kbd> opens its menu: **To do**,
+**In progress** and **Done**, then **Change due date…**, **Change
+assignee…** and **Remove due date**.
+
 ## In the editor
 
 On a task line, the assignee and the due date show as two small chips after

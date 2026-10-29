@@ -94,6 +94,9 @@ doesn't open it.
   a new mention in its place. {% include since.html v="0.13.0" %}
 - Hover a mention to see the person's card: their email, phone, GitHub and
   website. Click the card to open their note. {% include since.html v="0.15.0" %}
+  The card also shows while the cursor is in the mention, without taking
+  focus, so you keep typing; <kbd>Mod</kbd><kbd>Enter</kbd> opens the
+  person's note. {% include since.html v="0.20.0" %}
 - To find every note that mentions someone, choose **Find mentions** in the
   [person menu](#person-chips) (right-click the mention).
   {% include since.html v="0.15.0" %} From the keyboard,
