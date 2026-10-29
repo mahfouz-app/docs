@@ -130,7 +130,8 @@ On the right:
 - **Comment** (a speech bubble with a plus): comments on the selected text, or opens the comment
   under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Source / Preview** (an eye in Preview, code brackets in Source): shows
-  the mode the note is in; click it to switch (see
+  the mode the note is in; click it to pick Preview, Source or
+  Vim {% include since.html v="0.20.0" %} (see
   [The editor](/guide/editor/))
 - **Appearance** (a half circle, a sun or a moon, tinted while it's Light
   or Dark): shows this note in

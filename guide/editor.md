@@ -13,7 +13,8 @@ highlights, tags, wikilinks, media) rather than showing raw symbols.
 There are two independent view modes for how much raw syntax stays
 visible, switched with the bottom bar's view button (an eye in Preview, code
 brackets in Source)
-(remembered on this device, not per note):
+(remembered on this device, not per note). The button opens a menu of
+Preview, Source and [Vim](#vim-mode). {% include since.html v="0.20.0" %}
 
 - **Source** (default): most Markdown punctuation stays visible
   (`# `, `**`, `_`, `[text](url)`, etc.) so it's obvious what you're
@@ -93,6 +94,40 @@ Other editor behavior:
   <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back. {% include since.html v="0.12.0" %}
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
+
+## Vim mode {% include since.html v="0.20.0" %} {#vim-mode}
+
+Pick **Vim** from the bottom bar's view menu to edit with vim keys. Vim
+shows the raw Markdown as Source does, with relative line numbers, and the
+bottom bar shows which vim mode you're in: **NORMAL**, **INSERT** or
+**VISUAL**. The choice is remembered on this device, like Preview and
+Source. The [command palette](/guide/command-palette/) also has
+**Switch to Vim mode**, which has no default key; you can give it one
+(see [Keyboard shortcuts](/guide/shortcuts/)).
+
+Vim is for the note editor only. Revisions, Trash previews, shared notes,
+Markdown files opened from outside a vault and the phone layout don't use
+it.
+
+- `:w` saves and commits at once, like
+  [Manual save](/guide/history/). It commits the vault's waiting changes,
+  not just this note's. A
+  [disk-only note](/guide/history/#auto-commit-and-disk-only-notes) isn't
+  committed.
+- `:q` closes the tab. A pinned tab has to be unpinned first.
+- `:wq` does both.
+- <kbd>Esc</kbd> first closes an open menu (wikilinks, `@` mentions, the
+  slash menu, emoji). A second <kbd>Esc</kbd> goes back to Normal mode.
+- In Insert mode, <kbd>Ctrl</kbd><kbd>P</kbd> and
+  <kbd>Ctrl</kbd><kbd>N</kbd> list words from the note (the nearest ones
+  above the cursor first for <kbd>Ctrl</kbd><kbd>P</kbd>, below for
+  <kbd>Ctrl</kbd><kbd>N</kbd>), and move through any list that's open.
+  <kbd>Ctrl</kbd><kbd>Y</kbd> accepts the highlighted word and
+  <kbd>Ctrl</kbd><kbd>E</kbd> closes the list. On the web on Windows and
+  Linux the browser keeps <kbd>Ctrl</kbd><kbd>N</kbd> (new window), so use
+  <kbd>Ctrl</kbd><kbd>P</kbd> there.
+- In [Suggesting mode](/guide/track-changes/), edits made with vim keys
+  are tracked as suggestions, like any other edit.
 
 ## Find and replace
 
