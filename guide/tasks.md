@@ -115,7 +115,9 @@ your own login.
 
 The assignee shows as a [person chip](/guide/people/#person-chips): click
 the name to open the person's note, or right-click the chip for the person
-menu. {% include since.html v="0.15.0" %}
+menu. {% include since.html v="0.15.0" %} In a note,
+<kbd>Cmd/Ctrl</kbd>+click opens the person's note in the background.
+{% include since.html v="0.20.0" %}
 
 To change a task's assignee, click the ▾ on its assignee chip
 {% include since.html v="0.15.0" %}, or focus the chip and press

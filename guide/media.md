@@ -11,12 +11,17 @@ permalink: /guide/media/
   extension (video: mp4/webm/ogv/mov/m4v; audio: mp3/wav/ogg/oga/m4a/flac/
   aac; anything else: image). In Preview mode the embed takes the place of
   its line; in Source mode the line stays visible above the embed. To
-  change the path or alt text, switch to Source.
+  change the path or alt text, switch to Source, or choose **Edit** on its
+  toolbar. {% include since.html v="0.20.0" %}
+- **Viewing an image** {% include since.html v="0.20.0" %}: in Preview, a
+  click on an image on its own line opens it full size in the viewer,
+  with its actions (see
+  [Clicking images and diagrams](/guide/editor/#clicking-images-and-diagrams)).
 - **From the keyboard** {% include since.html v="0.20.0" %}: in Preview,
   <kbd>↓</kbd> or <kbd>↑</kbd> from the next line moves onto an image or
-  media card, then to its **Replace** and **Delete** buttons.
-  <kbd>Enter</kbd> or <kbd>Space</kbd> on the card, or
-  <kbd>Mod</kbd><kbd>.</kbd> on the image's line, opens its menu:
+  media card, then to its toolbar's buttons. <kbd>Enter</kbd> or
+  <kbd>Space</kbd> on the card opens the viewer. <kbd>Mod</kbd><kbd>.</kbd>
+  on the card or the image's line opens its menu:
   **Replace file…**, **Width** (**25%**, **50%**, **75%** or **Full
   width**, the same width dragging the handle sets, kept on this device),
   **Copy path** and **Delete**. A read-only note, or a shared note you can

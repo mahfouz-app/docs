@@ -92,16 +92,19 @@ and an outline heading too.
 
 What's at the cursor comes first in the menu:
 
-- **A link**: **Open** (<kbd>Mod</kbd><kbd>Enter</kbd>), **Edit link…**,
-  **Copy link** and **Remove link**, which keeps the link's text. Removing
-  `[[#Intro]]` leaves `Intro`, not a `#Intro` tag. While you're suggesting,
-  **Remove link** asks you to switch to Editing.
+- **A link, a tag, a mention or a path**: its card, the same one a
+  right-click opens (see
+  [Clicking in Preview](/guide/editor/#clicking-links-tags-and-people)).
+  {% include since.html v="0.20.0" %} **Remove link** keeps the link's
+  text: removing `[[#Intro]]` leaves `Intro`, not a `#Intro` tag. While
+  you're suggesting, **Edit link…** and **Remove link** are written as
+  your suggestions, or refused where a suggestion can't go, such as a
+  change to a link's URL.
 - **A task line**: **To do**, **In progress** and **Done**, then **Change
   due date…**, **Change assignee…** and **Remove due date**.
 - **A suggestion**: who made it and when, **Accept**, **Reject**, **Next
   suggestion** and **Previous suggestion**. After you accept or reject one,
   the next suggestion is selected.
-- **A tag**: **Search tag #name**, then the tag's usual items.
 - **A table**: **Wrap text** (checked when it's on), then **Convert to
   database…** where the table offers it.
 - **An image or media file**: see [Images](#images-and-media).
@@ -138,15 +141,21 @@ day's [tasks block](/guide/daily-notes/#the-tasks-block).
 A hint, "↑ ↓ move · ↵ open · Esc back to text", shows when you move into a
 widget.
 
-A rendered diagram is first one stop: <kbd>Enter</kbd> shows its source,
-and while it's focused, <kbd>+</kbd> and <kbd>-</kbd> zoom in and out and
-<kbd>0</kbd> resets the zoom. Its **Edit** button comes next.
+A rendered diagram is first one stop: <kbd>Enter</kbd> opens it in the
+viewer, as a click does (an empty diagram opens its editor), and while
+it's focused, <kbd>+</kbd> and <kbd>-</kbd> zoom in and out and
+<kbd>0</kbd> resets the zoom. {% include since.html v="0.20.0" %} Its
+toolbar's buttons come next. A selected block takes <kbd>Enter</kbd>, and
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> removes it, except a database
+view (see
+[Clicking in Preview](/guide/editor/#clicking-images-and-diagrams)).
 
 ### Images and media
 
-An image or media card is one stop, followed by **Replace** and
-**Delete**. <kbd>Enter</kbd> or <kbd>Space</kbd> on the card, or
-<kbd>Mod</kbd><kbd>.</kbd> on the image's line, opens its menu:
+An image or media card is one stop, followed by its toolbar's buttons.
+<kbd>Enter</kbd> or <kbd>Space</kbd> on the card opens the viewer.
+{% include since.html v="0.20.0" %} <kbd>Mod</kbd><kbd>.</kbd> on the card
+or the image's line opens its menu:
 
 - **Replace file…**
 - **Width**: **25%**, **50%**, **75%** or **Full width**. This is the same
@@ -159,9 +168,10 @@ In a read-only note, and in a shared note you can only comment on,
 
 ## A person's card
 
-While the cursor is in a [mention](/guide/people/#mentions) of someone in
-your People, their card shows under it, as it does on hover. The card
-doesn't take focus, so you keep typing.
+With the cursor in a [mention](/guide/people/#mentions) of someone in
+your People, <kbd>Mod</kbd><kbd>.</kbd> opens their card, with their
+details and the person's actions, and <kbd>Mod</kbd><kbd>Enter</kbd> opens
+their note. {% include since.html v="0.20.0" %}
 
 ## Moving sections and list items
 
