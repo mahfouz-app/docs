@@ -101,6 +101,13 @@ chip: {% include since.html v="0.13.0" %}
   part that would run into its neighbours is greyed out there too.
   {% include since.html v="0.17.0" %}
 - **Type** anything else, such as `/`, `-` or a word, between the chips.
+- **Keep text as written** by putting it in square brackets: `[Summary]
+  YYYY` inserts `Summary 2026`, where `Summary YYYY` would read the `mm`
+  in Summary as the minute. A word that shows a chip by mistake has
+  **Keep “Summary” as text** in its chip's menu, which adds the brackets
+  for you. The brackets show dimmed, and no part can go inside them.
+  Mahfouz versions before 0.20.0 show the brackets and still read the
+  parts inside them. {% include since.html v="0.20.0" %}
 - **Arrow keys** step over a chip as one character, and
   <kbd>Backspace</kbd> deletes it whole. <kbd>Alt</kbd><kbd>←</kbd> and
   <kbd>Alt</kbd><kbd>→</kbd> (also <kbd>Ctrl</kbd><kbd>←</kbd> and
