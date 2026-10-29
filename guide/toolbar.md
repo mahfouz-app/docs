@@ -138,9 +138,11 @@ On the right:
 - **Comment** (a speech bubble with a plus): comments on the selected text, or opens the comment
   under the cursor (see [Comments](/guide/track-changes/#comments))
 - **Source / Preview** (an eye in Preview, code brackets in Source): shows
-  the mode the note is in; click it to switch (see
+  the mode the note is in; click it to pick Preview, Source or
+  Vim {% include since.html v="0.20.0" %} (see
   [The editor](/guide/editor/)). <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>
-  (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) does the same {% include since.html v="0.20.0" %}
+  (<kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> on the web) switches between
+  Preview and Source {% include since.html v="0.20.0" %}
 - **Appearance** (a half circle, a sun or a moon, tinted while it's Light
   or Dark): shows this note in
   **Light** or **Dark** whatever the app's
