@@ -204,7 +204,9 @@ at once, and every change in the step applies as you make it.
   options yet; in a database you can add them from a cell.
 - **Date** and **Date & time**: **Show as** **Date** or **Relative**, and a
   format: `YYYY-MM-DD`, `DD MMM YYYY` or `MM/DD/YYYY` (Date & time adds
-  `HH:mm`), each shown with an example, or **Custom…** to type your own.
+  `HH:mm`), each shown with an example, or **Custom…** to type your own
+  (the same field as a [Date field's](/guide/fields/#dates); text in
+  square brackets is kept as written {% include since.html v="0.20.0" %}).
 - **Relation…** (a database column): see
   [Create a relation](/guide/databases/#create-a-relation).
 
