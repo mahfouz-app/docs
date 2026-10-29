@@ -2,7 +2,7 @@
 layout: guide
 title: "The editor"
 since: "0.2.0"
-description: "Editing and preview modes, right-click menus, the outline, the table of contents and page preview."
+description: "Editing and preview modes, what a click does in Preview, right-click menus, the outline, the table of contents and page preview."
 permalink: /guide/editor/
 ---
 
@@ -87,14 +87,14 @@ Other editor behavior:
   link detection) are off (see
   [Text substitutions](/guide/spelling/#text-substitutions)).
   {% include since.html v="0.14.0" %}
-- <kbd>Cmd/Ctrl</kbd>+click on a link, `[[wikilink]]`, or a rendered link-card opens
-  it (external URLs in your system browser; wikilinks by switching to that
-  note). With the cursor on it, <kbd>Mod</kbd><kbd>Enter</kbd> does the
-  same, and <kbd>Mod</kbd><kbd>.</kbd> opens its menu (see
+- In Preview, a click on a link, a tag or a person follows it, and a
+  click on an image or a diagram opens it larger (see
+  [Clicking in Preview](#clicking-in-preview)). {% include since.html v="0.20.0" %}
+  In Source, a click places the cursor and <kbd>Cmd/Ctrl</kbd>+click
+  follows a link. With the cursor on a link, <kbd>Mod</kbd><kbd>Enter</kbd>
+  follows it in either mode, and <kbd>Mod</kbd><kbd>.</kbd> opens its card (see
   [Writing from the keyboard](/guide/keyboard-writing/#acting-on-whats-at-the-cursor)).
   {% include since.html v="0.20.0" %}
-- In Preview, a plain click on a link opens a small editor for it (see
-  [Links](/guide/links/#links-wikilinks--backlinks)).
 - **Find and replace**: <kbd>Cmd/Ctrl</kbd><kbd>F</kbd> (or toolbar) opens the
   [Find and Replace bar](#find-and-replace).
 - **Find selection**: <kbd>Cmd/Ctrl</kbd><kbd>Alt</kbd><kbd>F</kbd> jumps to the next
@@ -103,6 +103,120 @@ Other editor behavior:
   <kbd>Cmd/Ctrl</kbd><kbd>G</kbd> to keep going, <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd> to go back. {% include since.html v="0.12.0" %}
 - **Undo/redo**: standard <kbd>Cmd/Ctrl</kbd><kbd>Z</kbd> / <kbd>Cmd/Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>, also available
   as toolbar buttons.
+
+## Clicking in Preview {% include since.html v="0.20.0" %} {#clicking-in-preview}
+
+In Preview, a click does what you'd expect from what's under it:
+
+- **A reference**, such as a link, a tag or a person, goes where it points.
+- **A block**, such as an image or a diagram, opens larger.
+- **Anything else is text**: a click places the cursor.
+
+Everything else a reference offers is one right-click away, and a block's
+other actions are on the toolbar that shows when you point at it.
+
+The first time a click follows a link, Mahfouz says so once: "Links open on
+click. Right-click to edit."
+
+### Links, tags and people {#clicking-references}
+
+References are wikilinks (in table cells too), Markdown links, bare URLs,
+paths to files on your computer, `#tags`, [mentions](/guide/people/#mentions)
+and the [person chips](/guide/people/#person-chips) of a task's assignee and
+of a note's attributes.
+
+| Do this | What happens |
+|---|---|
+| Click | Follows it. A note opens in its tab: the tab comes to the front if the note is already open, or opens new. A URL opens in your browser, a path shows the file in your file manager, a tag opens the [Search tab](/guide/links/#search), and a person opens their note. |
+| <kbd>Cmd/Ctrl</kbd>+click | Opens a note or a person's note in the background: its tab opens, and you stay on this note. A URL, a path or a tag opens as with a click. |
+| <kbd>Shift</kbd>+click | Extends the selection. Nothing opens. |
+| Right-click | Opens the reference's card. |
+| Rest the mouse on it for half a second | Shows a small preview: the note's title and folder, the URL, or the person's name and role. A tag has none. |
+
+From the keyboard, put the cursor on the reference: <kbd>Mod</kbd><kbd>Enter</kbd>
+follows it, and <kbd>Mod</kbd><kbd>.</kbd>, <kbd>Shift</kbd><kbd>F10</kbd>
+or the <kbd>Menu</kbd> key opens its card.
+
+**The card** shows the preview at the top, then the reference's actions.
+**Open** shows its keys. <kbd>↑</kbd> and <kbd>↓</kbd> move between the
+actions, and <kbd>Esc</kbd> closes the card and puts you back in the note.
+
+- **A link**: **Open**, **Open in background** (for a note), **Edit link…**,
+  **Edit text**, **Copy link** and **Remove link**, which keeps the text.
+  **Edit link…** opens the [link editor](/guide/links/#links-wikilinks--backlinks).
+  A bare URL has no **Remove link**.
+- **A tag**: **Search #tag**, **Rename tag…**, **Merge into…**,
+  **Edit text** and **Copy tag**.
+- **A person**: their card (email, phone, GitHub and website), then **Open
+  person**, **Open in background**, **Change person…**, **Edit text** and
+  the person's other actions, such as **Change handle…** and **Find
+  mentions** (see [Person chips](/guide/people/#person-chips)).
+- **A path**: **Reveal in Finder** (**Reveal in File Explorer** on
+  Windows, **Open Containing Folder** on Linux) and **Copy path**.
+- A reference inside commented text adds **Open thread**: a click on the
+  reference follows it, so the card is where you reach the
+  [comment](/guide/track-changes/#comments).
+
+To change a reference's text, choose **Edit text** on its card, move the
+cursor into it with the arrow keys, or click just beside it.
+
+In Source, nothing changes: a click places the cursor, and
+<kbd>Cmd/Ctrl</kbd>+click follows the reference, in the background.
+
+### Images and diagrams {#clicking-blocks}
+
+Blocks are images, diagrams (Mermaid, draw.io, Excalidraw and other
+plugin diagrams), math on its own lines, a `[TOC]` table of contents and
+[database views](/guide/databases/).
+
+- **A click on an image or a diagram** opens the viewer: the image or
+  diagram at full size over the app. Drag to pan, and use **Zoom out**,
+  **Zoom in** and **Fit** to zoom. Its bar has **Edit**, **Copy**,
+  **Delete**, **⋯** (**Replace…** and **Download**, for an image file) and
+  **Close**. <kbd>Esc</kbd> closes it. Dragging to pan inside a diagram
+  never opens the viewer.
+- **Edit** opens the plugin's own editor in a tab for draw.io, Excalidraw
+  and Mermaid; for anything else, it shows the block's source in the note.
+  A diagram that's empty or failed to draw opens its editor on a click.
+- **A click on a math block or a table of contents** shows its source to
+  edit. A click on a table of contents entry still jumps to its heading.
+- **A click on a database view's frame**, such as its header or footer,
+  opens the database. Its rows and buttons work as before.
+- **Pointing at a block** shows its toolbar on the block: **View**,
+  **Edit**, **Copy**, **Delete** and **⋯** on a wide block, and **View**
+  and **⋯** on a narrow one, with the rest in the menu. Only the actions
+  that apply show.
+- A video or audio player keeps its own controls.
+
+From the keyboard, select the block, with <kbd>Shift</kbd> and the arrow
+keys or by moving onto it: <kbd>Enter</kbd> opens it as a click would,
+<kbd>Delete</kbd> or <kbd>Backspace</kbd> removes it, and
+<kbd>Shift</kbd><kbd>F10</kbd> lists all of its actions.
+
+### Read-only notes and suggestions {#clicking-read-only}
+
+A revision, a note in Trash and a [shared note](/guide/sharing/) you can
+only read work the same way, without the actions that change the note:
+no **Edit link…**, **Edit text**, **Remove link**, **Edit**, **Delete** or
+**Replace…**. A note shared with you isn't in any of your vaults, so its
+wikilinks don't open and its tags don't search.
+
+While you're [suggesting](/guide/track-changes/), **Edit link…**,
+**Remove link** and **Delete** are written as your suggestions, or
+refused where a suggestion can't go. **Replace…** isn't offered.
+
+### On a phone {#clicking-on-a-phone}
+
+- **While you read** a note, a tap follows a reference or opens a block in
+  the viewer, as a click does.
+- **While you edit**, a tap on a reference places the cursor in it, so you
+  can change its text, and a small **Open** button shows under it to
+  follow it.
+- **Touch and hold** a reference to open its card, or a block for its
+  menu, as a sheet from the bottom of the screen.
+
+The first time a tap follows a link, the notice reads "Links open on tap.
+Touch and hold for more."
 
 ## Find and replace
 
@@ -184,6 +298,9 @@ or the <kbd>Menu</kbd> key opens this menu for the selection, or a menu
 for the link, task, suggestion, tag, table or image at the cursor (see
 [The menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor)).
 {% include since.html v="0.20.0" %}
+
+**On a link, a tag, a person or a path**, a right-click opens its card (see
+[Clicking in Preview](#clicking-in-preview)). {% include since.html v="0.20.0" %}
 
 **Anywhere else in the editor**, a right-click opens the system's menu:
 

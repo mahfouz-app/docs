@@ -117,14 +117,21 @@ The built-in `mahfouz` registry has:
   - If the diagram changes in the note while its tab is open, the tab
     stops saving and offers **Copy my version** or **Reload from note**,
     so neither edit is overwritten.
-- **Draw.io diagrams**: ```` ```drawio ```` blocks render as diagrams. Click
-  one, or insert one from the toolbar's **Embed** menu, to edit it in a
-  draw.io tab. Changes save back into the note as you go.
+- **Draw.io diagrams**: ```` ```drawio ```` blocks render as diagrams.
+  **Edit** on a diagram, or inserting one from the toolbar's **Embed**
+  menu, opens it in a draw.io tab. Changes save back into the note as you
+  go.
+- **Clicking a diagram** {% include since.html v="0.20.0" %}: in Preview, a
+  click opens the diagram in the viewer, with pan and zoom, and **Edit**,
+  **Copy** and **Delete**. Pointing at a diagram shows the same actions on
+  its toolbar. **Edit** opens the plugin's tab, and a click on an empty
+  diagram opens it straight away. See
+  [Clicking in Preview](/guide/editor/#clicking-blocks).
 - **Diagrams from the keyboard** {% include since.html v="0.20.0" %}: in
   Preview, <kbd>↓</kbd> from the line above a rendered diagram focuses it.
-  <kbd>Enter</kbd> shows its source, <kbd>+</kbd> and <kbd>-</kbd> zoom in
-  and out, <kbd>0</kbd> resets the zoom, and <kbd>↓</kbd> moves on to
-  **Edit**. A plugin's placeholder card, shown while its plugin is off, is
+  <kbd>Enter</kbd> opens it in the viewer, <kbd>+</kbd> and <kbd>-</kbd> zoom in
+  and out, <kbd>0</kbd> resets the zoom, and <kbd>↓</kbd> moves on to its
+  toolbar's buttons. A plugin's placeholder card, shown while its plugin is off, is
   reached the same way (see [Block widgets](/guide/keyboard-writing/#block-widgets)).
 - **Git LFS**: see [Git LFS for large media](/guide/git/#git-lfs-for-large-media).
 - **Notion import**: adds Notion to the Import dialog. See

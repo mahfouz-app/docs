@@ -165,7 +165,9 @@ So that prices don't turn into math, the rules are Pandoc's:
 - `\$` is a literal dollar sign.
 
 Math is rendered in Preview mode, where its source shows while the cursor
-is inside it, and on [published pages](/guide/publishing/).
+is inside it, and on [published pages](/guide/publishing/). In Preview, a
+click on a formula on its own lines shows its source to edit, and pointing
+at it shows **Edit**, **Copy** and **Delete**. {% include since.html v="0.20.0" %}
 
 ## Table of contents
 
@@ -177,7 +179,9 @@ heading levels, counted from the shallowest level listed, and a skipped
 level counts as 0: a level 4 heading straight under a level 2 one is
 1.0.1. {% include since.html v="0.14.0" %} It shows in Preview mode, where clicking an entry jumps to the
 heading, and on [published pages](/guide/publishing/). In Preview, the
-heading's line stays shaded until you click, type or move the cursor. With
+heading's line stays shaded until you click, type or move the cursor. A
+click anywhere else on the list shows the `[TOC]` line to edit, and
+pointing at it shows **Edit**, **Copy** and **Delete**. {% include since.html v="0.20.0" %} With
 no headings, Preview shows **No headings yet** and a published page shows
 nothing. {% include since.html v="0.20.0" %} From the keyboard, <kbd>↓</kbd>
 from the line above moves into the list; <kbd>↑</kbd> and <kbd>↓</kbd>

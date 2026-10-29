@@ -93,7 +93,9 @@ whatever its mode: see
 Select some text and click **Comment** (the speech bubble with a plus) in
 the bottom bar, type your comment and press <kbd>Enter</kbd> or click
 **Comment**. The commented text gets a soft amber highlight. Nothing is
-saved until you send the first comment; **Cancel** drops it.
+saved until you send the first comment; **Cancel** drops it. A click on a
+link inside commented text follows the link; its card's **Open thread**
+opens the comment. {% include since.html v="0.20.0" %}
 
 The **Comments** section in the right sidebar lists the note's open
 threads, with resolved ones collapsed at the bottom; it's where you find
@@ -132,6 +134,12 @@ in its card when the [comment margin](#the-comment-margin) shows:
   comment is cut off after six lines behind **Show more**, and `@handles`
   in it are marked. A comment that was changed after it was sent shows
   **(edited)** after its date.
+- **Links, wikilinks, URLs, tags and people** in a comment work as they
+  do in the note: a click follows them, <kbd>Cmd/Ctrl</kbd>+click opens a
+  note in the background, and a right-click opens their card, without the
+  actions that edit (see [Clicking in Preview](/guide/editor/#clicking-in-preview)).
+  In the right sidebar's **Comments** section they're shown but don't
+  respond to clicks; open the thread to use them. {% include since.html v="0.20.0" %}
 - **Your own comments** have a **⋯** (**Comment actions**) that shows when
   you point at the comment or move to it with the keyboard, and always on a
   phone. Its menu has **Edit** and **Delete comment…**. The agent's

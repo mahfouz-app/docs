@@ -21,17 +21,26 @@ permalink: /guide/links/
   Without a folder, `[[John]]` picks the John nearest the vault root.
 - **Different link text**: `[[people/John|Johnny]]` links to John but
   reads "Johnny".
-- **Editing a link in Preview**: click it to open a small editor. For a
+- **Opening a link in Preview** {% include since.html v="0.20.0" %}: click
+  it. A note opens in its tab, and a URL in your browser.
+  <kbd>Cmd/Ctrl</kbd>+click opens a note in the background, so you stay
+  on this one. Rest the mouse on a link to see where it goes. See
+  [Clicking in Preview](/guide/editor/#clicking-in-preview).
+- **Editing a link in Preview**: right-click it and choose **Edit link…**
+  to open a small editor. {% include since.html v="0.20.0" %} For a
   wikilink, pick the note (notes that share a title show their folder,
   and picking one fills in `folder/Title`; or type a name that doesn't
   exist yet to link to a new note) and set the text it shows; for a regular link, change its
   text and URL. **Open** follows the link, **Remove link** keeps the text
   and drops the link, **Save** (or <kbd>Enter</kbd>) applies, <kbd>Esc</kbd> cancels.
-  <kbd>Cmd/Ctrl</kbd>+click still opens a link directly.
+  To type in the link's text instead, choose **Edit text** on its card,
+  move the cursor into it with the arrow keys, or click just beside it.
+  {% include since.html v="0.20.0" %}
 - **From the keyboard** {% include since.html v="0.20.0" %}: with the
   cursor in a link, <kbd>Mod</kbd><kbd>Enter</kbd> opens it, and
-  <kbd>Mod</kbd><kbd>.</kbd> opens its menu: **Open**, **Edit link…**,
-  **Copy link** and **Remove link**, which keeps the text. Removing
+  <kbd>Mod</kbd><kbd>.</kbd> opens its card: **Open**, **Open in
+  background**, **Edit link…**, **Edit text**, **Copy link** and
+  **Remove link**, which keeps the text. Removing
   `[[#Intro]]` leaves `Intro`, not a tag; so does **Remove link** in the
   link editor. A wikilink inside code doesn't open or create a note.
 - Pasting a bare URL over an empty cursor wraps it as `<url>`; pasting over
@@ -113,7 +122,9 @@ with `tag:name` in its field, listing the notes that have that tag in
 every vault: {% include since.html v="0.13.0" %}
 
 - In Preview, click the tag. In Source, <kbd>Cmd/Ctrl</kbd>+click it (a
-  plain click places the cursor so you can edit it).
+  plain click places the cursor so you can edit it). In Preview, to edit
+  it, choose **Edit text** on its card (right-click it), or click just
+  beside it. {% include since.html v="0.20.0" %}
 - A `#tag` on a task title in the [Tasks](/guide/tasks/) view, a chip in a
   note's `tags` attribute, and a tag in the right sidebar's **Tags** section
   work the same way.
@@ -140,10 +151,10 @@ Open it from the tag's menu:
 - In the [Search tab](#search), right-click a tag in the list it shows
   while the field is empty, or a tag under **Narrow by**. {% include since.html v="0.13.0" %}
 - In the editor, right-click a tag (in Preview or Source) and choose
-  **Rename tag #name…**. With the cursor on a tag and nothing selected,
+  **Rename tag…** on its card. {% include since.html v="0.20.0" %} With the cursor on a tag and nothing selected,
   <kbd>Shift</kbd><kbd>F10</kbd>, <kbd>Mod</kbd><kbd>.</kbd> {% include since.html v="0.20.0" %}
-  or the <kbd>Menu</kbd> key opens the same menu. Its first item, **Search
-  tag #name**, searches for the tag, as <kbd>Mod</kbd><kbd>Enter</kbd> on
+  or the <kbd>Menu</kbd> key opens the same card. Its first item, **Search
+  #name**, searches for the tag, as <kbd>Mod</kbd><kbd>Enter</kbd> on
   it does. {% include since.html v="0.20.0" %}
 
 The dialog counts the notes it will change in each vault. Type the new name
