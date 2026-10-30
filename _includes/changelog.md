@@ -1,4 +1,29 @@
 
+## 0.21.0 (2026-10-30) {#v0.21.0}
+
+### Features
+
+* The built-in registry grants the decryptor role, no plugin named
+* Push: let the desktop app keep the push due list current
+* Read plugin capabilities from the catalog, wizard and copy name no plugin
+* Publish any fence a plugin draws, no language list
+* Editor: Paste as menu with Keep formatting and Plain text
+* Publish: run publishing and Markdown export in the background
+* Fields: keep [text] as written in a custom date format
+* Editor: paste formatted text from any app as Markdown
+
+### Improvements
+
+* Build on macos-15; GitHub retires macos-14 on Nov 2
+* User Interface: one text field with its submit inside it
+* User Interface: one collapsible header and disclosure chevron
+
+### Bug fixes
+
+* Editor: style lists inside a quote like the rest of the quote
+* Databases: an option rename follows a Board's column order
+
+
 ## 0.20.0 (2026-10-29) {#v0.20.0}
 
 ### Features
