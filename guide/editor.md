@@ -65,6 +65,18 @@ Other editor behavior:
     and comments included.
   - <kbd>Mod</kbd><kbd>Shift</kbd><kbd>V</kbd> (**Paste as Plain Text**)
     pastes the text without formatting.
+  - <kbd>Mod</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>V</kbd> (**Paste with
+    Formatting**) always keeps the formatting, even where a plain paste
+    would paste the text: code from a code editor, a selection that's all
+    code, or inside a code block. Copying from Mahfouz still pastes the
+    Markdown, and a copy with no formatting pastes its text.
+    {% include since.html v="0.21.0" %}
+  - The right-click menu's **Paste as** submenu offers both: **Keep
+    formatting** and **Plain text** (see [Right-click menus](#right-click-menus)).
+    Both are in the command palette too, and the desktop app's Edit menu has
+    **Paste with Formatting** next to **Paste as Plain Text**. On the web,
+    your browser may ask you to allow the paste first.
+    {% include since.html v="0.21.0" %}
 - An empty heading on the cursor's line, such as a `## ` you've just typed,
   shows its level as a gray hint (**Heading 2**) until you type its text,
   in Source and Preview. The hint is never saved, and it goes when the
@@ -379,6 +391,8 @@ inside a selection.
 own menu:
 
 - **Cut**, **Copy**, **Paste**
+- **Paste as**, with **Keep formatting** and **Plain text**
+  {% include since.html v="0.21.0" %}
 - **Comment** (see [Comments](/guide/track-changes/#comments))
 - the toolbar's **Style**, **Text**, **Insert** and **Paragraph** groups,
   in the [toolbar](/guide/toolbar/)'s order and with its labels. Each
@@ -406,6 +420,8 @@ and on an image, a diagram, math or a table of contents, the block's menu
 - In the macOS desktop app, that menu (spelling suggestions, **Look Up**,
   **Writing Tools**) has a **Format** submenu with the same items, in
   place of the system's Font submenu. {% include since.html v="0.12.0" %}
+  Right after **Paste** it also has a **Paste as** submenu, with **Keep
+  formatting** and **Plain text**. {% include since.html v="0.21.0" %}
 - On the web, and in the desktop app on Windows and Linux, it's your
   browser's or system's usual menu.
 - In an unlocked encrypted note, no menu opens.
