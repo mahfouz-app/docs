@@ -91,9 +91,10 @@ whatever its mode: see
 ## Comments
 
 Select some text and click **Comment** (the speech bubble with a plus) in
-the bottom bar, type your comment and press <kbd>Enter</kbd> or click
-**Comment**. The commented text gets a soft amber highlight. Nothing is
-saved until you send the first comment; **Cancel** drops it. A click on a
+the bottom bar, type your comment and press <kbd>Enter</kbd> or click the
+send arrow at the end of the field. The commented text gets a soft amber
+highlight. Nothing is saved until you send the first comment; the **×**
+beside the send arrow drops it. A click on a
 link inside commented text follows the link; its card's **Open thread**
 opens the comment. {% include since.html v="0.20.0" %}
 
@@ -146,9 +147,10 @@ in its card when the [comment margin](#the-comment-margin) shows:
   phone. Its menu has **Edit** and **Delete comment…**. The agent's
   comments have a **⋯** with **Delete comment…** only.
 - **Edit** turns the comment into a field in place, with your text in it.
-  Press <kbd>Enter</kbd> (or click **Save**) to save, or <kbd>Esc</kbd>
-  (or **Cancel**) to leave it as it was; `@` picks people as in a reply.
-  **Save** is off while the text is empty or unchanged. If the edit can't
+  Press <kbd>Enter</kbd> (or click the **✓** at the end of the field) to
+  save, or <kbd>Esc</kbd> (or the **×** beside it) to leave it as it was;
+  `@` picks people as in a reply. The **✓** is off while the text is empty
+  or unchanged. If the edit can't
   be saved, the thread says why and keeps your text.
 - **Delete comment…** asks "Delete this comment?" first. The replies stay.
   Deleting the first comment keeps the highlight, and the next reply
@@ -160,12 +162,14 @@ in its card when the [comment margin](#the-comment-margin) shows:
 - **Resolve** marks the thread done. The highlight goes away, but the
   thread stays in the note, folded to its first comment, **Show N more
   replies** and who resolved it. **Reopen** brings it back, and so does
-  replying: the button then reads **Reply and reopen**.
+  replying: the field then reads **Reply and reopen**, and its send button
+  shows a curved arrow instead of the send arrow.
 - **Delete thread…** asks "Delete this thread?" first. It removes the
   comments and keeps the text, and one undo
   (<kbd>Cmd/Ctrl</kbd><kbd>Z</kbd>) brings them back.
 - **The reply field** is one line until you click it. Type and press
-  <kbd>Enter</kbd> (or click **Reply**) to send; **Cancel** clears it.
+  <kbd>Enter</kbd> (or click the send arrow at the end of the field) to
+  send; the **×** beside it clears it.
   <kbd>Shift</kbd><kbd>Enter</kbd> adds no new line, because a comment is
   stored on one line. Type `@` to pick someone from the People directory;
   <kbd>Enter</kbd> or <kbd>Tab</kbd> picks them, and <kbd>Esc</kbd> closes
