@@ -2,7 +2,7 @@
 layout: guide
 title: "Tasks"
 since: "0.11.0"
-description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, see every task in a table, on a board or on a calendar, and get reminded when one is due."
+description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, give a bigger task a page of its own with sub-tasks, see every task in a table, on a board or on a calendar, and get reminded when one is due."
 permalink: /guide/tasks/
 ---
 
@@ -136,6 +136,152 @@ To change a task's assignee, click the ▾ on its assignee chip
 
 Like the date picker, these changes apply directly, even in Suggesting mode.
 
+## Task pages {% include since.html v="0.22.0" %} {#task-pages}
+
+A task that needs more than one line can be a page of its own: a note
+with a body, sub-tasks, and its status, due date and assignee as
+[attributes](/guide/attributes/). Task pages are the rows of a Tasks
+database, and they show up wherever task lines do: the
+[Tasks panel](#the-tasks-panel), the [Tasks tab](#the-tasks-view) and the
+rail's dot, a daily note's [tasks block](/guide/daily-notes/#the-tasks-block),
+a [person's page](/guide/people/#a-persons-page) and
+[reminders](#reminders).
+
+### A Tasks database
+
+To make one, choose **New database** and pick the **Tasks**
+[template](/guide/databases/#templates): its columns are **Status**,
+**Due**, **Assignee**, **Parent task** and **Sub-tasks**, and it opens on a
+Board by status, with a Calendar by due date and a Table. You don't have
+to make one first: the first time you add a task page, or
+[turn a task line into one](#turn-into-task-page), in a vault that has
+none, Mahfouz creates **Tasks** at `Tasks/Tasks.md`.
+
+What makes a database a Tasks database is `task_pages: true` in its note's
+frontmatter, which the template writes. **Turn back into a note** removes it
+with the rest of the database.
+
+### What a page holds
+
+Each row is a task, read from its own attributes:
+
+- **Status** is to do, in progress or done. Your own option names work:
+  **Done**, **Complete** and **Completed** read as done, **In progress**
+  and **Doing** as in progress, and anything else, such as **Not started**,
+  as to do. The Tasks tab shows them as **To do**, **In progress** and
+  **Done**. When Mahfouz changes a page's status, it writes the vault's own
+  option for it.
+- **Due** is a date, or a date and a time. A page without one is fine: it's
+  listed under **No date**, between **Upcoming** and **Done**, and never
+  reminds you.
+- **Assignee** is a [person's](/guide/people/) handle, with or without the
+  `@`.
+
+An [encrypted](/guide/encryption/) page isn't listed, and neither is one in
+Trash.
+
+### In the Tasks views
+
+Pages and task lines share one list. A page has a page icon before its
+title, and its **Note** column names its database; click it to open the
+database. Click a page's title to open the page itself, at its top.
+
+The Tasks tab writes a page's changes into the page: ticking it, its
+status, due date and assignee, and its title, which is the page's heading.
+In [Suggesting mode](/guide/track-changes/), a page's title can't be changed
+from the Tasks tab, so the page opens instead.
+
+### Sub-tasks
+
+**Parent task** links a page to the page it belongs to, and **Sub-tasks**
+lists the pages under it. Both are kept in step, as with any
+[relation](/guide/databases/#relations).
+
+- In the Table and the [Tasks panel](#the-tasks-panel), a sub-task sits
+  under its parent when it falls in the same group, such as **Upcoming**.
+  The parent gets a chevron to fold them away and its progress, such as
+  **2/5**: how many of its sub-tasks are done.
+- A sub-task in another group, say one that's overdue while its parent is
+  upcoming, is listed in its own group, naming its parent.
+- On the Board, and in the Table grouped by **Status**, each sub-task is its
+  own card or row, naming its parent.
+
+Which parents you've folded isn't saved.
+
+## Turn into task page {% include since.html v="0.22.0" %} {#turn-into-task-page}
+
+When a task line outgrows its line, make it a page. Choose **Turn into task
+page** from:
+
+- the menu you get by right-clicking a task line's checkbox in a note;
+- a task line's **⋯** in the Tasks tab, or its **⋯** or right-click menu in
+  the [Tasks panel](#the-tasks-panel);
+- the [command palette](/guide/command-palette/), with the cursor on the
+  task line. The action, `turn_into_task_page`, has no default key; you
+  can give it one in [Keyboard shortcuts](/guide/shortcuts/).
+
+Mahfouz then, in one commit:
+
+- creates a page in the Tasks database with the line's title, status, due
+  date and time, and assignee. Tags at the end of the title go into the
+  page's text;
+- replaces the line with a link to the page, such as
+  `- [[Tasks/Call the venue]]`, with no checkbox, so the task is listed once.
+
+The page opens in a background tab, and a notice offers **Open page** and
+**Undo**. **Undo** puts the line back and deletes the page, as long as
+nobody has edited the page since; it works until Mahfouz reloads.
+
+When the vault has no Tasks database yet, Mahfouz asks first: **Create and
+move** creates **Tasks** (its own commit), then moves the task. **Undo**
+keeps the database. With more than one Tasks database, the page goes to the
+one [New task](#new-task) last used in the vault on this device, or else
+the oldest.
+
+Nothing changes, and a notice says why, when:
+
+- the note is in Suggesting mode (a new page can't be a suggestion): the
+  notice offers **Switch to Editing**;
+- the note is [encrypted](/guide/encryption/), since the page would hold the
+  task's text unencrypted;
+- the note has [edits waiting](/guide/when-sync-fails/#edits-to-title-are-waiting)
+  for your choice;
+- the line's title is only tags: give the task a title first;
+- the vault is [encrypted with git-crypt](/guide/encryption/) and locked on
+  this device.
+
+## Recurring task pages {% include since.html v="0.22.0" %} {#recurring-task-pages}
+
+A task page can repeat, such as a weekly report or the monthly rent. Give
+it a **Repeat** attribute: its cell opens a small editor where you pick
+**Every** with a number and a unit (day, week, month or year), the weekdays
+for a weekly rule or the day for a monthly one, and **Repeat from**:
+
+- **Due date**: the next due date is counted from the current one, so a
+  weekly task stays on its weekday even if you finish it late.
+- **Completion date**: the next due date is counted from the day you mark it
+  done.
+
+**Next** shows when the task will next be due. **Save** writes the rule and
+**Clear** removes it. The rule is plain text in the page's frontmatter, so
+you can also type it in the cell or in any editor:
+
+```yaml
+repeat: every week on mon
+repeat: every 2 months
+repeat: every day from completion
+```
+
+When you mark a recurring page done, it isn't put under **Done**: its due
+date moves to the next time, its status goes back to **To do**, and
+**Last completed** (`last_completed`) is set to that day. It's one commit,
+and the notice's **Undo** puts the due date and **Last completed** back. In
+the Tasks tab, a recurring page shows a repeat icon after its title; hover
+it to see the rule.
+
+A rule Mahfouz can't read, such as `every fortnight on mon`, is kept as
+written: the cell says why, and the task doesn't repeat until you fix it.
+
 ## The Tasks panel {% include since.html v="0.16.0" %} {#the-tasks-panel}
 
 Click **Tasks** in the left rail to show your tasks in the left sidebar,
@@ -152,12 +298,17 @@ back; the tab stays open. The button looks pressed while the panel shows.
 - Each task has its checkbox, its due date (in red when it's overdue; just
   the time under **Today**) and its assignee's avatar. Click a task to
   open its note at its line.
+- A [task page](#task-pages) has a page icon, and clicking it opens the
+  page. A parent page has a chevron and its sub-task progress before its
+  date, with its sub-tasks indented under it, and undated pages are
+  grouped under **No date**. {% include since.html v="0.22.0" %}
 - A task's **⋯**, or a right-click, offers **Open note**, **Mark done**
-  (or **Mark to do**) and **Open in Tasks**.
+  (or **Mark to do**) and **Open in Tasks**, and on a task line
+  [**Turn into task page**](#turn-into-task-page). {% include since.html v="0.22.0" %}
 - **New task**, at the foot of the list or the **＋** at the top, asks for
-  a title: press <kbd>Enter</kbd> to add it, due today, to the note
-  [remembered for the vault](#new-task), or <kbd>Esc</kbd> to cancel. If
-  it can't be written, the title stays so you can try again.
+  a title: press <kbd>Enter</kbd> to add it, due today, where
+  [New task puts tasks in the vault](#new-task), or <kbd>Esc</kbd> to
+  cancel. If it can't be written, the title stays so you can try again.
 - The table button at the top, and **Open the Tasks database** at the
   bottom, open the [Tasks tab](#the-tasks-view).
 
@@ -188,7 +339,8 @@ The Tasks tab looks like a [database](/guide/databases/#the-table):
   add, rename or delete views here.
 - The bar at the bottom shows how many tasks there are.
 - Each task's **⋯** offers **Open note**, **Status ▸**, **Set due…** and
-  **Assign…**.
+  **Assign…**, and on a task line **Turn into task page**
+  {% include since.html v="0.22.0" %}.
 - The table shows 25 tasks a page, with the same pager as a database's.
   Changing **Mine**/**Everyone** or the vault goes back to the first page.
 
@@ -197,7 +349,8 @@ The views:
 - **Table** shows **Title**, **Status**, **Due**, **Assignee** and
   **Note** by default, and **Vault** last when you have several vaults. {% include since.html v="0.16.0" %}
   It lists the tasks grouped into **Overdue**, **Today**,
-  **Upcoming** and **Done** (collapsed at first), sorted by due date. An
+  **Upcoming**, **No date** (undated [task pages](#task-pages)
+  {% include since.html v="0.22.0" %}) and **Done** (collapsed at first), sorted by due date. An
   in-progress task carries an **In progress** chip. Edit a task right in
   the table:
   - Tick its checkbox to mark it done, or untick it.
@@ -292,7 +445,9 @@ isn't shown anywhere. {% include since.html v="0.15.0" %}
 ## New task {% include since.html v="0.16.0" %} {#new-task}
 
 **New task**, at the end of the Tasks tab's toolbar, adds a task without
-opening a note. Type its title and press <kbd>Enter</kbd>.
+opening a note. Type its title and press <kbd>Enter</kbd>. It adds a task
+line to a note, or a [task page](#task-pages), depending on where you've
+chosen new tasks go in the vault (below).
 
 - In the table, it opens a **New task** row.
 - On the Board, it opens a new card at the top of **To do**. Each column
@@ -301,14 +456,25 @@ opening a note. Type its title and press <kbd>Enter</kbd>.
 - On the Calendar, it opens a new task due today. **+** on a day adds one
   due that day.
 
-The task is written as one line, `- [ ] Title // date`, with your `@login`
-when you're signed in with GitHub, at the end of a note. On a
-[person's page](/guide/people/#a-persons-page), **New task for @handle**
-writes their `@handle` instead. {% include since.html v="0.16.0" %} The first time
-you add a task in a vault, Mahfouz asks which note: it remembers the note
-for that vault on this computer. To pick another, click the chevron beside
-**New task**. Mahfouz asks again only when the note is gone or has been
-encrypted.
+The first time you add a task in a vault, Mahfouz asks **Where**
+{% include since.html v="0.22.0" %}:
+
+- **In a note (task line)** writes one line, `- [ ] Title // date`, at the
+  end of the note you pick.
+- **As a task page in Tasks** creates a page in the vault's Tasks
+  database, created for you when there's none. When the vault has more
+  than one, pick it under **Database**. The page starts as **To do** with
+  no due date, or with the Board column's status or the Calendar day you
+  added it from; set the rest on the page.
+
+Either way, the task is assigned to your `@login` when you're signed in with
+GitHub. On a [person's page](/guide/people/#a-persons-page), **New task
+for @handle** assigns it to their `@handle` instead. {% include since.html v="0.16.0" %}
+Mahfouz remembers the choice, and the note, for that vault on this
+computer. To change it, click the chevron beside **New task** and choose
+**Change where…** {% include since.html v="0.22.0" %}. Mahfouz asks again only when the note is gone
+or has been encrypted. The [Tasks panel](#the-tasks-panel)'s quick add
+follows the same choice.
 
 - If the note is in Suggesting mode, the task is added as your
   suggestion. It isn't listed until the suggestion is accepted, so a
@@ -339,7 +505,9 @@ notifications {% include since.html v="0.17.0" %}), it also has two menus:
   Monday; not offered on a Sunday, when that's tomorrow) or, with **Pick
   date…**, any later day, keeping its time. It changes the date on the
   task's line like any other edit, so everyone sees the new date once it's
-  committed. If the task's line has changed since the reminder, the note
+  committed. For a [task page](#task-pages), **Mark done** and
+  **Reschedule** change the page's **Status** and **Due**.
+  {% include since.html v="0.22.0" %} If the task's line has changed since the reminder, the note
   opens at the task instead, so you can set the date there. If the note has
   [edits waiting](/guide/when-sync-fails/#edits-to-title-are-waiting) for
   your choice, Reschedule, like **Mark done**, changes nothing and a notice
@@ -349,7 +517,8 @@ notifications {% include since.html v="0.17.0" %}), it also has two menus:
   GitHub login, or to a person whose `github` is your login, in every
   vault. You need to be signed in with GitHub, and
   tasks with no assignee never remind anyone.
-- A task reminds you at its time; an all-day task at 09:00. An in-progress
+- A task reminds you at its time; an all-day task at 09:00. A task page
+  with no due date never reminds you. {% include since.html v="0.22.0" %} An in-progress
   task still reminds you; only a done one doesn't.
 - Reminders come only while Mahfouz is open, except on the web, where
   [Device notifications](/guide/notifications/#task-reminders-while-mahfouz-is-closed)
@@ -377,3 +546,7 @@ progress or done. When it asks to tick a task off, reopen it or mark it
 in progress, that's a proposal like its other edits: whether it waits for
 your approval depends on the vault's
 [Ask before changes](/guide/external-agents/#ask-before-changes) setting.
+
+External agents work with task lines only: they don't list
+[task pages](#task-pages) as tasks, and can't tick one off.
+{% include since.html v="0.22.0" %}
