@@ -252,35 +252,70 @@ Nothing changes, and a notice says why, when:
 
 ## Recurring task pages {% include since.html v="0.22.0" %} {#recurring-task-pages}
 
-A task page can repeat, such as a weekly report or the monthly rent. Give
-it a **Repeat** attribute: its cell opens a small editor where you pick
-**Every** with a number and a unit (day, week, month or year), the weekdays
-for a weekly rule or the day for a monthly one, and **Repeat from**:
+A task page can repeat, such as a weekly report or the monthly rent. Click
+its **Repeat** attribute to set a rule:
 
-- **Due date**: the next due date is counted from the current one, so a
-  weekly task stays on its weekday even if you finish it late.
-- **Completion date**: the next due date is counted from the day you mark it
-  done.
+- **Every**: a number and a unit: day, week, month or year.
+- **On**, for weeks: the weekdays it falls on. Leave them all off to repeat
+  on the due date's own weekday.
+- **On day**, for months: the day of the month, filled in from the due date
+  when you pick months. Leave it empty to keep the due date's own day.
+  Shorter months use their last day, so day 31 falls on Feb 28, Mar 31,
+  Apr 30.
+- **Repeat from**: **Due date** counts the next due date from the current
+  one, so a weekly task stays on its weekday even if you finish it late.
+  **Completion date** counts from the day you mark it done.
+- **Rule** shows the rule as text, and you can type one there instead.
 
-**Next** shows when the task will next be due. **Save** writes the rule and
-**Clear** removes it. The rule is plain text in the page's frontmatter, so
-you can also type it in the cell or in any editor:
+**Next** shows when the task will next be due, and why. **Save** writes the
+rule; **Clear** removes it.
+
+The rule is plain text in the page's frontmatter, so you can also write it
+in any editor:
 
 ```yaml
-repeat: every week on mon
-repeat: every 2 months
+repeat: every week on mon,wed
+repeat: every 2 months on 31
 repeat: every day from completion
 ```
 
-When you mark a recurring page done, it isn't put under **Done**: its due
-date moves to the next time, its status goes back to **To do**, and
-**Last completed** (`last_completed`) is set to that day. It's one commit,
-and the notice's **Undo** puts the due date and **Last completed** back. In
-the Tasks tab, a recurring page shows a repeat icon after its title; hover
-it to see the rule.
+It reads `every`, an optional number (1 to 999), and `day`, `week`, `month`
+or `year` (or their plurals); then, for weeks, `on` and the weekdays
+(`mon` to `sun`, or the full names), or, for months, `on` and a day from 1
+to 31 (`on the 31st` reads too); then `from completion` to count from the
+day it's done.
+
+### Completing a recurring page
+
+When you tick a recurring page in the Tasks tab or the Tasks panel, move its
+card to **Done** on the Board, or press **Mark done** on its
+[reminder](#reminders), the page isn't left done:
+
+- its due date moves to the next date in the rule. If the page was overdue,
+  it skips ahead to the first date after today, unless the rule counts
+  `from completion`, which counts from today;
+- its status goes back to **To do**;
+- **Last completed** (`last_completed`) is set to today, replacing the
+  last one.
+
+It's one commit, and a notice says **Done — next due** with the new date.
+Its **Undo** puts the due date, the status and **Last completed** back, as
+long as the page hasn't changed since. If you mark the same page done again
+from a reminder or a row that's out of date, nothing moves twice: a notice
+says **Already done — next due** with the date.
+
+Setting **Status** to done anywhere else, such as in the database's own tab
+or the Attributes panel, or by editing the file, marks the page done as
+written: it doesn't move forward, and the series ends there. Its rule stays,
+so setting it back to to do picks the series up again.
+
+In the Tasks views, an open recurring page shows a repeat icon after its
+title; hover it to see the rule. A done page doesn't show it.
 
 A rule Mahfouz can't read, such as `every fortnight on mon`, is kept as
-written: the cell says why, and the task doesn't repeat until you fix it.
+written: the **Repeat** cell shows it in red with the reason, and the page
+doesn't repeat, so ticking it marks it done like any page. Fix the rule in
+the editor, which won't save one it can't read.
 
 ## The Tasks panel {% include since.html v="0.16.0" %} {#the-tasks-panel}
 
