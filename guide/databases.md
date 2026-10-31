@@ -15,12 +15,12 @@ you open it.
 
 A database note has two things:
 
-- `database: true` in its frontmatter.
+- `database: custom` in its frontmatter. {% include since.html v="0.22.0" %}
 - A `database` block in its body, which holds the database's views.
 
 ~~~markdown
 ---
-database: true
+database: custom
 ---
 # Reading list
 
@@ -38,6 +38,16 @@ views:
 The rows are the note's **direct** child notes. A row's own children are its
 sub-pages, not rows of the database.
 
+{% include since.html v="0.22.0" %} `database: custom` marks a database
+of your own. A database Mahfouz uses for something of its own says so in
+its place: `database: tasks` for a
+[Tasks database](/guide/tasks/#a-tasks-database), `database: people` for
+the [People database](/guide/people/) and `database: daily` for
+[Daily notes](/guide/daily-notes/). A database has one of these at most.
+Any other value, `database: true` included, is an ordinary attribute and
+doesn't make the note a database. A copy of one of Mahfouz's databases
+(**Duplicate**, an import) is a plain `database: custom`.
+
 ## Create a database
 
 You can create a database in three ways:
@@ -51,7 +61,7 @@ You can create a database in three ways:
 
   First, choose what it starts with: **Empty** (a Title column only), or a
   template: **Projects**, **Reading list**, **Meeting notes**, **Bookmarks**,
-  or **Timeline** {% include since.html v="0.18.0" %}. The new database opens as a table, ready for you to type its
+  **Timeline** {% include since.html v="0.18.0" %}, or **Tasks** {% include since.html v="0.22.0" %}. The new database opens as a table, ready for you to type its
   first row. To name it, click its title at the top of the tab.
 - **Turn into database.** Right-click a note that already has child notes and
   choose **Turn into database**. Its children become the rows, and the
@@ -84,6 +94,7 @@ data** in the picker. {% include since.html v="0.18.0" %}
 | Meeting notes | Date, Attendees, Type | Table, Calendar by Date |
 | Bookmarks | Link, Topic, Read, Cover | Table, Gallery |
 | Timeline {% include since.html v="0.18.0" %} | Status, Start, End, Depends on, Parent | Gantt from Start to End, colored by Status; Table |
+| Tasks {% include since.html v="0.22.0" %} | Status, Due, Assignee, Parent task, Sub-tasks | Board by Status, Calendar by Due, Table |
 
 Column types belong to the whole vault (see [Columns](#columns)). If your
 vault already gives one of these attributes a type, it keeps that type: a
@@ -98,6 +109,11 @@ dependency arrows and a task tree at once. Depends on and Parent link rows
 of the same database, and each gets a column linking back: **Blocks** and
 **Sub-items**. Those two columns aren't shown in the views; turn them on in
 **Columns** if you want them. {% include since.html v="0.18.0" %}
+
+Tasks makes a Tasks database: its rows are [task pages](/guide/tasks/#task-pages),
+listed in the Tasks tab, the Tasks panel and reminders beside the tasks
+written as lines. Parent task and Sub-tasks link its rows to each other.
+{% include since.html v="0.22.0" %}
 
 Owner and Attendees are relations to your [People](/guide/people/)
 database, which is created if you don't have one. Each person's row gets a

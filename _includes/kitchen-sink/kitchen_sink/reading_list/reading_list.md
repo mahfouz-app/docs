@@ -1,6 +1,6 @@
 ---
 id: cc56d692c51a4872b4f78b024c468e4b
-database: true
+database: custom
 ---
 # Reading list
 

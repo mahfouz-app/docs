@@ -237,7 +237,8 @@ filters, sorting, paging, embeds, publishing and the agent don't see them.
 
 Under a person note's text, Mahfouz shows:
 
-- **Tasks:** the [tasks](/guide/tasks/) assigned to them, as a **Table**,
+- **Tasks:** the [tasks](/guide/tasks/) assigned to them, task pages
+  included {% include since.html v="0.22.0" %}, as a **Table**,
   **Board** or **Calendar** like the Tasks tab. Its view settings are shared
   by every person page. {% include since.html v="0.12.0" %}
   It's a compact copy of the Tasks tab, in a frame: the fixed **Table**,
@@ -246,8 +247,9 @@ Under a person note's text, Mahfouz shows:
   {% include since.html v="0.18.0" %}, and **Columns**. The toolbar shows even when they have no tasks yet.
   {% include since.html v="0.16.0" %}
   - **New task for @handle**, under the table, adds a task assigned to
-    them, into the note [New task](/guide/tasks/#new-task) remembers for
-    the vault. A Board column's **+ New task** and a Calendar day's **+**
+    them, where [New task](/guide/tasks/#new-task) puts tasks in the vault:
+    a line in the note it remembers, or a task page
+    {% include since.html v="0.22.0" %}. A Board column's **+ New task** and a Calendar day's **+**
     assign it to them too. {% include since.html v="0.16.0" %}
   - **Open in Tasks** opens the Tasks tab on **Everyone**, filtered to
     their handle as a change on this device; **Reset** clears it.

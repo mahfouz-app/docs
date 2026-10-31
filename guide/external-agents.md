@@ -172,6 +172,27 @@ and the agent gets the page's link; an unpublish takes the page down at
 once. Neither can be undone from **Recently applied**: publish the note
 again from its menu to bring a page back.
 
+### Tasks {% include since.html v="0.22.0" %} {#tasks}
+
+An agent lists your [tasks](/guide/tasks/) with `list_tasks`: task lines
+and [task pages](/guide/tasks/#task-pages) together, each with its status
+(to do, in progress or done). A page also comes with its database, its
+parent task and its [repeat rule](/guide/tasks/#recurring-task-pages), and
+may have no due date. It can ask to:
+
+- **Add a task** with `add_task`: a task line in a note, or with `page`
+  a task page in the Tasks database it names, else the vault's own (created
+  as **Tasks** when there's none). Only a page can take a `repeat` rule.
+- **Tick a task off, reopen it or mark it in progress** with
+  `complete_task`. Completing a recurring page moves it to its next due date
+  and back to to do, as ticking it in the Tasks tab does, and the agent is
+  told the new date. The agent passes the due date `list_tasks` gave it, so
+  a page that was completed or rescheduled since, or a completion sent
+  twice, is turned down and the page never moves forward twice.
+
+Both have **Undo** under **Recently applied**. A row added with
+`add_database_row` to a Tasks database without a status starts as to do.
+
 ### People {% include since.html v="0.13.0" %} {#people}
 
 An agent can read your [People](/guide/people/) directory: each person's

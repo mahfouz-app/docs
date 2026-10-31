@@ -98,6 +98,8 @@ list stays current as you add, change or finish tasks elsewhere.
   now.
 - **Not the note's own tasks:** tasks written in the daily note itself
   aren't listed, since they're right below the block.
+- **Task pages too:** [task pages](/guide/tasks/#task-pages) due that day
+  are listed beside task lines, with a page icon. {% include since.html v="0.22.0" %}
 
 Obsidian's `tasks` blocks (the Tasks plugin's query blocks) aren't
 affected. They stay ordinary code blocks.
@@ -105,9 +107,9 @@ affected. They stay ordinary code blocks.
 ### Working with it
 
 - **Tick a task** in the list to complete it. Mahfouz ticks it in the note
-  where the task is written.
+  where the task is written, or sets a task page's status to done.
 - **Open a task's note** by clicking the note's name on its row. The note
-  opens at the task's line.
+  opens at the task's line; a task page opens itself. {% include since.html v="0.22.0" %}
 - **Add a task** with the block's **New task due** row, which names the
   block's day. It writes a new task line due that day right after the
   block, assigned to you when you're signed in. It's turned off while

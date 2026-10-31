@@ -172,8 +172,9 @@ with **Home** and ends with the page's main action:
   and the note's actions. The view switcher stays on the page.
 - **Tasks**: **View** picks Table, Board or Calendar, and has
   **Columns…** (**Fields…** on the Board). The **Mine** and **Everyone**
-  and vault chips stay on the page. **⋯** has **Change note…**, which
-  picks the note [new tasks](/guide/tasks/#new-task) go into.
+  and vault chips stay on the page. **⋯** has **Change where…**
+  {% include since.html v="0.22.0" %}, which picks where [new tasks](/guide/tasks/#new-task) go: a
+  note, or a Tasks database.
 - **Notifications**: **Unread**, **All** and **Archived** sit at the top
   of the page. **Clear archive** asks before it deletes the archived
   notifications.
