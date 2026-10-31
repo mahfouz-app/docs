@@ -186,7 +186,9 @@ may have no due date. It can ask to:
 - **Tick a task off, reopen it or mark it in progress** with
   `complete_task`. Completing a recurring page moves it to its next due date
   and back to to do, as ticking it in the Tasks tab does, and the agent is
-  told the new date.
+  told the new date. The agent passes the due date `list_tasks` gave it, so
+  a page that was completed or rescheduled since, or a completion sent
+  twice, is turned down and the page never moves forward twice.
 
 Both have **Undo** under **Recently applied**. A row added with
 `add_database_row` to a Tasks database without a status starts as to do.
