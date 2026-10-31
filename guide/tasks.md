@@ -289,7 +289,8 @@ day it's done.
 
 When you tick a recurring page in the Tasks tab or the Tasks panel, move its
 card to **Done** on the Board, or press **Mark done** on its
-[reminder](#reminders), the page isn't left done:
+[reminder](#reminders), or an [external agent](#external-agents) completes
+it, the page isn't left done:
 
 - its due date moves to the next date in the rule. If the page was overdue,
   it skips ahead to the first date after today, unless the rule counts
@@ -582,6 +583,15 @@ in progress, that's a proposal like its other edits: whether it waits for
 your approval depends on the vault's
 [Ask before changes](/guide/external-agents/#ask-before-changes) setting.
 
-External agents work with task lines only: they don't list
-[task pages](#task-pages) as tasks, and can't tick one off.
-{% include since.html v="0.22.0" %}
+It works with [task pages](#task-pages) too {% include since.html v="0.22.0" %}:
+
+- The tasks it lists include task pages, each with its database, its parent
+  task and its [repeat rule](#recurring-task-pages). A page may have no due
+  date.
+- Completing a recurring page moves it forward as a tick does, and the
+  agent is told the next due date. Like its other edits, it can be undone
+  under **Recently applied**.
+- It can add a task as a page rather than a line, in the database it names
+  or the vault's Tasks database, created when there's none, with a repeat
+  rule if you ask for one.
+- A row it adds to a Tasks database without a status starts as to do.
