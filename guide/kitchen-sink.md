@@ -5,7 +5,7 @@ description: "A sample vault that uses every Markdown feature Mahfouz supports, 
 permalink: /guide/kitchen-sink/
 ---
 A sample vault that uses every Markdown feature Mahfouz supports: text
-formatting, lists and tasks, callouts, code, math, tables, media, diagrams,
+formatting, lists and tasks, callouts, code, math, tables, media, diagrams and an Excalidraw drawing {% include since.html v="0.21.0" %},
 track changes and comments, people, slides, a database, a day's tasks, a tag to rename and what a click does in Preview.
 
 To open it, copy the `_includes/kitchen-sink/` folder from the

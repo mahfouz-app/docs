@@ -70,7 +70,7 @@ that name as a guest (`@Sam~guest`), remembered in that browser.
 Everyone sees each other's cursors as they type. Recipients never see your
 note's attributes, your other notes or your vault.
 
-In a shared note, web images and plugin diagrams (Mermaid, draw.io) aren't
+In a shared note, web images and blocks a plugin draws, such as diagrams, aren't
 shown, for you either, because its text is partly other people's. Images
 from your vault still show.
 

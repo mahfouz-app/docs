@@ -182,6 +182,22 @@ graph LR
 <mxfile><diagram name="Page-1"><mxGraphModel><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="2" value="Mahfouz" style="rounded=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="120" height="60" as="geometry"/></mxCell></root></mxGraphModel></diagram></mxfile>
 ```
 
+With the Excalidraw drawings plugin on, this block draws as a drawing, and publishing the note turns it into an image:
+
+```excalidraw
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://mahfouz.app",
+  "elements": [
+    {"id": "box", "type": "rectangle", "x": 40, "y": 40, "width": 160, "height": 70, "angle": 0, "strokeColor": "#1e1e1e", "backgroundColor": "#a5d8ff", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 1, "opacity": 100, "groupIds": [], "frameId": null, "roundness": {"type": 3}, "seed": 1, "version": 1, "versionNonce": 1, "isDeleted": false, "boundElements": [{"type": "text", "id": "label"}], "updated": 1, "link": null, "locked": false},
+    {"id": "label", "type": "text", "x": 80, "y": 62, "width": 80, "height": 25, "angle": 0, "strokeColor": "#1e1e1e", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 1, "opacity": 100, "groupIds": [], "frameId": null, "roundness": null, "seed": 2, "version": 1, "versionNonce": 2, "isDeleted": false, "boundElements": null, "updated": 1, "link": null, "locked": false, "text": "Mahfouz", "fontSize": 20, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle", "containerId": "box", "originalText": "Mahfouz", "autoResize": true, "lineHeight": 1.25}
+  ],
+  "appState": {"viewBackgroundColor": "#ffffff", "gridSize": null},
+  "files": {}
+}
+```
+
 ## Track changes and comments
 
 Meet on {~~Monday~>Tuesday~~}{>>@owahab · 2026-10-12<<} at {++10 am++}{>>@owahab · 2026-10-12<<}{--noon--}{>>@owahab · 2026-10-12<<}.

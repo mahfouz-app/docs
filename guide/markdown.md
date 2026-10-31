@@ -125,6 +125,16 @@ With the cursor in a block, <kbd>Shift</kbd><kbd>F10</kbd> (or
 Collapse block, the light or dark switch, Line numbers and Copy code.
 {% include since.html v="0.13.0" %}
 
+### Blocks a plugin draws {% include since.html v="0.21.0" %} {#blocks-a-plugin-draws}
+
+A [plugin](/guide/plugins/#what-a-plugin-adds) can say it draws blocks in
+a language, such as ```` ```mermaid ```` or ```` ```excalidraw ````. With
+that plugin on, such a block shows as the plugin draws it, a diagram for
+example, instead of as code, and it's
+[published as an image](/guide/publishing/#diagrams). If the plugin is
+installed but off for the vault, the block shows a card that offers to turn
+it on.
+
 ### Folding code {% include since.html v="0.13.0" %} {#folding-code}
 
 In Preview mode, pointing at a code block shows a chevron in the rail
