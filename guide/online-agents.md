@@ -24,8 +24,8 @@ choose when you approve the agent decides which one it gets.
 
 ## Connect an agent
 
-1. Add `https://api.mahfouz.app/mcp` as a custom connector in your agent:
-   in Claude, Settings → Connectors; or in Claude Desktop or Codex.
+1. Add `https://api.mahfouz.app/mcp` to your agent as a custom connector:
+   see [Set up your client](#set-up-your-client) for each client's steps.
 2. The agent opens a Mahfouz page on platform.mahfouz.app. Sign in with
    GitHub if asked.
 3. Under **Repositories**, choose an access level for each repository the
@@ -53,6 +53,114 @@ before it.
 Read is enough for a public repository. If you set a public repository to
 Edit or Publish beside a private one, Mahfouz warns you: an agent could
 copy private notes into the public repository.
+
+## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
+
+In Settings → AI → External agents, **Connect a client** lists the
+clients Mahfouz knows. **Connect** on a client's card opens its section
+below and copies what you need: the connector URL, or the command to run.
+Every client uses the same URL, `https://api.mahfouz.app/mcp`, and signs
+in through Mahfouz's approval page, so none of them needs a token. The
+same URL also connects an agent [through a Mahfouz
+tab](/guide/external-agents/#connect-an-agent-on-the-web): what you choose
+on the approval page decides which.
+
+### Claude and Claude Desktop {#claude}
+
+Claude on the web and Claude Desktop share their connectors: add it once
+and it's in both.
+
+1. In Claude, open Settings → Connectors and click **Add custom
+   connector**.
+2. Name it Mahfouz, paste `https://api.mahfouz.app/mcp` as its URL, and
+   click **Add**.
+3. Click **Connect** next to it, then approve the agent in Mahfouz.
+
+### ChatGPT {#chatgpt}
+
+ChatGPT connects custom MCP servers on the web only, and full access,
+editing included, needs a Business, Enterprise or Edu workspace. There an
+admin or owner adds the server, or a member their admin allowed to. A Pro
+account can connect it to read and search only.
+
+1. In ChatGPT, open **Plugins**, click **+** and choose **Add custom MCP
+   server**.
+2. Name it Mahfouz, and under **Connection** paste
+   `https://api.mahfouz.app/mcp`.
+3. Choose **OAuth** for authentication.
+4. Read the risk warning, tick **I understand and want to continue**, and
+   click **Create as a plugin**.
+5. Approve the agent in Mahfouz when ChatGPT opens its page.
+
+Where ChatGPT still shows the older Apps settings, it's Settings → Apps →
+**Create** instead (turn on **Developer mode** under Advanced settings
+first, if it's there): enter the URL, choose OAuth, click **Scan Tools**,
+approve the agent in Mahfouz, then click **Create**.
+
+### Claude Code {#claude-code}
+
+Run this in a terminal:
+
+```sh
+claude mcp add --transport http mahfouz https://api.mahfouz.app/mcp
+```
+
+Then, in Claude Code, run `/mcp`, choose **mahfouz** and sign in: your
+browser opens Mahfouz's approval page.
+
+### Codex {#codex}
+
+Run these in a terminal:
+
+```sh
+codex mcp add mahfouz --url https://api.mahfouz.app/mcp
+codex mcp login mahfouz
+```
+
+The second command opens your browser on Mahfouz's approval page. The
+server is saved in `~/.codex/config.toml`, which the Codex IDE extension
+reads too.
+
+### Cursor {#cursor}
+
+Add Mahfouz to `~/.cursor/mcp.json`, for every project, or to
+`.cursor/mcp.json` in one project:
+
+```json
+{
+  "mcpServers": {
+    "mahfouz": {
+      "url": "https://api.mahfouz.app/mcp"
+    }
+  }
+}
+```
+
+If the file already has servers, add the `mahfouz` entry to its
+`mcpServers`. Then sign in to **mahfouz** in Cursor's MCP settings and
+approve the agent in Mahfouz.
+
+### VS Code {#vscode}
+
+Run this in a terminal to add Mahfouz to your VS Code user profile:
+
+```sh
+code --add-mcp '{"name":"mahfouz","type":"http","url":"https://api.mahfouz.app/mcp"}'
+```
+
+Or run **MCP: Add Server** from the Command Palette, choose **HTTP**, and
+paste `https://api.mahfouz.app/mcp`. VS Code asks you to sign in the first
+time it starts the server: approve the agent in Mahfouz. Mahfouz's tools
+then show up in Copilot Chat's agent mode.
+
+### Other clients {#other-clients}
+
+Any client that supports remote MCP servers over **Streamable HTTP** with
+**OAuth** can connect. Give it `https://api.mahfouz.app/mcp` as the
+server URL, and leave the client ID, secret and headers empty: the client
+registers itself and opens Mahfouz's approval page. A client that can
+only start local (stdio) servers needs the desktop app instead: see
+[Other clients](/guide/external-agents/#other-clients) on the desktop.
 
 ## Manage a connected agent
 

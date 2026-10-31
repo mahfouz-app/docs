@@ -2,12 +2,12 @@
 layout: guide
 title: "External agents (MCP)"
 since: "0.12.0"
-description: "Let Claude Code, Claude Desktop, Codex or claude.ai read and edit your vaults, and choose which edits wait for you."
+description: "Let Claude, ChatGPT, Claude Code, Codex, Cursor or VS Code read and edit your vaults, and choose which edits wait for you."
 permalink: /guide/external-agents/
 ---
 
-External agents are AI apps outside Mahfouz, such as Claude Code, Claude
-Desktop, Codex or claude.ai, connected to it over MCP. Once connected, an
+External agents are AI apps outside Mahfouz, such as Claude Code, Codex,
+Cursor, VS Code, Claude or ChatGPT, connected to it over MCP. Once connected, an
 agent can read the vaults you allow and work in them: create notes and nest
 them under other notes, create databases and add rows, add tasks and tick
 them off, comment, look up and add [people](/guide/people/) {% include since.html v="0.13.0" %}, and ask to publish a note. You decide what each agent can do in each
@@ -18,29 +18,143 @@ approval.
 
 1. Open Settings → AI → External agents and turn on **Allow external
    agents (MCP)**.
-2. Click **Connect a client** and pick **Claude Code**, **Claude Desktop**,
-   **Codex** or **Other**. Change the name if you like; it's how the client
-   shows up in Settings and on its proposals.
+2. Under **Connect a client**, click **Connect** on the client's card:
+   **Claude Code**, **Codex**, **Cursor**, **VS Code**, **Claude Desktop**
+   or **Other** {% include since.html v="0.22.0" %}. Change the name if you
+   like; it's how the client shows up in Settings and on its proposals.
 3. Under **Access to each vault**, choose what the agent may do in each
    vault: **None** {% include since.html v="0.19.0" %}, **Read**, **Edit** or **Publish** (see
    [Access levels](#access-levels)). The vault you have open starts at
    **Edit** and the others at **None**. Click **Connect**.
    {% include since.html v="0.17.0" %}
-4. Copy what Mahfouz shows into the client:
-   - **Claude Code**: a `claude mcp add mahfouz …` command. Run it in a
-     terminal.
-   - **Claude Desktop**: a JSON block. Add it to `claude_desktop_config.json`
-     (in Claude Desktop, Settings → Developer → Edit Config), then restart
-     Claude Desktop.
-   - **Codex**: a `codex mcp add mahfouz …` command to run in a terminal,
-     or the same setup as a block for `~/.codex/config.toml`.
-   - **Other**: the command, its arguments and an environment variable,
-     for any client that can start a stdio MCP server.
+4. Mahfouz pairs the client and shows its setup: a command to run or a
+   block to paste, holding the client's token. Copy it into the client as
+   its [section below](#set-up-your-client) says.
 
 The snippet holds the client's token, and Mahfouz shows it only once. If
 you lose it, revoke the client and connect it again.
 
 The agent reaches your vaults through the running app.
+
+### Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
+
+Each client below starts Mahfouz's MCP server itself, as
+`Mahfouz --mcp`, with the client's token in the `MAHFOUZ_MCP_TOKEN`
+environment variable. **Connect** pairs the client and shows its setup
+with the path to Mahfouz and the token already filled in; the examples
+here use the default macOS path and `<token>` in their place.
+
+Claude and ChatGPT, on the web, can't start a program on your computer:
+connect them through the [connector URL](/guide/online-agents/#set-up-your-client)
+instead.
+
+#### Claude Code {#claude-code}
+
+Run the command Mahfouz shows in a terminal:
+
+```sh
+claude mcp add mahfouz -e MAHFOUZ_MCP_TOKEN=<token> -- /Applications/Mahfouz.app/Contents/MacOS/Mahfouz --mcp
+```
+
+Run `/mcp` in Claude Code to check that **mahfouz** is connected.
+
+#### Codex {#codex}
+
+Run the command Mahfouz shows in a terminal:
+
+```sh
+codex mcp add mahfouz --env MAHFOUZ_MCP_TOKEN=<token> -- /Applications/Mahfouz.app/Contents/MacOS/Mahfouz --mcp
+```
+
+Or add the block Mahfouz shows to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.mahfouz]
+command = "/Applications/Mahfouz.app/Contents/MacOS/Mahfouz"
+args = ["--mcp"]
+env = { MAHFOUZ_MCP_TOKEN = "<token>" }
+```
+
+#### Cursor {#cursor}
+
+Add this to `~/.cursor/mcp.json`. If the file already has servers, add the
+`mahfouz` entry to its `mcpServers`.
+
+```json
+{
+  "mcpServers": {
+    "mahfouz": {
+      "command": "/Applications/Mahfouz.app/Contents/MacOS/Mahfouz",
+      "args": ["--mcp"],
+      "env": { "MAHFOUZ_MCP_TOKEN": "<token>" }
+    }
+  }
+}
+```
+
+Use the global file rather than a project's `.cursor/mcp.json`: a file in
+a project can end up committed, token and all.
+
+#### VS Code {#vscode}
+
+Run this in a terminal to add Mahfouz to your VS Code user profile:
+
+```sh
+code --add-mcp '{"name":"mahfouz","type":"stdio","command":"/Applications/Mahfouz.app/Contents/MacOS/Mahfouz","args":["--mcp"],"env":{"MAHFOUZ_MCP_TOKEN":"<token>"}}'
+```
+
+Or add it to an `mcp.json` (**MCP: Open User Configuration** in the
+Command Palette opens your profile's). VS Code's file uses `servers`, not
+`mcpServers`:
+
+```json
+{
+  "servers": {
+    "mahfouz": {
+      "type": "stdio",
+      "command": "/Applications/Mahfouz.app/Contents/MacOS/Mahfouz",
+      "args": ["--mcp"],
+      "env": { "MAHFOUZ_MCP_TOKEN": "<token>" }
+    }
+  }
+}
+```
+
+A workspace's `.vscode/mcp.json` works too, but keep the token out of a
+repository: prefer your profile. Mahfouz's tools show up in Copilot Chat's
+agent mode.
+
+#### Claude Desktop {#claude-desktop}
+
+Add the JSON Mahfouz shows to `claude_desktop_config.json`: in Claude
+Desktop, Settings → Developer → **Edit Config**. If the file already has
+servers, add the `mahfouz` entry to its `mcpServers`.
+
+```json
+{
+  "mcpServers": {
+    "mahfouz": {
+      "command": "/Applications/Mahfouz.app/Contents/MacOS/Mahfouz",
+      "args": ["--mcp"],
+      "env": { "MAHFOUZ_MCP_TOKEN": "<token>" }
+    }
+  }
+}
+```
+
+Then quit and restart Claude Desktop.
+
+#### Other clients {#other-clients}
+
+Any client that can start a local (stdio) MCP server can connect. Give it:
+
+- **Command**: the path to Mahfouz that Settings shows, such as
+  `/Applications/Mahfouz.app/Contents/MacOS/Mahfouz`.
+- **Arguments**: `--mcp`.
+- **Environment**: `MAHFOUZ_MCP_TOKEN` set to the client's token.
+
+A client that only connects to remote servers over HTTP uses the
+[connector URL](/guide/online-agents/#other-clients) instead.
 
 ### When Mahfouz is closed {% include since.html v="0.13.0" %} {#when-mahfouz-is-closed}
 
@@ -76,8 +190,9 @@ URL instead of a token:
 1. Open Settings → AI → External agents in the browser you use Mahfouz in,
    and turn on **Allow external agents (MCP)**.
 2. Copy the **Connector URL**, `https://api.mahfouz.app/mcp`, and add it as a
-   custom connector in your agent: in Claude, Settings → Connectors; or in
-   Claude Desktop or Codex.
+   custom connector in your agent: see
+   [Set up your client](/guide/online-agents/#set-up-your-client) for each
+   client's steps.
 3. The agent opens a Mahfouz page. Sign in with GitHub if asked, check the
    app's name and where access goes, and click **Allow**. Reading notes,
    databases and tasks is always included. Untick **Propose and make
