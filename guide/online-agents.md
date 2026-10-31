@@ -78,7 +78,7 @@ offline; the note keeps its text.
 
 Turning Publish off for a repository, or revoking the agent, never takes
 its pages down. They stay online until you unpublish them here or in
-Settings → Published pages, and pages set to auto-publish stop updating.
+Settings → Published pages, and pages set to keep updated stop updating.
 
 ## What the agent can do
 
@@ -95,7 +95,7 @@ the note's [permalink](/guide/permalinks/) {% include since.html v="0.16.0" %}.
 
 `publish_note` publishes one note, never its children, as an **Unlisted**
 page. It refuses a note that is already published; that page updates
-through auto-publish or the note's menu.
+through Keep updated or the note's menu.
 
 ## How it differs from connecting through Mahfouz
 

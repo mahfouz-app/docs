@@ -288,9 +288,9 @@ use them the same way:
 - `id`, `title`, `created`, `updated`, `bookmarked`, `renamed`, `parent`
   and `external_images` are always Mahfouz's. Name your attribute
   something else.
-- `database`, `auto_publish`, `publish_children`, `no_publish` and
-  `published` are Mahfouz's only for certain values: `true` for the first
-  four, and a published page's id for `published`. An attribute with one
+- `database`, `publish` and `published` are Mahfouz's only for certain
+  values: `true` for `database`, `self`, `children` or `never` for
+  `publish` {% include since.html v="0.21.0" %}, and a published page's id for `published`. An attribute with one
   of these names can't hold those values: it would be written the same way
   as Mahfouz's own setting, so give it another name. {% include since.html v="0.18.0" %} Other values
   are fine, so a Jekyll or Hugo `published: false` stays your attribute.

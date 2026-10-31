@@ -40,11 +40,12 @@ what goes public:
   in the view to leave it out. {% include since.html v="0.16.0" %}
 
 Choose the page's **Visibility** (see [Visibility](#visibility)) and
-**Theme** (see [Themes](#themes)). Turn on **Auto-publish changes**
-{% include since.html v="0.13.0" %} if you want
-the page to follow the note (see
-[Keeping the page up to date](#keeping-the-page-up-to-date)), then click
-**Publish**.
+**Theme** (see [Themes](#themes)). Under **Keep updated** {% include since.html v="0.21.0" %}, choose
+**This note** if you want the page to follow the note (see
+[Keeping the page up to date](#keeping-the-page-up-to-date)), or **This
+note and child notes** to publish the notes under it too (see
+[Publish child notes](#publish-child-notes)). **Off** publishes the page
+once. Then click **Publish**.
 
 The dialog closes right away and the page is published in the background,
 so you can keep working. {% include since.html v="0.21.0" %} A notification shows the progress
@@ -126,21 +127,22 @@ A page doesn't change when you edit the note. To bring it up to date:
   of date.
 
 The same section shows the page's link (click it to open the page, or
-**Copy**) and the **Auto-publish** switch.
+**Copy**) and **Keep updated** {% include since.html v="0.21.0" %}: **Off**, **This note** or **This note
+and child notes**, as in the publish dialog.
 
-**Auto-publish** updates the page a few seconds after each commit that
+Keeping the page updated updates it a few seconds after each commit that
 changes what the page shows, so the page follows your edits without you
 asking.
 
 - It works through commits, so a note with auto-commit turned off (a
   [disk-only note](/guide/history/#auto-commit-and-disk-only-notes)) can't
-  auto-publish.
+  be kept updated.
 - Changes you pull from a collaborator don't update the page. The page
   changes when you edit the note yourself, or when you update it.
 - If the publishing service can't be reached, the update waits and is tried
   again the next time Mahfouz starts or commits.
-- If you're signed out, or the page belongs to another account, auto-publish
-  stops for that note and a notification says why.
+- If you're signed out, or the page belongs to another account, updates
+  stop for that note and a notification says why.
 
 Once a note is published, its bottom bar's globe is tinted, with a dot
 while the page is behind the note. That menu, and the note's right-click
@@ -157,9 +159,10 @@ page, or click **Download SVG** to save it. Nothing is stored.
 
 ## Publish child notes {% include since.html v="0.12.0" %} {#publish-child-notes}
 
-A note's children can be published with it. Tick **Also publish child
-notes** in the publish dialog, or, for a note that's already published,
-choose **Publish child notes…** from its menu. The dialog says how many
+A note's children can be published with it. Choose **This note and child
+notes** under **Keep updated** in the publish dialog or Page settings {% include since.html v="0.21.0" %},
+or, for a note that's already published, choose **Publish child notes…**
+from its menu. The dialog says how many
 notes that publishes now. After you confirm, they're published in the
 background, and a notification shows the progress (**Publishing the child
 notes of "Trip notes"…**). {% include since.html v="0.21.0" %}
@@ -171,14 +174,15 @@ notes of "Trip notes"…**). {% include since.html v="0.21.0" %}
   under the parent, one you restore from the trash, or a file added outside
   Mahfouz. Each is published on the first commit after it has a title, and a
   notification gives its link.
-- With **Auto-publish changes** on for the parent, the child pages follow
-  your edits as well.
+- The parent's page and every child page follow your edits. {% include since.html v="0.21.0" %}
 - A [disk-only note](/guide/history/#auto-commit-and-disk-only-notes) isn't
   published, and neither is a note you pull from a collaborator until you
   change it yourself.
 
-Choose **Stop publishing child notes** from the parent's menu to turn it
-off. No new children are published; the pages already online stay up.
+Choose **Stop publishing child notes** from the parent's menu, or **This
+note** under **Keep updated**, to turn it off. The parent's page is still
+kept updated. No new children are published; the pages already online stay
+up.
 
 Unpublishing a child keeps it off the web: it isn't published again with
 its parent. Publishing it yourself undoes that. Unpublishing the parent asks
@@ -348,10 +352,18 @@ next update tells you, and the note stops being marked as published.
 ## How it's stored
 
 A published note remembers its page in its own attributes:
-`published: <id>` (the page's id) and, with auto-publish on,
-`auto_publish: true`. A parent that publishes its children has
-`publish_children: true`, and a child kept off the web has
-`no_publish: true`. They travel with the note through git, so another
+`published: <id>` (the page's id) and `publish`, which holds what **Keep
+updated** says {% include since.html v="0.21.0" %}:
+
+- `publish: self`: the page is kept up to date.
+- `publish: children`: the page and its child notes' pages are kept up to
+  date, and new child notes are published.
+- `publish: never`: a child note kept off the web.
+
+Any other `publish` value, such as Obsidian Publish's `publish: true`, is
+your own attribute. Older versions wrote `auto_publish`,
+`publish_children` and `no_publish`; Mahfouz no longer reads them, so
+change them to `publish` by hand. They travel with the note through git, so another
 device or a collaborator sees the note as published. See
 [Names Mahfouz keeps for itself](/guide/attributes/#names-mahfouz-keeps-for-itself).
 The page's theme, description and language are ordinary attributes:
