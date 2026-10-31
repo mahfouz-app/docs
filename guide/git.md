@@ -61,6 +61,10 @@ Vault Settings → **Storage** → **Sync** {% include since.html v="0.19.0" %}:
     yours (force-pushes your local content over it). Pick carefully: both
     directions are destructive to whichever side loses. **Cancel**
     disconnects the remote. {% include since.html v="0.19.0" %}
+  - Until you choose, nothing syncs with the remote, and the vault's sync
+    icon reads **Choose a copy**. Leaving the choice open doesn't cancel it:
+    it's still there under **Storage** or **Collaborators** when you come
+    back, even after a restart. {% include since.html v="0.22.0" %}
 - Once connected, it shows the repository and its sync status.
 - **Sync now**: pulls, then pushes, immediately.
 - **Disconnect**: stops syncing with the remote. The vault stays on disk.
