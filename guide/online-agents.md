@@ -70,11 +70,19 @@ on the approval page decides which.
 Claude on the web and Claude Desktop share their connectors: add it once
 and it's in both.
 
-1. In Claude, open Settings → Connectors and click **Add custom
-   connector**.
+**Connect** on the Claude card opens claude.ai's **Add custom connector**
+dialog with the name and URL already filled in. Otherwise:
+
+1. In Claude, open Customize → Connectors, click **+ Add**, then **Add
+   custom connector**.
 2. Name it Mahfouz, paste `https://api.mahfouz.app/mcp` as its URL, and
-   click **Add**.
-3. Click **Connect** next to it, then approve the agent in Mahfouz.
+   click **Continue**.
+3. Keep the authentication Claude detects, sign in when it asks, and click
+   **Add**. Approve the agent in Mahfouz when Claude opens its page.
+
+On a Team or Enterprise plan, an Owner adds it first, under Organization
+settings → Connectors; each member then clicks **Connect** next to it in
+Customize → Connectors.
 
 ### ChatGPT {#chatgpt}
 
