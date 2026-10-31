@@ -53,6 +53,12 @@ tick **I accept these terms**.
 Its own copy of git-crypt only runs git's filters: to use `git-crypt`
 commands in a terminal, install git-crypt itself.
 
+The app doesn't name the plugin that decrypts notes: the built-in
+registry gives that job to the Encryption plugin. Update the Encryption
+plugin to 0.4.0 or later in Settings → **Plugins**. Until you do, Mahfouz
+says "No plugin is set up to decrypt notes. Check for updates in Settings →
+Plugins." {% include since.html v="0.22.0" %}
+
 ## Setting up encryption
 
 Mahfouz doesn't set up git-crypt for you yet. Use git-crypt's own commands

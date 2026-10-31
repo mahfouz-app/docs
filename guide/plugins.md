@@ -33,6 +33,37 @@ a GitHub `owner/repo`.
 - A plugin's own page (click its name) shows its version, disk use, the log
   of its background process if it has one, and **Uninstall**.
 
+## What a plugin adds {% include since.html v="0.21.0" %} {#what-a-plugin-adds}
+
+Mahfouz doesn't know any plugin by name. Each plugin says what it adds in
+its manifest (`plugin.json`, under `contributes`), and the app offers
+whatever the plugins you have declare:
+
+- **Blocks it draws** (`languages`). A fenced block in a language a plugin
+  declares, such as ```` ```excalidraw ````, is drawn by that plugin in the
+  editor, and [published as an image](/guide/publishing/#diagrams). While
+  the plugin is installed but off for the vault, the block shows a card
+  with a button to turn it on (or to install it, if it isn't installed). A
+  language the editor already highlights, such as `python`, stays a code
+  block.
+- **Export formats** (`exportFormats`). The Export dialog's formats beyond
+  Word and Markdown, such as PDF, come from plugins. While a format's
+  plugin is off, its card offers **Turn on…**.
+- **Programs** (`programs`). Vault Settings → **Storage**'s **Install Git
+  LFS** turns on a plugin that provides `git-lfs` (see
+  [Git LFS for large media](/guide/git/#git-lfs-for-large-media)).
+- **What to suggest** (`detect`). When you open a vault, Mahfouz suggests
+  plugins for what's in it, with the reason: "4 mermaid blocks", "3 notes
+  with type: presentation", or the size of its attachments.
+
+An update that adds any of these says so before you approve it, such as
+"Draws excalidraw blocks" or "Adds PDF export".
+
+Mahfouz reads these declarations from the copy of each plugin you have
+installed. A built-in plugin installed before it declared them gets none of
+the above, such as its blocks' card or its export format, until you update
+it: open Settings → **Plugins** and click **Check for updates**. {% include since.html v="0.22.0" %}
+
 The [plugin registry](/plugins/) lists every plugin submitted for
 Mahfouz, from the built-in registry and others, and you can filter it by
 category, platform, registry and author.
@@ -123,6 +154,8 @@ The built-in `mahfouz` registry has:
   later, **Edit** on a diagram opens the draw.io tab, and a click opens the
   viewer instead (an empty diagram still opens the tab).
   {% include since.html v="0.20.0" %}
+- **Excalidraw drawings**: ```` ```excalidraw ```` blocks render as
+  drawings you can edit, and publish as images. {% include since.html v="0.21.0" %}
 - **Clicking a diagram** {% include since.html v="0.20.0" %}: in Preview, a
   click opens the diagram full size in the viewer, with its actions (see
   [Clicking images and diagrams](/guide/editor/#clicking-images-and-diagrams)).

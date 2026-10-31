@@ -28,8 +28,9 @@ what goes public:
   PNG, JPEG, GIF, WebP and AVIF images are published.
 - **Attachments that aren't published**: any other file the note links,
   such as a PDF or an SVG, is named here and left out.
-- **Diagrams shown as code** — any Mermaid or draw.io block that will be
-  published as its source text (see [Diagrams](#diagrams)).
+- **Blocks shown as code**: any block a plugin draws, such as a diagram,
+  that no plugin on in this vault can draw. It's published as its source
+  text (see [Diagrams](#diagrams)). {% include since.html v="0.21.0" %}
 - **Links to other notes** link to those notes' pages when they're
   published, and appear as plain text otherwise (see
   [Links between published notes](#links-between-published-notes)).
@@ -210,8 +211,8 @@ A published page looks like the note does in the editor's
 - **A table of contents**: a `[TOC]` line becomes a numbered **Contents**
   list of the note's headings, the title left out (see
   [Markdown](/guide/markdown/#table-of-contents)).
-- **Diagrams** are drawn as images when they can be (see
-  [Diagrams](#diagrams)).
+- **Diagrams**, and any other block a plugin draws, are images when a
+  plugin on in this vault can draw them (see [Diagrams](#diagrams)).
 
 The note's own style comes along too. These [attributes](/guide/attributes/)
 apply to the page:
@@ -247,12 +248,21 @@ stored as the note's `page_theme` attribute (`page_theme: essay`), so you
 can also set it in the Attributes panel; **Default** removes the attribute.
 The note's own colours and font still apply on top of either theme.
 
-### Diagrams
+### Diagrams {#diagrams}
 
-A Mermaid or draw.io block is published as an image when the vault has the
-[Mermaid or Draw.io plugin](/guide/plugins/) enabled, with a current version
-of the plugin. Otherwise it's published as its source text, and the publish
-dialog lists it under **Diagrams shown as code**.
+A block a plugin draws is published as an image. That's a fenced block
+whose language a plugin says it draws (see
+[What a plugin adds](/guide/plugins/#what-a-plugin-adds)), such as a
+diagram: when you publish, the plugin draws it and the page shows the
+picture. The image's alt text is "Diagram". {% include since.html v="0.21.0" %}
+
+- **Excalidraw drawings publish as images** too, with the Excalidraw
+  plugin on. Pages published earlier show the drawing once you update
+  them. {% include since.html v="0.21.0" %}
+- **A block whose plugin isn't on** in this vault, or isn't installed, is
+  published as its source text. The publish dialog warns: "These blocks
+  are published as code, as no enabled plugin can draw them", followed by
+  each block's plugin or language.
 
 Once a diagram is published as an image, it stays one when someone updates
 the page without the plugin, as long as the block hasn't changed.

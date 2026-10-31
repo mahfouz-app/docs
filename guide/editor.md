@@ -230,8 +230,8 @@ the reference in the background.
 
 ### Clicking images and diagrams {#clicking-images-and-diagrams}
 
-Blocks are images on their own line, diagrams (Mermaid, draw.io and other
-plugin diagrams), math on its own lines, a `[TOC]` table of contents and
+Blocks are images on their own line, diagrams and other
+[blocks a plugin draws](/guide/markdown/#blocks-a-plugin-draws), math on its own lines, a `[TOC]` table of contents and
 [database views](/guide/databases/).
 
 - **A click on an image on its own line, or a diagram,** opens the viewer:
@@ -240,8 +240,9 @@ plugin diagrams), math on its own lines, a `[TOC]` table of contents and
   **Copy**, **Delete**, **⋯** (**Replace…** and **Download**, for an image
   file) and **Close**; at phone width, **⋯** and **Close**. <kbd>Esc</kbd>
   closes it. An image inside a link follows the link instead.
-- **Edit** opens the plugin's own editor in a tab for draw.io and Mermaid;
-  for anything else, it shows the block's source in the note. A diagram
+- **Edit** opens the plugin's own editor in a tab, for a plugin that has
+  one (draw.io and Mermaid do); otherwise it shows the block's source in
+  the note. A diagram
   that's empty or failed to draw opens its editor on a click.
 - **A click on a math block or a table of contents** shows its source to
   edit. A click on a table of contents entry jumps to its heading.

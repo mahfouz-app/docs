@@ -307,8 +307,8 @@ What a Word document keeps:
   blocks and horizontal rules.
 - Images from your vault, at the width you gave them in the editor, scaled
   to fit the page. WebP and AVIF images are converted to PNG.
-- Mermaid and draw.io diagrams as pictures, when the vault has that plugin
-  on; otherwise as their code.
+- Blocks a plugin draws, such as diagrams, as pictures when the vault has
+  that plugin on; otherwise as their code. {% include since.html v="0.21.0" %}
 - A `[TOC]` marker, as a numbered list of the headings.
 
 What it leaves out or changes:
