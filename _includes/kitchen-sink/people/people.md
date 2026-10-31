@@ -1,7 +1,6 @@
 ---
 id: 98b96353e53d4dfe84ad181fa91b6a0e
-database: true
-people_directory: true
+database: people
 ---
 # People
 

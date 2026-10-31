@@ -38,6 +38,15 @@ views:
 The rows are the note's **direct** child notes. A row's own children are its
 sub-pages, not rows of the database.
 
+{% include since.html v="0.22.0" %} A database Mahfouz uses for something
+of its own says so in place of `true`: `database: tasks` for a
+[Tasks database](/guide/tasks/#a-tasks-database), `database: people` for
+the [People database](/guide/people/) and `database: daily` for
+[Daily notes](/guide/daily-notes/). A database has one of these at most. Any
+other value, such as `database: postgres`, is an ordinary attribute and
+doesn't make the note a database. A copy of one of these databases
+(**Duplicate**, an import) is a plain `database: true`.
+
 ## Create a database
 
 You can create a database in three ways:

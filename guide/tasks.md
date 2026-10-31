@@ -157,8 +157,9 @@ to make one first: the first time you add a task page, or
 [turn a task line into one](#turn-into-task-page), in a vault that has
 none, Mahfouz creates **Tasks** at `Tasks/Tasks.md`.
 
-What makes a database a Tasks database is `task_pages: true` in its note's
-frontmatter, which the template writes. **Turn back into a note** removes it
+What makes a database a Tasks database is `database: tasks` in its note's
+frontmatter, in place of `database: true`, which the template writes.
+{% include since.html v="0.22.0" %} **Turn back into a note** removes it
 with the rest of the database.
 
 ### What a page holds
