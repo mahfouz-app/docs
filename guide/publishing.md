@@ -160,7 +160,7 @@ page, or click **Download SVG** to save it. Nothing is stored.
 ## Publish child notes {% include since.html v="0.12.0" %} {#publish-child-notes}
 
 A note's children can be published with it. Choose **This note and child
-notes** under **Keep updated** in the publish dialog or Page settings {% include since.html v="0.21.0" %},
+notes** under **Keep updated** in the publish dialog or the right sidebar's **Attributes** section {% include since.html v="0.21.0" %},
 or, for a note that's already published, choose **Publish child notes…**
 from its menu. The dialog says how many
 notes that publishes now. After you confirm, they're published in the
