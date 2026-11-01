@@ -71,6 +71,9 @@
     - slug: publishing
       title: "Publishing notes to the web"
       description: "Publish a note as a public page anyone with the link can read, keep it up to date, and unpublish it."
+    - slug: custom-domains
+      title: "Custom domains"
+      description: "Serve a published note and its child notes as a website on your own subdomain, such as docs.example.com."
     - slug: sharing
       title: "Sharing a note with people"
       description: "Share one note with chosen GitHub accounts or a secret link, let them read, comment, suggest or edit it live, and stop sharing any time."

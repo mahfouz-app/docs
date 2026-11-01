@@ -112,6 +112,11 @@ To change a published page's options later, choose **Page settings…** from
 the note's menu. It has the same **Visibility** and **Theme** choices as the
 publish dialog, and changes the live page right away, without an update.
 
+**Custom domain** {% include since.html v="0.22.0" %}: for a page published
+with **This note and child notes**, **Set up…** connects a domain of your
+own, and **Manage…** shows its status. See
+[Custom domains](/guide/custom-domains/).
+
 **Settings → Published pages** also has **Make indexed** or **Make
 unlisted** next to each page.
 
@@ -197,6 +202,13 @@ Attributes panel says **Child notes aren't published from this device.**
 under **Keep updated**, with a **Publish them here…** button that asks the
 same question {% include since.html v="0.22.0" %}. So a child is only ever
 published under the account of someone who chose to.
+
+### Custom domains {% include since.html v="0.22.0" %} {#custom-domains}
+
+A parent published with **This note and child notes** can be served as a
+website on a subdomain you own, such as `docs.example.com`: the parent is
+the home page, and each child page gets an address that follows its title.
+See [Custom domains](/guide/custom-domains/).
 
 ## How a published page looks {% include since.html v="0.12.0" %} {#how-a-published-page-looks}
 
