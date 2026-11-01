@@ -192,8 +192,11 @@ child you move out from under the parent keeps its page.
 
 The setting travels with the vault, but it publishes nothing on a device
 until it's turned on there. On your other computer, or for a collaborator,
-the parent's menu shows **Publish child notes on this device…**. So a child
-is only ever published under the account of someone who chose to.
+the parent's menu shows **Publish child notes on this device…**, and the
+Attributes panel says **Child notes aren't published from this device.**
+under **Keep updated**, with a **Publish them here…** button that asks the
+same question {% include since.html v="0.22.0" %}. So a child is only ever
+published under the account of someone who chose to.
 
 ## How a published page looks {% include since.html v="0.12.0" %} {#how-a-published-page-looks}
 
