@@ -18,7 +18,7 @@ approval.
 
 1. Open Settings → AI → External agents and turn on **Allow external
    agents (MCP)**.
-2. Under **Connect a client**, click **Connect** on the client's card:
+2. Click **Connect** on the client's card:
    **Claude Code**, **Codex**, **Cursor**, **VS Code**, **Claude Desktop**
    or **Other** {% include since.html v="0.22.0" %}. Change the name if you
    like; it's how the client shows up in Settings and on its proposals.

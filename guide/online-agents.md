@@ -56,9 +56,10 @@ copy private notes into the public repository.
 
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 
-In Settings → AI → External agents, **Connect a client** lists the
-clients Mahfouz knows. **Connect** on a client's card opens its section
-below and copies what you need: the connector URL, or the command to run.
+Settings → AI → External agents shows a card for each client Mahfouz
+knows, each with its own **Connect** button. **Connect** opens the
+client's section below and copies what you need: the connector URL, or the
+command to run. On the web, VS Code's button reads **Open in VS Code**.
 Every client uses the same URL, `https://api.mahfouz.app/mcp`, and signs
 in through Mahfouz's approval page, so none of them needs a token. The
 same URL also connects an agent [through a Mahfouz
@@ -118,16 +119,16 @@ browser opens Mahfouz's approval page.
 
 ### Codex {#codex}
 
-Run these in a terminal:
+**Connect** copies this command; run it in a terminal:
 
 ```sh
-codex mcp add mahfouz --url https://api.mahfouz.app/mcp
-codex mcp login mahfouz
+codex mcp add mahfouz --url https://api.mahfouz.app/mcp && codex mcp login mahfouz
 ```
 
-The second command opens your browser on Mahfouz's approval page. The
-server is saved in `~/.codex/config.toml`, which the Codex IDE extension
-reads too.
+It adds the server, then signs in: `codex mcp login` opens your browser on
+Mahfouz's approval page. If you added the server before, run
+`codex mcp login mahfouz` alone. The server is saved in
+`~/.codex/config.toml`, which the Codex IDE extension reads too.
 
 ### Cursor {#cursor}
 
@@ -150,7 +151,9 @@ approve the agent in Mahfouz.
 
 ### VS Code {#vscode}
 
-Run this in a terminal to add Mahfouz to your VS Code user profile:
+On the web, **Open in VS Code** on the VS Code card hands Mahfouz to VS
+Code: confirm adding the server there. Or run this in a terminal to add
+Mahfouz to your VS Code user profile:
 
 ```sh
 code --add-mcp '{"name":"mahfouz","type":"http","url":"https://api.mahfouz.app/mcp"}'
