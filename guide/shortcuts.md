@@ -136,7 +136,7 @@ Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
-  **New Database**, New Vault, Open Vault, Save, Import
+  **New Database**, Add Vault {% include since.html v="0.22.0" %}, Save, Import
   {% include since.html v="0.16.0" %}, Export, Share (macOS only), Close
   Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
@@ -162,7 +162,7 @@ the menu, though they still work:
   working in the editor.
 
 These menu keys are fixed and aren't in the `## Shortcuts` table:
-<kbd>Mod</kbd><kbd>,</kbd> Settings, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>N</kbd> New Vault, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> Open Vault, <kbd>Mod</kbd><kbd>F</kbd>
+<kbd>Mod</kbd><kbd>,</kbd> Settings, <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> Add Vault {% include since.html v="0.22.0" %}, <kbd>Mod</kbd><kbd>F</kbd>
 Find and Replace. Stop Presenting has no menu key: press <kbd>Esc</kbd>, since <kbd>Mod</kbd><kbd>.</kbd> opens the
 [menu at the cursor](/guide/keyboard-writing/#the-menu-at-the-cursor). {% include since.html v="0.20.0" %} Line Numbers has no key, so
 <kbd>Mod</kbd><kbd>Shift</kbd><kbd>L</kbd> copies the note as a wikilink.
@@ -196,7 +196,7 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Previous tab | <kbd>Mod</kbd><kbd>&#91;</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>&#91;</kbd> |
 | Next tab | <kbd>Mod</kbd><kbd>&#93;</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>&#93;</kbd> |
 | Settings | <kbd>Mod</kbd><kbd>,</kbd> | <kbd>Mod</kbd><kbd>;</kbd> |
-| Open Vault | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> |
+| Add Vault {% include since.html v="0.22.0" %} | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> |
 | Switch between Source and Preview | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> (Firefox keeps <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>) {% include since.html v="0.20.0" %} |
 | Move focus past the last region | <kbd>F6</kbd> goes back to the editor | <kbd>F6</kbd> goes on to the browser's address bar {% include since.html v="0.20.0" %} |
 | Export the active note | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>E</kbd> | (desktop only) |

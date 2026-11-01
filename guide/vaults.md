@@ -74,12 +74,11 @@ computer (see [Mahfouz on the web](/guide/web/)). A browser that can neither
 open a folder nor keep a GitHub vault says so and links to the desktop app.
 
 **Add vault…** in **Settings → Vaults** opens the same choices as a dialog.
-On the desktop app, **File → New Vault…**
-(<kbd>Mod</kbd><kbd>Shift</kbd><kbd>N</kbd>) opens it straight on **New vault
-on this computer**, and **File → Open Vault…**
-(<kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd>) skips it and goes straight to the
-folder picker; on the web, <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> opens a
-folder.
+So do **File → Add Vault…** on the desktop app
+(<kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd>; <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd>
+on the web) and **Add vault…** in the Sidebar's menu and the phone's
+**⋯** menu. With no vault open, where the choices already fill the window,
+the key moves to the first of them. {% include since.html v="0.22.0" %}
 
 ### Recent vaults
 

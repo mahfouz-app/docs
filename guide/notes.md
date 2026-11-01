@@ -106,8 +106,8 @@ the fields by name: `{today}_{id}_`.
   The bar ends with the open note's own icon and title, so the note stays
   named after its title scrolls out of view. {% include since.html v="0.13.0" %}
 - **Sidebar menu**: right-click empty space in the Sidebar for **New
-  note** and **New folder** (in the active vault), **New vault…**, **Open
-  vault…**, and the grouping, sort and filename-display options.
+  note** and **New folder** (in the active vault), **Add vault…**
+  {% include since.html v="0.22.0" %}, and the grouping, sort and filename-display options.
 - **Reveal in Finder** is called **Reveal in File Explorer** on Windows
   and **Open Containing Folder** on Linux.
 - **Bookmarks**: bookmark a note from its menu (right-click its Sidebar

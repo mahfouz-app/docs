@@ -111,7 +111,7 @@ The bar at the top of Home holds **Alerts** and **⋯**:
   - Your account: the same row and status as the [account
     menu](/guide/github/#the-account-button).
   - **Notes**: **Sort by**, **Collapse all**, **New folder**, **New
-    database**, **New vault…** and **Open vault…**. When you've hidden
+    database**, **Add vault…** {% include since.html v="0.22.0" %}. When you've hidden
     **Tasks** or **People** from the bar, it also has **Show Tasks** or
     **Show People** to bring it back.
   - **App**: **AI chat**, **Settings**, **Trash**, **External agents**,
