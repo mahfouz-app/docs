@@ -127,6 +127,13 @@ A page doesn't change when you edit the note. To bring it up to date:
   Other attributes aren't on the page, so changing them doesn't mark it out
   of date.
 
+The row also appears when the page was updated from somewhere else and your
+note has changed since: from another computer, or by an agent that edited the
+note through the [MCP server](/guide/online-agents/). Mahfouz checks after it syncs
+the vault, for the pages you published. A page last updated by an older
+version of Mahfouz doesn't show the row until it's updated again.
+{% include since.html v="0.22.0" %}
+
 The same section shows the page's link (click it to open the page, or
 **Copy**) and **Keep updated** {% include since.html v="0.21.0" %}: **Off**, **This note** or **This note
 and child notes**, as in the publish dialog.
