@@ -19,8 +19,10 @@ ways:
   workspace on Mahfouz's servers, and every edit is committed as you and
   pushed before the agent hears back.
 
-This page covers the second way. Both use the same connector URL; what you
-choose when you approve the agent decides which one it gets.
+This page covers the second way. Both use the same connector URL; your
+[plan](/guide/plan/) decides which one an agent connected on the web gets:
+on Free it connects through Mahfouz, and on Pro and Max on GitHub.
+{% include since.html v="0.23.0" %}
 
 ## Connect an agent
 
@@ -53,6 +55,46 @@ before it.
 Read is enough for a public repository. If you set a public repository to
 Edit or Publish beside a private one, Mahfouz warns you: an agent could
 copy private notes into the public repository.
+
+## Plan limits {% include since.html v="0.23.0" %} {#plan-limits}
+
+Agents on GitHub come with the paid [plans](/guide/plan/): Pro reaches 2
+repositories and Max 10. On Free, the approval page connects the agent
+through Mahfouz instead, so it works while a Mahfouz tab is open (see
+[Connect an agent on the web](/guide/external-agents/#connect-an-agent-on-the-web)),
+and an agent connected on GitHub before is told:
+
+> Agents working while Mahfouz is closed come with Pro and Max. Upgrade in
+> Mahfouz Settings → Plan, or connect this app again to let it work while
+> Mahfouz is open
+
+The limit counts repositories, not agents: a repository two agents use
+counts once.
+
+- **Adding repositories past the limit** is refused. The approval page
+  says "Your Mahfouz plan allows agents in 2 repositories while Mahfouz is
+  closed. Keep to the repositories agents already reach, or upgrade in
+  Mahfouz Settings → Plan." **Add repositories** in Settings says "Your
+  plan includes 2 repositories for agents while Mahfouz is closed. Remove
+  one first, or upgrade." Approving an agent again for repositories agents
+  already reach always works.
+- **Over the limit**, after you move to a lower plan or your plan ends, the
+  repositories agents were given most recently pause. In Settings → AI →
+  External agents each shows **Paused — over your plan's limit**, with
+  **Upgrade**. An agent that calls one is told:
+
+  > owahab/notes is paused: your Mahfouz plan allows agents in 2
+  > repositories while Mahfouz is closed. Upgrade in Mahfouz Settings → Plan
+  > to resume it
+
+  `list_vaults` marks it paused. On the web, a Pro or Max agent is always
+  connected on GitHub, so it can't reach a paused repository through an
+  open Mahfouz tab either. An agent connected to the desktop app's own MCP
+  server (see [External agents](/guide/external-agents/#connect-an-agent-in-the-desktop-app))
+  still works on the vault while the app is open.
+
+Nothing is deleted when a repository pauses: its access levels and working
+copy stay, and upgrading resumes it where it left off.
 
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 

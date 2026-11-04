@@ -22,16 +22,12 @@ choose **Only select repositories** and pick the ones you keep vaults in.
 The account menu then offers **Manage repository access** to change the
 selection later.
 
-The account menu has two ways to sign out:
-
-- **Sign out**: ends this browser's session only.
-- **Sign out everywhere**: ends every browser session and revokes
-  Mahfouz's GitHub authorization, which signs the desktop app out too and
-  disconnects [external agents](/guide/external-agents/) connected through
-  the web. Mahfouz asks first. If it can't confirm that every session ended and
-  that GitHub revoked it, it says **Signed out of this browser only**: the
-  desktop app and other browsers may still be signed in. Click **Open
-  GitHub settings** on that notice and revoke Mahfouz to be sure.
+**Sign out**, in the account menu, ends this browser's session only. To end
+every browser session and revoke Mahfouz's GitHub authorization, use
+**Sign out everywhere** in [Settings → Account](/guide/account/#sign-out-everywhere)
+{% include since.html v="0.23.0" %}; it signs the desktop app out too and
+disconnects [external agents](/guide/external-agents/) connected through the
+web.
 
 ## Opening a GitHub repository
 

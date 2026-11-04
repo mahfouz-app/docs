@@ -19,7 +19,8 @@ that organization too.
 
 - Your notes are yours. We claim no rights to them, except what we need to
   show a page you choose to publish.
-- Mahfouz is free. You may use it at home and at work.
+- Mahfouz is free to use; Pro and Max are [paid plans](#paid-plans). You may
+  use it at home and at work.
 - The app is proprietary software. Don't copy it, resell it or take it apart.
 - Services you connect, such as GitHub or an AI provider, have their own
   terms, and you're responsible for how you use them.
@@ -53,9 +54,45 @@ these terms limits your rights under those licences.
 We own Mahfouz and its name and logo. These terms give you no right to use
 them, except to refer to Mahfouz accurately.
 
-Mahfouz is free today. If we ever charge for something, we'll say so before
-it applies to you, and what you already have keeps working as the terms
-said when you got it.
+Mahfouz is free to use; Pro and Max are paid plans, under [Paid
+plans](#paid-plans) below. If we start charging for something that
+is free today, we'll say so before it applies to you.
+
+## Paid plans {#paid-plans}
+
+
+Pro and Max add features to your Mahfouz account, such as agents that
+work while Mahfouz is closed and custom domains. [Pricing](/pricing/)
+lists what each includes and costs, and the [guide](/guide/plan/) says how
+to change plans.
+
+- **Payments.** Stripe processes payments for us. You pay through Stripe
+  Checkout and manage your card, invoices and plan in Stripe's billing
+  page, under [Stripe's terms](https://stripe.com/legal/consumer).
+- **Renewal.** A plan renews automatically, monthly or yearly as you
+  chose, and Stripe charges your card at each renewal until you cancel.
+- **Cancelling.** You can cancel at any time from Settings → Plan →
+  Manage billing. Cancelling, or moving to a lower plan, takes effect at
+  the end of the period you already paid for; until then you keep your
+  plan.
+- **Upgrades** are charged at once, for the difference over the rest of
+  the period you already paid for (prorated).
+- **Taxes.** Prices don't include tax. Sales tax or VAT is added at
+  checkout where it applies, and shown before you pay.
+- **Refunds.** If you're charged twice for the same account, for example
+  by two checkouts at once, we cancel the extra plan and refund it
+  automatically. For anything else, ask through support
+  ([legal@influpert.com](mailto:legal@influpert.com)) and we'll look at
+  it; refunds aren't otherwise automatic.
+- **Failed payments.** If a renewal can't be charged, Stripe tries again
+  over the following days, and your plan keeps working meanwhile. If every
+  try fails, the plan ends and your account moves to Free.
+- **Over a plan's limits.** When your plan ends or you move to a lower
+  one, anything over the new plan's limits, such as agent repositories
+  or custom domains, pauses. Nothing is deleted, and upgrading again
+  resumes it.
+- **Prices can change.** We'll tell you before a new price applies to
+  your plan, and it applies from your next renewal.
 
 ## Your content
 

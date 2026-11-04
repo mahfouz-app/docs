@@ -208,7 +208,13 @@ open.
 
 To let an agent work with no Mahfouz window or tab open, connect it to
 your GitHub repositories instead: see
-[Agents on GitHub](/guide/online-agents/).
+[Agents on GitHub](/guide/online-agents/). That comes with Pro and Max,
+for 2 or 10 repositories: on Free, Settings → AI → External agents on the
+web says
+**Agents can work with Mahfouz closed on Pro and Max. On Free they work while
+Mahfouz is open.**, with **See plans**, and agents connect through the tab as
+above. See [Plan limits](/guide/online-agents/#plan-limits).
+{% include since.html v="0.23.0" %}
 
 ## Access levels {% include since.html v="0.17.0" %} {#access-levels}
 
@@ -348,8 +354,8 @@ In Settings → AI → External agents:
   turns down its proposals still waiting there. Lowering a level turns
   down the waiting proposals the new level doesn't allow. {% include since.html v="0.17.0" %}
 - On the web, **Disconnect all agents** cuts off every client at once.
-  [**Sign out everywhere**](/guide/web-github/#signing-in-with-github) in
-  the account menu disconnects every agent connected through the web, too.
+  [**Sign out everywhere**](/guide/account/#sign-out-everywhere) in
+  Settings → Account {% include since.html v="0.23.0" %} disconnects every agent connected through the web, too.
 
 Turning off **Allow external agents (MCP)** stops agents from reaching
 this app until you turn it back on.

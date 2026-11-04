@@ -35,7 +35,8 @@ yet.
 
 ## Connect a domain
 
-You need the note's page to be published with **This note and child
+You need a plan that includes custom domains (Pro or Max: see [Plan
+limits](#plan-limits) {% include since.html v="0.23.0" %}), the note's page published with **This note and child
 notes**, push access to the vault's GitHub repository, and access to your
 domain's DNS settings.
 
@@ -99,9 +100,12 @@ domains** show the domain's status:
   quotes the reason. Fix it (often a CAA record), then click **Check now**.
   Mahfouz also starts the certificate over each week, and removes the
   domain after three weeks without one.
-- **Paused**: the site's home page was unpublished or taken down. Publish
+- **Paused — over your plan's limit** {% include since.html v="0.23.0" %}: you have more domains
+  than your plan includes, and this one is over the limit. See [Plan
+  limits](#plan-limits). Someone else's paused domain reads **Paused**.
+- **Suspended** (called **Paused** before 0.23.0 {% include since.html v="0.23.0" %}): the site's home page was unpublished or taken down. Publish
   the note again, from the same repository, and the site comes back. After
-  30 days paused, its certificate is released: publishing the note then
+  30 days suspended, its certificate is released: publishing the note then
   starts over, and the records have to be found within 7 days. After 30
   more days, the domain is removed.
 - **Removing**: the domain is being disconnected. This takes up to a
@@ -177,13 +181,42 @@ repositories you can push to, with **Open note** and **Manage…** (or
 
 ## Limits
 
-- Your account can have up to 5 domains, and a repository up to 3.
+- Your account can have as many domains as your plan includes (Free none,
+  Pro 1, Max 5: see [Plan limits](#plan-limits)) {% include since.html v="0.23.0" %}, and a repository up to 3.
 - Your GitHub account has to be at least 7 days old to connect a domain.
 - Up to 2 of your domains can be waiting for DNS at a time.
 - One note can have one domain, and a domain serves one site.
 - You can try to connect a domain up to 10 times an hour.
 - Mahfouz can connect only so many domains in all. When it's full, you see
   "Mahfouz can't connect more domains right now", and can try again later.
+
+## Plan limits {% include since.html v="0.23.0" %} {#plan-limits}
+
+How many domains you can connect depends on your [plan](/guide/plan/): none
+on Free, 1 on Pro and 5 on Max. A domain counts toward the plan of whoever
+connected it.
+
+- **On Free**, **Add domain…** in Settings → Custom domains is disabled,
+  with **Custom domains come with Pro and Max.** and **Upgrade**, which
+  opens Settings → Plan.
+- **At your limit**, **Add domain…** is disabled, and Settings says how many
+  you use, such as "You're using 1 of 1 custom domains. Remove one or upgrade
+  to add another." Connecting one from the Custom domain dialog is refused,
+  with **Upgrade**.
+- **Over your limit**, after you move to a lower plan or your plan ends,
+  domains pause until you're back within it: first any that are already
+  **Suspended**, then the ones you connected most recently. Each shows
+  **Paused — over your plan's limit**, and Settings → Custom domains lists them in a banner with **Upgrade**.
+
+A paused domain stops answering, and its pages' p.mahfouz.app addresses work
+again meanwhile. Nothing is removed: the domain, its DNS records and its
+pages stay. Upgrade, or remove another domain, and it comes back by
+itself, which can take a few minutes while its certificate is issued again.
+Unlike a suspended domain, a paused one is never removed while it waits.
+
+A domain paused before its DNS records were found is the exception: like any
+domain waiting for DNS, it's still dropped if its records aren't found within
+48 hours of connecting, and when it resumes it goes back to **Waiting for DNS**.
 
 ## How it's stored
 

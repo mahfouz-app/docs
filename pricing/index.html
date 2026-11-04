@@ -1,0 +1,221 @@
+---
+# Rendered from _data/plans.yml, which bin/stripe-setup --docs writes from the
+# app's catalog (bin/lib/stripe-catalog.ts). Change prices and features there.
+---
+{%- assign plans = site.data.plans.plans -%}
+{%- assign saving = "" -%}
+{%- for p in plans -%}{%- if saving == "" and p.prices.yearly.label -%}{%- assign saving = p.prices.yearly.label -%}{%- endif -%}{%- endfor -%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Mahfouz is free to use. Pro and Max add agents that work while Mahfouz is closed, custom domains and pages without the Mahfouz badge."
+    />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://mahfouz.app/pricing/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <script src="/theme.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Pricing | Mahfouz</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Mahfouz home">
+          <img class="brand-logo-light" src="/images/logo.png" alt="Mahfouz" width="1720" height="540" />
+          <img class="brand-logo-dark" src="/images/logo-dark.png" alt="Mahfouz" width="1720" height="540" />
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/#features">Features</a>
+          <a href="/#privacy">Privacy</a>
+          <a href="/#agents">Agents</a>
+          <a href="/compare/">Compare</a>
+          <a href="/pricing/" aria-current="page">Pricing</a>
+          <a href="/plugins/">Plugins</a>
+          <a href="/guide/">User guide</a>
+          <a class="nav-download" href="/#downloads">Install</a>
+        </nav>
+        <div class="theme-switch" role="group" aria-label="Theme">
+          <button type="button" data-theme="light" aria-pressed="false" title="Light">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+            <span class="sr-only">Light</span>
+          </button>
+          <button type="button" data-theme="dark" aria-pressed="false" title="Dark">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
+            <span class="sr-only">Dark</span>
+          </button>
+          <button type="button" data-theme="system" aria-pressed="true" title="System">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></svg>
+            <span class="sr-only">System</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="pricing">
+      <!-- Monthly or yearly, with no script: the radios come before the
+           sections they switch, so the CSS sibling selectors reach them. -->
+      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-monthly" aria-label="Billed monthly" />
+      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-yearly" aria-label="Billed yearly" checked />
+
+      <section class="shell pricing-hero" aria-labelledby="pricing-title">
+        <p class="eyebrow">Pricing</p>
+        <h1 id="pricing-title">Simple plans for your notes.</h1>
+        <p class="hero-description">
+          Mahfouz is free to use. Pay when agents should keep working while
+          it's closed, or for your own domain.
+        </p>
+        <div class="pricing-period">
+          <label for="pricing-monthly" class="pricing-period-monthly">Monthly</label>
+          <label for="pricing-yearly" class="pricing-period-yearly">Yearly{% if saving != "" %} <span class="pricing-saving">{{ saving }}</span>{% endif %}</label>
+        </div>
+      </section>
+
+      <section class="shell pricing-plans-section" aria-labelledby="pricing-plans-title">
+        <h2 id="pricing-plans-title" class="sr-only">Plans</h2>
+        <ul class="pricing-plans">
+          {%- for p in plans %}
+          {%- assign m = p.prices.monthly -%}
+          {%- assign y = p.prices.yearly -%}
+          {%- capture m_big %}${{ m.amount }}{% endcapture -%}
+          {%- capture y_big %}${{ y.amount }}{% endcapture %}
+          <li class="pricing-plan">
+            <div class="pricing-plan-head">
+              <h3>{{ p.name }}</h3>
+            </div>
+            <p class="pricing-price pricing-price-monthly">{{ m_big }} <span>{{ m.display | remove_first: m_big | strip }}</span></p>
+            <p class="pricing-price pricing-price-yearly">{{ y_big }} <span>{{ y.display | remove_first: y_big | strip }}</span></p>
+            <ul class="pricing-features">
+              {%- for f in p.features %}{% if f.included %}
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>{{ f.text }}</li>
+              {%- endif %}{% endfor %}
+            </ul>
+            <div class="pricing-plan-foot">
+              {%- if p.tier == "free" %}
+              <a class="button button-secondary pricing-button-small" href="/#downloads">Download Mahfouz</a>
+              {%- else %}
+              <a class="{% if p.tier == 'pro' %}registry-install{% else %}button button-secondary pricing-button-small{% endif %}" href="/guide/plan/#upgrade">Get {{ p.name }}</a>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+        <p class="pricing-note">
+          Upgrade from <strong>Settings → Plan</strong> in Mahfouz, on the web
+          or in the desktop app. Prices are in US dollars, before tax.
+        </p>
+      </section>
+
+      <section class="shell pricing-lower">
+        <div class="pricing-compare" aria-labelledby="pricing-compare-title">
+          <h2 id="pricing-compare-title">Compare plans.</h2>
+          <div class="compare-table-wrap">
+            <table class="compare-table pricing-table">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr-only">Feature</span></th>
+                  {%- for name in site.data.plans.compare.plans %}
+                  <th scope="col">{{ name }}</th>
+                  {%- endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {%- for row in site.data.plans.compare.rows %}
+                <tr>
+                  <th scope="row">{{ row.feature }}</th>
+                  {%- for c in row.cells %}
+                  {%- if c == true %}
+                  <td><svg class="pricing-yes" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg><span class="sr-only">Included</span></td>
+                  {%- elsif c == false %}
+                  <td><span class="pricing-no" aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
+                  {%- else %}
+                  <td>{{ c }}</td>
+                  {%- endif %}
+                  {%- endfor %}
+                </tr>
+                {%- endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pricing-faq" aria-labelledby="pricing-faq-title">
+          <h2 id="pricing-faq-title">Questions.</h2>
+          <div class="compare-faq-list">
+            <div class="compare-faq-item">
+              <h3>Are taxes included?</h3>
+              <p>No. Sales tax or VAT for where you live is added at checkout, before you pay.</p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Can I cancel anytime?</h3>
+              <p>Yes, from Settings → Plan → Manage billing. You keep your plan until the period you paid for ends.</p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>What pauses if I move down a plan?</h3>
+              <p>Agent repositories and custom domains over the new limit pause. Nothing is deleted, and upgrading picks them up again.</p>
+            </div>
+            <div class="compare-faq-item">
+              <h3>Who handles payments?</h3>
+              <p>Stripe. It keeps your email and billing address; we never see your card.</p>
+            </div>
+          </div>
+          <p class="pricing-more"><a class="more" href="/guide/plan/">Plans in the user guide</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-top">
+        <p class="footer-tagline">Open Markdown notes, kept in your hands. No lock-in, ever.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-group">
+            <h2 class="footer-heading" id="footer-product">Product</h2>
+            <ul aria-labelledby="footer-product">
+              <li><a href="/#features">Features</a></li>
+              <li><a href="/#privacy">Privacy</a></li>
+              <li><a href="/#agents">Agents</a></li>
+              <li><a href="/compare/">Compare</a></li>
+              <li><a href="/pricing/">Pricing</a></li>
+              <li><a href="/#downloads">Install</a></li>
+            </ul>
+          </div>
+          <div class="footer-group">
+            <h2 class="footer-heading" id="footer-resources">Resources</h2>
+            <ul aria-labelledby="footer-resources">
+              <li><a href="/guide/">User guide</a></li>
+              <li><a href="/plugins/">Plugins</a></li>
+              <li><a href="/changelog/">Changelog</a></li>
+              <li><a href="/guide/feedback/">Send feedback</a></li>
+            </ul>
+          </div>
+          <div class="footer-group">
+            <h2 class="footer-heading" id="footer-legal">Legal</h2>
+            <ul aria-labelledby="footer-legal">
+              <li><a href="/privacy/">Privacy policy</a></li>
+              <li><a href="/terms/">Terms</a></li>
+              <li><a href="/security/">Security</a></li>
+              <li><a href="/license/">License</a></li>
+              <li><a href="/acknowledgements/">Acknowledgements</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-sign">
+        <a class="footer-logo" href="/" aria-label="Mahfouz home">
+          <img class="brand-logo-light" src="/images/logo.png" alt="" width="1720" height="540" />
+          <img class="brand-logo-dark" src="/images/logo-dark.png" alt="" width="1720" height="540" />
+        </a>
+        <p class="footer-copyright">© 2026 <a href="https://influpert.com">Influpert LLC</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -331,6 +331,11 @@ The bottom of every page shows **Published with Mahfouz**, when the page
 was last updated, a **Markdown** link to the [Markdown version](#the-markdown-version),
 an **Edit** link and **Report this page**.
 
+On Pro and Max, pages leave out the Mahfouz logo and **Published with
+Mahfouz**; **Report this page** always stays. The plan is that of the
+account that published the page: see [Plans & billing](/guide/plan/).
+{% include since.html v="0.23.0" %}
+
 **Edit** opens Mahfouz on the web with the page:
 
 - **Edit original**: if you're signed in and can edit the repository the
