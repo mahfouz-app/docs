@@ -209,7 +209,8 @@ open.
 To let an agent work with no Mahfouz window or tab open, connect it to
 your GitHub repositories instead: see
 [Agents on GitHub](/guide/online-agents/). That comes with Pro and Max,
-for 2 or 10 repositories: on Free, Settings → AI → External agents says
+for 2 or 10 repositories: on Free, Settings → AI → External agents on the
+web says
 **Agents can work with Mahfouz closed on Pro and Max. On Free they work while
 Mahfouz is open.**, with **See plans**, and agents connect through the tab as
 above. See [Plan limits](/guide/online-agents/#plan-limits).

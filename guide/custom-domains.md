@@ -101,7 +101,7 @@ domains** show the domain's status:
   Mahfouz also starts the certificate over each week, and removes the
   domain after three weeks without one.
 - **Paused — over your plan's limit** {% include since.html v="0.23.0" %}: you have more domains
-  than your plan includes, and this is one of the newest. See [Plan
+  than your plan includes, and this one is over the limit. See [Plan
   limits](#plan-limits). Someone else's paused domain reads **Paused**.
 - **Suspended** (called **Paused** before 0.23.0 {% include since.html v="0.23.0" %}): the site's home page was unpublished or taken down. Publish
   the note again, from the same repository, and the site comes back. After
@@ -204,15 +204,19 @@ connected it.
   to add another." Connecting one from the Custom domain dialog is refused,
   with **Upgrade**.
 - **Over your limit**, after you move to a lower plan or your plan ends,
-  the domains you connected most recently pause, until you're back within
-  it. Each shows **Paused — over your plan's limit**, and Settings → Custom
-  domains lists them in a banner with **Upgrade**.
+  domains pause until you're back within it: first any that are already
+  **Suspended**, then the ones you connected most recently. Each shows
+  **Paused — over your plan's limit**, and Settings → Custom domains lists them in a banner with **Upgrade**.
 
 A paused domain stops answering, and its pages' p.mahfouz.app addresses work
 again meanwhile. Nothing is removed: the domain, its DNS records and its
 pages stay. Upgrade, or remove another domain, and it comes back by
 itself, which can take a few minutes while its certificate is issued again.
 Unlike a suspended domain, a paused one is never removed while it waits.
+
+A domain paused before its DNS records were found is the exception: like any
+domain waiting for DNS, it's still dropped if its records aren't found within
+48 hours of connecting, and when it resumes it goes back to **Waiting for DNS**.
 
 ## How it's stored
 

@@ -142,6 +142,11 @@ once you use the feature:
   tokens stored as hashes, for up to 30 days or until you revoke it. What
   the agent reads and writes passes through to your open tab and isn't
   stored.
+- <!-- DRAFT: needs owner/legal review before plans go on sale --> **Your plan.** If you buy Pro or Max, the server keeps your Stripe
+  customer ID and subscription ID, your plan, its billing period, its
+  status (such as active or past due), when it renews or ends, and the IDs
+  of any open payment disputes. It doesn't keep your card, email or billing
+  address: Stripe does (see [Who else handles data](#who-else-handles-data)).
 - **Request logs.** Like any web server, Cloudflare records requests to
   Mahfouz's server and published pages, including the IP address, the address
   requested and the time. We use these logs only to run the service and
@@ -173,6 +178,13 @@ browser only.
 - **GitHub** hosts this website, the app's downloads, feedback issues and
   page reports, and signs you in. It handles data under [GitHub's privacy
   statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement).
+- <!-- DRAFT: needs owner/legal review before plans go on sale --> **Stripe** processes payments for Pro and Max. It holds your email,
+  billing address and card, and your invoices, under [Stripe's privacy
+  policy](https://stripe.com/privacy). Mahfouz never sees your card number.
+  Mahfouz gives Stripe your Mahfouz account ID as metadata on your customer
+  and subscription, so a payment can be matched to your account, and sends
+  it nothing else about you. Mahfouz keeps only what's listed under [Your
+  plan](#what-mahfouzs-server-keeps).
 
 The services you connect yourself, such as an AI provider or your Git
 remote, handle what you send them under their own policies.

@@ -2575,17 +2575,6 @@ h1 {
   letter-spacing: -0.025em;
 }
 
-.pricing-popular {
-  flex: none;
-  margin-top: 2px;
-  padding: 3px 10px;
-  color: var(--cm-text);
-  background: var(--cm-bg);
-  border-radius: 980px;
-  font-size: 0.75rem;
-  white-space: nowrap;
-}
-
 .pricing-price {
   margin: 0;
   color: var(--cm-text);
@@ -2641,35 +2630,10 @@ h1 {
   margin-top: 6px;
 }
 
-.pricing-action {
-  display: inline-flex;
-  align-items: center;
+.pricing-button-small {
   min-height: 32px;
   padding: 4px 16px;
-  color: #fff;
-  background: var(--cm-accent);
-  border: 1px solid var(--cm-accent);
-  border-radius: 980px;
   font-size: 0.88rem;
-  text-decoration: none;
-}
-
-.pricing-action:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-  text-decoration: none;
-}
-
-.pricing-action-secondary {
-  color: var(--link);
-  background: transparent;
-  border-color: var(--link);
-}
-
-.pricing-action-secondary:hover {
-  color: #fff;
-  background: var(--cm-accent);
-  border-color: var(--cm-accent);
 }
 
 .pricing-note {

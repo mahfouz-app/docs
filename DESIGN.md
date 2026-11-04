@@ -86,7 +86,7 @@ Reuse these from `styles.css`:
   secondary is a blue outline that fills on hover.
 - **Text links** in running text are `--cm-text` with a thin blue underline.
 - **Logo:** the header shows the wordmark at 96px wide: `images/logo.png` in light mode, `images/logo-dark.png` (the mark's dark colours, papyrus-white type) in dark mode, swapped by `.brand-logo-light` and `.brand-logo-dark`. Never invert or filter it; its colours are fixed. The files come from the app repo (`assets/images/`, rendered by `bin/brand-wordmark`).
-- **Footer** (`.site-footer`): two rows. On top, the tagline as a tile-sized heading (`.footer-tagline`, 1.65rem, weight 600, `--cm-text`) beside the links (`.footer-nav`): the header's links and more, in three groups of four or five (Product, Resources, Legal), each a `--cm-text` heading over a list of 1rem `--body-secondary` links with no underline until hover. Three columns, two on phones; under 900px the links go under the tagline. Below, the full wordmark closes the page (`.footer-logo`, `images/logo.png` and `logo-dark.png`, swapped by theme like the header's), up to 640px wide and 360px on phones, with "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted` at its bottom right, or under it below 900px. Every page repeats the same footer.
+- **Footer** (`.site-footer`): two rows. On top, the tagline as a tile-sized heading (`.footer-tagline`, 1.65rem, weight 600, `--cm-text`) beside the links (`.footer-nav`): the header's links and more, in three groups of four to six (Product, Resources, Legal), each a `--cm-text` heading over a list of 1rem `--body-secondary` links with no underline until hover. Three columns, two on phones; under 900px the links go under the tagline. Below, the full wordmark closes the page (`.footer-logo`, `images/logo.png` and `logo-dark.png`, swapped by theme like the header's), up to 640px wide and 360px on phones, with "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted` at its bottom right, or under it below 900px. Every page repeats the same footer.
 - **`.more` links** ("Learn more ›", "Compare ›"): `--link`, no underline
   until hover, with the chevron added by `.more::after`. Use them for calls
   to action in tiles and cards.
@@ -126,11 +126,11 @@ Reuse these from `styles.css`:
 
 ## Pages
 
-- Website pages (home, `compare/`, `plugins/`) are hand-written HTML that
+- Website pages (home, `compare/`, `plugins/`, `pricing/`) are hand-written HTML that
   repeat the same `<head>`, header and footer. Copy them from an existing
   page, and set `aria-current="page"` on the page's nav link. A new
   top-level page goes in the main nav of every page that has one (`index.html`,
-  `_layouts/`, `compare/`, `plugins/`).
+  `_layouts/`, `compare/`, `plugins/`, `pricing/`), and in every footer.
 - A plugin's page uses the `plugin` layout, built from its file in
   `_plugins/`: the title (with its badge to the right), the description,
   the actions (**Source ›** and **Install**), a row of facts, then the

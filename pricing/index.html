@@ -59,11 +59,13 @@
           </button>
         </div>
       </div>
+    </header>
+
     <main id="main" class="pricing">
       <!-- Monthly or yearly, with no script: the radios come before the
            sections they switch, so the CSS sibling selectors reach them. -->
-      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-monthly" />
-      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-yearly" checked />
+      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-monthly" aria-label="Billed monthly" />
+      <input class="pricing-period-input" type="radio" name="pricing-period" id="pricing-yearly" aria-label="Billed yearly" checked />
 
       <section class="shell pricing-hero" aria-labelledby="pricing-title">
         <p class="eyebrow">Pricing</p>
@@ -72,7 +74,7 @@
           Mahfouz is free to use. Pay when agents should keep working while
           it's closed, or for your own domain.
         </p>
-        <div class="pricing-period" role="group" aria-label="Billing period">
+        <div class="pricing-period">
           <label for="pricing-monthly" class="pricing-period-monthly">Monthly</label>
           <label for="pricing-yearly" class="pricing-period-yearly">Yearly{% if saving != "" %} <span class="pricing-saving">{{ saving }}</span>{% endif %}</label>
         </div>
@@ -86,12 +88,9 @@
           {%- assign y = p.prices.yearly -%}
           {%- capture m_big %}${{ m.amount }}{% endcapture -%}
           {%- capture y_big %}${{ y.amount }}{% endcapture %}
-          <li class="pricing-plan{% if p.tier == 'pro' %} pricing-plan-popular{% endif %}">
+          <li class="pricing-plan">
             <div class="pricing-plan-head">
               <h3>{{ p.name }}</h3>
-              {%- if p.tier == "pro" %}
-              <span class="pricing-popular">Most popular</span>
-              {%- endif %}
             </div>
             <p class="pricing-price pricing-price-monthly">{{ m_big }} <span>{{ m.display | remove_first: m_big | strip }}</span></p>
             <p class="pricing-price pricing-price-yearly">{{ y_big }} <span>{{ y.display | remove_first: y_big | strip }}</span></p>
@@ -102,9 +101,9 @@
             </ul>
             <div class="pricing-plan-foot">
               {%- if p.tier == "free" %}
-              <a class="pricing-action pricing-action-secondary" href="/#downloads">Download Mahfouz</a>
+              <a class="button button-secondary pricing-button-small" href="/#downloads">Download Mahfouz</a>
               {%- else %}
-              <a class="pricing-action{% if p.tier != 'pro' %} pricing-action-secondary{% endif %}" href="/guide/plan/#upgrade">Get {{ p.name }}</a>
+              <a class="{% if p.tier == 'pro' %}registry-install{% else %}button button-secondary pricing-button-small{% endif %}" href="/guide/plan/#upgrade">Get {{ p.name }}</a>
               {%- endif %}
             </div>
           </li>
@@ -172,7 +171,6 @@
           <p class="pricing-more"><a class="more" href="/guide/plan/">Plans in the user guide</a></p>
         </div>
       </section>
-      </section>
     </main>
 
     <footer class="site-footer shell">
@@ -186,6 +184,7 @@
               <li><a href="/#privacy">Privacy</a></li>
               <li><a href="/#agents">Agents</a></li>
               <li><a href="/compare/">Compare</a></li>
+              <li><a href="/pricing/">Pricing</a></li>
               <li><a href="/#downloads">Install</a></li>
             </ul>
           </div>

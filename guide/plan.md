@@ -122,13 +122,15 @@ cancels the plan and you move to Free.
 
 When you move to a lower plan, or your plan ends, you can have more agent
 repositories or custom domains than the new plan includes. Mahfouz pauses
-the ones over the limit, newest first:
+the ones over the limit:
 
 - **Agent repositories**: the ones agents on GitHub were given access to
-  most recently. Agents can't work on a paused repository while
-  Mahfouz is closed; they still can [through Mahfouz](/guide/external-agents/)
-  while it's open. See [Agents on GitHub](/guide/online-agents/#plan-limits).
-- **Custom domains** connected most recently. A paused domain stops
+  most recently. Agents on GitHub can't work on a paused repository, and on
+  the web a Pro or Max agent is always one of them. Only an agent connected
+  to the [desktop app's own MCP server](/guide/external-agents/#connect-an-agent-in-the-desktop-app)
+  still works on the vault, while the app is open. See [Agents on GitHub](/guide/online-agents/#plan-limits).
+- **Custom domains**: first the ones whose site is already **Suspended**
+  (its home page was unpublished), then the ones connected most recently. A paused domain stops
   answering, and its pages stay online at p.mahfouz.app. See [Custom
   domains](/guide/custom-domains/#plan-limits).
 
@@ -158,7 +160,7 @@ billing** to cancel it there.
   digits as Stripe reports them. Mahfouz tells Stripe your [account ID](/guide/account/) so
   it can match a payment to your account; it sends Stripe nothing else.
 - **Two checkouts at once**: if you end up paying for two plans, Mahfouz
-  keeps the higher one and refunds the other.
+  keeps the higher one, cancels the other and refunds its payment.
 - **A disputed charge**: while you dispute a payment with your bank, your
   account works as Free. If the dispute goes against the payment, the plan
   is canceled.

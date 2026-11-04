@@ -27,7 +27,7 @@ every browser session and revoke Mahfouz's GitHub authorization, use
 **Sign out everywhere** in [Settings → Account](/guide/account/#sign-out-everywhere)
 {% include since.html v="0.23.0" %}; it signs the desktop app out too and
 disconnects [external agents](/guide/external-agents/) connected through the
-web. It used to be in the account menu.
+web.
 
 ## Opening a GitHub repository
 
