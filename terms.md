@@ -19,7 +19,7 @@ that organization too.
 
 - Your notes are yours. We claim no rights to them, except what we need to
   show a page you choose to publish.
-- <!-- DRAFT: needs owner/legal review before plans go on sale --> Mahfouz is free to use; Pro and Max are [paid plans](#paid-plans). You may
+- Mahfouz is free to use; Pro and Max are [paid plans](#paid-plans). You may
   use it at home and at work.
 - The app is proprietary software. Don't copy it, resell it or take it apart.
 - Services you connect, such as GitHub or an AI provider, have their own
@@ -54,14 +54,12 @@ these terms limits your rights under those licences.
 We own Mahfouz and its name and logo. These terms give you no right to use
 them, except to refer to Mahfouz accurately.
 
-<!-- DRAFT: needs owner/legal review before plans go on sale -->
 Mahfouz is free to use; Pro and Max are paid plans, under [Paid
 plans](#paid-plans) below. If we start charging for something that
 is free today, we'll say so before it applies to you.
 
 ## Paid plans {#paid-plans}
 
-<!-- DRAFT: needs owner/legal review before plans go on sale -->
 
 Pro and Max add features to your Mahfouz account, such as agents that
 work while Mahfouz is closed and custom domains. [Pricing](/pricing/)

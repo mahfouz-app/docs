@@ -10,7 +10,6 @@ Copyright © 2026 Influpert LLC. All rights reserved.
 Mahfouz and its source code are proprietary and confidential. Influpert
 LLC owns them, and the Mahfouz name and logo.
 
-<!-- DRAFT: needs owner/legal review before plans go on sale -->
 You may install and use the Mahfouz app for free, at home or at work, under
 the [terms of service](/terms/). The paid plans, Pro and Max, add features
 to your account (see [Pricing](/pricing/)); the app itself stays free.
