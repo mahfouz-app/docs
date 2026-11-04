@@ -49,6 +49,11 @@ the note in the vaults on that device:
 - **You don't have its vault**: if your GitHub account can reach the
   repository it's in, the dialog offers to **Clone** it, then opens the note.
   Signed out, it asks you to sign in first, to check your repositories.
+- **Read it without cloning** {% include since.html v="0.22.0" %}: on the
+  web, where an [online agent](/guide/online-agents/) already has access to
+  the note's repository, Mahfouz reads the note from GitHub first ("Reading
+  from GitHub…") and opens it in a **read-only tab**. **Edit** in that tab
+  offers the clone. The first read of a repository can take a few seconds.
 - **Otherwise** it says "This note isn't in a vault you can open". Ask for
   access to the vault it's in, then open the link again.
 
@@ -58,8 +63,19 @@ repository. Restore and Clone always wait for your click.
 
 ### On the web and on desktop
 
-- **On the web**, if Mahfouz is already open in another tab, the link opens
-  in that tab, and the new one says "Opened in your other Mahfouz tab".
+- **On the web**, if Mahfouz is already open in another tab, the tab you
+  clicked shows the note **read-only**, and your other tab stays where it
+  was {% include since.html v="0.22.0" %}. The note comes from your other
+  tab's vaults, unpushed edits included, or from GitHub when none of them
+  has it.
+  - **Edit** opens the note in your other tab. Switch to that tab to keep
+    working.
+  - **Share** sends the link through your device's share sheet, or copies
+    it.
+  - Images show as placeholders and links as plain text: open the note in
+    the editor to see them.
+  - An encrypted note isn't shown: its text stays in the editor, where you
+    can unlock it.
 - When the browser doesn't have the note, the dialog offers **Open in
   desktop app**. The desktop app looks in its own vaults the same way.
 
