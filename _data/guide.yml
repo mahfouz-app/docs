@@ -122,6 +122,12 @@
     - slug: settings
       title: "Settings"
       description: "Preferences and per-vault settings."
+    - slug: account
+      title: "Your Mahfouz account"
+      description: "See who's signed in, copy your account ID for support, and sign out everywhere."
+    - slug: plan
+      title: "Plans & billing"
+      description: "Upgrade to Pro or Max, change or cancel in Stripe, and what pauses when you're over a plan's limits."
     - slug: telemetry
       title: "Help improve Mahfouz"
       description: "The error reports, timings and usage counts Mahfouz sends to find bugs, what it never sends, and how to turn it off."

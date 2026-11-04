@@ -60,8 +60,9 @@ Click the button, or press <kbd>Mod</kbd><kbd>0</kbd> {% include since.html v="0
   see.
 - **Settings**, **Keyboard shortcuts**, **User guide**, **Send
   feedback** and **Trash** {% include since.html v="0.14.0" %}.
-- **Sign out** (on the web, also **Sign out everywhere**) and **Revoke
-  access on GitHub**: see [Signing out](#signing-out).
+- **Sign out** and **Revoke access on GitHub**: see [Signing out](#signing-out).
+  On the web, **Sign out everywhere** is in [Settings →
+  Account](/guide/account/#sign-out-everywhere) {% include since.html v="0.23.0" %}.
 - On desktop, the version at the bottom opens **About Mahfouz**, and
   **Check for updates** checks for a new version of Mahfouz right away.
 
@@ -147,3 +148,7 @@ github.com under **Settings → Applications → Authorized OAuth Apps**.
 Mahfouz's access entirely, choose **Revoke access on GitHub** in the account
 menu, or go to github.com → **Settings → Applications → Authorized GitHub
 Apps**, and revoke Mahfouz there.
+In the desktop app, Settings → Account offers it too, as **Revoke Mahfouz on
+GitHub**
+{% include since.html v="0.23.0" %}. On the web, **Sign out everywhere** there
+ends every browser session too: see [Your Mahfouz account](/guide/account/#sign-out-everywhere).

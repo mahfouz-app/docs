@@ -69,6 +69,11 @@ reports, timings and usage counts that never include your notes. Its
 on this computer only: see [Help improve Mahfouz](/guide/telemetry/).
 {% include since.html v="0.13.0" %}
 
+**Settings → Account** shows who's signed in, your account ID and **Sign out
+everywhere**: see [Your Mahfouz account](/guide/account/). **Settings → Plan**
+shows your plan and how to upgrade: see [Plans & billing](/guide/plan/).
+{% include since.html v="0.23.0" %}
+
 Settings → AI → External agents connects AI apps such as Claude Code and
 claude.ai to your vaults: see [External agents (MCP)](/guide/external-agents/).
 

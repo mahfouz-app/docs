@@ -54,6 +54,40 @@ Read is enough for a public repository. If you set a public repository to
 Edit or Publish beside a private one, Mahfouz warns you: an agent could
 copy private notes into the public repository.
 
+## Plan limits {% include since.html v="0.23.0" %} {#plan-limits}
+
+Agents on GitHub come with the paid [plans](/guide/plan/): Pro reaches 2
+repositories and Max 10. On Free, the approval page connects the agent
+through Mahfouz instead, so it works while a Mahfouz tab is open (see
+[Connect an agent on the web](/guide/external-agents/#connect-an-agent-on-the-web)),
+and an agent connected on GitHub before is told:
+
+> Agents working while Mahfouz is closed come with Pro and Max. Upgrade in
+> Mahfouz Settings → Plan, or connect this app again to let it work while
+> Mahfouz is open
+
+The limit counts repositories, not agents: a repository two agents use
+counts once.
+
+- **Adding repositories past the limit** is refused, on the approval page
+  and in **Add repositories**, with "Your plan includes 2 repositories for
+  agents while Mahfouz is closed. Remove one first, or upgrade." Approving an
+  agent again for repositories agents already reach always works.
+- **Over the limit**, after you move to a lower plan or your plan ends, the
+  repositories agents were given most recently pause. In Settings → AI →
+  External agents each shows **Paused — over your plan's limit**, with
+  **Upgrade**. An agent that calls one is told:
+
+  > owahab/notes is paused: your Mahfouz plan allows agents in 2
+  > repositories while Mahfouz is closed. Upgrade in Mahfouz Settings → Plan
+  > to resume it
+
+  `list_vaults` marks it paused. Agents can still work on it through Mahfouz
+  while it's open.
+
+Nothing is deleted when a repository pauses: its access levels and working
+copy stay, and upgrading resumes it where it left off.
+
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 
 Settings → AI → External agents shows a card for each client Mahfouz
