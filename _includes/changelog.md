@@ -1,4 +1,41 @@
 
+## 0.22.0 (2026-11-04) {#v0.22.0}
+
+### Features
+
+* Accounts cutover: a dry run for the migration
+* Billing phase 1: Mahfouz accounts (UUIDv7) for all server state
+* Publish: show a collaborator's published page out of date
+* Open a GitHub-read note in a read-only tab
+* Custom-domain sites in git-as-truth, publishing notes and the smoke checklist
+* Publish: a page uploaded elsewhere shows out of date after a sync
+* Vaults: one Add Vault… item opens the vault chooser
+* Desktop client catalog in External agents
+* Remove the encryption decryptor fallback
+* Publish: one publish level, publish: self | children | never
+* No plugin names in the app (fallbacks, telemetry, migrations out)
+* A database's kind is its database value
+
+### Improvements
+
+* The accounts cutover revokes the App instead of signing out
+* User Interface: one shared toast for brief status messages
+* Remove the welcome tour's no-vault editor leftovers
+
+### Bug fixes
+
+* Server: send page ancestors after an agent's push
+* Editor: place the block grip and + beside the hovered block at any zoom
+* Desktop: refresh a vault's git overrides when a file its config includes changes
+* Desktop: don't reopen a running Mahfouz from the MCP proxy
+* Publish: say when child notes aren't published from this device
+* Editor: a relative link in a share or loose file tab opens nothing
+* Attributes: refuse database: true, naming database: custom
+* Plugins: pin an install's dependencies and a Retry to what the user reviewed
+* Sync: keep a first connect's pending choice in the vault's sync state
+* Plugins: put a plugin's gitPath only on the git of vaults that turn it on
+
+
 ## 0.21.0 (2026-10-30) {#v0.21.0}
 
 ### Features
