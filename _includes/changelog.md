@@ -1,4 +1,12 @@
 
+## 0.24.0 (2026-11-06) {#v0.24.0}
+
+### Improvements
+
+* Release: retry the macOS notarization check when the connection to Apple drops
+* Sites: name the custom-domain secrets `CLOUDFLARE_SAAS_TOKEN` and `CLOUDFLARE_ZONE_ID`
+
+
 ## 0.23.1 (2026-11-06) {#v0.23.1}
 
 v0.23.0 was never published; this release carries its changes.
