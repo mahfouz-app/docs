@@ -1,4 +1,32 @@
 
+## 0.23.1 (2026-11-06) {#v0.23.1}
+
+v0.23.0 was never published; this release carries its changes.
+
+### Improvements
+
+* Billing: turn Managed Payments off, and where Stripe's message is
+* Worker: set the Customer Portal configuration in both environments
+* Release: sign and notarize the macOS app with Developer ID (#1276, #1282)
+
+### Bug fixes
+
+* Plan: banners flush with the plan card, the Stripe note a link
+
+
+## 0.23.0 (2026-11-05) {#v0.23.0}
+
+### Improvements
+
+* Billing: turn Managed Payments off, and where Stripe's message is
+* Worker: set the Customer Portal configuration in both environments
+* Release: sign and notarize the macOS app with Developer ID
+
+### Bug fixes
+
+* Plan: banners flush with the plan card, the Stripe note a link
+
+
 ## 0.22.1 (2026-11-04) {#v0.22.1}
 
 ### Bug fixes
