@@ -43,8 +43,12 @@ Mahfouz keeps no separate history of its own: **history is git history.**
 - **Trash** (the account menu's **Trash**, or <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> {% include since.html v="0.14.0" %}) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
-- Every note edit auto-commits within about 30 seconds of your last
-  keystroke, as `Auto-save: “Meeting notes”`. Any edits made outside
+- Every edit is saved to disk at once and auto-committed when you stop
+  editing: when you click away from the note, open another note or tab,
+  switch to another app, or quit, and before Mahfouz pushes or you
+  click **Sync now**. After 5 minutes without typing it commits anyway.
+  One stretch of writing makes one commit, as
+  `Auto-save: “Meeting notes”`. {% include since.html v="0.25.0" %} Any edits made outside
   Mahfouz (a text editor, another git client) are auto-committed as
   `External edits: “Reading list”` as soon as Mahfouz notices them, so
   nothing you do to the vault folder is ever silently lost. Saving with

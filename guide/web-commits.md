@@ -7,7 +7,8 @@ permalink: /guide/web-commits/
 ---
 
 Mahfouz commits your changes to the folder's repository as the desktop app
-does: about 30 seconds after you stop typing, or right away with **Manual
+does: when you stop editing (you click away from the note, open another,
+or leave the tab), after 5 minutes without typing {% include since.html v="0.25.0" %}, or right away with **Manual
 save** (<kbd>Ctrl</kbd><kbd>S</kbd>, <kbd>⌘</kbd><kbd>S</kbd> on a Mac). The commits are ordinary git commits: the
 desktop app, a terminal or any git tool sees them.
 
