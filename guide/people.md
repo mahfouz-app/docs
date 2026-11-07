@@ -427,6 +427,9 @@ A review dialog lists each contact before anything is written:
 - **Fields** picks what's brought in: **Name, nickname, email, phone,
   company, title, website** is on, and **Address, birthday, notes** is off.
   A contact's notes go into the body of its new note.
+- With **Name** on, a contact's given and family names fill **First
+  name** and **Last name**, as for any other field a match doesn't have
+  yet. {% include since.html v="0.25.0" %}
 - **Import** writes everything as one commit, **Import N people**.
 
 The dialog also says it: collaborators on the vault can read People, and
@@ -446,6 +449,9 @@ Export saves people as vCard 3.0 files, for another address book:
   someone has a person note.
 
 On the web, the file downloads. A person note's body isn't exported.
+A person's **First name** and **Last name** become the card's given and
+family names; without them, the last word of their name is the family
+name. {% include since.html v="0.25.0" %}
 
 ## Privacy
 
