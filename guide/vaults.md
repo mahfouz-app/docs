@@ -152,13 +152,22 @@ under **Details**, and leaves nothing behind.
 
 {% include since.html v="0.13.0" %} **On GitHub** creates a private
 repository and makes it a vault. It needs a GitHub sign-in with the Mahfouz
-app installed on your own account (see [Signing in to
-GitHub](/guide/github/), or [on the web](/guide/web-github/#signing-in-with-github)).
-Mahfouz walks you through both if you haven't done them yet.
+app installed on the account or organization that will own the repository
+(see [Signing in to GitHub](/guide/github/), or [on the
+web](/guide/web-github/#signing-in-with-github)). Mahfouz walks you through
+both if you haven't done them yet.
 
-1. Name the repository. It's always private; Mahfouz never creates a public
-   one.
-2. On the desktop app, also click **Choose folder…** and pick the folder the
+1. {% include since.html v="0.25.0" %} Choose the **Owner**: your own
+   account, or an organization the Mahfouz app is installed on. Nothing is
+   picked for you, so a vault never lands in an organization by habit. To
+   use an organization that isn't listed, choose **Install Mahfouz on
+   another organization…** at the bottom of the list.
+2. Name the repository. It's always private; Mahfouz never creates a public
+   one. In an organization, private still means more than you: the
+   organization's owners can see the repository, and so can its members
+   if the organization's base permission allows it. Mahfouz says so when
+   you pick one.
+3. On the desktop app, also click **Choose folder…** and pick the folder the
    vault lives in on this computer. It must be a new or empty folder: one
    that already holds files is refused and left untouched, so its files and
    history are never pushed. To back up notes you already have, open their
@@ -168,8 +177,13 @@ Mahfouz walks you through both if you haven't done them yet.
    push before it creates anything on GitHub. If the check fails, no
    repository is created: the vault stays on this computer, and Mahfouz says
    what to fix.
-3. On the web, the vault is kept in the browser's storage, like a [cloned
+4. On the web, the vault is kept in the browser's storage, like a [cloned
    repository](/guide/web-github/#where-a-github-vault-lives).
+
+{% include since.html v="0.25.0" %} Some organizations don't let members
+create private repositories. If GitHub refuses, Mahfouz says so under
+**Owner** and nothing is created: ask an owner of the organization, or
+choose another owner.
 
 If the repository was created but the first push failed, **Try again**
 pushes to that same repository instead of creating another.
