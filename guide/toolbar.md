@@ -30,7 +30,7 @@ note](/guide/web/#editing-on-a-phone)). {% include since.html v="0.17.0" %} Left
     attaches the chosen files (see [Media](/guide/media/))
   - **Table**: opens the hover-grid size picker
   - **Embed** dropdown: inserts a block for each enabled embed plugin (such
-    as Mermaid). If none are enabled, it links to Preferences instead.
+    as Mermaid). If none are enabled, it links to Settings instead.
 - **Paragraph**: the **List** dropdown (Bullet list / Numbered list /
   Checklist), **Quote** (blockquote) and the **Callout** dropdown, for
   inserting or changing a [callout](/guide/markdown/#callouts)
