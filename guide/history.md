@@ -14,11 +14,23 @@ Mahfouz keeps no separate history of its own: **history is git history.**
   short SHA). Click one to open that revision read-only in a new tab,
   with a banner offering **Restore** (writes a *new* commit restoring
   that content; history is always append-only, never rewritten).
-  Auto-saves fold into one **Edited · N saves** row per stretch of
+  Auto-saves fold into one **Edited** row per stretch of
   editing: consecutive auto-saves by the same person, no more than 30
   minutes apart. Click the row to list its saves, then click a save to
   open it. A lone auto-save shows as **Edited**. Named commits (yours,
   the agent's, renames) always keep their own row. {% include since.html v="0.12.0" %}
+  Changes made outside Mahfouz fold in the same way. {% include since.html v="0.25.0" %}
+  - Rows sit under day headings: **Today**, **Yesterday**, then the
+    date. An editing session also ends at midnight. {% include since.html v="0.25.0" %}
+  - Each row shows how many lines it added and removed (**+48 −12**),
+    and so does each save inside a session. The counts fill in as the
+    rows scroll into view. The `updated` date Mahfouz writes on every
+    save doesn't count; attributes you change do. There's no count for
+    a rename, for an encrypted note, or while the vault is locked
+    with git-crypt. {% include since.html v="0.25.0" %}
+  - **Not pushed** marks the commits that haven't reached the remote
+    yet, with a bar beside each one. It goes once they're pushed. A
+    stretch of editing that was partly pushed shows as two rows. {% include since.html v="0.25.0" %}
 - **Trash** (the account menu's **Trash**, or <kbd>Mod</kbd><kbd>Alt</kbd><kbd>X</kbd> {% include since.html v="0.14.0" %}) is a flat, cross-vault list of every
   note deleted via git, newest first, each with a **Restore** button and a
   click-to-preview.
