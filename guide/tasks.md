@@ -82,7 +82,7 @@ a due date from a menu. {% include since.html v="0.13.0" %} It starts with **Tod
 **Next week**, and narrows as you type: a weekday (`!fri`), a day of a month
 (`!oct 30` or `!30 oct`), an ISO date (`!2026-10-30`), each with an optional
 time (`!tomorrow 3pm`, `!fri 15:00`). Pick a row and the line gets
-` // YYYY-MM-DD`; **Pick a date and time…** opens the date picker. Typing
+`// YYYY-MM-DD` added; **Pick a date and time…** opens the date picker. Typing
 `//` no longer opens anything; the `//` in the line is written for you.
 {% include since.html v="0.13.0" %}
 
