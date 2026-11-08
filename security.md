@@ -69,6 +69,12 @@ authorized.
 - **Your notes stay local.** A vault is a folder on your computer. Nothing
   leaves it unless you set up sync, publishing, an AI provider, an agent or
   a plugin. See [Privacy](/privacy/).
+- **The Mac app is signed and notarized.** Mahfouz for Mac is signed with
+  Influpert's Developer ID and notarized by Apple, so macOS opens it
+  without a warning and can tell that the copy you downloaded, from the
+  website or with Homebrew, is the one we built and hasn't been changed.
+  If macOS ever says it can't check Mahfouz, don't open that copy:
+  download it again from mahfouz.app. {% include since.html v="0.23.1" %}
 - **Your keys are in the keychain.** AI API keys and your GitHub sign-in
   are kept in the macOS keychain, not in your vault or in a settings file.
 - **Encrypted vaults.** A vault can be [encrypted with
