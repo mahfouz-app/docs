@@ -43,9 +43,11 @@ Some things it doesn't show:
 Move Mahfouz to your **Applications** folder and open it once. macOS
 finds the preview after that.
 
-If macOS says it can't check Mahfouz or can't open it, approve it once in
-**System Settings → Privacy & Security → Open Anyway**. The preview needs
-that approval too.
+Mahfouz is signed and notarized, so macOS opens it and its preview
+without asking. {% include since.html v="0.23.1" %} Versions before 0.23.1
+weren't: if one of them says macOS can't check it, approve it once in
+**System Settings → Privacy & Security → Open Anyway**, or update to the
+latest version.
 
 ### When another app's preview is used
 
