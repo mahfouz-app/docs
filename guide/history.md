@@ -48,7 +48,12 @@ Mahfouz keeps no separate history of its own: **history is git history.**
   switch to another app, or quit, and before Mahfouz pushes or you
   click **Sync now**. After 5 minutes without typing it commits anyway.
   One stretch of writing makes one commit, as
-  `Auto-save: “Meeting notes”`. {% include since.html v="0.25.0" %} Any edits made outside
+  `Auto-save: “Meeting notes”`. {% include since.html v="0.25.0" %} Changes that come
+  with your editing go into that same auto-save instead of a commit of
+  their own: a word added to or removed from the vault dictionary, a pin or
+  view change on the rail, and the links fixed after a database or one of
+  its rows is renamed. The auto-save's description lists their files.
+  {% include since.html v="0.25.0" %} Any edits made outside
   Mahfouz (a text editor, another git client) are auto-committed as
   `External edits: “Reading list”` as soon as Mahfouz notices them, so
   nothing you do to the vault folder is ever silently lost. Saving with
