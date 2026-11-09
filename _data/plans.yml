@@ -27,6 +27,7 @@ plans:
         included: true
     limits:
       headless_repos: 0
+      container_hours: 0
       custom_domains: 0
       page_badge: "shown"
       support: "community"
@@ -47,6 +48,8 @@ plans:
         included: true
       - text: "2 repositories for agents while Mahfouz is closed"
         included: true
+      - text: "300 agent hours a month"
+        included: true
       - text: "1 custom domain"
         included: true
       - text: "No badge on your pages"
@@ -55,6 +58,7 @@ plans:
         included: true
     limits:
       headless_repos: 2
+      container_hours: 300
       custom_domains: 1
       page_badge: "hidden"
       support: "email"
@@ -75,6 +79,8 @@ plans:
         included: true
       - text: "10 repositories for agents while Mahfouz is closed"
         included: true
+      - text: "1,500 agent hours a month"
+        included: true
       - text: "5 custom domains"
         included: true
       - text: "No badge on your pages"
@@ -83,6 +89,7 @@ plans:
         included: true
     limits:
       headless_repos: 10
+      container_hours: 1500
       custom_domains: 5
       page_badge: "hidden"
       support: "priority"
@@ -97,6 +104,8 @@ compare:
       cells: [true, true, true]
     - feature: "Agents while Mahfouz is closed"
       cells: [false, "2 repos", "10 repos"]
+    - feature: "Agent hours a month"
+      cells: [false, "300 hours", "1,500 hours"]
     - feature: "Custom domains"
       cells: [false, "1", "5"]
     - feature: "“Published with Mahfouz” on pages"

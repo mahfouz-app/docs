@@ -15,6 +15,7 @@ Mahfouz is open are free. The paid plans add:
 | | Free | Pro | Max |
 |---|---|---|---|
 | Agents while Mahfouz is closed ([on GitHub](/guide/online-agents/)) | — | 2 repositories | 10 repositories |
+| [Agent hours a month](#agent-hours) {% include since.html v="0.25.0" %} | — | 300 | 1,500 |
 | [Custom domains](/guide/custom-domains/) | — | 1 | 5 |
 | "Published with Mahfouz" on [published pages](/guide/publishing/#the-pages-footer) | Shown | Hidden | Hidden |
 | Support | Community | Email | Priority |
@@ -30,7 +31,8 @@ Open **Settings → Plan** (the last section of Settings). You need to be
 **Sign in with GitHub**. It shows:
 
 - **Your plan**: its name, what you pay and when it renews, and for each
-  limit how much you use, such as **Agent repositories 1 of 2**.
+  limit how much you use, such as **Agent repositories 1 of 2** and
+  **Agent hours this month 42 of 300**.
 - **The plans**, with a **Monthly** and **Yearly** switch. Paying yearly
   costs 10 months' price for 12.
 - **Manage billing**, on a paid plan, which opens Stripe.
@@ -142,11 +144,43 @@ where they left off.
 
 On Free, published pages show "Published with Mahfouz" again.
 
+## Agent hours {% include since.html v="0.25.0" %} {#agent-hours}
+
+Agents on GitHub work in a server Mahfouz runs for your repository. Each
+hour that server runs for your agents counts toward your plan's **agent
+hours** for the month: 300 on Pro, 1,500 on Max. The server keeps running
+for a few minutes after an agent's last call, and that time counts too. When
+agents from two accounts share a repository, they split the hours.
+
+The month is a calendar month in UTC: the hours start over at midnight UTC
+on the 1st. **Settings → Plan** shows **Agent hours this month** with how
+many you've used.
+
+When you've used them all:
+
+- Settings → Plan says **Agents used this month's 300 hours.**, with when
+  they start over.
+- Agents on GitHub can't work on your repositories until then. An agent
+  that calls one is told:
+
+  > Agents used this month's 300 hours on Pro. Agents can work on your
+  > repositories while Mahfouz is closed again on December 1. Until then,
+  > connect this agent to the Mahfouz desktop app, which works while the
+  > app is open, or upgrade in Mahfouz Settings → Plan
+
+  `list_vaults` still answers.
+- Nothing is deleted or paused. An agent connected to the [desktop app's
+  own MCP server](/guide/external-agents/#connect-an-agent-in-the-desktop-app)
+  isn't counted and keeps working while the app is open.
+
+Upgrading from Pro to Max raises the limit at once. Complimentary plans
+have no limit.
+
 ## Complimentary plans
 
 Mahfouz may give an account a plan for free. Settings → Plan then shows
 **Max · Complimentary**: there's nothing to pay, nothing renews, and
-there's no limit on agent repositories or custom domains. If you also
+there's no limit on agent repositories, agent hours or custom domains. If you also
 still have a subscription in Stripe, the page says so, with **Manage
 billing** to cancel it there.
 

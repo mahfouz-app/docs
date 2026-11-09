@@ -96,6 +96,11 @@ counts once.
 Nothing is deleted when a repository pauses: its access levels and working
 copy stay, and upgrading resumes it where it left off.
 
+Each plan also includes a number of [agent hours](/guide/plan/#agent-hours)
+a month: 300 on Pro and 1,500 on Max. {% include since.html v="0.25.0" %}
+Once they're used, agents on GitHub can't work on your repositories until
+the 1st of the next month (UTC).
+
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 
 Settings → AI → External agents shows a card for each client Mahfouz
