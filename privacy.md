@@ -193,7 +193,13 @@ remote, handle what you send them under their own policies.
 
 You're in control of almost everything: sign out to delete your web
 session, unpublish to delete a page, and delete a vault to delete your
-notes. To ask what we hold about you, or to have the remaining record of
+notes. To delete everything Mahfouz's server keeps about you, delete your
+account in Settings → Account on the web ([how](/guide/account/#delete-your-account)).
+That unpublishes your pages (their remaining records included), ends your
+shares and agent connections, cancels your plan and deletes your Stripe
+customer, and deletes your account and its ID. It doesn't touch your
+vaults, and Stripe keeps your invoices for as long as the law requires.
+To ask what we hold about you, or to have the remaining record of
 an unpublished page deleted, email
 [privacy@influpert.com](mailto:privacy@influpert.com). Depending on where you
 live, you may have the right to access, correct, delete or export your

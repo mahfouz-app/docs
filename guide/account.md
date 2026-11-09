@@ -2,7 +2,7 @@
 layout: guide
 title: "Your Mahfouz account"
 since: "0.23.0"
-description: "See who's signed in, copy your account ID for support, and sign out everywhere from Settings → Account."
+description: "See who's signed in, copy your account ID for support, sign out everywhere, and delete your account from Settings → Account."
 permalink: /guide/account/
 ---
 
@@ -52,10 +52,41 @@ computer only. To sign out everywhere:
   computer out. Web sessions end from **Sign out everywhere** on the web.
 
 Sign out everywhere ends sessions; it doesn't delete your account, your
-[plan](/guide/plan/) or anything you've published.
+[plan](/guide/plan/) or anything you've published. To do that, [delete
+your account](#delete-your-account).
+
+## Delete your account {% include since.html v="0.25.0" %} {#delete-your-account}
+
+**Delete account** in Settings → Account deletes your Mahfouz account. It
+can't be undone.
+
+- **On the web**, click **Delete account…**. Mahfouz lists what goes, then
+  asks you to sign in to GitHub again if your last sign-in was more than
+  ten minutes ago. Back from GitHub, the dialog opens again: type your
+  GitHub login and click **Delete account**.
+- **In the desktop app**, click **Delete on the web**. It opens Mahfouz on
+  the web at Settings → Account, where you confirm it.
+
+Deleting your account:
+
+- unpublishes every page you published, and disconnects your custom
+  domains;
+- ends the notes you shared, and removes you from notes shared with you;
+- cancels your [plan](/guide/plan/) at once, with no refund for the time
+  left, and deletes your billing details at Stripe;
+- disconnects your [external agents](/guide/external-agents/) and signs
+  you out of every browser and the desktop app, revoking Mahfouz's GitHub
+  authorization;
+- deletes your account and its ID.
+
+Your vaults aren't touched: they're your own folders and GitHub
+repositories. Stripe keeps your invoices for as long as the law requires.
+If you sign in again later, Mahfouz makes you a new, empty account.
+
+If something fails partway, the dialog says some of it may already be
+gone. Click **Try again** to finish.
 
 ## Coming soon
 
 Device sessions (a list of where you're signed in, each with its own sign
-out) and deleting your account from Settings are coming. Until then, write
-to support to delete your account.
+out) are coming.
