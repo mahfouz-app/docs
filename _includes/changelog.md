@@ -1,4 +1,11 @@
 
+## 0.25.1 (2026-11-12) {#v0.25.1}
+
+### Bug fixes
+
+* CI: read the deploy smoke test's connect-src by its sources
+
+
 ## 0.25.0 (2026-11-12) {#v0.25.0}
 
 ### Features
