@@ -1,4 +1,42 @@
 
+## 0.25.0 (2026-11-12) {#v0.25.0}
+
+### Features
+
+* Telemetry: DATADOG_API_KEY, and the Datadog site from BWS
+* Account: self-serve account deletion
+* Billing: cap agents on GitHub at the plan's container hours a month
+* Operations: Datadog monitors for the billing events
+* Dns: publish Google Workspace's DKIM key for mahfouz.app
+* UI components: quick add and option rename on useInlineEdit, account pill on StatusLabel, counts on .count-muted
+* Commits: fold side commits into the next auto-save
+* MCP: send page ancestors for Edit-only grants
+* Commits: commit when editing stops, not every 30 seconds
+* People: vCard N: maps to first_name and last_name
+* History: day headings, editing sessions, line counts and "Not pushed" in History
+* Settings: say Settings, not Preferences, where the app points at it
+* New vault on GitHub: choose the repository's owner
+* Add vault modal: centered, with one minimum height across steps
+* Settings: a title row with the × across both panes, and a Search field with a lens
+* Billing: accept promotion codes in Checkout
+* Editor: remove the hint under Vim in the View menu
+
+### Improvements
+
+* Release: build macOS only until further notice
+
+### Bug fixes
+
+* AI: ask for Keychain access only when an AI key is stored
+* Editor: keep room for the block grip and + at any zoom
+* Editor: size heading numbers like their headings
+* Notes: a renamed note keeps its created date after a resync
+* Desktop: no history error on a branch with no commits yet
+* History: follow a note through renames
+* History: group today's auto-saves into Edited rows again
+* Editor: show the text in editors with no header or footer
+
+
 ## 0.24.0 (2026-11-06) {#v0.24.0}
 
 ### Improvements
