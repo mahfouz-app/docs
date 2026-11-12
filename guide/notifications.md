@@ -47,10 +47,21 @@ The line under **Device notifications** says what to expect on this device. **On
 
 ## New versions of Mahfouz
 
-{% include since.html v="0.17.0" %} When a new version of Mahfouz is released, a banner under the title bar says which version is out and which one you have. **What's new** opens the release notes; **Download** opens the installer where one is available for your platform. Mahfouz doesn't install anything itself.
+{% include since.html v="0.17.0" %} When a new version of Mahfouz is released, a banner under the title bar says which version is out and which one you have. **What's new** opens the release notes.
+
+{% include since.html v="0.26.0" %} The desktop app updates itself:
+
+1. **Update** downloads the new version in the background. The banner shows how far along it is, and **Cancel** stops the download.
+2. When the download is ready, the banner offers **Restart** and **Later**.
+3. **Restart** first saves, commits and pushes your notes, the same steps as quitting, and the dialog shows each one. Then Mahfouz installs the new version and opens again. Once installing starts, it can't be stopped.
+4. **Later** keeps the version you have for now. The new version opens the next time you start Mahfouz.
+
+If the update can't be installed, nothing changes and the banner says why. This happens when Mahfouz runs from the disk image or from a folder it can't write to, or when the download doesn't check out. **Try again** starts over, and **Download** opens the installer so you can install it yourself.
+
+If a new version gives you trouble, you can go back: download the previous version's disk image from [Mahfouz's releases](https://github.com/mahfouz-app/homebrew-tap/releases) and install it over the new one.
 
 - Mahfouz checks when it starts and then at most once a day. **Mahfouz → Check for Updates…**, or **Check for updates** at the bottom of the account menu, checks right away and always tells you the result, including when you're up to date.
-- If you installed Mahfouz with Homebrew, there's no Download button; the banner shows the command to run instead: `brew upgrade --cask mahfouz`.
+- {% include since.html v="0.26.0" %} If you installed Mahfouz with Homebrew, it updates itself the same way. Because of that, `brew upgrade` skips Mahfouz unless you add `--greedy`, and `brew info` may show an older version than the one you're running.
 - **Skip this version** (the × on the banner) hides it until a newer version is released. Check for Updates… shows it again.
 - If Mahfouz isn't in front when it finds a new version, you also get one system notification for that version, unless Do not disturb is on.
 - To stop the checks entirely, turn off **Automatically check for new versions** in Settings → Notifications. It applies to this computer only. Muting the **App updates** category stops the automatic banner too; Check for Updates… still shows it.
