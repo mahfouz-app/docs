@@ -311,12 +311,14 @@ app's OAuth client id:
 {% include since.html v="0.26.0" %}
 
 Every write takes an `Idempotency-Key` header: `PATCH`, the body writes and
-adding a comment. {% include since.html v="0.26.0" %} The key is 1 to 128
+adding a comment. The key is 1 to 128
 printable ASCII characters that name the write, such as your own operation
 id.
 
 - Sending the same request again with the same key within 24 hours returns
-  the first answer, status and `ETag` included, without writing again.
+  the first answer, status and `ETag` included, without writing again. The
+  row in it is the row as it was then: read the row again to see later
+  changes.
 - The same key with a different request returns `409 idempotency_conflict`.
   `If-Match` isn't part of the comparison, so a retry after re-reading still
   matches.
@@ -325,7 +327,9 @@ id.
   so retrying runs the write again.
 - If Mahfouz lost track of the first request's outcome, every repeat returns
   `500 internal` with `"landed": null`. Read the row, then use a new key.
-- A key belongs to your grant and to one vault.
+- A key belongs to your grant and to one vault. After you authorize again,
+  the same key is a new request, so send `If-Match` on a retry that might
+  cross a new authorization.
 
 ### Reading every row {#paging}
 
