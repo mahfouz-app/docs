@@ -265,6 +265,10 @@ with `POST …/body/append` and `{"text": "…"}`. Both answer
   returns `412`, even when the two changes would merge cleanly. {% include since.html v="0.26.0" %}
 - A read can be up to 5 seconds behind, so a write with its `ETag` can
   occasionally get a `412` it didn't need. Read again and retry.
+- When someone else's change to the vault reaches GitHub while your write is
+  saving, and the two are merged, the answer's `version` is `null` and there's
+  no `ETag`. Read the row again before your next conditional write. A `412`
+  for a row that was deleted or moved on GitHub also has no `ETag`. {% include since.html v="0.26.0" %}
 
 ### Comments {#comments}
 
