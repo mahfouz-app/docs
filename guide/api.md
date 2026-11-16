@@ -349,8 +349,14 @@ Every answer has this shape:
 - **`limit`** (1 to 200, default 100) caps the rows and removed ids together.
 
 The cursor follows the vault's git history, not a clock, so edits made while
-you page never shift it. A row edited while you page a snapshot comes back in
-your next poll, so a row can arrive more than once: apply each by `id`.
+you page never shift it. Each snapshot page reads the rows as they are when
+you request it, and your next poll reads changes from when the snapshot
+started. So:
+
+- A row edited while you page a snapshot comes back in your next poll, and
+  can arrive twice. Apply each row by `id`.
+- A row deleted before you reach it shows up only in `removed`. Ignore a
+  removed `id` you don't have.
 
 A rollup counts as changed only when its own row changes. A rollup whose value
 moved because a related row changed isn't reported.
