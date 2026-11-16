@@ -152,8 +152,9 @@ hours** for the month: 300 on Pro, 1,500 on Max. Apps connected through the
 [REST API](/guide/api/#plans) use the same server and the same hours.
 
 {% include since.html v="0.26.0" %} The server keeps running at least 10
-minutes after the last call, and each call adds 5 minutes, up to 30 minutes
-ahead. That time counts too. When agents from two accounts share a
+minutes after the last call. A call a minute or more after the previous one
+adds 5 minutes, up to 30 minutes ahead, so an agent that keeps working keeps
+the server longer. That time counts too. When agents from two accounts share a
 repository, they split the hours.
 
 The month is a calendar month in UTC: the hours start over at midnight UTC
