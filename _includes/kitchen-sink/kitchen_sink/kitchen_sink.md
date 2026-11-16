@@ -206,6 +206,8 @@ Meet on {~~Monday~>Tuesday~~}{>>@owahab · 2026-10-12<<} at {++10 am++}{>>@owaha
 
 {==A second thread==}{>>@owahab · 2026-10-13 · Right below the first, so their cards in the comment margin stack. @ada, this one runs long on purpose: a card shows only the first three lines of its first comment, and the open thread cuts a comment off after six lines behind Show more, so this sentence keeps going for a while about cards, readers and loops until it is well past six lines in the thread's narrow column, which is about as wide as a sticky note and not much more.<<}{>>@ada · 2026-10-14 · Noted.<<} starts here.
 
+{====}{>>@owahab · 2026-11-16 · client:hwClient_1 · Picked up by an integration through the API: the client marker stays hidden.<<}{>>@ada · 2026-11-16 · client\:not-a-marker · was typed by hand, so it shows as text.<<} A point thread, as the API adds one to a row.
+
 {==This thread is resolved.==}{>>@owahab · 2026-10-12 · Should the meeting move?<<}{>>@ada · 2026-10-12 · Yes, to Tuesday.<<}{>>@owahab · 2026-10-13 · Done.<<}{>>✓@owahab · 2026-10-13<<} It has no card in the margin; find it under Resolved in the sidebar's Comments.
 
 ## People

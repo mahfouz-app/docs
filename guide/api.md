@@ -78,6 +78,11 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 | `GET /v1/vaults/{vault}/databases/{id}/schema` | Returns a database's attributes, their types and a select's options, and its views. See [Reading a database's schema](#schema). |
 | `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. |
 | `PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}` | Sets a row's attributes. |
+| `GET /v1/vaults/{vault}/databases/{id}/rows/{row}` | Returns one row with its body and version. See [A row's body](#body). {% include since.html v="0.26.0" %} |
+| `PUT /v1/vaults/{vault}/databases/{id}/rows/{row}/body` | Replaces a row's body. See [A row's body](#body). {% include since.html v="0.26.0" %} |
+| `POST /v1/vaults/{vault}/databases/{id}/rows/{row}/body/append` | Adds Markdown to the end of a row's body. {% include since.html v="0.26.0" %} |
+| `GET /v1/vaults/{vault}/databases/{id}/rows/{row}/comments` | Lists a row's comment threads. See [Comments](#comments). {% include since.html v="0.26.0" %} |
+| `POST /v1/vaults/{vault}/databases/{id}/rows/{row}/comments` | Starts a comment thread on a row. {% include since.html v="0.26.0" %} |
 
 - **`{vault}`** is a repository's `id`, as `GET /v1/vaults` returns it.
 - **Query parameters for rows:**
@@ -201,6 +206,103 @@ A `PATCH` takes a body like this:
 - The answer is the row as it reads after the change.
 
 If two apps change the same key at the same time, the last write wins.
+`PATCH` doesn't take `If-Match` or `Idempotency-Key` yet: sending either
+returns `400`, so it never writes unconditionally when you meant it not to.
+
+### A row's body {#body}
+
+{% include since.html v="0.26.0" %}
+
+`GET …/rows/{row}` returns the row as a page of rows does, plus two fields:
+
+```json
+{"id": "01941f2a-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Ready"},
+ "body": "# Ship it\n\nThe plan.\n", "version": "9f86d081884c7d65…"}
+```
+
+- **`body`** is the note's Markdown below its frontmatter, as stored.
+  Comments and suggestions are in it as CriticMarkup.
+- **`version`** changes whenever the row's file changes: its body, an
+  attribute or a comment. It's also sent as the `ETag` header. It isn't a git
+  commit id.
+- An encrypted row returns `"body": null` and `"encrypted": true`.
+
+To change the body, send `PUT …/body` with `{"body": "…"}`, or add to the end
+with `POST …/body/append` and `{"text": "…"}`. Both answer
+`{id, title, version}` and the new `ETag`.
+
+- **Send `If-Match`** with the `ETag` you read. If the row has changed since,
+  the write is refused with `412 version_mismatch` and nothing is written.
+  The answer's `ETag` header has the current version, so read the row again
+  and decide. `If-Match: *` matches any version. Leave the header out to
+  write regardless.
+- A changed first heading changes the row's title, and its file name with it.
+  The answer has the new title.
+- A body can't add, remove or change a comment. Send the threads back as you
+  read them, and add comments through [Comments](#comments).
+- The write is refused with `422 refused` while the row is in Suggesting
+  mode, and with `422 unsupported` for an encrypted row.
+- A body is at most 1 MB.
+- **Known limit:** a change made on GitHub between the version check and the
+  save can still land under yours when the two merge cleanly.
+- A read can be up to 5 seconds behind, so a write with its `ETag` can
+  occasionally get a `412` it didn't need. Read again and retry.
+
+### Comments {#comments}
+
+{% include since.html v="0.26.0" %}
+
+`POST …/comments` starts a thread as the user who connected, recording your
+app's OAuth client id:
+
+```json
+{"text": "Picked up by the sync [op-42]", "quote": "The plan."}
+```
+
+- **With `quote`**, the thread is anchored on that text. It must appear
+  exactly once in the body, outside other comments and suggestions.
+- **Without `quote`**, the thread is anchored to the row as a whole, in a
+  paragraph of its own at the end of the body. This works on an empty row
+  too.
+- `text` is at most 10,000 characters. Line breaks become spaces.
+- It answers `201` with `{thread, version}` and the new `ETag`. It works in
+  Suggesting mode. An encrypted row returns `422 unsupported`.
+
+`GET …/comments` returns every thread in the row, in order:
+
+```json
+{"threads": [{"id": "3b1f0c2a9d8e7f65", "anchor": "The plan.", "resolved": false,
+  "entries": [{"author": "@octo", "created": "2026-11-16", "text": "Picked up by the sync [op-42]", "edited": false, "created_by_client": "Fh3kq…"}]}],
+ "version": "…"}
+```
+
+- **`created_by_client`** is the OAuth client id that wrote a comment through
+  this API, or `null`. Use it, or a marker of your own in `text`, to find
+  your comment after a write whose answer you lost.
+- **`id`** follows the thread's first comment. It stays the same when the
+  anchor text or the replies change, and changes if someone edits the first
+  comment in Mahfouz.
+- `created` is a date in UTC.
+
+### Retrying writes safely {#idempotency}
+
+{% include since.html v="0.26.0" %}
+
+The body and comment writes take an `Idempotency-Key` header: 1 to 128
+printable ASCII characters that name the write, such as your own operation
+id.
+
+- Sending the same request again with the same key within 24 hours returns
+  the first answer, status and `ETag` included, without writing again.
+- The same key with a different request returns `409 idempotency_conflict`.
+  `If-Match` isn't part of the comparison, so a retry after re-reading still
+  matches.
+- While the first request is still running, a repeat returns `503 busy`.
+- An answer that saved nothing (an error with `"landed": false`) isn't kept,
+  so retrying runs the write again.
+- If Mahfouz lost track of the first request's outcome, every repeat returns
+  `500 internal` with `"landed": null`. Read the row, then use a new key.
+- A key belongs to your grant and to one vault.
 
 ### Reading every row {#paging}
 
@@ -237,7 +339,8 @@ Every error answers with an HTTP status and a JSON body:
 | `repository_paused` | 403 | The plan pauses this repository. |
 | `not_found` | 404 | There's no such database, or the row isn't in it. |
 | `note_changed` | 409 | The row changed on GitHub during the write. Read it again, then retry. |
-| `version_mismatch` | 412 | Reserved for conditional writes. |
+| `idempotency_conflict` | 409 | The `Idempotency-Key` was used for a different request. Use a new key. {% include since.html v="0.26.0" %} |
+| `version_mismatch` | 412 | The row changed since the `If-Match` version was read. The `ETag` header has the current one. {% include since.html v="0.26.0" %} |
 | `cursor_expired` | 410 | Reserved for change cursors. |
 | `too_large` | 422 | The repository, or the request body, is over a size limit. |
 | `unsupported` | 422 | Mahfouz can't work on this: git-crypt, an encrypted note, or a database it can't read. |
