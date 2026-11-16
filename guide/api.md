@@ -74,6 +74,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 |---|---|
 | `GET /v1/me` | Returns the Mahfouz account the grant belongs to: `{account: {id, login}}`. See [Which account connected](#me). |
 | `GET /v1/vaults` | Lists the repositories the grant reaches: `{vaults: [{id, name, can_write, paused}]}`. |
+| `GET /v1/vaults/{vault}/databases` | Lists the vault's databases, a page at a time. Takes the query parameters `query`, `cursor` and `limit`. See [Listing databases](#databases). |
 | `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. |
 | `PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}` | Sets a row's attributes. |
 
@@ -85,6 +86,43 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 - **A page of rows** is `{rows: [{id, title, created, updated, attributes}], next_cursor}`.
 - **Values come back whole.** A relation is a list of `{id, title, state,
   text}`. A rollup is a number, a list or a date.
+
+### Listing databases {#databases}
+
+{% include since.html v="0.26.0" %}
+
+`GET /v1/vaults/{vault}/databases` lists every database in the vault, at any
+depth, including a database inside a row of another one. A page looks like
+this:
+
+```json
+{
+  "databases": [
+    {"id": "01941f29-…", "title": "Projects", "path": "Projects/Projects.md", "kind": "custom", "row_count": 12, "updated": "2026-11-16T10:04:00Z"}
+  ],
+  "next_cursor": "eyJhIjoiMDE5NDFmMjkt…"
+}
+```
+
+- **`id`** is the `{id}` to pass to the rows endpoints.
+- **`kind`** is one of:
+  - `tasks` for a task pages database;
+  - `people` for the People database;
+  - `daily` for Daily notes;
+  - `custom` for any other.
+- **`row_count`** counts all the database's rows, before any view's filters.
+- **`updated`** is when the database page itself last changed, not its rows.
+- **`query`** filters by title, ignoring case. It's trimmed, and must then be
+  1 to 256 characters.
+- **`limit`** is the page size: 1 to 200, default 100.
+- A database whose settings block can't be read is still listed. Its rows
+  return `422 unsupported` until someone fixes the block in Mahfouz.
+
+Databases come in a fixed order, and each `next_cursor` continues from the
+last database on its page. Renaming, moving or deleting a database while you
+page never makes another one repeat or go missing. A database created while
+you page may only show up on your next full pass. You can change `query` or
+`limit` between pages and keep the same `cursor`.
 
 ### Setting attributes {#patch}
 
