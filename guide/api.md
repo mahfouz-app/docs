@@ -57,7 +57,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 ```
 
 - **Key the connection on `account.id`.** It's the Mahfouz account id, the
-  same from every grant and every app, so a reconnect gives the same id and
+  same from every grant your app gets, so a reconnect gives the same id and
   two accounts never share one. Don't key on the grant, the token or your
   client id: a reconnect changes those.
 - **It isn't the GitHub user id.** It's stable for the life of the Mahfouz
