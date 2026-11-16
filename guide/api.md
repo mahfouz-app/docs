@@ -326,21 +326,37 @@ change your app makes records your app's OAuth client id:
   Mahfouz-Client: Fh3kq…
   ```
 
-- **On rows.** `updated_by_client` is the client id of the row's last
-  change, and `created_by_client` that of the change that created it. Each is
-  `null` when the change didn't come through this API: an edit in Mahfouz, an
-  AI agent's, or a commit made with git. When the sync feed returns a row
-  whose `updated_by_client` is your client id, it's your own write coming
-  back, not a person moving the card.
+- **On rows.** `updated_by_client` is the client id of the latest commit
+  that changed the row. It's `null` when that commit didn't come through this
+  API: an edit in Mahfouz, an AI agent's, or a commit made with git. When
+  another app's write is the latest, it's that app's id.
+  `created_by_client` is the client id of the commit that added the row's
+  file. The API can't create rows yet, so it's `null` unless a write of yours
+  renamed the row's file and Mahfouz couldn't follow the rename.
 - **On comments.** Each comment's `created_by_client`, described in
   [Comments](#comments).
 
 The id comes from your authorization, never from your request, so your app
-can't set it or write another app's. It's recorded for the latest change
-only: when someone edits the row after you, `updated_by_client` goes back to
-`null`. Anyone who can push to the repository could write a trailer by hand,
-so read it as a hint, not a proof. The value only names a client from the
-connection, never a client name, since a name can be anything an app chooses.
+can't set it or write another app's. The value names a client id, never a
+client name, since an app chooses its own name. Anyone who can push to the
+repository could write a trailer by hand, so treat it as attribution, not
+proof.
+
+`updated_by_client` names only the latest change. A person's change can land
+just before yours in the same poll, or reach GitHub later from someone who
+was offline, and the row still shows your client id. So don't use it alone
+to skip a row in the sync feed. To recognize your own write coming back:
+
+1. Send `If-Match` on every write, so you never write over a change you
+   haven't seen.
+2. Keep the `version` your write's answer returned.
+3. Skip a fed row only when its `version` is that same version. Any other
+   version means something else changed the row, even when
+   `updated_by_client` is yours.
+
+After a write whose answer you lost, retry it with the same
+[`Idempotency-Key`](#idempotency) rather than reading `updated_by_client`. An
+earlier write of yours would make it match even if this one never landed.
 
 ### Retrying writes safely {#idempotency}
 
