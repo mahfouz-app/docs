@@ -224,8 +224,8 @@ Content-Type: application/json
 ```
 
 If the row has changed, the answer is `412 version_mismatch` and nothing is
-written. `PATCH` doesn't take `Idempotency-Key` yet: sending it returns
-`400`.
+written. To retry a `PATCH` safely, send an [`Idempotency-Key`](#idempotency)
+too. {% include since.html v="0.26.0" %}
 
 ### A row's body {#body}
 
@@ -310,7 +310,8 @@ app's OAuth client id:
 
 {% include since.html v="0.26.0" %}
 
-The body and comment writes take an `Idempotency-Key` header: 1 to 128
+Every write takes an `Idempotency-Key` header: `PATCH`, the body writes and
+adding a comment. {% include since.html v="0.26.0" %} The key is 1 to 128
 printable ASCII characters that name the write, such as your own operation
 id.
 
