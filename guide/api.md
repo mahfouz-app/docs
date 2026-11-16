@@ -90,7 +90,8 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
   - `cursor` continues from an earlier page. See [Reading every row](#paging).
   - `limit` is the page size: 1 to 200, default 100.
   - `snapshot=true` and `since` read the sync feed, and don't go with `view` or `cursor`. See [Keeping a copy in sync](#sync). {% include since.html v="0.26.0" %}
-- **A page of rows** is `{rows: [{id, title, created, updated, attributes, version}], next_cursor}`. A row's `version` is the one `GET …/rows/{row}` sends as its `ETag`: send it, quoted, as `If-Match` to change the row only while it's unchanged. {% include since.html v="0.26.0" %}
+- **A page of rows** is `{rows: [{id, title, created, updated, attributes, version, created_by_client, updated_by_client}], next_cursor}`. A row's `version` is the one `GET …/rows/{row}` sends as its `ETag`: send it, quoted, as `If-Match` to change the row only while it's unchanged. {% include since.html v="0.26.0" %}
+- **`created_by_client` and `updated_by_client`** name the app that created the row and the app that last changed it, by OAuth client id, or are `null`. See [Telling your writes apart](#client). {% include since.html v="0.26.0" %}
 - **Values come back whole.** A relation is a list of `{id, title, state,
   text}`. A rollup is a number, a list or a date.
 
@@ -159,9 +160,11 @@ looks like this:
 - **Which attributes are listed:** every key the database's settings name,
   every key one of its views uses, and every key one of its rows holds, sorted
   by key. That includes a typed attribute no row has a value for yet.
-- **`id`, `title`, `created`, `updated`, `created_by` and `updated_by`** aren't in
-  `attributes`: each row carries them as its own fields. A view's `columns`
-  can still name them.
+- **`id`, `title`, `created` and `updated`** aren't in `attributes`: each row
+  carries them as its own fields. **`created_by` and `updated_by`**, the
+  people who made the row's first and latest commits, aren't in `attributes`
+  either, and rows don't return them. A view's `columns` can still name any
+  of them.
 - **`type`** is the attribute's type: `text` (also for an attribute with no
   type set), `number`, `checkbox`, `url`, `email`, `phone`, `date`,
   `datetime`, `select`, `multiselect`, `color`, `font`, `attachment`,
@@ -205,7 +208,8 @@ A `PATCH` takes a body like this:
 - Setting some keys and removing others happen as separate writes.
 - `title`, `created` and `updated` can't be set this way.
 - The answer is the row as it reads after the change, with its new `version`,
-  which is also sent as the `ETag` header.
+  which is also sent as the `ETag` header. When the change wrote something,
+  its `updated_by_client` is your client id. {% include since.html v="0.26.0" %}
 
 {% include since.html v="0.26.0" %}
 
@@ -224,8 +228,8 @@ Content-Type: application/json
 ```
 
 If the row has changed, the answer is `412 version_mismatch` and nothing is
-written. `PATCH` doesn't take `Idempotency-Key` yet: sending it returns
-`400`.
+written. To retry a `PATCH` safely, send an [`Idempotency-Key`](#idempotency)
+too. {% include since.html v="0.26.0" %}
 
 ### A row's body {#body}
 
@@ -306,16 +310,69 @@ app's OAuth client id:
   comment in Mahfouz.
 - `created` is a date in UTC.
 
+### Telling your writes apart {#client}
+
+{% include since.html v="0.26.0" %}
+
+Your app writes as the user who connected it, so a change you made and one
+the user made by hand look the same in Mahfouz. To tell them apart, every
+change your app makes records your app's OAuth client id:
+
+- **In the vault's history.** Every commit your write makes ends with a
+  `Mahfouz-Client` trailer naming your client id. The author is still the
+  user:
+
+  ```text
+  Agent: set status on "Ship it"
+
+  Mahfouz-Client: Fh3kq…
+  ```
+
+- **On rows.** `updated_by_client` is the client id of the latest commit
+  that changed the row. It's `null` when that commit didn't come through this
+  API: an edit in Mahfouz, an AI agent's, or a commit made with git. When
+  another app's write is the latest, it's that app's id.
+  `created_by_client` is the client id of the commit that added the row's
+  file. The API can't create rows yet, so it's `null` unless a write of yours
+  renamed the row's file and Mahfouz couldn't follow the rename.
+- **On comments.** Each comment's `created_by_client`, described in
+  [Comments](#comments).
+
+The id comes from your authorization, never from your request, so your app
+can't set it or write another app's. The value names a client id, never a
+client name, since an app chooses its own name. Anyone who can push to the
+repository could write a trailer by hand, so treat it as attribution, not
+proof.
+
+`updated_by_client` names only the latest change. A person's change can land
+just before yours in the same poll, or reach GitHub later from someone who
+was offline, and the row still shows your client id. So don't use it alone
+to skip a row in the sync feed. To recognize your own write coming back:
+
+1. Send `If-Match` on every write, so you never write over a change you
+   haven't seen.
+2. Keep the `version` your write's answer returned.
+3. Skip a fed row only when its `version` is that same version. Any other
+   version means something else changed the row, even when
+   `updated_by_client` is yours.
+
+After a write whose answer you lost, retry it with the same
+[`Idempotency-Key`](#idempotency) rather than reading `updated_by_client`. An
+earlier write of yours would make it match even if this one never landed.
+
 ### Retrying writes safely {#idempotency}
 
 {% include since.html v="0.26.0" %}
 
-The body and comment writes take an `Idempotency-Key` header: 1 to 128
+Every write takes an `Idempotency-Key` header: `PATCH`, the body writes and
+adding a comment. The key is 1 to 128
 printable ASCII characters that name the write, such as your own operation
 id.
 
 - Sending the same request again with the same key within 24 hours returns
-  the first answer, status and `ETag` included, without writing again.
+  the first answer, status and `ETag` included, without writing again. The
+  row in it is the row as it was then: read the row again to see later
+  changes.
 - The same key with a different request returns `409 idempotency_conflict`.
   `If-Match` isn't part of the comparison, so a retry after re-reading still
   matches.
@@ -324,7 +381,9 @@ id.
   so retrying runs the write again.
 - If Mahfouz lost track of the first request's outcome, every repeat returns
   `500 internal` with `"landed": null`. Read the row, then use a new key.
-- A key belongs to your grant and to one vault.
+- A key belongs to your grant and to one vault. After you authorize again,
+  the same key is a new request, so send `If-Match` on a retry that might
+  cross a new authorization.
 
 ### Reading every row {#paging}
 
@@ -354,7 +413,8 @@ Every answer has this shape:
 
 ```json
 {
-  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}, "version": "9f86d081884c7d65…"}],
+  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}, "version": "9f86d081884c7d65…",
+            "created_by_client": null, "updated_by_client": "Fh3kq…"}],
   "removed": ["01941f30-…"],
   "next_cursor": "eyJmIjoiOWMzZ…",
   "has_more": false
