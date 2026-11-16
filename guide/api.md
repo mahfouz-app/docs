@@ -12,8 +12,8 @@ Apps that sync with Mahfouz use the REST API at
 `https://api.mahfouz.app/v1/`. A board that mirrors a database is one example.
 The API is for programs, not for people or AI agents: AI agents connect
 through [MCP](/guide/online-agents/). The API works on your GitHub
-repositories directly, so no Mahfouz window or tab needs to be open. The same
-[plan limits](/guide/online-agents/#plan-limits) apply.
+repositories directly, so no Mahfouz window or tab needs to be open. Your
+users need a Pro or Max plan: see [Plans and limits](#plans).
 
 The full description is an OpenAPI 3.1 document at
 [`https://api.mahfouz.app/v1/openapi.json`](https://api.mahfouz.app/v1/openapi.json).
@@ -311,6 +311,50 @@ back as `cursor`, with the same `view`.
 
 A row deleted while you page can shift later pages by one. De-duplicate rows
 by `id`, and treat one full pass as the current set.
+
+## Plans and limits {#plans}
+
+{% include since.html v="0.26.0" %}
+
+The API runs in the same server as [agents on GitHub](/guide/online-agents/),
+so it follows the plan of the user who connects your app:
+
+- **Pro and Max** can connect apps. **Free** can't: the consent page says
+  "Integrations that use the Mahfouz API come with Pro and Max. Upgrade in
+  Mahfouz Settings → Plan, then connect again." and no grant is made. A user
+  who moves to Free later gets `plan_has_no_agents` on every call but
+  `GET /v1/me`. If your app needs Mahfouz, tell your users a paid Mahfouz
+  plan is required.
+- **Repositories** count toward the same limit as agents: 2 on Pro, 10 on
+  Max. A repository counts once, whether an agent, your app or both reach it.
+  Past the limit, the repositories reached most recently pause
+  (`repository_paused`). See [Plan limits](/guide/online-agents/#plan-limits).
+- **Hours:** the server's running time counts toward the user's
+  [agent hours](/guide/plan/#agent-hours): 300 a month on Pro, 1,500 on Max.
+  Once they're used, calls answer `hours_cap_reached` until the month ends.
+
+### How long the server runs {#keep-alive}
+
+A call starts the repository's server when it isn't running, which takes a
+few seconds. After a call, the server keeps running at least 10 more minutes.
+Each call adds 5 minutes to the time it has left, up to 30 minutes ahead. All
+of that time counts as agent hours.
+
+So how often your app calls decides the hours it uses. For one repository,
+in a 30-day month:
+
+| Calls every | Agent hours a month |
+|---|---|
+| 5 minutes | About 720: the server never stops |
+| 15 minutes | About 480 |
+| 30 minutes | About 240 |
+| 60 minutes | About 120 |
+
+On Pro, poll a repository no more often than every 30 minutes. Polling every
+5 minutes uses Pro's 300 hours in about 12 days. Max's 1,500 hours cover
+two repositories polled every 5 minutes. Read every database you sync in one
+burst rather than spreading the reads out: calls close together share the
+server's running time.
 
 ## Errors {#errors}
 
