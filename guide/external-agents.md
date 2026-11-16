@@ -194,13 +194,35 @@ URL instead of a token:
    [Set up your client](/guide/online-agents/#set-up-your-client) for each
    client's steps.
 3. The agent opens a Mahfouz page. Sign in with GitHub if asked, check the
-   app's name and where access goes, and click **Allow**. Reading notes,
+   app's name and [where access goes](#where-access-goes), and click **Allow**. Reading notes,
    databases and tasks is always included. Untick **Propose and make
    edits** to connect it read only.
 4. Back in Settings, the client appears under **Connected clients** with
    every vault at **None** {% include since.html v="0.19.0" %}. Choose its [access level](#access-levels)
    in each vault it may use. {% include since.html v="0.17.0" %}
    A client you connected read only can be given **Read** at most.
+
+### Where access goes {% include since.html v="0.26.0" %} {#where-access-goes}
+
+Under the app's name, the consent page says where Mahfouz sends access
+when you click **Allow**:
+
+- **Redirects to `example.com`** is the web address of the app you're
+  connecting. Mahfouz reads it from this connection request, so the app
+  can't change what it shows.
+- **Redirects to a local app on this device, `127.0.0.1:33418`** means the
+  app runs on your computer (`localhost`, `127.0.0.1` or `[::1]`).
+- An address starting with `xn--` holds letters outside A to Z. Mahfouz
+  shows it as it's encoded, so a lookalike such as `xn--htchward-0za.app`
+  for `hätchward.app` doesn't pass for `hatchward.app`.
+
+The app's name is the name it gave itself, and Mahfouz doesn't check it:
+any app can call itself anything. Trust the address, not the name. If the
+address isn't the app you just started connecting, click **Deny**.
+
+The same line is on the page for
+[agents on GitHub](/guide/online-agents/#connect-an-agent) and for
+[integrations using the API](/guide/api/).
 
 Which vaults a client can reach is set per browser, in the browser where
 you allow them. Agents can reach your vaults only while a Mahfouz tab is
