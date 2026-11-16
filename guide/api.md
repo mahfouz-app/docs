@@ -90,7 +90,8 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
   - `cursor` continues from an earlier page. See [Reading every row](#paging).
   - `limit` is the page size: 1 to 200, default 100.
   - `snapshot=true` and `since` read the sync feed, and don't go with `view` or `cursor`. See [Keeping a copy in sync](#sync). {% include since.html v="0.26.0" %}
-- **A page of rows** is `{rows: [{id, title, created, updated, attributes, version}], next_cursor}`. A row's `version` is the one `GET …/rows/{row}` sends as its `ETag`: send it, quoted, as `If-Match` to change the row only while it's unchanged. {% include since.html v="0.26.0" %}
+- **A page of rows** is `{rows: [{id, title, created, updated, attributes, version, created_by_client, updated_by_client}], next_cursor}`. A row's `version` is the one `GET …/rows/{row}` sends as its `ETag`: send it, quoted, as `If-Match` to change the row only while it's unchanged. {% include since.html v="0.26.0" %}
+- **`created_by_client` and `updated_by_client`** name the app that created the row and the app that last changed it, by OAuth client id, or are `null`. See [Telling your writes apart](#client). {% include since.html v="0.26.0" %}
 - **Values come back whole.** A relation is a list of `{id, title, state,
   text}`. A rollup is a number, a list or a date.
 
@@ -205,7 +206,8 @@ A `PATCH` takes a body like this:
 - Setting some keys and removing others happen as separate writes.
 - `title`, `created` and `updated` can't be set this way.
 - The answer is the row as it reads after the change, with its new `version`,
-  which is also sent as the `ETag` header.
+  which is also sent as the `ETag` header. When the change wrote something,
+  its `updated_by_client` is your client id. {% include since.html v="0.26.0" %}
 
 {% include since.html v="0.26.0" %}
 
@@ -306,6 +308,40 @@ app's OAuth client id:
   comment in Mahfouz.
 - `created` is a date in UTC.
 
+### Telling your writes apart {#client}
+
+{% include since.html v="0.26.0" %}
+
+Your app writes as the user who connected it, so a change you made and one
+the user made by hand look the same in Mahfouz. To tell them apart, every
+change your app makes records your app's OAuth client id:
+
+- **In the vault's history.** Every commit your write makes ends with a
+  `Mahfouz-Client` trailer naming your client id. The author is still the
+  user:
+
+  ```text
+  Agent: set status on "Ship it"
+
+  Mahfouz-Client: Fh3kq…
+  ```
+
+- **On rows.** `updated_by_client` is the client id of the row's last
+  change, and `created_by_client` that of the change that created it. Each is
+  `null` when the change didn't come through this API: an edit in Mahfouz, an
+  AI agent's, or a commit made with git. When the sync feed returns a row
+  whose `updated_by_client` is your client id, it's your own write coming
+  back, not a person moving the card.
+- **On comments.** Each comment's `created_by_client`, described in
+  [Comments](#comments).
+
+The id comes from your authorization, never from your request, so your app
+can't set it or write another app's. It's recorded for the latest change
+only: when someone edits the row after you, `updated_by_client` goes back to
+`null`. Anyone who can push to the repository could write a trailer by hand,
+so read it as a hint, not a proof. The value only names a client from the
+connection, never a client name, since a name can be anything an app chooses.
+
 ### Retrying writes safely {#idempotency}
 
 {% include since.html v="0.26.0" %}
@@ -359,7 +395,8 @@ Every answer has this shape:
 
 ```json
 {
-  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}, "version": "9f86d081884c7d65…"}],
+  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}, "version": "9f86d081884c7d65…",
+            "created_by_client": null, "updated_by_client": "Fh3kq…"}],
   "removed": ["01941f30-…"],
   "next_cursor": "eyJmIjoiOWMzZ…",
   "has_more": false
