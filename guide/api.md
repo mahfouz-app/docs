@@ -39,12 +39,42 @@ server as MCP.
 4. **Exchange the code** at `https://platform.mahfouz.app/mcp/token`, and send
    the access token as `Authorization: Bearer <token>`.
    - Access tokens last an hour. Refresh them with the refresh token.
-   - A grant ends 30 days after consent.
+   - See [Staying connected](#staying-connected) for how long a connection
+     lasts.
 
 A token for the API works only at `/v1/`, and an MCP token works only at
 `/mcp`. Your users see your app under **Settings → Integrations**, where they
 can change its repositories or revoke it. **Disconnect all agents** in
 Settings → AI disconnects integrations too.
+
+### Staying connected {#staying-connected}
+
+{% include since.html v="0.26.0" %}
+
+A connection lasts for as long as your app keeps refreshing its tokens. It
+ends only when it goes 30 days without a refresh, or when the user
+disconnects it.
+
+- **Every refresh returns a new refresh token.** Store it and use it next
+  time, and drop the old one.
+- **Refresh one request at a time** for each connection. If a refresh's
+  answer never arrives, retry once with the refresh token you sent; it still
+  works until the next successful refresh.
+- **Never send a refresh token older than that.** Mahfouz takes it as a sign
+  that someone else holds the connection's tokens, and disconnects the app.
+  The user then has to consent again.
+- **Refresh at least once every 30 days**, even when there's nothing to sync.
+  After 30 days without a refresh, the token request answers
+  `invalid_grant`, and the user has to consent again.
+
+A connection also ends when the user revokes your app under **Settings →
+Integrations**, chooses **Disconnect all agents** in Settings → AI, or signs
+out everywhere. Your next token request then answers `invalid_grant`, and the
+API answers `unauthenticated`. If the user removes Mahfouz's access on GitHub,
+the API answers `github_token_expired`, and the user has to consent again.
+
+AI agents that connect through MCP work differently: their connection ends 30
+days after the user consents, however often they refresh.
 
 ### Which account connected {#me}
 
