@@ -101,6 +101,12 @@ a month: 300 on Pro and 1,500 on Max. {% include since.html v="0.25.0" %}
 Once they're used, agents on GitHub can't work on your repositories until
 the 1st of the next month (UTC).
 
+{% include since.html v="0.26.0" %} The server an agent works in keeps
+running at least 10 minutes after the agent's last call, and longer while
+the agent keeps calling a minute or more apart, up to 30 minutes ahead.
+That time counts toward the hours, so each agent session uses at least 10
+minutes. [How long the server runs](/guide/api/#keep-alive) has the rule.
+
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 
 Settings → AI → External agents shows a card for each client Mahfouz

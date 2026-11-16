@@ -148,9 +148,14 @@ On Free, published pages show "Published with Mahfouz" again.
 
 Agents on GitHub work in a server Mahfouz runs for your repository. Each
 hour that server runs for your agents counts toward your plan's **agent
-hours** for the month: 300 on Pro, 1,500 on Max. The server keeps running
-for a few minutes after an agent's last call, and that time counts too. When
-agents from two accounts share a repository, they split the hours.
+hours** for the month: 300 on Pro, 1,500 on Max. Apps connected through the
+[REST API](/guide/api/#plans) use the same server and the same hours.
+
+{% include since.html v="0.26.0" %} The server keeps running at least 10
+minutes after the last call. A call a minute or more after the previous one
+adds 5 minutes, up to 30 minutes ahead, so an agent that keeps working keeps
+the server longer. That time counts too. When agents from two accounts share a
+repository, they split the hours.
 
 The month is a calendar month in UTC: the hours start over at midnight UTC
 on the 1st. **Settings → Plan** shows **Agent hours this month** with how
