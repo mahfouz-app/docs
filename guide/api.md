@@ -75,6 +75,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 | `GET /v1/me` | Returns the Mahfouz account the grant belongs to: `{account: {id, login}}`. See [Which account connected](#me). |
 | `GET /v1/vaults` | Lists the repositories the grant reaches: `{vaults: [{id, name, can_write, paused}]}`. |
 | `GET /v1/vaults/{vault}/databases` | Lists the vault's databases, a page at a time. Takes the query parameters `query`, `cursor` and `limit`. See [Listing databases](#databases). |
+| `GET /v1/vaults/{vault}/databases/{id}/schema` | Returns a database's attributes, their types and a select's options, and its views. See [Reading a database's schema](#schema). |
 | `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. |
 | `PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}` | Sets a row's attributes. |
 
@@ -123,6 +124,65 @@ last database on its page. Renaming, moving or deleting a database while you
 page never makes another one repeat or go missing. A database created while
 you page may only show up on your next full pass. You can change `query` or
 `limit` between pages and keep the same `cursor`.
+
+### Reading a database's schema {#schema}
+
+{% include since.html v="0.26.0" %}
+
+`GET /v1/vaults/{vault}/databases/{id}/schema` describes a database: its
+views, and every attribute its rows can hold, with each attribute's type. It
+only reads, so it's safe to call before each check of a field mapping. It
+looks like this:
+
+```json
+{
+  "id": "01941f29-…", "title": "Projects", "path": "Projects/Projects.md", "kind": "custom",
+  "version": "9f2c…",
+  "views": [
+    {"key": "Board", "name": "Board", "type": "kanban", "columns": ["title", "owner"], "group_by": {"property": "status", "direction": "ASC"}}
+  ],
+  "attributes": [
+    {"key": "owner", "label": "Owner", "type": "relation", "options": null, "format": null,
+     "relation": {"target": {"id": "01941f2a-…", "title": "People", "kind": "people"}, "target_text": "[[People]]", "reverse": "projects"}, "rollup": null},
+    {"key": "status", "label": null, "type": "select", "options": [{"value": "To do", "color": "gray"}, {"value": "Done", "color": "green"}],
+     "format": null, "relation": null, "rollup": null}
+  ]
+}
+```
+
+- **Which attributes are listed:** every key the database's settings name,
+  every key one of its views uses, and every key one of its rows holds, sorted
+  by key. That includes a typed attribute no row has a value for yet.
+- **`id`, `title`, `created`, `updated`, `created_by` and `updated_by`** aren't in
+  `attributes`: each row carries them as its own fields. A view's `columns`
+  can still name them.
+- **`type`** is the attribute's type: `text` (also for an attribute with no
+  type set), `number`, `checkbox`, `url`, `email`, `phone`, `date`,
+  `datetime`, `select`, `multiselect`, `color`, `font`, `attachment`,
+  `image`, `audio`, `video`, `relation` or `rollup`.
+- **`options`** lists a select's or multi-select's options in their set
+  order, including options no row uses yet. It's `null` for other types.
+- **`format`** is a date's fixed display format, or `null`.
+- **`relation`** says which database a relation links to. `target` is
+  `null` when the database it names can't be found. A `target.kind` of
+  `people` is a link to people, such as an assignee.
+- **`rollup`** names the relation it reads through, the `property` it reads
+  on the linked rows and its `function`. An `error` says why it can't be
+  computed.
+- **`version`** changes whenever anything in the answer does. Compare it with
+  the one you stored to see whether your mapping needs checking again.
+
+An option has no separate id: its `value` is the text rows hold. When someone
+renames an option in Mahfouz, every row holding it changes in the same commit.
+Your next schema shows one option gone and a new one, so map it again. A row
+can also hold a value no option lists, for example one typed by hand, so plan
+for a value you don't recognize.
+
+A row's multi-select comes back from the rows endpoint as a list when it's
+stored as one, and as text (`"a, b"`) when someone wrote it that way.
+
+A database whose settings block can't be read, or with more than 1000
+attributes, returns `422 unsupported`.
 
 ### Setting attributes {#patch}
 
