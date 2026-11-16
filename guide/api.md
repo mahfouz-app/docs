@@ -46,10 +46,33 @@ A token for the API works only at `/v1/`, and an MCP token works only at
 can change its repositories or revoke it. **Disconnect all agents** in
 Settings → AI disconnects integrations too.
 
+### Which account connected {#me}
+
+{% include since.html v="0.26.0" %}
+
+Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
+
+```json
+{"account": {"id": "01941f29-7c00-7a2b-9c3d-4e5f60718293", "login": "octocat"}}
+```
+
+- **Key the connection on `account.id`.** It's the Mahfouz account id, the
+  same from every grant and every app, so a reconnect gives the same id and
+  two accounts never share one. Don't key on the grant, the token or your
+  client id: a reconnect changes those.
+- **It isn't the GitHub user id.** It's stable for the life of the Mahfouz
+  account. Rarely, Mahfouz support moves a GitHub sign-in to another account;
+  after that, the same person's grants report the other account's id.
+- **`login` is for display.** It's the GitHub login the user had when they
+  consented, and it can be out of date after a rename. Never key on it.
+- Treat the id as personal data: store it to match connections, but don't log
+  it or send it on to anyone else.
+
 ## Endpoints {#endpoints}
 
 | Method and path | What it does |
 |---|---|
+| `GET /v1/me` | Returns the Mahfouz account the grant belongs to: `{account: {id, login}}`. See [Which account connected](#me). |
 | `GET /v1/vaults` | Lists the repositories the grant reaches: `{vaults: [{id, name, can_write, paused}]}`. |
 | `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. |
 | `PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}` | Sets a row's attributes. |
