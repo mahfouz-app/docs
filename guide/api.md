@@ -62,15 +62,18 @@ disconnects it.
   works until the next successful refresh.
 - **Never send a refresh token older than that.** Mahfouz takes it as a sign
   that someone else holds the connection's tokens, and disconnects the app.
-  The user then has to consent again.
+  The user then has to consent again. If several of your workers refresh,
+  keep one shared copy of the refresh token, and never refresh from a copy a
+  worker cached earlier.
 - **Refresh at least once every 30 days**, even when there's nothing to sync.
   After 30 days without a refresh, the token request answers
   `invalid_grant`, and the user has to consent again.
 
 A connection also ends when the user revokes your app under **Settings →
 Integrations**, chooses **Disconnect all agents** in Settings → AI, or signs
-out everywhere. Your next token request then answers `invalid_grant`, and the
-API answers `unauthenticated`. If the user removes Mahfouz's access on GitHub,
+out everywhere. Your next token request then answers `invalid_grant`, as it
+does after a reused refresh token or 30 idle days, and the API answers
+`unauthenticated`. If the user removes Mahfouz's access on GitHub,
 the API answers `github_token_expired`, and the user has to consent again.
 
 AI agents that connect through MCP work differently: their connection ends 30
