@@ -56,7 +56,7 @@ Settings → AI disconnects integrations too.
 
 - **`{vault}`** is a repository's `id`, as `GET /v1/vaults` returns it.
 - **Query parameters for rows:**
-  - `view` is a view's key. Leave it out to get the database's first view.
+  - `view` is a view's key, at most 256 characters, matched without regard to case. Leave it out to get the database's first view.
   - `cursor` continues from an earlier page. See [Reading every row](#paging).
   - `limit` is the page size: 1 to 200, default 100.
 - **A page of rows** is `{rows: [{id, title, created, updated, attributes}], next_cursor}`.
@@ -103,7 +103,7 @@ Every error answers with an HTTP status and a JSON body:
 | `class` | A broader category, for a code your app doesn't know yet: `throttled`, `provider_unavailable`, `permission_lost`, `not_found`, `conflict`, `invalid_mapping`, `size_limit`, `unsupported` or `internal`. |
 | `message` | What happened, written for people. Don't parse it. |
 | `retryable` | Whether the same request, unchanged, may work later. |
-| `retry_after_s` | How many seconds to wait before retrying. Every `429` and `503` includes it, and also sends it as a `Retry-After` header. |
+| `retry_after_s` | How many seconds to wait before retrying. Every retryable `429` and `503` includes it, and also sends it as a `Retry-After` header. An error answered after the change was pushed names no wait. |
 | `landed` | Whether a change reached GitHub. `false` means nothing was pushed for certain. `null` means Mahfouz can't tell, so read the row before writing again. `true` means the change was pushed before the error. |
 
 | Code | Status | When |
