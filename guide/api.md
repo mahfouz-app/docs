@@ -76,7 +76,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 | `GET /v1/vaults` | Lists the repositories the grant reaches: `{vaults: [{id, name, can_write, paused}]}`. |
 | `GET /v1/vaults/{vault}/databases` | Lists the vault's databases, a page at a time. Takes the query parameters `query`, `cursor` and `limit`. See [Listing databases](#databases). |
 | `GET /v1/vaults/{vault}/databases/{id}/schema` | Returns a database's attributes, their types and a select's options, and its views. See [Reading a database's schema](#schema). |
-| `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. |
+| `GET /v1/vaults/{vault}/databases/{id}/rows` | Returns a page of a database's rows, in a view's order. Takes the query parameters `view`, `cursor` and `limit`. With `snapshot=true` or `since`, it's the sync feed instead: see [Keeping a copy in sync](#sync). {% include since.html v="0.26.0" %} |
 | `PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}` | Sets a row's attributes. |
 | `GET /v1/vaults/{vault}/databases/{id}/rows/{row}` | Returns one row with its body and version. See [A row's body](#body). {% include since.html v="0.26.0" %} |
 | `PUT /v1/vaults/{vault}/databases/{id}/rows/{row}/body` | Replaces a row's body. See [A row's body](#body). {% include since.html v="0.26.0" %} |
@@ -89,6 +89,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
   - `view` is a view's key, at most 256 characters, matched without regard to case. Leave it out to get the database's first view.
   - `cursor` continues from an earlier page. See [Reading every row](#paging).
   - `limit` is the page size: 1 to 200, default 100.
+  - `snapshot=true` and `since` read the sync feed, and don't go with `view` or `cursor`. See [Keeping a copy in sync](#sync). {% include since.html v="0.26.0" %}
 - **A page of rows** is `{rows: [{id, title, created, updated, attributes}], next_cursor}`.
 - **Values come back whole.** A relation is a list of `{id, title, state,
   text}`. A rollup is a number, a list or a date.
@@ -310,7 +311,53 @@ Ask for pages until `next_cursor` is `null`. Pass each page's `next_cursor`
 back as `cursor`, with the same `view`.
 
 A row deleted while you page can shift later pages by one. De-duplicate rows
-by `id`, and treat one full pass as the current set.
+by `id`, and treat one full pass as the current set. To keep a copy up to
+date, use the sync feed below instead.
+
+### Keeping a copy in sync {#sync}
+
+{% include since.html v="0.26.0" %}
+
+The sync feed reads a database's rows once, then only what changed. Poll it
+instead of reading every row each time.
+
+1. Start a snapshot with `GET …/rows?snapshot=true`. It returns every row of
+   the database, with no view's filter, in `id` order.
+2. While `has_more` is `true`, request `GET …/rows?since=<next_cursor>` with
+   the answer's `next_cursor`.
+3. When `has_more` is `false`, store `next_cursor`. On your next poll, request
+   `GET …/rows?since=<next_cursor>` again. You get the rows changed since then
+   and the ids of rows removed since then. Page through them the same way.
+
+Every answer has this shape:
+
+```json
+{
+  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}}],
+  "removed": ["01941f30-…"],
+  "next_cursor": "eyJmIjoiOWMzZ…",
+  "has_more": false
+}
+```
+
+- **`rows`** are rows as they are now: every row in a snapshot, or the rows
+  added or changed since the cursor. A row that was renamed or moved into the
+  database counts as changed.
+- **`removed`** lists the ids of rows that left the database since the
+  cursor: deleted, moved elsewhere, or replaced by another note with the same
+  file name. A snapshot's `removed` is always empty.
+- **`limit`** (1 to 200, default 100) caps the rows and removed ids together.
+
+The cursor follows the vault's git history, not a clock, so edits made while
+you page never shift it. A row edited while you page a snapshot comes back in
+your next poll, so a row can arrive more than once: apply each by `id`.
+
+A rollup counts as changed only when its own row changes. A rollup whose value
+moved because a related row changed isn't reported.
+
+**`410 cursor_expired`** means the cursor can't be read any more. Its history
+was rewritten (a force-push), or more than 10,000 notes changed since. Start a
+new snapshot.
 
 ## Errors {#errors}
 
@@ -341,7 +388,7 @@ Every error answers with an HTTP status and a JSON body:
 | `note_changed` | 409 | The row changed on GitHub during the write. Read it again, then retry. |
 | `idempotency_conflict` | 409 | The `Idempotency-Key` was used for a different request. Use a new key. {% include since.html v="0.26.0" %} |
 | `version_mismatch` | 412 | The row changed since the `If-Match` version was read. The `ETag` header has the current one. {% include since.html v="0.26.0" %} |
-| `cursor_expired` | 410 | Reserved for change cursors. |
+| `cursor_expired` | 410 | A sync feed cursor's history was rewritten, or too much changed since. Start a new snapshot. {% include since.html v="0.26.0" %} |
 | `too_large` | 422 | The repository, or the request body, is over a size limit. |
 | `unsupported` | 422 | Mahfouz can't work on this: git-crypt, an encrypted note, or a database it can't read. |
 | `refused` | 422 | The change can't be made as asked. The message says why. |
