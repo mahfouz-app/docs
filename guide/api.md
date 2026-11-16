@@ -160,9 +160,11 @@ looks like this:
 - **Which attributes are listed:** every key the database's settings name,
   every key one of its views uses, and every key one of its rows holds, sorted
   by key. That includes a typed attribute no row has a value for yet.
-- **`id`, `title`, `created`, `updated`, `created_by` and `updated_by`** aren't in
-  `attributes`: each row carries them as its own fields. A view's `columns`
-  can still name them.
+- **`id`, `title`, `created` and `updated`** aren't in `attributes`: each row
+  carries them as its own fields. **`created_by` and `updated_by`**, the
+  people who made the row's first and latest commits, aren't in `attributes`
+  either, and rows don't return them. A view's `columns` can still name any
+  of them.
 - **`type`** is the attribute's type: `text` (also for an attribute with no
   type set), `number`, `checkbox`, `url`, `email`, `phone`, `date`,
   `datetime`, `select`, `multiselect`, `color`, `font`, `attachment`,
