@@ -90,7 +90,7 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
   - `cursor` continues from an earlier page. See [Reading every row](#paging).
   - `limit` is the page size: 1 to 200, default 100.
   - `snapshot=true` and `since` read the sync feed, and don't go with `view` or `cursor`. See [Keeping a copy in sync](#sync). {% include since.html v="0.26.0" %}
-- **A page of rows** is `{rows: [{id, title, created, updated, attributes}], next_cursor}`.
+- **A page of rows** is `{rows: [{id, title, created, updated, attributes, version}], next_cursor}`. A row's `version` is the one `GET …/rows/{row}` sends as its `ETag`: send it, quoted, as `If-Match` to change the row only while it's unchanged. {% include since.html v="0.26.0" %}
 - **Values come back whole.** A relation is a list of `{id, title, state,
   text}`. A rollup is a number, a list or a date.
 
@@ -204,11 +204,28 @@ A `PATCH` takes a body like this:
   request can safely be sent again.
 - Setting some keys and removing others happen as separate writes.
 - `title`, `created` and `updated` can't be set this way.
-- The answer is the row as it reads after the change.
+- The answer is the row as it reads after the change, with its new `version`,
+  which is also sent as the `ETag` header.
 
-If two apps change the same key at the same time, the last write wins.
-`PATCH` doesn't take `If-Match` or `Idempotency-Key` yet: sending either
-returns `400`, so it never writes unconditionally when you meant it not to.
+{% include since.html v="0.26.0" %}
+
+Without `If-Match`, the last write wins when two apps change the same key at
+the same time. To change a row only while it still holds what you read, send
+`If-Match` with the row's version, as described for [the body](#body). For
+example, to move a card from Ready to In progress only if nobody has moved
+it since:
+
+```http
+PATCH /v1/vaults/{vault}/databases/{id}/rows/{row}
+If-Match: "9f86d081884c7d65…"
+Content-Type: application/json
+
+{"attributes": {"status": "In progress"}}
+```
+
+If the row has changed, the answer is `412 version_mismatch` and nothing is
+written. `PATCH` doesn't take `Idempotency-Key` yet: sending it returns
+`400`.
 
 ### A row's body {#body}
 
@@ -244,8 +261,8 @@ with `POST …/body/append` and `{"text": "…"}`. Both answer
 - The write is refused with `422 refused` while the row is in Suggesting
   mode, and with `422 unsupported` for an encrypted row.
 - A body is at most 1 MB.
-- **Known limit:** a change made on GitHub between the version check and the
-  save can still land under yours when the two merge cleanly.
+- A change to the row that reaches GitHub while your write is saving also
+  returns `412`, even when the two changes would merge cleanly. {% include since.html v="0.26.0" %}
 - A read can be up to 5 seconds behind, so a write with its `ETag` can
   occasionally get a `412` it didn't need. Read again and retry.
 
@@ -333,7 +350,7 @@ Every answer has this shape:
 
 ```json
 {
-  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}}],
+  "rows": [{"id": "01941f29-…", "title": "Ship it", "created": "…", "updated": "…", "attributes": {"status": "Done"}, "version": "9f86d081884c7d65…"}],
   "removed": ["01941f30-…"],
   "next_cursor": "eyJmIjoiOWMzZ…",
   "has_more": false
