@@ -29,7 +29,9 @@ on Free it connects through Mahfouz, and on Pro and Max on GitHub.
 1. Add `https://api.mahfouz.app/mcp` to your agent as a custom connector:
    see [Set up your client](#set-up-your-client) for each client's steps.
 2. The agent opens a Mahfouz page on platform.mahfouz.app. Sign in with
-   GitHub if asked.
+   GitHub if asked, and check
+   [where access goes](/guide/external-agents/#where-access-goes) under the
+   agent's name. {% include since.html v="0.26.0" %}
 3. Under **Repositories**, choose an access level for each repository the
    agent may use (see below), then click **Allow and continue to GitHub**.
 4. GitHub may ask you to confirm. This is a second authorization, separate
