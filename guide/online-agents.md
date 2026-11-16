@@ -299,46 +299,6 @@ GitHub.
   agents**: the agent asked for a repository you didn't choose. Add it if
   you want it to have access.
 
-### Error codes for client developers {% include since.html v="0.26.0" %} {#error-codes}
-
-Each of these messages, and every other error a tool answers, also comes
-with a machine-readable code, so a program can tell failures apart without
-reading the English. The message text doesn't change. Alongside it, the
-tool result's `structuredContent` holds:
-
-| Field | Meaning |
-|---|---|
-| `code` | What went wrong, from the table below. A code keeps its meaning once it ships. |
-| `class` | A broader category, for a code your client doesn't know yet: `throttled`, `provider_unavailable`, `permission_lost`, `not_found`, `conflict`, `invalid_mapping`, `size_limit`, `unsupported` or `internal`. |
-| `message` | The same text as the message. |
-| `retryable` | Whether the same call, unchanged, may work later. |
-| `retry_after_s` | How many seconds to wait first, when there's a wait to name. |
-| `landed` | Whether the change reached GitHub: `false` only when nothing was pushed for certain, `null` when Mahfouz can't tell (check the note before writing again), `true` when it was pushed before the error. |
-
-| Code | When |
-|---|---|
-| `indexing` | The repository's workspace is starting. Retry after `retry_after_s`. |
-| `busy` | Another call to the repository is running. |
-| `at_capacity` | Agents are at capacity for now. |
-| `rate_limited` | Too many requests. The HTTP 429 also sends `Retry-After`. |
-| `server_paused` | Agents are switched off for this connection for now. |
-| `github_unavailable` | GitHub didn't answer, or refused a fetch or a push. |
-| `plan_has_no_agents` | The account's plan doesn't include agents while Mahfouz is closed. |
-| `hours_cap_reached` | This month's agent hours are used up. `retry_after_s` counts to the reset. |
-| `repository_paused` | The plan pauses agents in this repository. |
-| `repository_blocked` | Agents are stopped for the repository after a push rewrote its history. |
-| `not_found` | The note, database or proposal named doesn't exist. |
-| `permission_denied` | The connection may not do this: the repository isn't in it, it's read-only, publishing isn't allowed, or GitHub access was lost. |
-| `github_token_expired` | The connection needs to be authorized again. |
-| `note_changed` | The note changed since the agent read it. Read it again, then retry. |
-| `invalid_argument` | An argument is missing, unknown or malformed. |
-| `too_large` | The repository or the input is past a size limit. |
-| `unsupported` | Agents can't work on this: git-crypt, an encrypted note, Git LFS, an empty repository, an ignored path, or no publishing on this server. |
-| `not_saved` | A page was taken down because its note's change didn't land. Retry. |
-| `no_tab` | No web.mahfouz.app tab is open to run the call. |
-| `internal` | Mahfouz failed. Retry shortly. |
-| `refused` | The request can't be done as asked. The message says why. |
-
 ## Privacy and what Mahfouz keeps
 
 - **A working copy per repository**: a clone of the repository and an
