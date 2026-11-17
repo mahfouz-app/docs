@@ -1886,7 +1886,7 @@ h1 {
   letter-spacing: -0.045em;
 }
 
-.home-get > .shell > p {
+.home-get > .shell > p:not(.home-platforms):not(.home-alt) {
   margin: 14px 0 0;
   color: var(--body-secondary);
   font-size: 1.24rem;
@@ -2730,5 +2730,180 @@ h1 {
 
   .pricing-period label {
     padding: 6px 14px;
+  }
+}
+
+/* Download page (/download/) */
+
+.download-hero {
+  padding: 112px 0 88px;
+  text-align: center;
+}
+
+.download-hero h1 {
+  max-width: none;
+  margin-bottom: 18px;
+}
+
+.download-hero .hero-description {
+  margin: 0 auto 36px;
+}
+
+.button-large {
+  min-height: 56px;
+  padding: 14px 34px;
+  font-size: 1.12rem;
+}
+
+.button-large svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.download-meta {
+  margin: 16px 0 0;
+  color: var(--cm-muted);
+  font-size: 0.82rem;
+}
+
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  margin: 22px 0 0;
+}
+
+.download-links .more,
+.download-page .home-tile .more {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.download-links .more:hover,
+.download-page .home-tile .more:hover {
+  text-decoration: underline;
+}
+
+.download-section {
+  padding: 0 0 96px;
+}
+
+.download-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.download-steps h3 {
+  font-size: 1.24rem;
+  letter-spacing: -0.025em;
+}
+
+.download-num {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+  color: var(--cm-text);
+  background: var(--cm-bg);
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.download-updates {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.download-updates h3 {
+  margin-bottom: 10px;
+}
+
+.download-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px 12px 18px;
+  color: var(--cm-text);
+  background: var(--cm-bg);
+  border-radius: 14px;
+  font-size: 0.9rem;
+}
+
+.download-banner span {
+  flex: 1;
+  min-width: 0;
+}
+
+.download-banner .download-pill {
+  flex: none;
+  padding: 6px 14px;
+  color: #fff;
+  background: var(--cm-accent);
+  border-radius: 980px;
+  font-size: 0.82rem;
+}
+
+.download-brew {
+  padding: 88px 0 96px;
+  text-align: center;
+}
+
+.download-brew h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.download-brew .download-lede {
+  max-width: 52ch;
+  margin: 14px auto 0;
+  color: var(--body-secondary);
+  font-size: 1.12rem;
+}
+
+.download-brew .home-ctas {
+  margin-top: 28px;
+}
+
+.download-other {
+  padding: 88px 0 96px;
+}
+
+.download-other h2 {
+  margin: 0 0 28px;
+  font-size: 1.65rem;
+  letter-spacing: -0.035em;
+}
+
+.download-other-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Home page: the Download button and the Homebrew link under it */
+
+.home-alt {
+  margin: 14px 0 0;
+}
+
+@media (max-width: 900px) {
+  .download-hero {
+    padding: 80px 0 64px;
+  }
+
+  .download-steps,
+  .download-updates,
+  .download-other-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

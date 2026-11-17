@@ -84,6 +84,9 @@ Reuse these from `styles.css`:
 - **Buttons** (`.button-primary`, `.button-secondary`): pill shaped
   (`border-radius: 980px`), at least 44px tall. Primary is filled blue;
   secondary is a blue outline that fills on hover.
+- **Large button** (`.button-large`): the primary button at 56px tall and
+  1.12rem, with a 20px icon. Only for the one download call to action on
+  the home page and `download/`.
 - **Text links** in running text are `--cm-text` with a thin blue underline.
 - **Logo:** the header shows the wordmark at 96px wide: `images/logo.png` in light mode, `images/logo-dark.png` (the mark's dark colours, papyrus-white type) in dark mode, swapped by `.brand-logo-light` and `.brand-logo-dark`. Never invert or filter it; its colours are fixed. The files come from the app repo (`assets/images/`, rendered by `bin/brand-wordmark`).
 - **Footer** (`.site-footer`): two rows. On top, the tagline as a tile-sized heading (`.footer-tagline`, 1.65rem, weight 600, `--cm-text`) beside the links (`.footer-nav`): the header's links and more, in three groups of four to six (Product, Resources, Legal), each a `--cm-text` heading over a list of 1rem `--body-secondary` links with no underline until hover. Three columns, two on phones; under 900px the links go under the tagline. Below, the full wordmark closes the page (`.footer-logo`, `images/logo.png` and `logo-dark.png`, swapped by theme like the header's), up to 640px wide and 360px on phones, with "© 2026 Influpert LLC" (linked to influpert.com) in `--cm-muted` at its bottom right, or under it below 900px. Every page repeats the same footer.
@@ -126,7 +129,7 @@ Reuse these from `styles.css`:
 
 ## Pages
 
-- Website pages (home, `compare/`, `plugins/`, `pricing/`) are hand-written HTML that
+- Website pages (home, `compare/`, `download/`, `plugins/`, `pricing/`) are hand-written HTML that
   repeat the same `<head>`, header and footer. Copy them from an existing
   page, and set `aria-current="page"` on the page's nav link. A new
   top-level page goes in the main nav of every page that has one (`index.html`,
@@ -135,6 +138,12 @@ Reuse these from `styles.css`:
   `_plugins/`: the title (with its badge to the right), the description,
   the actions (**Source ›** and **Install**), a row of facts, then the
   write-up in guide styles.
+- **Downloads** go to the DMG first and Homebrew second. Every "Download"
+  link and button points at `/download/`, except the home page's Download
+  buttons, which link straight to the DMG. The home page and `download/`
+  read the version and DMG link from `site.data.release`, which the build
+  copies from the root `version.json` the app's release workflow commits.
+  Never type a version number into a page.
 - Guide pages use the `guide` layout and are styled by `.guide-content`; just
   write Markdown. The layout reads the version for the title's pill from the
   first heading of `_includes/changelog.md`.
