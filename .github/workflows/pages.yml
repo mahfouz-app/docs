@@ -1,0 +1,66 @@
+# Builds mahfouz.app with Jekyll and deploys it to GitHub Pages.
+#
+# Replaces Pages' legacy branch build so the site can run a build step:
+# version.json (committed to main by mahfouz-app/app's release workflow) is
+# copied to _data/release.json, which templates read as site.data.release.
+# version.json and updater.json themselves are still published unchanged at
+# the site root; running apps poll them there.
+#
+# Pull requests build only, as a check. Pushes to main build and deploy.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deploy at a time; a newer push supersedes a queued one, but a deploy
+# that has started is allowed to finish.
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
+      # Lets jekyll-github-metadata (part of github-pages) name the repo
+      # without guessing from the git remote.
+      PAGES_REPO_NWO: ${{ github.repository }}
+      JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # The Ruby GitHub Pages' own builder runs.
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Generate _data/release.json from version.json
+        run: cp version.json _data/release.json
+
+      - name: Build
+        run: bundle exec jekyll build
+
+      - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
