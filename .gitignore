@@ -1,0 +1,13 @@
+# Jekyll output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+.bundle/
+vendor/
+
+# Generated at build time from version.json (see .github/workflows/pages.yml).
+# Never commit it.
+_data/release.json
