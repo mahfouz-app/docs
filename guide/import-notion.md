@@ -9,7 +9,8 @@ permalink: /guide/import-notion/
 The **Notion import** plugin copies a Notion workspace into a vault: its
 pages and sub-pages, databases, to-dos, comments, images and files. It
 reads Notion through its API, so you don't export anything from Notion
-first. What you get is ordinary notes in the vault, added in one commit.
+first. What you get is ordinary notes in the vault, saved in batches as
+they're read. {% include since.html v="0.27.0" %}
 
 You need:
 
@@ -64,32 +65,29 @@ The import has these steps:
    {% include since.html v="0.14.0" %} **Include comments** is on by
    default; turn it off for a faster import. Click **Start**
    {% include since.html v="0.16.0" %}.
-2. **Reading.** {% include since.html v="0.16.0" %} The dialog closes and
-   Mahfouz reads the shared pages, or only the linked page and what's
-   under it, in the background. A notification shows the progress, and its
-   **Cancel** stops the read; nothing has been written yet. When the read
-   is done, the notification says what's ready to import: click
-   **Review…** to reopen the dialog on the next step, or **Discard** to
-   drop it. If the read fails, the notification says why, and **Try
-   again…** reopens the dialog with your choices kept.
-3. **Choose pages.** {% include since.html v="0.14.0" %} When Notion shares
-   more than one top-level page or database, they're listed with how many
-   pages or rows each holds, all ticked. Untick the ones to leave out
-   (**Select none** and **Select all** help), then click **Continue**.
-   Sub-pages and database rows come with the page they're in, and a link
-   to a page you left out becomes plain text. When there's only one, as
-   with a page link, this step is skipped; a database link lists each of
-   the database's data sources. **Back** returns to the first step and
-   keeps what was read, unless you change the link, an option or the
-   token, which reads again in the background.
-4. **Preview.** You see how many notes, databases, files, tasks and
-   comments will be created, and any warnings about what can't come
-   across. Under **People**, type a GitHub login for each person Notion
-   mentions; a login is filled in when the person's email matches one of
-   the vault's collaborators. A person left blank keeps their name as plain
-   text, and their tasks stay unassigned. **Back** returns to the page
-   list with your choices kept. Click **Import**. The dialog closes and
-   the same notification shows the import's progress until it's done.
+2. **Scan.** {% include since.html v="0.27.0" %} The dialog closes and
+   Mahfouz lists the top-level pages and databases shared with the
+   integration, or only the linked page, in the background. This is quick:
+   the pages themselves are read later, during the import. When it's done,
+   the notification says what's ready: click **Review…** to reopen the
+   dialog on the next step, or **Discard** to drop it. If the scan fails,
+   the notification says why, and **Try again…** reopens the dialog with
+   your choices kept.
+3. **Review.** {% include since.html v="0.27.0" %} The top-level pages and
+   databases are listed with about how many pages or rows each holds, all
+   ticked. Untick the ones to leave out (**Select none** and **Select all**
+   help). Sub-pages and database rows come with the page they're in. Any
+   warnings about what can't come across are listed under them. Under
+   **People**, type a GitHub login for each person Notion mentions; a login
+   is filled in when the person's email matches one of the vault's
+   collaborators. A person left blank keeps their name as plain text, and
+   their tasks stay unassigned. **Back** returns to the first step. Click
+   **Import about N notes**.
+4. **Import.** The dialog closes and the same notification follows the
+   import: **150 of about 410 notes saved**, with **Stop**. Notion is read
+   one page at a time, and every 50 notes or so are saved and committed,
+   so the first notes show up in the sidebar within seconds, and you can
+   open them while the rest arrive.
 
 ### Import one page {% include since.html v="0.14.0" %} {#import-one-page}
 
@@ -106,21 +104,59 @@ nothing is imported.
 
 A link to a row of a database imports the row as a page, without its
 properties; link the database to bring its rows in with their
-properties. A relation or mention that points outside the linked page
-becomes a link back to Notion.
+properties.
 
-The files are downloaded, then everything is written and committed as one
-change in the vault's history: **Import from Notion: N notes**. The
-notification shows the progress, then **Imported N notes** with **Open**.
-If something fails partway, the import
-removes what it wrote and nothing is left behind.
+### In the vault's history {% include since.html v="0.27.0" %} {#history}
 
-Because the import is a single commit, you can take it back in one step
-with git (`git revert` of that commit), or delete the imported notes,
-which sends them to the [Trash](/guide/history/).
+Each batch is its own change in the vault's history: **Import from
+Notion: notes 1–50**, **notes 51–100**, and so on. When links are left to
+point at pages saved in a later batch, a last change, **Import from
+Notion: links**, sorts them out. When it's done, the notification says **Imported N notes**,
+in how many changes, with **Open**.
+
+If a batch fails, only that batch is taken back, and the import stops:
+the batches before it stay in the vault. To take a whole import back,
+delete the imported notes, which sends them to the
+[Trash](/guide/history/), or revert its changes with git.
+
+Every imported note carries an `import_source` attribute naming the Notion
+page it came from (hidden in the note's attributes until you show it).
+That's how a resumed import, on this computer or another clone of the
+vault, knows which pages are already in, so don't edit or remove it while
+an import may still be resumed.
 
 The token is kept in memory until you quit Mahfouz, and **Replace** swaps
 it for another. It's never saved to disk or to the vault.
+
+### Stop, resume or finish {% include since.html v="0.27.0" %} {#resume}
+
+**Stop** in the notification stops the import after the batch being
+saved; you can also quit Mahfouz, or lose the connection. Either way, the
+notes already saved stay, and the notification says **Import from Notion
+stopped**, with:
+
+- **Resume…** reopens the Import dialog with a banner naming the import
+  and how many notes were saved. Paste the token again (it's only kept
+  until Mahfouz quits) and click **Resume import**: the import carries on
+  where it stopped, into the same place and with the same pages and
+  people, without the scan or the review. **Start over** drops the resume
+  point instead; the notes already imported stay.
+- **Finish here** ends the import as it is. Links to pages that weren't
+  imported become links back to Notion (or plain text, after Mahfouz has
+  restarted without a resume point), in one more change.
+
+Resuming works after a restart too: when Mahfouz opens a vault with a
+stopped import, the same notification comes back. If the Notion plugin is
+turned off, it says to turn it on to resume; **Finish here** still works.
+The resume point lives in the vault's `.git` folder on this computer and
+is never committed. Without it (another computer, or it was removed), a
+new import of the same pages skips the ones already in the vault.
+
+Until an import is finished, a link to a page that hasn't been imported
+yet is written as `mahfouz-import:page/…`. A note holding such a link
+offers **Repair import links in this vault** in its menu and in the
+command palette: it points every such link whose page is now in the vault
+at its note, then asks before turning the rest into text.
 
 ## What comes across
 
@@ -147,7 +183,7 @@ it for another. It's never saved to disk or to the vault.
   or on the page itself becomes a thread at that spot. An author with no
   GitHub login is written as their name, for example `@jane-doe`.
 - **Mentions** of a page become links to its note when that page is
-  imported too, and plain text otherwise. A mention of a person becomes
+  imported too, and links back to Notion otherwise. A mention of a person becomes
   their `@login`, or their name. A date mention becomes the date.
 
 ### Database columns
@@ -162,7 +198,7 @@ it for another. It's never saved to disk or to the vault.
 | Checkbox | Checkbox |
 | URL, Email, Phone | URL, Email, Phone |
 | Person | Text: `@login` or the person's name |
-| Relation | Text: links to the related notes |
+| Relation | A relation column when it links rows of the same database {% include since.html v="0.27.0" %}; text with links to the related notes otherwise |
 | Files & media | Attachment: the first file; any others go in the row's body |
 | Formula, Rollup | The value at import time. It won't recalculate. |
 | Created time, Last edited time | Date & time |
@@ -171,6 +207,14 @@ it for another. It's never saved to disk or to the vault.
 
 Each database gets one table view. Notion's API doesn't expose views,
 filters or sorts, so set those up again in Mahfouz.
+
+**Sub-items** {% include since.html v="0.27.0" %}: a database whose rows
+have Notion's **Parent item** and **Sub-items** properties gets them as a
+pair of [relation](/guide/databases/) columns, and a Tree view next to the
+table nests each row under its parent. Notion's API doesn't say which
+relation holds sub-items, so Mahfouz picks the side whose name contains
+"parent", or else the side where each row links at most one other row.
+When it can't tell, the relation comes in without the Tree view.
 
 ## Limits
 
@@ -187,7 +231,8 @@ filters or sorts, so set those up again in Mahfouz.
 - **Page icons and covers**, tables of contents, breadcrumbs, buttons and
   AI or meeting-notes blocks aren't imported.
 - **Large workspaces take a while.** Notion allows about three requests a
-  second, and **Include comments** adds one request for every block.
+  second, and **Include comments** adds one request for every block. The
+  notes arrive as they're read, and you can stop and resume.
 
 ## Security
 
