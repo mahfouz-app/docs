@@ -1056,6 +1056,12 @@
   "url": "https://github.com/image-rs/fdeflate"
  },
  {
+  "name": "filetime",
+  "version": "0.2.29",
+  "license": "MIT OR Apache-2.0",
+  "url": "https://github.com/alexcrichton/filetime"
+ },
+ {
   "name": "flate2",
   "version": "1.1.10",
   "license": "MIT OR Apache-2.0",
@@ -1698,6 +1704,12 @@
   "url": "https://github.com/kt3k/minimisted"
  },
  {
+  "name": "minisign-verify",
+  "version": "0.2.5",
+  "license": "MIT",
+  "url": "https://github.com/jedisct1/rust-minisign-verify"
+ },
+ {
   "name": "miniz_oxide",
   "version": "0.8.9",
   "license": "MIT OR Zlib OR Apache-2.0",
@@ -1878,6 +1890,12 @@
   "url": "https://github.com/madsmtm/objc2"
  },
  {
+  "name": "objc2-osa-kit",
+  "version": "0.3.2",
+  "license": "Zlib OR Apache-2.0 OR MIT",
+  "url": "https://github.com/madsmtm/objc2"
+ },
+ {
   "name": "objc2-quartz-core",
   "version": "0.3.2",
   "license": "Zlib OR Apache-2.0 OR MIT",
@@ -1918,6 +1936,12 @@
   "version": "0.2.0",
   "license": "MPL-2.0",
   "url": "https://github.com/soc/option-ext.git"
+ },
+ {
+  "name": "osakit",
+  "version": "0.3.1",
+  "license": "MIT OR Apache-2.0",
+  "url": "https://github.com/mdevils/rust-osakit"
  },
  {
   "name": "pako",
@@ -2192,6 +2216,12 @@
  {
   "name": "reqwest",
   "version": "0.12.28",
+  "license": "MIT OR Apache-2.0",
+  "url": "https://github.com/seanmonstar/reqwest"
+ },
+ {
+  "name": "reqwest",
+  "version": "0.13.5",
   "license": "MIT OR Apache-2.0",
   "url": "https://github.com/seanmonstar/reqwest"
  },
@@ -2628,6 +2658,12 @@
   "url": "https://github.com/tauri-apps/tao"
  },
  {
+  "name": "tar",
+  "version": "0.4.46",
+  "license": "MIT OR Apache-2.0",
+  "url": "https://github.com/composefs/tar-rs"
+ },
+ {
   "name": "tauri",
   "version": "2.11.5",
   "license": "Apache-2.0 OR MIT",
@@ -2690,6 +2726,12 @@
  {
   "name": "tauri-plugin-sql",
   "version": "2.4.1",
+  "license": "Apache-2.0 OR MIT",
+  "url": "https://github.com/tauri-apps/plugins-workspace"
+ },
+ {
+  "name": "tauri-plugin-updater",
+  "version": "2.12.0",
   "license": "Apache-2.0 OR MIT",
   "url": "https://github.com/tauri-apps/plugins-workspace"
  },
@@ -2810,6 +2852,12 @@
  {
   "name": "tokio-stream",
   "version": "0.1.19",
+  "license": "MIT",
+  "url": "https://github.com/tokio-rs/tokio"
+ },
+ {
+  "name": "tokio-util",
+  "version": "0.7.19",
   "license": "MIT",
   "url": "https://github.com/tokio-rs/tokio"
  },
@@ -3088,6 +3136,12 @@
   "version": "0.55.1",
   "license": "Apache-2.0 OR MIT",
   "url": "https://github.com/tauri-apps/wry"
+ },
+ {
+  "name": "xattr",
+  "version": "1.6.1",
+  "license": "MIT OR Apache-2.0",
+  "url": "https://github.com/Stebalien/xattr"
  },
  {
   "name": "xml",
