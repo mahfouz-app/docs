@@ -456,9 +456,10 @@ to show it. The view you picked is remembered on this device.
 
 - **+ View** adds a view: **Table**, **Board** grouped by one of the
   database's Select attributes, **Gallery** with the cover image you
-  choose, **Calendar** by one of the rows' dates, or
-  [**Gantt**](#gantt) from a start date to an end date.
-  {% include since.html v="0.16.0" %}
+  choose, **Calendar** by one of the rows' dates,
+  [**Gantt**](#gantt) from a start date to an end date
+  {% include since.html v="0.16.0" %}, or [**Tree**](#tree) nesting rows by
+  a relation of the database to itself {% include since.html v="0.27.0" %}.
 - The **▾** next to the current view offers **Rename**, **Duplicate**, and
   **Delete view**. Rename edits the name in place: press <kbd>Enter</kbd> to
   save it or <kbd>Escape</kbd> to cancel. Deleting a view asks first; the rows
@@ -1004,6 +1005,56 @@ shows a list instead of the timeline: each row's title and its dates, such
 as *10 Oct – 22 Oct · 13 days*, grouped by lane. Each row keeps its **⋯**
 menu, so you can set and remove its dates there. The zoom switch and dragging
 aren't shown.
+
+## Tree {% include since.html v="0.27.0" %} {#tree}
+
+A Tree view is a table whose rows nest under other rows, as a project's
+items hold their sub-items: *Ship installer* and *Release notes* under
+*Launch v2*, say. The nesting follows a relation of the database to itself
+(see [Relate a database to itself](#relate-a-database-to-itself)): the row a
+row links in it is its parent, and the rows that link a row are its
+sub-items. Everything else is the table's: columns, sort, filters, grouping,
+editing cells and pages. A Table view never nests its rows; add a Tree view
+for that. In the database block, a Tree view is a view with `type: tree`
+and `parentBy: <relation>`.
+
+To add one, choose **+ View** → **Tree**, then the relation under **Sub-items
+from**. **Tree** is greyed out, as *Tree (needs a relation to itself)*,
+until the database has a relation to itself that can nest rows. To change
+the relation later, open **View settings** and pick it under **Sub-items**;
+**None** shows every row at the top level. A two-way relation that links
+back through the same column can't nest rows and isn't offered. A Tree view
+without a relation it can use shows its rows flat, with a note and a button
+for each relation that can nest them.
+
+The rows show as a tree: each parent, then its sub-items, indented under it,
+at every level:
+
+- **Sort** orders the rows of the same parent, and the top-level rows.
+- **Filters** apply first: a row they hide isn't shown, and its sub-items are
+  shown at the top level, with the note *2 rows are shown at the top level:
+  their parents are hidden by this view's filter.*
+- **Grouping** nests rows only within each group, so a group never shows a
+  row from another one. A sub-item whose parent is in another group is shown
+  at its group's top level, followed by *under Ship installer*, with the note
+  *1 row is shown at the top level of its group: its parent is in another
+  group.*
+- A loop written by hand, and a row linking more than one other row, are
+  handled as in the Gantt (see [Sub-items](#gantt-sub-items)), with the same
+  notes.
+
+Click a parent's chevron to collapse or expand it; a collapsed parent says
+how many sub-items it holds, such as *4 sub-items*. Which parents are
+collapsed isn't saved. Collapsed sub-items don't count toward a page, so a
+page always shows its full number of rows, and a parent's sub-items can
+continue on the next page. A group's header still counts every row in it.
+
+A row's **⋯** menu has the Gantt's **Make sub-item of…** and **Remove from
+‘Launch v2’**, which work the same way: each change is one commit, and a
+loop or a row under itself is refused.
+
+A database embed of a Tree view shows its rows in tree order, indented,
+with nothing collapsed.
 
 ## Relations
 
