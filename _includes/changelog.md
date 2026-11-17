@@ -1,4 +1,26 @@
 
+## 0.26.0 (2026-11-17) {#v0.26.0}
+
+### Features
+
+* Oauth: an API grant lives while its client keeps refreshing
+* Oauth: consent shows the redirect host beside the client's name
+* Vault: keep a container 10 minutes past a call, 5 more for spaced calls, up to 30
+* Api: If-Match on PATCH, a version on listed rows, and a push that never rebases over a checked row
+* Api: read and write a row's body, and comment on a row
+* Desktop: install updates in place from the banner
+
+### Improvements
+
+* Api: rows never return created_by or updated_by
+* Release: Step 2/3 — sign, mirror and announce the desktop updater bundle
+
+### Bug fixes
+
+* Vault: queue concurrent calls to one vault instead of failing
+* Share: lay out the link switch row like the other switch rows
+
+
 ## 0.25.1 (2026-11-12) {#v0.25.1}
 
 ### Bug fixes
