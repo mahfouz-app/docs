@@ -212,9 +212,11 @@ filters or sorts, so set those up again in Mahfouz.
 have Notion's **Parent item** and **Sub-items** properties gets them as a
 pair of [relation](/guide/databases/) columns, and a Tree view next to the
 table nests each row under its parent. Notion's API doesn't say which
-relation holds sub-items, so Mahfouz picks the side whose name contains
-"parent", or else the side where each row links at most one other row.
-When it can't tell, the relation comes in without the Tree view.
+relation holds sub-items, so Mahfouz takes the one whose name contains
+"parent", as long as no row has more than one parent. Otherwise the
+relation comes in without the Tree view, and the import's warnings say
+why. A relation like **Blocked by** / **Blocking** stays a pair of
+relation columns.
 
 ## Limits
 
