@@ -1,8 +1,8 @@
 {
-  "version": "0.25.1",
-  "date": "2026-11-12",
-  "notes": "https://mahfouz.app/changelog/#v0.25.1",
+  "version": "0.26.0",
+  "date": "2026-11-17",
+  "notes": "https://mahfouz.app/changelog/#v0.26.0",
   "downloads": {
-    "macos-aarch64": "https://github.com/mahfouz-app/homebrew-tap/releases/download/mahfouz-v0.25.1/Mahfouz_0.25.1_aarch64.dmg"
+    "macos-aarch64": "https://github.com/mahfouz-app/homebrew-tap/releases/download/mahfouz-v0.26.0/Mahfouz_0.26.0_aarch64.dmg"
   }
 }
