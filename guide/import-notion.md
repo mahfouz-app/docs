@@ -153,7 +153,8 @@ is never committed. Without it (another computer, or it was removed), a
 new import of the same pages skips the ones already in the vault.
 
 Until an import is finished, a link to a page that hasn't been imported
-yet is written as `mahfouz-import:page/…`. A note holding such a link
+yet is written as `mahfouz-import:page/…`, in a note's text and in a
+database cell alike, and becomes a link when the page arrives. A note holding such a link
 offers **Repair import links in this vault** in its menu and in the
 command palette: it points every such link whose page is now in the vault
 at its note, then asks before turning the rest into text.
