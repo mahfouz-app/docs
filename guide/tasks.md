@@ -381,6 +381,14 @@ The Tasks tab looks like a [database](/guide/databases/#the-table):
 - The table shows 25 tasks a page, with the same pager as a database's.
   Changing **Mine**/**Everyone** or the vault goes back to the first page.
 
+Links in a task's title (a `[[wikilink]]`, a `[text](url)` link or a web
+address) show as links in every view, as they do in the note, not as their
+Markdown. Click one to open it; <kbd>Cmd/Ctrl</kbd>+click opens a note in
+the background. Clicking anywhere else on the title still opens the task's
+note. A link to a note that doesn't exist yet is dashed, and a task from a
+vault that isn't open shows its links without following them.
+{% include since.html v="0.27.0" %}
+
 The views:
 
 - **Table** shows **Title**, **Status**, **Due**, **Assignee** and
