@@ -60,6 +60,7 @@ To try Backspace in Preview, put the cursor right after [[Sample deck]], **bold*
 - [/] Review code blocks #editor @owahab // 2030-01-15
 - [ ] Water the plants // 2030-01-16
 - [ ] Check the engine's tables @ada // 2030-01-17
+- [ ] Read [[Clicking]] and [the tasks guide](https://mahfouz.app/guide/tasks/) // 2027-06-01
 - [x] Fix the toolbar @owahab // 2030-01-10 09:30
 
 ## Quotes and callouts
