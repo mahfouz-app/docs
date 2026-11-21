@@ -39,7 +39,12 @@ access:
 
 Without **Read comments**, comments aren't imported. Without **Read user
 information**, people come in by the names Notion shows, without their
-emails. The preview's warnings say when either is missing.
+emails. The preview's warnings say when **Read comments** is missing. When
+**Read user information** is, the review says so under **People**
+{% include since.html v="0.27.0" %}, with **Open Notion integrations** to
+turn it on and **Scan again** to read the workspace again once you have.
+You can also import without it and
+[map people afterwards](#map-people).
 
 ## Import
 
@@ -81,13 +86,32 @@ The import has these steps:
    **People**, type a GitHub login for each person Notion mentions; a login
    is filled in when the person's email matches one of the vault's
    collaborators. A person left blank keeps their name as plain text, and
-   their tasks stay unassigned. **Back** returns to the first step. Click
+   their tasks stay unassigned. People Notion names only once the import
+   is under way, such as guests, can be
+   [mapped afterwards](#map-people). **Back** returns to the first step. Click
    **Import about N notes**.
 4. **Import.** The dialog closes and the same notification follows the
    import: **150 of about 410 notes saved**, with **Stop**. Notion is read
    one page at a time, and every 50 notes or so are saved and committed,
    so the first notes show up in the sidebar within seconds, and you can
    open them while the rest arrive.
+
+### Map people afterwards {% include since.html v="0.27.0" %} {#map-people}
+
+People the review didn't list, because Notion first names them partway
+through the import (guests, or everyone when the integration can't read
+the workspace's members), are kept in the notes as links with their name
+until you give them a GitHub login. When the import finishes, its
+notification says how many there are; click **Map people…**. You can also
+choose **Map imported people…** later, from the menu of a note that
+mentions one of them or from the command palette.
+
+The dialog lists each person with the notes that name them. Type a GitHub
+login for the ones you know and click **Map people**: their mentions
+become `@login`, their tasks are assigned to them, and the comments they
+wrote show them as the author, in one change in the vault's history. A
+person left blank becomes their name as plain text. Until then, a
+published page shows their name.
 
 ### Import one page {% include since.html v="0.14.0" %} {#import-one-page}
 
