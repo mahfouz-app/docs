@@ -1,4 +1,18 @@
 
+## 0.27.0 (2026-11-21) {#v0.27.0}
+
+### Features
+
+* Import: resume a stopped streaming import
+* Databases: Tree view nests rows by a self-relation (parentBy)
+
+### Bug fixes
+
+* Tasks: a mention in a new task's title stays a mention
+* Tasks: draw and follow links in task titles
+* Import: a text cell's link to a page not written yet waits for it
+
+
 ## 0.26.0 (2026-11-17) {#v0.26.0}
 
 ### Features
