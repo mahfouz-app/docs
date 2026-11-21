@@ -64,14 +64,18 @@ still missing. Click one to open the assignee or date picker; hover it to
 see its key (<kbd>@</kbd> or <kbd>!</kbd>). The × beside a chip hides it on
 that line until you reload; hiding **Assign** also stops a date from adding
 your own `@login`. Assigning someone on a line with no date yet opens the date
-picker next, since a line without a date isn't a task. A handle typed at the
-end of a checklist item (`- [ ] Call @ana`) counts as its assignee once it
-gets a date.
+picker next, since a line without a date isn't a task.
+
+{% include since.html v="0.27.0" %} A person you mention in the title
+(`- [ ] Call @ana about the deck`) stays a mention, even at the end of the
+line: the assignee is whoever you pick in the assignee picker, or you, when a
+date is set first. <kbd>Tab</kbd> in the <kbd>@</kbd> menu picks the
+highlighted person, so you can keep typing the title.
 
 {% include since.html v="0.19.0" %} You can make a whole task without the
 mouse: type its title, then press <kbd>Tab</kbd> at the end of the line to
-open the assignee picker (or the date picker, when the line already names
-someone). Pick a person with <kbd>Enter</kbd>, or press <kbd>Esc</kbd> to
+open the assignee picker (or the date picker, when you hid **Assign** on
+that line). Pick a person with <kbd>Enter</kbd>, or press <kbd>Esc</kbd> to
 assign no one, and the date picker opens next. <kbd>Tab</kbd> anywhere else
 on the line still indents it.
 
