@@ -116,6 +116,9 @@ Send `GET /v1/me` once the token arrives. It answers whatever the user's plan:
 | `POST /v1/vaults/{vault}/databases/{id}/rows/{row}/body/append` | Adds Markdown to the end of a row's body. {% include since.html v="0.26.0" %} |
 | `GET /v1/vaults/{vault}/databases/{id}/rows/{row}/comments` | Lists a row's comment threads. See [Comments](#comments). {% include since.html v="0.26.0" %} |
 | `POST /v1/vaults/{vault}/databases/{id}/rows/{row}/comments` | Starts a comment thread on a row. {% include since.html v="0.26.0" %} |
+| `POST /v1/vaults/{vault}/databases/{id}/subscriptions` | Subscribes a callback URL to the database's changes. See [Change notifications](#webhooks). {% include since.html v="0.27.0" %} |
+| `GET /v1/vaults/{vault}/databases/{id}/subscriptions` | Lists your subscriptions to the database, with each one's status. {% include since.html v="0.27.0" %} |
+| `DELETE /v1/vaults/{vault}/databases/{id}/subscriptions/{subscription}` | Ends a subscription. {% include since.html v="0.27.0" %} |
 
 - **`{vault}`** is a repository's `id`, as `GET /v1/vaults` returns it.
 - **Query parameters for rows:**
@@ -478,6 +481,167 @@ moved because a related row changed isn't reported.
 **`410 cursor_expired`** means the cursor can't be read any more. Its history
 was rewritten (a force-push), or more than 10,000 notes changed since. Start a
 new snapshot.
+
+### Change notifications {#webhooks}
+
+{% include since.html v="0.27.0" %}
+
+Instead of polling the sync feed on a timer, you can ask Mahfouz to tell you
+when a database changes. Mahfouz then sends a signed `POST` to your callback
+URL, and you read the changes with the sync feed as before. A notification
+never carries row contents.
+
+A change counts wherever it comes from: the Mahfouz apps, an AI agent, this
+API, or a plain `git push` to the repository. Mahfouz checks each subscribed
+repository on GitHub every 30 seconds, so a notification usually arrives
+within a minute of the change reaching GitHub. A change made in the desktop
+app reaches GitHub when the app pushes it.
+
+#### Subscribing
+
+```http
+POST /v1/vaults/{vault}/databases/{id}/subscriptions
+Content-Type: application/json
+
+{"callback_url": "https://hooks.example.com/mahfouz"}
+```
+
+The answer is `201`:
+
+```json
+{
+  "id": "sub_Qm9vYmFy…",
+  "vault_id": "123456789",
+  "database_id": "01941f2a-…",
+  "callback_url": "https://hooks.example.com/mahfouz",
+  "status": "active",
+  "disabled_reason": null,
+  "created_at": "2026-11-21T10:00:00.000Z",
+  "pending": false,
+  "last_delivery": null,
+  "secret": "whsec_…"
+}
+```
+
+- **`secret`** signs every notification. It's in this answer only: store it
+  now. To replace it, delete the subscription and create a new one.
+- **Reading is enough.** A grant without edit access can subscribe.
+- **Limits:** 25 subscriptions per grant in one vault. Past that the answer
+  is `422 refused`.
+- **The callback** must be an `https` URL on the default port (443) that
+  names its host. Mahfouz refuses `http`, IP addresses, credentials in the
+  URL, another port, names like `localhost` or `*.internal`, and Mahfouz's own
+  hosts with `400 invalid_argument`. It refuses a host whose DNS records
+  include a private, loopback or link-local address with `422 refused`.
+  Mahfouz checks the addresses again before every delivery, and never
+  follows a redirect.
+- **An unknown database** returns `404 not_found`.
+
+`GET …/subscriptions` lists your grant's subscriptions to the database, in
+the same shape without `secret`. You see only the ones your grant made.
+`DELETE …/subscriptions/{subscription}` ends one and returns `204`.
+
+#### What Mahfouz sends
+
+```http
+POST /mahfouz HTTP/1.1
+Host: hooks.example.com
+Content-Type: application/json
+User-Agent: Mahfouz-Webhooks/1
+webhook-id: msg_2Lq9…
+webhook-timestamp: 1795262400
+webhook-signature: v1,K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols=
+
+{"type":"database.changed","id":"msg_2Lq9…","subscription_id":"sub_Qm9vYmFy…","vault_id":"123456789","database_id":"01941f2a-…","cursor":"eyJmIjoiOWMzZ…"}
+```
+
+- **`type`** is always `database.changed` for now. Ignore types you don't
+  know.
+- **`cursor`** is a sync-feed cursor from just before the change. Reading
+  `GET …/rows?since=<cursor>` returns what changed. Usually you'll read from
+  your own stored cursor instead, which covers everything since your last
+  read. A notification can arrive for a change you've already read, or for a
+  change that touched the database's folder but none of its rows. The feed
+  then returns nothing new, which is fine.
+- **One notification covers several changes.** Changes made while a
+  notification is waiting, or being retried, join it. Its `cursor` stays the
+  oldest one.
+
+Answer with any `2xx` status within 10 seconds. Do the reading after you
+answer, not before.
+
+#### Verifying the signature
+
+Notifications are signed with the [Standard
+Webhooks](https://www.standardwebhooks.com) scheme, so you can use one of
+its libraries with your `secret`. To check one yourself:
+
+1. Take the `webhook-id`, `webhook-timestamp` and `webhook-signature`
+   headers. Refuse the request if one is missing.
+2. Refuse the request if `webhook-timestamp` (Unix seconds) is more than five
+   minutes away from your clock. This stops someone from replaying an old
+   notification.
+3. Your key is the secret after `whsec_`, base64-decoded.
+4. Compute HMAC-SHA256 with that key over `<webhook-id>.<webhook-timestamp>.<body>`.
+   Use the body exactly as received, before any JSON parsing.
+5. Base64-encode the result. `webhook-signature` holds one or more
+   space-separated `v1,<base64>` values. Accept the request if one of them
+   matches, compared in constant time.
+6. Keep the `webhook-id` values you've handled for at least five minutes, and
+   skip a repeat. A retry has the same id.
+
+In Node.js:
+
+```js
+import { createHmac, timingSafeEqual } from "node:crypto";
+
+export function verifyMahfouz(secret, headers, rawBody) {
+  const id = headers["webhook-id"];
+  const ts = headers["webhook-timestamp"];
+  const sigs = headers["webhook-signature"];
+  if (!id || !ts || !sigs) return false;
+  if (Math.abs(Date.now() / 1000 - Number(ts)) > 300) return false; // a replay
+  const key = Buffer.from(secret.slice("whsec_".length), "base64");
+  const expected = createHmac("sha256", key).update(`${id}.${ts}.${rawBody}`).digest();
+  return sigs.split(" ").some((part) => {
+    const [version, value] = part.split(",", 2);
+    if (version !== "v1" || !value) return false;
+    const given = Buffer.from(value, "base64");
+    return given.length === expected.length && timingSafeEqual(given, expected);
+  });
+}
+```
+
+#### Retries and disabled subscriptions
+
+If your callback doesn't answer `2xx` in time, Mahfouz sends the same
+notification again (the same `webhook-id`) after 30 seconds, 2 minutes,
+10 minutes, 30 minutes, then 1, 2, 4 and 8 hours. If the last retry fails
+too, about 16 hours after the first try, the subscription is **disabled**.
+An answer of `410 Gone` disables it at once.
+
+A disabled subscription stays in `GET …/subscriptions` with `"status":
+"disabled"` and `disabled_reason`:
+
+- **`failing`:** every retry failed. `last_delivery` shows the last attempt's
+  time, HTTP status and error.
+- **`callback_gone`:** your callback answered `410`.
+
+Mahfouz sends nothing to a disabled subscription. To start again, delete it,
+create a new one, and read the sync feed from your stored cursor to catch up
+on what you missed.
+
+`pending: true` means a notification is waiting to be sent or retried.
+
+#### When notifications stop
+
+- **The grant ends.** Revoking the app in Mahfouz's Settings, **Disconnect
+  all agents**, signing out everywhere, the grant expiring, or removing the
+  repository from the grant deletes its subscriptions. No notification is
+  sent after that, including one that was waiting.
+- **The plan pauses the vault.** On the Free plan, or for a repository past
+  the plan's limit, nothing is sent and waiting notifications are dropped.
+  Read the sync feed when the vault is back.
 
 ## Plans and limits {#plans}
 
