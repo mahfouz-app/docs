@@ -1,4 +1,13 @@
 
+## 0.28.0 (2026-11-23) {#v0.28.0}
+
+### Features
+
+* Import: map people an import names after its review
+* Api: signed change webhooks for a database a client subscribes to
+* Telemetry: fill datadog-apps.json from the Terraform outputs
+
+
 ## 0.27.0 (2026-11-21) {#v0.27.0}
 
 ### Features
