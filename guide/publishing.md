@@ -380,6 +380,12 @@ later gives it the same address, unlisted.
 vault or device, with its link and when it was last updated. **Unpublish**
 there works the same way.
 
+**Unpublish all…** {% include since.html v="0.29.0" %}, above the list when
+you have two or more pages, takes every one of them down after one
+confirmation, which says how many pages go and which custom domains stop
+serving. If some can't be unpublished, the rest still are; the ones left
+stay in the list, named above it, with **Retry**.
+
 When you delete a published note, Mahfouz asks whether to unpublish its page
 too. **Cancel** keeps the page online.
 
