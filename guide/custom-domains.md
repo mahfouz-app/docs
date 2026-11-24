@@ -35,8 +35,8 @@ yet.
 
 ## Connect a domain
 
-You need a plan that includes custom domains (Pro or Max: see [Plan
-limits](#plan-limits) {% include since.html v="0.23.0" %}), the note's page published with **This note and child
+You need a domain left on your plan (every plan includes at least one
+{% include since.html v="0.29.0" %}: see [Plan limits](#plan-limits)), the note's page published with **This note and child
 notes**, push access to the vault's GitHub repository, and access to your
 domain's DNS settings.
 
@@ -181,8 +181,8 @@ repositories you can push to, with **Open note** and **Manage…** (or
 
 ## Limits
 
-- Your account can have as many domains as your plan includes (Free none,
-  Pro 1, Max 5: see [Plan limits](#plan-limits)) {% include since.html v="0.23.0" %}, and a repository up to 3.
+- Your account can have as many domains as your plan includes (Free 1,
+  Pro 3, Max 10: see [Plan limits](#plan-limits)) {% include since.html v="0.29.0" %}, and a repository up to 3.
 - Your GitHub account has to be at least 7 days old to connect a domain.
 - Up to 2 of your domains can be waiting for DNS at a time.
 - One note can have one domain, and a domain serves one site.
@@ -192,13 +192,10 @@ repositories you can push to, with **Open note** and **Manage…** (or
 
 ## Plan limits {% include since.html v="0.23.0" %} {#plan-limits}
 
-How many domains you can connect depends on your [plan](/guide/plan/): none
-on Free, 1 on Pro and 5 on Max. A domain counts toward the plan of whoever
+How many domains you can connect depends on your [plan](/guide/plan/): 1 on
+Free, 3 on Pro and 10 on Max {% include since.html v="0.29.0" %}. A domain counts toward the plan of whoever
 connected it.
 
-- **On Free**, **Add domain…** in Settings → Custom domains is disabled,
-  with **Custom domains come with Pro and Max.** and **Upgrade**, which
-  opens Settings → Plan.
 - **At your limit**, **Add domain…** is disabled, and Settings says how many
   you use, such as "You're using 1 of 1 custom domains. Remove one or upgrade
   to add another." Connecting one from the Custom domain dialog is refused,
