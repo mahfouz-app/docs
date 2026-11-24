@@ -66,8 +66,7 @@ On a paid plan, **Upgrade to Max** (or **Switch to yearly** on your own
 plan) asks first in a dialog that shows:
 
 - what you pay now: the difference for the rest of the period you already
-  paid for, such as "You'll pay $11.73 now for the rest of this month, then
-  $20 a month from Dec 3.";
+  paid for, and the new plan's price from your next renewal date;
 - the card Stripe charges.
 
 Click **Upgrade to Max** to pay it. Your plan changes as soon as the

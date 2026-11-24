@@ -2472,9 +2472,38 @@ h1 {
   }
 }
 
-/* Pricing (/pricing/): rendered from _data/plans.yml. The Monthly/Yearly
-   switch is two radios at the top of <main>, before the sections they
-   switch, so it works with no script. */
+/* Pricing (/pricing/): the plans, prices and comparison come from Stripe
+   when the page loads (pricing.js, from api.mahfouz.app/billing/plans); until
+   then, and without script, .pricing-fallback shows instead. The
+   Monthly/Yearly switch is two radios at the top of <main>, before the
+   sections they switch, so it needs no script of its own. */
+.pricing [hidden] {
+  display: none !important;
+}
+
+.pricing-fallback {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--tile);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.pricing-fallback p {
+  margin: 0 0 20px;
+}
+
+.pricing-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.pricing-lower:has(> .pricing-compare[hidden]) {
+  grid-template-columns: minmax(0, 1fr);
+}
 .pricing-period-input {
   position: absolute;
   width: 1px;
