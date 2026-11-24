@@ -15,7 +15,7 @@ Mahfouz is open are free, and so is one custom domain. The paid plans add:
 | | Free | Pro | Max |
 |---|---|---|---|
 | Agents while Mahfouz is closed ([on GitHub](/guide/online-agents/)) | — | 2 repositories | 10 repositories |
-| [Agent hours a month](#agent-hours) {% include since.html v="0.25.0" %} | — | 300 | 1,500 |
+| [Agent hours a month](#agent-hours) {% include since.html v="0.25.0" %} | — | 300 | 800 {% include since.html v="0.29.0" %} |
 | [Custom domains](/guide/custom-domains/) {% include since.html v="0.29.0" %} | 1 | 3 | 10 |
 | "Published with Mahfouz" on [published pages](/guide/publishing/#the-pages-footer) | Shown | Hidden | Hidden |
 | Support | Community | Email | Priority |
@@ -148,8 +148,13 @@ On Free, published pages show "Published with Mahfouz" again.
 
 Agents on GitHub work in a server Mahfouz runs for your repository. Each
 hour that server runs for your agents counts toward your plan's **agent
-hours** for the month: 300 on Pro, 1,500 on Max. Apps connected through the
-[REST API](/guide/api/#plans) use the same server and the same hours.
+hours** for the month: 300 on Pro, 800 on Max {% include since.html v="0.29.0" %}.
+Apps connected through the [REST API](/guide/api/#plans) use the same
+server and the same hours.
+
+{% include since.html v="0.29.0" %} The hours are Small hours: an hour on
+a Medium server uses 4 of them and an hour on Large 6. Each repository's
+server has a [size](/guide/online-agents/#size), Small for most vaults.
 
 {% include since.html v="0.26.0" %} The server keeps running at least 10
 minutes after the last call. A call a minute or more after the previous one
@@ -159,7 +164,8 @@ repository, they split the hours.
 
 The month is a calendar month in UTC: the hours start over at midnight UTC
 on the 1st. **Settings → Plan** shows **Agent hours this month** with how
-many you've used.
+many you've used, and {% include since.html v="0.29.0" %} under it each
+repository's hours and the sizes they ran at.
 
 When you've used them all:
 

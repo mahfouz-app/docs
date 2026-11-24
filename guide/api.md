@@ -661,7 +661,9 @@ so it follows the plan of the user who connects your app:
   Past the limit, the repositories added most recently pause
   (`repository_paused`). See [Plan limits](/guide/online-agents/#plan-limits).
 - **Hours:** the server's running time counts toward the user's
-  [agent hours](/guide/plan/#agent-hours): 300 a month on Pro, 1,500 on Max.
+  [agent hours](/guide/plan/#agent-hours): 300 a month on Pro, 800 on Max
+  {% include since.html v="0.29.0" %}, counted at the Small
+  [size](/guide/online-agents/#size).
   Once they're used, calls that reach a repository answer
   `hours_cap_reached` until the month ends; `GET /v1/me` and
   `GET /v1/vaults` still answer.
@@ -675,8 +677,9 @@ minutes to the time left, up to 30 minutes ahead. Calls closer together than
 a minute add nothing, so a burst of calls keeps the server 10 minutes past
 the last one. All of that time counts as agent hours.
 
-So how often your app syncs decides the hours it uses. For one repository,
-syncing in one burst each time, in a 30-day month:
+So how often your app syncs decides the hours it uses. For one repository
+on Small, syncing in one burst each time, in a 30-day month (on Medium,
+multiply by 4):
 
 | A sync every | Agent hours a month |
 |---|---|
@@ -686,8 +689,9 @@ syncing in one burst each time, in a 30-day month:
 | 60 minutes | About 120 |
 
 On Pro, poll a repository no more often than every 30 minutes. Polling every
-5 minutes uses Pro's 300 hours in about 12 days. Max's 1,500 hours cover
-two repositories polled every 5 minutes. Make each sync's calls in one burst
+5 minutes uses Pro's 300 hours in about 12 days. Max's 800 hours
+{% include since.html v="0.29.0" %} cover one Small repository polled every
+5 minutes. Make each sync's calls in one burst
 rather than spreading them out: calls within a minute of each other share
 the server's running time, while calls a few minutes apart keep it running
 longer.
