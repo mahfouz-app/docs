@@ -1,10 +1,8 @@
 ---
-# Rendered from _data/plans.yml, which bin/stripe-setup --docs writes from the
-# app's catalog (bin/lib/stripe-catalog.ts). Change prices and features there.
+# Plans and prices come from Stripe, live: pricing.js reads the app's public
+# GET https://api.mahfouz.app/billing/plans when the page loads. Nothing here
+# holds a price; without script, or when that fails, the fallback below shows.
 ---
-{%- assign plans = site.data.plans.plans -%}
-{%- assign saving = "" -%}
-{%- for p in plans -%}{%- if saving == "" and p.prices.yearly.label -%}{%- assign saving = p.prices.yearly.label -%}{%- endif -%}{%- endfor -%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -74,76 +72,35 @@
           Mahfouz is free to use. Pay when agents should keep working while
           it's closed, or for your own domain.
         </p>
-        <div class="pricing-period">
+        <div class="pricing-period" hidden>
           <label for="pricing-monthly" class="pricing-period-monthly">Monthly</label>
-          <label for="pricing-yearly" class="pricing-period-yearly">Yearly{% if saving != "" %} <span class="pricing-saving">{{ saving }}</span>{% endif %}</label>
+          <label for="pricing-yearly" class="pricing-period-yearly">Yearly <span class="pricing-saving" hidden></span></label>
         </div>
       </section>
 
       <section class="shell pricing-plans-section" aria-labelledby="pricing-plans-title">
         <h2 id="pricing-plans-title" class="sr-only">Plans</h2>
-        <ul class="pricing-plans">
-          {%- for p in plans %}
-          {%- assign m = p.prices.monthly -%}
-          {%- assign y = p.prices.yearly -%}
-          {%- capture m_big %}${{ m.amount }}{% endcapture -%}
-          {%- capture y_big %}${{ y.amount }}{% endcapture %}
-          <li class="pricing-plan">
-            <div class="pricing-plan-head">
-              <h3>{{ p.name }}</h3>
-            </div>
-            <p class="pricing-price pricing-price-monthly">{{ m_big }} <span>{{ m.display | remove_first: m_big | strip }}</span></p>
-            <p class="pricing-price pricing-price-yearly">{{ y_big }} <span>{{ y.display | remove_first: y_big | strip }}</span></p>
-            <ul class="pricing-features">
-              {%- for f in p.features %}{% if f.included %}
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>{{ f.text }}</li>
-              {%- endif %}{% endfor %}
-            </ul>
-            <div class="pricing-plan-foot">
-              {%- if p.tier == "free" %}
-              <a class="button button-secondary pricing-button-small" href="/download/">Download Mahfouz</a>
-              {%- else %}
-              <a class="{% if p.tier == 'pro' %}registry-install{% else %}button button-secondary pricing-button-small{% endif %}" href="/guide/plan/#upgrade">Get {{ p.name }}</a>
-              {%- endif %}
-            </div>
-          </li>
-          {%- endfor %}
-        </ul>
+        <ul class="pricing-plans" hidden></ul>
+        <div class="pricing-fallback">
+          <p>See current plans and prices in Mahfouz, under <strong>Settings → Plan</strong>.</p>
+          <div class="pricing-fallback-actions">
+            <a class="button button-primary" href="https://web.mahfouz.app/">Open Mahfouz on the web</a>
+            <a class="button button-secondary" href="/download/">Download Mahfouz</a>
+          </div>
+        </div>
         <p class="pricing-note">
           Upgrade from <strong>Settings → Plan</strong> in Mahfouz, on the web
-          or in the desktop app. Prices are in US dollars, before tax.
+          or in the desktop app. Prices are before tax.
         </p>
       </section>
 
       <section class="shell pricing-lower">
-        <div class="pricing-compare" aria-labelledby="pricing-compare-title">
+        <div class="pricing-compare" aria-labelledby="pricing-compare-title" hidden>
           <h2 id="pricing-compare-title">Compare plans.</h2>
           <div class="compare-table-wrap">
             <table class="compare-table pricing-table">
-              <thead>
-                <tr>
-                  <th scope="col"><span class="sr-only">Feature</span></th>
-                  {%- for name in site.data.plans.compare.plans %}
-                  <th scope="col">{{ name }}</th>
-                  {%- endfor %}
-                </tr>
-              </thead>
-              <tbody>
-                {%- for row in site.data.plans.compare.rows %}
-                <tr>
-                  <th scope="row">{{ row.feature }}</th>
-                  {%- for c in row.cells %}
-                  {%- if c == true %}
-                  <td><svg class="pricing-yes" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg><span class="sr-only">Included</span></td>
-                  {%- elsif c == false %}
-                  <td><span class="pricing-no" aria-hidden="true">—</span><span class="sr-only">Not included</span></td>
-                  {%- else %}
-                  <td>{{ c }}</td>
-                  {%- endif %}
-                  {%- endfor %}
-                </tr>
-                {%- endfor %}
-              </tbody>
+              <thead></thead>
+              <tbody></tbody>
             </table>
           </div>
         </div>
@@ -176,6 +133,7 @@
         </div>
       </section>
     </main>
+    <script src="/pricing.js" defer></script>
 
     <footer class="site-footer shell">
       <div class="footer-top">
