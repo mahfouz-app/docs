@@ -99,7 +99,8 @@ Nothing is deleted when a repository pauses: its access levels and working
 copy stay, and upgrading resumes it where it left off.
 
 Each plan also includes a number of [agent hours](/guide/plan/#agent-hours)
-a month: 300 on Pro and 1,500 on Max. {% include since.html v="0.25.0" %}
+a month: 300 on Pro and 800 on Max {% include since.html v="0.29.0" %},
+counted at the Small [size](#size). {% include since.html v="0.25.0" %}
 Once they're used, agents on GitHub can't work on your repositories until
 the 1st of the next month (UTC).
 
@@ -108,6 +109,49 @@ running at least 10 minutes after the agent's last call, and longer while
 the agent keeps calling a minute or more apart, up to 30 minutes ahead.
 That time counts toward the hours, so each agent session uses at least 10
 minutes. [How long the server runs](/guide/api/#keep-alive) has the rule.
+
+### Size {% include since.html v="0.29.0" %} {#size}
+
+The server an agent works in runs at one of three sizes. A bigger size has
+more memory and uses agent hours faster:
+
+| Size | Memory | Each hour uses |
+|---|---|---|
+| Small | 1 GiB | 1 agent hour |
+| Medium | 4 GiB | 4 agent hours |
+| Large | 6 GiB | 6 agent hours |
+
+**Size** next to each repository in Settings → AI → External agents picks
+it. It's in Mahfouz on the web only; the desktop app's Settings → Plan
+says where to find it. Under it, Settings shows the size's memory, how fast it uses
+hours, about how many of your hours are left this month at that size, and
+who chose it.
+
+- **Automatic**: until someone picks a size, a vault gets Small, or Medium
+  when it's larger than Small handles well (more than 5,000 notes or
+  100 MB). A new repository runs on Medium until its server has read the
+  vault once. If Small runs out of memory, Mahfouz raises the repository to
+  Medium for 7 days and says **Raised to Medium automatically: Small ran
+  out of memory**.
+- **Who can change it**: anyone with Edit on the repository, on Pro or Max.
+  With Read, the size shows but can't be changed. It isn't offered on a
+  [paused](#plan-limits) repository.
+- **One size per repository**: every agent on the repository uses it,
+  yours and your collaborators'. When you pick Medium or Large, Mahfouz
+  asks first, because **you pay the extra hours for every agent here**:
+  each account using the server pays its share of the time at the Small
+  rate, and the rest goes to your hours. On an automatic size, everyone
+  using the server pays at its full rate. If you lose access to the
+  repository, your choice ends and the size is automatic again.
+- **When it applies**: at the server's next start. A size can change once
+  every 10 minutes, since each change restarts the server; Settings says
+  when you can change it again. Within a minute of your own change you can
+  undo it once.
+- **If Small runs out of memory** on a size someone picked, Settings says
+  **Small ran out of memory on this repository. Medium is recommended.**
+
+Settings → Plan lists each repository's hours this month under **Agent
+hours this month**, with the sizes they ran at.
 
 ## Set up your client {% include since.html v="0.22.0" %} {#set-up-your-client}
 
