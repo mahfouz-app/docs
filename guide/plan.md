@@ -10,13 +10,13 @@ permalink: /guide/plan/
 
 Your Mahfouz account is on one of three plans: **Free**, **Pro** or
 **Max**. Notes, tasks, people, databases, publishing and agents while
-Mahfouz is open are free. The paid plans add:
+Mahfouz is open are free, and so is one custom domain. The paid plans add:
 
 | | Free | Pro | Max |
 |---|---|---|---|
 | Agents while Mahfouz is closed ([on GitHub](/guide/online-agents/)) | — | 2 repositories | 10 repositories |
 | [Agent hours a month](#agent-hours) {% include since.html v="0.25.0" %} | — | 300 | 1,500 |
-| [Custom domains](/guide/custom-domains/) | — | 1 | 5 |
+| [Custom domains](/guide/custom-domains/) {% include since.html v="0.29.0" %} | 1 | 3 | 10 |
 | "Published with Mahfouz" on [published pages](/guide/publishing/#the-pages-footer) | Shown | Hidden | Hidden |
 | Support | Community | Email | Priority |
 
