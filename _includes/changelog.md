@@ -1,4 +1,12 @@
 
+## 0.29.1 (2026-11-25) {#v0.29.1}
+
+### Features
+
+* Infrastructure: drop the One-time PIN import
+* Admin: fill the Cloudflare Access vars
+
+
 ## 0.29.0 (2026-11-25) {#v0.29.0}
 
 ### Features
