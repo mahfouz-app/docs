@@ -1,4 +1,17 @@
 
+## 0.30.0 (2026-11-25) {#v0.30.0}
+
+### Features
+
+* Desktop: Open Markdown File… (⌘O) and a vault chooser tile
+* Docs for separate releases and web deploys
+
+### Bug fixes
+
+* Admin: give the admin panel a favicon
+* Admin: size every icon, not just those in buttons and pills
+
+
 ## 0.29.1 (2026-11-25) {#v0.29.1}
 
 ### Features
