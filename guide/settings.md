@@ -52,7 +52,7 @@ date picker, which doesn't follow this setting.
 
 **Default Markdown app** (Settings → General, desktop app on macOS) makes
 Mahfouz the app that opens `.md` and `.markdown` files: see [Open Markdown
-files from Finder](/guide/vaults/#open-markdown-files-from-finder).
+files](/guide/vaults/#open-markdown-files).
 {% include since.html v="0.14.0" %}
 
 **New note prefix** is set per vault, in **Settings → Vaults →** your vault

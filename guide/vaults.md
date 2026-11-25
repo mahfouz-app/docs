@@ -61,6 +61,9 @@ groups:
   - **Folder**: a folder of notes you already have, or an empty one.
   - **GitHub repository**: clone a repository you already keep notes in (see
     [Opening a GitHub repository](/guide/web-github/#opening-a-github-repository)).
+  - **Markdown file** {% include since.html v="0.30.0" %}: open one `.md`
+    file without a vault (see [Open Markdown files](#open-markdown-files)).
+    Desktop app only.
 
 What you see depends on where you run Mahfouz:
 
@@ -206,11 +209,18 @@ app), and **Back up to GitHub…** to keep a private copy there (when the vault
 isn't on GitHub yet). The card isn't part of the note. Close it with **×**
 and it doesn't come back on this computer.
 
-## Open Markdown files from Finder
+## Open Markdown files
 
 {% include since.html v="0.14.0" %} The desktop app opens `.md` and
 `.markdown` files. Double-click one in Finder or File Explorer, or choose
-**Open With → Mahfouz**, and Mahfouz opens it:
+**Open With → Mahfouz**, and Mahfouz opens it.
+
+{% include since.html v="0.30.0" %} You can also open them from inside
+Mahfouz: choose **File → Open Markdown File…**, press <kbd>Mod</kbd><kbd>O</kbd>, or
+pick **Open Markdown file…** in the command palette. With no vault open, the
+**Markdown file** tile in [Choosing a vault](#choosing-a-vault) does the same.
+The dialog lists only `.md` and `.markdown` files, and you can pick several at
+once. Each one opens the same way as from Finder:
 
 - **A note in one of your vaults** opens as that note.
 - **A file in a vault that isn't a note yet** opens with *This file is in
