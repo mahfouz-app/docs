@@ -1,4 +1,33 @@
 
+## 0.29.0 (2026-11-25) {#v0.29.0}
+
+### Features
+
+* Step 3/3 (pricing): the admin panel's Plans page edits Stripe's plans
+* Stripe is the source of plans and prices
+* The Size control and agent hours per repository
+* Operations: Cloudflare Access and DNS for the admin hosts
+* VaultDO container sizes and weighted agent hours
+* Server stats, memory and archive cap
+* Container sizes and their weights
+* Admin: read-only pages: Overview, Accounts, Account, Audit log, Plans slot
+* Published pages: Unpublish all, and centered confirm dialogs
+* Billing: Free includes one custom domain; Pro 3, Max 10
+* Sites: remove the custom-domain binding gates
+
+### Improvements
+
+* Admin: name the Access vars CLOUDFLARE_ACCESS_*
+* riprap: release builds macOS only
+* Admin: grant and backfill routes, the panel's pages and actions
+
+### Bug fixes
+
+* Infrastructure: adopt the existing One-time PIN login method
+* Desktop: name the webview process "Mahfouz Web Content" on macOS
+* Editor: keep the caret out of hidden Preview text (media cards, tables, Notes)
+
+
 ## 0.28.0 (2026-11-23) {#v0.28.0}
 
 ### Features
