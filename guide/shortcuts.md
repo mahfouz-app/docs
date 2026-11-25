@@ -136,7 +136,8 @@ Every app action above is also in the desktop menu bar, next to its
 shortcut:
 
 - **File**: new notes (sibling, child, parent level), **New Folder**,
-  **New Database**, Add Vault {% include since.html v="0.22.0" %}, Save, Import
+  **New Database**, Open Markdown File… {% include since.html v="0.30.0" %},
+  Add Vault {% include since.html v="0.22.0" %}, Save, Import
   {% include since.html v="0.16.0" %}, Export, Share (macOS only), Close
   Tab.
 - **Edit**: the usual editing commands, Find and Replace, Find Selection,
@@ -196,6 +197,7 @@ elsewhere; <kbd>Alt</kbd> is ⌥ on a Mac.
 | Previous tab | <kbd>Mod</kbd><kbd>&#91;</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>&#91;</kbd> |
 | Next tab | <kbd>Mod</kbd><kbd>&#93;</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>&#93;</kbd> |
 | Settings | <kbd>Mod</kbd><kbd>,</kbd> | <kbd>Mod</kbd><kbd>;</kbd> |
+| Open a Markdown file {% include since.html v="0.30.0" %} | <kbd>Mod</kbd><kbd>O</kbd> | (desktop only) |
 | Add Vault {% include since.html v="0.22.0" %} | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>O</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>O</kbd> |
 | Switch between Source and Preview | <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd> | <kbd>Mod</kbd><kbd>Alt</kbd><kbd>P</kbd> (Firefox keeps <kbd>Mod</kbd><kbd>Shift</kbd><kbd>P</kbd>) {% include since.html v="0.20.0" %} |
 | Move focus past the last region | <kbd>F6</kbd> goes back to the editor | <kbd>F6</kbd> goes on to the browser's address bar {% include since.html v="0.20.0" %} |
