@@ -12,7 +12,8 @@ Mahfouz sends error reports, how long common tasks take, and counts of
 the features you use, so bugs and slow spots can be found and fixed. It's
 **on by default** and never includes your notes. Turn it off in
 **Settings → General → Help improve Mahfouz**; its **What's sent** link
-lists what it sends and never sends.
+lists what it sends and never sends. A few install and update notices are
+[sent even when it's off](#always-sent).
 
 The switch is stored on this computer only, not in the vault, so a
 collaborator can't turn it on or off for you. It covers the desktop app
@@ -57,6 +58,28 @@ isn't on the list is dropped before it's sent.
 - Your GitHub account, email address or tokens
 - Your computer's name, user name or serial number {% include since.html v="0.31.0" %}
 - Screen recordings: Mahfouz never records the screen
+
+## Sent even when it's off {% include since.html v="0.31.0" %} {#always-sent}
+
+Whatever the switch says, the desktop app and the web app send Mahfouz's
+server three short notices, so it can count installs and which versions
+are in use:
+
+- **Installed.** Once, the first time Mahfouz runs on this computer or in
+  this browser.
+- **Updated.** Once, the first time a new version runs.
+- **In use today.** At most once a day while you use Mahfouz.
+
+Each notice carries only Mahfouz's version and whether it's the desktop
+app or the web app. There's no id, so notices from one computer can't be
+told apart, and the server keeps only how many arrived each day. Like any
+request, Cloudflare sees your IP address with each one (see
+[Mahfouz's servers](#servers)); it isn't stored with the counts. To tell
+an install from an update, the app keeps the last version that ran on
+this computer or in this browser.
+
+A web "install" is a browser's first visit, so a new browser, a private
+window or cleared site data counts as a new one.
 
 ## Where it goes {#where-it-goes}
 
