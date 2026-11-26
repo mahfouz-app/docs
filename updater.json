@@ -1,11 +1,11 @@
 {
-  "version": "0.30.0",
+  "version": "0.31.0",
   "notes": "https://mahfouz.app/changelog/",
-  "pub_date": "2026-11-25T00:00:00Z",
+  "pub_date": "2026-11-26T00:00:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUMVd4Q3F1azNXc3Q4QUQyYVFUR1FudUoyMHl4RGdFZGVnc2MzS3pzT2VxMG5Ucm0zVlhqK2FaRUdwMEF1YUdrTGRDSktqV3g3L0d2RGtRaEJjR3BzeXVJZHJjWjg0ZkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjQ2NjEyCWZpbGU6TWFoZm91ei5hcHAudGFyLmd6ClhxNzdmb1dhdmFFM0EweS9vcVBBSHBBRVZ1OGdCZFJybUh0UG5ySVM4bnAwTFRkb045MmExNUZ1Zk5KMk0xeFFjZWl6YU14RkRNclQ5ci9DbEYwU0JnPT0K",
-      "url": "https://github.com/mahfouz-app/homebrew-tap/releases/download/mahfouz-v0.30.0/Mahfouz_0.30.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUMVd4Q3F1azNXc2gwd1dXNGV3c2h4K0ZmOTZLZ0hJZ2FIMHFaQzlnNTAyNXg5b2haVldDcXVuUERZSnBsTG9BMGw3UlRBVnZxK3dmanZxeGplNDhSNm9VNnk3TFNHaHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzE1MzUxCWZpbGU6TWFoZm91ei5hcHAudGFyLmd6Cm56ditOcWFNYjhFeENXeTZFbzRSdjNuUTd5aVJLY3ZBMERpdThCcE56TS9nVGpzNUdWVVJHaUptZVQyWEtzaEYycmFVNGQ3eDhWcndMNzllWXdUOUN3PT0K",
+      "url": "https://github.com/mahfouz-app/homebrew-tap/releases/download/mahfouz-v0.31.0/Mahfouz_0.31.0_aarch64.app.tar.gz"
     }
   }
 }
