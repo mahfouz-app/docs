@@ -5,7 +5,7 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 21 October 2026*
+*Effective 26 November 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
