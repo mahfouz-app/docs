@@ -5,7 +5,7 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 21 October 2026*
+*Effective 26 November 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
@@ -91,8 +91,8 @@ code: anything not on it is dropped first.
 
 It goes to Datadog, in the United States, and is kept for at most 30 days.
 It's on by default. Turn it off in **Settings → General → Help improve
-Mahfouz**: nothing more is sent from that computer or browser, and its
-random id is deleted. A crash that happened while it was on is still
+Mahfouz**: nothing more of the above is sent from that computer or browser,
+and its random id is deleted. A crash that happened while it was on is still
 reported the next time you open the app. See [Help improve
 Mahfouz](/guide/telemetry/).
 
@@ -151,6 +151,12 @@ once you use the feature:
   Mahfouz's server and published pages, including the IP address, the address
   requested and the time. We use these logs only to run the service and
   stop abuse, and they're kept for at most a few days.
+- **Install counts.** Whether or not Help improve Mahfouz is on, the apps
+  tell the server when they're installed or updated and, at most once a
+  day, that they're in use, with only their version, whether they're the
+  desktop or the web app and the day they were last counted. The server keeps only how many arrived each
+  day, with no id, IP address or account. See [Sent even when it's
+  off](/guide/telemetry/#always-sent).
 - **Server errors and timings.** The server sends its own errors and how
   long each request takes to Datadog, kept for at most 30 days. These
   record the kind of request, such as "a published page", never its
