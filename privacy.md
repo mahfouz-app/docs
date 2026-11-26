@@ -153,8 +153,8 @@ once you use the feature:
   stop abuse, and they're kept for at most a few days.
 - **Install counts.** Whether or not Help improve Mahfouz is on, the apps
   tell the server when they're installed or updated and, at most once a
-  day, that they're in use, with only their version and whether they're
-  the desktop or the web app. The server keeps only how many arrived each
+  day, that they're in use, with only their version, whether they're the
+  desktop or the web app and the day they were last counted. The server keeps only how many arrived each
   day, with no id, IP address or account. See [Sent even when it's
   off](/guide/telemetry/#always-sent).
 - **Server errors and timings.** The server sends its own errors and how

@@ -70,11 +70,13 @@ are in use:
 - **Updated.** Once, the first time a new version runs.
 - **In use today.** At most once a day while you use Mahfouz.
 
-Each notice carries only Mahfouz's version and whether it's the desktop
-app or the web app. There's no id, so notices from one computer can't be
-told apart, and the server keeps only how many arrived each day. Like any
-request, Cloudflare sees your IP address with each one (see
-[Mahfouz's servers](#servers)); it isn't stored with the counts. To tell
+Each notice carries only the kind of notice, Mahfouz's version, whether
+it's the desktop app or the web app, and, for the daily one, the day it
+was last counted, so a week or a month counts you once. There's no id,
+and the server keeps only how many arrived each day. Like any request,
+Cloudflare sees your IP address and your browser's or the app's name with
+each one (see [Mahfouz's servers](#servers)); neither is stored with the
+counts. To tell
 an install from an update, the app keeps the last version that ran on
 this computer or in this browser.
 
