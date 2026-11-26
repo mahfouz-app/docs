@@ -1,150 +1,110 @@
 
+## 0.31.0 (2026-11-26) {#v0.31.0}
+
+Minor fixes and improvements.
+
+
 ## 0.30.0 (2026-11-25) {#v0.30.0}
 
 ### Features
 
-* Desktop: Open Markdown File… (⌘O) and a vault chooser tile
-* Docs for separate releases and web deploys
-
-### Bug fixes
-
-* Admin: give the admin panel a favicon
-* Admin: size every icon, not just those in buttons and pills
+* Desktop: Open Markdown File… (⌘O) opens any Markdown file on your computer, also from a tile in the vault chooser
 
 
 ## 0.29.1 (2026-11-25) {#v0.29.1}
 
-### Features
-
-* Infrastructure: drop the One-time PIN import
-* Admin: fill the Cloudflare Access vars
+Maintenance and reliability improvements.
 
 
 ## 0.29.0 (2026-11-25) {#v0.29.0}
 
 ### Features
 
-* Step 3/3 (pricing): the admin panel's Plans page edits Stripe's plans
-* Stripe is the source of plans and prices
-* The Size control and agent hours per repository
-* Operations: Cloudflare Access and DNS for the admin hosts
-* VaultDO container sizes and weighted agent hours
-* Server stats, memory and archive cap
-* Container sizes and their weights
-* Admin: read-only pages: Overview, Accounts, Account, Audit log, Plans slot
-* Published pages: Unpublish all, and centered confirm dialogs
-* Billing: Free includes one custom domain; Pro 3, Max 10
-* Sites: remove the custom-domain binding gates
-
-### Improvements
-
-* Admin: name the Access vars CLOUDFLARE_ACCESS_*
-* riprap: release builds macOS only
-* Admin: grant and backfill routes, the panel's pages and actions
+* External agents: choose how much computing power agents get on each repository, and see the hours they used per repository
+* Published pages: Unpublish all at once, and confirmation dialogs open centered
+* Custom domains are available on every plan: Free includes one, Pro 3 and Max 10
 
 ### Bug fixes
 
-* Infrastructure: adopt the existing One-time PIN login method
-* Desktop: name the webview process "Mahfouz Web Content" on macOS
-* Editor: keep the caret out of hidden Preview text (media cards, tables, Notes)
+* macOS: the app's web content process is named “Mahfouz Web Content”
+* Editor: the cursor no longer lands in text Preview hides (media cards, tables, Notes)
 
 
 ## 0.28.0 (2026-11-23) {#v0.28.0}
 
 ### Features
 
-* Import: map people an import names after its review
-* Api: signed change webhooks for a database a client subscribes to
-* Telemetry: fill datadog-apps.json from the Terraform outputs
+* Import: map the people an import names after you've reviewed it
+* API: integrations can subscribe to a database's changes and get notified
 
 
 ## 0.27.0 (2026-11-21) {#v0.27.0}
 
 ### Features
 
-* Import: resume a stopped streaming import
-* Databases: Tree view nests rows by a self-relation (parentBy)
+* Import: resume an import that stopped
+* Databases: a Tree view nests rows under their parent row
 
 ### Bug fixes
 
-* Tasks: a mention in a new task's title stays a mention
-* Tasks: draw and follow links in task titles
-* Import: a text cell's link to a page not written yet waits for it
+* Tasks: an @mention in a new task's title stays a mention
+* Tasks: links in task titles are shown and open on click
+* Import: a text cell's link to a page not imported yet waits for that page
 
 
 ## 0.26.0 (2026-11-17) {#v0.26.0}
 
 ### Features
 
-* Oauth: an API grant lives while its client keeps refreshing
-* Oauth: consent shows the redirect host beside the client's name
-* Vault: keep a container 10 minutes past a call, 5 more for spaced calls, up to 30
-* Api: If-Match on PATCH, a version on listed rows, and a push that never rebases over a checked row
-* Api: read and write a row's body, and comment on a row
-* Desktop: install updates in place from the banner
-
-### Improvements
-
-* Api: rows never return created_by or updated_by
-* Release: Step 2/3 — sign, mirror and announce the desktop updater bundle
+* Connected apps stay connected for as long as they're in use
+* Connecting an app: the consent screen shows where the app sends you back, beside its name
+* API: a row update can require the version you read, so it never overwrites a newer change
+* API: read and write a database row's body, and comment on a row
+* Desktop: install updates in place from the update banner
 
 ### Bug fixes
 
-* Vault: queue concurrent calls to one vault instead of failing
-* Share: lay out the link switch row like the other switch rows
+* Agents: several requests to one vault at once wait their turn instead of failing
+* Sharing: the link switch lines up with the other switches
 
 
 ## 0.25.1 (2026-11-12) {#v0.25.1}
 
-### Bug fixes
-
-* CI: read the deploy smoke test's connect-src by its sources
+Maintenance and reliability improvements.
 
 
 ## 0.25.0 (2026-11-12) {#v0.25.0}
 
 ### Features
 
-* Telemetry: DATADOG_API_KEY, and the Datadog site from BWS
-* Account: self-serve account deletion
-* Billing: cap agents on GitHub at the plan's container hours a month
-* Operations: Datadog monitors for the billing events
-* Dns: publish Google Workspace's DKIM key for mahfouz.app
-* UI components: quick add and option rename on useInlineEdit, account pill on StatusLabel, counts on .count-muted
-* Commits: fold side commits into the next auto-save
-* MCP: send page ancestors for Edit-only grants
-* Commits: commit when editing stops, not every 30 seconds
-* People: vCard N: maps to first_name and last_name
-* History: day headings, editing sessions, line counts and "Not pushed" in History
-* Settings: say Settings, not Preferences, where the app points at it
+* Account: delete your account yourself
+* Plans: agents working on your GitHub repositories run within your plan's monthly hours
+* History: small side changes (dictionary words, the rail, renames) go into the next auto-save instead of commits of their own
+* History: changes are committed when you stop editing, not every 30 seconds
+* People: a vCard's name parts import as first and last name
+* History: day headings, editing sessions, line counts and “Not pushed” marks
+* The app says Settings, not Preferences, wherever it points you there
 * New vault on GitHub: choose the repository's owner
-* Add vault modal: centered, with one minimum height across steps
-* Settings: a title row with the × across both panes, and a Search field with a lens
-* Billing: accept promotion codes in Checkout
-* Editor: remove the hint under Vim in the View menu
-
-### Improvements
-
-* Release: build macOS only until further notice
+* Add vault: the dialog opens centered and keeps one height across its steps
+* Settings: a title row with a close button across both panes, and a Search field
+* Plans: enter a promotion code at checkout
+* Editor: no hint under Vim in the View menu
 
 ### Bug fixes
 
-* AI: ask for Keychain access only when an AI key is stored
-* Editor: keep room for the block grip and + at any zoom
-* Editor: size heading numbers like their headings
+* AI: the Keychain is asked for access only when an AI key is stored
+* Editor: room for the block grip and + at any zoom
+* Editor: heading numbers are sized like their headings
 * Notes: a renamed note keeps its created date after a resync
-* Desktop: no history error on a branch with no commits yet
-* History: follow a note through renames
-* History: group today's auto-saves into Edited rows again
-* Editor: show the text in editors with no header or footer
+* History: no error on a branch with no commits yet
+* History: follows a note through renames
+* History: today's auto-saves are grouped into Edited rows again
+* Permalinks: a note opened in a second web tab shows its text instead of an empty page
 
 
 ## 0.24.0 (2026-11-06) {#v0.24.0}
 
-### Improvements
-
-* Release: retry the macOS notarization check when the connection to Apple drops
-* Sites: name the custom-domain secrets `CLOUDFLARE_SAAS_TOKEN` and `CLOUDFLARE_ZONE_ID`
+Maintenance and reliability improvements.
 
 
 ## 0.23.1 (2026-11-06) {#v0.23.1}
@@ -153,107 +113,85 @@ v0.23.0 was never published; this release carries its changes.
 
 ### Improvements
 
-* Billing: turn Managed Payments off, and where Stripe's message is
-* Worker: set the Customer Portal configuration in both environments
-* Release: sign and notarize the macOS app with Developer ID (#1276, #1282)
+* macOS: the app is signed and notarized by Apple (#1276, #1282)
 
 ### Bug fixes
 
-* Plan: banners flush with the plan card, the Stripe note a link
+* Settings → Plan: banners sit flush with the plan card, and the billing note is a link
 
 
 ## 0.23.0 (2026-11-05) {#v0.23.0}
 
 ### Improvements
 
-* Billing: turn Managed Payments off, and where Stripe's message is
-* Worker: set the Customer Portal configuration in both environments
-* Release: sign and notarize the macOS app with Developer ID
+* macOS: the app is signed and notarized by Apple
 
 ### Bug fixes
 
-* Plan: banners flush with the plan card, the Stripe note a link
+* Settings → Plan: banners sit flush with the plan card, and the billing note is a link
 
 
 ## 0.22.1 (2026-11-04) {#v0.22.1}
 
-### Bug fixes
-
-* Minor fixes
+Maintenance and reliability improvements.
 
 
 ## 0.22.0 (2026-11-04) {#v0.22.0}
 
 ### Features
 
-* Accounts cutover: a dry run for the migration
-* Billing phase 1: Mahfouz accounts (UUIDv7) for all server state
-* Publish: show a collaborator's published page out of date
-* Open a GitHub-read note in a read-only tab
-* Custom-domain sites in git-as-truth, publishing notes and the smoke checklist
-* Publish: a page uploaded elsewhere shows out of date after a sync
+* Publishing: a page uploaded from another device or by a collaborator shows when it's out of date
+* A note read from GitHub opens in a read-only tab
 * Vaults: one Add Vault… item opens the vault chooser
-* Desktop client catalog in External agents
-* Remove the encryption decryptor fallback
-* Publish: one publish level, publish: self | children | never
-* No plugin names in the app (fallbacks, telemetry, migrations out)
-* A database's kind is its database value
+* External agents: a list of desktop AI clients you can connect
+* Publishing: one Keep updated choice per note: this note, this note and its child notes, or never
+* Databases: a database file names its kind (`database: custom`, `people`, `tasks` or `daily`)
 
 ### Improvements
 
-* The accounts cutover revokes the App instead of signing out
-* User Interface: one shared toast for brief status messages
-* Remove the welcome tour's no-vault editor leftovers
+* Brief status messages share one toast
 
 ### Bug fixes
 
-* Server: send page ancestors after an agent's push
-* Editor: place the block grip and + beside the hovered block at any zoom
-* Desktop: refresh a vault's git overrides when a file its config includes changes
-* Desktop: don't reopen a running Mahfouz from the MCP proxy
-* Publish: say when child notes aren't published from this device
-* Editor: a relative link in a share or loose file tab opens nothing
-* Attributes: refuse database: true, naming database: custom
-* Plugins: pin an install's dependencies and a Retry to what the user reviewed
-* Sync: keep a first connect's pending choice in the vault's sync state
-* Plugins: put a plugin's gitPath only on the git of vaults that turn it on
+* Editor: the block grip and + sit beside the hovered block at any zoom
+* Desktop: an AI client connecting no longer reopens Mahfouz when it's already running
+* Publishing: says when child notes aren't published from this device
+* Editor: in a shared note or a file opened from outside a vault, a relative link no longer opens an unrelated note
+* Sync: when you first connect a vault, the choice between GitHub's copy and this computer's stays pending until you make it
 
 
 ## 0.21.0 (2026-10-30) {#v0.21.0}
 
 ### Features
 
-* The built-in registry grants the decryptor role, no plugin named
-* Push: let the desktop app keep the push due list current
-* Read plugin capabilities from the catalog, wizard and copy name no plugin
-* Publish any fence a plugin draws, no language list
-* Editor: Paste as menu with Keep formatting and Plain text
-* Publish: run publishing and Markdown export in the background
-* Fields: keep [text] as written in a custom date format
-* Editor: paste formatted text from any app as Markdown
+* Task reminders: tasks changed on desktop keep reminders on the web up to date
+* Publishing: diagrams drawn by any plugin are published as images
+* Editor: a Paste as menu with Keep formatting and Plain text
+* Publishing and Markdown export run in the background
+* Fields: text in [brackets] stays as written in a custom date format
+* Editor: formatted text pasted from any app becomes Markdown
 
 ### Improvements
 
-* Build on macos-15; GitHub retires macos-14 on Nov 2
-* User Interface: one text field with its submit inside it
-* User Interface: one collapsible header and disclosure chevron
+* Text fields with a submit button show it inside the field
+* Collapsible headers and their chevrons look the same everywhere
 
 ### Bug fixes
 
-* Editor: style lists inside a quote like the rest of the quote
-* Databases: an option rename follows a Board's column order
+* Editor: lists inside a quote are styled like the rest of the quote
+* Databases: renaming an option keeps its place in a Board's column order
 
 
 ## 0.20.0 (2026-10-29) {#v0.20.0}
 
 ### Features
 
-* Comments: links, tags and people in comments follow on click
-* Editor: Vim view mode for the note editor
-* User Interface: one inline-edit rule for Enter, Escape and blur (useInlineEdit)
-* ⌥↑/⌥↓ moves a heading's section or a list item
-* Shortcuts: hide key hints on touch devices
-* Daily: the Daily notes database and Today's note
+* Comments: links, tags and people in comments open on click
+* Editor: a Vim mode for the note editor
+* Editing in place behaves the same everywhere for Enter, Escape and clicking away
+* Editor: ⌥↑/⌥↓ moves a heading's section or a list item
+* Shortcuts: key hints are hidden on touch devices
+* Daily notes: a Daily notes database and Today's note
 
 ### Improvements
 
@@ -261,591 +199,416 @@ v0.23.0 was never published; this release carries its changes.
 
 ### Bug fixes
 
-* Editor: Preview formulas are one object; cut, drag and copy keep markup intact
-* Phone: lift the Search field clear of iPhone's keyboard bar
+* Editor: math formulas in Preview act as one object; cut, drag and copy keep their markup intact
+* Phone: the Search field stays clear of iPhone's keyboard bar
 
 
 ## 0.19.0 (2026-10-28) {#v0.19.0}
 
 ### Features
 
-* Plugins: refuse dialog footers a plugin draws itself
-* Release: group release notes into Features, Improvements and Bug fixes
-* User Interface: the last buttons on Button, and the guard's list gone
-* Database view buttons on Button
-* Plugin dialogs get footer slots, laid out by Dialog
-* Button, one component for every text button, with a guard
-* User Interface: move the hand-drawn state pills onto StatusLabel
-* SettingsRow: one component for every settings row
-* User Interface: every segmented control through SegmentedControl, with a guard
-* An icon on every segment, required
-* Attributes: move visibility out of notes, and the markers with it
-* Attributes: the eye, the row menu, Show column and Settings write visibility settings
-* Attributes: visibility settings in the vault and database blocks
+* Every segmented control shows an icon on each segment
+* Attributes: whether an attribute shows in a note is set for the vault or a database, from the eye, the row menu, Show column and Settings, instead of in each note
 * Rail: Tasks and People open their database in a tab
 
 ### Improvements
 
-* User Interface: search fields over a list move onto PickerPanel
-* User Interface: every clipboard copy goes through copyText
-* User Interface: move the remaining empty states onto .empty-inline and .empty-block
-* User Interface: one Avatar for every person's avatar
-* User Interface: AnchoredPanel for the hand-placed floating panels
 * Phone: bottom bars take iOS 27's frosted glass
 
 ### Bug fixes
 
 * Databases: a filter chip's editor is one line of pills
-* Editor: Tab after a task's title opens its assignee, then date picker
+* Editor: Tab after a task's title opens its assignee, then its date picker
 * Editor: no second scrollbar when hovering a block
-* Server, Worker: headless MCP stuck on "Indexing (0/0)": fetch blobs with no haves
-* Permalinks: one centered dialog when a link opens over the chooser
-* Tasks: Board scrolls clear of the phone bar; resizable Tasks table columns
-* Databases: keep a file cell open while its picker runs
+* Agents on GitHub no longer get stuck on “Indexing (0/0)”
+* Permalinks: one centered dialog when a link opens over the vault chooser
+* Tasks: the Board scrolls clear of the phone bar, and Tasks table columns can be resized
+* Databases: a file cell stays open while its picker runs
 * Databases: a partly applied column rename offers Finish rename
-* Share: an image replaced in place reaches the share
+* Sharing: an image replaced in place reaches the shared note
 * Sidebar: no row count on database rows
 * Editor: media cards get the block grip, a Replace icon and a hairline frame
-* Notifications: drop confirmations for things already on screen
+* Notifications: no confirmations for things already on screen
 * Phone: no breadcrumb row on the note screen
-* Phone: paint the strip under the status bar in the installed app
-* Sidebar: show the vault header's chevron, + and ⋯ on touch screens
-* Merge: Merge tab actions in the phone's bottom bar
+* Phone: the strip under the status bar is painted in the installed app
+* Sidebar: the vault header's chevron, + and ⋯ show on touch screens
+* Phone: Merge tab actions in the bottom bar
 * Phone: bottom bars sit as low as iOS's own tab bars
 * Editor: typing right after a person chip keeps the chip
-* Editor: keep the block grip and + clear of heading numbers
-* Gantt: scrollbars run beside only the part that scrolls
+* Editor: the block grip and + stay clear of heading numbers
+* Gantt: scrollbars run only beside the part that scrolls
 * Menus: a tap opens a submenu instead of picking its first item
-* Desktop: reach the SSH agent the user's shell sets up
-* Sidebar: a phone tap on a note opens it the first time
+* Desktop: git reaches the SSH agent your shell sets up
+* Sidebar: on a phone, tapping a note opens it the first time
 
 
 ## 0.18.0 (2026-10-26) {#v0.18.0}
 
-* fix(web): move Home, Tasks and People keys off the editor's heading keys
-* fix(people): call a People database's title column Name
-* fix(core): don't log a lost-access error as a failed unpushed/dirty refresh
-* test(worker): guard the GitHub Apps' callback URL with a pinned checklist
-* test: wait for the full parse in the personNotes and plugin placeholder tests; weekLabel reads ICU's dash spacing
-* fix(editor): a grip click selects a Mermaid block instead of revealing its source
-* fix(databases): Add icon above the database tab's title
+* Web: the Home, Tasks and People keys no longer clash with the editor's heading keys
+* People: a People database's title column is called Name
+* Editor: clicking a Mermaid block's grip selects the block instead of showing its source
+* Databases: the Add icon sits above the database tab's title
 * Gantt: resize the frozen Name column
-* fix(sidebar): highlight the left sidebar's whole border while resizing
-* fix: reveal a permalink's note in the sidebar
-* fix(web): serve the touch icon at the root paths iOS probes
-* fix(editor): lock a note updated elsewhere until the user refreshes
+* Sidebar: the left sidebar's whole border highlights while resizing
+* Permalinks: opening one reveals its note in the sidebar
+* Web: the home-screen icon shows on iOS
+* Editor: a note updated elsewhere is locked until you refresh it
 * Databases: resize a Table view's columns
-* fix(tabs): closing a tab returns to the tab and line it was opened from
-* fix(databases): show Filter, Sort and Group separately while the view bar fits them
-* Databases: Timeline template (a Gantt that shows bars at once) and Add sample data
-* fix: phone layout text sizes (17px body, 16px fields)
-* fix(people): person chips sit in their line, not below it
-* fix(gantt): week numbers, quarter labels, name-only Name column, scroller fills the pane
-* docs(instructions): file reported work in the issue tracker first
-* fix(databases): keep the View settings button on one line
-* fix(web): hand a published page's Edit link to the tab holding the database
-* feat(databases): View settings changes a Calendar's date and a Gallery's cover
+* Tabs: closing a tab returns to the tab and line it was opened from
+* Databases: Filter, Sort and Group show separately while the view bar has room
+* Databases: a Timeline template (a Gantt that shows bars at once) and Add sample data
+* Phone: larger text (17px body, 16px fields)
+* People: person chips sit in their line, not below it
+* Gantt: week numbers, quarter labels, a name-only Name column, and the chart fills the pane
+* Databases: the View settings button stays on one line
+* Web: a published page's Edit link opens in the tab that already has your vaults open
+* Databases: View settings changes a Calendar's date and a Gallery's cover
 
 
 ## 0.17.0 (2026-10-26) {#v0.17.0}
 
-* Step 5/6: phone Search — one field for notes, commands and contents, at the bottom
-* fix(fields): refuse a date part that would merge; keep Long text lines in slide headers
-* fix(database): ask a database's questions in its note's Light or Dark
-* Move a Board's columns and a card's fields per view, like a table's columns
-* Step 3/6: the phone note page — read first, tap to edit, toolbar above the keyboard
-* feat(mcp): a local client at Publish publishes without the dialog
-* Step 3/4: say "You're offline" instead of leaving the app to sign in
-* Step 1/4: start the installed web app with no network (offline app shell)
+* Phone: one Search field at the bottom for notes, commands and contents
+* Fields: a date part that would run into the next is refused; Long text lines stay in slide headers
+* Databases: a database's questions follow its note's Light or Dark appearance
+* Databases: move a Board's columns and a card's fields per view, like a table's columns
+* Phone: the note page reads first, tap to edit, with the toolbar above the keyboard
+* External agents: a local client allowed to publish publishes without the dialog
+* Says “You're offline” instead of sending you away to sign in
+* Web: the installed web app starts without a network connection
 * Databases: one Filter, sort and group menu, icon steps and an N more menu in the view bar
 * Databases: a column's Rename renames the name its header shows
-* fix(server): answer a call only once the git it started has finished
-* fix(mcp): replay a local client's retried write instead of applying it twice
-* Step 3/3: Task reminders while Mahfouz is closed (Web Push)
-* Step 2/3: Worker Web Push service for task reminders
-* Step 1/3: Device notifications on the web (OS notifications while open)
-* fix(server): forget idle MCP sessions' reads on a long-lived server
-* feat(mcp): filter a local client's tools/list by its levels and report them in list_vaults
-* fix(agent): add_database_row into a People database adds a person
-* fix(web): commit as the signed-in account after an offline launch
-* fix(desktop): keep a vault's own git config from naming programs the app's git runs
-* feat(web): theme-color follows the app's appearance
-* Lock unlocked encrypted notes when the window hides for agents
-* ci: run the web suites in parallel for a desktop-only change
-* Step 2/2: App: shared new-version banner (desktop + web)
-* fix(database): draw option pills bare, with no dropdown frame around them
-* fix(mcp): headless server's own wording, no active vault in list_vaults
-* fix(mcp): page query_database and return the view's columns
-* feat(mcp): per-vault access levels for local clients
-* fix(databases): name new columns after their type, numbered, and size the draft's icons
-* fix(sync): a note whose file became a Git LFS pointer leaves the index and refuses writes
-* fix(database): views scroll again, and no scrollbars on the view switcher
-* ci: move actions/checkout and dorny/paths-filter to Node 24 releases
+* External agents: a write a local client retries is applied once, not twice
+* Web: task reminders while Mahfouz is closed
+* Web: device notifications while the app is open
+* External agents: a local client sees only the tools its access level allows
+* Agent: adding a row to a People database adds a person
+* Web: commits are made as your account after starting offline
+* Web: the browser's toolbar color follows the app's appearance
+* Encrypted notes lock when the window hides while agents stay available
+* A new-version banner on desktop and the web
+* Databases: option pills are drawn bare, with no dropdown frame
+* Agents: database queries come back in pages, with the view's columns
+* External agents: set an access level per vault for local clients
+* Databases: new columns are named after their type and numbered
+* Sync: a note whose file became a Git LFS pointer is left out instead of being overwritten
+* Databases: views scroll again, with no scrollbars on the view switcher
 
 
 ## 0.16.0 (2026-10-25) {#v0.16.0}
 
-* feat(mcp): put the owner's account on production's server path
-* fix(database): name built-in row fields instead of showing their keys
-* feat(people): a person's Tasks as the compact database shell
-* fix(mcp): set_attributes writes a flow list on a multi-select key as a YAML list
-* feat(share): owner sync, the sharing end-to-end test, cleanup (S13)
-* fix(fields): merge the Fields tab's edits onto fields.md as it is now
-* feat(rail): Tasks and People rail panels on a shared RailPanel
-* Databases: Tasks Board on the shared card; reorder a Board's option columns
-* Ignore a vault repository's fsmonitor and hooks when the app runs git
-* feat(databases): Gantt task tree (Gantt 7/7)
-* feat(databases): Gantt dependencies (Gantt 6/7)
-* feat(database): a Note ID column in every database
-* feat(database): page database tables and Board columns
-* feat(database): one shell for the database tab, with New and a row ⋯ column
-* feat(share): owner opens live, settles conflicts with Compare, shares on the chooser (S12c)
-* feat(share): the shared note's editor pieces (S10)
-* docs(instructions): link Mahfouz notes in PRs by permalink, never by path
-* feat(databases): edit Gantt rows from menus and the keyboard (Gantt 4/7)
-* feat(share): the live document over the socket (S5b)
-* feat(databases): Gantt view keys, writers and placement core (Gantt 1/7)
-* feat(permalink): Copy permalink and opening one, on web and desktop
-* docs(instructions): claim kb issues, record plans, cite note IDs in PRs
-* style(rail): match the sidebar's background, line under the titlebar
-* fix(sidebar): larger note slot icons
-* fix(ui): reorder select options and sorts with a mouse drag
-* feat(terraform): redirect l.mahfouz.app permalinks to the web app
-* fix(databases): the Calendar's day dialog takes the note's appearance
-* ci(check-desktop): fall back to apt-get when the apt cache restores nothing
-* docs(instructions): track issues in the kb Issue Tracker, not GitHub Issues
-* Import: File menu item, background reading with a progress notification
-* docs(instructions): the gh stack lock, cross-workspace guards, browser mockups
-* docs: point guide and privacy links at mahfouz.app
-* feat(database): fill the pane and pin the Title column
+* Databases: built-in row fields show their names instead of their keys
+* People: a person's tasks in a compact database
+* Agents: setting a multi-select attribute writes a list
+* Sharing: a shared note's changes sync back to its owner's vault
+* Fields: the Fields tab's edits merge onto the file as it is now
+* Rail: Tasks and People panels
+* Databases: the Tasks Board uses the shared card; reorder a Board's option columns
+* Gantt: a task tree of sub-items
+* Gantt: dependencies between rows
+* Databases: a Note ID column in every database
+* Databases: tables and Board columns are paged
+* Databases: the database tab gets New and a ⋯ menu on each row
+* Sharing: the owner opens a shared note live, settles conflicts with Compare, and sees notes shared with them in the vault chooser
+* Sharing: edit a shared note live with the people you share it with
+* Gantt: edit rows from menus and the keyboard
+* Databases: the Gantt view
+* Permalinks: copy a note's permalink and open one, on the web and desktop
+* Rail: matches the sidebar's background, with a line under the titlebar
+* Sidebar: larger note icons
+* Reorder select options and sorts with a mouse drag
+* Databases: the Calendar's day dialog takes the note's appearance
+* Import: a File menu item, and reading in the background with a progress notification
+* Guide and privacy links point at mahfouz.app
+* Databases: tables fill the pane and pin the Title column
 
 
 ## 0.15.0 (2026-10-23) {#v0.15.0}
 
-* feat(brand): add a transparent bare-mark emblem
-* One person chip: Tasks tab, People relations, authors
-* fix(rail): Tasks toggles like People; Home leaves the Tasks tab
-* feat(editor): + beside the grip opens the slash menu; empty-line hint
-* Tasks: tags as a filter, plus filter redesign review fixes (4/4)
-* fix(ui): cap every dropdown and menu at one shared height
-* chore: refresh riprap payload to 0.14.1
-* feat(desktop): menu bar item opens on click; menu shows version and active agents
-* fix(editor): Enter and Tab accept a # tag suggestion
-* feat(database): drag to reorder columns
-* feat(databases): Board drag carries the card and shows where it lands
-* Save status icon opens the note's Status card
-* Number headings in the toolbar's Heading menu
-* fix(editor): Enter on a bare { picks the highlighted field
+* One person chip in the Tasks tab, People relations and authors
+* Rail: Tasks toggles like People; Home leaves the Tasks tab
+* Editor: a + beside the grip opens the slash menu; a hint on empty lines
+* Tasks: filter by tags
+* Dropdowns and menus share one maximum height
+* Desktop: the menu bar item opens on click, and its menu shows the version and active agents
+* Editor: Enter and Tab accept a # tag suggestion
+* Databases: drag to reorder columns
+* Databases: dragging a Board card carries the card and shows where it lands
+* The save status icon opens the note's Status card
+* Number headings from the toolbar's Heading menu
+* Editor: Enter on a bare { picks the highlighted field
 * Custom rail: pin notes and databases, hide Tasks or People
-* Database self-relations, and Manager ↔ Direct reports in People
+* Databases: relations to the same database, and Manager ↔ Direct reports in People
 
 
 ## 0.14.0 (2026-10-22) {#v0.14.0}
 
-* feat(plugins): host.slides.deck so Present shows child notes and resolves wikilinks
-* fix(ui): give the External agents popover its own chrome and layout
-* feat(publish): anchor links to headings on published pages
-* feat(tags): Merge into… in the tag menus
-* feat(mcp): merge_people tool
-* fix(editor): Enter at a heading's start moves the heading down
-* fix(tables): typing into a new table's header row and first column
-* Heading numbers (heading_numbers: true)
-* Import: choose which pages to import, and a Notion page link
-* Database tab: lay it out like a note
-* feat(share): the shared: marker in note frontmatter
-* feat(databases): add a column right in the header
-* fix(ui): two FolderOpenIcon exports broke develop's typecheck
-* feat(palette): match note contents after titles, with highlights
-* Clone a GitHub repository: one-screen picker, progress and hiding
-* feat(phone): a glass Search pill and a Tasks and People pill
-* feat(desktop): make Mahfouz the default Markdown app from Settings
-* feat(share): remove Share… from the File menu
-* Suggest tags as you type: #, the tags attribute and the Tasks filter
-* fix(people): New row in a People database adds a person
-* fix(editor): no drag grip on blank lines or past the note's end
-* chore(infra): remove the domain swap's one-off Terraform allowances
-* fix(editor): keep the page icon's gap from growing with the note
+* Slides: Present shows child notes and follows wikilinks
+* The External agents popover gets its own layout
+* Publishing: links to headings work on published pages
+* Tags: Merge into… in the tag menus
+* Agents: merge people
+* Editor: Enter at the start of a heading moves the heading down
+* Tables: typing into a new table's header row and first column works
+* Heading numbers for a note
+* Import: choose which pages to import, and import from a Notion page link
+* The database tab is laid out like a note
+* Databases: add a column right in the header
+* Command palette: matches note contents after titles, with highlights
+* Clone a GitHub repository: a one-screen picker with progress, which you can hide
+* Phone: a glass Search pill and a Tasks and People pill
+* Desktop: make Mahfouz the default Markdown app from Settings
+* Share… moves out of the File menu
+* Tags are suggested as you type: #, the tags attribute and the Tasks filter
+* People: New row in a People database adds a person
+* Editor: no drag grip on blank lines or past the note's end
+* Editor: the gap under the page icon no longer grows with the note
 
 
 ## 0.13.0 (2026-10-21) {#v0.13.0}
 
-* feat(editor): Code dropdown (Inline code, Code block), ``` + Enter closes the fence, Preview keeps fences hidden
-* fix(editor): apply macOS text replacements and spelling corrections with the cursor after the space
-* fix(attributes): keep a new row when its type icon is clicked before naming it
-* fix(notifications): keep pop-ups in the note pane and compact
-* fix(editor): Backspace and Delete in Preview never take a hidden delimiter
-* New brand: nuqta ladder mark, Nile accent, Flow loader
-* fix(search): put the Search tab's sort on the field's row
-* fix(editor): scroll the page icon with the title; name the note in the breadcrumbs
-* docs(instructions): guide pages carry since:, badges read Since
-* Sort the Logpush jobs' field_names as Cloudflare returns them
-* Quote the Google SPF's content as Cloudflare stores it
-* Forget the deleted no-mail SPF so the live Google SPF is adopted
-* fix(desktop): menu actions ran twice in dev, so the command palette never opened
-* feat(settings): a laptop icon marks settings kept on this computer only
-* fix(ci): cancel a superseded PR run whole
-* feat(settings): larger plugin icons, chevron in the registry field, heading buttons on the right
-* Quit dialog: show the commit/push a quit waits for, with Quit now
-* fix(sidebar): hide a swapping row's chevron at rest
-* docs: three-host layout in docs, comments and test names (three-host split, 5/5)
-* feat(settings): move Help improve Mahfouz into General
-* feat(desktop): keep the local MCP available with the window closed, and start the app on demand
-* feat(mcp): tools for people
-* fix(ui): center the Settings modal and make it larger
-* fix(ui): restore .visually-hidden for sync labels
-* fix(editor): a way out below a code block that ends the note
-* Remote MCP step 7a: consent, grants and routing for the server path
-* feat(vaults): Next steps card in a new vault's first note (#686)
-* refactor(editor): one triggerBefore helper behind the :, { and ! menus
-* feat(fields): the new note prefix uses fields
-* feat(vaults): open an existing GitHub repository on desktop (#682)
-* fix(vaults): ask before cloning a public GitHub repository as a vault (#683)
-* Remote MCP step 6b1: warm state from container snapshots
-* Server platform follow-ups: unborn HEAD and non-ASCII tests, test helper and git helper tidy
-* feat(tasks): type ! for a due date, drop the // trigger
-* fix(telemetry): no timings for git-crypt vaults, locked or not
-* Settings → Privacy: a crash report saved while on is still sent; list committing
-* Remote MCP step 4: the container's HTTP server and image
-* fix(desktop): seed the vault registry only when its file is missing; check sidecar vault params
-* Telemetry: usage counts and timings from their call sites (#664)
-* fix(tasks): the date picker's time is a text field, so a typed time is written
-* test(worker): insert pagesForNotes' 250 pages in one DO call
-* Telemetry: desktop webview and Rust panic reports
-* test(watch): run the real-FSEvents test on CI's macOS job, not locally
-* test(web-e2e): wait for the boot sync before signing out (#753)
-* Sync: keep a note renamed with an edit (D + A) instead of reporting it removed
-* fix(search): Search tab headers as stops, tag:/person: completion, slim scrollbar, scope as an image
-* Web telemetry: Datadog RUM and errors (#662)
-* Widen the left rail and enlarge its icons
-* fix(find): the bar owns its Alt toggles, fewer exports, room to type at 320px
-* feat(editor): fold regions inside code blocks from the rail
-* feat(worker): log route classes, never paths, and turn Logpush on
-* chore(tags): remove dead tag code left by the Search tab
-* fix(sync): drop the old note's row when a modified path holds another id
-* fix(search): no Find mentions in an encrypted note's palette; a failed search answers its request
-* fix(db): a bulk write while auto-commit is paused leaves disk-only notes out
-* fix(search): keep CriticMarkup markup out of replaces; follow-ups to #695
-* chore(ops): drop the Terraform-managed Datadog dashboard
-* fix(settings): show a vault's sync error in the Vaults list
-* Remote MCP step 2: the server workspace and its Node platform
-* fix(settings): move New note prefix to a vault Notes tab
-* feat(search): replace across notes in the Search tab
-* feat(ops): Datadog resources for telemetry, Workers' logs by Logpush
-* fix(ui): task checkboxes use the app's .checkbox
-* fix(sync): stop treating a missing remote as connected
-* Declare Google Workspace mail on mahfouz.app in Terraform
-* Public site at mahfouz.app, web app at web.mahfouz.app, desktop API at api.mahfouz.app
-* feat(desktop): strict content security policy for the webview (#622 stage 2)
-* feat(ui): new vault on GitHub
-* test(ui): form-control guard reads conditional and spread input types
-* fix(ui): Columns popover announces a move only when it applied
-* feat(settings): Privacy section with the Help improve Mahfouz switch
-* feat(feedback): file Send feedback through the Worker, drop the compiled-in token
-* Desktop: enforce the vault registry in every file command (#622 stage 1, part 2)
-* Unify text fields (3/3)
-* Ship third-party licence texts in the app; keep the docs list current
-* docs(rules): every guide addition carries its since.html version
-* fix(watch): resync on a rescan flag, and check the vault every 60 s
-* feat(engine): move the database-only read side into the engine
-* feat(editor): Heading N hint on an empty heading; Heading 4 to 6 in the menus
-* feat(attributes): a styled type menu, opened from the type icon (#629)
-* fix(a11y): the collapsed right sidebar is inert (#631)
-* fix(ui): a press counts as nested only in the layers it was opened inside
-* test(watch): test the debounce loop with synthetic events, not FSEvents
-* fix(agent): open Settings → AI on the keyless provider; key status hook
-* fix(editor): keep the note's title block fixed in section drag (#586)
-* docs: attach PR mockups with gh --attach
-* fix(sidebar): scope the drag highlight per vault (#602)
-* fix(ui): pill cards — no hidden sidebar queries, encrypted tag count, relation chips (#605, #606, #607)
-* feat(engine): add @mahfouz/engine, its context, and move the first pure modules (headless MCP, step 2)
-* fix(sidebar): drag to own vault root (#567); clamp width to the window (#568)
-* fix(sidebar): keyboard tree rows and ARIA state (#581, #584)
-* fix(a11y): collapsed sidebar is inert; resize handles work from the keyboard
-* fix(ui): right sidebar shows nothing without a note; encrypted tags are plain text
-* fix(sidebar): reveal a new child under a collapsed parent (#564)
-* fix(sidebar): phone sheet is a modal Escape and back close; row actions on touch; pills as cards (#576–#580)
-* fix(attributes): a re-list mid-debounce keeps the typed value
-* fix(sidebar): forget per-vault collapse state of unregistered vaults (#565)
-* fix(sidebar): rev:/ptab: tabs highlight their note's row; db: tab shows the note's emoji
-* fix(sidebar): note and folder menus offer only what works (#559, #560, #561)
-* ci: split check-web into parallel jobs, core's suite in three shards
-* fix(sidebar): view shortcuts reveal a collapsed sidebar; tag filter only in Tags
-* fix(ui): drop the right sidebar's own header and close button
-* feat(search): sidebar search view with snippets, keyboard nav and ⌘⇧F
-* Database: colored pills, one-click checkboxes, arrow keys, editable cards
-* fix(sidebar): guard localStorage reads and writes
-* Sidebar: show plain folders under their owning note (#552, #553)
-* feat(ui): note pill cards
-* feat(sidebar): a Bookmarks section above each vault's notes
-* Command palette: kind filter and search-key hand-off
-* fix(ai): keep Settings key edits from switching the agent
-* feat(people): person summary on the person page
-* fix(sidebar): scope rename and collapse per vault, reveal rename targets
-* fix(sidebar): drag only the pressed note, not its ancestors
-* fix(comments): keep an unlocked encrypted note's threads out of the sidebar
+* Editor: a Code dropdown (Inline code, Code block); ``` and Enter closes the fence; Preview keeps fences hidden
+* Editor: macOS text replacements and spelling corrections leave the cursor after the space
+* Attributes: a new row stays when its type icon is clicked before it's named
+* Notifications: pop-ups stay in the note pane and compact
+* Editor: Backspace and Delete in Preview never remove a hidden delimiter
+* A new look: the nuqta ladder mark, the Nile accent and a new loader
+* Search: the Search tab's sort sits on the field's row
+* Editor: the page icon scrolls with the title; the breadcrumbs name the note
+* Settings: a laptop icon marks settings kept on this computer only
+* Settings: larger plugin icons, a chevron in the registry field, heading buttons on the right
+* Quit: the quit dialog shows the commit or push it waits for, with Quit now
+* Sidebar: a row's chevron stays hidden at rest
+* Settings: Help improve Mahfouz moves into General
+* Desktop: external agents stay available with the window closed, and start the app when needed
+* Agents: tools for people
+* Settings opens centered and larger
+* Sync status labels are read by screen readers again
+* Editor: a way out below a code block that ends the note
+* Vaults: a Next steps card in a new vault's first note
+* Fields: the new note prefix uses fields
+* Vaults: open an existing GitHub repository on desktop
+* Vaults: asks before cloning a public GitHub repository as a vault
+* Tasks: type ! for a due date (the // trigger is gone)
+* Settings → Privacy: turning off diagnostics says a crash report saved while it was on is still sent once
+* Tasks: the date picker's time is a text field, so a typed time is kept
+* Sync: a note renamed and edited outside the app keeps its place instead of showing as removed
+* Search: Search tab headers are keyboard stops, tag: and person: complete, a slimmer scrollbar
+* The left rail is wider, with larger icons
+* Find bar: its own Alt toggles and room to type in narrow windows
+* Editor: fold regions inside code blocks from the rail
+* Sync: replacing a note's file with another note no longer leaves the old note listed
+* Search: Find mentions isn't offered in an encrypted note; a failed search still answers
+* Notes that don't auto-commit stay out of commits made by bulk changes
+* Search: replacing across notes leaves suggestion and comment markup alone
+* Settings: a vault's sync error shows in the Vaults list
+* Settings: New note prefix moves to a vault's Notes tab
+* Search: replace across notes in the Search tab
+* Task checkboxes match the app's other checkboxes
+* Sync: a vault whose remote is missing no longer shows as connected
+* The website is at mahfouz.app and the web app at web.mahfouz.app
+* New vault on GitHub
+* Columns popover: announces a move only when it applied
+* Settings: a Privacy section with the Help improve Mahfouz switch
+* Text fields look the same everywhere
+* Third-party licence texts ship with the app
+* Sync: the vault is checked for outside changes every 60 seconds
+* Editor: a Heading N hint on an empty heading; Heading 4 to 6 in the menus
+* Attributes: a styled type menu, opened from the type icon
+* Accessibility: collapsed sidebars are skipped by the keyboard and screen readers; resize handles work from the keyboard
+* AI: Settings → AI opens on the provider that's missing a key
+* Editor: the note's title stays fixed when dragging sections
+* Sidebar: the drag highlight is scoped to each vault
+* Note cards: encrypted tag counts and relation chips show correctly
+* Sidebar: drag a note to its own vault's root; the sidebar's width fits the window
+* Sidebar: tree rows work from the keyboard and announce their state
+* The right sidebar shows nothing without a note; encrypted notes' tags are plain text
+* Sidebar: a new child note is revealed under a collapsed parent
+* Phone: the sidebar sheet closes with Escape and Back; row actions on touch; pills as cards
+* Attributes: a value you're typing is kept when the list refreshes
+* Sidebar: revision and plugin tabs highlight their note's row; a database tab shows the note's emoji
+* Sidebar: note and folder menus offer only what works
+* Sidebar: view shortcuts reveal a collapsed sidebar; the tag filter shows only in Tags
+* The right sidebar drops its own header and close button
+* Search: a sidebar Search view with snippets, keyboard navigation and ⌘⇧F
+* Databases: colored pills, one-click checkboxes, arrow keys and editable cards
+* Sidebar: plain folders show under their owning note
+* Note cards
+* Sidebar: a Bookmarks section above each vault's notes
+* Command palette: filter by kind
+* AI: editing keys in Settings no longer switches the agent
+* People: a summary on the person page
+* Sidebar: rename and collapse are kept per vault
+* Sidebar: dragging a note moves only that note, not its parents
+* Comments: an unlocked encrypted note's threads stay out of the sidebar
 * People: @ before a word mentions it; Preview draws mentions as pills
-* fix(editor): `!` fields empty after a fast-path boot
-* fix(notes): line the page icon up with the note title
-* feat(database): rename a database from its tab's title
-* feat(export): choose how tags and people are written
-* Comments: edit or delete your own entry in a thread
-* feat(databases): Month and Week on Calendar views
-* fix(editor): keep the cursor past list bullets in Preview
-* feat(share): send the note's title on macOS too
-* style(tables): slimmer pill handles and full-length add bars
-* Share through navigator.share on macOS
-* Show each database column's type and what a cell opens
-* fix(tags): index body tags with the rename's grammar
+* Editor: ! fields work after a fast start
+* Notes: the page icon lines up with the note title
+* Databases: rename a database from its tab's title
+* Export: choose how tags and people are written
+* Comments: edit or delete your own comment in a thread
+* Databases: Month and Week on Calendar views
+* Editor: the cursor stays past list bullets in Preview
+* Send a copy uses the system share sheet on macOS, with the note's title
+* Tables: slimmer handles and full-length add bars
+* Databases: each column shows its type and what a cell opens
+* Tags: tags in a note's text are found the same way Rename tag finds them
 * Pin and reorder tabs
-* test: flush publish debounces instead of sleeping; split sync.test.ts; pin Node 24
-* ci: run core, web and worker tests once when check-web runs
-* Deck prose block at the top: mark page 1, and say why Remove rule isn't offered before a yaml block
-* Row and column menus on the table grips
-* Show comment threads in a margin beside the note
-* Redesign the comment popover as a shared CommentThread
-* feat(ui): compact Banner density for the account menu
-* fix(tasks): Board card tags on their own line, out of the title button
-* Change a person's handle everywhere it's referenced
-* Redesign the Find and Replace panel
-* Floating note outline; page previews become optional
-* fix(ui): drop the duplicate EyeIcon that broke the develop build
-* feat: icon-only buttons in the note's bottom bar
+* Slides: a prose block at the top of a deck marks page 1, and the app says why Remove rule isn't offered before a yaml block
+* Tables: row and column menus on the grips
+* Comments: threads show in a margin beside the note
+* Comments: a redesigned comment popover
+* Tasks: Board card tags sit on their own line
+* People: change a person's handle everywhere it's used
+* A redesigned Find and Replace panel
+* A floating note outline; page previews become optional
+* Icon-only buttons in the note's bottom bar
 * Notification actions on one compact row, with icons
 * Export notes to Word (.docx)
-* Rename a tag everywhere from its context menu
-* Encrypted notes: refuse macOS Services and Look Up while plaintext shows
-* Per-note Light / Dark / Auto appearance in the bottom bar
-* fix: turn off macOS text substitutions that drop the typed space
-* feat: word count at the far left of the note bottom bar
-* fix(tauri): embed the Windows app manifest in test binaries
-* Account menu: status table, shared app items, announced keys, headless focus
-* feat: zoom level opens into a slider in the bottom bar
-* fix(tasks): Tasks tab scroll memory and task database test gaps
-* Plugins: host.commands.refresh re-evaluates `when` for the OS menu
-* refactor: share the main-thread webview helper
-* Fix Sub/Superscript keys, keyboard toolbar presses, slash menu drift
-* Drop a running plugin update from the update notice
-* refactor: read a note's file through noteFromFile in readRefreshed
-* refactor(ui): RelationPicker and AccountButton dismiss through useDismiss
-* Read a link's destination, never a URL in its label (#474)
+* Tags: rename a tag everywhere from its menu
+* Encrypted notes: macOS Services and Look Up are off while an unlocked note shows
+* A Light, Dark or Auto appearance per note, in the bottom bar
+* macOS text substitutions no longer drop the typed space
+* A word count at the far left of the note's bottom bar
+* Account menu: a status table, shared app items and announced keys
+* The zoom level opens into a slider in the bottom bar
+* Tasks: the Tasks tab remembers its scroll position
+* Editor: subscript and superscript keys, keyboard toolbar presses and the slash menu's position fixed
+* Plugins: an update that's running leaves the update notice
+* Links: a link opens its destination, never a URL written in its label
 
 
 ## 0.12.0 (2026-10-16) {#v0.12.0}
 
 * Share a note through the system share sheet
-* ci: give check-web 35 minutes
-* Editor: native Format submenu in the macOS context menu
-* fix: keep a source file an outside edit changed during a cross-vault move
-* fix(publish): a retry after PublishRecordError updates the first page
-* Editor toolbar: one model, regrouped like Google Docs
-* Tasks: show tasks as a database (Table, Board, Calendar) in the Tasks tab and on person pages
-* fix: refuse a cross-vault transfer whose source file was moved outside the app
-* fix(publish): keep URLs in a link's label; link www. and email autolinks
-* Plugins: host.vault.unlock, so a plugin's unlock command takes the button's steps
-* Embed menu: say why it's empty in an encrypted note
+* Editor: a native Format submenu in the macOS context menu
+* Moving notes between vaults keeps a source file changed outside the app during the move
+* Publishing: retrying after a failed publish updates the first page
+* Editor toolbar: regrouped like Google Docs
+* Tasks: tasks as a database (Table, Board, Calendar) in the Tasks tab and on person pages
+* Moving notes between vaults is refused when a source file was moved outside the app
+* Publishing: URLs in a link's label are kept; www. and email addresses become links
+* Embed menu: says why it's empty in an encrypted note
 * Person page mentions: the mention's line, the paragraph on demand, the note as a pill
-* feat(ui): the avatar opens an account menu with Settings, the guide and feedback
-* fix(shortcuts): leave the key alone for actions the platform doesn't have
-* Encrypted notes: no webview context menu over an unlocked note
-* test: check every invoked command is registered in generate_handler!
-* refactor(ui): one focus-out check and one Tab rule for ContextMenu and Dropdown
-* fix(notifications): stop rows taking the progress bar's and buttons' styles
-* fix(naming): naming and settings follow-ups from #389's review
-* fix(quicklook): color-mix() fallbacks for macOS 12, and #384's optional simplifications
-* Tasks: open the Tasks view as a tab in the main pane
-* fix(publish): unpublish leaves the row's page up when another note's file names it
-* fix(agent): agent chat follow-ups from #415's review
-* fix(cross-vault): refuse a move while a note's body waits in the source
-* fix(publish): publish a note as its file holds it
-* test(core): settle React updates inside act(), ending the act() warnings
-* fix(cross-vault): refuse copying an encrypted note to another vault
-* test(core): count operations instead of timing diff and palette scaling
-* fix(tauri): compile the lib tests on Windows
-* fix(publish): scan wikilinks in linear time
-* fix(plugins): the OS menu lists only the note commands whose `when` applies
+* The avatar opens an account menu with Settings, the guide and feedback
+* Shortcuts: keys are left alone for actions the platform doesn't have
+* Encrypted notes: no context menu over an unlocked note
+* Notifications: rows no longer take the progress bar's and buttons' styles
+* Quick Look: previews work on macOS 12
+* Tasks: the Tasks view opens as a tab in the main pane
+* Publishing: unpublishing leaves a page up when another note still names it
+* Moving notes between vaults waits while a note's changes are still being saved
+* Publishing: a note is published as its file holds it
+* Encrypted notes can't be copied to another vault
+* Publishing: notes with many links publish faster
+* Plugins: the menu bar lists only the note commands that apply
 * Calendars start the week on your first day of the week
-* Cross-vault transfer writes the source files, not the index rows
-* fix(encrypted-notes): drop a late editor body for a locked encrypted note
-* fix(plugins): vault commands, #377's remaining review MINORs
-* feat(agent): fold tool calls and thinking into one line in the chat
-* test(worker): make the MCP registration rate-limit test window-proof
-* test(desktop): fix flaky check-desktop: ETXTBSY on fake git-crypt filters
-* fix(save): body writes start from the note's file frontmatter (#372, 2/2)
-* fix(save): a stale save settling mid-write no longer skips onSaved
-* Tint the line a jump lands on; open backlinks at the link's line
-* fix(editor): keep a person note's page under its text
-* fix(tasks): join a snoozed rollup with only the tasks still due
-* fix(save): every frontmatter writer starts from the note's file (#372, 1/2)
-* fix(encrypted-notes): a networked plugin's command doesn't run from its key or the palette
-* fix(quicklook): stale navigations, stuck renders, deadline after load, UTF-16/CP1252
-* fix(naming): fail closed on unreadable naming; hand off Trash title-read slots
-* feat(plugins): vault-scoped commands, listed in the palette with no note open
-* feat(encryption): vault host APIs: move to a private repo, rewrite history, note and commit naming
-* feat(encryption): plugin host APIs for re-encryption, settings pages and locked-vault unlock
-* feat(encrypted-notes): plugin host APIs and a core decrypt entry point
-* feat(encrypted-notes): unlock in the main editor through a plugin codec, with the plaintext kept in
-* test(desktop): turn off commit and tag signing for every git a test spawns
-* docs(instructions): lessons from the embed follow-up and layouts
-* Slides: hint and Remove rule for a prose block at the top of a deck
-* feat(tasks): snooze and reschedule from a due reminder
+* Agent: tool calls and thinking fold into one line in the chat
+* Saving: every write starts from the note's file, so an outside edit to its attributes is kept
+* The line a jump lands on is tinted; backlinks open at the link's line
+* Editor: a person note's page stays under its text
+* Tasks: a snoozed reminder joins only the tasks still due
+* Quick Look: fixes for stale and stuck previews and older text encodings
+* Plugins: vault commands, listed in the palette with no note open
+* Encrypted notes: unlock and edit them in the main editor through a plugin
+* Slides: a hint and Remove rule for a block at the top of a deck
+* Tasks: snooze and reschedule from a due reminder
 * Databases: Board, Gallery and Calendar layouts in embeds
-* feat(plugins): accept a plugin's terms before installing, enabling or updating it
-* Finder Quick Look preview for Markdown notes (macOS)
-* fix(slides): usage counts read defaults.layout as Slidev's server does
-* fix(slides): a float that underflows to zero hides no slide
-* fix(merge): #369's Gate 3 fixes, which missed the merge
-* Share one YAML-aligned reader for slide layout:/class: lines
-* fix(merge): writers check the file; kept edits survive quit and reload
-* fix(slides): read a slide's leading yaml code block as its frontmatter
-* fix(slides): say hidden slides aren't counted in the layout sections copy
-* docs(instructions): lessons from the databases Gallery, Calendar and embeds
-* Databases: embed follow-up (gate 3 fixes, privacy)
-* fix(slides): resolve tagged and anchored hide values as yaml does
-* Slides: hint on a slide block at the top of a deck's text
-* fix(slides): leave hidden slides out of template usage counts
-* test(core): one global jsdom Range layout stub
-* feat(encrypted-notes): the encrypted key, a locked view and a fail-closed write boundary
-* feat: handle git-crypt vaults this device can't decrypt
-* test(editor): stub Range rects in tests that await with a view mounted
-* Plugin install links: web install page and mahfouz:// deep link
-* feat(slides): flag lines Present doesn't show under a tight ---
-* fix(merge): nothing written during a stopped git operation
-* fix(sync): leave a pending app commit's writes to it, not "External edits"
+* Plugins: accept a plugin's terms before installing, enabling or updating it
+* A Finder Quick Look preview for Markdown notes (macOS)
+* Slides: template usage counts read a deck's default layout correctly
+* Slides: a hide value that rounds to zero no longer hides a slide
+* Saving: kept edits survive quitting and reloading
+* Slides: a slide's leading yaml code block is read as its settings
+* Slides: the layout sections say hidden slides aren't counted
+* Slides: hidden slides are left out of template usage counts
+* Encrypted notes: a locked view for encrypted notes
+* Vaults encrypted with git-crypt that this device can't decrypt open locked
+* Plugin install links: an install page on the web and a mahfouz:// link on desktop
+* Slides: flags lines Present doesn't show under a tight ---
+* Nothing is written while a git operation is stopped
+* Sync: the app's own pending changes aren't committed as External edits
 * Databases: embed a database view in any note
-* fix(slides): a blank line after --- opens no slide frontmatter
-* History: group auto-saves into Edited rows
-* fix(editor): clear a word's underline when it's added to the vault dictionary
-* test(web): e2e for the slides preview's sandbox and meta CSP
-* fix(commit): credit in-app edits to Auto-save and name the changed notes
-* fix(disk-only): announce in-vault moves of disk-only notes
-* fix: commit vault dictionary edits under their own message
-* fix(sync): a file and a folder with the same name stop the merge instead of replacing each other
-* fix(git): apply content filters to resolved merges and blob reads
-* fix(db): tell listeners about writes to disk-only notes
-* fix: refresh an inactive vault's dictionary on its sync
-* feat(slides): template usage counts in Settings (Phase 4C)
-* chore: map the owner's other addresses in .mailmap
-* chore(riprap): refresh the payload to 0.13.0
+* Slides: a blank line after --- opens no slide settings
+* History: auto-saves are grouped into Edited rows
+* Editor: a word's underline clears when it's added to the vault dictionary
+* Commits: in-app edits are saved as Auto-save, naming the changed notes
+* Vault dictionary changes get their own commit
+* Sync: a file and a folder with the same name stop the merge instead of replacing each other
+* Spelling: an inactive vault's dictionary refreshes when it syncs
+* Slides: template usage counts in Settings
 * Spelling check: native underlines and a vault dictionary
-* chore: map the leaked Smoke Test identity to its real author
-* fix(desktop): drop an inherited GIT_DIR from every git the app and its tests run
-* feat(slides): Render with Slidev in the template preview (Phase 4B)
+* Slides: Render with Slidev in the template preview
 * Databases: the Calendar view
-* fix(core): never settle a note into a database block twice
-* fix(test): keep test git helpers off the repository an inherited GIT_DIR names
-* feat(core): choose each conflicting part in the Merge tab
-* ci: give check-desktop 25 minutes
-* feat(slides): approximate template preview in Settings (Phase 4A)
-* AGENTS.md is the one copy of agent guidance; CLAUDE.md imports it
+* Merge tab: choose each conflicting part
+* Slides: a template preview in Settings
 * Databases: the Gallery view
-* Configurable port for the web e2e server (MAHFOUZ_E2E_PORT)
 * Person page: contact fields inline, a Board that fits, one-line mentions
-* Spelling check spike: native underlines in the macOS webview
-* Slides templates: layout completion, Apply layout, slide 1 layout menu and hints (Phase 2b, part B)
-* Agents keep the docs repo's kitchen sink current
-* Fix duplicate toolbar, click offset and list selection; add code block card
-* Slides templates: SVG decorations per section (Phase 3)
-* test: fix flaky palette linear-growth timing test
-* test(web-e2e): wait out the boot commit, then require Mod+S's Manual save
+* Slides templates: layout completion, Apply layout, a slide 1 layout menu and hints
+* Editor: fixes a doubled toolbar, click offsets and list selection; adds a code block card
+* Slides templates: SVG decorations per section
 * People: import from macOS Contacts
-* feat(core): Merge tab bulk picks, picks that survive tab switches, and a merge-waiting banner
-* feat(tags): frontmatter tags: lists are tags
-* test(web-e2e): don't require Mod+S to be the commit that pushes the edit
-* Rollup columns
-* feat(tags): clickable tags and a search-style Tags view in the rail
-* feat(ui): Commit notes dialog (Commit notes 2/2)
-* fix(core): binary Merge tab rows hash by blob and read deletes as deletes
-* feat(core): the Merge tab — pick per file, with the differences shown
-* fix(toolbar): heading menu follows the cursor line
-* Tasks rail icon: due dot
-* Sidebar: hover + on notes, ⋮ on folders
-* fix(sidebar): show a parent note's chevron on hover
-* Breadcrumbs: home icon, note emoji, children popover
-* Add Find Selection (Mod+Alt+F): jump to the next occurrence
+* Merge tab: bulk picks, picks that survive tab switches, and a merge-waiting banner
+* Tags: a frontmatter tags: list counts as tags
+* Databases: rollup columns
+* Tags: clickable tags and a search-style Tags view in the rail
+* A Commit notes dialog
+* Merge tab: binary files and deletions show correctly
+* The Merge tab: pick per file, with the differences shown
+* Toolbar: the heading menu follows the cursor's line
+* Tasks rail icon: a due dot
+* Sidebar: + on notes and ⋮ on folders when hovered
+* Sidebar: a parent note's chevron shows on hover
+* Breadcrumbs: a home icon, the note's emoji, and a children popover
+* Find Selection (Mod+Alt+F): jump to the next occurrence
 * Note bottom bar: save status, Publish and view controls move under the note
-* feat(core): filter the Tasks view by the tasks' own #tags
-* Slides templates: authoring form with layout sections and palette (Phase 2b, part A)
-* fix(sidebar): renaming a file name no longer re-adds the new-note prefix
-* feat(ui): move notifications to the left rail as a sidebar view
-* fix(tasks): assignee chip opens a styled picker; time field writes in WebKit
-* feat(core): a pull merges notes changed on both sides when the edits don't overlap
-* Relation editing
-* fix(core): pull merges under the rebuild mutex, with the network outside it
-* feat: Mod+K command palette (notes, commands, settings)
-* Slides templates: format v2 with per-layout sections, palette and a core stylesheet (Phase 2a)
-* One Banner for notices; fix the external-change banner in dark mode
-* test(core): drop the serial timing project; fix three load flakes
-* fix(ui): pass vault ids to DB calls that run after an await
-* Move five more menus onto Dropdown
-* Slides templates: five built-in looks and a gallery (Phase 0)
-* Attribute links in Backlinks
-* feat(publish): Essay page theme and a QR code for published pages
-* Add Serif to the per-note font picker
-* test: bound timing tests on CPU time, not wall time
+* Tasks: filter the Tasks view by the tasks' own #tags
+* Slides templates: an editing form with layout sections and a palette
+* Sidebar: renaming a file no longer adds the new-note prefix again
+* Notifications move to the left rail as a sidebar view
+* Tasks: the assignee chip opens a styled picker; the time field saves in Safari's engine
+* Sync: a pull merges notes changed on both sides when the edits don't overlap
+* Databases: edit relations
+* A Mod+K command palette for notes, commands and settings
+* Slides templates: per-layout sections and a color palette
+* One style for notices; the external-change banner is fixed in dark mode
+* Slides templates: five built-in looks and a gallery
+* Backlinks include links in attributes
+* Publishing: an Essay page theme and a QR code for published pages
+* Serif in the per-note font picker
 * Editor saves never overwrite a change they haven't seen
-* docs(dev): notes on running and diagnosing core timing tests
-* test: cap local vitest workers at 4
-* fix(web): don't hold the vault's git lock across push and fetch transfers
-* test(agent): sample the linear-time diff check until it shows linear growth
-* Restore the Font picker in Settings → General
-* Shared icons, IconButton, .icon-btn sizes and caption classes
-* ci: a failing large push fails develop's run
-* ci: pin actions/checkout to v5.1.0 in the token-holding jobs
-* Slides templates: forward-compat release (Phase 1)
-* Clean pastes from Word/Outlook, add Paste as Plain Text
-* test(core): run wall-clock tests after the suite, one file at a time
-* fix(ci): call influpert/bws by its major, not a commit
-* test(web): markdownIn rereads a file the app is writing
-* fix(sync): a vault's first pull and push wait for its first index
-* fix: keep the completion menu's scrollbar off its shortcuts
-* Fix overlapping Key/Type inputs in vault Attributes settings
-* Vault and note sync indicators
-* docs(riprap): registry plugins and untrusted vault content
-* test(web): one FakeDocument and recordingLocks, from the web test harness
-* Read and keep frontmatter lists
-* Pull options to settle a merge: resolved text, keep theirs, expected refs
-* feat(ops): per-environment Terraform, applied by the web deploys
-* feat(shell): phone layout below 700px
-* refactor(mcp): remove duplication in the MCP executor, transports and settings
-* fix(shell): collapse the left sidebar below 700px until the user chooses
-* fix(web): keep the E2E build's built-in plugin registry off github.com
-* refactor(sidebar): drive the note drag with startPointerDrag
-* test: keep the remote E2E run away from GitHub
-* feat(import): Import dialog and plugin network layer (Notion import)
-* feat(import): core import writer and plan format
-* Refuse commits and pulls while a git merge or rebase is stopped
-* fix(web): count unpushed commits after a running commit lands
-* feat(web): turn on registry plugins in the web app (web plugins 5/5)
-* fix(editor): tighten the gap under a note's page icon
-* style(callouts): rounded borderless cards
-* feat(databases): the Board (Kanban) view (phase 2, PR 3)
-* fix(editor): style completion menus as a popover
-* feat(mcp): remote MCP server on the Worker and the web tab relay (3/3)
-* fix(db): make Convert table's link resolve to the new database
-* fix(db): gate commits and sync walks against half-done moves
-* feat(databases): group a database table by a Select attribute (phase 2, PR 1)
-* feat(notes): emoji page icons
-* Sync: push on every pass, merge different-file changes, push on quit
-* fix(db): hold folders and new notes against moves
+* The Font picker is back in Settings → General
+* Pastes from Word and Outlook are cleaned up; Paste as Plain Text
+* The completion menu's scrollbar stays off its shortcuts
+* Vault settings → Attributes: the Key and Type fields no longer overlap
+* Sync indicators for vaults and notes
+* Attributes: frontmatter lists are read and kept as written
+* Phone layout below 700px
+* The left sidebar collapses below 700px until you choose otherwise
+* Import: an Import dialog, starting with Notion
+* Commits and pulls are refused while a git merge or rebase is stopped
+* Web: the unpushed count is right after a commit lands
+* Web: plugins in the web app
+* Editor: a tighter gap under a note's page icon
+* Callouts are rounded, borderless cards
+* Databases: the Board view
+* Editor: completion menus are styled as popovers
+* AI agents can work on your vaults through the web app
+* Databases: Convert table's link opens the new database
+* Databases: group a table by a Select attribute
+* Notes: emoji page icons
+* Sync: pushes on every pass, merges changes to different files, and pushes on quit
 * Publish child notes with their parent
-* fix(mind-map): open zoomed out; grabbing cursor on right-drag
-* fix(editor): table widget write-back keeps every cell
-* docs(changelog): rewrite the 0.11.0 entry for readers
-* Use two shared empty-state styles
-* fix(db): hold a directory note's whole subtree while it moves
-* Ask the remaining confirmations in the app, re-checking after the answer (E2)
-* Publish: send the note's style with a publish
-* ci(release): announce a version only after its Workers are deployed
-* feat(shortcuts): one keycap per key in the keyboard shortcuts dialog
-* test(web): make readVault tolerate entries git removes mid-walk
-* docs(instructions): store riprap:prune's base branch and protected list
-* docs(instructions): editor completion lessons from the slash menu
-* Published pages: light Preview look, note styles, callouts
-* fix(frontmatter): escape line breaks in quoted attribute values
-* feat(editor): slash command menu
-* fix(editor): keep the link URL field open across an app or tab switch
-* feat(comments): restyle the comment popover as the link popover, with icon buttons
-* fix: typing lost or frozen during auto-commit
+* Mind map: opens zoomed out; a grabbing cursor on right-drag
+* Editor: editing a table keeps every cell
+* Confirmations are asked in the app's own dialogs
+* Publishing: a note's style is sent with it
+* Shortcuts: one keycap per key in the keyboard shortcuts dialog
+* Published pages: the light Preview look, note styles and callouts
+* Attributes: line breaks in quoted values are kept
+* Editor: a slash command menu
+* Editor: the link URL field stays open when you switch apps or tabs
+* Comments: the comment popover looks like the link popover, with icon buttons
+* Typing is no longer lost or frozen during an auto-commit
 
 
 ## 0.11.0 (2026-10-09) {#v0.11.0}
@@ -882,302 +645,213 @@ v0.23.0 was never published; this release carries its changes.
 * In Preview, an image, video or audio card replaces its Markdown line instead of sitting under it. Collapsing media is removed.
 * Switching between vaults no longer lets one vault's background work read from another.
 
-### Internal
-
-* Fixed two publish tests broken by the track-changes merge
-* Terraform adopts the existing staging bucket for published pages
-* Contributor docs point at the user guide pages
-
 
 ## 0.10.0 (2026-10-08) {#v0.10.0}
 
-* Serve the web app at mahfouz.app; the site moves to docs.mahfouz.app
-* docs(changelog): list 0.9.0 by PR title
-* ci(release): read BWS from the production environment
-* fix(release): one changelog line per PR, titled from the PR
+* The web app is at mahfouz.app; the website moves to docs.mahfouz.app
 
 
 ## 0.9.0 (2026-10-08) {#v0.9.0}
 
-* ci(web): a release deploys the web app with the desktop builds
-* test(worker): give the receive-pack linear-time test 30 s
-* chore(web): drop PR previews; staging is enough
-* feat(web): launch the web app in production (M3)
-* feat(web): GitHub sign-in, the vault picker and the avatar on the web (M2d)
-* feat(web): browser-storage GitHub vaults: clone, pull, reset and chunked push (M2c)
-* M2b: git proxy and GitHub API allowlist
-* M2a: web sessions and GitHub sign-in in the Worker
-* M1g: PR previews, asset-worker kill switch, cross-browser checklist
-* M1f: the web shell — Mahfouz boots on the web for local folders
-* M1e: web platform I/O (dialogs, drops, watcher, vault assets)
-* M1d: web index database (sqlite-wasm in a Worker)
-* M1c: web git engine (isomorphic-git over folder handles)
-* M1b: browser filesystem (HandleFs, web VaultFs, folder handles)
-* M1a: web app Worker, deploy CI and custom domains
-* fix(ops): point www at mahfouz-app.github.io so GitHub serves its certificate
-* feat(ops): Terraform applies in CI behind an approval; look the zone up
-* fix(ui): lower dark-mode scrollbar contrast
-* fix(ui): darken scrollbars in dark mode
-* fix(settings): reload settings when the active vault changes
-* fix(sync): treat a diff rename as delete-old plus add-new
-* feat(notifications): click a notification to run its action
-* feat(sidebar): name a new folder inline as part of creating it
-* fix(desktop): hide the webview's Reload/Inspect Element context menu
-* fix(editor): underline markdown link labels like wikilinks
-* feat: drag individual list items in Preview
-* Folder paths in breadcrumb, folder rename/reveal, sidebar menu, per-OS reveal label
-* fix(bin/dev): install workspace dependencies before starting
-* Account avatar and app-wide GitHub auth state (web version, step 4c)
-* Install a managed git when the machine has none
-* fix(plugins): let a plugin ship its own Node.js runtime
-* feat: per-note disk-only mode (auto-save without auto-commit)
-* Sign in to GitHub with the Mahfouz GitHub App (web version, step 4b)
-* Open the user guide on mahfouz.app; remove the docs/site submodule
-* feat: show a "Mahfouz needs Git" screen when git is missing
-* chore(docs): bump docs/site for note pills and Details
-* feat(settings): click a shortcut to rebind it; icon reset button
-* fix(sync): reflect external edits and new external files live
-* feat(ui): note pills for details, backlinks, tags and attributes
-* feat(editor): Tab nests a list item under the one above
-* chore(linux): declare git as a .deb/.rpm dependency
-* feat: notify when a new Mahfouz version is available
-* fix(git): read log paths NUL-delimited so non-ASCII names aren't quoted
-* Put the mahfouz.app zone in Terraform (web version, step 3)
-* fix(editor): start a bullet list on "- ", "* " or "+ " under a text line
-* ci: cache Tauri's apt packages, keyed on the runner image
-* Add golden git fixtures (web version, step 2)
-* Put Tauri behind a platform interface (web version, step 1)
-* Adopt the develop/main branch model in bin/release, CI and docs
-* Split src/app into core and desktop workspaces
-* Bump docs for the license page
-* Publish release notes on mahfouz.app/changelog
-* Make the license proprietary to Influpert LLC
-* Add an About dialog with release date and links
-* Keep list bullets rendered on the cursor line
+* The web app launches
+* Web: GitHub sign-in, the vault picker and your avatar
+* Web: clone GitHub repositories as vaults kept in the browser, with pull, reset and push
+* Web: Mahfouz runs in the browser on local folders
+* Dark mode: softer scrollbars
+* Settings reload when the active vault changes
+* Notifications: click a notification to run its action
+* Sidebar: name a new folder inline as you create it
+* Desktop: the webview's Reload and Inspect Element menu is hidden
+* Editor: Markdown link labels are underlined like wikilinks
+* Drag individual list items in Preview
+* Folder paths in the breadcrumbs, folder rename and reveal, a sidebar menu, and a reveal label for each OS
+* An account avatar shows your GitHub sign-in across the app
+* A managed git is installed when the computer has none
+* Plugins can bring their own Node.js runtime
+* Disk-only notes: save without auto-committing
+* Sign in to GitHub with the Mahfouz GitHub App
+* Help opens the user guide on mahfouz.app
+* A “Mahfouz needs Git” screen when git is missing
+* Settings: click a shortcut to rebind it; an icon reset button
+* Sync: outside edits and new files show up live
+* Note pills for details, backlinks, tags and attributes
+* Editor: Tab nests a list item under the one above
+* Linux: the .deb and .rpm packages require git
+* A notice when a new Mahfouz version is available
+* Git: file names with non-ASCII characters are read correctly
+* Editor: "- ", "* " or "+ " under a line of text starts a bullet list
+* Release notes are published at mahfouz.app/changelog
+* An About dialog with the release date and links
+* List bullets stay drawn on the cursor's line
+
 
 ## 0.8.0 (2026-09-26) {#v0.8.0}
 
-* Stop keychain password prompts on status checks
-* Make the agent chat work like Claude Code
-* Move the website and user guide to mahfouz-app/docs
-* Add a notification center
-* Add Send feedback (files a GitHub issue on mahfouz-app/docs)
-* Keep the agent's system prompt stable across a conversation
-* Keep agent history append-only for preserved thinking
+* No more keychain password prompts on status checks
+* The agent chat works like Claude Code
+* A notification center
+* Send feedback, which files an issue for the Mahfouz team
 * Headers and footers on slides templates; Commands become Fields
-* Add a left rail and rework the titlebar
-* Add slides templates for Present and PDF export
-* Add Open to the export toast
+* A left rail and a reworked titlebar
+* Slides templates for Present and PDF export
+* Open in the export toast
 * Plugin icons, logos and toolbar items
-* Keep the changelog at the repo root
 
 
 ## 0.7.0 (2026-09-26) {#v0.7.0}
 
-* Draw.io's edit button opens the diagram editor instead of the raw XML, with draw.io plugin 1.0.2
-* Releases are published only once macOS, Windows and Linux have all built
+* draw.io's edit button opens the diagram editor instead of the raw XML, with draw.io plugin 1.0.2
 
 
 ## 0.6.0 (2026-09-26) {#v0.6.0}
 
-* Show a card when an embed fails to render or its plugin fails to load
-* Show an Enable/Install card for plugin blocks that can't render
-* Hide wikilink brackets in table cells
-* Send CORS header from the plugin static server to the app's origins
-* Show dots instead of test names in bin/test
-* Color plugin name links in Settings with the accent color
+* A card shows when an embed fails to render or its plugin fails to load
+* An Enable or Install card for plugin blocks that can't render
+* Wikilink brackets are hidden in table cells
+* Plugin names in Settings are links in the accent color
 
 
 ## 0.5.0 (2026-09-24) {#v0.5.0}
 
-* Add bin/release and retire release-please
-* Run bin/test in CI instead of separate test steps
-* Format all Rust code with cargo fmt
-* Install riprap guardrails
-* Check the published plugin registry with the app's parser in CI
-* Move Slidev and PDF export to the plugin registry (sub-project 4b)
-* Add command, overlay, export-format and dependency extension points; run Slidev and PDF through them
-* Move draw.io to the plugin registry; add plugin tabs (sub-project 3)
-* Move Mermaid and Git LFS to the plugin registry (sub-project 2)
-* Load plugins from git-based registries (plugin host, sub-project 1)
-* Run the frontend tests in CI
-* Remove static server test temp dirs on drop
-* Fix stray leading space in page-preview headings and task items
-* docs: describe the editor toolbar and its More menu accurately
-* Fix deprecated depends_on macos: string-comparator syntax in cask template
-* Bump @tauri-apps/api to match the tauri crate's minor version
+* Presentations (Slidev) and PDF export become plugins
+* draw.io becomes a plugin, and plugins get their own tabs
+* Mermaid and Git LFS become plugins
+* Plugins install from git-based registries
+* No stray leading space in page-preview headings and task items
 
 
 ## 0.4.0 (2026-09-24) {#v0.4.0}
 
-
 ### Features
 
-* add a Slidev presentations toggle to the Plugins pane
-* add attribute type registry (.config/attributes.md)
-* add Attributes toolbar button to reveal right sidebar
-* add DiagramEditorPane for full-tab draw.io editing
-* add draw.io frontend command wrapper and install/server hook
-* add draw.io plugin install mechanism
-* add draw.io plugin toggle to Settings
-* add drawio plugin setting
-* add New Conversation button and history popover to Agent Chat
-* always restore tabs on launch instead of prompting
-* **assets:** vault-level files/ directory with refcounted cleanup
-* attachment/image/audio/video attribute widget
-* attribute names open the visibility menu; Rename/Delete for custom rows
-* Attributes color rows open the toolbar's color picker
-* block and section ranges for drag-to-rearrange
-* bulk Attributes section in Vault Settings
-* checkbox and color attribute widgets
-* count file-typed attribute values toward asset_refs
-* date/datetime attribute widget (fixed format / relative display)
-* derive Created/Updated attributes from git history, add author rows
-* drag blocks and heading sections to re-arrange them
-* expand date tokens in per-vault new-note prefix
-* fold note details into the Attributes panel as read-only rows
-* gate Present and PDF export behind the Slidev plugin toggle
-* generate new note IDs as UUIDv7 instead of random base36
-* **github:** device-flow auth and repo/collaborator API in Rust
-* highlight the sidebar search query in the opened note
-* inline Set type / Change type / Make free-form popover
-* make font choice a per-note attribute
-* make search a sidebar view like Home/Bookmarks/Tags/Trash
-* move Git LFS to an opt-in plugin with managed binary install
-* multi-select attribute widget (chips/checkboxes display)
-* new note H1 placeholder, fix title-rename truncation, drop new-vault prefix global
-* per-attribute inline visibility as a frontmatter key suffix
-* preview font style in the per-note font pickers
-* registry-driven TypedAttributeRow with scalar widgets (text/number/url/email/phone)
-* rename Properties to Attributes and keep the panel live
-* render Attributes as a collapsible block under the first heading
-* render Created by/Last edited by author as a mailto: link
-* render draw.io diagrams inline as an embed
-* reveal the drag range only on press, and enlarge the grip
-* rework right sidebar layout and section toggles
-* select attribute widget (segmented/radio display)
-* serve the draw.io plugin's static assets from an in-process server
-* show vault name in Bookmarks/Tags sidebar views
-* sidebar "Add attribute" opens the key/type/options form
-* store many conversations per vault instead of one transcript
-* sync .config/attributes.md on boot and on diff
-* typed widgets for recognized attributes in the Attributes panel
-* use underscore id/title separator for new-format note IDs
-* validate note attributes against the type registry, drop KNOWN_ATTRIBUTES
-* **vault:** file-per-note layout with promotion on first child
-* **vault:** manage GitHub collaborators from the vault menu and settings
-* **vault:** opt-in migration to file-per-note layout; export follows assets
-* visibility menu for the read-only rows (Created, Updated, Path)
-* wire diagram tabs into the main tab system
+* Plugins: a Slidev presentations switch
+* Attributes: define attribute types for a vault
+* An Attributes toolbar button reveals the right sidebar
+* draw.io diagrams open in a full tab for editing
+* Settings: a draw.io plugin switch
+* Agent chat: a New Conversation button and a history popover
+* Tabs are always restored on launch, without asking
+* Attachments live in the vault's files/ folder and are removed once no note uses them
+* Attachment, image, audio and video attributes
+* Attribute names open the visibility menu; Rename and Delete for custom attributes
+* Attributes: color rows open the toolbar's color picker
+* Bulk Attributes section in Vault Settings
+* Checkbox and color attributes
+* Date and date & time attributes, with a fixed format or a relative display
+* Created and Updated come from git history, with author rows
+* Drag blocks and heading sections to rearrange them
+* Date codes in a vault's new-note prefix
+* Note details fold into the Attributes panel as read-only rows
+* Present and PDF export need the Slidev plugin switch on
+* GitHub sign-in, with repository and collaborator access
+* The sidebar search query is highlighted in the opened note
+* Set type, Change type and Make free-form, inline
+* The font is chosen per note
+* Search is a sidebar view like Home, Bookmarks, Tags and Trash
+* Git LFS becomes an opt-in plugin that installs git-lfs for you
+* Multi-select attributes, shown as chips or checkboxes
+* New notes get a heading placeholder, and title renames no longer cut names short
+* Choose which attributes show inline in a note
+* The per-note font pickers preview each font
+* Text, number, URL, email and phone attributes
+* Properties are renamed Attributes, and the panel stays live
+* Attributes show as a collapsible block under the first heading
+* Created by and Last edited by link to the author's email
+* draw.io diagrams show inline as embeds
+* The drag range shows only while pressed, and the grip is larger
+* A reworked right sidebar with section toggles
+* Select attributes, shown as segments or radio buttons
+* The Bookmarks and Tags views show the vault's name
+* Add attribute opens a form for its key, type and options
+* Several agent conversations per vault
+* Typed fields for known attributes in the Attributes panel
+* A note is a single file until it has child notes
+* Manage GitHub collaborators from the vault menu and settings
+* An opt-in move to the one-file-per-note layout; export follows attachments
+* A visibility menu for the read-only rows (Created, Updated, Path)
 
+### Bug fixes
 
-### Bug Fixes
-
-* a click on the drag grip no longer moves the block
-* add missing drawio field to PluginSettings in 11 test sites
-* add path traversal protection to static file server and remove stray package-lock.json
-* address a diagram block by body-fence ordinal, not DOM position
-* address DiagramEditorPane review findings
-* attribute panel type picker, scalar write storm, date off-by-one
-* attribute widget CSS used invented, non-theme-aware variable names
-* Attributes settings type dropdown missing grid width/shrink styling
-* AttributesSection rename no longer duplicates the attribute
-* backfill created_by/updated_by on existing notes after migration
-* capitalize app name to "Mahfouz" in productName and release artifacts
-* debounce drawio autosave and flush it on close/unmount
-* don't highlight the parent section when the pointer is beside a block
-* drop a heading's highlight when the pointer leaves its heading line
-* eliminate bind-close-rebind race in static server port allocation
-* enable draw.io autosave so switching tabs doesn't discard edits
-* gate Slidev install/start behind the plugin toggle at the hook level
-* give macOS app icon a rounded-square background
-* guard deleteConversation against active conversation while running
-* handle CRLF line endings in replaceDrawioBlockAt regex
-* hide [[ ]] wikilink markers in preview mode
-* history popover position/scroll, disable switch/delete mid-turn, guard malformed conversation entries
-* hoist EditorToolbar above content-row so it spans the right sidebar
-* inline the per-note font picker at half size
-* install a plugin's dependency if it's already enabled at boot
-* keep diagram: tabs alive and hide the editor toolbar over them
-* key the editor by note id, not path, to stop cursor jump on rename
-* make sidebar note drag-to-reparent actually drop
-* match right-sidebar toggle icon to the left sidebar's
-* mount the inline Attributes block only when something is set to show
-* name the dev Cargo binary "Mahfouz" so Cmd+Tab shows it capitalized
-* open the draw.io editor tab immediately after toolbar insert
-* remove unused AttributeTypeDef import in AttributesPanel.test.ts
-* rename file/folder (not content) when sidebar name comes from directory
-* render the "Add attribute" form inline instead of as a floating popover
-* reset settingsInitialSection on Settings modal close
-* resolve attribute types per vault when indexing asset refs
-* scope Trash view per-vault like Home
-* seed orientation Select options as lowercase, matching real stored values
-* seed the attribute-type registry in AttributesPanel.test.ts
-* serialize concurrent draw.io installs with mutex and atomic counter
-* show where a dragged table row or column will land
-* shrink app icon to sit within macOS icon safe area
-* sidebar title stays live with H1 edits until an explicit rename
-* sort preview-mode decoration entries before building range set
-* stop right-click from selecting text in sidebars and empty editor
-* stop the autosave debounce from being defeated by re-renders
-* stop the autostarted Slidev server when the plugin is off
-* surface diagram save failures and stream install progress
-* sweep empty ancestor directories after leaf note deletion
-
-
-### Reverts
-
-* remove bundled-resource install path from slidev.rs
-* remove dead bundled-install branching from Slidev progress UI
-* remove Slidev vendoring script and bundled-resource build config
+* Clicking the drag grip no longer moves the block
+* Attributes: type picker fixes, and a date no longer off by one day
+* Attribute fields follow the light and dark themes
+* Vault settings: the attribute type dropdown fits its column
+* Renaming an attribute no longer duplicates it
+* Created by and Last edited by fill in for existing notes
+* The app's name is capitalized “Mahfouz”
+* draw.io: saves wait for a pause and are written on close
+* The parent section isn't highlighted when the pointer is beside a block
+* A heading's highlight goes when the pointer leaves its line
+* draw.io: switching tabs no longer discards edits
+* macOS: the app icon has a rounded-square background and fits the icon grid
+* Agent chat: the running conversation can't be deleted
+* draw.io: blocks in files with Windows line endings are edited correctly
+* Wikilink [[ ]] brackets are hidden in Preview
+* Agent chat: history popover placement and scrolling; no switching or deleting mid-turn
+* The editor toolbar spans the right sidebar
+* The per-note font picker is inline at half size
+* A plugin's dependency is installed when the plugin is already on at launch
+* Diagram tabs stay open, and the editor toolbar hides over them
+* The cursor no longer jumps when a note is renamed
+* Dragging a note onto another in the sidebar drops it there
+* The right sidebar's toggle icon matches the left's
+* The inline Attributes block shows only when something is set to show
+* The draw.io editor tab opens right after inserting a diagram
+* Renaming in the sidebar renames the file or folder when the name comes from it
+* The Add attribute form is inline instead of a floating popover
+* The Trash view is per vault, like Home
+* Shows where a dragged table row or column will land
+* The sidebar title follows the heading until you rename the note
+* Right-click no longer selects text in the sidebars and an empty editor
+* Autosave waits for a pause in typing as intended
+* Presentations stop running when the Slidev plugin is off
+* Diagram save failures are shown, and plugin installs show progress
+* Deleting a note removes the empty folders it leaves
 
 
 ## 0.3.0 (2026-04-28) {#v0.3.0}
 
-
 ### Features
 
-* **settings:** per-vault settings modal + gear icon next to repo
-* **vault-settings:** rename Sync→Vault, add "Move vault…" button
+* Settings: per-vault settings, with a gear icon next to the repository
+* Vault settings: Sync is renamed Vault, with a Move vault… button
+
 
 ## 0.2.0 (2026-04-28) {#v0.2.0}
 
-
 ### Features
 
-* AND-filter multiple tags, trash preview strips frontmatter
-* context menus, permanent delete, tag drill-in, nav cleanup
-* direct git push/pull (Phase 2 slice 1) + default .gitignore
-* drag-and-drop + paste media into vault, gutter chevron for collapse
-* **editor:** CodeMirror 6 with iA Writer-style muted theme
-* git-native trash with in-editor preview, NavRail reshuffle
-* icon-only navigation rail with Home/Search and Trash/Help/Settings
-* media cards, slug ids, optimistic I/O, restore-from-trash banner
-* **multi-vault:** per-vault engines: sync, auto-commit, remote (phase 2/4)
-* **multi-vault:** vault registry + vault-scoped schema (phase 1/4)
-* native macOS menu bar with App &gt; Settings… (⌘,)
-* **navrail:** trash list back in sidebar, active highlight, divider
-* nesting, bookmarks, commands, meta files, resizable sidebars
-* page actions — pin and delete the current note
-* Phase 1 desktop MVP — DB-backed notes, live preview, Tahoe sidebar
-* properties, history, revision tabs, collapsible sections, nav additions
-* right sidebar, help modal, settings screen + extra shortcuts
-* **right-sidebar:** Table of Contents + Note Details panels
-* **search:** Cmd+K command palette with sidebar + titlebar entry points
-* **sidebar:** hover-revealed pin/delete per item + matched footer button
-* **sidebar:** show connected repo as header label instead of "Local"
-* status bar, settings sections, editable commands, Cmd+S, focus reload
-* tabs above the editor
-* Trash view, single-click delete, sidebar footer toolbar
-* vault sync engine, shortcuts in settings, top-bar search, media rendering
-* **vault:** debounced auto-commit after writes
-* **vault:** per-note folders + trash dot indicator
-* **vault:** persist notes to disk in a local git repo
-* wikilinks, backlinks, tags + tag filter, editor tag highlighting
+* Filter by several tags at once; Trash previews hide frontmatter
+* Context menus, permanent delete, tag drill-in and tidier navigation
+* Push and pull with git, and a default .gitignore
+* Drag and drop or paste media into a vault; a chevron to collapse sections
+* Editor: a muted, iA Writer-style theme
+* Trash from git history, with a preview in the editor
+* An icon-only navigation rail with Home, Search, Trash, Help and Settings
+* Media cards and a restore-from-Trash banner
+* Each vault syncs, auto-commits and connects to its remote on its own
+* Several vaults at once
+* A native macOS menu bar with Settings… (⌘,)
+* The Trash list is back in the sidebar, with an active highlight
+* Nested notes, bookmarks, commands and resizable sidebars
+* Pin and delete the current note
+* The first desktop version: notes, live preview and a sidebar
+* Properties, history, revision tabs and collapsible sections
+* A right sidebar, a help dialog, a settings screen and more shortcuts
+* Right sidebar: a table of contents and note details
+* Search: a Cmd+K command palette, from the sidebar and the titlebar
+* Sidebar: pin and delete on hover for each item
+* Sidebar: the connected repository shows as the header instead of "Local"
+* A status bar, settings sections, editable commands, Cmd+S, and reload on focus
+* Tabs above the editor
+* A Trash view, single-click delete and a sidebar footer toolbar
+* Vault sync, shortcuts in settings, search in the top bar and media
+* Notes are committed automatically after you write
+* A folder per note, and a dot on Trash
+* Notes are saved to disk in a local git repository
+* Wikilinks, backlinks, tags with a tag filter, and tag highlighting
 
+### Bug fixes
 
-### Bug Fixes
-
-* collapse nested if in walk_md to satisfy clippy
-* **editor:** enable autocorrect + spellcheck so macOS text replacements fire
-* **history:** commit restored revision immediately with a Restored message
+* Editor: macOS text replacements and spelling now work
+* History: a restored revision is committed at once, as Restored
