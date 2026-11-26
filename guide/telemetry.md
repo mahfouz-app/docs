@@ -2,7 +2,7 @@
 layout: guide
 title: "Help improve Mahfouz"
 since: "0.13.0"
-description: "The error reports, timings and usage counts Mahfouz sends to find bugs, what it never sends, and how to turn it off."
+description: "The error reports, timings, usage counts and install details Mahfouz sends to find bugs, what it never sends, and how to turn it off."
 permalink: /guide/telemetry/
 ---
 
@@ -33,6 +33,14 @@ and the web app in that browser.
   note, commit and push, in milliseconds.
 - **Counts.** That something happened, from a fixed list, such as "a note
   was created from the sidebar" or "a GitHub vault was opened".
+- **Your app and system.** Each time Mahfouz opens: its version, and in
+  the desktop app the operating system's major version (for example
+  macOS 15), the chip (Apple silicon or Intel) and whether you installed it
+  with Homebrew or downloaded it. {% include since.html v="0.31.0" %}
+- **Installs and updates.** That Mahfouz was opened for the first time with
+  this switch on, or that it was updated, with the version it was updated
+  from. The last version that ran is kept on this computer to tell, and
+  turning the switch off deletes it with the random id. {% include since.html v="0.31.0" %}
 - **A random id for this computer**, so reports from one computer can be
   told apart. It isn't tied to your GitHub account, and turning the switch
   off deletes it: turning it back on starts a new one.
@@ -47,6 +55,7 @@ isn't on the list is dropped before it's sent.
 - Tags, people, tasks or commit messages
 - The plaintext of [encrypted notes](/guide/encryption/)
 - Your GitHub account, email address or tokens
+- Your computer's name, user name or serial number {% include since.html v="0.31.0" %}
 - Screen recordings: Mahfouz never records the screen
 
 ## Where it goes {#where-it-goes}
