@@ -26,6 +26,9 @@ and **Max** [plans](/guide/plan/).
 - The vault needs a GitHub remote: workflows watch the repository, not
   your computer. See [Git & sync](/guide/git/).
 - You need to be [signed in with GitHub](/guide/github/), on Pro or Max.
+- Workflows run from the repository's default branch. A vault with
+  another branch checked out shows **Needs you** on its workflows, and
+  nothing turns on from it.
 - Every address a workflow emails has to be one you've confirmed. See
   [Workflow email addresses](#workflow-email-addresses).
 
@@ -35,8 +38,8 @@ and **Max** [plans](/guide/plan/).
 2. Give it a **Name**.
 3. Under **When**, pick **A note is created in this vault**, or **A row is
    added to a database** and then the database.
-4. To run only for some notes, click **Add condition** under **Only if**.
-   Each condition is an attribute, an operator and a value, such as
+4. To run only for some notes, click **Add condition**. The first condition
+   is labelled **Only if**. Each condition is an attribute, an operator and a value, such as
    **Status** **is** **Lead**. With two or more, choose **And** (all must
    match) or **Or** (any can match): one choice applies to all of them.
 5. Under **Then**, set up the first Email action (below). Click **Add
@@ -47,7 +50,10 @@ and **Max** [plans](/guide/plan/).
 The workflow is saved as a file in the vault,
 `.config/workflows/<name>.md`, and committed like any other change. It
 turns on for you once that commit reaches GitHub: until then its status is
-**Not pushed yet**, with **Push now**.
+**Not pushed yet** ("It turns on once this change reaches GitHub."), with
+**Push now**. A change to the vault's attribute types
+(`.config/attributes.md`) has to reach GitHub too, since conditions read
+them.
 
 A workflow can have 1 to 10 actions, and email at most 20 addresses across
 all of them. You can have several Email actions, for example a link to the
@@ -74,8 +80,10 @@ empty**, and so on.
 
 ## The Email action
 
-- **To**: pick from your confirmed addresses, or click **Add an address…**
-  to confirm a new one. For a database workflow, you can also pick an
+- **To**: pick from your addresses. One you haven't confirmed yet is
+  marked **Not confirmed**: turning the workflow on sends it a
+  confirmation. **Add an address…**, at the end of your addresses, adds a
+  new one. For a database workflow, you can also pick an
   [Email field of the row](#email-a-field-of-the-row).
 - **Send**: **A link** (the default) or **The note**.
   - **A link** emails the note's title and an **Open in Mahfouz** button.
@@ -135,8 +143,10 @@ the repository with your GitHub access, and its emails count toward your
 daily limit.
 
 **Editing a workflow pauses it for everyone else** who turned it on, until
-they review the change. The editor says so before you save ("Saving pauses
-it for @sam and 1 other until they review it"). It stays on for you.
+they review the change. When others have turned it on, the editor names
+them before you save ("Saving pauses it for @sam and 1 other until they
+review it"); everyone who can read the repository sees who turned a
+workflow on. It stays on for you.
 Deleting a workflow deletes the file, for everyone in the vault.
 
 **Settings → Account → Workflow email** lists the workflows you've turned
@@ -148,8 +158,10 @@ Each workflow shows one status:
 
 - **On**: it runs for you. The card says when it last ran.
 - **Off**: you haven't turned it on, or turned it off.
-- **Not pushed yet**: the file hasn't reached GitHub, so nothing can run it.
-  It turns on once it does. Click **Push now** to push.
+- **Not pushed yet**: the file (or the vault's attribute types) hasn't
+  reached GitHub, so nothing can run it. If you turned it on, the card says
+  "It turns on once this change reaches GitHub."; otherwise "It reaches the
+  others in this vault once it's pushed." Click **Push now** to push.
 - **Needs you**: it's stopped for you until you act. The card says why, with
   one button:
 
@@ -164,6 +176,8 @@ Each workflow shows one status:
 | An action failed | An action couldn't send, for example because an address bounced. The other actions still ran. | **Edit** |
 | Made with a newer Mahfouz | It uses a trigger or action this version doesn't have. It's shown read-only and doesn't run. | **Update Mahfouz** |
 | Can't be read | The file has a mistake. The card quotes the line. | **Open file** |
+| Typed by hand | Its database was typed by name in the file and isn't resolved yet. | **Pick database** |
+| Another branch | The vault has another branch than the repository's default one checked out. Workflows run from the default branch. | None |
 
 A workflow you've turned on stays on while you use Mahfouz, signed in, at
 least once every 90 days: each use renews it. **Sign out everywhere** in
@@ -255,8 +269,9 @@ then:
 - **`when`** has one trigger, `created`, with `vault` (any new note) or
   `in <database>`. The app writes the database's ID, with its title in
   brackets for people reading the file, so renaming or moving the database
-  doesn't break the workflow. A typed `in Clients` also works: the app
-  turns it into the ID when you turn the workflow on.
+  doesn't break the workflow. A typed `in Clients` is resolved when you
+  save the workflow in the editor; until then its card shows **Needs you**
+  with **Pick database**.
 - **`if`** is optional: one condition, or `and:` or `or:` with a list of
   them, one level only. Each is written like a database filter:
   `<attribute> <operator> <value>`, for example `status = "Lead"`,
