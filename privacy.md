@@ -5,7 +5,7 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 26 November 2026*
+*Effective 28 November 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
@@ -80,6 +80,10 @@ Unless you turn it off, the desktop app and the web app send:
   pushing take.
 - **Counts** of features used, from a fixed list, such as "a note was
   created from the sidebar".
+- **Your app and system:** the app's version and, each time it opens,
+  the operating system and its version (macOS 15, Windows 11, Ubuntu
+  24.04; in the web app only when the browser tells it), and on the
+  desktop the chip and whether it was installed with Homebrew.
 - **A random id for that computer or browser**, not tied to your GitHub
   account or to you.
 
