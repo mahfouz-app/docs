@@ -21,8 +21,12 @@ request, an issue or a chat, so the people you work with can open the note.
 The link looks like this:
 
 ```
-https://l.mahfouz.app/a0k3v901a16f4f8bef70c2b797192393aef97a
+https://l.mahfouz.page/a0k3v901a16f4f8bef70c2b797192393aef97a
 ```
+
+New links are on `l.mahfouz.page` {% include since.html v="0.32.0" %}.
+Links copied before then are on `l.mahfouz.app`. They keep working, and
+they open the same note.
 
 It's made from the note's own ID and its vault's GitHub repository, on your
 device. Nothing is stored or registered anywhere, so copying works offline.
