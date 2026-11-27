@@ -116,6 +116,9 @@
     - slug: online-agents
       title: "Agents on GitHub (online MCP)"
       description: "Connect an agent to your GitHub repositories so it works with no Mahfouz window or tab open, and how that differs from connecting through the app."
+    - slug: workflows
+      title: "Workflows"
+      description: "Email someone when a note is created or a row is added to a database, even when Mahfouz is closed."
     - slug: api
       title: "REST API for integrations"
       description: "Connect an app such as Hatchward to your repositories through the Mahfouz REST API: OAuth, endpoints, paging and error codes."

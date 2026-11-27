@@ -18,6 +18,7 @@ Mahfouz is open are free, and so is one custom domain. The paid plans add:
 | [Agent hours a month](#agent-hours) {% include since.html v="0.25.0" %} | — | 300 | 800 {% include since.html v="0.29.0" %} |
 | [Custom domains](/guide/custom-domains/) {% include since.html v="0.29.0" %} | 1 | 3 | 10 |
 | "Published with Mahfouz" on [published pages](/guide/publishing/#the-pages-footer) | Shown | Hidden | Hidden |
+| [Workflows](/guide/workflows/) {% include since.html v="0.32.0" %} | — | Yes | Yes |
 | Support | Community | Email | Priority |
 
 [Pricing](/pricing/) lists the prices. A plan belongs to your Mahfouz
