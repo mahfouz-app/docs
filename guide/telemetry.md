@@ -38,6 +38,12 @@ and the web app in that browser.
   the desktop app the operating system's major version (for example
   macOS 15), the chip (Apple silicon or Intel) and whether you installed it
   with Homebrew or downloaded it. {% include since.html v="0.31.0" %}
+  On Windows that's Windows 10 or 11, and on Linux the distribution and
+  its version, such as Ubuntu 24.04, from a fixed list (any other
+  distribution is sent as just Linux). The web app sends the operating
+  system and its version when the browser tells it, as Chrome and Edge do
+  (Linux is sent without a version); Safari and Firefox don't, so they
+  send just "web". {% include since.html v="0.32.0" %}
 - **Installs and updates.** That Mahfouz was opened for the first time with
   this switch on, or that it was updated, with the version it was updated
   from. The last version that ran is kept on this computer to tell, and
