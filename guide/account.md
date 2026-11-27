@@ -86,6 +86,14 @@ If you sign in again later, Mahfouz makes you a new, empty account.
 If something fails partway, the dialog says some of it may already be
 gone. Click **Try again** to finish.
 
+## Workflow email {% include since.html v="0.32.0" %} {#workflow-email}
+
+**Workflow email** in Settings → Account lists the addresses your
+[workflows](/guide/workflows/) may email, each confirmed by a link Mahfouz
+sends it, and the workflows you've turned on in every vault. See
+[Workflow email addresses](/guide/workflows/#workflow-email-addresses).
+Sign out everywhere turns those workflows off.
+
 ## Coming soon
 
 Device sessions (a list of where you're signed in, each with its own sign
