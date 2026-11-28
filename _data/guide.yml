@@ -21,6 +21,9 @@
     - slug: databases
       title: "Databases"
       description: "Turn a note into a table of its child notes: typed columns, sorting, filters, and saved views, all stored in your files."
+    - slug: forms
+      title: "Forms"
+      description: "Publish a form anyone with the link can fill in, and add each response as a row of a database."
     - slug: tasks
       title: "Tasks"
       description: "Turn a checklist item into a task with a due date and an assignee, mark it in progress, and see every task in a list or on a board."
