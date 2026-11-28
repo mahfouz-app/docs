@@ -1347,6 +1347,12 @@ itself marked not to publish, is disk-only, or holds your people, and when
 Mahfouz can't find the database or read its block. The same rules apply when
 you export to Word or PDF.
 
+## Forms {% include since.html v="0.32.0" %} {#forms}
+
+A published form adds each response it gets as a new row of a database.
+The **Forms** menu in the database's toolbar lists the forms that add rows
+to it, and **New form…** makes one. See [Forms](/guide/forms/).
+
 ## The agent
 
 The agent can read a database with its `query_database` tool. The tool

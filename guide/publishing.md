@@ -13,6 +13,9 @@ private: only that note and its images are sent.
 To share a note with chosen people instead, who can then comment on it or
 edit it with you, see [Sharing a note with people](/guide/sharing/) {% include since.html v="0.16.0" %}.
 
+To collect responses from the people who read a page, publish a note
+that holds a form. See [Forms](/guide/forms/) {% include since.html v="0.32.0" %}.
+
 Publishing works in the desktop app and on the web. You need to be
 [signed in to GitHub](/guide/github/), and the vault needs at least one
 commit.
@@ -385,6 +388,10 @@ you have two or more pages, takes every one of them down after one
 confirmation, which says how many pages go and which custom domains stop
 serving. If some can't be unpublished, the rest still are; the ones left
 stay in the list, named above it, with **Retry**.
+
+Unpublishing a page with a form also deletes the responses your app
+hasn't added yet, and the files the form keeps on Mahfouz's servers; the
+confirmation says how many. See [Forms](/guide/forms/#unpublish). {% include since.html v="0.32.0" %}
 
 When you delete a published note, Mahfouz asks whether to unpublish its page
 too. **Cancel** keeps the page online.

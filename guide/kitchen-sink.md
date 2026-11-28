@@ -6,7 +6,7 @@ permalink: /guide/kitchen-sink/
 ---
 A sample vault that uses every Markdown feature Mahfouz supports: text
 formatting, lists and tasks, callouts, code, math, tables, media, diagrams and an Excalidraw drawing {% include since.html v="0.21.0" %},
-track changes and comments, people, slides, a database, a day's tasks, a tag to rename and what a click does in Preview.
+track changes and comments, people, slides, a database, a form {% include since.html v="0.32.0" %}, a day's tasks, a tag to rename and what a click does in Preview.
 
 To open it, copy the `_includes/kitchen-sink/` folder from the
 [docs repository](https://github.com/mahfouz-app/docs) into an empty folder
@@ -59,6 +59,22 @@ Below is each note's source.
 
 ````markdown
 {% include kitchen-sink/kitchen_sink/database_view_status_first.md %}
+````
+
+## A form: Reading list form {% include since.html v="0.32.0" %}
+
+`kitchen_sink/reading_list_form.md`
+
+````markdown
+{% include kitchen-sink/kitchen_sink/reading_list_form.md %}
+````
+
+Published, the `form` block becomes the form itself on the form's own
+address. An export or **Send a copy…** gives a placeholder in its place,
+and a Markdown export keeps the block as written:
+
+````markdown
+*Form (not published)*
 ````
 
 ## A day's tasks: Tasks for a day {% include since.html v="0.20.0" %}
