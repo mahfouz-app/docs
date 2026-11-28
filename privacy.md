@@ -5,7 +5,7 @@ description: "Your notes stay on your computer. They go to a cloud or an AI only
 permalink: /privacy/
 ---
 
-*Effective 26 November 2026*
+*Effective 28 November 2026*
 
 Your notes are files in a folder on your computer, and that's where they
 stay. Mahfouz has no cloud of its own, keeps no copy of your notes, and
@@ -20,7 +20,7 @@ use it for advertising.
 
 This policy is from Influpert LLC, the company that makes Mahfouz. It
 covers the desktop app, the web app at [web.mahfouz.app](https://web.mahfouz.app),
-published pages and this website, mahfouz.app.
+published pages, published forms and this website, mahfouz.app.
 
 ## What stays on your computer
 
@@ -40,6 +40,7 @@ published pages and this website, mahfouz.app.
 | Use the AI agent | The messages you send and the notes it reads to answer | The provider whose API key you add: Anthropic, OpenAI or OpenRouter |
 | [Connect an external agent](/guide/external-agents/) | What the agent reads in the vaults you tick | That agent, such as Claude Code or Codex |
 | [Publish a note](/guide/publishing/) | That one note and its images | A public page, at the link you share |
+| [Publish a form](/guide/forms/) | The form note, its questions and their options, but never the database's name or column names | A public form at `f.mahfouz.page`; the answers people send come back to your vault |
 | [Send feedback](/guide/feedback/) | What you write, plus the app version, operating system and CPU architecture if you leave **Include diagnostics** on, and your GitHub login if you tick **Include my GitHub login** | A public GitHub issue, filed through Mahfouz's server |
 | [Install a plugin](/guide/plugins/) | Requests for the plugin and its files | The repository it's shared from, and the hosts the plugin lists |
 
@@ -136,6 +137,17 @@ once you use the feature:
   the note, its images and the page are deleted. A short record stays: the
   page's title, link, your GitHub account ID and when it was published and
   unpublished.
+- **Form responses.** When you [publish a form](/guide/forms/), the
+  answers people send, and the files they upload, wait in an encrypted
+  inbox on the server until your app adds them to your vault. Your plan
+  decides how long they wait: 10 days on Free, 30 on Pro, 90 on Max, and
+  never more than 90 days. Once your app has added a response, it's
+  deleted from the server a day later. On Pro and Max, a form can instead
+  keep its uploaded files on the server, encrypted, where only you can
+  open them; a kept file is deleted 30 days after no row in your vaults
+  links it any more. Unpublishing the form, or deleting your account,
+  deletes its waiting responses and kept files. The server also counts how
+  many responses each form gets a month, for your plan's limit.
 - **Agents on the web.** If you connect an agent such as claude.ai to
   Mahfouz on the web, which you approve at platform.mahfouz.app, the
   server keeps the connection you approved, with its
@@ -157,6 +169,16 @@ once you use the feature:
   desktop or the web app and the day they were last counted. The server keeps only how many arrived each
   day, with no id, IP address or account. See [Sent even when it's
   off](/guide/telemetry/#always-sent).
+- **Form visitors.** The person filling in a form needs no account and
+  gets no cookie from Mahfouz. Their IP address is used only to limit how
+  many responses one address can send, and is passed to Cloudflare
+  Turnstile for its bot check. It isn't stored with the response or
+  anywhere else by Mahfouz, apart from Cloudflare's request logs above.
+  The form's owner, not Mahfouz, decides what a form asks and is
+  responsible for what they collect with it and how they use it.
+- **Push notifications for forms.** A notification about new form
+  responses, or responses about to expire, holds only a count, never the
+  form's name or an answer.
 - **Server errors and timings.** The server sends its own errors and how
   long each request takes to Datadog, kept for at most 30 days. These
   record the kind of request, such as "a published page", never its
@@ -177,7 +199,12 @@ browser only.
 ## Who else handles data
 
 - **Cloudflare** hosts the web app, Mahfouz's server (`api.mahfouz.app` and
-  `platform.mahfouz.app`) and published pages.
+  `platform.mahfouz.app`), published pages and published forms
+  (`f.mahfouz.page`).
+- **Cloudflare Turnstile** checks that a person, not a bot, is filling in a
+  [form](/guide/forms/). It runs in the visitor's browser and receives
+  their IP address, under [Cloudflare's privacy
+  policy](https://www.cloudflare.com/privacypolicy/).
 - **Datadog** receives error reports, timings and usage counts from the
   apps and the server, under [Datadog's privacy
   policy](https://www.datadoghq.com/legal/privacy/).
@@ -201,7 +228,8 @@ You're in control of almost everything: sign out to delete your web
 session, unpublish to delete a page, and delete a vault to delete your
 notes. To delete everything Mahfouz's server keeps about you, delete your
 account in Settings → Account on the web ([how](/guide/account/#delete-your-account)).
-That unpublishes your pages (their remaining records included), ends your
+That unpublishes your pages (their remaining records included), deletes
+your forms' waiting responses and the files they keep, ends your
 shares and agent connections, cancels your plan and deletes your Stripe
 customer, and deletes your account and its ID. It doesn't touch your
 vaults, and Stripe keeps your invoices for as long as the law requires.

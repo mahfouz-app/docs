@@ -182,7 +182,7 @@ that, Mahfouz warns you, 3 days and 1 day ahead: open the app to add them.
 ## Files
 
 A question on an Attachment or Image column asks for a file. Visitors can
-send PDF, PNG, JPEG, WebP or plain text files. Mahfouz checks each file's
+send PDF, PNG, JPEG, GIF, WebP, AVIF or plain text files. Mahfouz checks each file's
 type from its contents, not its name, and refuses anything else.
 
 | Plan | Files per response | Size of each file |
