@@ -143,9 +143,14 @@ Each batch is one commit, **Form responses: 3 to Candidates**, and a
 notification says how many were added, with a button to open the database.
 If you're editing, the responses wait until your edits are saved.
 
-If you've [connected an agent to the repository online](/guide/online-agents/)
-with write access, responses are added on Mahfouz's servers too, with no
-app open.
+A form can also have its responses added while the app is closed: turn on
+**Add responses on Mahfouz's servers when the app is closed** in its
+**Settings**. It's off by default. It needs an
+[online agent connection](/guide/online-agents/) with write access to the
+vault's repository, uses your plan's container hours, and commits to the
+repository as you. You turn it on from web.mahfouz.app, and it can't be on
+for a database you keep [disk-only](/guide/history/#auto-commit-and-disk-only-notes). You get a notification
+when responses are added this way.
 
 Each response becomes a new row:
 

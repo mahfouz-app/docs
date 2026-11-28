@@ -139,7 +139,9 @@ once you use the feature:
   unpublished.
 - **Form responses.** When you [publish a form](/guide/forms/), the
   answers people send, and the files they upload, wait in an encrypted
-  inbox on the server until your app adds them to your vault. Your plan
+  inbox on the server until your app adds them to your vault, or, for a
+  form you set to add responses while the app is closed, until your online
+  agent connection's server adds and commits them to your repository. Your plan
   decides how long they wait: 10 days on Free, 30 on Pro, 90 on Max, and
   never more than 90 days. Once your app has added a response, it's
   deleted from the server a day later. On Pro and Max, a form can instead
